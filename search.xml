@@ -17491,8 +17491,8 @@ table th:first-of-type {
 <li><a href="#encoder-decoder%E6%9E%B6%E6%9E%84-1">Encoder-Decoder架构 [1]</a></li>
 <li><a href="#self-attention">Self-attention</a></li>
 <li><a href="#multi-head-attentionmha">Multi-Head Attention(MHA)</a></li>
-<li><a href="#positional-encoding">Positional Encoding</a></li>
-<li><a href="#layer-normalization">Layer Normalization</a></li>
+<li><a href="#positional-encoding-30">Positional Encoding  [30]</a></li>
+<li><a href="#normalization-20">Normalization [20]</a></li>
 </ul>
 </li>
 <li><a href="#%E5%A4%A7%E6%A8%A1%E5%9E%8B">大模型</a><ul>
@@ -17502,8 +17502,9 @@ table th:first-of-type {
 </ul>
 </li>
 <li><a href="#%E5%8F%82%E8%80%83">参考</a><ul>
-<li><a href="#attention">Attention</a></li>
+<li><a href="#normalization">Normalization</a></li>
 <li><a href="#%E4%BD%8D%E7%BD%AE%E7%BC%96%E7%A0%81">位置编码</a></li>
+<li><a href="#attention">Attention</a></li>
 <li><a href="#%E5%85%B6%E4%BB%96">其他</a></li>
 </ul>
 </li>
@@ -17527,10 +17528,18 @@ table th:first-of-type {
 
 <p>transfomer 架构在GPU上的并行</p>
 <h3><span id="self-attention">Self-attention</span><a href="#self-attention" class="header-anchor">#</a></h3><p>Q&#x3D;K&#x3D;V<br>aligment</p>
-<h3><span id="multi-head-attentionmha">Multi-Head Attention(MHA)</span><a href="#multi-head-attentionmha" class="header-anchor">#</a></h3><h3><span id="positional-encoding">Positional Encoding</span><a href="#positional-encoding" class="header-anchor">#</a></h3><h3><span id="layer-normalization">Layer Normalization</span><a href="#layer-normalization" class="header-anchor">#</a></h3><ul>
+<h3><span id="multi-head-attentionmha">Multi-Head Attention(MHA)</span><a href="#multi-head-attentionmha" class="header-anchor">#</a></h3><h3><span id="positional-encoding-30">Positional Encoding  [30]</span><a href="#positional-encoding-30" class="header-anchor">#</a></h3><h3><span id="normalization-20">Normalization [20]</span><a href="#normalization-20" class="header-anchor">#</a></h3><ul>
+<li><p>batch normalization</p>
+</li>
+<li><p>Layer Normalization</p>
+<ul>
 <li>Post-LN</li>
 <li>Pre-LN</li>
 <li>Sandwich-LN<br>layerNorm是针对序列数据提出的一种归一化方法，主要在layer维度进行归一化，即对整个序列进行归一化。</li>
+</ul>
+</li>
+<li><p>RMS Norm</p>
+</li>
 </ul>
 <h1><span id="大模型">大模型</span><a href="#大模型" class="header-anchor">#</a></h1><h3><span id="架构-67">架构 [6][7]</span><a href="#架构-67" class="header-anchor">#</a></h3><img src="/www6vHomeHexo/2022/11/30/gptTransformer/bigModelArch.jpg" class>
 
@@ -17570,10 +17579,14 @@ table th:first-of-type {
 <li><p><a href="https://cloud.tencent.com/developer/article/2328541">主流大语言模型的技术原理细节</a> *** 腾讯     架构 + 训练 + 微调</p>
 </li>
 </ol>
-<p>2xx. <a href="https://www.bilibili.com/video/BV16h4y1W7us/">第一课：Transformer</a> ***  华为<br>2xx. <a href="https://bbycroft.net/llm">LLM Visualization</a> ***  可视化<br>2xx. <a href="https://blog.csdn.net/v_JULY_v/article/details/127411638">Transformer通俗笔记：从Word2Vec、Seq2Seq逐步理解到GPT、BERT</a> *** </p>
+<p>1xx. <a href="https://www.bilibili.com/video/BV16h4y1W7us/">第一课：Transformer</a> ***  华为<br>1xx. <a href="https://bbycroft.net/llm">LLM Visualization</a> ***  可视化<br>1xx. <a href="https://blog.csdn.net/v_JULY_v/article/details/127411638">Transformer通俗笔记：从Word2Vec、Seq2Seq逐步理解到GPT、BERT</a> ***<br>1xx. <a href="https://baoyu.io/translations/llm/the-random-transformer">深入解析随机 Transformer [译]</a> *** </p>
+<h3><span id="normalization">Normalization</span><a href="#normalization" class="header-anchor">#</a></h3><ol start="20">
+<li><a href="https://www.bilibili.com/video/BV1tk4y1F7b6/">Normalization归一化：batch normalization vs layer nomalization</a></li>
+</ol>
+<h3><span id="位置编码">位置编码</span><a href="#位置编码" class="header-anchor">#</a></h3><ol start="30">
+<li><a href="https://blog.csdn.net/v_JULY_v/article/details/134085503">一文通透位置编码：从标准位置编码、旋转位置编码RoPE到ALiBi、LLaMA 2 Long</a></li>
+</ol>
 <h3><span id="attention">Attention</span><a href="#attention" class="header-anchor">#</a></h3><p>1xx. <a href="https://blog.csdn.net/kkm09/article/details/120855658">李宏毅《深度学习》- Self-attention 自注意力机制</a><br>1xx. <a href="https://blog.csdn.net/v_JULY_v/article/details/134228287">一文通透各种注意力：从多头注意力MHA到分组查询注意力GQA、多查询注意力MQA</a></p>
-<h3><span id="位置编码">位置编码</span><a href="#位置编码" class="header-anchor">#</a></h3><p>1xx. <a href="https://blog.csdn.net/v_JULY_v/article/details/134085503">一文通透位置编码：从标准位置编码、旋转位置编码RoPE到ALiBi、LLaMA 2 Long</a></p>
-<p>1xx.<a href="https://baoyu.io/translations/llm/the-random-transformer">深入解析随机 Transformer [译]</a> *** </p>
 <h3><span id="其他">其他</span><a href="#其他" class="header-anchor">#</a></h3><p>1xx. <a href="https://zhuanlan.zhihu.com/p/640784855">[Transformer 101系列] 初探LLM基座模型</a><br>1xx. <a href="https://zhuanlan.zhihu.com/p/664046612">LLM从0开始预训练系列：2、大模型技术报告总结（GPT&#x2F;PaLM&#x2F;GLM&#x2F;LLaMA&#x2F;Skywork）</a></p>
 ]]></content>
       <categories>
