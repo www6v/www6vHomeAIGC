@@ -24,7 +24,8 @@
 <li><a href="/www6vHomeHexo/2022/10/30/gptLargeModelSurvey/" title="(综述)大模型">(综述)大模型</a></li>
 <li><a href="/www6vHomeHexo/2023/02/17/gptLargeModel/" title="大模型">大模型</a> </li>
 <li><a href="/www6vHomeHexo/2022/11/30/gptTransformer/" title="(原理)Transformer">(原理)Transformer</a> </li>
-<li><a href="/www6vHomeHexo/2023/02/16/gptTransformerCode/" title="(实战)Transformer">(实战)Transformer</a></li>
+<li><a href="/www6vHomeHexo/2023/02/16/gptTransformerCode/" title="(实战)Transformer">(实战)Transformer</a>  </li>
+<li><a href="/www6vHomeHexo/2023/03/30/gptTemperature/" title="Temperature &amp; Top-p">Temperature &amp; Top-p</a></li>
 </ul>
 </li>
 <li>基座模型<ul>
@@ -111,7 +112,7 @@
 </li>
 </ul>
 <h2><span id="prompt">Prompt</span><a href="#prompt" class="header-anchor">#</a></h2><ul>
-<li><a href="/www6vHomeHexo/2022/11/10/gptPromptEngineering/" title="Prompt Engineering">Prompt Engineering</a></li>
+<li><a href="/www6vHomeHexo/2022/11/10/gptPromptEngineering/" title="(原理)Prompt Engineering">(原理)Prompt Engineering</a></li>
 <li><a href="/www6vHomeHexo/2023/02/08/gptCOT/" title="COT">COT</a> </li>
 <li><a href="/www6vHomeHexo/2021/05/28/gptPromptCode/" title="Prompt-Code">Prompt-Code</a></li>
 <li><a href="/www6vHomeHexo/2021/05/26/gptPrompt/" title="Prompt-How to use">Prompt-How to use</a></li>
@@ -2827,6 +2828,23 @@
       </categories>
       <tags>
         <tag>设计原则</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Temperature &amp; Top-p</title>
+    <url>/www6vHomeHexo/2023/03/30/gptTemperature/</url>
+    <content><![CDATA[<p></p>
+<span id="more"></span>
+
+<h1><span id="temperature">Temperature</span><a href="#temperature" class="header-anchor">#</a></h1><h1><span id="top-p">Top-p</span><a href="#top-p" class="header-anchor">#</a></h1><h1><span id="参考">参考</span><a href="#参考" class="header-anchor">#</a></h1><p>1xx. <a href="https://www.bilibili.com/video/BV1rm411R7d9/">LLM解码参数Temperature Top K &amp; Top P有啥作用？#小工蚁</a> V<br>   <a href="https://docs.cohere.com/docs/predictable-outputs">Predictable Outputs</a></p>
+<p>1xx. <a href="https://zhuanlan.zhihu.com/p/666315413">创造性vs确定性：大语言模型(LLM)中的温度(Temperature)和Top_P怎么调？</a></p>
+]]></content>
+      <categories>
+        <category>AIGC</category>
+        <category>Temperature</category>
+      </categories>
+      <tags>
+        <tag>Temperature</tag>
       </tags>
   </entry>
   <entry>
