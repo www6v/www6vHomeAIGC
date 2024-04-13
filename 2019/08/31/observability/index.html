@@ -27,7 +27,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://user-images.githubusercontent.com/5608425/64059064-216a2880-cbe7-11e9-9ee7-141334d93959.png">
 <meta property="article:published_time" content="2019-08-31T03:54:42.000Z">
-<meta property="article:modified_time" content="2023-08-04T06:03:11.566Z">
+<meta property="article:modified_time" content="2024-04-13T07:44:20.642Z">
 <meta property="article:author" content="Wang Wei">
 <meta property="article:tag" content="可观测性">
 <meta name="twitter:card" content="summary">
@@ -226,7 +226,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2023-08-04 14:03:11" itemprop="dateModified" datetime="2023-08-04T14:03:11+08:00">2023-08-04</time>
+                <time title="修改时间：2024-04-13 15:44:20" itemprop="dateModified" datetime="2024-04-13T15:44:20+08:00">2024-04-13</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -256,10 +256,29 @@
         <p></p>
 <span id="more"></span>
 
+<h2><span id="目录">目录</span><a href="#目录" class="header-anchor">#</a></h2><div class="toc">
 
+<!-- toc -->
+
+<ul>
+<li><a href="#%E5%8F%AF%E8%A7%82%E6%B5%8B%E6%80%A7">可观测性</a><ul>
+<li><a href="#10-%E5%9F%BA%E7%A1%80%E6%94%AF%E6%9F%B1-13">1.0-基础支柱 [1][3]</a></li>
+<li><a href="#20-%E7%BB%9F%E4%B8%80%E7%9A%84%E5%8F%AF%E8%A7%82%E6%B5%8B%E6%80%A7%E5%B9%B3%E5%8F%B03">2.0-统一的可观测性平台[3]</a></li>
+<li><a href="#30-%E5%86%85%E7%94%9F%E7%9A%84%E5%8F%AF%E8%A7%82%E6%B5%8B%E6%80%A7%E8%83%BD%E5%8A%9B3">3.0-内生的可观测性能力[3]</a></li>
+</ul>
+</li>
+<li><a href="#%E7%9B%91%E6%8E%A7%E6%8C%87%E6%A0%87%E5%92%8C%E5%8E%9F%E5%88%99">监控指标和原则</a></li>
+<li><a href="#%E5%8F%AF%E8%A7%82%E6%B5%8B%E6%80%A7-%E5%8F%91%E5%B1%954">可观测性-发展[4]</a><ul>
+<li><a href="#%E5%8F%82%E8%80%83">参考</a></li>
+</ul>
+</li>
+</ul>
+<!-- tocstop -->
+
+</div>
 
 <p><strong>关键词</strong>:  可观测性,  全链路,  APM， Metric， Log</p>
-<h1><span id="可观测性">可观测性</span><a href="#可观测性" class="header-anchor">#</a></h1><h3><span id="10-基础支柱">1.0-基础支柱</span><a href="#10-基础支柱" class="header-anchor">#</a></h3><p><img src="https://user-images.githubusercontent.com/5608425/64059064-216a2880-cbe7-11e9-9ee7-141334d93959.png" alt="metric-tracing-logging"></p>
+<h1><span id="可观测性">可观测性</span><a href="#可观测性" class="header-anchor">#</a></h1><h3><span id="10-基础支柱-13">1.0-基础支柱 [1][3]</span><a href="#10-基础支柱-13" class="header-anchor">#</a></h3><p><img src="https://user-images.githubusercontent.com/5608425/64059064-216a2880-cbe7-11e9-9ee7-141334d93959.png" alt="metric-tracing-logging"></p>
 <table>
 <thead>
 <tr>
@@ -284,13 +303,13 @@
 <td align="center">Zipkin ，Jaeger，pinpoint（无侵入）, <strong>skywalking</strong>（无侵入）, CAT</td>
 </tr>
 </tbody></table>
-<h3><span id="20-统一的可观测性平台">2.0-统一的可观测性平台</span><a href="#20-统一的可观测性平台" class="header-anchor">#</a></h3><ul>
+<h3><span id="20-统一的可观测性平台3">2.0-统一的可观测性平台[3]</span><a href="#20-统一的可观测性平台3" class="header-anchor">#</a></h3><ul>
 <li>OpenTelemetry - 数据采集传输的标准化</li>
 </ul>
-<h3><span id="30-内生的可观测性能力">3.0-内生的可观测性能力</span><a href="#30-内生的可观测性能力" class="header-anchor">#</a></h3><ul>
+<h3><span id="30-内生的可观测性能力3">3.0-内生的可观测性能力[3]</span><a href="#30-内生的可观测性能力3" class="header-anchor">#</a></h3><ul>
 <li>基于ebpf</li>
 </ul>
-<h2><span id="监控指标和原则">监控指标和原则</span><a href="#监控指标和原则" class="header-anchor">#</a></h2><ul>
+<h1><span id="监控指标和原则">监控指标和原则</span><a href="#监控指标和原则" class="header-anchor">#</a></h1><ul>
 <li><p>USE 原则  [面向”资源监控指标”]</p>
 <ul>
 <li>利用率（Utilization），资源被有效利用起来提供服务的平均时间占比</li>
@@ -314,12 +333,53 @@
 </ul>
 </li>
 </ul>
+<h1><span id="可观测性-发展4">可观测性-发展[4]</span><a href="#可观测性-发展4" class="header-anchor">#</a></h1><ul>
+<li><p>metric,log, tracing 之间的转换，tradeoff<br>metric 是最经济的 cost少</p>
+</li>
+<li><p>zipkin </p>
+<ul>
+<li>follow dapper论文</li>
+<li>场景<br>按需诊断，采样1%。 </li>
+<li>特性<br>集成适配各种系统</li>
+<li>jaeger<br>golang版本的zipkin</li>
+</ul>
+</li>
+<li><p>Prometheus</p>
+<ul>
+<li>目标<br>基础设施的监控</li>
+<li>pull<br>成本低</li>
+<li>协议，数据类型<br>counter , xxx, xxx,summary</li>
+</ul>
+</li>
+<li><p>pinpoint</p>
+<ul>
+<li>概念 独特<br>定位公司内部问题</li>
+</ul>
+</li>
+<li><p>CAT</p>
+<ul>
+<li>follow dapper</li>
+<li>纯sdk， 无agent</li>
+<li>多语言</li>
+</ul>
+</li>
+<li><p>openTelemetry</p>
+<ul>
+<li>是厂商的功能的最小集</li>
+</ul>
+</li>
+</ul>
 <h2><span id="参考">参考</span><a href="#参考" class="header-anchor">#</a></h2><ol>
-<li><a target="_blank" rel="noopener" href="https://wu-sheng.github.io/me/articles/metrics-tracing-and-logging">Metrics, tracing 和 logging 的关系</a></li>
-<li><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s?__biz=MzIzNjUxMzk2NQ==&mid=2247489564&idx=1&sn=46d9103444bef97e89e897224a896268&chksm=e8d7e7dedfa06ec8d687c1292a1d82ff9e579430afafb9d003e18c13d4ec7e1682dbd4c642d9&scene=27#wechat_redirect">观察之道：带你走进可观察性</a></li>
-<li><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1CL411777R?spm_id_from=333.880.my_history.page.click">【云原生学院#25】云原生应用可观测性实践</a>  github中有PPT ***</li>
-<li><a target="_blank" rel="noopener" href="https://www.pianshen.com/article/96362082048/">Monarch: 谷歌的全球级内存时序数据库</a>   监控  未</li>
+<li><p><a target="_blank" rel="noopener" href="https://wu-sheng.github.io/me/articles/metrics-tracing-and-logging">Metrics, tracing 和 logging 的关系</a></p>
+</li>
+<li><p>xxx</p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1CL411777R?spm_id_from=333.880.my_history.page.click">【云原生学院#25】云原生应用可观测性实践</a>  github中有PPT ***</p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Bk4y1L7T2/">开源可观测体系发展之路 - 吴晟 @ 得物技术沙龙</a> V ***</p>
+</li>
 </ol>
+<p>1xx. <a target="_blank" rel="noopener" href="https://www.pianshen.com/article/96362082048/">Monarch: 谷歌的全球级内存时序数据库</a>   监控  未</p>
 
     </div>
 
