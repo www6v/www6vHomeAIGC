@@ -2725,6 +2725,7 @@
 <li><p><a href="https://blog.csdn.net/web18484626332/article/details/126516371">SpringCloud微服务电商系统在Kubernetes集群中上线详细教程</a><br>用的都是Deployment ，需要部署成StatefulSet</p>
 </li>
 </ol>
+<p>1xx. <a href="https://www.bilibili.com/video/BV16t4y1w7r6/?p=195">kubernetes架构师课程</a> P195-P200 V</p>
 ]]></content>
       <categories>
         <category>云原生</category>
