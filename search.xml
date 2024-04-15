@@ -933,11 +933,17 @@
 <li><a href="/www6vHomeHexo/2015/07/09/jsfThreadModel/" title="京东服务框架JSF服务提供者线程模型">京东服务框架JSF服务提供者线程模型</a></li>
 </ul>
 <h3><span id="容错amp限流">容错&amp;限流</span><a href="#容错amp限流" class="header-anchor">#</a></h3><ul>
+<li>容错<ul>
 <li><a href="/www6vHomeHexo/2015/06/17/soaTolerate/" title="分布式服务框架 容错机制">分布式服务框架 容错机制</a></li>
 <li><a href="/www6vHomeHexo/2016/10/07/soaTolerateFramework/" title="容错框架">容错框架</a></li>
+<li><a href="/www6vHomeHexo/2016/01/17/soaTimeout/" title="超时和重试 总结">超时和重试 总结</a></li>
+</ul>
+</li>
+<li>限流<ul>
 <li><a href="/www6vHomeHexo/2016/09/26/ratelimit/" title="限流-总结">限流-总结</a></li>
 <li><a href="/www6vHomeHexo/2022/03/28/ratelimitSentinel/" title="流量治理-Sentinel">流量治理-Sentinel</a></li>
-<li><a href="/www6vHomeHexo/2016/01/17/soaTimeout/" title="超时和重试 总结">超时和重试 总结</a></li>
+</ul>
+</li>
 <li><a href="/www6vHomeHexo/2022/08/14/soaGracefulStart/" title="优雅启动">优雅启动</a> </li>
 <li><a href="/www6vHomeHexo/2022/08/14/soaGracefulClose/" title="优雅关闭">优雅关闭</a></li>
 </ul>
@@ -11428,10 +11434,8 @@
 
 
 
-<h1><span id="机制">机制</span><a href="#机制" class="header-anchor">#</a></h1><h3><span id="overview">Overview</span><a href="#overview" class="header-anchor">#</a></h3><div style="text-align: center;">
-
-<p><img src="https://user-images.githubusercontent.com/5608425/66263484-fa29fb00-e825-11e9-83aa-47bcb97d7580.png" alt="service-find"><br>服务注册和发现</p>
-</div>
+<h1><span id="机制">机制</span><a href="#机制" class="header-anchor">#</a></h1><h3><span id="overview">Overview</span><a href="#overview" class="header-anchor">#</a></h3><p>服务注册和发现</p>
+<img src="/www6vHomeHexo/2022/08/14/soaDiscovery/discover.png" class>
 
 <h3><span id="模式">模式</span><a href="#模式" class="header-anchor">#</a></h3><ul>
 <li>Client-side Discovery  </li>
@@ -11440,7 +11444,7 @@
 <h1><span id="实现">实现</span><a href="#实现" class="header-anchor">#</a></h1><h3><span id="需求-1">需求 [1]</span><a href="#需求-1" class="header-anchor">#</a></h3><p>RPC 框架依赖的注册中心的服务数据的一致性其实<strong>并不需要满足 CP，只要满足 AP 即可</strong>。</p>
 <h3><span id="framework">Framework</span><a href="#framework" class="header-anchor">#</a></h3><ul>
 <li>etcd -  CP</li>
-<li>nacos </li>
+<li>nacos<br>基于raft协议</li>
 <li>zk  -  CP</li>
 <li>eureka -  AP</li>
 </ul>
@@ -29712,7 +29716,11 @@ BGP 协议传输的消息
 
 <ul>
 <li><a href="#%E6%B5%81%E9%87%8F%E7%AE%A1%E7%90%86">流量管理</a><br>- <a href="#%E7%BB%84%E4%BB%B6">组件</a><br>- <a href="#%E6%B5%81%E9%87%8F%E7%AE%A1%E7%90%86%E6%A8%A1%E5%9E%8B">流量管理模型</a><br>- <a href="#%E7%81%B0%E5%BA%A6%E5%8F%91%E5%B8%83">灰度发布</a></li>
-<li><a href="#%E5%8F%82%E8%80%83">参考:</a></li>
+<li><a href="#%E5%8F%82%E8%80%83">参考</a><ul>
+<li><a href="#%E5%AE%98%E6%96%B9examples-0-5-g">官方Examples 0-5  G</a></li>
+<li><a href="#%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5">最佳实践</a></li>
+</ul>
+</li>
 </ul>
 <!-- tocstop -->
 
@@ -29741,9 +29749,9 @@ BGP 协议传输的消息
 </ul>
 <p><a href="https://mp.weixin.qq.com/s/VwqxrZsVmn4a5PcVckaLxA">Istio 庖丁解牛1：组件概览</a>  腾讯云 钟华</p>
 <h5><span id="流量管理模型">流量管理模型</span><a href="#流量管理模型" class="header-anchor">#</a></h5><ul>
-<li><p>VirtualService<br>定义了一系列针对指定服务的流量<strong>路由规则</strong>;<br>将流量路由到给定目标地址;<br>通常和目标规则（DestinationRule）成对出现;</p>
+<li><p><strong>VirtualService</strong><br>定义了一系列针对指定服务的流量<strong>路由规则</strong>;<br>将流量路由到给定目标地址;<br>通常和目标规则（DestinationRule）成对出现;</p>
 </li>
-<li><p>DestinationRule<br>定义虚拟服务路由<strong>目标地址</strong>的<strong>真实地址</strong>，即<strong>子集（subset）</strong>；<br>设置<strong>负载均衡方式</strong>： round robin（默认），随机，权重，最少请求数；</p>
+<li><p><strong>DestinationRule</strong><br>定义虚拟服务路由<strong>目标地址</strong>的<strong>真实地址</strong>，即<strong>子集（subset）</strong>；<br>设置<strong>负载均衡方式</strong>： round robin（默认），随机，权重，最少请求数；</p>
 </li>
 <li><p>ServiceEntry </p>
 <ul>
@@ -29756,25 +29764,22 @@ BGP 协议传输的消息
 </li>
 </ul>
 </li>
-<li><p>Gateway<br>描述了一个负载均衡器，用于承载网格边缘的进入和发出连接。</p>
+<li><p><strong>Gateway</strong><br>描述了一个负载均衡器，用于承载网格边缘的进入和发出连接。</p>
 </li>
 <li><p>EnvoyFilter<br>描述了针对代理服务的过滤器，用来定制由 Istio Pilot 生成的代理配置.</p>
 </li>
 <li><p>Sidecar<br>调整Envoy代理接管的端口和协议；<br>限制Envoy代理可访问的服务；</p>
 </li>
-<li><p>总结：<br>管理内部流量：VirtualService + DestinationRule<br>管理外部流量：Gateway<br>管理服务：ServiceEntry</p>
-</li>
 </ul>
+<p><strong>总结</strong><br>管理内部流量：VirtualService + DestinationRule<br>管理外部流量：Gateway<br>管理服务：ServiceEntry</p>
 <h5><span id="灰度发布">灰度发布</span><a href="#灰度发布" class="header-anchor">#</a></h5><img src="/www6vHomeHexo/2019/11/21/istioTrafficManagement/istio-gray.jpg" class title="istio灰度发布">
 
-<h2><span id="参考">参考:</span><a href="#参考" class="header-anchor">#</a></h2><ol>
+<h2><span id="参考">参考</span><a href="#参考" class="header-anchor">#</a></h2><ol>
 <li><a href="https://zhaohuabing.com/post/2018-09-25-istio-traffic-management-impl-intro/">Istio流量管理实现机制深度解析</a>  赵化冰</li>
 <li><a href="https://mp.weixin.qq.com/s/NjMncH84uEl_PywOFFMlFA">腾讯云容器团队内部Istio专题分享</a> 腾讯云 钟华</li>
 <li><a href="https://time.geekbang.org/course/intro/100049401">极客时间 《Service Mesh实战 - 核心功能之流量控制：Istio是如何实现流量控制功能的？》</a> 马若飞</li>
 </ol>
-<hr>
-<p>官方Examples 0-5  G</p>
-<ol start="0">
+<h3><span id="官方examples-0-5-g">官方Examples 0-5  G</span><a href="#官方examples-0-5-g" class="header-anchor">#</a></h3><ol start="0">
 <li><a href="https://preliminary.istio.io/zh/docs/concepts/traffic-management">流量管理</a>  istio官网 引</li>
 <li><a href="https://preliminary.istio.io/zh/docs/tasks/traffic-management/request-routing/">配置请求路由</a> done</li>
 <li><a href="https://preliminary.istio.io/zh/docs/tasks/traffic-management/traffic-shifting/">流量转移</a> done</li>
@@ -29782,6 +29787,7 @@ BGP 协议传输的消息
 <li><a href="https://preliminary.istio.io/zh/docs/tasks/traffic-management/request-timeouts/">设置请求超时</a> done</li>
 <li><a href="https://preliminary.istio.io/zh/docs/tasks/traffic-management/circuit-breaking/">熔断</a> done</li>
 </ol>
+<h3><span id="最佳实践">最佳实践</span><a href="#最佳实践" class="header-anchor">#</a></h3><p><a href="https://istio.io/latest/zh/docs/ops/best-practices/traffic-management/">流量管理最佳实践</a></p>
 ]]></content>
       <categories>
         <category>云原生</category>
@@ -33958,8 +33964,8 @@ nq： 不排队调度
         <category>serviceMesh</category>
       </categories>
       <tags>
-        <tag>k8s</tag>
         <tag>istio</tag>
+        <tag>k8s</tag>
       </tags>
   </entry>
   <entry>
