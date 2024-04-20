@@ -4424,6 +4424,7 @@
 <li><a href="#%E5%AE%9E%E6%88%98">实战</a></li>
 <li><a href="#notebook">notebook</a></li>
 <li><a href="#template">template</a></li>
+<li><a href="#llamaindex">llamaindex</a></li>
 </ul>
 </li>
 </ul>
@@ -4491,6 +4492,7 @@
 <li><a href="https://github.com/langchain-ai/langchain/tree/master/templates/rag-gemini-multi-modal">rag-gemini-multi-modal</a><br>OpenCLIP(image embedding) + Gemini(answer synthesis)</li>
 <li><a href="https://github.com/langchain-ai/langchain/tree/master/templates/rag-chroma-multi-modal-multi-vector">rag-chroma-multi-modal-multi-vector</a><br>GPT-4V(image summaries embedding) + GPT-4V (answer synthesis)</li>
 </ol>
+<h3><span id="llamaindex">llamaindex</span><a href="#llamaindex" class="header-anchor">#</a></h3><p>1xx. <a href="https://mp.weixin.qq.com/s/93CdvD8FLZjaA7E724bf7g">朴素多模态RAG如何实现？兼看RAG上下文过滤方案FILCO及202402大模型早报 </a><br>1xx. <a href="https://docs.llamaindex.ai/en/stable/examples/multi_modal/gpt4v_multi_modal_retrieval/">Advanced Multi-Modal Retrieval using GPT4V and Multi-Modal Index&#x2F;Retriever</a><br>1xx. <a href="https://www.llamaindex.ai/blog/multimodal-rag-pipeline-with-llamaindex-and-neo4j-a2c542eb0206">Multimodal RAG pipeline with LlamaIndex and Neo4j</a><br>1xx. <a href="https://github.com/tomasonjo/blogs/blob/master/llm/neo4j_llama_multimodal.ipynb">neo4j_llama_multimodal.ipynb</a> git</p>
 ]]></content>
       <categories>
         <category>AIGC</category>
@@ -6488,7 +6490,7 @@
 <li>OpenBMB BMTools: <a href="https://github.com/OpenBMB/BMTools">https://github.com/OpenBMB/BMTools</a></li>
 </ul>
 <h1><span id="参考">参考</span><a href="#参考" class="header-anchor">#</a></h1><ol>
-<li><a href="https://www.bilibili.com/video/BV18s4y1u7nJ/">清华博士带你搞懂大模型自学工具使用（Toolformer)【论文速读】</a> V 有思维导图<br>1xx. <a href="https://finisky.github.io/toolformer-summary/">使LLM善假于物: Toolformer </a><br>1xx. <a href="https://lilianweng.github.io/posts/2023-03-15-prompt-engineering/#external-apis">Prompt Engineering </a></li>
+<li><a href="https://www.bilibili.com/video/BV18s4y1u7nJ/">清华博士带你搞懂大模型自学工具使用（Toolformer)【论文速读】</a> V 有思维导图<br>1xx. <a href="https://finisky.github.io/toolformer-summary/">使LLM善假于物: Toolformer </a><br>1xx. <a href="https://lilianweng.github.io/posts/2023-03-15-prompt-engineering/#external-apis">Prompt Engineering </a><br>1xx. <a href="https://nakaizura.blog.csdn.net/article/details/130817902">Toolformer and Tool Learning（LLMs如何使用工具）</a></li>
 </ol>
 ]]></content>
       <categories>
@@ -6856,7 +6858,7 @@
       </tags>
   </entry>
   <entry>
-    <title>Agent-Tools</title>
+    <title>(原理)Agent-Tools</title>
     <url>/www6vHomeHexo/2023/01/27/gptAgentTool/</url>
     <content><![CDATA[<p></p>
 <span id="more"></span>
@@ -7541,6 +7543,7 @@
 <p>1xx. <a href="https://yaofu.notion.site/June-2023-A-Stage-Review-of-Instruction-Tuning-f59dbfc36e2d4e12a33443bd6b2012c2">June 2023, A Stage Review of Instruction Tuning</a></p>
 <p>1xx. <a href="https://zhuanlan.zhihu.com/p/629461665">【LLM系列之FLAN-T5&#x2F;PaLM】Scaling Instruction-Finetuned Language Models</a></p>
 <p>1xx. <a href="https://zhuanlan.zhihu.com/p/597036814">如何优化大模型的In-Context Learning效果？</a></p>
+<p>1xx. <a href="https://nakaizura.blog.csdn.net/article/details/128265846">Instruction Tuning（FLAN、instructGPT、chatGPT）</a></p>
 ]]></content>
       <categories>
         <category>AIGC</category>
