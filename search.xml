@@ -154,7 +154,8 @@
 <li><a href="/www6vHomeHexo/2022/12/07/gptRAGPerformance/" title="(原理)RAG 性能">(原理)RAG 性能</a></li>
 <li><a href="/www6vHomeHexo/2022/12/27/gptRAGOpenAI/" title="(原理)RAG OpenAI案例">(原理)RAG OpenAI案例</a> </li>
 <li><a href="/www6vHomeHexo/2023/04/18/gptRAGBaichuan/" title="RAG Baichuan案例">RAG Baichuan案例</a>  </li>
-<li><a href="/www6vHomeHexo/2023/03/02/gptRAGSelfReflective/" title="(原理|实战)Self-Reflective RAG">(原理|实战)Self-Reflective RAG</a></li>
+<li><a href="/www6vHomeHexo/2023/03/02/gptRAGSelfReflective/" title="(原理|实战)Self-Reflective RAG">(原理|实战)Self-Reflective RAG</a> </li>
+<li><a href="/www6vHomeHexo/2023/04/20/gptQueryRewrite/" title="Query Rewrite">Query Rewrite</a></li>
 </ul>
 </li>
 <li>Multimodal RAG<ul>
@@ -186,7 +187,7 @@
 </li>
 <li>Tool use<ul>
 <li><a href="/www6vHomeHexo/2022/11/16/gptFunctionCall/" title="(原理|实战) OpenAI Function Call">(原理|实战) OpenAI Function Call</a> </li>
-<li><a href="/www6vHomeHexo/2023/01/27/gptAgentTool/" title="Agent-Tools">Agent-Tools</a>  </li>
+<li><a href="/www6vHomeHexo/2023/01/27/gptAgentTool/" title="(原理)Agent-Tools">(原理)Agent-Tools</a>  </li>
 <li><a href="/www6vHomeHexo/2023/04/08/gptAgentToolGorilla/" title="(原理)Gorilla">(原理)Gorilla</a>   </li>
 <li><a href="/www6vHomeHexo/2023/04/07/gptAgentTuning/" title="Agent Tuning">Agent Tuning</a>   </li>
 <li><a href="/www6vHomeHexo/2023/02/03/gptAgentToolformer/" title="(原理)Toolformer">(原理)Toolformer</a></li>
@@ -2716,6 +2717,23 @@
       </categories>
       <tags>
         <tag>统一模型</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Query Rewrite</title>
+    <url>/www6vHomeHexo/2023/04/20/gptQueryRewrite/</url>
+    <content><![CDATA[<p></p>
+<span id="more"></span>
+
+
+<h1><span id="参考">参考</span><a href="#参考" class="header-anchor">#</a></h1><h3><span id="query-改写">query 改写</span><a href="#query-改写" class="header-anchor">#</a></h3><p>1xx. <a href="https://mp.weixin.qq.com/s?__biz=MzAxMjc3MjkyMg==&mid=2648406156&idx=1&sn=d91a4df105c4fc4c9523f7141bc1c24d">知识图谱用于细粒度大模型幻觉评估：兼论Langchain-RAG问答中的问题改写范式 </a><br>  RAG:  rewrite , Step back prompting, fusion<br>1xx. <a href="https://zhuanlan.zhihu.com/p/393914267">业界总结｜搜索中的Query理解</a> ***<br>1xx. <a href="https://zhuanlan.zhihu.com/p/149429784">智能扩充机器人的“标准问”库之Query生成</a></p>
+]]></content>
+      <categories>
+        <category>AIGC</category>
+        <category>RAG</category>
+      </categories>
+      <tags>
+        <tag>RAG</tag>
       </tags>
   </entry>
   <entry>
@@ -8616,10 +8634,7 @@
 <li><a href="#%E6%9E%B6%E6%9E%84-1">架构 [1]</a></li>
 </ul>
 </li>
-<li><a href="#%E5%8F%82%E8%80%83">参考</a><ul>
-<li><a href="#query-%E6%94%B9%E5%86%99">query 改写</a></li>
-</ul>
-</li>
+<li><a href="#%E5%8F%82%E8%80%83">参考</a></li>
 </ul>
 <!-- tocstop -->
 
@@ -8689,7 +8704,6 @@
 <li><p><a href="https://github.com/langchain-ai/langchain/blob/master/cookbook/rag_fusion.ipynb">RAG Fusion</a><br><a href="https://towardsdatascience.com/forget-rag-the-future-is-rag-fusion-1147298d8ad1">Forget RAG, the Future is RAG-Fusion</a></p>
 </li>
 </ol>
-<h3><span id="query-改写">query 改写</span><a href="#query-改写" class="header-anchor">#</a></h3><p>1xx. <a href="https://mp.weixin.qq.com/s?__biz=MzAxMjc3MjkyMg==&mid=2648406156&idx=1&sn=d91a4df105c4fc4c9523f7141bc1c24d">知识图谱用于细粒度大模型幻觉评估：兼论Langchain-RAG问答中的问题改写范式 </a><br>  RAG:  rewrite , Step back prompting, fusion<br>1xx. <a href="https://zhuanlan.zhihu.com/p/393914267">业界总结｜搜索中的Query理解</a> ***<br>1xx. <a href="https://zhuanlan.zhihu.com/p/149429784">智能扩充机器人的“标准问”库之Query生成</a></p>
 ]]></content>
       <categories>
         <category>AIGC</category>
