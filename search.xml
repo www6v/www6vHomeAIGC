@@ -6916,7 +6916,7 @@
 <li>CREATOR[11]</li>
 <li>ToolLLM [12]</li>
 <li>Visual ChatGPT[13]</li>
-<li>HuggingGPT</li>
+<li>HuggingGPT[14]</li>
 <li>Gorilla <a href="/www6vHomeHexo/2023/04/08/gptAgentToolGorilla/" title="(原理)Gorilla">(原理)Gorilla</a></li>
 </ul>
 <h1><span id="参考">参考</span><a href="#参考" class="header-anchor">#</a></h1><ol>
@@ -6931,6 +6931,8 @@
 <li><p>《TOOLLLM: FACILITATING LARGE LANGUAGE MODELS TO MASTER 16000+ REAL-WORLD APIS》<br><a href="https://zhuanlan.zhihu.com/p/647899563">TOOLLLM：让大型语言模型掌握真实世界的API</a><br><a href="https://github.com/OpenBMB/ToolBench">ToolBench </a> git<br><a href="https://blog.csdn.net/Dbox_boom/article/details/134815624">论文阅读：ToolLLM: Facilitating Large Language Models to Master 16000+ Real-world APIs</a></p>
 </li>
 <li><p>《Visual ChatGPT: Talking, Drawing and Editing with Visual Foundation Models》<br><a href="https://github.com/chenfei-wu/TaskMatrix">TaskMatrix</a></p>
+</li>
+<li><p><a href="https://nakaizura.blog.csdn.net/article/details/130856470">LLMs的自动化工具系统（HuggingGPT、AutoGPT、WebGPT、WebCPM）</a></p>
 </li>
 </ol>
 <h3><span id="others">Others</span><a href="#others" class="header-anchor">#</a></h3><p>《Augmented Language Models》<br>1xx. <a href="https://blog.csdn.net/qq_39388410/article/details/130798125">Augmented Language Models（增强语言模型）</a><br>1xx. <a href="https://zhuanlan.zhihu.com/p/611492200">增强语言模型（ALM）之综述篇</a></p>
@@ -8202,7 +8204,7 @@
 </ol>
 <h3><span id="llama2">LLaMA2</span><a href="#llama2" class="header-anchor">#</a></h3><ol start="30">
 <li><a href="https://mp.weixin.qq.com/s?__biz=MzAxMjc3MjkyMg==&mid=2648401927&idx=1&sn=3dddcb5c1d8b3c246a8b7529502fdcf0">也谈凌晨刷屏的Llama2开源可商用模型：从其数据构造、模型架构和评估方式等方面的一些总结与发现 </a></li>
-<li><a href="https://www.bilibili.com/video/BV1qQ4y1t7Aj/">【对话引擎应用】千帆中文增强Llama2提升大模型对话指令遵循能力</a>  百度<br>1xx. <a href="https://zhuanlan.zhihu.com/p/649756898">Llama 2详解</a>  ***<br><a href="https://www.bilibili.com/video/BV12h4y1N7C8/">Llama 2 模型结构解析</a> *** V<br>1xx. <a href="https://www.bilibili.com/video/BV1Me411z7ZV/">第十六课：LLaMA2</a> *** 华为  V<br>1xx. <a href="http://arthurchiao.art/blog/llama2-paper-zh/">[译][论文] LLaMA 2：开放基础和微调聊天模型</a><br>1xx. <a href="https://zhuanlan.zhihu.com/p/644671690">Llama2技术细节&amp;开源影响</a><br>1xx. <a href="https://mp.weixin.qq.com/s?__biz=MzAxMjc3MjkyMg==&mid=2648401959&idx=1&sn=582fa45cd00035bac621336f47cce252">再看Llama2的实际体验与民间评测：从现有公开在线测试地址到几个测试例子看初步效果分析 </a></li>
+<li><a href="https://www.bilibili.com/video/BV1qQ4y1t7Aj/">【对话引擎应用】千帆中文增强Llama2提升大模型对话指令遵循能力</a>  百度<br>1xx. <a href="https://zhuanlan.zhihu.com/p/649756898">Llama 2详解</a>  ***<br><a href="https://www.bilibili.com/video/BV12h4y1N7C8/">Llama 2 模型结构解析</a> *** V<br>1xx. <a href="https://www.bilibili.com/video/BV1Me411z7ZV/">第十六课：LLaMA2</a> *** 华为  V<br>1xx. <a href="http://arthurchiao.art/blog/llama2-paper-zh/">[译][论文] LLaMA 2：开放基础和微调聊天模型</a><br>1xx. <a href="https://zhuanlan.zhihu.com/p/644671690">Llama2技术细节&amp;开源影响</a><br>1xx. <a href="https://mp.weixin.qq.com/s?__biz=MzAxMjc3MjkyMg==&mid=2648401959&idx=1&sn=582fa45cd00035bac621336f47cce252">再看Llama2的实际体验与民间评测：从现有公开在线测试地址到几个测试例子看初步效果分析 </a><br>1xx. <a href="https://mp.weixin.qq.com/s?__biz=MzAxMjc3MjkyMg==&mid=2648402689&idx=1&sn=a1847ea36cde32bd386f85f41cf197b9">关于大模型行业问答落地的技术方案再思考：兼看Llama2中文汉化的成立性、实现路线以及代表项目</a></li>
 </ol>
 <p>1xx. <a href="https://llama.family/">Llama中文社区</a></p>
 ]]></content>
@@ -8671,6 +8673,8 @@
 
 <h1><span id="参考">参考</span><a href="#参考" class="header-anchor">#</a></h1><ol>
 <li><p><a href="https://blog.langchain.dev/deconstructing-rag/">Deconstructing RAG</a> ***</p>
+</li>
+<li><p>xxx</p>
 </li>
 <li><p><a href="https://blog.langchain.dev/applying-openai-rag/">Applying OpenAI’s RAG Strategies</a>   *** </p>
 </li>
@@ -9578,6 +9582,7 @@
 <p>1xx. <a href="https://zhuanlan.zhihu.com/p/632369186">NLP（十三）：Prompt Engineering 面面观</a></p>
 <p>1xx. <a href="https://github.com/brexhq/prompt-engineering?tab=readme-ov-file"> prompt-engineering</a> git</p>
 <p>1xx. <a href="https://finisky.github.io/chain-of-thought-prompting-summary/">Chain-of-Thought Prompting 简读 </a></p>
+<p>1xx. <a href="https://mp.weixin.qq.com/s?__biz=MzAxMjc3MjkyMg==&mid=2648399405&idx=1&sn=75cc058ff83467aa6bf107cf69335e71">ChatGPT应用端的Prompt解析：从概念、基本构成、常见任务、构造策略到开源工具与数据集 </a></p>
 <h3><span id="案例">案例</span><a href="#案例" class="header-anchor">#</a></h3><ol start="200">
 <li><a href="https://mp.weixin.qq.com/s/nXoZJ4xfgihA2mnBQ8EdIQ">运维大模型探索之 Text2PromQL 问答机器人 </a>     架构图， 最后两个重点总结   未</li>
 </ol>
