@@ -150,10 +150,14 @@
 <li><a href="/www6vHomeHexo/2022/12/31/gptRAGPractice/" title="(实战)RAG">(实战)RAG</a></li>
 </ul>
 </li>
-<li>案例 &amp; pattern<ul>
-<li><a href="/www6vHomeHexo/2022/12/07/gptRAGPerformance/" title="(原理)Advanced RAG">(原理)Advanced RAG</a></li>
+<li>案例 <ul>
 <li><a href="/www6vHomeHexo/2022/12/27/gptRAGOpenAI/" title="(原理)RAG OpenAI案例">(原理)RAG OpenAI案例</a> </li>
-<li><a href="/www6vHomeHexo/2023/04/18/gptRAGBaichuan/" title="(原理)RAG Baichuan案例">(原理)RAG Baichuan案例</a>  </li>
+<li><a href="/www6vHomeHexo/2023/04/18/gptRAGBaichuan/" title="(原理)RAG Baichuan案例">(原理)RAG Baichuan案例</a></li>
+</ul>
+</li>
+<li>pattern<ul>
+<li><a href="/www6vHomeHexo/2023/04/21/gptRAGModularRAG/" title="Modular RAG">Modular RAG</a> </li>
+<li><a href="/www6vHomeHexo/2022/12/07/gptRAGPerformance/" title="(原理)Advanced RAG">(原理)Advanced RAG</a></li>
 <li><a href="/www6vHomeHexo/2023/03/02/gptRAGSelfReflective/" title="(原理|实战)Self-Reflective RAG">(原理|实战)Self-Reflective RAG</a> </li>
 <li><a href="/www6vHomeHexo/2023/04/20/gptQueryTransformation/" title="Query Transformation">Query Transformation</a></li>
 </ul>
@@ -2720,18 +2724,139 @@
       </tags>
   </entry>
   <entry>
+    <title>(原理)Modular RAG</title>
+    <url>/www6vHomeHexo/2023/04/21/gptRAGModularRAG/</url>
+    <content><![CDATA[<p></p>
+<span id="more"></span>
+
+<h2><span id="目录">目录</span><a href="#目录" class="header-anchor">#</a></h2><div class="toc">
+
+<!-- toc -->
+
+<ul>
+<li><a href="#modular-rag4">Modular RAG[4]</a><ul>
+<li><a href="#indexing">indexing</a></li>
+<li><a href="#pre-retrival%E9%98%B6%E6%AE%B5">pre-retrival阶段</a></li>
+<li><a href="#retrieval">Retrieval</a></li>
+<li><a href="#post-retrieval-%E5%8C%85%E6%8B%AC%E4%B8%80%E4%BA%9B%E5%90%8E%E5%A4%84%E7%90%86%E7%9A%84%E6%A8%A1%E5%9D%97">post-retrieval 包括一些后处理的模块</a></li>
+<li><a href="#generation%E9%98%B6%E6%AE%B5">Generation阶段</a></li>
+<li><a href="#orchestraction%E9%98%B6%E6%AE%B5">orchestraction阶段</a></li>
+</ul>
+</li>
+<li><a href="#%E5%8F%82%E8%80%83">参考</a><ul>
+<li><a href="#modular-rag">Modular RAG</a></li>
+</ul>
+</li>
+</ul>
+<!-- tocstop -->
+
+</div>
+
+<h1><span id="modular-rag4">Modular RAG[4]</span><a href="#modular-rag4" class="header-anchor">#</a></h1><img src="/www6vHomeHexo/2023/04/21/gptRAGModularRAG/moduleRAG.webp" class>
+
+<h3><span id="indexing">indexing</span><a href="#indexing" class="header-anchor">#</a></h3><ul>
+<li><strong>chunk优化</strong><ul>
+<li>small-to-big<br>用小块做索引，但召回大块</li>
+<li>sliding window<br>滑动窗口，提高语义连贯性</li>
+<li>summary摘要（解决跨文档）以及结构化的组织<br>例如使用知识图谱进行文档内容的组织，根据文档结构进行层级组织</li>
+</ul>
+</li>
+</ul>
+<h3><span id="pre-retrival阶段">pre-retrival阶段</span><a href="#pre-retrival阶段" class="header-anchor">#</a></h3><ul>
+<li><strong>query-routing</strong><ul>
+<li>Metadata Router&#x2F; Filter  问题的分发</li>
+<li>Semantic Router  意图分类 [10]</li>
+</ul>
+</li>
+<li><strong>query-expansion</strong>  <ul>
+<li>Multi-Query 一变多</li>
+<li>Sub-Query 拆分子query</li>
+<li>CoVe[11]</li>
+</ul>
+</li>
+<li><strong>query transformer</strong> <ul>
+<li>query rewrite改写</li>
+<li>HyDE</li>
+<li>Step-back Prompting</li>
+</ul>
+</li>
+<li><strong>query construction</strong>  <ul>
+<li>text-cypher  </li>
+<li>text2sql </li>
+<li>将结构化知识利用起来</li>
+</ul>
+</li>
+</ul>
+<h3><span id="retrieval">Retrieval</span><a href="#retrieval" class="header-anchor">#</a></h3><ul>
+<li><strong>Retriver Selection</strong> 检索方式的选择<ul>
+<li>Sparse Retriever<br>稀疏检索（es字符串匹配）</li>
+<li>Dense Retriever<br>稠密检索（向量化检索）</li>
+</ul>
+</li>
+<li>Retriever Fine-tuning  检索的微调<ul>
+<li>SFT</li>
+<li>adapter</li>
+</ul>
+</li>
+</ul>
+<h3><span id="post-retrieval-包括一些后处理的模块">post-retrieval 包括一些后处理的模块</span><a href="#post-retrieval-包括一些后处理的模块" class="header-anchor">#</a></h3><ul>
+<li><strong>rerank重排</strong><ul>
+<li>Rule-base Rerank  基于规则的</li>
+<li>Model-base Rerank 基于模型的<br>基于大模型llm本身的</li>
+</ul>
+</li>
+<li>compresion&#x2F;selection 上下文压缩 <ul>
+<li>llmlingua </li>
+<li>recomp</li>
+<li>selective context</li>
+<li>核心在于利用不同的手段，将上下文中不重要的信息进行剔除</li>
+</ul>
+</li>
+</ul>
+<h3><span id="generation阶段">Generation阶段</span><a href="#generation阶段" class="header-anchor">#</a></h3><ul>
+<li>Generator Selection</li>
+<li>Generator Fine-tuning</li>
+<li>则包括对底层基础模型的一些事情，比如基于cloud-api，还是进行SFT微调。</li>
+</ul>
+<h3><span id="orchestraction阶段">orchestraction阶段</span><a href="#orchestraction阶段" class="header-anchor">#</a></h3><ul>
+<li>Scheduling</li>
+<li>Fusion</li>
+<li>则包括对各个模块之间的执行和通信进行管理</li>
+</ul>
+<h1><span id="参考">参考</span><a href="#参考" class="header-anchor">#</a></h1><h3><span id="modular-rag">Modular RAG</span><a href="#modular-rag" class="header-anchor">#</a></h3><ol start="4">
+<li><p><a href="https://mp.weixin.qq.com/s/j07PkTCoxBzAhkyON1puPg">值得一看的大模型RAG问答总括性梳理：模块化(Modular)RAG范式的定义、构成及机遇 </a><br>1xx. <a href="https://mp.weixin.qq.com/s?__biz=MzAxMjc3MjkyMg==&mid=2648407638&idx=1&sn=5c167b4a11bc483f5790ef1e0340d670">大模型RAG问答行业最佳案例及微调、推理双阶段实现模式：基于模块化(Modular)RAG自定义RAG Flow </a></p>
+</li>
+<li><p><a href="https://www.bilibili.com/video/BV1H64y1E75Y/">Sematic router 让LLM更加快速做出决策</a> V<br><a href="https://github.com/aurelio-labs/semantic-router/">semantic-router</a> git</p>
+</li>
+<li><p><a href="https://zhuanlan.zhihu.com/p/669977863">如何使用LLMs：Chain of Verification (CoVe)</a><br><a href="https://sourajit16-02-93.medium.com/chain-of-verification-cove-understanding-implementation-e7338c7f4cb5">Chain of Verification (CoVe) — Understanding &amp; Implementation</a></p>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>AIGC</category>
+        <category>RAG</category>
+      </categories>
+      <tags>
+        <tag>RAG</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Query Transformation</title>
     <url>/www6vHomeHexo/2023/04/20/gptQueryTransformation/</url>
     <content><![CDATA[<p></p>
 <span id="more"></span>
 
-<h1><span id="query-rewrite">query rewrite</span><a href="#query-rewrite" class="header-anchor">#</a></h1><p><a href="https://arxiv.org/pdf/2305.14283.pdf">论文</a><strong>使用LLM重写用户查询</strong>，而不是直接使用原始用户查询进行检索。<br>因为对于LLM 而言，<strong>原始查询不可能总是最佳检索结果</strong>，可以让LLM重写查询。</p>
+<h1><span id="query-rewrite-12">query rewrite [1][2]</span><a href="#query-rewrite-12" class="header-anchor">#</a></h1><p><a href="https://arxiv.org/pdf/2305.14283.pdf">论文</a><strong>使用LLM重写用户查询</strong>，而不是直接使用原始用户查询进行检索。<br>因为对于LLM 而言，<strong>原始查询不可能总是最佳检索结果</strong>，可以让LLM重写查询。</p>
 <p><a href="https://github.com/langchain-ai/langchain/blob/master/cookbook/rewrite.ipynb">Repo</a> git<br>【问题的多样化】</p>
-<h1><span id="step-back-prompting">Step-back Prompting</span><a href="#step-back-prompting" class="header-anchor">#</a></h1><p><a href="https://arxiv.org/pdf/2310.06117.pdf">论文</a>使用退一步提示，使用LLM生成**”后退”(Step back prompting)问题**。<br>使用检索时，”后退”问题和原始问题都会被用来进行检索，然后这两个结果都会被用来作为语言模型回复的基础。</p>
+<h1><span id="step-back-prompting-12">Step-back Prompting [1][2]</span><a href="#step-back-prompting-12" class="header-anchor">#</a></h1><p><a href="https://arxiv.org/pdf/2310.06117.pdf">论文</a>使用退一步提示，使用LLM生成**”后退”(Step back prompting)问题**。<br>使用检索时，”后退”问题和原始问题都会被用来进行检索，然后这两个结果都会被用来作为语言模型回复的基础。</p>
 <p><a href="https://github.com/langchain-ai/langchain/blob/master/cookbook/stepback-qa.ipynb">Repo</a> git</p>
 <p>【问题的抽象化】</p>
-<h1><span id="hyde">HyDE</span><a href="#hyde" class="header-anchor">#</a></h1><h1><span id="参考">参考</span><a href="#参考" class="header-anchor">#</a></h1><p>1xx. <a href="https://mp.weixin.qq.com/s?__biz=MzAxMjc3MjkyMg==&mid=2648406156&idx=1&sn=d91a4df105c4fc4c9523f7141bc1c24d">知识图谱用于细粒度大模型幻觉评估：兼论Langchain-RAG问答中的问题改写范式 </a><br>  RAG:  rewrite , Step back prompting, fusion </p>
-<p>1xx. <a href="https://blog.langchain.dev/query-transformations/">Query Transformations</a>  </p>
+<h1><span id="hyde">HyDE</span><a href="#hyde" class="header-anchor">#</a></h1><h1><span id="参考">参考</span><a href="#参考" class="header-anchor">#</a></h1><ol>
+<li><p><a href="https://mp.weixin.qq.com/s?__biz=MzAxMjc3MjkyMg==&mid=2648406156&idx=1&sn=d91a4df105c4fc4c9523f7141bc1c24d">知识图谱用于细粒度大模型幻觉评估：兼论Langchain-RAG问答中的问题改写范式 </a><br>  RAG:  rewrite , Step back prompting, fusion </p>
+</li>
+<li><p><a href="https://blog.langchain.dev/query-transformations/">Query Transformations</a></p>
+</li>
+</ol>
 <p>1xx. <a href="https://zhuanlan.zhihu.com/p/393914267">业界总结｜搜索中的Query理解</a> ***</p>
 <p>1xx. <a href="https://zhuanlan.zhihu.com/p/149429784">智能扩充机器人的“标准问”库之Query生成</a></p>
 ]]></content>
@@ -9971,18 +10096,8 @@
 <ul>
 <li><a href="#rag-overview2">RAG Overview[2]</a></li>
 <li><a href="#rag-vs-ft-2">RAG vs FT [2]</a></li>
-<li><a href="#modular-rag4">Modular RAG[4]</a><ul>
-<li><a href="#indexing">indexing</a></li>
-<li><a href="#pre-retrival%E9%98%B6%E6%AE%B5">pre-retrival阶段</a></li>
-<li><a href="#retrieval">Retrieval</a></li>
-<li><a href="#post-retrieval-%E5%8C%85%E6%8B%AC%E4%B8%80%E4%BA%9B%E5%90%8E%E5%A4%84%E7%90%86%E7%9A%84%E6%A8%A1%E5%9D%97">post-retrieval 包括一些后处理的模块</a></li>
-<li><a href="#generation%E9%98%B6%E6%AE%B5">Generation阶段</a></li>
-<li><a href="#orchestraction%E9%98%B6%E6%AE%B5">orchestraction阶段</a></li>
-</ul>
-</li>
 <li><a href="#%E5%8F%82%E8%80%83">参考</a><ul>
 <li><a href="#%E7%BB%BC%E8%BF%B0">综述</a></li>
-<li><a href="#modular-rag">Modular RAG</a></li>
 <li><a href="#%E8%AF%84%E4%BC%B0">评估</a></li>
 </ul>
 </li>
@@ -9997,92 +10112,15 @@
 <h1><span id="rag-vs-ft-2">RAG vs FT [2]</span><a href="#rag-vs-ft-2" class="header-anchor">#</a></h1><img src="/www6vHomeHexo/2022/11/02/gptRAG/rag-vs-ft.jpg" class>
 
 
-<h1><span id="modular-rag4">Modular RAG[4]</span><a href="#modular-rag4" class="header-anchor">#</a></h1><img src="/www6vHomeHexo/2022/11/02/gptRAG/moduleRAG.webp" class>
 
-<h3><span id="indexing">indexing</span><a href="#indexing" class="header-anchor">#</a></h3><ul>
-<li><strong>chunk优化</strong><ul>
-<li>small-to-big<br>用小块做索引，但召回大块</li>
-<li>sliding window<br>滑动窗口，提高语义连贯性</li>
-<li>summary摘要（解决跨文档）以及结构化的组织<br>例如使用知识图谱进行文档内容的组织，根据文档结构进行层级组织</li>
-</ul>
-</li>
-</ul>
-<h3><span id="pre-retrival阶段">pre-retrival阶段</span><a href="#pre-retrival阶段" class="header-anchor">#</a></h3><ul>
-<li><strong>query-routing</strong><ul>
-<li>Metadata Router&#x2F; Filter  问题的分发</li>
-<li>Semantic Router  意图分类 [10]</li>
-</ul>
-</li>
-<li><strong>query-expansion</strong>  <ul>
-<li>Multi-Query 一变多</li>
-<li>Sub-Query 拆分子query</li>
-<li>CoVe</li>
-</ul>
-</li>
-<li><strong>query transformer</strong> <ul>
-<li>query rewrite改写</li>
-<li>HyDE</li>
-<li>Step-back Prompting</li>
-</ul>
-</li>
-<li><strong>query construction</strong>  <ul>
-<li>text-cypher  </li>
-<li>text2sql </li>
-<li>将结构化知识利用起来</li>
-</ul>
-</li>
-</ul>
-<h3><span id="retrieval">Retrieval</span><a href="#retrieval" class="header-anchor">#</a></h3><ul>
-<li><strong>Retriver Selection</strong> 检索方式的选择<ul>
-<li>Sparse Retriever<br>稀疏检索（es字符串匹配）</li>
-<li>Dense Retriever<br>稠密检索（向量化检索）</li>
-</ul>
-</li>
-<li>Retriever Fine-tuning  检索的微调<ul>
-<li>SFT</li>
-<li>adapter</li>
-</ul>
-</li>
-</ul>
-<h3><span id="post-retrieval-包括一些后处理的模块">post-retrieval 包括一些后处理的模块</span><a href="#post-retrieval-包括一些后处理的模块" class="header-anchor">#</a></h3><ul>
-<li><strong>rerank重排</strong><ul>
-<li>Rule-base Rerank  基于规则的</li>
-<li>Model-base Rerank 基于模型的<br>基于大模型llm本身的</li>
-</ul>
-</li>
-<li>compresion&#x2F;selection 上下文压缩 <ul>
-<li>llmlingua </li>
-<li>recomp</li>
-<li>selective context</li>
-<li>核心在于利用不同的手段，将上下文中不重要的信息进行剔除</li>
-</ul>
-</li>
-</ul>
-<h3><span id="generation阶段">Generation阶段</span><a href="#generation阶段" class="header-anchor">#</a></h3><ul>
-<li>Generator Selection</li>
-<li>Generator Fine-tuning</li>
-<li>则包括对底层基础模型的一些事情，比如基于cloud-api，还是进行SFT微调。</li>
-</ul>
-<h3><span id="orchestraction阶段">orchestraction阶段</span><a href="#orchestraction阶段" class="header-anchor">#</a></h3><ul>
-<li>Scheduling</li>
-<li>Fusion</li>
-<li>则包括对各个模块之间的执行和通信进行管理</li>
-</ul>
+
 <h1><span id="参考">参考</span><a href="#参考" class="header-anchor">#</a></h1><h3><span id="综述">综述</span><a href="#综述" class="header-anchor">#</a></h3><ol start="2">
 <li><p>《Retrieval-Augmented Generation for Large Language Models: A Survey》<br><a href="https://baoyu.io/translations/ai-paper/2312.10997-retrieval-augmented-generation-for-large-language-models-a-survey">面向大语言模型的检索增强生成技术：综述 [译]</a>  翻译<br><a href="https://zhuanlan.zhihu.com/p/673910600">LLM之RAG理论（二）| RAG综述论文详解</a><br><a href="https://cloud.tencent.com/developer/article/2373340">同济大学发布最新检索增强(RAG)的LLM生成技术综述</a><br><a href="https://mp.weixin.qq.com/s/JjcN6OoxNK7tddmIOpvr2g">面向大模型的检索增强生成（RAG）综述 </a><br><a href="https://www.promptingguide.ai/zh/research/rag">大语言模型的检索增强生成 (RAG) 方法</a></p>
 </li>
-<li><p><a href="https://zhuanlan.zhihu.com/p/661465330?utm_id=0">NLP（廿一）：从 RAG 到 Self-RAG —— LLM 的知识增强</a> *** </p>
-</li>
-<li><p><a href="https://mp.weixin.qq.com/s/j07PkTCoxBzAhkyON1puPg">值得一看的大模型RAG问答总括性梳理：模块化(Modular)RAG范式的定义、构成及机遇 </a><br>1xx. <a href="https://mp.weixin.qq.com/s?__biz=MzAxMjc3MjkyMg==&mid=2648407638&idx=1&sn=5c167b4a11bc483f5790ef1e0340d670">大模型RAG问答行业最佳案例及微调、推理双阶段实现模式：基于模块化(Modular)RAG自定义RAG Flow </a></p>
+<li><p><a href="https://zhuanlan.zhihu.com/p/661465330?utm_id=0">NLP（廿一）：从 RAG 到 Self-RAG —— LLM 的知识增强</a> ***</p>
 </li>
 </ol>
 <p>1xx. <a href="https://mp.weixin.qq.com/s/FKv9glaGZD0qbLmB2zg6bg">北大最新综述精读：RAG在AIGC中的前世今生，覆盖300篇论文！</a><br>   <a href="https://mp.weixin.qq.com/s?__biz=MzkzODMxNTkzNg==&mid=2247484337&idx=1&sn=484db46f6a974cb26b7659096b31cdd8">最新RAG综述来了！北京大学发布AIGC的检索增强技术综述</a></p>
-<h3><span id="modular-rag">Modular RAG</span><a href="#modular-rag" class="header-anchor">#</a></h3><ol start="10">
-<li><p><a href="https://www.bilibili.com/video/BV1H64y1E75Y/">Sematic router 让LLM更加快速做出决策</a> V<br><a href="https://github.com/aurelio-labs/semantic-router/">semantic-router</a> git</p>
-</li>
-<li><p><a href="https://zhuanlan.zhihu.com/p/669977863">如何使用LLMs：Chain of Verification (CoVe)</a><br><a href="https://sourajit16-02-93.medium.com/chain-of-verification-cove-understanding-implementation-e7338c7f4cb5">Chain of Verification (CoVe) — Understanding &amp; Implementation</a></p>
-</li>
-</ol>
 <h3><span id="评估">评估</span><a href="#评估" class="header-anchor">#</a></h3><p>1xx. <a href="https://mp.weixin.qq.com/s?__biz=MzAxMjc3MjkyMg==&mid=2648404511&idx=2&sn=fefb78c1d920cb5b437f2e3da9935637">再看大模型RAG检索增强如何评估：RAGAS开源自动化评估框架</a><br>1xx. <a href="https://mp.weixin.qq.com/s?__biz=MzAxMjc3MjkyMg==&mid=2648404476&idx=2&sn=d07b27dc9162ab0aaec3108004e4cfbe">大模型RAG检索增强问答如何评估：噪声、拒答、反事实、信息整合四大能力评测任务探索 </a></p>
 <p>XXX<br>1xx. <a href="https://baoyu.io/translations/ai-paper/2005.11401-retrieval-augmented-generation-for-knowledge-intensive-nlp-tasks">知识密集型自然语言处理任务的检索增强生成技术研究 [译]</a><br>1xx. <a href="https://baoyu.io/translations/rag/mastering-rag-how-to-architect-an-enterprise-rag-system">构建企业级 RAG 系统的高级指南 [译]</a><br>1xx. <a href="https://baoyu.io/translations/ai-paper/2401.05856v1-seven-failure-points-when-engineering-a-retrieval-augmented-generation-system">在构建检索增强型生成系统时的七大挑战 [译]</a></p>
 ]]></content>
