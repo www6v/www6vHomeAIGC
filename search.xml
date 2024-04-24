@@ -83,6 +83,7 @@
 <li>DataProcess<ul>
 <li><a href="/www6vHomeHexo/2023/02/05/gptDataProcess/" title="(原理)数据处理">(原理)数据处理</a>  </li>
 <li><a href="/www6vHomeHexo/2023/03/19/gptDataProcessPractice/" title="(实战)数据处理">(实战)数据处理</a>  </li>
+<li><a href="/www6vHomeHexo/2024/04/24/gptDataProcessAnnotation/" title="Data  Annotation">Data  Annotation</a>   </li>
 <li><a href="/www6vHomeHexo/2023/02/21/gptSelfInstruct/" title="(多样性)SELF-INSTRUCT">(多样性)SELF-INSTRUCT</a>   </li>
 <li><a href="/www6vHomeHexo/2023/03/18/gptDataWizard/" title="(多样性 复杂度)Wizard">(多样性 复杂度)Wizard</a> </li>
 <li><a href="/www6vHomeHexo/2024/02/27/gptDataRefinedWeb/" title="(质量过滤)RefinedWeb, Textbooks">(质量过滤)RefinedWeb, Textbooks</a>  </li>
@@ -1608,6 +1609,26 @@
       </categories>
       <tags>
         <tag>汇总</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Data  Annotation</title>
+    <url>/www6vHomeHexo/2024/04/24/gptDataProcessAnnotation/</url>
+    <content><![CDATA[<p></p>
+<span id="more"></span>
+
+
+
+<h3><span id="数据标签">数据标签</span><a href="#数据标签" class="header-anchor">#</a></h3><p>1xx. <a href="https://developer.aliyun.com/article/1311807">InsTag：大语言模型监督微调数据标签标注工具</a><br>   <a href="https://www.modelscope.cn/studios/lukeminglkm/instagger_demo/summary">InsTag指令打标工具</a> demo<br>1xx.  <a href="https://mp.weixin.qq.com/s?__biz=MzAxMjc3MjkyMg==&mid=2648408650&idx=2&sn=ef8424969be749489188ebd810800f08">如何利用大模型进行数据标注与知识蒸馏：兼看ActiveRAG上下文去噪的大模型RAG问答范式</a><br>   大模型用于数据标注<br>   《Large Language Models for Data Annotation: A Survey》</p>
+<p>1xx. <a href="https://mp.weixin.qq.com/s?__biz=MzAxMjc3MjkyMg==&mid=2648399919&idx=1&sn=66fc1dfdba57744a80c6869b8cf941af">ChatGPT用于数据标注是否可行：基于推特分类、生成内容排序任务的代表性实验报告介绍 </a></p>
+<p>1xx.  AutoLabel - 自助数据标注</p>
+]]></content>
+      <categories>
+        <category>AIGC</category>
+        <category>dataProcess</category>
+      </categories>
+      <tags>
+        <tag>dataProcess</tag>
       </tags>
   </entry>
   <entry>
@@ -5078,9 +5099,6 @@
 <li>这些 Command 都是可扩展的，每一种命令代表一种外部能力(比如爬虫、Google搜索，也包括GPT的能力)，通过这些 Command 调用返回的 Result 又会成为到 Command Prompt 的组成元素，</li>
 <li>回到第 1 步往复循环，直到拿到最终结果结果（状态为“compelete”）</li>
 </ol>
-<h1><span id="其他">其他</span><a href="#其他" class="header-anchor">#</a></h1><ul>
-<li>AutoLabel - 自助数据标注</li>
-</ul>
 <h1><span id="参考">参考</span><a href="#参考" class="header-anchor">#</a></h1><ol>
 <li><a href="https://github.com/www6v/awesome-ai-agents">awesome-ai-agents</a> git list</li>
 <li><a href="https://github.com/www6v/DecryptPrompt">DecryptPrompt</a>  ***  git list</li>
@@ -6381,20 +6399,20 @@
 <!-- toc -->
 
 <ul>
-<li><a href="#sft-%E6%95%B0%E6%8D%AE%E7%BB%84%E5%90%881">SFT 数据组合[1]</a><ul>
-<li><a href="#%E9%97%AE%E9%A2%98">问题</a></li>
-<li><a href="#%E5%AE%9E%E9%AA%8C%E7%BB%93%E6%9E%9C">实验结果</a></li>
-</ul>
-</li>
+<li><a href="#%E8%AE%BA%E6%96%87">论文</a></li>
+<li><a href="#%E9%97%AE%E9%A2%981">问题[1]</a></li>
+<li><a href="#%E5%AE%9E%E9%AA%8C%E7%BB%93%E6%9E%9C1">实验结果[1]</a></li>
 <li><a href="#%E5%8F%82%E8%80%83">参考</a></li>
 </ul>
 <!-- tocstop -->
 
 </div>
 
-<h1><span id="sft-数据组合1">SFT 数据组合[1]</span><a href="#sft-数据组合1" class="header-anchor">#</a></h1><p>《HOW ABILITIES IN LARGE LANGUAGE MODELS ARE AFFECTED BY SUPERVISED FINE-TUNING DATA COM- POSITION》</p>
-<h3><span id="问题">问题</span><a href="#问题" class="header-anchor">#</a></h3><p>1、推理、编码和通用能力如何随SFT数据量而变化？<br>2、在SFT中结合三种能力时是否存在性能冲突？<br>3、导致性能冲突的关键因素是什么？<br>4、不同的SFT策略对组合数据有什么影响？</p>
-<h3><span id="实验结果">实验结果</span><a href="#实验结果" class="header-anchor">#</a></h3><p>1、不同的能力表现出不同的扩展模式，在数据量相同的情况下，较大的模型通常表现出更优越的性能。<br>2、随着数据量的持续增加，数学推理和代码生成能力也在不断提高，一般能力则是在样本数达到一千左右时才得到提升，且提升速度较慢。<br>3、在数据量较低的情况下，数据组合会带来各种能力的提高，而在数据量较高的情况下，能力则会发生冲突。<br>4、组成数据量会影响性能，而组成比例的影响则微乎其微。</p>
+<h1><span id="论文">论文</span><a href="#论文" class="header-anchor">#</a></h1><ul>
+<li>论文地址<br> 《HOW ABILITIES IN LARGE LANGUAGE MODELS ARE AFFECTED BY SUPERVISED FINE-TUNING DATA COM- POSITION》<br>keyword: SFT 数据组合</li>
+</ul>
+<h1><span id="问题1">问题[1]</span><a href="#问题1" class="header-anchor">#</a></h1><p>1、推理、编码和通用能力如何随SFT数据量而变化？<br>2、在SFT中结合三种能力时是否存在性能冲突？<br>3、导致性能冲突的关键因素是什么？<br>4、不同的SFT策略对组合数据有什么影响？</p>
+<h1><span id="实验结果1">实验结果[1]</span><a href="#实验结果1" class="header-anchor">#</a></h1><p>1、不同的能力表现出不同的扩展模式，在数据量相同的情况下，较大的模型通常表现出更优越的性能。<br>2、随着数据量的持续增加，数学推理和代码生成能力也在不断提高，一般能力则是在样本数达到一千左右时才得到提升，且提升速度较慢。<br>3、在数据量较低的情况下，数据组合会带来各种能力的提高，而在数据量较高的情况下，能力则会发生冲突。<br>4、组成数据量会影响性能，而组成比例的影响则微乎其微。</p>
 <h1><span id="参考">参考</span><a href="#参考" class="header-anchor">#</a></h1><ol>
 <li><a href="https://mp.weixin.qq.com/s?__biz=MzAxMjc3MjkyMg==&mid=2648404728&idx=2&sn=1cb2203648271720d421c963ebcc03b3">SFT微调的数据组合及训练策略如何影响大模型性能：4个经典问题及实验结论分享 </a></li>
 </ol>
@@ -6474,8 +6492,7 @@
 </li>
 <li><a href="#%E5%8F%82%E8%80%83">参考</a><ul>
 <li><a href="#%E8%B4%A8%E9%87%8F-%E5%A4%9A%E6%A0%B7%E6%80%A7-%E5%A4%8D%E6%9D%82%E5%BA%A6">质量-&gt;多样性, 复杂度</a></li>
-<li><a href="#%E6%8C%87%E4%BB%A4%E6%95%B0%E6%8D%AE">指令数据</a></li>
-<li><a href="#%E6%95%B0%E6%8D%AE%E6%A0%87%E7%AD%BE">数据标签</a></li>
+<li><a href="#%E6%8C%87%E4%BB%A4%E6%95%B0%E6%8D%AE-%E9%AB%98%E8%B4%A8%E9%87%8F">指令数据-高质量</a></li>
 <li><a href="#%E6%95%B0%E6%8D%AE%E5%A2%9E%E5%BC%BA-1">数据增强</a></li>
 <li><a href="#%E6%95%B0%E6%8D%AE%E8%B4%A8%E9%87%8F">数据质量</a></li>
 </ul>
@@ -6562,10 +6579,9 @@
 <h3><span id="质量-gt多样性-复杂度">质量-&gt;多样性, 复杂度</span><a href="#质量-gt多样性-复杂度" class="header-anchor">#</a></h3><ol start="20">
 <li><a href="/www6vHomeHexo/2023/03/18/gptDataWizard/" title="(多样性 复杂度)Wizard">(多样性 复杂度)Wizard</a>   self</li>
 </ol>
-<h3><span id="指令数据">指令数据</span><a href="#指令数据" class="header-anchor">#</a></h3><p>1xx. <a href="https://zhuanlan.zhihu.com/p/658128530">如何从数据集中自动识别高质量的指令数据-IFD指标的使用</a></p>
+<h3><span id="指令数据-高质量">指令数据-高质量</span><a href="#指令数据-高质量" class="header-anchor">#</a></h3><p>1xx. <a href="https://zhuanlan.zhihu.com/p/658128530">如何从数据集中自动识别高质量的指令数据-IFD指标的使用</a></p>
 <p>1xx. <a href="https://zhuanlan.zhihu.com/p/671183709">大模型微调技巧 | 高质量指令数据筛选方法-MoDS</a></p>
-<h3><span id="数据标签">数据标签</span><a href="#数据标签" class="header-anchor">#</a></h3><p>1xx. <a href="https://developer.aliyun.com/article/1311807">InsTag：大语言模型监督微调数据标签标注工具</a><br>   <a href="https://www.modelscope.cn/studios/lukeminglkm/instagger_demo/summary">InsTag指令打标工具</a> demo<br>1xx.  <a href="https://mp.weixin.qq.com/s?__biz=MzAxMjc3MjkyMg==&mid=2648408650&idx=2&sn=ef8424969be749489188ebd810800f08">如何利用大模型进行数据标注与知识蒸馏：兼看ActiveRAG上下文去噪的大模型RAG问答范式</a><br>   大模型用于数据标注<br>   《Large Language Models for Data Annotation: A Survey》</p>
-<h3><span id="数据增强">数据增强</span><a href="#数据增强" class="header-anchor">#</a></h3><p>1xx. <a href="https://zhuanlan.zhihu.com/p/420295576">哈工大｜15种NLP数据增强方法总结与对比</a><br>1xx. 《Large Language Models for Data Annotation: A Survey》</p>
+<h3><span id="数据增强">数据增强</span><a href="#数据增强" class="header-anchor">#</a></h3><p>1xx. <a href="https://zhuanlan.zhihu.com/p/420295576">哈工大｜15种NLP数据增强方法总结与对比</a></p>
 <h3><span id="数据质量">数据质量</span><a href="#数据质量" class="header-anchor">#</a></h3><p>1xx. <a href="https://mp.weixin.qq.com/s?__biz=MzAxMjc3MjkyMg==&mid=2648403976&idx=1&sn=694db5e2b3085b1610e8d19daa93a474">再看大模型预训数据质量如何评估：困惑度、错误L2范数和记忆化三种度量方法的效果对比分析研究</a></p>
 ]]></content>
       <categories>
