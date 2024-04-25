@@ -26,7 +26,7 @@
 <meta property="og:site_name" content="www6v的博客">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-06-11T07:57:10.000Z">
-<meta property="article:modified_time" content="2024-04-25T10:03:47.007Z">
+<meta property="article:modified_time" content="2024-04-25T23:23:36.013Z">
 <meta property="article:author" content="Wang Wei">
 <meta property="article:tag" content="DeepLearning">
 <meta name="twitter:card" content="summary">
@@ -224,7 +224,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2024-04-25 18:03:47" itemprop="dateModified" datetime="2024-04-25T18:03:47+08:00">2024-04-25</time>
+                <time title="修改时间：2024-04-26 07:23:36" itemprop="dateModified" datetime="2024-04-26T07:23:36+08:00">2024-04-26</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -262,10 +262,18 @@
 <li><a href="#deeplearning-1">DeepLearning [1]</a></li>
 <li><a href="#%E6%A8%A1%E5%9E%8B%E8%AE%AD%E7%BB%832">模型训练[2]</a></li>
 <li><a href="#%E6%B1%82%E8%A7%A3%E5%99%A82">求解器[2]</a></li>
-<li><a href="#%E5%B8%B8%E7%94%A8%E7%9A%84%E6%8D%9F%E5%A4%B1%E5%87%BD%E6%95%B02">常用的损失函数[2]</a><ul>
-<li><a href="#%E5%8F%82%E8%80%83">参考</a></li>
+<li><a href="#%E5%B8%B8%E7%94%A8%E7%9A%84%E6%8D%9F%E5%A4%B1%E5%87%BD%E6%95%B02">常用的损失函数[2]</a></li>
+<li><a href="#%E5%B8%B8%E7%94%A8%E7%9A%84%E8%B6%85%E5%8F%822">常用的超参[2]</a><ul>
+<li><a href="#%E8%BF%87%E6%8B%9F%E5%90%88%E4%B8%8E%E6%AC%A0%E6%8B%9F%E5%90%88">过拟合与欠拟合</a></li>
+<li><a href="#%E5%AD%A6%E4%B9%A0%E7%8E%87%E8%B0%83%E6%95%B4%E7%AD%96%E7%95%A5">学习率调整策略</a></li>
 </ul>
 </li>
+<li><a href="#%E8%87%AA%E7%84%B6%E8%AF%AD%E8%A8%80%E5%A4%84%E7%90%86%E5%B8%B8%E8%A7%81%E7%9A%84%E7%BD%91%E7%BB%9C%E7%BB%93%E6%9E%843">自然语言处理常见的网络结构[3]</a><ul>
+<li><a href="#%E6%96%87%E6%9C%AC%E5%8D%B7%E7%A7%AF%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C-textcnn">文本卷积神经网络 TextCNN</a></li>
+<li><a href="#%E5%BE%AA%E7%8E%AF%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C-rnn">循环神经网络 RNN</a></li>
+</ul>
+</li>
+<li><a href="#%E5%8F%82%E8%80%83">参考</a></li>
 </ul>
 <!-- tocstop -->
 
@@ -319,10 +327,47 @@
 <li>两个向量之间的夹角（余弦距离）</li>
 <li>两个概率分布之间的差异，<strong>交叉熵</strong></li>
 </ul>
-<h2><span id="参考">参考</span><a href="#参考" class="header-anchor">#</a></h2><ol>
-<li><p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1GA41157mJ/">系统论文阅读研讨会week9：机器学习系统（一）</a> V ***<br>  <a target="_blank" rel="noopener" href="https://learn-sys.github.io/cn/reading/">W9：机器学习系统（一）</a> ***  对应的PPT</p>
+<h1><span id="常用的超参2">常用的超参[2]</span><a href="#常用的超参2" class="header-anchor">#</a></h1><h3><span id="过拟合与欠拟合">过拟合与欠拟合</span><a href="#过拟合与欠拟合" class="header-anchor">#</a></h3><ul>
+<li>防止过拟合的方法（1）：<strong>Weight Decay</strong><br>惩罚参数的复杂性</li>
+<li>防止过拟合的方法（2）：<strong>Dropout</strong><br> 在前向传播的时候，概率性的（临时）删除一部分神经元，这样可以使模型泛化性更强，因为它不会太依赖某些局部的特征</li>
+</ul>
+<h3><span id="学习率调整策略">学习率调整策略</span><a href="#学习率调整策略" class="header-anchor">#</a></h3><ul>
+<li><p>开始时学习率<strong>大</strong>些：快速到达最优解附近</p>
 </li>
-<li><p>《11-机器学习基础-上 》知乎ai大模型<br><a target="_blank" rel="noopener" href="https://github.com/www6v/fullStackLLM/blob/master/08-fine-tuning/index.ipynb">课件</a></p>
+<li><p>逐渐<strong>减小</strong>学习率：避免跳过最优解</p>
+</li>
+<li><p>NLP 任务的损失函数有很多“悬崖峭壁”，自适应学习率更能处理这种极端情况，<strong>避免梯度爆炸</strong>。</p>
+</li>
+<li><p><strong>防止过拟合的方法（3）</strong>：<strong>学习率 Warm Up</strong></p>
+<ul>
+<li>先从一个很小的学习率逐渐上升到正常学习率，在稳步减小学习率</li>
+</ul>
+</li>
+</ul>
+<h1><span id="自然语言处理常见的网络结构3">自然语言处理常见的网络结构[3]</span><a href="#自然语言处理常见的网络结构3" class="header-anchor">#</a></h1><h3><span id="文本卷积神经网络-textcnn">文本卷积神经网络 TextCNN</span><a href="#文本卷积神经网络-textcnn" class="header-anchor">#</a></h3><ul>
+<li><p>how</p>
+<ul>
+<li>一个窗口的卷积和Pooling过程</li>
+</ul>
+</li>
+<li><p>why</p>
+<ul>
+<li>参数量较少、好训练、算力要求低</li>
+<li>适合<strong>文本分类</strong>问题</li>
+<li>善于表示<strong>局部特征（卷积窗口）</strong>，不擅长表示长上下文依赖关系</li>
+</ul>
+</li>
+</ul>
+<h3><span id="循环神经网络-rnn">循环神经网络 RNN</span><a href="#循环神经网络-rnn" class="header-anchor">#</a></h3><ul>
+<li>简易 RNN<br>最大问题是随着序列长度增加，<strong>梯度消失或爆炸</strong></li>
+<li>LSTM 和 GRU<br>通过「门」来控制上文的状态被记住还是遗忘，同时防止梯度消失或爆炸</li>
+</ul>
+<h1><span id="参考">参考</span><a href="#参考" class="header-anchor">#</a></h1><ol>
+<li><p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1GA41157mJ/">系统论文阅读研讨会week9：机器学习系统（一）</a> V ***<br> <a target="_blank" rel="noopener" href="https://learn-sys.github.io/cn/reading/">W9：机器学习系统（一）</a> ***  对应的PPT</p>
+</li>
+<li><p>《11-机器学习基础-上》AI 大模型全栈工程师培养计划_2<br><a target="_blank" rel="noopener" href="https://github.com/www6v/fullStackLLM/blob/master/08-fine-tuning/index.ipynb">课件</a> </p>
+</li>
+<li><p>《12-机器学习基础-下》AI 大模型全栈工程师培养计划_2<br> <a target="_blank" rel="noopener" href="https://github.com/www6v/fullStackLLM/blob/master/08-fine-tuning/index.ipynb">课件</a></p>
 </li>
 </ol>
 <p>1xx. <a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/461925341">吴恩达：28张图全解深度学习知识</a></p>
