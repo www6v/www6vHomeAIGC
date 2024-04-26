@@ -77,7 +77,7 @@
 </li>
 <li>DataProcess<ul>
 <li><a href="/www6vHomeHexo/2023/04/01/gptDatasetSurvey/" title="(Survey)Dataset">(Survey)Dataset</a> </li>
-<li><a href="/www6vHomeHexo/2023/02/05/gptDataProcess/" title="(原理)数据处理">(原理)数据处理</a>  </li>
+<li><a href="/www6vHomeHexo/2023/02/05/gptDataProcess/" title="(Survey)数据处理">(Survey)数据处理</a>  </li>
 <li><a href="/www6vHomeHexo/2023/03/19/gptDataProcessPractice/" title="(实战)数据处理">(实战)数据处理</a>  </li>
 <li><a href="/www6vHomeHexo/2024/04/24/gptDataProcessAnnotation/" title="Data  Annotation">Data  Annotation</a></li>
 </ul>
@@ -85,7 +85,8 @@
 <li>SFT <ul>
 <li><a href="/www6vHomeHexo/2023/02/21/gptSelfInstruct/" title="(多样性)SELF-INSTRUCT">(多样性)SELF-INSTRUCT</a>   </li>
 <li><a href="/www6vHomeHexo/2023/03/18/gptDataWizard/" title="(多样 复杂)Wizard">(多样 复杂)Wizard</a> </li>
-<li><a href="/www6vHomeHexo/2023/02/06/gptDatasetSFT/" title="(原理)SFT 数据组合">(原理)SFT 数据组合</a></li>
+<li><a href="/www6vHomeHexo/2023/02/06/gptDatasetSFT/" title="(原理)SFT 数据组合">(原理)SFT 数据组合</a>  </li>
+<li><a href="/www6vHomeHexo/2023/04/26/gptDataSFTScaling/" title="SFT Scaling">SFT Scaling</a></li>
 </ul>
 </li>
 <li>Pretrain  <ul>
@@ -2752,6 +2753,62 @@
       </tags>
   </entry>
   <entry>
+    <title>SFT Scaling</title>
+    <url>/www6vHomeHexo/2023/04/26/gptDataSFTScaling/</url>
+    <content><![CDATA[<p></p>
+<span id="more"></span>
+
+
+<h1><span id="论文">论文</span><a href="#论文" class="header-anchor">#</a></h1><ul>
+<li>论文地址<br> 《When Scaling Meets LLM Fine-tuning: The Effect of Data, Model and Fine-tuning Method》</li>
+</ul>
+<h1><span id="摘要1">摘要[1]</span><a href="#摘要1" class="header-anchor">#</a></h1><p>这篇论文研究了大型语言模型（LLMs）的微调（finetuning）问题，尤其是在不同规模因素下的微调性能。作者探讨了包括LLM模型大小、预训练数据大小、新微调参数大小和微调数据大小在内的多个因素，并考虑了两种微调方法：全模型微调（FMT）和参数高效微调（PET，包括prompt tuning和LoRA）。研究发现LLM微调遵循基于功率的乘法联合规模法则，LLM模型规模的增加对微调性能的提升大于预训练数据规模的增加，而PET参数规模的增加通常效果不佳。此外，微调方法的选择高度依赖于具体任务和微调数据。</p>
+<h1><span id="实验方法1">实验方法[1]</span><a href="#实验方法1" class="header-anchor">#</a></h1><p>实验基于两组预训练的双语LLMs（英语&amp;德语，英语&amp;中文），模型大小从1B到16B。作者在WMT机器翻译（英语-德语、英语-中文）和多语言摘要（英语、德语、法语和西班牙语）任务上进行了大规模研究，最多使用20M微调示例。实验设置包括：</p>
+<ul>
+<li><strong>下游任务</strong>：选择机器翻译和多语言摘要作为微调的下游任务。</li>
+<li><strong>LLMs和预训练</strong>：采用解码器仅Transformer模型，使用修改后的UL2目标进行训练。</li>
+<li><strong>微调设置</strong>：研究了三种微调方法（FMT、Prompt和LoRA），并探索了四种不同的规模因素。</li>
+<li><strong>评估</strong>：使用基于token级别的困惑度（PPL）选择最佳检查点进行评估，并使用BLEURT和RougeL评估生成质量。</li>
+</ul>
+<h1><span id="结论1">结论[1]</span><a href="#结论1" class="header-anchor">#</a></h1><ul>
+<li>提出了一个乘法联合规模法则来描述微调数据大小和其他规模因素之间的规模关系。</li>
+<li>LLM模型规模的增加对微调性能的提升大于预训练数据规模的增加。</li>
+<li>PET参数规模的增加对于LoRA和Prompt的效果有限，且有时甚至会导致反向规模效应。</li>
+<li>微调方法的选择对于下游任务来说并不简单，需要根据任务特性和微调数据的可用性来决定。</li>
+<li>微调可能会提高模型对相关任务的零样本泛化能力，尤其是当基础LLM较大时，Prompt和LoRA通常比FMT表现得更好。</li>
+</ul>
+<p>作者指出，尽管研究提供了有价值的见解，但也存在一些局限性，如联合规模法则主要基于封闭生成任务的实证结果，缺乏理论基础。未来的工作将扩展到多模态LLMs，探索微调数据质量的影响，并考虑开放和创造性的生成任务以及微调的多任务设置。</p>
+<h1><span id="重要结论2">重要结论[2]</span><a href="#重要结论2" class="header-anchor">#</a></h1><p>作者们探讨了大型语言模型（LLMs）在微调（finetuning）过程中不同规模因素对性能的影响。以下是论文的一些重要结论及其对“SCALING”概念的解释：</p>
+<ol>
+<li><p><strong>乘法联合缩放法则</strong>：作者提出了一个基于<strong>乘法的联合缩放法则（multiplicative joint scaling law）</strong>，用于描述微调数据大小与其他缩放因素（如LLM模型大小、预训练数据大小、PET参数大小）之间的关系。这个法则表明，<strong>微调性能与这些因素的乘法组合有关</strong>，而不是简单的加法关系。</p>
+</li>
+<li><p><strong>模型大小对微调的影响</strong>：研究发现，<strong>增加LLM模型的大小对微调性能的提升比增加预训练数据的大小更为显著</strong>。这表明在有限资源下，<strong>优先考虑扩大模型规模而不是数据规模</strong>，可能会带来更好的微调效果。</p>
+</li>
+<li><p><strong>参数高效微调（PET）的局限性</strong>：尽管PET方法（如prompt tuning和LoRA）旨在通过优化少量参数来提高性能，但研究发现<strong>增加PET参数的大小对于微调性能的提升效果有限，有时甚至会出现反向缩放现象</strong>。</p>
+</li>
+<li><p><strong>任务和数据依赖性</strong>：微调的缩放特性高度依赖于具体任务和数据。这意味着<strong>没有一种通用的最优微调方法</strong>，选择哪种微调方法需要根据下游任务的特性和可用的微调数据量来决定。</p>
+</li>
+<li><p><strong>微调对零样本泛化能力的影响</strong>：尽管微调通常是为了提高特定任务的性能，但研究发现，基于LLM的微调仍然可以促进对相关任务的零样本泛化能力。特别是PET方法在保留模型的泛化能力方面表现更好。</p>
+</li>
+<li><p><strong>微调数据量的临界点</strong>：论文中还讨论了不同微调方法之间的临界点，即在特定的微调数据量下，一种方法可能比另一种方法表现得更好。这个临界点会随着任务和模型大小的不同而变化。</p>
+</li>
+</ol>
+<p>这些结论对理解LLM微调过程中的“SCALING”具有重要意义。它们揭示了不同规模因素如何相互作用以及它们对微调性能的共同影响，为在实际应用中选择和优化微调策略提供了理论依据。通过这些发现，研究者和实践者可以更好地理解在特定条件下如何有效地缩放和配置他们的模型以获得最佳性能。</p>
+<h1><span id="参考">参考</span><a href="#参考" class="header-anchor">#</a></h1><ol>
+<li><a href>请帮我读篇论文，详细的写出摘要，实验方法，结论</a> kimi</li>
+<li><a href>请帮我读篇论文，论文有哪些重要的结论？ 这些结论是如何解释题目中的SCALING的？</a> kimi</li>
+</ol>
+<p>1xx. <a href="https://mp.weixin.qq.com/s?__biz=MzAxMjc3MjkyMg==&mid=2648409027&idx=1&sn=4083853fd0bfb1790d8df6b4414b6583">值得一看的大模型预训练数据选择策略总结：兼读20240229大模型进展早报 </a><br>《When Scaling Meets LLM Finetuning: The Effect of Data， Model and Finetuning Method»</p>
+]]></content>
+      <categories>
+        <category>AIGC</category>
+        <category>dataset</category>
+      </categories>
+      <tags>
+        <tag>dataset</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>(List) Pretrain 数据集</title>
     <url>/www6vHomeHexo/2023/04/24/gptDataSetPretrainList/</url>
     <content><![CDATA[<p></p>
@@ -4269,6 +4326,8 @@
 <li><p><a href="https://mp.weixin.qq.com/s/c50HrOfKOqgqGPVRHf6EpA">大模型微调究竟需要多少数据：从三个现有代表工作看几组结论及一点思考 </a><br>  <strong>指令格式的多样性</strong><br>  《LIMA: Less Is More for Alignment》<br>  《MAYBE ONLY 0.5% DATA IS NEEDED》</p>
 </li>
 </ol>
+<p>1xx. <a href="https://zhuanlan.zhihu.com/p/686687923">LESS 实践：用少量的数据进行目标指令微调</a></p>
+<p>1xx. <a href="https://zhuanlan.zhihu.com/p/686007325">LESS：仅选择5%有影响力的数据优于全量数据集进行目标指令微调</a></p>
 <p>1xx. <a href="https://blog.csdn.net/jinniulema/article/details/133915276">【论文笔记】LIMA: Less Is More for Alignment</a></p>
 ]]></content>
       <categories>
@@ -6507,7 +6566,7 @@
       </tags>
   </entry>
   <entry>
-    <title>(原理)数据处理</title>
+    <title>(Survey)数据处理</title>
     <url>/www6vHomeHexo/2023/02/05/gptDataProcess/</url>
     <content><![CDATA[<p></p>
 <span id="more"></span>
@@ -6619,12 +6678,11 @@
 <p>1xx. <a href="https://hub.baai.ac.cn/view/28740">大模型研发核心：数据工程、自动化评估及与知识图谱的结合</a><br>   <a href="https://mp.weixin.qq.com/s/SvDnQD886E3DBtw8k9asgg">大模型研发核心：数据工程、自动化评估及与知识图谱的结合 </a></p>
 <p>1xx. <a href="https://blog.csdn.net/qq_16949707/article/details/133875958">符尧：别卷大模型训练了，来卷数据吧！【干货十足】</a> 看最后的5个结论 </p>
 <p>1xx. <a href="https://mp.weixin.qq.com/s?__biz=MzAxMjc3MjkyMg==&mid=2648409027&idx=1&sn=4083853fd0bfb1790d8df6b4414b6583">值得一看的大模型预训练数据选择策略总结：兼读20240229大模型进展早报 </a><br>《A Survey on Data Selectionfor Language Models》</p>
-<p>《When Scaling Meets LLM Finetuning: The Effect of Data， Model and Finetuning Method»</p>
 <ol start="50">
 <li><a href="/www6vHomeHexo/2023/01/06/gptInstructTuning/" title="(原理)Instruct Tuning">(原理)Instruct Tuning</a> self</li>
 </ol>
 <h3><span id="质量-gt多样性-复杂度">质量-&gt;多样性, 复杂度</span><a href="#质量-gt多样性-复杂度" class="header-anchor">#</a></h3><ol start="20">
-<li><a href="/www6vHomeHexo/2023/03/18/gptDataWizard/" title="(多样性 复杂度)Wizard">(多样性 复杂度)Wizard</a>   self</li>
+<li><a href="/www6vHomeHexo/2023/03/18/gptDataWizard/" title="(多样 复杂)Wizard">(多样 复杂)Wizard</a>   self</li>
 </ol>
 <h3><span id="指令数据-高质量">指令数据-高质量</span><a href="#指令数据-高质量" class="header-anchor">#</a></h3><p>1xx. <a href="https://zhuanlan.zhihu.com/p/658128530">如何从数据集中自动识别高质量的指令数据-IFD指标的使用</a></p>
 <p>1xx. <a href="https://zhuanlan.zhihu.com/p/671183709">大模型微调技巧 | 高质量指令数据筛选方法-MoDS</a></p>
@@ -8632,6 +8690,7 @@
 <p>1xx. <a href="https://zhuanlan.zhihu.com/p/664921095">RAG探索之路的血泪史及曙光</a>  腾讯</p>
 <p>1xx. <a href="https://mp.weixin.qq.com/s/d2Nns1qashMbcXPMG-4McQ">阿里面向企业数字化的文档智能技术与应用</a></p>
 <p>1xx. <a href="https://mp.weixin.qq.com/s?__biz=MzAxMjc3MjkyMg==&mid=2648404651&idx=2&sn=335db95e104a5b09e33ac2245bae4fd2">再看RAG在真实金融文档问答场景的实践方案：SMP2023 金融大模型挑战赛的两种代表实现思路</a></p>
+<p>1xx. <a href="https://mp.weixin.qq.com/s?__biz=MzAxMjc3MjkyMg==&mid=2648407056&idx=1&sn=0a0ce93a9199a2eae36493a515e42181">温故而知新:大模型RAG问答研发的7个失分点及MOE专家组合模型的若干浅析 </a><br>   《Seven Failure Points When Engineering a Retrieval Augmented Generation System》</p>
 ]]></content>
       <categories>
         <category>AIGC</category>
@@ -10424,6 +10483,7 @@
 <h3><span id="对齐调优">对齐调优</span><a href="#对齐调优" class="header-anchor">#</a></h3><h3><span id="高效调优">高效调优</span><a href="#高效调优" class="header-anchor">#</a></h3><h1><span id="参考">参考</span><a href="#参考" class="header-anchor">#</a></h1><ol>
 <li><a href="http://aibox.ruc.edu.cn/docs/2023-08/cb9badcb213f4c8b89d00d579eed4a4c.pdf">大语言模型综述</a> 中文  v10<br>  <a href="https://github.com/RUCAIBox/LLMSurvey/blob/main/assets/LLM_Survey_Chinese.pdf">大语言模型综述</a> 中文<br>  <a href="https://arxiv.org/pdf/2303.18223.pdf">A Survey of Large Language Models</a> 英文<br>  <a href="https://github.com/www6v/LLMSurvey">LLMSurvey</a>  github<br>  <a href="https://zhuanlan.zhihu.com/p/630203554">[论文]大语言模型综述</a><br>  <a href="https://mp.weixin.qq.com/s?__biz=MzAxMjc3MjkyMg==&mid=2648400817&idx=1&sn=c1ed1c9c87bf2526e02d21d84429c5cf">详谈大模型训练中的数据收集、处理与模型影响：A Survey of Large Language Models工作中的数据总结</a></li>
 </ol>
+<p>1xx. <a href="https://mp.weixin.qq.com/s?__biz=MzAxMjc3MjkyMg==&mid=2648408221&idx=1&sn=2874583ed668ae0b89889c81a4ab8d79">值得一看的大模型最新综述：兼看多语种大模型微调数据集Aya </a></p>
 <p>1xx. <a href="https://zhuanlan.zhihu.com/p/381282229">43页预训练模型综述（清华、复旦、人大）</a></p>
 ]]></content>
       <categories>
