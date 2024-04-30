@@ -3793,7 +3793,7 @@
       </tags>
   </entry>
   <entry>
-    <title>(原理)SELF-INSTRUCT</title>
+    <title>(原理)SELF-INSTRUCT, Self-QA</title>
     <url>/www6vHomeAIGC/2023/02/21/gptSelfInstruct/</url>
     <content><![CDATA[<p></p>
 <span id="more"></span>
@@ -3805,6 +3805,12 @@
 <ul>
 <li><a href="#self-instruct">SELF-INSTRUCT</a><ul>
 <li><a href="#%E8%87%AA%E5%8A%A8%E6%8C%87%E4%BB%A4%E6%95%B0%E6%8D%AE%E7%94%9F%E6%88%901">自动指令数据生成[1]</a></li>
+</ul>
+</li>
+<li><a href="#self-qa3">Self-QA[3]</a><ul>
+<li><a href="#%E6%80%9D%E6%83%B3">思想</a></li>
+<li><a href="#%E6%8C%87%E4%BB%A4%E7%94%9F%E6%88%90%E9%98%B6%E6%AE%B5">指令生成阶段</a></li>
+<li><a href="#%E6%8C%87%E4%BB%A4%E7%AD%94%E6%A1%88%E7%94%9F%E6%88%90%E9%98%B6%E6%AE%B5">指令答案生成阶段</a></li>
 </ul>
 </li>
 <li><a href="#%E5%8F%82%E8%80%83">参考</a></li>
@@ -3826,6 +3832,17 @@
 <li>一直重复上述2到6步直到种子池有足够多的数据；</li>
 </ul>
 </li>
+</ul>
+<h1><span id="self-qa3">Self-QA[3]</span><a href="#self-qa3" class="header-anchor">#</a></h1><h3><span id="思想">思想</span><a href="#思想" class="header-anchor">#</a></h3><p>知识引导的指令生成Knowledge-Guided Instruction Generation</p>
+<h3><span id="指令生成阶段">指令生成阶段</span><a href="#指令生成阶段" class="header-anchor">#</a></h3><ul>
+<li>采用语言模型本身来根据无监督的文本生成指令。这种方法使生成的指令具有领域针对性，并与所提供的无监督文本的内容相关。<ul>
+<li>非结构化的知识，如网页和书籍数据，直接使用。</li>
+<li><strong>结构化数据</strong>，如表格和知识图谱，在被利用之前需要<strong>转换为非结构化文本数据</strong>。如通过使用模板填充槽或将每个数据条目与相应的属性名称连接起来来实现。</li>
+</ul>
+</li>
+</ul>
+<h3><span id="指令答案生成阶段">指令答案生成阶段</span><a href="#指令答案生成阶段" class="header-anchor">#</a></h3><ul>
+<li>将<strong>生成的指令问题</strong>让大模型进行预测，<strong>生成答案</strong></li>
 </ul>
 <h1><span id="参考">参考</span><a href="#参考" class="header-anchor">#</a></h1><ol>
 <li><p><a href="https://mp.weixin.qq.com/s?__biz=MzAxMjc3MjkyMg==&mid=2648399792&idx=1&sn=c70e1d13b68399b0c19cfbf658f35d77">面向大模型微调的instruction指令自动化生成技术：SELF-INSTRUCT指令自动化生成框架工作介绍</a></p>
@@ -7642,7 +7659,7 @@
 </ol>
 <p>1xx. <a href="https://blog.csdn.net/v_JULY_v/article/details/135868163?spm=1001.2014.3001.5502">智能体AI Agent的极速入门：从ReAct、AutoGPT到AutoGen、QwenAgent、XAgent、MetaGPT</a>   </p>
 <h3><span id="planning">Planning</span><a href="#planning" class="header-anchor">#</a></h3><ol start="20">
-<li><a href="/www6vHomeAIGC/2023/04/07/gptAgentReflection/" title="Reflection Agent">Reflection Agent</a></li>
+<li><a href="/www6vHomeAIGC/2023/04/07/gptAgentReflection/" title="Reflection Agent">Reflection Agent</a> self</li>
 </ol>
 <p>2xx. <a href="https://baoyu.io/translations/ai-paper/2311.11797-igniting-language-intelligence-the-hitchhikers-guide-from-chain-of-thought-reasoning-to-language-agents">引领语言智能：从思维链推理到语言智能体的探索指南 [译]</a> paper<br>2xx. <a href="https://zhuanlan.zhihu.com/p/671491031">ReWOO: 高效增强语言模型中解偶观测和推理</a></p>
 ]]></content>
