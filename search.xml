@@ -709,19 +709,88 @@
       </tags>
   </entry>
   <entry>
-    <title>(原理)LIMA</title>
+    <title>(原理)LIMA, LESS</title>
     <url>/www6vHomeAIGC/2023/04/27/gptDataSFTQuality/</url>
     <content><![CDATA[<p></p>
 <span id="more"></span>
 
+<h2><span id="目录">目录</span><a href="#目录" class="header-anchor">#</a></h2><div class="toc">
 
-<h1><span id="lima-2">LIMA [2]</span><a href="#lima-2" class="header-anchor">#</a></h1><p>当扩大数据量而不同时扩大提示多样性时，收益会大大减少，而在优化数据质量时，收益会大大增加。</p>
-<h1><span id="参考">参考</span><a href="#参考" class="header-anchor">#</a></h1><ol start="2">
+<!-- toc -->
+
+<ul>
+<li><a href="#lima-1kimi">LIMA [1][kimi]</a></li>
+<li><a href="#less10kimi">LESS[10][kimi]</a><ul>
+<li><a href="#%E5%AE%9E%E9%AA%8C%E6%96%B9%E6%B3%95">实验方法：</a></li>
+<li><a href="#%E7%BB%93%E8%AE%BA">结论：</a></li>
+</ul>
+</li>
+<li><a href="#%E5%8F%82%E8%80%83">参考</a><ul>
+<li><a href="#lima">LIMA</a></li>
+<li><a href="#less">LESS</a></li>
+</ul>
+</li>
+</ul>
+<!-- tocstop -->
+
+</div>
+
+<h1><span id="lima-1kimi">LIMA [1][kimi]</span><a href="#lima-1kimi" class="header-anchor">#</a></h1><p>LIMA（Less Is More for Alignment）的实验通过一系列设计精良的步骤来探究数据质量、多样性以及数量对模型性能的影响，从而得出了<strong>提高数据质量和增加提示多样性比单纯增加数据量更能提升模型性能的结论</strong>。以下是<strong>实验方法</strong>的关键步骤：</p>
+<ol>
+<li><p><strong>精心策划的微调数据</strong>：LIMA模型在<strong>1000个</strong>精心策划的提示和回复上进行了<strong>微调</strong>，这些数据被设计为模拟真实用户与AI助手的交互。</p>
+</li>
+<li><p><strong>消融实验</strong>：通过消融实验，研究者们观察了在增加数据量的同时不增加提示多样性时，模型性能的提升是否有限；而在优化数据质量时，性能是否有显著提升。</p>
+</li>
+<li><p><strong>数据构造</strong>：研究者从Stack Exchange、wikiHow和Pushshift Reddit数据集收集数据，并进行了<strong>质量和多样性</strong>的控制。这些数据集被用来构造训练样本，以确保输入的多样性和输出的一致性。</p>
+</li>
+<li><p><strong>质量与多样性的对比</strong>：研究者比较了经过质量过滤的Stack Exchange数据和同质化的wikiHow数据对模型性能的影响。结果显示，更<strong>多样化的Stack Exchange数据在性能上优于同质化的wikiHow数据</strong>。</p>
+</li>
+<li><p><strong>数量的对比</strong>：研究者对从Stack Exchange抽取的指数级增加的训练集进行了测试，发现<strong>训练集的翻倍并没有改善响应质量</strong>，从而说明单纯增加数据量并不一定能提升性能。</p>
+</li>
+<li><p><strong>质量控制的实验</strong>：研究者还比较了未经过任何质量或风格过滤的Stack Exchange数据集与经过过滤的数据集上训练的模型性能，发现过滤后的数据集上训练的模型性能更优。</p>
+</li>
+<li><p><strong>人类评估</strong>：为了评估LIMA模型的性能，研究者进行了人类偏好研究，将LIMA的输出与其他几个基线模型的输出进行比较，并让人群工作者选择他们更喜欢的输出。</p>
+</li>
+</ol>
+<p>通过这些实验步骤，LIMA的研究得出了<strong>数据质量和提示多样性对于提升模型性能的重要性远超过单纯增加数据量的结论</strong>。这些发现支持了“浅层对齐假说”，即模型在预训练阶段已经学习到了几乎所有知识和能力，而微调过程主要是学习与人类交互的风格和格式。</p>
+<h1><span id="less10kimi">LESS[10][kimi]</span><a href="#less10kimi" class="header-anchor">#</a></h1><p>LESS（Selecting Influential Data for Targeted Instruction Tuning）的实验方法和相应的结论如下：</p>
+<h3><span id="实验方法">实验方法：</span><a href="#实验方法" class="header-anchor">#</a></h3><ol>
+<li><p><strong>热身训练（Warmup Training）</strong>：使用LoRA（Low-Rank Adaptation）技术对预训练模型进行热身训练，以适应特定的数据分布。</p>
+</li>
+<li><p><strong>梯度数据存储（Gradient Data Store）</strong>：构建了一个具有投影低维梯度特征的梯度数据存储，该存储可以重复用于不同的目标任务。</p>
+</li>
+<li><p><strong>数据选择算法</strong>：利用数据存储和算法选择与体现特定能力的少数示例最相似的训练数据点。?</p>
+</li>
+<li><p><strong>模型训练</strong>：使用选择的数据子集来训练目标模型。</p>
+</li>
+<li><p><strong>评估</strong>：在不同的下游任务上评估LESS选择的数据子集的性能，包括MMLU、TYDIQA和BBH数据集。</p>
+</li>
+</ol>
+<h3><span id="结论">结论：</span><a href="#结论" class="header-anchor">#</a></h3><ol>
+<li><p><strong>LESS的有效性</strong>：LESS<strong>在不同的模型中都是有效的</strong>，能够在多个评估数据集上提高性能。</p>
+</li>
+<li><p><strong>数据子集的性能</strong>：<strong>使用LESS选择的5%的数据通常优于使用完整数据集进行训练的结果</strong>。这表明完整数据集可能包含与特定目标任务无关或有害的数据点。</p>
+</li>
+<li><p><strong>数据的可转移性</strong>：使用较小模型选择的数据可以提高较大模型和不同模型系列的性能，证明了LESS选择的数据具有高度的可转移性。</p>
+</li>
+<li><p><strong>与其他方法的比较</strong>：LESS是唯一一致有效的方法，相较于其他基线方法（如随机选择、BM25、DSIR、RDS）表现出更好的性能。</p>
+</li>
+<li><p><strong>计算成本</strong>：LESS的计算成本较高，但由于其有效性，这一成本是合理的。</p>
+</li>
+<li><p><strong>定性分析</strong>：LESS选择的数据能够体现预期下游应用所需的推理技能，而不是仅仅基于表面形式线索。</p>
+</li>
+<li><p><strong>局限性</strong>：LESS需要热身训练阶段，这增加了计算负载。此外，使用补全Token的平均梯度可能导致性能问题。还有，最小化验证损失并不总能提高任务性能，且数据选择中的线性度假设是LESS的一个限制。</p>
+</li>
+</ol>
+<p>总体而言，LESS通过选择与目标任务高度相关的数据点，能够在指令微调中实现高效的性能提升，尽管存在一些局限性和计算成本。</p>
+<h1><span id="参考">参考</span><a href="#参考" class="header-anchor">#</a></h1><h3><span id="lima">LIMA</span><a href="#lima" class="header-anchor">#</a></h3><ol>
 <li><a href="https://mp.weixin.qq.com/s/c50HrOfKOqgqGPVRHf6EpA">大模型微调究竟需要多少数据：从三个现有代表工作看几组结论及一点思考 </a><br>  <strong>指令格式的多样性</strong><br>  《LIMA: Less Is More for Alignment》<br>  《MAYBE ONLY 0.5% DATA IS NEEDED》</li>
 </ol>
-<p>1xx. <a href="https://zhuanlan.zhihu.com/p/686687923">LESS 实践：用少量的数据进行目标指令微调</a></p>
-<p>1xx. <a href="https://zhuanlan.zhihu.com/p/686007325">LESS：仅选择5%有影响力的数据优于全量数据集进行目标指令微调</a></p>
 <p>1xx. <a href="https://blog.csdn.net/jinniulema/article/details/133915276">【论文笔记】LIMA: Less Is More for Alignment</a></p>
+<h3><span id="less">LESS</span><a href="#less" class="header-anchor">#</a></h3><ol start="10">
+<li><a href="https://zhuanlan.zhihu.com/p/686007325">LESS：仅选择5%有影响力的数据优于全量数据集进行目标指令微调</a></li>
+</ol>
+<p>1xx. <a href="https://zhuanlan.zhihu.com/p/686687923">LESS 实践：用少量的数据进行目标指令微调</a></p>
 ]]></content>
       <categories>
         <category>AIGC</category>
@@ -811,7 +880,7 @@
       </tags>
   </entry>
   <entry>
-    <title>SFT Scaling</title>
+    <title>(原理)SFT Scaling</title>
     <url>/www6vHomeAIGC/2023/04/26/gptDataSFTScaling/</url>
     <content><![CDATA[<p></p>
 <span id="more"></span>
@@ -4175,6 +4244,11 @@
 <li><a href="#%E8%AE%BA%E6%96%87">论文</a></li>
 <li><a href="#%E9%97%AE%E9%A2%981">问题[1]</a></li>
 <li><a href="#%E5%AE%9E%E9%AA%8C%E7%BB%93%E6%9E%9C1">实验结果[1]</a></li>
+<li><a href="#%E9%97%AE%E9%A2%982-%E5%9C%A8sft%E4%B8%AD%E7%BB%93%E5%90%88%E4%B8%89%E7%A7%8D%E8%83%BD%E5%8A%9B%E6%97%B6%E6%98%AF%E5%90%A6%E5%AD%98%E5%9C%A8%E6%80%A7%E8%83%BD%E5%86%B2%E7%AA%81kimipaper">问题2 在SFT中结合三种能力时是否存在性能冲突？[kimi][paper]</a><ul>
+<li><a href="#%E7%BB%93%E8%AE%BA">结论：</a></li>
+</ul>
+</li>
+<li><a href="#%E9%97%AE%E9%A2%983-%E5%AF%BC%E8%87%B4%E6%80%A7%E8%83%BD%E5%86%B2%E7%AA%81%E7%9A%84%E5%85%B3%E9%94%AE%E5%9B%A0%E7%B4%A0%E6%98%AF%E4%BB%80%E4%B9%88kimipaper">问题3 导致性能冲突的关键因素是什么？[kimi][paper]</a></li>
 <li><a href="#%E5%8F%82%E8%80%83">参考</a></li>
 </ul>
 <!-- tocstop -->
@@ -4185,7 +4259,36 @@
 <li>论文地址<br> 《HOW ABILITIES IN LARGE LANGUAGE MODELS ARE AFFECTED BY SUPERVISED FINE-TUNING DATA COM- POSITION》<br>keyword: SFT 数据组合</li>
 </ul>
 <h1><span id="问题1">问题[1]</span><a href="#问题1" class="header-anchor">#</a></h1><p>1、推理、编码和通用能力如何随SFT数据量而变化？<br>2、在SFT中结合三种能力时是否存在性能冲突？<br>3、导致性能冲突的关键因素是什么？<br>4、不同的SFT策略对组合数据有什么影响？</p>
-<h1><span id="实验结果1">实验结果[1]</span><a href="#实验结果1" class="header-anchor">#</a></h1><p>1、不同的能力表现出不同的扩展模式，在数据量相同的情况下，较大的模型通常表现出更优越的性能。<br>2、随着数据量的持续增加，数学推理和代码生成能力也在不断提高，一般能力则是在样本数达到一千左右时才得到提升，且提升速度较慢。<br>3、在数据量较低的情况下，数据组合会带来各种能力的提高，而在数据量较高的情况下，能力则会发生冲突。<br>4、组成数据量会影响性能，而组成比例的影响则微乎其微。</p>
+<h1><span id="实验结果1">实验结果[1]</span><a href="#实验结果1" class="header-anchor">#</a></h1><p>1、不同的能力表现出不同的扩展模式，在数据量相同的情况下，<strong>较大的模型通常表现出更优越的性能</strong>。<br>2、随着数据量的持续增加，<strong>数学推理和代码生成能力也在不断提高</strong>，<strong>一般能力</strong>则是在样本数达到<strong>一千左右</strong>时才得到提升，且提升速度较慢。<br>3、在<strong>数据量较低</strong>的情况下，数据组合会带来各种能力的<strong>提高</strong>，而在<strong>数据量较高</strong>的情况下，能力则会发生<strong>冲突</strong>。<br>4、组成<strong>数据量</strong>会影响<strong>性能</strong>，而<strong>组成比例</strong>的影响则<strong>微乎其微</strong>。</p>
+<h1><span id="问题2-在sft中结合三种能力时是否存在性能冲突kimipaper">问题2 在SFT中结合三种能力时是否存在性能冲突？[kimi][paper]</span><a href="#问题2-在sft中结合三种能力时是否存在性能冲突kimipaper" class="header-anchor">#</a></h1><p>问题2 探讨的是在监督式微调（Supervised Fine-Tuning, SFT）中结合推理、编码和通用能力时是否存在性能冲突。</p>
+<h3><span id="结论">结论：</span><a href="#结论" class="header-anchor">#</a></h3><ol>
+<li><p><strong>性能冲突的存在</strong>：在高资源设置下，即当SFT数据集混合使用时，不同能力领域（如数学推理、编码和通用对齐能力）之间会发生性能冲突。然而，在低资源设置下，混合数据源能够提升性能。</p>
+</li>
+<li><p><strong>性能冲突与资源量的关系</strong>：随着数据量的增加，特定任务的性能可能会因为其他任务的存在而下降。这表明在数据量较大时，不同任务之间可能会相互干扰，导致性能冲突。</p>
+</li>
+<li><p><strong>模型大小对性能的影响</strong>：随着模型大小的增加，在低资源设置下，数学和通用能力的性能提升更加明显。</p>
+</li>
+</ol>
+<h1><span id="问题3-导致性能冲突的关键因素是什么kimipaper">问题3 导致性能冲突的关键因素是什么？[kimi][paper]</span><a href="#问题3-导致性能冲突的关键因素是什么kimipaper" class="header-anchor">#</a></h1><p>在SFT（监督式微调）中结合推理、编码和通用能力时，导致性能冲突的关键因素包括：</p>
+<ol>
+<li><p><strong>数据组成和比例</strong>：当不同能力领域的数据混合在一起进行SFT时，如果<strong>数据量充足</strong>，来自其他领域的数据可能会被视为<strong>噪声</strong>，从而影响特定领域的性能。</p>
+</li>
+<li><p><strong>模型大小</strong>：<strong>较大的模型</strong>在相同数据量下通常表现<strong>更好</strong>，并且在低资源设置下对于数学和通用能力的性能增益更大。</p>
+</li>
+<li><p><strong>训练策略</strong>：多任务学习虽然能够保留专业能力，但对通用能力的伤害最大；而顺序训练和混合顺序训练虽然保留了通用能力，但会丢失太多的专业能力。</p>
+</li>
+<li><p><strong>数据量与能力的关系</strong>：数学推理和编码能力随着数据量的增加而持续提高，而通用能力在大约一千个样本后趋于平稳。</p>
+</li>
+<li><p><strong>任务特性差异</strong>：推理和编码任务需要复杂的逻辑来分解任务指令和处理非语言和符号特征，而对齐人类意图则需要多样性和理解模糊的人类指令。</p>
+</li>
+</ol>
+<p>相应的结论包括：</p>
+<ul>
+<li>在<strong>低资源设置下</strong>，混合数据源可以<strong>提高性能</strong>，但在<strong>高资源设置</strong>下，可能会导致<strong>性能下降</strong>。</li>
+<li><strong>数据量</strong>直接<strong>影响力能表现</strong>，而<strong>数据比例</strong>的影响<strong>不显著</strong>。</li>
+<li>提出的<strong>双阶段混合微调（DMT）策略</strong>有效地减轻了多任务学习中的性能冲突和顺序训练中的灾难性遗忘，实现了通用与专业能力之间的平衡。</li>
+</ul>
+<p>这些结论强调了在SFT阶段理解和解决数据组成问题对于全面提高LLMs（大型语言模型）的能力至关重要。</p>
 <h1><span id="参考">参考</span><a href="#参考" class="header-anchor">#</a></h1><ol>
 <li><a href="https://mp.weixin.qq.com/s?__biz=MzAxMjc3MjkyMg==&mid=2648404728&idx=2&sn=1cb2203648271720d421c963ebcc03b3">SFT微调的数据组合及训练策略如何影响大模型性能：4个经典问题及实验结论分享 </a></li>
 </ol>
