@@ -710,17 +710,88 @@
       </tags>
   </entry>
   <entry>
-    <title>Data Selection</title>
+    <title>(原理)Data Selection</title>
     <url>/www6vHomeAIGC/2023/05/05/gptDataSelection/</url>
     <content><![CDATA[<p></p>
 <span id="more"></span>
 
+<h2><span id="目录">目录</span><a href="#目录" class="header-anchor">#</a></h2><div class="toc">
 
+<!-- toc -->
 
-<h1><span id="参考">参考</span><a href="#参考" class="header-anchor">#</a></h1><p>1xx. <a href="https://zhuanlan.zhihu.com/p/675928711">DEITA-大模型指令微调的数据高效筛选方法</a><br>1xx. <a href="https://zhuanlan.zhihu.com/p/687339776">DEITA：融合复杂度、质量、多样性的高效数据筛选</a><br>   复杂度、质量、多样性</p>
+<ul>
+<li><a href="#ifd1">IFD[1]</a></li>
+<li><a href="#mods2">MoDS[2]</a></li>
+<li><a href="#deita-3">DEITA [3]</a><ul>
+<li><a href="#%E5%A4%8D%E6%9D%82%E6%80%A7%E8%AF%84%E5%88%86">复杂性评分</a></li>
+<li><a href="#%E8%B4%A8%E9%87%8F%E8%AF%84%E5%88%86">质量评分</a></li>
+<li><a href="#%E5%A4%9A%E6%A0%B7%E6%80%A7%E7%AD%9B%E9%80%89">多样性筛选</a></li>
+</ul>
+</li>
+<li><a href="#%E5%8F%82%E8%80%83">参考</a></li>
+</ul>
+<!-- tocstop -->
+
+</div>
+
+<h1><span id="ifd1">IFD[1]</span><a href="#ifd1" class="header-anchor">#</a></h1><ul>
+<li>三个步骤<ul>
+<li>Learning from Brief Experience<br>利用少量进行进行<strong>模型初学</strong> </li>
+<li>Evaluating Based on Experience<br>利用初学模型计算原始数据中所有<strong>IFD指标</strong><ul>
+<li>算法<ul>
+<li>条件回答分数（ Conditioned Answer Score，CAS）</li>
+<li>直接答案分数（Direct Answer Score，DAS）</li>
+<li>指令跟随难度（Instruction-Following Difficulty，IFD）分数</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Retraining from Self-Guided Experience<br>利用<strong>樱桃数据</strong>进行模型<strong>重训练</strong></li>
+</ul>
+</li>
+</ul>
+<h1><span id="mods2">MoDS[2]</span><a href="#mods2" class="header-anchor">#</a></h1><ul>
+<li><p>质量筛选<br>采用OpenAssistant的<strong>reward-model</strong>-debertav3-large-v2模型（一个基于<strong>DeBERTa架构</strong>设计的奖励模型）对数据进行<strong>质量打分</strong>。</p>
+</li>
+<li><p>多样性筛选<br>为了避免所选质量数据高度相似，通过<strong>K-Center-Greedy算法</strong>进行数据筛选，在最大化多样性的情况下，使指令数据集最小。<br>在该步骤中，采用<strong>BERT模型</strong>为指令数据生成句向量来计算不同数据之间的距离。</p>
+</li>
+<li><p>必要性筛选</p>
+</li>
+</ul>
+<h1><span id="deita-3">DEITA [3]</span><a href="#deita-3" class="header-anchor">#</a></h1><h3><span id="复杂性评分">复杂性评分</span><a href="#复杂性评分" class="header-anchor">#</a></h3><ul>
+<li>复杂性评估的方法  <ul>
+<li>Random Selection：随机选择样本。</li>
+<li>Instruction Length：按照指令的长度计算复杂性。</li>
+<li><strong>Perplexity</strong>：通过预训练模型计算回复的困惑度作为复杂性指标，困惑值越大意味着数据样本越难。</li>
+<li><strong>Direct Scoring</strong>：利用ChaGPT给指令的复杂性打分。</li>
+<li>Instruction Node：利用ChatGPT将指令转换成语义树，通过树的节点数作为复杂性指标。</li>
+<li><strong>Instag Complexity</strong>：利用ChatGPT对部分数据进行打标签，再训练一个Llama模型，再利用训练后的Llama模型对全量数据预测，标签越多说明数据约复杂。</li>
+<li><strong>IFD</strong>：指令跟随难度作为复杂性指标。</li>
+</ul>
+</li>
+</ul>
+<p>DEITA评估复杂性的方法，主要先对一个小规模种子数据集（2k）进行数据复杂性<strong>扩展</strong>，再利<strong>用ChatGPT对扩展数据进行打分</strong>，并<strong>训练一个Llama1-7B的模型</strong>，最后利用训练后的模型对数据的打分作为复杂性评估指标。</p>
+<h3><span id="质量评分">质量评分</span><a href="#质量评分" class="header-anchor">#</a></h3><ul>
+<li>质量评估的方法有<ul>
+<li>Random Selection：随机选择样本。</li>
+<li>Response Length：采用输出长度作为质量评估指标。</li>
+<li>Direct Scoring：利用ChatGPT直接评估对特定指令输出结果的准确性。</li>
+</ul>
+</li>
+</ul>
+<p>DEITA评估质量的方法，<strong>与评估复杂性方法一致</strong>。先对一个小规模种子数据集（2k，与复杂性数据一致）进行数据质量扩展，再利用ChatGPT对扩展数据进行打分并训练一个Llama1-7B的模型，最后利用训练后的模型对数据的打分作为质量评估指标。</p>
+<p><strong>数据质量扩展</strong>，通过特殊的提示词利用ChatGPT对数据的回复部分进行改写，主要是增强回复的有用性、相关性、丰富深度、创造力和提供额外的细节描述。</p>
+<h3><span id="多样性筛选">多样性筛选</span><a href="#多样性筛选" class="header-anchor">#</a></h3><p>多样性筛选方法，首先将数据池中的数据按照复杂性和质量的综合得分（复杂性分数*质量分数）进行降序<strong>排序</strong>；<br>然后按顺序逐个取出样本数据x ，<strong>计算x 与筛选池中相邻最近的样本之间距离值</strong>，其中，数据利用Llama1-13B模型进行向量表征，距离计算采用<strong>余弦相似度</strong>。<br>如果<strong>距离值小于 r时</strong>，认为该样本与筛选池中数据相似程度不高，可以<strong>纳入筛选池</strong>；否则<strong>不纳入筛选池</strong>。当筛选池中样本数达到规定样本个数，完成多样性筛选。</p>
+<h1><span id="参考">参考</span><a href="#参考" class="header-anchor">#</a></h1><ol>
+<li><p><a href="https://zhuanlan.zhihu.com/p/658128530">如何从数据集中自动识别高质量的指令数据-IFD指标的使用</a><br>《From Quantity to Quality: Boosting LLM Performance with Self-Guided Data Selection for Instruction Tuning》<br>ChatLaw就这么训的</p>
+</li>
+<li><p><a href="https://zhuanlan.zhihu.com/p/671183709">大模型微调技巧 | 高质量指令数据筛选方法-MoDS</a><br>《MoDS: Model-oriented Data Selection for Instruction Tuning》<br> 质量筛选， 多样性筛选，必要性筛选   </p>
+</li>
+<li><p><a href="https://zhuanlan.zhihu.com/p/675928711">DEITA-大模型指令微调的数据高效筛选方法</a></p>
+</li>
+</ol>
+<p>1xx. <a href="https://zhuanlan.zhihu.com/p/687339776">DEITA：融合复杂度、质量、多样性的高效数据筛选</a><br>   复杂度、质量、多样性</p>
 <p>1xx. <a href="https://mp.weixin.qq.com/s?__biz=MzAxMjc3MjkyMg==&mid=2648409027&idx=1&sn=4083853fd0bfb1790d8df6b4414b6583">值得一看的大模型预训练数据选择策略总结：兼读20240229大模型进展早报 </a><br>《A Survey on Data Selection for Language Models》</p>
-<p>1xx. <a href="https://zhuanlan.zhihu.com/p/658128530">如何从数据集中自动识别高质量的指令数据-IFD指标的使用</a><br>   《From Quantity to Quality: Boosting LLM Performance with Self-Guided Data Selection for Instruction Tuning》<br>   ChatLaw就这么训的</p>
-<p>1xx. <a href="https://zhuanlan.zhihu.com/p/671183709">大模型微调技巧 | 高质量指令数据筛选方法-MoDS</a><br>   《MoDS: Model-oriented Data Selection for Instruction Tuning》<br>    质量筛选， 多样性筛选，必要性筛选</p>
 ]]></content>
       <categories>
         <category>AIGC</category>
