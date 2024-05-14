@@ -191,9 +191,13 @@
 <li>pattern *<ul>
 <li><a href="/www6vHomeAIGC/2023/04/21/gptRAGModularRAG/" title="(原理)Modular RAG">(原理)Modular RAG</a> </li>
 <li><a href="/www6vHomeAIGC/2022/12/07/gptRAGPerformance/" title="(原理)Advanced RAG">(原理)Advanced RAG</a></li>
-<li><a href="/www6vHomeAIGC/2023/03/02/gptRAGSelfReflective/" title="(原理|实战)Self-Reflective RAG">(原理|实战)Self-Reflective RAG</a> </li>
+<li><a href="/www6vHomeAIGC/2023/03/02/gptRAGSelfReflective/" title="(原理|实战)Self-Reflective RAG">(原理|实战)Self-Reflective RAG</a></li>
+</ul>
+</li>
+<li>module <ul>
 <li><a href="/www6vHomeAIGC/2023/04/20/gptQueryTransformation/" title="Query Transformation">Query Transformation</a>  </li>
-<li><a href="/www6vHomeAIGC/2023/05/14/gptRAGRouting/" title="Query Routing">Query Routing</a></li>
+<li><a href="/www6vHomeAIGC/2023/05/14/gptRAGRouting/" title="Query Routing">Query Routing</a>   </li>
+<li><a href="/www6vHomeAIGC/2023/05/14/gptRAGRerank/" title="RAG Rerank">RAG Rerank</a></li>
 </ul>
 </li>
 <li>Multimodal RAG  *<ul>
@@ -693,6 +697,39 @@
       </categories>
       <tags>
         <tag>PEFT</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>RAG Rerank</title>
+    <url>/www6vHomeAIGC/2023/05/14/gptRAGRerank/</url>
+    <content><![CDATA[<p></p>
+<span id="more"></span>
+
+
+
+
+
+<h2><span id="reranker">Reranker</span><a href="#reranker" class="header-anchor">#</a></h2><h3><span id="什么是reranker-22">什么是Reranker [22]</span><a href="#什么是reranker-22" class="header-anchor">#</a></h3><p>A reranking model — also known as a <strong>cross-encoder</strong> — is a type of model that,<strong>given a query and document pair, will output a similarity score.</strong> </p>
+<h3><span id="bge-ranker-20">BGE Ranker [20]</span><a href="#bge-ranker-20" class="header-anchor">#</a></h3><p><strong>交叉编码器</strong>将对查询和答案实时计算相关性分数，这比**向量模型(即双编码器)**更准确，但比向量模型更耗时。 因此，它可以用来对嵌入模型返回的前k个文档重新排序。 我们在多语言数据上训练了交叉编码器，数据格式与向量模型相同，因此您可以根据我们的示例 轻松地对其进行微调。 </p>
+<h3><span id="优秀的组合-21">优秀的组合 [21]</span><a href="#优秀的组合-21" class="header-anchor">#</a></h3><p>OpenAI + CohereRerank<br>Voyage + big-reranker-large</p>
+<h3><span id="bce24">BCE[24]</span><a href="#bce24" class="header-anchor">#</a></h3><p>中文效果比BGE好[老刘说nlp]</p>
+<h1><span id="参考">参考</span><a href="#参考" class="header-anchor">#</a></h1><ol start="20">
+<li><p><a href="https://github.com/FlagOpen/FlagEmbedding/blob/master/README_zh.md">BGE Reranker</a><br>  <a href="https://www.bilibili.com/video/BV1sQ4y137Ft/">transformers二次开发——bge-reranker模型微调流程</a> V</p>
+</li>
+<li><p><a href="https://luxiangdong.com/2023/11/06/rerank-ev/#">提升RAG——选择最佳Embedding和重新排名模型 </a><br>  <a href="https://blog.llamaindex.ai/boosting-rag-picking-the-best-embedding-reranker-models-42d079022e83">Boosting RAG: Picking the Best Embedding &amp; Reranker models</a></p>
+</li>
+<li><p><a href="https://www.pinecone.io/learn/series/rag/rerankers/">Rerankers and Two-Stage Retrieval</a><br>  文中的第二阶段就是指Reranker</p>
+</li>
+<li><p><a href="https://github.com/netease-youdao/BCEmbedding">youdao RerankerModal</a> BCE</p>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>AIGC</category>
+        <category>RAG</category>
+      </categories>
+      <tags>
+        <tag>RAG</tag>
       </tags>
   </entry>
   <entry>
@@ -7437,13 +7474,7 @@
 </ul>
 </li>
 <li><a href="#post-retrieval">Post-Retrieval</a><ul>
-<li><a href="#reranker">Reranker</a><ul>
-<li><a href="#%E4%BB%80%E4%B9%88%E6%98%AFreranker-22">什么是Reranker [22]</a></li>
-<li><a href="#bge-ranker-20">BGE Ranker [20]</a></li>
-<li><a href="#%E4%BC%98%E7%A7%80%E7%9A%84%E7%BB%84%E5%90%88-21">优秀的组合 [21]</a></li>
-<li><a href="#bce24">BCE[24]</a></li>
-</ul>
-</li>
+<li><a href="#reranker20">Reranker[20]</a></li>
 <li><a href="#fusion23">Fusion[23]</a></li>
 </ul>
 </li>
@@ -7533,11 +7564,7 @@
 <blockquote>
 <p>最佳实践<br><strong>BM25+FAAIS   好于 FAAIS相似度搜索</strong><br><strong>FAAIS相似度搜索 好于 HyDE和上下文压缩</strong></p>
 </blockquote>
-<h1><span id="post-retrieval">Post-Retrieval</span><a href="#post-retrieval" class="header-anchor">#</a></h1><h2><span id="reranker">Reranker</span><a href="#reranker" class="header-anchor">#</a></h2><h3><span id="什么是reranker-22">什么是Reranker [22]</span><a href="#什么是reranker-22" class="header-anchor">#</a></h3><p>A reranking model — also known as a <strong>cross-encoder</strong> — is a type of model that,<strong>given a query and document pair, will output a similarity score.</strong> </p>
-<h3><span id="bge-ranker-20">BGE Ranker [20]</span><a href="#bge-ranker-20" class="header-anchor">#</a></h3><p><strong>交叉编码器</strong>将对查询和答案实时计算相关性分数，这比**向量模型(即双编码器)**更准确，但比向量模型更耗时。 因此，它可以用来对嵌入模型返回的前k个文档重新排序。 我们在多语言数据上训练了交叉编码器，数据格式与向量模型相同，因此您可以根据我们的示例 轻松地对其进行微调。 </p>
-<h3><span id="优秀的组合-21">优秀的组合 [21]</span><a href="#优秀的组合-21" class="header-anchor">#</a></h3><p>OpenAI + CohereRerank<br>Voyage + big-reranker-large</p>
-<h3><span id="bce24">BCE[24]</span><a href="#bce24" class="header-anchor">#</a></h3><p>中文效果比BGE好[老刘说nlp]</p>
-<h2><span id="fusion23">Fusion[23]</span><a href="#fusion23" class="header-anchor">#</a></h2><p>其思想在于通过生成多个用户查询和重新排序结果来解决RAG固有的约束；利用倒数排序融合（RRF）和自定义向量评分加权，生成全面准确的结果。</p>
+<h1><span id="post-retrieval">Post-Retrieval</span><a href="#post-retrieval" class="header-anchor">#</a></h1><h2><span id="reranker20">Reranker[20]</span><a href="#reranker20" class="header-anchor">#</a></h2><h2><span id="fusion23">Fusion[23]</span><a href="#fusion23" class="header-anchor">#</a></h2><p>其思想在于通过生成多个用户查询和重新排序结果来解决RAG固有的约束；利用倒数排序融合（RRF）和自定义向量评分加权，生成全面准确的结果。</p>
 <h1><span id="encoder-and-llm-fine-tuning">Encoder and LLM fine-tuning</span><a href="#encoder-and-llm-fine-tuning" class="header-anchor">#</a></h1><h3><span id="encoder-fine-tuning40">Encoder fine-tuning[40]</span><a href="#encoder-fine-tuning40" class="header-anchor">#</a></h3><h3><span id="ranker-fine-tuning41">Ranker fine-tuning[41]</span><a href="#ranker-fine-tuning41" class="header-anchor">#</a></h3><p>它的工作方式如下：将查询和检索到的前k个文本块传递给交叉编码器，并用SEP令牌分隔，并将其微调为输出1表示相关块，输出0表示不相关。</p>
 <h3><span id="llm-fine-tuning42">LLM fine-tuning[42]</span><a href="#llm-fine-tuning42" class="header-anchor">#</a></h3><h1><span id="参考">参考</span><a href="#参考" class="header-anchor">#</a></h1><h3><span id="overview">Overview</span><a href="#overview" class="header-anchor">#</a></h3><ol>
 <li><p><a href="https://pub.towardsai.net/advanced-rag-techniques-an-illustrated-overview-04d193d8fec6">Advanced RAG Techniques: an Illustrated Overview</a>  ***<br><a href="https://mp.weixin.qq.com/s/CO7hMv4RW7OE6zwUmVfp5A">最全的RAG技术概览 </a><br><a href="https://zhuanlan.zhihu.com/p/673922981">高级检索增强生成技术(RAG)全面指南：原理、分块、编码、索引、微调、Agent、展望</a> </p>
@@ -7556,16 +7583,8 @@
 </ol>
 <p>1xx. <a href="https://baoyu.io/translations/rag/5-levels-of-text-splitting">文本分割的五个层次 [译]</a></p>
 <h3><span id="post-retrieval">Post-Retrieval</span><a href="#post-retrieval" class="header-anchor">#</a></h3><ol start="20">
-<li><p><a href="https://github.com/FlagOpen/FlagEmbedding/blob/master/README_zh.md">BGE Reranker</a><br>  <a href="https://www.bilibili.com/video/BV1sQ4y137Ft/">transformers二次开发——bge-reranker模型微调流程</a> V</p>
-</li>
-<li><p><a href="https://luxiangdong.com/2023/11/06/rerank-ev/#">提升RAG——选择最佳Embedding和重新排名模型 </a><br>  <a href="https://blog.llamaindex.ai/boosting-rag-picking-the-best-embedding-reranker-models-42d079022e83">Boosting RAG: Picking the Best Embedding &amp; Reranker models</a></p>
-</li>
-<li><p><a href="https://www.pinecone.io/learn/series/rag/rerankers/">Rerankers and Two-Stage Retrieval</a><br>  文中的第二阶段就是指Reranker</p>
-</li>
-<li><p><a href="https://github.com/langchain-ai/langchain/blob/master/cookbook/rag_fusion.ipynb">RAG Fusion</a> git<br>  <a href="https://towardsdatascience.com/forget-rag-the-future-is-rag-fusion-1147298d8ad1">Forget RAG, the Future is RAG-Fusion</a><br>  <a href="https://blog.csdn.net/lichunericli/article/details/135451681">忘记RAG，未来是RAG-Fusion</a><br>  <a href="https://mp.weixin.qq.com/s/NFjn8pUsQaSx85nhBphORA">再谈大模型RAG问答中的三个现实问题：兼看RAG-Fusion多query融合策略、回答引文生成策略及相关数据集概述</a></p>
-</li>
-<li><p><a href="https://github.com/netease-youdao/BCEmbedding">youdao RerankerModal</a> BCE</p>
-</li>
+<li><a href="/www6vHomeAIGC/2023/05/14/gptRAGRerank/" title="RAG Rerank">RAG Rerank</a> self</li>
+<li><a href="https://github.com/langchain-ai/langchain/blob/master/cookbook/rag_fusion.ipynb">RAG Fusion</a> git<br>  <a href="https://towardsdatascience.com/forget-rag-the-future-is-rag-fusion-1147298d8ad1">Forget RAG, the Future is RAG-Fusion</a><br>  <a href="https://blog.csdn.net/lichunericli/article/details/135451681">忘记RAG，未来是RAG-Fusion</a><br>  <a href="https://mp.weixin.qq.com/s/NFjn8pUsQaSx85nhBphORA">再谈大模型RAG问答中的三个现实问题：兼看RAG-Fusion多query融合策略、回答引文生成策略及相关数据集概述</a></li>
 </ol>
 <h1><span id="pre-retrival">pre-retrival</span><a href="#pre-retrival" class="header-anchor">#</a></h1><ol start="30">
 <li><a href="/www6vHomeAIGC/2023/04/20/gptQueryTransformation/" title="Query Transformation">Query Transformation</a>  self</li>
