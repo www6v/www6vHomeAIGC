@@ -26,7 +26,7 @@
 <meta property="og:site_name" content="www6v的博客">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-03-01T07:56:58.000Z">
-<meta property="article:modified_time" content="2024-03-21T03:47:01.669Z">
+<meta property="article:modified_time" content="2024-05-14T23:40:45.204Z">
 <meta property="article:author" content="Wang Wei">
 <meta property="article:tag" content="multimodal">
 <meta name="twitter:card" content="summary">
@@ -224,7 +224,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2024-03-21 11:47:01" itemprop="dateModified" datetime="2024-03-21T11:47:01+08:00">2024-03-21</time>
+                <time title="修改时间：2024-05-15 07:40:45" itemprop="dateModified" datetime="2024-05-15T07:40:45+08:00">2024-05-15</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -254,10 +254,48 @@
         <p></p>
 <span id="more"></span>
 
-<h1><span id="clip">CLIP</span><a href="#clip" class="header-anchor">#</a></h1><p>英文全称是<strong>Contrastive Language-Image Pre-training</strong></p>
-<h1><span id="参考">参考</span><a href="#参考" class="header-anchor">#</a></h1><p>1xx. <a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/493489688">神器CLIP：连接文本和图像，打造可迁移的视觉模型</a><br>1xx. <a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/486857682">【CLIP系列Paper解读】CLIP: Learning Transferable Visual Models From Natural Language Supervision</a><br>1xx. <a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/660476765">关于多模态经典之作CLIP，还有哪些细节是你不知道的</a><br>1xx. <a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/646790176">CLIP 模型解读</a><br>1xx. <a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/521151393">详解CLIP (一) | 打通文本-图像预训练实现ImageNet的zero-shot分类，比肩全监督训练的ResNet50&#x2F;101</a><br>1xx. <a target="_blank" rel="noopener" href="https://blog.csdn.net/lsb2002/article/details/132275132">openai多模态大模型：clip详解及实战</a></p>
-<p>1xx. <a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/555314976">CLIP：多模态领域革命者</a></p>
-<h3><span id="实战">实战</span><a href="#实战" class="header-anchor">#</a></h3><p>1xx. <a target="_blank" rel="noopener" href="https://github.com/mlfoundations/open_clip">open_clip</a><br>1xx. langchain 中有CLIP的实现</p>
+<h2><span id="目录">目录</span><a href="#目录" class="header-anchor">#</a></h2><div class="toc">
+
+<!-- toc -->
+
+<ul>
+<li><a href="#clip-%E5%9C%A8%E8%AE%AD%E7%BB%83%E8%BF%87%E7%A8%8B%E4%B8%AD%E5%81%9A%E4%BA%86%E5%93%AA%E4%BA%9B%E4%BA%8B%E6%83%85elmo1">CLIP 在训练过程中做了哪些事情？[Elmo][1]</a></li>
+<li><a href="#clip-zero-shot%E6%8E%A8%E7%90%861">CLIP Zero-shot推理[1]</a><ul>
+<li><a href="#%E6%AD%A5%E9%AA%A4">步骤</a></li>
+<li><a href="#%E5%B1%80%E9%99%90">局限</a></li>
+</ul>
+</li>
+<li><a href="#%E5%8F%82%E8%80%83">参考</a><ul>
+<li><a href="#%E5%AE%9E%E6%88%98">实战</a></li>
+</ul>
+</li>
+</ul>
+<!-- tocstop -->
+
+</div>
+
+<h1><span id="clip-在训练过程中做了哪些事情elmo1">CLIP 在训练过程中做了哪些事情？[Elmo][1]</span><a href="#clip-在训练过程中做了哪些事情elmo1" class="header-anchor">#</a></h1><p>在训练过程中，CLIP（Contrastive Language-Image Pre-training）模型主要进行了以下几个步骤：</p>
+<ol>
+<li><strong>数据预处理</strong> : CLIP 使用了一个大规模的数据集，包含 4 亿个 “图像 - 文本” 对，这些数据需要进行清洗和预处理，以便于模型学习。</li>
+<li><strong>特征提取</strong> : 通过 Text Encoder 和 Image Encoder 分别对文本和图像进行特征提取。Text Encoder 通常是基于 Transformer 的模型，而 Image Encoder 可以是基于 CNN（卷积神经网络）或者 VIT（Vision Transformer）的模型。</li>
+<li><strong>对比学习</strong> : CLIP 采用对比学习的策略，通过对比正确的图像 - 文本对与错误的图像 - 文本对，使得模型能够学习到正确对的特征表示与其他对的区分。具体来说，CLIP 通过 InfoNCE 损失函数来最大化正确对的相似度，同时最小化错误对的相似度。</li>
+<li><strong>特征空间对齐</strong> : 通过对比学习，CLIP 将图像和文本的特征映射到一个共享的多模态特征空间中，使得图像特征和文本特征可以直接进行相似度比较。</li>
+<li><strong>参数优化</strong> : 通过反向传播和梯度下降等方法，不断调整模型参数，以最小化损失函数，从而优化模型性能。</li>
+<li><strong>Zero-shot 推理能力的培养</strong> : 在训练过程中，CLIP 学习了如何通过文本提示（prompts）来进行 zero-shot 的图像分类，即在没有直接观测到的类别标签下，通过文本描述来识别图像内容。</li>
+<li><strong>模型评估与调整</strong> : 通过在验证集上的评估，调整模型结构和超参数，以提高模型的泛化能力和性能。</li>
+</ol>
+<p>通过这些训练步骤，CLIP 能够学习到一个强大的多模态特征表示，使其能够在多种视觉任务上进行 zero-shot 或 few-shot 的推理。</p>
+<h1><span id="clip-zero-shot推理1">CLIP Zero-shot推理[1]</span><a href="#clip-zero-shot推理1" class="header-anchor">#</a></h1><h3><span id="步骤">步骤</span><a href="#步骤" class="header-anchor">#</a></h3><ul>
+<li>首先，我们创建一个<strong>标签全集</strong>，如图中（2）所示，并得到每一个<strong>标签的特征向量</strong></li>
+<li>然后，我们取一张图片，如图中（3）所示，过Image Encoder后得到该<strong>图片的特征向量</strong></li>
+<li>最后，计算图片向量和文字向量间的<strong>相似度</strong>，取相似度最高的那条label即可。</li>
+</ul>
+<h3><span id="局限">局限</span><a href="#局限" class="header-anchor">#</a></h3><p>  当你喂给CLIP一张图时，不管这张图片它是否有见过，CLIP都不会生成一个全新的标签，而是去全集标签中找一个最相似的给你。</p>
+<h1><span id="参考">参考</span><a href="#参考" class="header-anchor">#</a></h1><ol>
+<li><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/660476765">关于多模态经典之作CLIP，还有哪些细节是你不知道的</a> 代码</li>
+</ol>
+<p>1xx. <a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/493489688">神器CLIP：连接文本和图像，打造可迁移的视觉模型</a> ***<br>1xx. <a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/486857682">【CLIP系列Paper解读】CLIP: Learning Transferable Visual Models From Natural Language Supervision</a> ***<br>1xx. <a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/646790176">CLIP 模型解读</a><br>1xx. <a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/521151393">详解CLIP (一) | 打通文本-图像预训练实现ImageNet的zero-shot分类，比肩全监督训练的ResNet50&#x2F;101</a><br>1xx. <a target="_blank" rel="noopener" href="https://blog.csdn.net/lsb2002/article/details/132275132">openai多模态大模型：clip详解及实战</a><br>1xx. <a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/555314976">CLIP：多模态领域革命者</a></p>
+<h3><span id="实战">实战</span><a href="#实战" class="header-anchor">#</a></h3><p>1xx. <a target="_blank" rel="noopener" href="https://github.com/mlfoundations/open_clip">open_clip Repo</a> git<br>1xx. <a target="_blank" rel="noopener" href="https://github.com/www6v/Chinese-CLIP">Chinese-CLIP Repo</a> git<br>1xx. langchain 中有CLIP的实现</p>
 
     </div>
 
