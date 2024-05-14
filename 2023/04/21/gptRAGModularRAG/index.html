@@ -27,7 +27,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://www6v.github.io/www6vHomeAIGC/2023/04/21/gptRAGModularRAG/moduleRAG.webp">
 <meta property="article:published_time" content="2023-04-21T11:22:24.000Z">
-<meta property="article:modified_time" content="2024-04-22T09:21:44.875Z">
+<meta property="article:modified_time" content="2024-05-14T08:42:38.902Z">
 <meta property="article:author" content="Wang Wei">
 <meta property="article:tag" content="RAG">
 <meta name="twitter:card" content="summary">
@@ -226,7 +226,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2024-04-22 17:21:44" itemprop="dateModified" datetime="2024-04-22T17:21:44+08:00">2024-04-22</time>
+                <time title="修改时间：2024-05-14 16:42:38" itemprop="dateModified" datetime="2024-05-14T16:42:38+08:00">2024-05-14</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -261,7 +261,7 @@
 <!-- toc -->
 
 <ul>
-<li><a href="#modular-rag4">Modular RAG[4]</a><ul>
+<li><a href="#modular-rag1">Modular RAG[1]</a><ul>
 <li><a href="#indexing">indexing</a></li>
 <li><a href="#pre-retrival%E9%98%B6%E6%AE%B5">pre-retrival阶段</a></li>
 <li><a href="#retrieval">Retrieval</a></li>
@@ -279,7 +279,7 @@
 
 </div>
 
-<h1><span id="modular-rag4">Modular RAG[4]</span><a href="#modular-rag4" class="header-anchor">#</a></h1><img src="/www6vHomeAIGC/2023/04/21/gptRAGModularRAG/moduleRAG.webp" class>
+<h1><span id="modular-rag1">Modular RAG[1]</span><a href="#modular-rag1" class="header-anchor">#</a></h1><img src="/www6vHomeAIGC/2023/04/21/gptRAGModularRAG/moduleRAG.webp" class>
 
 <h3><span id="indexing">indexing</span><a href="#indexing" class="header-anchor">#</a></h3><ul>
 <li><strong>chunk优化</strong><ul>
@@ -290,15 +290,15 @@
 </li>
 </ul>
 <h3><span id="pre-retrival阶段">pre-retrival阶段</span><a href="#pre-retrival阶段" class="header-anchor">#</a></h3><ul>
-<li><strong>query-routing</strong><ul>
+<li><strong>query-routing</strong> [2]<ul>
 <li>Metadata Router&#x2F; Filter  问题的分发</li>
-<li>Semantic Router  意图分类 [10]</li>
+<li>Semantic Router  意图分类</li>
 </ul>
 </li>
 <li><strong>query-expansion</strong>  <ul>
 <li>Multi-Query 一变多</li>
 <li>Sub-Query 拆分子query</li>
-<li>CoVe[11]</li>
+<li>CoVe[3]</li>
 </ul>
 </li>
 <li><strong>query transformer</strong> <ul>
@@ -320,7 +320,7 @@
 <li>Dense Retriever<br>稠密检索（向量化检索）</li>
 </ul>
 </li>
-<li>Retriever Fine-tuning  检索的微调  [12] #<ul>
+<li>Retriever Fine-tuning  检索的微调  [4] #<ul>
 <li>SFT<br>【embedding tuning】</li>
 <li>adapter</li>
 </ul>
@@ -346,7 +346,7 @@
 <li>On-Premises</li>
 </ul>
 </li>
-<li>Generator Fine-tuning  [12] #<ul>
+<li>Generator Fine-tuning  [4] #<ul>
 <li>SFT </li>
 <li>Distillation</li>
 <li>Dual FT<br>Fine-tuning both Generator and Retriever to align their preferences<br>RA-DIT</li>
@@ -366,14 +366,14 @@
 <blockquote>
 <p> #符号   Modular RAG 相对 advanced RAG 的特殊阶段</p>
 </blockquote>
-<h1><span id="参考">参考</span><a href="#参考" class="header-anchor">#</a></h1><h3><span id="modular-rag">Modular RAG</span><a href="#modular-rag" class="header-anchor">#</a></h3><ol start="4">
+<h1><span id="参考">参考</span><a href="#参考" class="header-anchor">#</a></h1><h3><span id="modular-rag">Modular RAG</span><a href="#modular-rag" class="header-anchor">#</a></h3><ol>
 <li><p><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/j07PkTCoxBzAhkyON1puPg">值得一看的大模型RAG问答总括性梳理：模块化(Modular)RAG范式的定义、构成及机遇 </a><br>1xx. <a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s?__biz=MzAxMjc3MjkyMg==&mid=2648407638&idx=1&sn=5c167b4a11bc483f5790ef1e0340d670">大模型RAG问答行业最佳案例及微调、推理双阶段实现模式：基于模块化(Modular)RAG自定义RAG Flow </a></p>
 </li>
-<li><p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1H64y1E75Y/">Sematic router 让LLM更加快速做出决策</a> V<br><a target="_blank" rel="noopener" href="https://github.com/aurelio-labs/semantic-router/">semantic-router</a> git</p>
+<li><a href="/www6vHomeAIGC/2023/05/14/gptRAGRouting/" title="Query Routing">Query Routing</a>  self
 </li>
-<li><p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/669977863">如何使用LLMs：Chain of Verification (CoVe)</a><br><a target="_blank" rel="noopener" href="https://sourajit16-02-93.medium.com/chain-of-verification-cove-understanding-implementation-e7338c7f4cb5">Chain of Verification (CoVe) — Understanding &amp; Implementation</a></p>
+<li><p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/669977863">如何使用LLMs：Chain of Verification (CoVe)</a><br> <a target="_blank" rel="noopener" href="https://sourajit16-02-93.medium.com/chain-of-verification-cove-understanding-implementation-e7338c7f4cb5">Chain of Verification (CoVe) — Understanding &amp; Implementation</a></p>
 </li>
-<li><a href="/www6vHomeAIGC/2022/12/07/gptRAGPerformance/" title="(原理)Advanced RAG">(原理)Advanced RAG</a></li>
+<li><a href="/www6vHomeAIGC/2022/12/07/gptRAGPerformance/" title="(原理)Advanced RAG">(原理)Advanced RAG</a>  self</li>
 </ol>
 
     </div>
@@ -488,7 +488,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/www6vHomeAIGC/archives/">
         
-          <span class="site-state-item-count">128</span>
+          <span class="site-state-item-count">129</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>

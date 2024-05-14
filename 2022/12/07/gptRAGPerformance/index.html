@@ -28,7 +28,7 @@
 <meta property="og:image" content="https://www6v.github.io/www6vHomeAIGC/2022/12/07/gptRAGPerformance/advanced-rag.JPG">
 <meta property="og:image" content="https://www6v.github.io/www6vHomeAIGC/2022/12/07/gptRAGPerformance/advaced.png">
 <meta property="article:published_time" content="2022-12-07T01:44:24.000Z">
-<meta property="article:modified_time" content="2024-04-22T09:28:08.180Z">
+<meta property="article:modified_time" content="2024-05-14T08:33:06.271Z">
 <meta property="article:author" content="Wang Wei">
 <meta property="article:tag" content="RAG">
 <meta name="twitter:card" content="summary">
@@ -227,7 +227,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2024-04-22 17:28:08" itemprop="dateModified" datetime="2024-04-22T17:28:08+08:00">2024-04-22</time>
+                <time title="修改时间：2024-05-14 16:33:06" itemprop="dateModified" datetime="2024-05-14T16:33:06+08:00">2024-05-14</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -292,7 +292,7 @@
 </li>
 <li><a href="#pre-retrival%E9%98%B6%E6%AE%B5">pre-retrival阶段</a><ul>
 <li><a href="#query-transformer-%E6%9F%A5%E8%AF%A2%E8%BD%AC%E6%8D%A2-301">query transformer 查询转换 [30][1]</a></li>
-<li><a href="#query-routing-%E6%9F%A5%E8%AF%A2%E8%B7%AF%E7%94%B1-1">query-routing 查询路由 [1]</a></li>
+<li><a href="#query-routing-%E6%9F%A5%E8%AF%A2%E8%B7%AF%E7%94%B1-311">query-routing 查询路由  [31][1]</a></li>
 </ul>
 </li>
 <li><a href="#retrieval">Retrieval</a><ul>
@@ -320,7 +320,9 @@
 <li><a href="#overview-1">Overview</a></li>
 <li><a href="#index">index</a></li>
 <li><a href="#post-retrieval-1">Post-Retrieval</a></li>
-<li><a href="#query-transformer">query transformer</a></li>
+</ul>
+</li>
+<li><a href="#pre-retrival">pre-retrival</a><ul>
 <li><a href="#fine-tuning">fine-tuning</a></li>
 </ul>
 </li>
@@ -387,7 +389,7 @@
 <blockquote>
 <p>最佳实践<br>  按<strong>逻辑分块</strong>可以明显提升<strong>检索器的准确率</strong></p>
 </blockquote>
-<h1><span id="pre-retrival阶段">pre-retrival阶段</span><a href="#pre-retrival阶段" class="header-anchor">#</a></h1><h3><span id="query-transformer-查询转换-301">query transformer 查询转换 [30][1]</span><a href="#query-transformer-查询转换-301" class="header-anchor">#</a></h3><h3><span id="query-routing-查询路由-1">query-routing 查询路由 [1]</span><a href="#query-routing-查询路由-1" class="header-anchor">#</a></h3><p>LlamaIndex和LangChain都支持查询路由器</p>
+<h1><span id="pre-retrival阶段">pre-retrival阶段</span><a href="#pre-retrival阶段" class="header-anchor">#</a></h1><h3><span id="query-transformer-查询转换-301">query transformer 查询转换 [30][1]</span><a href="#query-transformer-查询转换-301" class="header-anchor">#</a></h3><h3><span id="query-routing-查询路由-311">query-routing 查询路由  [31][1]</span><a href="#query-routing-查询路由-311" class="header-anchor">#</a></h3><p>LlamaIndex和LangChain都支持查询路由器</p>
 <h1><span id="retrieval">Retrieval</span><a href="#retrieval" class="header-anchor">#</a></h1><h3><span id="检索器-retriever">检索器 Retriever</span><a href="#检索器-retriever" class="header-anchor">#</a></h3><ul>
 <li>Ensemble Retriever<br>最常见的模式是将<strong>稀疏检索器（如BM25）</strong>与<strong>密集检索器（如嵌入相似度）</strong>结合起来，因为它们的优势是互补的。这也被称为“混合搜索”。<strong>稀疏检索器</strong>擅长基于<strong>关键词查找</strong>相关文档，而<strong>密集检索器</strong>擅长基于<strong>语义相似性查找</strong>相关文档。</li>
 </ul>
@@ -428,8 +430,9 @@
 <li><p><a target="_blank" rel="noopener" href="https://github.com/netease-youdao/BCEmbedding">youdao RerankerModal</a> BCE</p>
 </li>
 </ol>
-<h3><span id="query-transformer">query transformer</span><a href="#query-transformer" class="header-anchor">#</a></h3><ol start="30">
+<h1><span id="pre-retrival">pre-retrival</span><a href="#pre-retrival" class="header-anchor">#</a></h1><ol start="30">
 <li><a href="/www6vHomeAIGC/2023/04/20/gptQueryTransformation/" title="Query Transformation">Query Transformation</a>  self</li>
+<li><a href="/www6vHomeAIGC/2023/05/14/gptRAGRouting/" title="Query Routing">Query Routing</a>  self</li>
 </ol>
 <h3><span id="fine-tuning">fine-tuning</span><a href="#fine-tuning" class="header-anchor">#</a></h3><ol start="40">
 <li><p><a target="_blank" rel="noopener" href="https://docs.llamaindex.ai/en/stable/examples/finetuning/embeddings/finetune_embedding/">Finetune Embeddings</a> notebook</p>
@@ -555,7 +558,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/www6vHomeAIGC/archives/">
         
-          <span class="site-state-item-count">128</span>
+          <span class="site-state-item-count">129</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>

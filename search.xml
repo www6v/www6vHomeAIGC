@@ -79,7 +79,7 @@
 <li><a href="/www6vHomeAIGC/2023/04/01/gptDatasetSurvey/" title="(Survey)Dataset">(Survey)Dataset</a> </li>
 <li><a href="/www6vHomeAIGC/2023/02/05/gptDataProcess/" title="(Survey)数据处理">(Survey)数据处理</a>  </li>
 <li><a href="/www6vHomeAIGC/2023/03/19/gptDataProcessPractice/" title="(实战)数据处理">(实战)数据处理</a>  </li>
-<li><a href="/www6vHomeAIGC/2024/04/24/gptDataProcessAnnotation/" title="Data  Annotation">Data  Annotation</a></li>
+<li><a href="/www6vHomeAIGC/2023/04/24/gptDataProcessAnnotation/" title="(原理|实战)Data  Annotation">(原理|实战)Data  Annotation</a></li>
 </ul>
 </li>
 <li>Data Management<ul>
@@ -192,7 +192,8 @@
 <li><a href="/www6vHomeAIGC/2023/04/21/gptRAGModularRAG/" title="(原理)Modular RAG">(原理)Modular RAG</a> </li>
 <li><a href="/www6vHomeAIGC/2022/12/07/gptRAGPerformance/" title="(原理)Advanced RAG">(原理)Advanced RAG</a></li>
 <li><a href="/www6vHomeAIGC/2023/03/02/gptRAGSelfReflective/" title="(原理|实战)Self-Reflective RAG">(原理|实战)Self-Reflective RAG</a> </li>
-<li><a href="/www6vHomeAIGC/2023/04/20/gptQueryTransformation/" title="Query Transformation">Query Transformation</a></li>
+<li><a href="/www6vHomeAIGC/2023/04/20/gptQueryTransformation/" title="Query Transformation">Query Transformation</a>  </li>
+<li><a href="/www6vHomeAIGC/2023/05/14/gptRAGRouting/" title="Query Routing">Query Routing</a></li>
 </ul>
 </li>
 <li>Multimodal RAG  *<ul>
@@ -692,6 +693,35 @@
       </categories>
       <tags>
         <tag>PEFT</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Query Routing</title>
+    <url>/www6vHomeAIGC/2023/05/14/gptRAGRouting/</url>
+    <content><![CDATA[<p></p>
+<span id="more"></span>
+
+<h1><span id="类型1">类型[1]</span><a href="#类型1" class="header-anchor">#</a></h1><ul>
+<li>LLM Completion Routers</li>
+<li>LLM Function Calling Routers</li>
+<li>Semantic Routers[2]</li>
+<li>Zero Shot Classification Routers</li>
+<li>Language Classification Routers</li>
+</ul>
+<p><img src="https://miro.medium.com/v2/format:webp/1*fJnUoOwsykBTU1MyLgHQFg.png" alt="Routers"></p>
+<h1><span id="参考">参考</span><a href="#参考" class="header-anchor">#</a></h1><ol>
+<li><p><a href="https://towardsdatascience.com/routing-in-rag-driven-applications-a685460a7220">Routing in RAG-Driven Applications</a></p>
+</li>
+<li><p><a href="https://www.bilibili.com/video/BV1H64y1E75Y/">Sematic router 让LLM更加快速做出决策</a> V<br><a href="https://github.com/aurelio-labs/semantic-router/">semantic-router Repo</a> git</p>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>AIGC</category>
+        <category>RAG</category>
+      </categories>
+      <tags>
+        <tag>RAG</tag>
       </tags>
   </entry>
   <entry>
@@ -1426,7 +1456,7 @@
 <!-- toc -->
 
 <ul>
-<li><a href="#modular-rag4">Modular RAG[4]</a><ul>
+<li><a href="#modular-rag1">Modular RAG[1]</a><ul>
 <li><a href="#indexing">indexing</a></li>
 <li><a href="#pre-retrival%E9%98%B6%E6%AE%B5">pre-retrival阶段</a></li>
 <li><a href="#retrieval">Retrieval</a></li>
@@ -1444,7 +1474,7 @@
 
 </div>
 
-<h1><span id="modular-rag4">Modular RAG[4]</span><a href="#modular-rag4" class="header-anchor">#</a></h1><img src="/www6vHomeAIGC/2023/04/21/gptRAGModularRAG/moduleRAG.webp" class>
+<h1><span id="modular-rag1">Modular RAG[1]</span><a href="#modular-rag1" class="header-anchor">#</a></h1><img src="/www6vHomeAIGC/2023/04/21/gptRAGModularRAG/moduleRAG.webp" class>
 
 <h3><span id="indexing">indexing</span><a href="#indexing" class="header-anchor">#</a></h3><ul>
 <li><strong>chunk优化</strong><ul>
@@ -1455,15 +1485,15 @@
 </li>
 </ul>
 <h3><span id="pre-retrival阶段">pre-retrival阶段</span><a href="#pre-retrival阶段" class="header-anchor">#</a></h3><ul>
-<li><strong>query-routing</strong><ul>
+<li><strong>query-routing</strong> [2]<ul>
 <li>Metadata Router&#x2F; Filter  问题的分发</li>
-<li>Semantic Router  意图分类 [10]</li>
+<li>Semantic Router  意图分类</li>
 </ul>
 </li>
 <li><strong>query-expansion</strong>  <ul>
 <li>Multi-Query 一变多</li>
 <li>Sub-Query 拆分子query</li>
-<li>CoVe[11]</li>
+<li>CoVe[3]</li>
 </ul>
 </li>
 <li><strong>query transformer</strong> <ul>
@@ -1485,7 +1515,7 @@
 <li>Dense Retriever<br>稠密检索（向量化检索）</li>
 </ul>
 </li>
-<li>Retriever Fine-tuning  检索的微调  [12] #<ul>
+<li>Retriever Fine-tuning  检索的微调  [4] #<ul>
 <li>SFT<br>【embedding tuning】</li>
 <li>adapter</li>
 </ul>
@@ -1511,7 +1541,7 @@
 <li>On-Premises</li>
 </ul>
 </li>
-<li>Generator Fine-tuning  [12] #<ul>
+<li>Generator Fine-tuning  [4] #<ul>
 <li>SFT </li>
 <li>Distillation</li>
 <li>Dual FT<br>Fine-tuning both Generator and Retriever to align their preferences<br>RA-DIT</li>
@@ -1531,14 +1561,14 @@
 <blockquote>
 <p> #符号   Modular RAG 相对 advanced RAG 的特殊阶段</p>
 </blockquote>
-<h1><span id="参考">参考</span><a href="#参考" class="header-anchor">#</a></h1><h3><span id="modular-rag">Modular RAG</span><a href="#modular-rag" class="header-anchor">#</a></h3><ol start="4">
+<h1><span id="参考">参考</span><a href="#参考" class="header-anchor">#</a></h1><h3><span id="modular-rag">Modular RAG</span><a href="#modular-rag" class="header-anchor">#</a></h3><ol>
 <li><p><a href="https://mp.weixin.qq.com/s/j07PkTCoxBzAhkyON1puPg">值得一看的大模型RAG问答总括性梳理：模块化(Modular)RAG范式的定义、构成及机遇 </a><br>1xx. <a href="https://mp.weixin.qq.com/s?__biz=MzAxMjc3MjkyMg==&mid=2648407638&idx=1&sn=5c167b4a11bc483f5790ef1e0340d670">大模型RAG问答行业最佳案例及微调、推理双阶段实现模式：基于模块化(Modular)RAG自定义RAG Flow </a></p>
 </li>
-<li><p><a href="https://www.bilibili.com/video/BV1H64y1E75Y/">Sematic router 让LLM更加快速做出决策</a> V<br><a href="https://github.com/aurelio-labs/semantic-router/">semantic-router</a> git</p>
+<li><a href="/www6vHomeAIGC/2023/05/14/gptRAGRouting/" title="Query Routing">Query Routing</a>  self
 </li>
-<li><p><a href="https://zhuanlan.zhihu.com/p/669977863">如何使用LLMs：Chain of Verification (CoVe)</a><br><a href="https://sourajit16-02-93.medium.com/chain-of-verification-cove-understanding-implementation-e7338c7f4cb5">Chain of Verification (CoVe) — Understanding &amp; Implementation</a></p>
+<li><p><a href="https://zhuanlan.zhihu.com/p/669977863">如何使用LLMs：Chain of Verification (CoVe)</a><br> <a href="https://sourajit16-02-93.medium.com/chain-of-verification-cove-understanding-implementation-e7338c7f4cb5">Chain of Verification (CoVe) — Understanding &amp; Implementation</a></p>
 </li>
-<li><a href="/www6vHomeAIGC/2022/12/07/gptRAGPerformance/" title="(原理)Advanced RAG">(原理)Advanced RAG</a></li>
+<li><a href="/www6vHomeAIGC/2022/12/07/gptRAGPerformance/" title="(原理)Advanced RAG">(原理)Advanced RAG</a>  self</li>
 </ol>
 ]]></content>
       <categories>
@@ -6498,6 +6528,7 @@
 </ol>
 <p>1xx. <a href="https://zhuanlan.zhihu.com/p/642611747">垂直领域大模型的一些思考及开源模型汇总</a><br>1xx. <a href="https://mp.weixin.qq.com/s?__biz=MzAxMjc3MjkyMg==&mid=2648403459&idx=2&sn=0219fc098c208e36cd32940e71089fd2">层出不穷的垂域微调大模型非最全汇总：12大领域、57个领域微调模型概述及对垂直行业问答的一些讨论 </a> 领域模型集合<br>    <a href="https://github.com/www6v/Awesome-Domain-LLM">Awesome-Domain-LLM</a><br>1xx. <a href="https://blog.csdn.net/v_JULY_v/article/details/131550529?spm=1001.2014.3001.5502">医疗金融法律大模型：从ChatDoctor到BloombergGPT&#x2F;FinGPT&#x2F;FinBERT、ChatLaw&#x2F;LawGPT_zh</a><br>1xx. <a href="https://mp.weixin.qq.com/s?__biz=MzAxMjc3MjkyMg==&mid=2648400666&idx=1&sn=bc47e8c4eca6fc4baaded42fa3c6bd77">再谈垂直领域大模型及今日前沿速递：金融领域FinBERT、BloombergGPT以及法律领域微调模型LawGPT_zh</a></p>
 <p>1xx. <a href="/www6vHomeAIGC/2023/01/04/gptLeaderBoard/" title="排行榜">排行榜</a> self<br>1xx. <a href="https://github.com/www6v/Awesome-Domain-LLM">Awesome-Domain-LLM</a>  git 全</p>
+<p>1xx. <a href="https://mp.weixin.qq.com/s/jgyIOOzRWAgilcW4HfufNQ">行业大模型落地的一些有趣调研总结：兼看大模型RAG问答四大技术综述 </a>  腾讯 行业大模型调研报告 ***</p>
 ]]></content>
       <categories>
         <category>AIGC</category>
@@ -7398,7 +7429,7 @@
 </li>
 <li><a href="#pre-retrival%E9%98%B6%E6%AE%B5">pre-retrival阶段</a><ul>
 <li><a href="#query-transformer-%E6%9F%A5%E8%AF%A2%E8%BD%AC%E6%8D%A2-301">query transformer 查询转换 [30][1]</a></li>
-<li><a href="#query-routing-%E6%9F%A5%E8%AF%A2%E8%B7%AF%E7%94%B1-1">query-routing 查询路由 [1]</a></li>
+<li><a href="#query-routing-%E6%9F%A5%E8%AF%A2%E8%B7%AF%E7%94%B1-311">query-routing 查询路由  [31][1]</a></li>
 </ul>
 </li>
 <li><a href="#retrieval">Retrieval</a><ul>
@@ -7426,7 +7457,9 @@
 <li><a href="#overview-1">Overview</a></li>
 <li><a href="#index">index</a></li>
 <li><a href="#post-retrieval-1">Post-Retrieval</a></li>
-<li><a href="#query-transformer">query transformer</a></li>
+</ul>
+</li>
+<li><a href="#pre-retrival">pre-retrival</a><ul>
 <li><a href="#fine-tuning">fine-tuning</a></li>
 </ul>
 </li>
@@ -7493,7 +7526,7 @@
 <blockquote>
 <p>最佳实践<br>  按<strong>逻辑分块</strong>可以明显提升<strong>检索器的准确率</strong></p>
 </blockquote>
-<h1><span id="pre-retrival阶段">pre-retrival阶段</span><a href="#pre-retrival阶段" class="header-anchor">#</a></h1><h3><span id="query-transformer-查询转换-301">query transformer 查询转换 [30][1]</span><a href="#query-transformer-查询转换-301" class="header-anchor">#</a></h3><h3><span id="query-routing-查询路由-1">query-routing 查询路由 [1]</span><a href="#query-routing-查询路由-1" class="header-anchor">#</a></h3><p>LlamaIndex和LangChain都支持查询路由器</p>
+<h1><span id="pre-retrival阶段">pre-retrival阶段</span><a href="#pre-retrival阶段" class="header-anchor">#</a></h1><h3><span id="query-transformer-查询转换-301">query transformer 查询转换 [30][1]</span><a href="#query-transformer-查询转换-301" class="header-anchor">#</a></h3><h3><span id="query-routing-查询路由-311">query-routing 查询路由  [31][1]</span><a href="#query-routing-查询路由-311" class="header-anchor">#</a></h3><p>LlamaIndex和LangChain都支持查询路由器</p>
 <h1><span id="retrieval">Retrieval</span><a href="#retrieval" class="header-anchor">#</a></h1><h3><span id="检索器-retriever">检索器 Retriever</span><a href="#检索器-retriever" class="header-anchor">#</a></h3><ul>
 <li>Ensemble Retriever<br>最常见的模式是将<strong>稀疏检索器（如BM25）</strong>与<strong>密集检索器（如嵌入相似度）</strong>结合起来，因为它们的优势是互补的。这也被称为“混合搜索”。<strong>稀疏检索器</strong>擅长基于<strong>关键词查找</strong>相关文档，而<strong>密集检索器</strong>擅长基于<strong>语义相似性查找</strong>相关文档。</li>
 </ul>
@@ -7534,8 +7567,9 @@
 <li><p><a href="https://github.com/netease-youdao/BCEmbedding">youdao RerankerModal</a> BCE</p>
 </li>
 </ol>
-<h3><span id="query-transformer">query transformer</span><a href="#query-transformer" class="header-anchor">#</a></h3><ol start="30">
+<h1><span id="pre-retrival">pre-retrival</span><a href="#pre-retrival" class="header-anchor">#</a></h1><ol start="30">
 <li><a href="/www6vHomeAIGC/2023/04/20/gptQueryTransformation/" title="Query Transformation">Query Transformation</a>  self</li>
+<li><a href="/www6vHomeAIGC/2023/05/14/gptRAGRouting/" title="Query Routing">Query Routing</a>  self</li>
 </ol>
 <h3><span id="fine-tuning">fine-tuning</span><a href="#fine-tuning" class="header-anchor">#</a></h3><ol start="40">
 <li><p><a href="https://docs.llamaindex.ai/en/stable/examples/finetuning/embeddings/finetune_embedding/">Finetune Embeddings</a> notebook</p>
@@ -8476,6 +8510,7 @@
 </li>
 </ol>
 <p>1xx. <a href="https://mp.weixin.qq.com/s/FKv9glaGZD0qbLmB2zg6bg">北大最新综述精读：RAG在AIGC中的前世今生，覆盖300篇论文！</a><br>   <a href="https://mp.weixin.qq.com/s?__biz=MzkzODMxNTkzNg==&mid=2247484337&idx=1&sn=484db46f6a974cb26b7659096b31cdd8">最新RAG综述来了！北京大学发布AIGC的检索增强技术综述</a></p>
+<p>1xx. <a href="https://mp.weixin.qq.com/s/jgyIOOzRWAgilcW4HfufNQ">行业大模型落地的一些有趣调研总结：兼看大模型RAG问答四大技术综述</a> 四大综述</p>
 <h3><span id="评估">评估</span><a href="#评估" class="header-anchor">#</a></h3><p>1xx. <a href="https://mp.weixin.qq.com/s?__biz=MzAxMjc3MjkyMg==&mid=2648404511&idx=2&sn=fefb78c1d920cb5b437f2e3da9935637">再看大模型RAG检索增强如何评估：RAGAS开源自动化评估框架</a><br>1xx. <a href="https://mp.weixin.qq.com/s?__biz=MzAxMjc3MjkyMg==&mid=2648404476&idx=2&sn=d07b27dc9162ab0aaec3108004e4cfbe">大模型RAG检索增强问答如何评估：噪声、拒答、反事实、信息整合四大能力评测任务探索 </a></p>
 <p>XXX<br>1xx. <a href="https://baoyu.io/translations/ai-paper/2005.11401-retrieval-augmented-generation-for-knowledge-intensive-nlp-tasks">知识密集型自然语言处理任务的检索增强生成技术研究 [译]</a><br>1xx. <a href="https://baoyu.io/translations/rag/mastering-rag-how-to-architect-an-enterprise-rag-system">构建企业级 RAG 系统的高级指南 [译]</a><br>1xx. <a href="https://baoyu.io/translations/ai-paper/2401.05856v1-seven-failure-points-when-engineering-a-retrieval-augmented-generation-system">在构建检索增强型生成系统时的七大挑战 [译]</a></p>
 ]]></content>
