@@ -855,7 +855,6 @@
 </ol>
 <p>1xx. <a href="https://mp.weixin.qq.com/s/NhpJMmIcnF57qEuUkxD4kQ">AI Agent规划能力全面拆解</a></p>
 <p>1xx. <a href="https://baoyu.io/translations/ai-paper/2311.11797-igniting-language-intelligence-the-hitchhikers-guide-from-chain-of-thought-reasoning-to-language-agents">引领语言智能：从思维链推理到语言智能体的探索指南 [译]</a> paper</p>
-<p>1xx. <a href="https://zhuanlan.zhihu.com/p/671491031">ReWOO: 高效增强语言模型中解偶观测和推理</a></p>
 <p>1xx. <a href="https://mp.weixin.qq.com/s?__biz=Mzg5NTc2OTcyOQ==&mid=2247488040&idx=1&sn=f404a5fc2b0380eac00564046abc77d5">2023年大语言模型智能体规划技术(LLM Agent Planning)研究进展汇总</a></p>
 ]]></content>
       <categories>
@@ -1886,7 +1885,7 @@
 </ol>
 <h3><span id="reflexion">Reflexion</span><a href="#reflexion" class="header-anchor">#</a></h3><ol start="21">
 <li><a href="https://zhuanlan.zhihu.com/p/639254455">【论文阅读】Reflexion: 大模型如何从错误经验中学习？</a></li>
-<li><a href="https://zhuanlan.zhihu.com/p/671508578">Reflexion: 带言语强化学习的语言智体</a><br>1xx. <a href="https://blog.langchain.dev/reflection-agents/">Reflection Agents</a><br>   <a href="https://www.bilibili.com/video/BV1KJ4m1a7rZ/">LangGraph：Reflection Agents 实战</a></li>
+<li><a href="https://zhuanlan.zhihu.com/p/671508578">Reflexion: 带言语强化学习的语言智体</a><br>   1xx. <a href="https://blog.langchain.dev/reflection-agents/">Reflection Agents</a><br>  <a href="https://www.bilibili.com/video/BV1KJ4m1a7rZ/">LangGraph：Reflection Agents 实战</a> V</li>
 </ol>
 ]]></content>
       <categories>
@@ -3747,7 +3746,7 @@
       </tags>
   </entry>
   <entry>
-    <title>(原理|实战)Plan-And-Execute Agent</title>
+    <title>(原理|实战)Plan&amp;Execute,ReWOO</title>
     <url>/www6vHomeAIGC/2023/03/02/gptAgentPlanAndExecute/</url>
     <content><![CDATA[<p></p>
 <span id="more"></span>
@@ -3813,8 +3812,8 @@
 <li><a href="https://github.com/langchain-ai/langgraph/blob/main/examples/plan-and-execute/plan-and-execute.ipynb">plan-and-execute</a>    git</li>
 </ol>
 <h3><span id="rewoo">ReWOO</span><a href="#rewoo" class="header-anchor">#</a></h3><ol start="10">
-<li><a href="https://arxiv.org/pdf/2305.18323.pdf">ReWOO: Decoupling Reasoning from Observations<br>for Efficient Augmented Language Models</a></li>
-<li><a href="https://github.com/langchain-ai/langgraph/blob/main/examples/rewoo/rewoo.ipynb">Reasoning without Observation</a><br>1xx.  <a href="https://zhuanlan.zhihu.com/p/671491031">ReWOO: 高效增强语言模型中解偶观测和推理</a></li>
+<li><a href="https://arxiv.org/pdf/2305.18323.pdf">ReWOO: Decoupling Reasoning from Observations for Efficient Augmented Language Models</a></li>
+<li><a href="https://github.com/langchain-ai/langgraph/blob/main/examples/rewoo/rewoo.ipynb">Reasoning without Observation</a> git<br><a href="https://www.bilibili.com/video/BV1Au4m1N7ix/">ReWoo Agent框架代码实现</a> V<br>1xx.  <a href="https://zhuanlan.zhihu.com/p/671491031">ReWOO: 高效增强语言模型中解偶观测和推理</a></li>
 </ol>
 <h3><span id="llmcompiler">LLMCompiler</span><a href="#llmcompiler" class="header-anchor">#</a></h3><ol start="20">
 <li><a href="https://arxiv.org/pdf/2312.04511v1.pdf">An LLM Compiler for Parallel Function Calling</a></li>
