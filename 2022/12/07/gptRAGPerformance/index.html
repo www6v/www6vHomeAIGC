@@ -28,7 +28,7 @@
 <meta property="og:image" content="https://www6v.github.io/www6vHomeAIGC/2022/12/07/gptRAGPerformance/advanced-rag.JPG">
 <meta property="og:image" content="https://www6v.github.io/www6vHomeAIGC/2022/12/07/gptRAGPerformance/advaced.png">
 <meta property="article:published_time" content="2022-12-07T01:44:24.000Z">
-<meta property="article:modified_time" content="2024-05-14T10:30:08.461Z">
+<meta property="article:modified_time" content="2024-05-21T09:57:19.717Z">
 <meta property="article:author" content="Wang Wei">
 <meta property="article:tag" content="RAG">
 <meta name="twitter:card" content="summary">
@@ -227,7 +227,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2024-05-14 18:30:08" itemprop="dateModified" datetime="2024-05-14T18:30:08+08:00">2024-05-14</time>
+                <time title="修改时间：2024-05-21 17:57:19" itemprop="dateModified" datetime="2024-05-21T17:57:19+08:00">2024-05-21</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -272,9 +272,6 @@
 <li><a href="#embedding">Embedding</a></li>
 <li><a href="#%E7%B4%A2%E5%BC%95">索引</a><ul>
 <li><a href="#%E7%B4%A2%E5%BC%95%E6%96%B9%E5%BC%8F">索引方式</a><ul>
-<li><a href="#smaller-chunks-1112">Smaller chunks [11][12]</a></li>
-<li><a href="#hypothetical-questions-1112">Hypothetical questions [11][12]</a></li>
-<li><a href="#summary-1112">Summary [11][12]</a></li>
 <li><a href="#%E5%90%91%E9%87%8F%E5%AD%98%E5%82%A8%E7%B4%A2%E5%BC%951">向量存储索引[1]</a></li>
 <li><a href="#%E5%B1%82%E6%AC%A1%E7%B4%A2%E5%BC%951">层次索引[1]</a></li>
 <li><a href="#%E5%81%87%E8%AE%BE%E9%97%AE%E9%A2%98%E5%92%8Chyde1">假设问题和HyDE[1]</a></li>
@@ -282,12 +279,7 @@
 <li><a href="#%E8%9E%8D%E5%90%88%E6%A3%80%E7%B4%A2%E6%88%96%E6%B7%B7%E5%90%88%E6%90%9C%E7%B4%A21">融合检索或混合搜索[1]</a></li>
 </ul>
 </li>
-<li><a href="#%E5%88%86%E5%9D%9713">分块[13]</a><ul>
-<li><a href="#%E5%88%86%E5%9D%97%E6%96%B9%E6%B3%95">分块方法</a></li>
-<li><a href="#%E5%88%86%E5%9D%97%E4%BC%98%E5%8C%96">分块优化</a></li>
-<li><a href="#%E5%88%86%E5%9D%97%E5%8F%82%E6%95%B0">分块参数</a></li>
-</ul>
-</li>
+<li><a href="#%E5%88%86%E5%9D%97-1">分块 [1]</a></li>
 </ul>
 </li>
 <li><a href="#pre-retrival%E9%98%B6%E6%AE%B5">pre-retrival阶段</a><ul>
@@ -312,7 +304,6 @@
 </li>
 <li><a href="#%E5%8F%82%E8%80%83">参考</a><ul>
 <li><a href="#overview-1">Overview</a></li>
-<li><a href="#index">index</a></li>
 <li><a href="#post-retrieval-1">Post-Retrieval</a></li>
 </ul>
 </li>
@@ -330,17 +321,10 @@
 <h3><span id="advanced-rag-1">Advanced RAG [1]</span><a href="#advanced-rag-1" class="header-anchor">#</a></h3><img src="/www6vHomeAIGC/2022/12/07/gptRAGPerformance/advaced.png" class>
 
 
-<h1><span id="embedding">Embedding</span><a href="#embedding" class="header-anchor">#</a></h1><ul>
-<li>HyDE<br>At a high level, HyDE is an embedding technique that takes queries, <strong>generates a hypothetical answer</strong>, and then embeds that generated document and uses that as the final example.</li>
-</ul>
-<blockquote>
+<h1><span id="embedding">Embedding</span><a href="#embedding" class="header-anchor">#</a></h1><blockquote>
 <p>最佳实践<br><strong>BGE</strong> 优于 OpenAI ADA02</p>
 </blockquote>
-<h1><span id="索引">索引</span><a href="#索引" class="header-anchor">#</a></h1><h2><span id="索引方式">索引方式</span><a href="#索引方式" class="header-anchor">#</a></h2><h3><span id="smaller-chunks-1112">Smaller chunks [11][12]</span><a href="#smaller-chunks-1112" class="header-anchor">#</a></h3><p>Indexing by <strong>small data chunks</strong><br>按子部分索引数据块：将文本块拆分为较小的部分，如句子，进行多次索引。这有助于<br>处理复杂文本块，减少噪音输出，确保更准确匹配用户查询。</p>
-<h3><span id="hypothetical-questions-1112">Hypothetical questions [11][12]</span><a href="#hypothetical-questions-1112" class="header-anchor">#</a></h3><p>Indexing by <strong>the questions the document answers</strong><br>按文本块回答的问题索引数据块：让LLM生成与拆分的文本块相关的假设性问题，并用<br>于索引。这种方法保持用户查询与数据核心内容一致，降低模糊性。</p>
-<h3><span id="summary-1112">Summary [11][12]</span><a href="#summary-1112" class="header-anchor">#</a></h3><p>Indexing by <strong>the summary of the document</strong></p>
-<p>按文本块摘要索引数据块：类似于第二种方法，使用块摘要而不是回答的假设问题来创<br>建索引。特别适用于文本块中包含多余信息或与用户查询无关的情况。</p>
-<h3><span id="向量存储索引1">向量存储索引[1]</span><a href="#向量存储索引1" class="header-anchor">#</a></h3><ul>
+<h1><span id="索引">索引</span><a href="#索引" class="header-anchor">#</a></h1><h2><span id="索引方式">索引方式</span><a href="#索引方式" class="header-anchor">#</a></h2><h3><span id="向量存储索引1">向量存储索引[1]</span><a href="#向量存储索引1" class="header-anchor">#</a></h3><ul>
 <li>近似最近邻实现（如聚类、树或HNSW算法）<br>Faiss、nmslib、annoy</li>
 <li>LlamaIndex</li>
 </ul>
@@ -356,34 +340,7 @@
 <li>Reciprocal Rank Fusion (RRF)算法<br>对检索到的结果进行重新排序以获得最终输出</li>
 <li>实现<br>LangChain  - Ensemble Retriever类</li>
 </ul>
-<h2><span id="分块13">分块[13]</span><a href="#分块13" class="header-anchor">#</a></h2><h3><span id="分块方法">分块方法</span><a href="#分块方法" class="header-anchor">#</a></h3><ul>
-<li>固定大小分块</li>
-<li>内容感知分块<ul>
-<li>句子分块<ul>
-<li>直接分割<br>按句点（“.”）和换行符分割句子</li>
-<li>NLTK<br><code>from langchain.text_splitter import NLTKTextSplitter</code></li>
-<li>spaCy<br><code>from langchain.text_splitter import SpacyTextSplitter</code></li>
-</ul>
-</li>
-<li>递归分块<br>使用一组分隔符以分层和迭代的方式将输入文本划分为更小的块<br><code>from langchain.text_splitter import RecursiveCharacterTextSplitter</code></li>
-<li>专门分块<ul>
-<li>Markdown</li>
-<li>LaTex</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h3><span id="分块优化">分块优化</span><a href="#分块优化" class="header-anchor">#</a></h3><ul>
-<li>预处理数据</li>
-<li>选择块大小范围</li>
-<li>评估每个块大小的性能</li>
-</ul>
-<h3><span id="分块参数">分块参数</span><a href="#分块参数" class="header-anchor">#</a></h3><p>chuck_size, ,chunk overlap<br>top_k</p>
-<blockquote>
-<p>最佳实践<br>  按<strong>逻辑分块</strong>可以明显提升<strong>检索器的准确率</strong></p>
-</blockquote>
-<h1><span id="pre-retrival阶段">pre-retrival阶段</span><a href="#pre-retrival阶段" class="header-anchor">#</a></h1><h3><span id="query-transformer-查询转换-301">query transformer 查询转换 [30][1]</span><a href="#query-transformer-查询转换-301" class="header-anchor">#</a></h3><h3><span id="query-routing-查询路由-311">query-routing 查询路由  [31][1]</span><a href="#query-routing-查询路由-311" class="header-anchor">#</a></h3><p>LlamaIndex和LangChain都支持查询路由器</p>
+<h2><span id="分块-1">分块 [1]</span><a href="#分块-1" class="header-anchor">#</a></h2><h1><span id="pre-retrival阶段">pre-retrival阶段</span><a href="#pre-retrival阶段" class="header-anchor">#</a></h1><h3><span id="query-transformer-查询转换-301">query transformer 查询转换 [30][1]</span><a href="#query-transformer-查询转换-301" class="header-anchor">#</a></h3><h3><span id="query-routing-查询路由-311">query-routing 查询路由  [31][1]</span><a href="#query-routing-查询路由-311" class="header-anchor">#</a></h3><p>LlamaIndex和LangChain都支持查询路由器</p>
 <h1><span id="retrieval">Retrieval</span><a href="#retrieval" class="header-anchor">#</a></h1><h3><span id="检索器-retriever">检索器 Retriever</span><a href="#检索器-retriever" class="header-anchor">#</a></h3><ul>
 <li>Ensemble Retriever<br>最常见的模式是将<strong>稀疏检索器（如BM25）</strong>与<strong>密集检索器（如嵌入相似度）</strong>结合起来，因为它们的优势是互补的。这也被称为“混合搜索”。<strong>稀疏检索器</strong>擅长基于<strong>关键词查找</strong>相关文档，而<strong>密集检索器</strong>擅长基于<strong>语义相似性查找</strong>相关文档。</li>
 </ul>
@@ -399,22 +356,13 @@
 </li>
 </ol>
 <p>1xx. <a target="_blank" rel="noopener" href="https://blog.llamaindex.ai/a-cheat-sheet-and-some-recipes-for-building-advanced-rag-803a9d94c41b">A Cheat Sheet and Some Recipes For Building Advanced RAG</a><br>     <a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/KM8c3PUww1SOK1dbLjn1Tw">LlamaIndex官方年度巨献：高清大图纵览高级 RAG技术，强烈推荐收藏 </a> *** 看图<br>     <a target="_blank" rel="noopener" href="https://baoyu.io/translations/rag/a-cheat-sheet-and-some-recipes-for-building-advanced-rag">构建高级 RAG 的指南和技巧 [译]</a></p>
-<h3><span id="index">index</span><a href="#index" class="header-anchor">#</a></h3><ol start="11">
-<li><p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1dH4y1C7Ck/">3种高级索引方法，有效提升RAG性能</a> V<br>  <a target="_blank" rel="noopener" href="https://thetechbuffet.substack.com/p/rag-indexing-methods">The Tech Buffet #12: Improve RAG Pipelines With These 3 Indexing Methods</a><br>  <a target="_blank" rel="noopener" href="https://newsletter.theaiedge.io/p/how-to-optimize-your-rag-pipelines">How To Optimize Your RAG Pipelines</a></p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Vu4y1H72s/">【RAG实战】 Multi-Vector-Retrieval实现三种高级索引方法</a> V<br><a target="_blank" rel="noopener" href="https://github.com/www6v/AIGC/blob/master/retriever%2Bindex/MultiVectorRetriever">MultiVectorRetriever</a>  git<br> <a target="_blank" rel="noopener" href="https://python.langchain.com/docs/modules/data_connection/retrievers/multi_vector">MultiVector Retriever</a></p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="https://hustai.gitee.io/zh/posts/rag/Chunking-Strategies.html">大语言模型应用中的文本分块策略</a><br>  <a target="_blank" rel="noopener" href="https://yangfei.me/tutorials/chunking-strategies">LLM 应用中的分块策略 </a></p>
-</li>
-</ol>
-<p>1xx. <a target="_blank" rel="noopener" href="https://baoyu.io/translations/rag/5-levels-of-text-splitting">文本分割的五个层次 [译]</a></p>
 <h3><span id="post-retrieval">Post-Retrieval</span><a href="#post-retrieval" class="header-anchor">#</a></h3><ol start="20">
-<li><a href="/www6vHomeAIGC/2023/05/14/gptRAGRerank/" title="RAG Rerank">RAG Rerank</a> self</li>
+<li><a href="/www6vHomeAIGC/2023/05/14/gptRAGRerank/" title="(原理|实战)RAG Rerank">(原理|实战)RAG Rerank</a> self</li>
 <li><a target="_blank" rel="noopener" href="https://github.com/langchain-ai/langchain/blob/master/cookbook/rag_fusion.ipynb">RAG Fusion</a> git<br>  <a target="_blank" rel="noopener" href="https://towardsdatascience.com/forget-rag-the-future-is-rag-fusion-1147298d8ad1">Forget RAG, the Future is RAG-Fusion</a><br>  <a target="_blank" rel="noopener" href="https://blog.csdn.net/lichunericli/article/details/135451681">忘记RAG，未来是RAG-Fusion</a><br>  <a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/NFjn8pUsQaSx85nhBphORA">再谈大模型RAG问答中的三个现实问题：兼看RAG-Fusion多query融合策略、回答引文生成策略及相关数据集概述</a></li>
 </ol>
 <h1><span id="pre-retrival">pre-retrival</span><a href="#pre-retrival" class="header-anchor">#</a></h1><ol start="30">
-<li><a href="/www6vHomeAIGC/2023/04/20/gptQueryTransformation/" title="Query Transformation">Query Transformation</a>  self</li>
-<li><a href="/www6vHomeAIGC/2023/05/14/gptRAGRouting/" title="Query Routing">Query Routing</a>  self</li>
+<li><a href="/www6vHomeAIGC/2023/04/20/gptQueryTransformation/" title="(原理|实战)Query Transformation">(原理|实战)Query Transformation</a>  self</li>
+<li><a href="/www6vHomeAIGC/2023/05/14/gptRAGRouting/" title="(原理|实战)Query Routing">(原理|实战)Query Routing</a>  self</li>
 </ol>
 <h3><span id="fine-tuning">fine-tuning</span><a href="#fine-tuning" class="header-anchor">#</a></h3><ol start="40">
 <li><p><a target="_blank" rel="noopener" href="https://docs.llamaindex.ai/en/stable/examples/finetuning/embeddings/finetune_embedding/">Finetune Embeddings</a> notebook</p>
@@ -540,7 +488,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/www6vHomeAIGC/archives/">
         
-          <span class="site-state-item-count">130</span>
+          <span class="site-state-item-count">131</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
