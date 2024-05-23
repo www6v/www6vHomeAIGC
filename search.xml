@@ -13,7 +13,8 @@
 </ul>
 <h2><span id="deeplearning">DeepLearning</span><a href="#deeplearning" class="header-anchor">#</a></h2><ul>
 <li><a href="/www6vHomeAIGC/2022/06/11/aiDeepLearning/" title="Deep Learning">Deep Learning</a></li>
-<li><a href="/www6vHomeAIGC/2023/03/28/gptPytorch/" title="(实战)Pytorch">(实战)Pytorch</a></li>
+<li><a href="/www6vHomeAIGC/2023/03/28/gptPytorch/" title="(实战)Pytorch">(实战)Pytorch</a> </li>
+<li><a href="/www6vHomeAIGC/2023/05/23/gptGPU/" title="GPU 算力">GPU 算力</a></li>
 </ul>
 <h2><span id="nlp">NLP</span><a href="#nlp" class="header-anchor">#</a></h2><ul>
 <li><a href="/www6vHomeAIGC/2023/02/05/gptNLPTask/" title="NLP 任务">NLP 任务</a>  </li>
@@ -699,6 +700,41 @@
       </categories>
       <tags>
         <tag>PEFT</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>GPU 算力</title>
+    <url>/www6vHomeAIGC/2023/05/23/gptGPU/</url>
+    <content><![CDATA[<p></p>
+<span id="more"></span>
+
+
+
+<h1><span id="gpu算力">GPU算力</span><a href="#gpu算力" class="header-anchor">#</a></h1><h3><span id="免费1">免费[1]</span><a href="#免费1" class="header-anchor">#</a></h3><img src="/www6vHomeAIGC/2023/05/23/gptGPU/free.JPG" class>
+
+<ul>
+<li>modelscope 100小时 GPU</li>
+</ul>
+<h3><span id="专业收费2">专业收费[2]</span><a href="#专业收费2" class="header-anchor">#</a></h3><img src="/www6vHomeAIGC/2023/05/23/gptGPU/cost.JPG" class>
+
+
+<h1><span id="显卡">显卡</span><a href="#显卡" class="header-anchor">#</a></h1><ul>
+<li><p>显卡天梯榜<br> <a href="https://topic.expreview.com/GPU">显卡天梯榜</a></p>
+</li>
+<li><p>显卡<br>显卡 &#x3D; GPU +  显存</p>
+</li>
+</ul>
+<h1><span id="参考">参考</span><a href="#参考" class="header-anchor">#</a></h1><ol>
+<li><a href="https://www.bilibili.com/video/BV1fC4y1N7qV/">5种在线GPU算力资源白嫖指南</a> V</li>
+<li><a href="https://www.bilibili.com/video/BV1q5411z7HM/">5种专业在线GPU算力资源白嫖指南</a> V<br>1xx. <a href="https://www.bilibili.com/video/BV1Pv4y1f7VV/">【PyTorch深度学习】01 GPU购买与白嫖指南</a></li>
+</ol>
+]]></content>
+      <categories>
+        <category>AIGC</category>
+        <category>GPU</category>
+      </categories>
+      <tags>
+        <tag>GPU</tag>
       </tags>
   </entry>
   <entry>
@@ -6719,7 +6755,7 @@
       </tags>
   </entry>
   <entry>
-    <title>排行榜</title>
+    <title>大模型 排行榜</title>
     <url>/www6vHomeAIGC/2023/01/04/gptLeaderBoard/</url>
     <content><![CDATA[<p></p>
 <span id="more"></span>
@@ -6734,7 +6770,6 @@
 <li><a href="#%E4%B8%AD%E5%9B%BD%E6%8E%92%E8%A1%8C%E6%A6%9C">中国排行榜</a></li>
 </ul>
 </li>
-<li><a href="#%E6%98%BE%E5%8D%A1">显卡</a></li>
 </ul>
 <!-- tocstop -->
 
@@ -6755,12 +6790,6 @@
 <li>工业 23</li>
 <li>政务 12</li>
 <li>运维 7</li>
-</ul>
-<h1><span id="显卡">显卡</span><a href="#显卡" class="header-anchor">#</a></h1><ul>
-<li><p>显卡天梯榜<br> <a href="https://topic.expreview.com/GPU">显卡天梯榜</a></p>
-</li>
-<li><p>显卡<br>显卡 &#x3D; GPU +  显存</p>
-</li>
 </ul>
 ]]></content>
       <categories>
