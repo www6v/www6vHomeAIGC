@@ -35,7 +35,7 @@
 <li><a href="/www6vHomeAIGC/2023/01/01/gptLlama/" title="LLaMA">LLaMA</a>   </li>
 <li><a href="/www6vHomeAIGC/2023/02/24/gptLlamaFamily/" title="LLaMA 家族">LLaMA 家族</a>   </li>
 <li><a href="/www6vHomeAIGC/2023/01/06/gptChatGLM/" title="ChatGLM">ChatGLM</a>   </li>
-<li><a href="/www6vHomeAIGC/2023/01/04/gptLeaderBoard/" title="排行榜">排行榜</a></li>
+<li><a href="/www6vHomeAIGC/2023/01/04/gptLeaderBoard/" title="大模型 排行榜">大模型 排行榜</a></li>
 </ul>
 </li>
 <li><a href="/www6vHomeAIGC/2023/01/25/gptImpossibleTriangle/" title="(原理)不可能三角">(原理)不可能三角</a> </li>
@@ -49,10 +49,13 @@
 <li><a href="/www6vHomeAIGC/2023/01/15/gptLargeModelTrainingPractice/" title="(实战)Training">(实战)Training</a> </li>
 <li><a href="/www6vHomeAIGC/2023/02/03/gptContinualPretraining/" title="(原理|实战)继续Pre-Training">(原理|实战)继续Pre-Training</a>  </li>
 <li><a href="/www6vHomeAIGC/2023/02/21/gptChineseLlama/" title="(实战)Chinese-LLaMA PT+SFT">(实战)Chinese-LLaMA PT+SFT</a>   </li>
+<li><a href="/www6vHomeAIGC/2024/02/01/gptPrecision/" title="(原理|实战)混合精度">(原理|实战)混合精度</a> </li>
+<li>分布式<ul>
 <li><a href="/www6vHomeAIGC/2023/01/06/gptTrainParallelism/" title="(原理)分布式并行Training">(原理)分布式并行Training</a>    </li>
 <li><a href="/www6vHomeAIGC/2023/03/23/gptTrainZeroDeepspeed/" title="(原理)Zero Deepspeed">(原理)Zero Deepspeed</a>    </li>
-<li><a href="/www6vHomeAIGC/2023/03/25/gptTrainDeepspeedPractice/" title="(实战)Deepspeed">(实战)Deepspeed</a>     </li>
-<li><a href="/www6vHomeAIGC/2024/02/01/gptPrecision/" title="(原理|实战)混合精度">(原理|实战)混合精度</a></li>
+<li><a href="/www6vHomeAIGC/2023/03/25/gptTrainDeepspeedPractice/" title="(实战)Deepspeed">(实战)Deepspeed</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li>推理 <ul>
@@ -65,6 +68,10 @@
 <li><a href="/www6vHomeAIGC/2023/02/19/gptQuantization/" title="(原理)模型压缩-量化概述">(原理)模型压缩-量化概述</a> </li>
 <li><a href="/www6vHomeAIGC/2023/03/26/gptQuantizationWeight/" title="(原理)Weight Only(LLM.int8(), GPTQ, AWQ)">(原理)Weight Only(LLM.int8(), GPTQ, AWQ)</a> </li>
 <li><a href="/www6vHomeAIGC/2024/03/22/gptQuantizationPractice/" title="(实战)模型压缩-量化">(实战)模型压缩-量化</a></li>
+</ul>
+</li>
+<li>平台<ul>
+<li><a href="/www6vHomeAIGC/2023/05/24/gptLLamaFactory/" title="LLama-Factory">LLama-Factory</a></li>
 </ul>
 </li>
 </ul>
@@ -700,6 +707,34 @@
       </categories>
       <tags>
         <tag>PEFT</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>LLama-Factory</title>
+    <url>/www6vHomeAIGC/2023/05/24/gptLLamaFactory/</url>
+    <content><![CDATA[<p></p>
+<span id="more"></span>
+
+<h1><span id="安装">安装</span><a href="#安装" class="header-anchor">#</a></h1><h3><span id="llama-factory-安装">LLaMA-Factory 安装</span><a href="#llama-factory-安装" class="header-anchor">#</a></h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">安装llamafactory-cli命令</span></span><br><span class="line">git clone https://github.com/hiyouga/LLaMA-Factory.git</span><br><span class="line">conda create -n llama_factory python=3.10</span><br><span class="line">conda activate llama_factory</span><br><span class="line">cd LLaMA-Factory</span><br><span class="line">pip install -e .[metrics]</span><br></pre></td></tr></table></figure>
+
+<h3><span id="推理llama3">推理llama3</span><a href="#推理llama3" class="header-anchor">#</a></h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#模型下载</span></span><br><span class="line"><span class="keyword">from</span> modelscope <span class="keyword">import</span> snapshot_download</span><br><span class="line">model_dir = snapshot_download(<span class="string">&#x27;LLM-Research/Meta-Llama-3-8B-Instruct&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">配置</span></span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">vim examples/inference/llama3.yaml</span></span><br><span class="line">model_name_or_path: /home/wei/models/model/LLM-Research/Meta-Llama-3-8B-Instruct</span><br><span class="line">template: llama3</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">阿里云必须加这句，不然页面会报异常</span></span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash"><span class="built_in">export</span> GRADIO_ROOT_PATH=/<span class="variable">$&#123;JUPYTER_NAME&#125;</span>/proxy/7860/</span></span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">启动</span></span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">llamafactory-cli webchat examples/inference/llama3.yaml</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li><p>Command</p>
+<img src="/www6vHomeAIGC/2023/05/24/gptLLamaFactory/command.JPG" class>
+</li>
+<li><p>WebUI</p>
+<img src="/www6vHomeAIGC/2023/05/24/gptLLamaFactory/webui.JPG" class></li>
+</ul>
+<h1><span id="参考">参考</span><a href="#参考" class="header-anchor">#</a></h1><p><a href="https://zhuanlan.zhihu.com/p/695287607">LLaMA-Factory QuickStart</a></p>
+]]></content>
+      <categories>
+        <category>AIGC</category>
+        <category>LLamaFactory</category>
+      </categories>
+      <tags>
+        <tag>LLamaFactory</tag>
       </tags>
   </entry>
   <entry>
@@ -6907,7 +6942,7 @@
 </li>
 </ol>
 <p>1xx. <a href="https://zhuanlan.zhihu.com/p/642611747">垂直领域大模型的一些思考及开源模型汇总</a><br>1xx. <a href="https://mp.weixin.qq.com/s?__biz=MzAxMjc3MjkyMg==&mid=2648403459&idx=2&sn=0219fc098c208e36cd32940e71089fd2">层出不穷的垂域微调大模型非最全汇总：12大领域、57个领域微调模型概述及对垂直行业问答的一些讨论 </a> 领域模型集合<br>    <a href="https://github.com/www6v/Awesome-Domain-LLM">Awesome-Domain-LLM</a><br>1xx. <a href="https://blog.csdn.net/v_JULY_v/article/details/131550529?spm=1001.2014.3001.5502">医疗金融法律大模型：从ChatDoctor到BloombergGPT&#x2F;FinGPT&#x2F;FinBERT、ChatLaw&#x2F;LawGPT_zh</a><br>1xx. <a href="https://mp.weixin.qq.com/s?__biz=MzAxMjc3MjkyMg==&mid=2648400666&idx=1&sn=bc47e8c4eca6fc4baaded42fa3c6bd77">再谈垂直领域大模型及今日前沿速递：金融领域FinBERT、BloombergGPT以及法律领域微调模型LawGPT_zh</a></p>
-<p>1xx. <a href="/www6vHomeAIGC/2023/01/04/gptLeaderBoard/" title="排行榜">排行榜</a> self<br>1xx. <a href="https://github.com/www6v/Awesome-Domain-LLM">Awesome-Domain-LLM</a>  git 全</p>
+<p>1xx. <a href="/www6vHomeAIGC/2023/01/04/gptLeaderBoard/" title="大模型 排行榜">大模型 排行榜</a> self<br>1xx. <a href="https://github.com/www6v/Awesome-Domain-LLM">Awesome-Domain-LLM</a>  git 全</p>
 <p>1xx. <a href="https://mp.weixin.qq.com/s/jgyIOOzRWAgilcW4HfufNQ">行业大模型落地的一些有趣调研总结：兼看大模型RAG问答四大技术综述 </a>  腾讯 行业大模型调研报告 ***</p>
 ]]></content>
       <categories>
