@@ -798,7 +798,7 @@
 </li>
 <li><a href="#%E7%B4%A2%E5%BC%95-1">索引 [1]</a><ul>
 <li><a href="#multi-representation-indexing">Multi-representation Indexing</a></li>
-<li><a href="#%E5%B1%82%E7%BA%A7%E6%80%A7%E7%B4%A2%E5%BC%95-raptor">层级性索引-RAPTOR</a></li>
+<li><a href="#%E5%B1%82%E7%BA%A7%E6%80%A7%E7%B4%A2%E5%BC%95-raptor2">层级性索引-RAPTOR[2]</a></li>
 <li><a href="#%E5%81%9Atoken%E5%88%B0text%E7%BA%A7-colbert">做token到text级-ColBERT</a></li>
 </ul>
 </li>
@@ -848,9 +848,12 @@
 <blockquote>
 <p>相关的: 父级documents的索引</p>
 </blockquote>
-<h3><span id="层级性索引-raptor">层级性索引-RAPTOR</span><a href="#层级性索引-raptor" class="header-anchor">#</a></h3><p>【raptor 效果也很好，就是需要总结，看总结的咋样了】<br>【raptor 原文是对 chunk 聚类，然后每个聚类做总结】</p>
+<h3><span id="层级性索引-raptor2">层级性索引-RAPTOR[2]</span><a href="#层级性索引-raptor2" class="header-anchor">#</a></h3><p>【raptor 效果也很好，就是需要总结，看总结的咋样了】<br>【raptor 原文是对 chunk 聚类，然后每个聚类做总结】</p>
 <h3><span id="做token到text级-colbert">做token到text级-ColBERT</span><a href="#做token到text级-colbert" class="header-anchor">#</a></h3><h1><span id="参考">参考</span><a href="#参考" class="header-anchor">#</a></h1><ol>
-<li><a href="https://mp.weixin.qq.com/s/pK2BRLrWpEKKIPFhUtGvcg">一文详看Langchain框架中的RAG多阶段优化策略：从问题转换到查询路由再到生成优化</a><br><a href="https://github.com/langchain-ai/rag-from-scratch">rag-from-scratch Repo</a> git</li>
+<li><p><a href="https://mp.weixin.qq.com/s/pK2BRLrWpEKKIPFhUtGvcg">一文详看Langchain框架中的RAG多阶段优化策略：从问题转换到查询路由再到生成优化</a><br><a href="https://github.com/langchain-ai/rag-from-scratch">rag-from-scratch Repo</a> git   </p>
+</li>
+<li><p><a href="https://mp.weixin.qq.com/s/SeOG15Z2RJmiJ5sAP91B4w">基于RAPTOR实现高质量长上下文的RAG </a>   未</p>
+</li>
 </ol>
 <h3><span id></span><a href="#" class="header-anchor">#</a></h3><ol start="11">
 <li><p><a href="https://www.bilibili.com/video/BV1dH4y1C7Ck/">3种高级索引方法，有效提升RAG性能</a> V<br>  <a href="https://thetechbuffet.substack.com/p/rag-indexing-methods">The Tech Buffet #12: Improve RAG Pipelines With These 3 Indexing Methods</a><br>  <a href="https://newsletter.theaiedge.io/p/how-to-optimize-your-rag-pipelines">How To Optimize Your RAG Pipelines</a></p>
@@ -1261,10 +1264,10 @@
 </li>
 <li><p><a href="https://www.bilibili.com/video/BV1HF4m1w7rY/">有道QAnything背后的故事：关于RAG的一点经验分享</a> V</p>
 </li>
-<li><p><a href="https://mp.weixin.qq.com/s/FUex1Q984-IhQ-FoLZTf5Q">有道QAnything背后的故事—关于RAG的一点经验分享</a></p>
-<p>[公众号有其他文章]</p>
+<li><p><a href="https://mp.weixin.qq.com/s/FUex1Q984-IhQ-FoLZTf5Q">有道QAnything背后的故事—关于RAG的一点经验分享</a><br>[公众号有其他文章]</p>
 </li>
 </ol>
+<p>1xx. <a href="https://mp.weixin.qq.com/s/ZoI4Dscm9f9m5-q4Dq4bag">大模型RAG问答开源框架的两个风向:兼看大模型安全的学术评测</a><br>   RAGFlow - 引入文档理解及溯源机制<br>   QAnything - 优化embeddding+召回侧方向的</p>
 <p>1xx. <a href="https://llamahub.ai/">LlamaHub</a><br>      Mix and match our Data Loaders and Agent Tools to build custom RAG apps or use our LlamaPacks as a starting point for your retrieval use cases.</p>
 ]]></content>
       <categories>
@@ -2428,9 +2431,10 @@
     <content><![CDATA[<p></p>
 <span id="more"></span>
 
-
-
-<h1><span id="code">Code</span><a href="#code" class="header-anchor">#</a></h1><h1><span id="参考">参考</span><a href="#参考" class="header-anchor">#</a></h1><p><a href="https://github.com/www6v/AIGC/tree/master/framework/pytorch">Pytorch</a>  卢老师</p>
+<h1><span id="教程12">教程[1,2]</span><a href="#教程12" class="header-anchor">#</a></h1><h1><span id="参考">参考</span><a href="#参考" class="header-anchor">#</a></h1><ol>
+<li><a href="https://github.com/www6v/AIGC/tree/master/framework/pytorch">Pytorch</a>  卢老师</li>
+<li><a href="https://mp.weixin.qq.com/s/qrSLPcc9Pmyc2cWOYgQ1Jw">《PyTorch实用教程》（第二版）开源了！</a>  PDF电子版<br><a href="https://github.com/www6v/PyTorch-Tutorial-2nd">PyTorch 实用教程（第二版）</a> git<br><a href="https://tingsongyu.github.io/PyTorch-Tutorial-2nd/">PyTorch 实用教程（第二版）</a>  gitbook</li>
+</ol>
 ]]></content>
       <categories>
         <category>AIGC</category>
@@ -4864,9 +4868,42 @@
     <content><![CDATA[<p></p>
 <span id="more"></span>
 
+<h1><span id="多模态-agent1">多模态 Agent[1]</span><a href="#多模态-agent1" class="header-anchor">#</a></h1><ul>
+<li><p>核心组件</p>
+<ul>
+<li><strong>感知</strong>组件关注处理多模态信息</li>
+<li><strong>规划器</strong>负责推理和制定计划</li>
+<li><strong>行动</strong>组件执行计划</li>
+<li><strong>记忆</strong>组件则涉及长期和短期记忆</li>
+</ul>
+</li>
+<li><p>四种类型</p>
+<ul>
+<li>无长期记忆的闭源 LLMs 作为规划器</li>
+<li>无长期记忆的微调 LLMs 作为规划器</li>
+<li>具有间接长期记忆的规划器 </li>
+<li>具有本地长期记忆的规划器</li>
+</ul>
+</li>
+<li><p>多智能体协作</p>
+<ul>
+<li>讨论了 LMAs 如何通过协作框架共同实现共同目标。</li>
+</ul>
+</li>
+</ul>
+<h1><span id="多模态-agent10">多模态 Agent[10]</span><a href="#多模态-agent10" class="header-anchor">#</a></h1><h3><span id="范式">范式</span><a href="#范式" class="header-anchor">#</a></h3><img src="/www6vHomeAIGC/2023/02/21/gptAgentMultimodal/tasks.JPG" class>
 
-<h3><span id="综述">综述</span><a href="#综述" class="header-anchor">#</a></h3><p>1xx. <a href="https://mp.weixin.qq.com/s?__biz=Mzg5NTc2OTcyOQ==&mid=2247488499&idx=1&sn=ac8c5092ddc8fd724965d12aff3f9392">2024年大型多模态智能体(Large Multimodal Agents)综述：组件, 分类，协作，评估，应用，展望</a> ***</p>
+<ul>
+<li>MM-ReAct </li>
+<li>HuggingGPT, Chameleon</li>
+</ul>
+<h1><span id="参考">参考</span><a href="#参考" class="header-anchor">#</a></h1><h3><span id="综述">综述</span><a href="#综述" class="header-anchor">#</a></h3><ol>
+<li><a href="https://mp.weixin.qq.com/s?__biz=Mzg5NTc2OTcyOQ==&mid=2247488499&idx=1&sn=ac8c5092ddc8fd724965d12aff3f9392">2024年大型多模态智能体(Large Multimodal Agents)综述：组件, 分类，协作，评估，应用，展望</a> ***</li>
+</ol>
 <p>1xx. <a href="https://zhuanlan.zhihu.com/p/678238642">个人LLM智体的综述</a><br>1xx. <a href="https://zhuanlan.zhihu.com/p/678203245">智体AI在多模态交互领域的综述（上）</a><br>1xx. <a href="https://zhuanlan.zhihu.com/p/678222381">智体AI在多模态交互领域的综述（下）</a></p>
+<h3><span id="xxx">xxx</span><a href="#xxx" class="header-anchor">#</a></h3><ol start="10">
+<li><a href="https://www.bilibili.com/video/BV1mM411X7Zn/">多模态 Agents：用大模型语言模型串联多模态专家</a></li>
+</ol>
 <h3><span id="app-agent">App Agent</span><a href="#app-agent" class="header-anchor">#</a></h3><p>1xx. <a href="https://zhuanlan.zhihu.com/p/677071947">AppAgent源码分析&amp;思考</a><br><a href="https://github.com/mnotgod96/AppAgent">https://github.com/mnotgod96/AppAgent</a><br><a href="https://icoz69.github.io/">https://icoz69.github.io/</a></p>
 <p>1xx. <a href="https://zhuanlan.zhihu.com/p/681424409">【LLM-agent】MOBILE-AGENT: 具有视觉感知能力的自治多模移动设备agent</a><br>   <a href="https://github.com/X-PLUG/MobileAgent">https://github.com/X-PLUG/MobileAgent</a></p>
 ]]></content>
@@ -6964,10 +7001,10 @@
 <p>百度千帆-ppt<br>QCon-ppt</p>
 <p>1xx. <a href="https://mp.weixin.qq.com/s?__biz=MzUxNzk5MTU3OQ==&mid=2247487028&idx=1&sn=7b6767878b7f6b891fc69e408f248ef1">语义解析 (Text-to-SQL) 技术研究及应用 上篇 </a><br>1xx. <a href="https://mp.weixin.qq.com/s/5lTLW5OOuRMo2zjbzMxr_Q">语义解析 (Text-to-SQL) 技术研究及应用 下篇 </a></p>
 <p>1xx. <a href="https://zhuanlan.zhihu.com/p/670509396">LLM在中文Text2SQL的实践</a><br>1xx. <a href="https://zhuanlan.zhihu.com/p/673474672">LLM在中文Text2SQL任务上的优化V2.0</a><br>1xx. <a href="https://zhuanlan.zhihu.com/p/670913902">LLM在中文Text2SQL任务上的优化V1.0</a></p>
-<p>1xx. <a href="https://mp.weixin.qq.com/s?__biz=MzAxMjc3MjkyMg==&mid=2648402400&idx=1&sn=fe122657b35f27090aaca9c144d1d23b">也看大模型与数据库查询分析的落地结合：C3 Text2SQL方案及Data-Copilot数据自动化编排机制的实现思想阅读 </a> </p>
-<hr>
+<p>1xx. <a href="https://mp.weixin.qq.com/s?__biz=MzAxMjc3MjkyMg==&mid=2648402400&idx=1&sn=fe122657b35f27090aaca9c144d1d23b">也看大模型与数据库查询分析的落地结合：C3 Text2SQL方案及Data-Copilot数据自动化编排机制的实现思想阅读 </a> ***</p>
 <p>1xx. <a href="https://zhuanlan.zhihu.com/p/668557045">C3: Zero-shot Text-to-SQL with ChatGPT笔记</a><br>1xx. <a href="https://github.com/bigbigwatermalon/C3SQL">C3SQL  </a> git</p>
 <p>1xx. <a href="https://mp.weixin.qq.com/s?__biz=MzAxMjc3MjkyMg==&mid=2648402424&idx=1&sn=e2d26821b6e9a5a2871e0ddbca565c30">大模型再总结及ChatSQL实践案例分享：大模型训练数据及工具的5张脑图总结及ChatSQL开源项目实现解析 </a></p>
+<h3><span id="project">Project</span><a href="#project" class="header-anchor">#</a></h3><p><a href="https://github.com/eosphoros-ai/DB-GPT">DB-GPT Repo</a> git</p>
 ]]></content>
       <categories>
         <category>AIGC</category>
