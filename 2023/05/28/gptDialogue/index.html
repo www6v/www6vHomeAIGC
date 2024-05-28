@@ -26,7 +26,7 @@
 <meta property="og:site_name" content="www6v的博客">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-05-28T11:01:52.000Z">
-<meta property="article:modified_time" content="2024-05-28T11:47:11.669Z">
+<meta property="article:modified_time" content="2024-05-28T21:22:26.273Z">
 <meta property="article:author" content="Wang Wei">
 <meta property="article:tag" content="对话">
 <meta name="twitter:card" content="summary">
@@ -224,7 +224,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2024-05-28 19:47:11" itemprop="dateModified" datetime="2024-05-28T19:47:11+08:00">2024-05-28</time>
+                <time title="修改时间：2024-05-29 05:22:26" itemprop="dateModified" datetime="2024-05-29T05:22:26+08:00">2024-05-29</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -254,11 +254,29 @@
         <p></p>
 <span id="more"></span>
 
+<h2><span id="目录">目录</span><a href="#目录" class="header-anchor">#</a></h2><div class="toc">
 
+<!-- toc -->
 
+<ul>
+<li><a href="#%E4%BC%A0%E7%BB%9F%E7%9A%84%E5%A4%9A%E8%BD%AE%E5%AF%B9%E8%AF%9D">传统的多轮对话</a><ul>
+<li><a href="#%E5%A4%9A%E8%BD%AE%E5%AF%B9%E8%AF%9D12">多轮对话[1][2]</a></li>
+<li><a href="#%E9%9A%BE%E7%82%B93">难点[3]</a></li>
+<li><a href="#%E5%9F%BA%E7%A1%80%E8%83%BD%E5%8A%9B-2">基础能力 [2]</a></li>
+</ul>
+</li>
+<li><a href="#%E5%9F%BA%E4%BA%8Ellm%E7%9A%84%E5%A4%9A%E8%BD%AE%E5%AF%B9%E8%AF%9D4">基于LLM的多轮对话[4]</a><ul>
+<li><a href="#types">Types</a></li>
+<li><a href="#evolution-of-lm-based-dialogue-system">evolution of LM-based dialogue system</a></li>
+</ul>
+</li>
+<li><a href="#%E5%8F%82%E8%80%83">参考</a></li>
+</ul>
+<!-- tocstop -->
 
+</div>
 
-<h1><span id="多轮对话12">多轮对话[1][2]</span><a href="#多轮对话12" class="header-anchor">#</a></h1><ul>
+<h1><span id="传统的多轮对话">传统的多轮对话</span><a href="#传统的多轮对话" class="header-anchor">#</a></h1><h3><span id="多轮对话12">多轮对话[1][2]</span><a href="#多轮对话12" class="header-anchor">#</a></h3><ul>
 <li>NLU<ul>
 <li>意图(intent)分类 [3]   </li>
 <li>槽位抽取</li>
@@ -270,18 +288,45 @@
 <blockquote>
 <p>多轮-上下文</p>
 </blockquote>
-<h3><span id="难点">难点</span><a href="#难点" class="header-anchor">#</a></h3><ul>
+<h3><span id="难点3">难点[3]</span><a href="#难点3" class="header-anchor">#</a></h3><ul>
 <li>上下文信息丢失</li>
 <li>指代词识别</li>
 </ul>
-<h1><span id="基础能力-2">基础能力 [2]</span><a href="#基础能力-2" class="header-anchor">#</a></h1><ul>
+<h3><span id="基础能力-2">基础能力 [2]</span><a href="#基础能力-2" class="header-anchor">#</a></h3><ul>
 <li>意图识别</li>
 <li>情绪识别</li>
+</ul>
+<h1><span id="基于llm的多轮对话4">基于LLM的多轮对话[4]</span><a href="#基于llm的多轮对话4" class="header-anchor">#</a></h1><h3><span id="types">Types</span><a href="#types" class="header-anchor">#</a></h3><ul>
+<li><p>Task-oriented dialogue system<br> NLU -&gt; DST -&gt; DPL-&gt; NLG</p>
+</li>
+<li><p>open-domain dialogue system</p>
+</li>
+</ul>
+<h3><span id="evolution-of-lm-based-dialogue-system">evolution of LM-based dialogue system</span><a href="#evolution-of-lm-based-dialogue-system" class="header-anchor">#</a></h3><ul>
+<li><p>Fusion within Task-oriented dialogue system(task)</p>
+<ul>
+<li>task<ul>
+<li>NLU  DST  DPL【可有可无】</li>
+<li>NLG【保留】</li>
+</ul>
+</li>
+<li><strong>end2end Task-oriented DS的出现</strong></li>
+</ul>
+</li>
+<li><p>fusion between TOD and ODD(data)</p>
+<ul>
+<li>TOD -&gt; ODD<br>Q-TOD</li>
+<li>ODD -&gt; TOD<br>UniDS</li>
+</ul>
+</li>
+<li><p>fusion between dialogue modal and language model(model)<br><strong>LLM as DM</strong><br>【LLM本身有对话的能力，需要被激发出来】【instruction tuning】<br>【chat模型是做价值观对齐】</p>
+</li>
 </ul>
 <h1><span id="参考">参考</span><a href="#参考" class="header-anchor">#</a></h1><ol>
 <li><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1dt4y1S7kn/">自然语言处理：多轮对话在工业中的应用-贪心学院</a> *** V</li>
 <li><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1vZ4y147Qv/">1-人-人对话数据驱动的多轮对话技术探索与实践-孙超博</a> V 美团</li>
 <li><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Yt4y1S75w/">人工智能如何在多轮对话中进行意图理解——祝凯华</a> V</li>
+<li><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Mb4y137yB/">基于大模型对话系统的前世今生</a>  V<br>《An Survey of the Evolution of Language Model-Based Dialogue Systems》</li>
 </ol>
 
     </div>
