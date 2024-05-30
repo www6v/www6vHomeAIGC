@@ -805,7 +805,7 @@
     <content><![CDATA[<p></p>
 <span id="more"></span>
 
-<h1><span id="安装">安装</span><a href="#安装" class="header-anchor">#</a></h1><h3><span id="llama-factory-安装">LLaMA-Factory 安装</span><a href="#llama-factory-安装" class="header-anchor">#</a></h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">安装llamafactory-cli命令</span></span><br><span class="line">git clone https://github.com/hiyouga/LLaMA-Factory.git</span><br><span class="line">conda create -n llama_factory python=3.10</span><br><span class="line">conda activate llama_factory</span><br><span class="line">cd LLaMA-Factory</span><br><span class="line">pip install -e .[metrics]</span><br></pre></td></tr></table></figure>
+<h1><span id="推理llama31">推理llama3[1]</span><a href="#推理llama31" class="header-anchor">#</a></h1><h3><span id="llama-factory-安装">LLaMA-Factory 安装</span><a href="#llama-factory-安装" class="header-anchor">#</a></h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">安装llamafactory-cli命令</span></span><br><span class="line">git clone https://github.com/hiyouga/LLaMA-Factory.git</span><br><span class="line">conda create -n llama_factory python=3.10</span><br><span class="line">conda activate llama_factory</span><br><span class="line">cd LLaMA-Factory</span><br><span class="line">pip install -e .[metrics]</span><br></pre></td></tr></table></figure>
 
 <h3><span id="推理llama3">推理llama3</span><a href="#推理llama3" class="header-anchor">#</a></h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#模型下载</span></span><br><span class="line"><span class="keyword">from</span> modelscope <span class="keyword">import</span> snapshot_download</span><br><span class="line">model_dir = snapshot_download(<span class="string">&#x27;LLM-Research/Meta-Llama-3-8B-Instruct&#x27;</span>)</span><br></pre></td></tr></table></figure>
 
@@ -817,7 +817,10 @@
 <li><p>WebUI</p>
 <img src="/www6vHomeAIGC/2023/05/24/gptLLamaFactory/webui.JPG" class></li>
 </ul>
-<h1><span id="参考">参考</span><a href="#参考" class="header-anchor">#</a></h1><p><a href="https://zhuanlan.zhihu.com/p/695287607">LLaMA-Factory QuickStart</a></p>
+<h1><span id="参考">参考</span><a href="#参考" class="header-anchor">#</a></h1><ol>
+<li><a href="https://zhuanlan.zhihu.com/p/695287607">LLaMA-Factory QuickStart</a></li>
+</ol>
+<p>1xx. <a href="https://zhuanlan.zhihu.com/p/678989191">单卡 3 小时训练专属大模型 Agent：基于 LLaMA Factory 实战</a><br>1xx. <a href="https://zhuanlan.zhihu.com/p/699777943">LLaMA-Factory微调多模态大语言模型教程</a></p>
 ]]></content>
       <categories>
         <category>AIGC</category>
@@ -2239,8 +2242,7 @@
 
 
 <h1><span id="tuning">Tuning</span><a href="#tuning" class="header-anchor">#</a></h1><h3><span id="agenttuning">AgentTuning</span><a href="#agenttuning" class="header-anchor">#</a></h3><p>1xx. <a href="https://mp.weixin.qq.com/s?__biz=MzAxMjc3MjkyMg==&mid=2648404626&idx=1&sn=da5ac106548dd30f14a57a5ce4d90f08">基于llama7B的文本嵌入模型ANGLE：兼看Agent微调数据的生成方案</a>  AgentTuning<br>1xx. <a href="https://zhuanlan.zhihu.com/p/671295938">LLM之Agent（五）| AgentTuning：清华大学与智谱AI提出AgentTuning提高大语言模型Agent能力</a><br>1xx. <a href="https://zhuanlan.zhihu.com/p/663362992?utm_id=0">AgentTuning解读</a></p>
-<h3><span id="agenttuning-实战">AgentTuning 实战</span><a href="#agenttuning-实战" class="header-anchor">#</a></h3><p>1xx. <a href="https://zhuanlan.zhihu.com/p/678989191">单卡 3 小时训练专属大模型 Agent：基于 LLaMA Factory 实战</a></p>
-<p>1xx. <a href="https://zhuanlan.zhihu.com/p/690012170">2024年大模型Agent tuning关键技术Fireact, Agent-FLAN, AgentOhana, Agent LUMOS, STE, ETO,MoE, DebateGPT等</a></p>
+<h3><span id="agenttuning-实战">AgentTuning 实战</span><a href="#agenttuning-实战" class="header-anchor">#</a></h3><p>1xx. <a href="https://zhuanlan.zhihu.com/p/690012170">2024年大模型Agent tuning关键技术Fireact, Agent-FLAN, AgentOhana, Agent LUMOS, STE, ETO,MoE, DebateGPT等</a></p>
 ]]></content>
       <categories>
         <category>AIGC</category>
