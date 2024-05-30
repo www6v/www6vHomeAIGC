@@ -948,6 +948,7 @@
 <li><p><a href="https://mp.weixin.qq.com/s/SeOG15Z2RJmiJ5sAP91B4w">基于RAPTOR实现高质量长上下文的RAG </a>   未</p>
 </li>
 </ol>
+<p>1xx. <a href="https://mp.weixin.qq.com/s?__biz=MzAxMjc3MjkyMg==&mid=2648407870&idx=1&sn=8073f0fc8edc0897e3627f26478063c3">20240205大模型进展早报：兼看引入chunk层级结构的大模型RAG的思路：RAPTOR </a> RAPTOR</p>
 <h3><span id></span><a href="#" class="header-anchor">#</a></h3><ol start="11">
 <li><p><a href="https://www.bilibili.com/video/BV1dH4y1C7Ck/">3种高级索引方法，有效提升RAG性能</a> V<br>  <a href="https://thetechbuffet.substack.com/p/rag-indexing-methods">The Tech Buffet #12: Improve RAG Pipelines With These 3 Indexing Methods</a><br>  <a href="https://newsletter.theaiedge.io/p/how-to-optimize-your-rag-pipelines">How To Optimize Your RAG Pipelines</a></p>
 </li>
@@ -2243,6 +2244,7 @@
 
 <h1><span id="tuning">Tuning</span><a href="#tuning" class="header-anchor">#</a></h1><h3><span id="agenttuning">AgentTuning</span><a href="#agenttuning" class="header-anchor">#</a></h3><p>1xx. <a href="https://mp.weixin.qq.com/s?__biz=MzAxMjc3MjkyMg==&mid=2648404626&idx=1&sn=da5ac106548dd30f14a57a5ce4d90f08">基于llama7B的文本嵌入模型ANGLE：兼看Agent微调数据的生成方案</a>  AgentTuning<br>1xx. <a href="https://zhuanlan.zhihu.com/p/671295938">LLM之Agent（五）| AgentTuning：清华大学与智谱AI提出AgentTuning提高大语言模型Agent能力</a><br>1xx. <a href="https://zhuanlan.zhihu.com/p/663362992?utm_id=0">AgentTuning解读</a></p>
 <h3><span id="agenttuning-实战">AgentTuning 实战</span><a href="#agenttuning-实战" class="header-anchor">#</a></h3><p>1xx. <a href="https://zhuanlan.zhihu.com/p/690012170">2024年大模型Agent tuning关键技术Fireact, Agent-FLAN, AgentOhana, Agent LUMOS, STE, ETO,MoE, DebateGPT等</a></p>
+<p>1xx. <a href="https://mp.weixin.qq.com/s/UCO_m38QcWdCoT_DIFc96A">Agent-FLAN 技术报告——社区翻译版 </a></p>
 ]]></content>
       <categories>
         <category>AIGC</category>
@@ -3933,6 +3935,7 @@
 <li><a href="https://space.bilibili.com/471000665/video?tid=0&pn=1&keyword=&order=pubdate">AIGCLINK</a> V</li>
 </ol>
 <p>1xx. <a href="https://zhuanlan.zhihu.com/p/664281311">「Agent」通俗易懂地聊聊AI Agent（附66个开源+44个闭源Agent项目）</a></p>
+<p>1xx. <a href="https://mp.weixin.qq.com/s/IubrsvB0ypn8KC-_SMPvLQ">主流Agent框架及金融Agent-FinRobot：兼看面向实体增强的细粒度实体描述知识库项目 </a><br>   Agent-FinRobot  基于autogen 实现</p>
 <h3><span id="xxx">xxx</span><a href="#xxx" class="header-anchor">#</a></h3><ol start="10">
 <li><a href="https://zhuanlan.zhihu.com/p/642357544">2023年新生代大模型Agents技术,ReAct,Self-Ask,Plan-and-execute,以及AutoGPT, HuggingGPT等应用</a> ***  论文+代码</li>
 <li>公开课</li>
@@ -4776,6 +4779,7 @@
 <h1><span id="参考">参考</span><a href="#参考" class="header-anchor">#</a></h1><h3><span id="家族">家族</span><a href="#家族" class="header-anchor">#</a></h3><ol>
 <li><p><a href="https://blog.csdn.net/v_JULY_v/article/details/129709105">LLaMA的解读与其微调：Alpaca-LoRA&#x2F;Vicuna&#x2F;BELLE&#x2F;中文LLaMA&#x2F;姜子牙&#x2F;LLaMA 2</a> ***<br>1xx. <a href="https://mp.weixin.qq.com/s?__biz=MzUyOTA5OTcwMg==&mid=2247485019&idx=1&sn=e3417472c0c1f98aede498fbe905e1a0&">我想学大模型，应该从哪个模型开始？LLaMA生态家谱整理和分析 </a><br>1xx. <a href="https://zhuanlan.zhihu.com/p/618695885">NLP（九）：LLaMA, Alpaca, ColossalChat 系列模型研究</a><br>1xx. <a href="https://github.com/www6v/Llama2-Chinese">https://github.com/www6v/Llama2-Chinese</a><br>1xx.  <a href="https://zhuanlan.zhihu.com/p/618321077">从0到1复现斯坦福羊驼（Stanford Alpaca 7B）</a><br> GPUs: 8 卡 A800 80GB GPUs<br>1xx. &lt;&lt;千帆增强版 Llama 2-提升大模型对话指令遵循能力&gt;&gt;    </p>
 <p>1xx. <a href="https://github.com/www6v/Linly">中文 LLaMA</a><br>   <a href="https://www.bilibili.com/video/BV1Np4y1j783/">掘力计划 23 期-Linly-Chinese-LLaMA2 中文开源大模型方案分享</a></p>
+<p>1xx. <a href="https://mp.weixin.qq.com/s?__biz=MzAxMjc3MjkyMg==&mid=2648402185&idx=2&sn=55901b89381e27aedee56c69041f6af8">近期大模型动态：LLaMA-2-7B-32K的训练数据组织情况及面向儿童心理健康领域的微调模型推介 </a>    llama-2-7b-32k -  LLaMA-2的上下文长度为4Ktoken。要将其扩展到32K上下文，该工作分成了三个部分：建模、数据和系统优化。</p>
 </li>
 </ol>
 ]]></content>
@@ -5470,11 +5474,23 @@
       </tags>
   </entry>
   <entry>
-    <title>NLP 任务</title>
+    <title>NLP+LLM</title>
     <url>/www6vHomeAIGC/2023/02/05/gptNLPTask/</url>
     <content><![CDATA[<p></p>
 <span id="more"></span>
 
+<h2><span id="目录">目录</span><a href="#目录" class="header-anchor">#</a></h2><div class="toc">
+
+<!-- toc -->
+
+<ul>
+<li><a href="#nlp%E4%BB%BB%E5%8A%A1">NLP任务</a></li>
+<li><a href="#nlpllm1">NLP+LLM[1]</a></li>
+<li><a href="#%E5%8F%82%E8%80%83">参考</a></li>
+</ul>
+<!-- tocstop -->
+
+</div>
 
 <h1><span id="nlp任务">NLP任务</span><a href="#nlp任务" class="header-anchor">#</a></h1><img src="/www6vHomeAIGC/2023/02/05/gptNLPTask/NLP_tasks.jpg" class>
 
@@ -5488,7 +5504,10 @@
 <li>代码生成 code generation</li>
 <li><strong>推理</strong> reasoning</li>
 </ul>
-<h1><span id="参考">参考</span><a href="#参考" class="header-anchor">#</a></h1><p><a href="https://mp.weixin.qq.com/s?__biz=MzAxMjc3MjkyMg==&mid=2648399456&idx=1&sn=af2ee30aee9e7f6ed441b8335de033b1">关于ChatGPT解锁NLP任务的一次总结汇报：从应用变化、14类NLP任务使用案例看选型思考</a></p>
+<h1><span id="nlpllm1">NLP+LLM[1]</span><a href="#nlpllm1" class="header-anchor">#</a></h1><h1><span id="参考">参考</span><a href="#参考" class="header-anchor">#</a></h1><ol>
+<li><a href="https://mp.weixin.qq.com/s/dRlkv24vTCeUiVvRGmDdQg">有趣的两个RAG大模型问答新优化思路：兼看大模型与NLP的结合范式 </a><br>大模型时代的NLP的一些结合方式<br>《Large Language Models Meet NLP: A Survey》</li>
+</ol>
+<p>1xx. <a href="https://mp.weixin.qq.com/s?__biz=MzAxMjc3MjkyMg==&mid=2648399456&idx=1&sn=af2ee30aee9e7f6ed441b8335de033b1">关于ChatGPT解锁NLP任务的一次总结汇报：从应用变化、14类NLP任务使用案例看选型思考</a></p>
 ]]></content>
       <categories>
         <category>AIGC</category>
@@ -7098,6 +7117,7 @@
 <p>1xx. <a href="https://mp.weixin.qq.com/s?__biz=MzAxMjc3MjkyMg==&mid=2648402400&idx=1&sn=fe122657b35f27090aaca9c144d1d23b">也看大模型与数据库查询分析的落地结合：C3 Text2SQL方案及Data-Copilot数据自动化编排机制的实现思想阅读 </a> ***</p>
 <p>1xx. <a href="https://zhuanlan.zhihu.com/p/668557045">C3: Zero-shot Text-to-SQL with ChatGPT笔记</a><br>1xx. <a href="https://github.com/bigbigwatermalon/C3SQL">C3SQL  </a> git</p>
 <p>1xx. <a href="https://mp.weixin.qq.com/s?__biz=MzAxMjc3MjkyMg==&mid=2648402424&idx=1&sn=e2d26821b6e9a5a2871e0ddbca565c30">大模型再总结及ChatSQL实践案例分享：大模型训练数据及工具的5张脑图总结及ChatSQL开源项目实现解析 </a></p>
+<p>1xx. <a href="https://mp.weixin.qq.com/s/Ffm8ooH8je2553IcLkJBmw">大模型Text2SQL主流数据集及可用实践项目：兼看利用大模型进行5W1H新闻要素提取 </a><br>   问题2:关于Text2sql当前的可用项目及数据集<br>   <a href="https://github.com/www6v/Awesome-Text2SQL">https://github.com/www6v/Awesome-Text2SQL</a></p>
 <h3><span id="project">Project</span><a href="#project" class="header-anchor">#</a></h3><p><a href="https://github.com/eosphoros-ai/DB-GPT">DB-GPT Repo</a> git</p>
 ]]></content>
       <categories>
