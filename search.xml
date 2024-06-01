@@ -727,12 +727,15 @@
 <li><a href="#architecture3">Architecture[3]</a></li>
 <li><a href="#pagedattention4">PagedAttention[4]</a></li>
 <li><a href="#%E5%AE%9E%E6%88%98">实战</a><ul>
-<li><a href="#vllm-%E6%8E%A8%E7%90%86%E9%83%A8%E7%BD%B211">vLLM 推理部署[11]</a></li>
+<li><a href="#llama-chinese-on-vllm11">Llama-Chinese on vLLM[11]</a></li>
+<li><a href="#qwen-on-vllm12">Qwen on vLLM[12]</a></li>
+<li><a href="#qwen-on-vllm13">Qwen on vLLM[13]</a></li>
 </ul>
 </li>
 <li><a href="#%E5%8F%82%E8%80%83">参考</a><ul>
 <li><a href="#%E5%8E%9F%E7%90%86">原理</a></li>
 <li><a href="#%E5%AE%9E%E6%88%98-1">实战</a></li>
+<li><a href="#%E6%BA%90%E4%BB%A3%E7%A0%81">源代码</a></li>
 </ul>
 </li>
 </ul>
@@ -754,15 +757,37 @@
 <h1><span id="architecture3">Architecture[3]</span><a href="#architecture3" class="header-anchor">#</a></h1><p><img src="https://cdn.prod.website-files.com/618399cd49d125734c8dec95/663e103a10d15c2ecfd84ac9_K3J79pEM-PAXQiK8DfT2YlotBhcZeLy-UFqhja4dFMDp4478X1tfCGnEgWDkNAMIOMXQvCVo_5EWsVspC07wSLaD4T3n_oqCf3i8mdFFcV1uDCbcmD0-thbwVdbcpTA41teD8ErJxi3jTIrXZsAjcm4.png" alt="Architecture"></p>
 <h1><span id="pagedattention4">PagedAttention[4]</span><a href="#pagedattention4" class="header-anchor">#</a></h1><p><img src="https://blog.vllm.ai/assets/figures/annimation0.gif" alt="PagedAttention: KV Cache are partitioned into blocks. Blocks do not need to be contiguous in memory space. "></p>
 <p><img src="https://blog.vllm.ai/assets/figures/annimation1.gif" alt="Example generation process for a request with PagedAttention. "></p>
-<h1><span id="实战">实战</span><a href="#实战" class="header-anchor">#</a></h1><h3><span id="vllm-推理部署11">vLLM 推理部署[11]</span><a href="#vllm-推理部署11" class="header-anchor">#</a></h3><h1><span id="参考">参考</span><a href="#参考" class="header-anchor">#</a></h1><h3><span id="原理">原理</span><a href="#原理" class="header-anchor">#</a></h3><ol>
+<h1><span id="实战">实战</span><a href="#实战" class="header-anchor">#</a></h1><h3><span id="llama-chinese-on-vllm11">Llama-Chinese on vLLM[11]</span><a href="#llama-chinese-on-vllm11" class="header-anchor">#</a></h3><ul>
+<li>vLLM异步推理</li>
+<li>流式返回</li>
+</ul>
+<h3><span id="qwen-on-vllm12">Qwen on vLLM[12]</span><a href="#qwen-on-vllm12" class="header-anchor">#</a></h3><ul>
+<li>vLLM异步推理</li>
+<li>流式返回</li>
+</ul>
+<h3><span id="qwen-on-vllm13">Qwen on vLLM[13]</span><a href="#qwen-on-vllm13" class="header-anchor">#</a></h3><ul>
+<li><p>离线推理   </p>
+</li>
+<li><p>适配OpenAI-API的API服务</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">python -m vllm.entrypoints.openai.api_server \</span><br><span class="line">    --model Qwen/Qwen1.5-7B-Chat</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>多卡推理<br>传递参数 <code>--tensor-parallel-size</code> 来运行多GPU服务</p>
+</li>
+<li><p>量化推理<br>在运行服务时添加 <code>--quantization</code> 参数</p>
+</li>
+</ul>
+<h1><span id="参考">参考</span><a href="#参考" class="header-anchor">#</a></h1><h3><span id="原理">原理</span><a href="#原理" class="header-anchor">#</a></h3><ol>
 <li><a href="https://www.bilibili.com/video/BV1cP41187wY/">VLLM ——高效GPU训练框架</a>  V</li>
 <li><a href="https://github.com/vllm-project/vllm">vllm</a> git</li>
 <li><a href="https://www.hopsworks.ai/dictionary/vllm">vLLM</a></li>
 <li><a href="https://blog.vllm.ai/2023/06/20/vllm.html">vLLM: Easy, Fast, and Cheap LLM Serving with PagedAttention</a>   看动图</li>
 </ol>
 <h3><span id="实战">实战</span><a href="#实战" class="header-anchor">#</a></h3><ol start="11">
-<li><a href="https://github.com/LlamaFamily/Llama2-Chinese/blob/main/inference-speed/GPU/vllm_example/README.md">Atom-7B-Chat vllm推理部署</a></li>
+<li><a href="https://github.com/LlamaFamily/Llama-Chinese/blob/main/inference-speed/GPU/vllm_example/api_server.py">Llama-Chinese Repo</a> git</li>
+<li><a href="https://github.com/owenliang/qwen-vllm/blob/master/vllm_server.py">qwen-vllm Repo</a> git<br><a href="https://github.com/QwenLM/Qwen/blob/main/README_CN.md#%E9%83%A8%E7%BD%B2">Qwen（通义千问） Repo</a>  git</li>
+<li><a href="https://qwen.readthedocs.io/zh-cn/latest/deployment/vllm.html">qwen doc</a></li>
 </ol>
+<h3><span id="源代码">源代码</span><a href="#源代码" class="header-anchor">#</a></h3><p>1xx.<a href="https://blog.csdn.net/just_sort/article/details/132115735">VLLM推理流程梳理</a><br>1xx. <a href="https://zhuanlan.zhihu.com/p/641999400">LLM 高速推理框架 vLLM 源代码分析 &#x2F; vLLM Source Code Analysis</a> ***<br>1xx. <a href="https://www.bilibili.com/video/BV1qE42157Rn/">vLLM源码阅读s2——是如何进行离线推理的</a> V</p>
 ]]></content>
       <categories>
         <category>AIGC</category>
