@@ -21,12 +21,12 @@
   </script>
 
   <meta property="og:type" content="article">
-<meta property="og:title" content="推理 Ray">
+<meta property="og:title" content="(原理)推理 Ray">
 <meta property="og:url" content="https://www6v.github.io/2023/06/11/gptInferRay/index.html">
 <meta property="og:site_name" content="www6v的博客">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-06-11T01:16:45.000Z">
-<meta property="article:modified_time" content="2024-06-11T01:24:07.812Z">
+<meta property="article:modified_time" content="2024-06-11T04:41:21.261Z">
 <meta property="article:author" content="Wang Wei">
 <meta property="article:tag" content="infer">
 <meta name="twitter:card" content="summary">
@@ -44,7 +44,7 @@
   };
 </script>
 
-  <title>推理 Ray | www6v的博客</title>
+  <title>(原理)推理 Ray | www6v的博客</title>
   
 
 
@@ -201,7 +201,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          推理 Ray
+          (原理)推理 Ray
         </h1>
 
         <div class="post-meta">
@@ -224,7 +224,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2024-06-11 09:24:07" itemprop="dateModified" datetime="2024-06-11T09:24:07+08:00">2024-06-11</time>
+                <time title="修改时间：2024-06-11 12:41:21" itemprop="dateModified" datetime="2024-06-11T12:41:21+08:00">2024-06-11</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -255,8 +255,48 @@
 <span id="more"></span>
 
 
-
-<h1><span id="参考">参考</span><a href="#参考" class="header-anchor">#</a></h1><p>1xx. <a target="_blank" rel="noopener" href="https://developer.volcengine.com/articles/7241442880106004536">基于 Ray 的大规模离线推理</a> 字节<br>1xx. <a target="_blank" rel="noopener" href="https://blog.csdn.net/junerli/article/details/138476201">分布式领域计算模型及Spark&amp;Ray实现对比</a><br>1xx. <a target="_blank" rel="noopener" href="https://docs.google.com/document/d/1tBw9A4j62ruI5omIJbMxly-la5w4q_TjyJgJL_jN2fI/preview#heading=h.iyrm5j2gcdoq">Ray v2 Architecture</a></p>
+<h1><span id="architecture-overview">Architecture Overview</span><a href="#architecture-overview" class="header-anchor">#</a></h1><h3><span id="application-concepts-1">Application concepts [1]</span><a href="#application-concepts-1" class="header-anchor">#</a></h3><ul>
+<li>Task - A remote function invocation. </li>
+<li>Object - An application value.</li>
+<li>Actor - a stateful worker process (an instance of a <code>@ray.remote</code> class).</li>
+<li>Driver - The program root, or the “main” program.</li>
+<li>Job - The collection of tasks, objects, and actors originating (recursively) from the same driver, and their runtime environment.</li>
+</ul>
+<h3><span id="design-1">Design [1]</span><a href="#design-1" class="header-anchor">#</a></h3><ul>
+<li>Components<ul>
+<li>One or more worker processes</li>
+<li>A raylet. <ul>
+<li>scheduler</li>
+<li>object store</li>
+</ul>
+</li>
+<li>head node<ul>
+<li>Global Control Service (GCS)</li>
+<li>driver process(es)</li>
+<li>cluster-level services</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h1><span id="spark-vs-ray10">Spark vs. Ray[10]</span><a href="#spark-vs-ray10" class="header-anchor">#</a></h1><ul>
+<li><p>总的来说，Ray和Spark的主要差别在于他们的<strong>抽象层次</strong>。<strong>Spark</strong>对并行进行抽象和限制，不允许用户编写真正并行的应用，从而使框架有更多的控制权。<strong>Ray</strong>的层次要低得多，虽然给用户提供了更多灵活性，但更难编程。可以说，<strong>Ray揭示和暴露了并行，而Spark抽象和隐藏了并行</strong>。</p>
+</li>
+<li><p>就架构而言，<strong>Spark</strong>采用<strong>BSP模型</strong>，是无副作用的，而<strong>Ray</strong>本质上是一个<strong>RPC 框架+Actor框架+对象存储</strong>。</p>
+</li>
+</ul>
+<h1><span id="参考">参考</span><a href="#参考" class="header-anchor">#</a></h1><p>1xx. <a target="_blank" rel="noopener" href="https://developer.volcengine.com/articles/7241442880106004536">基于 Ray 的大规模离线推理</a> 字节<br>   <a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/mU2RymHIHj8mJiDWBUAdWA">字节跳动基于 Ray 的大规模离线推理</a></p>
+<p>1xx. <a target="_blank" rel="noopener" href="https://docs.google.com/document/d/167rnnDFIVRhHhK4mznEIemOtj63IOhtIPvSYaPgI4Fg/edit#heading=h.eg7m6lz2y48u">Ray Design Patterns</a> 查看-&gt;模式</p>
+<p>1xx. <a target="_blank" rel="noopener" href="https://blog.csdn.net/2401_83124266/article/details/136428395">大模型训练部署利器–开源分布式计算框架Ray原理介绍</a></p>
+<h3><span id="spark-vs-ray">Spark vs. Ray</span><a href="#spark-vs-ray" class="header-anchor">#</a></h3><ol start="10">
+<li><a target="_blank" rel="noopener" href="https://www.zhihu.com/question/432813259/answer/2335473370">加州大学伯克利分校为何能连续孵化出 Mesos,Spark,Alluxio,Ray 等重量级开源项目?</a> 孙挺Sunt</li>
+</ol>
+<p>1xx. <a target="_blank" rel="noopener" href="https://blog.csdn.net/junerli/article/details/138476201">分布式领域计算模型及Spark&amp;Ray实现对比</a></p>
+<h3><span id="internal">Internal</span><a href="#internal" class="header-anchor">#</a></h3><ol>
+<li><a target="_blank" rel="noopener" href="https://docs.google.com/document/d/1tBw9A4j62ruI5omIJbMxly-la5w4q_TjyJgJL_jN2fI/preview#heading=h.iyrm5j2gcdoq">Ray v2 Architecture</a></li>
+</ol>
+<p>1xx. <a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/111340572">Ray 分布式计算框架介绍</a></p>
+<p>1xx. <a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/344736949">Ray 1.0 架构解读</a></p>
 
     </div>
 
@@ -272,7 +312,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="https://www6v.github.io/2023/06/11/gptInferRay/" title="推理 Ray">https://www6v.github.io/2023/06/11/gptInferRay/</a>
+    <a href="https://www6v.github.io/2023/06/11/gptInferRay/" title="(原理)推理 Ray">https://www6v.github.io/2023/06/11/gptInferRay/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
