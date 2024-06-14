@@ -7812,6 +7812,7 @@
 <li><p><a href="https://github.com/InternLM/Tutorial/tree/camp2/agent">Lagent &amp; AgentLego 智能体应用搭建</a><br><a href="https://github.com/InternLM/Tutorial/blob/camp2/agent/lagent.md">Lagent：轻量级智能体框架</a><br><a href="https://github.com/InternLM/Tutorial/blob/camp2/agent/agentlego.md">AgentLego：组装智能体“乐高”</a></p>
 </li>
 </ol>
+<p>1xx. <a href="https://qwenlm.github.io/zh/blog/qwen-agent-2405/">使用Qwen-Agent将上下文记忆扩展到百万量级</a></p>
 ]]></content>
       <categories>
         <category>AIGC</category>
