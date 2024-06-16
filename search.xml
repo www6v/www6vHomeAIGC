@@ -5739,7 +5739,9 @@
 <h1><span id="参考">参考</span><a href="#参考" class="header-anchor">#</a></h1><ol start="4">
 <li><a href="https://zhuanlan.zhihu.com/p/654034193">2023年能够解决复杂问题的思维链技术：Cot，ToT，GoT，AoT</a></li>
 </ol>
-<p>1xx. <a href="https://github.com/zchuz/CoT-Reasoning-Survey">CoT-Reasoning-Survey </a><br>1xx. <a href="https://mp.weixin.qq.com/s?__biz=MzAxMjc3MjkyMg==&mid=2648404176&idx=1&sn=2eafdf5426bfe1347869b9af268d4238">大模型COT思维链推理的几个关键问题：从评测基准、结构变体到增强方案的系统综述 </a></p>
+<p>1xx. <a href="https://github.com/zchuz/CoT-Reasoning-Survey">CoT-Reasoning-Survey </a></p>
+<p>1xx. <a href="https://mp.weixin.qq.com/s?__biz=MzAxMjc3MjkyMg==&mid=2648404176&idx=1&sn=2eafdf5426bfe1347869b9af268d4238">大模型COT思维链推理的几个关键问题：从评测基准、结构变体到增强方案的系统综述 </a></p>
+<p>1xx. <a href="https://mp.weixin.qq.com/s/X2lcVLFFlFgQCzacret4Vg">大模型思维链推理的综述：进展、前沿和未来</a></p>
 ]]></content>
       <categories>
         <category>AIGC</category>
@@ -6431,6 +6433,7 @@
 </ol>
 <p>1xx. <a href="https://blog.csdn.net/xixiaoyaoww/article/details/130278978">清华发布工具学习框架，让ChatGPT操控地图、股票查询，贾维斯已来？</a></p>
 <p>1xx. <a href="https://mp.weixin.qq.com/s/yZYGqAKIqDfGYF2YUckiiw">回顾大模型在工具使用上的技术总结：兼看图检索增强生成方案-GRAG </a><br>   《Tool Learning with Large Language Models: A Survey》<br>   问题2:关于大模型使用工具的调研整理</p>
+<p>1xx. <a href="https://mp.weixin.qq.com/s/pPkrHHkmVC29e_c2U8YEGg">一篇大模型Agent工具使用全面研究综述</a><br>    《Tool Learning with Large Language Models: A Survey》</p>
 <h3><span id="xxx">xxx</span><a href="#xxx" class="header-anchor">#</a></h3><ol start="10">
 <li><p><a href="https://zhuanlan.zhihu.com/p/633654195">LLM能够自己制作工具了：详解Large Language Models as Tool Makers</a>  </p>
 </li>
