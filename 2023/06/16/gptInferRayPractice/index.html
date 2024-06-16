@@ -21,17 +21,17 @@
   </script>
 
   <meta property="og:type" content="article">
-<meta property="og:title" content="Prompt-Code">
-<meta property="og:url" content="https://www6v.github.io/2021/05/28/gptPromptCode/index.html">
+<meta property="og:title" content="推理 Ray">
+<meta property="og:url" content="https://www6v.github.io/2023/06/16/gptInferRayPractice/index.html">
 <meta property="og:site_name" content="www6v的博客">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2021-05-28T04:12:45.000Z">
-<meta property="article:modified_time" content="2023-11-16T14:29:28.554Z">
+<meta property="article:published_time" content="2023-06-16T08:17:44.000Z">
+<meta property="article:modified_time" content="2024-06-16T09:58:16.887Z">
 <meta property="article:author" content="Wang Wei">
-<meta property="article:tag" content="prompt">
+<meta property="article:tag" content="infer">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="https://www6v.github.io/2021/05/28/gptPromptCode/">
+<link rel="canonical" href="https://www6v.github.io/2023/06/16/gptInferRayPractice/">
 
 
 <script id="page-configurations">
@@ -44,7 +44,7 @@
   };
 </script>
 
-  <title>Prompt-Code | www6v的博客</title>
+  <title>推理 Ray | www6v的博客</title>
   
 
 
@@ -188,7 +188,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://www6v.github.io/2021/05/28/gptPromptCode/">
+    <link itemprop="mainEntityOfPage" href="https://www6v.github.io/2023/06/16/gptInferRayPractice/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/www6vHomeAIGC/images/avatar.gif">
@@ -201,7 +201,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          Prompt-Code
+          推理 Ray
         </h1>
 
         <div class="post-meta">
@@ -217,14 +217,14 @@
               </span>
               <span class="post-meta-item-text">发表于</span>
 
-              <time title="创建时间：2021-05-28 12:12:45" itemprop="dateCreated datePublished" datetime="2021-05-28T12:12:45+08:00">2021-05-28</time>
+              <time title="创建时间：2023-06-16 16:17:44" itemprop="dateCreated datePublished" datetime="2023-06-16T16:17:44+08:00">2023-06-16</time>
             </span>
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2023-11-16 22:29:28" itemprop="dateModified" datetime="2023-11-16T22:29:28+08:00">2023-11-16</time>
+                <time title="修改时间：2024-06-16 17:58:16" itemprop="dateModified" datetime="2024-06-16T17:58:16+08:00">2024-06-16</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -236,7 +236,7 @@
                 </span>
                   ，
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/www6vHomeAIGC/categories/AIGC/prompt/" itemprop="url" rel="index"><span itemprop="name">prompt</span></a>
+                  <a href="/www6vHomeAIGC/categories/AIGC/infer/" itemprop="url" rel="index"><span itemprop="name">infer</span></a>
                 </span>
             </span>
 
@@ -255,122 +255,33 @@
 <span id="more"></span>
 
 
-
-<h2><span id="目录">目录</span><a href="#目录" class="header-anchor">#</a></h2><div class="toc">
-
-<!-- toc -->
-
-<ul>
-<li><a href="#%E5%B7%A5%E5%85%B7">工具</a></li>
-<li><a href="#%E4%BB%A3%E7%A0%81%E7%9B%B8%E5%85%B3-%E7%AE%80%E5%8D%95%E4%BB%BB%E5%8A%A1-1">代码相关-简单任务 [1]</a></li>
-<li><a href="#%E4%BB%A3%E7%A0%81%E7%9B%B8%E5%85%B3-%E7%B9%81%E7%90%90%E5%B7%A5%E4%BD%9C-1">代码相关- 繁琐工作 [1]</a></li>
-<li><a href="#%E8%BF%90%E7%BB%B4-ops-4">运维 Ops [4]</a><ul>
-<li><a href="#%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80-vs-%E8%87%AA%E7%84%B6%E8%AF%AD%E8%A8%80">编程语言 vs 自然语言</a></li>
-</ul>
+<h1><span id="实战1">实战1</span><a href="#实战1" class="header-anchor">#</a></h1><ul>
+<li><p>脚本[1]</p>
 </li>
-<li><a href="#%E5%8F%82%E8%80%83">参考</a></li>
-</ul>
-<!-- tocstop -->
-
-</div>
-
-
-<h1><span id="工具">工具</span><a href="#工具" class="header-anchor">#</a></h1><ul>
-<li>Copilot *** - 收费</li>
-<li>AWS CodeWhispter</li>
-<li>Cursor ***</li>
-<li>tabnine 免费</li>
-<li>Code Llama  - 开源</li>
-</ul>
-<h1><span id="代码相关-简单任务-1">代码相关-简单任务 [1]</span><a href="#代码相关-简单任务-1" class="header-anchor">#</a></h1><ul>
-<li><p><strong>注释</strong><br> 你作为一名程序员，请解释一下下面这段代码</p>
-</li>
-<li><p><strong>防御性编程</strong><br> 请为这段代码增加防御性编程的功能</p>
-</li>
-<li><p>写单元测试 </p>
-</li>
-<li><p><strong>时间复杂度  time complexity</strong><br> 这段代码的时间复杂度是多少</p>
-</li>
-<li><p>流程图<br> 画出redis master和slave之间同步的流程图</p>
-</li>
-<li><p>Writing shell script</p>
-</li>
-<li><p>Writing git commands<br>一个分支中的代码合并到另一个分支中</p>
-</li>
-<li><p><strong>Improve code</strong></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">  How do i improve this code?</span><br><span class="line">  fruits = [<span class="string">&quot;apple&quot;</span>, <span class="string">&quot;banana&quot;</span>, <span class="string">&quot;cherry&quot;</span>]</span><br><span class="line">  newlist = []</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> x <span class="keyword">in</span> fruits:</span><br><span class="line">  <span class="keyword">if</span> <span class="string">&quot;a&quot;</span> <span class="keyword">in</span> x:</span><br><span class="line">    newlist.append(x)</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(newlist)</span><br></pre></td></tr></table></figure>
-</li>
-<li><p><strong>Translating Code</strong> 代码转换</p>
-<ul>
-<li>Convert this Python code to Javascript    </li>
-<li>请把下面这段python代码转换成Java代码</li>
-</ul>
+<li><p>遇到的异常[2]</p>
 </li>
 </ul>
-<h1><span id="代码相关-繁琐工作-1">代码相关- 繁琐工作 [1]</span><a href="#代码相关-繁琐工作-1" class="header-anchor">#</a></h1><ul>
-<li><p>Building API</p>
-<ul>
-<li>I need an API built with express.js to return the list of products. Each product should have attributes like ID, title, description, price and imageUrl</li>
-<li>modify the code and  retrieve the products from a MongoDB database</li>
-<li>use TypeScript in this code</li>
-<li>Generate this API using Python and FastAPI</li>
-</ul>
+<h1><span id="实战2">实战2</span><a href="#实战2" class="header-anchor">#</a></h1><ul>
+<li><p>脚本</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash"><span class="comment">## 变更模型名字</span></span></span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash"><span class="comment">## import &#x27;modelscope&#x27; package</span></span></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
 </li>
-<li><p><strong>Generating Dummy Data</strong></p>
-<ul>
-<li>Generate dummy data for a table called customers. Each customer should have an ID, first name, last name and city.</li>
-<li>I don’t need a Javascript. Just give the data.</li>
-<li>Create a Python class for storing these objects.</li>
-</ul>
-</li>
-<li><p><strong>SQL</strong></p>
-<ul>
-<li>write a SQL query to generate a table called products with these columns：<br>ID（int）<br>title（string）<br>category(int)</li>
-<li>write a query to retrieve the top 5 customers in Shanghai</li>
-<li>Revise this query and join the customers table with the orders table to find out how much each cumster has spent. Then pick the top 5 who have spent the most.</li>
-</ul>
-</li>
-<li><p>正则  [2]</p>
-</li>
-<li><p>CronJob [2]</p>
-</li>
-<li><p>K8s</p>
+<li><p>异常[11]</p>
 </li>
 </ul>
-<h1><span id="运维-ops-4">运维 Ops [4]</span><a href="#运维-ops-4" class="header-anchor">#</a></h1><h2><span id="编程语言-vs-自然语言">编程语言 vs 自然语言</span><a href="#编程语言-vs-自然语言" class="header-anchor">#</a></h2><table>
-<thead>
-<tr>
-<th>语言类型</th>
-<th>执行原理</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>C++语言</td>
-<td>C++语言 –&gt; 编译器&#x2F;链接器 –&gt; 既定任务</td>
-</tr>
-<tr>
-<td>Java语言</td>
-<td>Java语言 –&gt; 编译器&#x2F;虚拟机 –&gt; 既定任务</td>
-</tr>
-<tr>
-<td>Python语言</td>
-<td>Python语言 –&gt; 解释器 –&gt; 既定任务</td>
-</tr>
-<tr>
-<td>人类自然语言</td>
-<td>人类自然语言 –&gt; LLMs –&gt; 各种后端组件 –&gt; 既定任务</td>
-</tr>
-</tbody></table>
-<h1><span id="参考">参考</span><a href="#参考" class="header-anchor">#</a></h1><ol>
-<li><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Z84y1G7nY/">【ChatGPT】面向程序员的ChatGPT使用教程38种方式来提升生产力</a> V</li>
-<li><a target="_blank" rel="noopener" href="https://time.geekbang.org/opencourse/videointro/100540901">GitHub Copilot 实践课</a><br>03, 04, 06<br><a target="_blank" rel="noopener" href="https://github.com/www6v/AICoder">AICoder</a> git</li>
-<li><a target="_blank" rel="noopener" href="https://cloud.tencent.com/developer/article/2207540">ChatGPT 帮我跑了一个完整的 DevOps 流水线，离了个大谱…</a><br><a target="_blank" rel="noopener" href="https://github.com/www6v/AICoder/tree/master/Cursor/">Gin on K8s</a> git</li>
-<li><a target="_blank" rel="noopener" href="https://www.promptops.com/">PromptOps</a>    </li>
-<li><a target="_blank" rel="noopener" href="https://www.geeksforgeeks.org/chatgpt-prompts-for-software-developers/">Top 20 ChatGPT Prompts For Software Developers</a> 未</li>
+<h1><span id="参考">参考</span><a href="#参考" class="header-anchor">#</a></h1><h3><span id="实战1">实战1</span><a href="#实战1" class="header-anchor">#</a></h3><ol>
+<li><p><a target="_blank" rel="noopener" href="https://docs.ray.io/en/master/serve/tutorials/vllm-example.html">Serve a Large Language Model with vLLM</a></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/60750288/invalid-device-id-when-using-pytorch-dataparallel">Invalid device id when using pytorch dataparallel！</a>  运行时碰到的异常</p>
+</li>
 </ol>
-<pre><code>
-
-</code></pre>
+<h3><span id="实战2">实战2</span><a href="#实战2" class="header-anchor">#</a></h3><ol start="10">
+<li><p><a target="_blank" rel="noopener" href="https://github.com/vllm-project/vllm/blob/main/examples/offline_inference_distributed.py">examples&#x2F;offline_inference_distributed.py</a></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/zh515858237/article/details/135262401">报错:RuntimeError: CUDA error: no kernel image is available for execution on the device</a></p>
+</li>
+</ol>
+<p>1xx. <a target="_blank" rel="noopener" href="https://github.com/ray-project/langchain-ray/tree/main">GitHub - ray-project&#x2F;langchain-ray: Examples on how to use LangChain and Ray</a> git</p>
+<p>1xx. <a target="_blank" rel="noopener" href="https://github.com/asprenger/ray_vllm_inference">Ray vLLM Interence</a></p>
 
     </div>
 
@@ -386,7 +297,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="https://www6v.github.io/2021/05/28/gptPromptCode/" title="Prompt-Code">https://www6v.github.io/2021/05/28/gptPromptCode/</a>
+    <a href="https://www6v.github.io/2023/06/16/gptInferRayPractice/" title="推理 Ray">https://www6v.github.io/2023/06/16/gptInferRayPractice/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
@@ -397,7 +308,7 @@
 
       <footer class="post-footer">
           <div class="post-tags">
-              <a href="/www6vHomeAIGC/tags/prompt/" rel="tag"># prompt</a>
+              <a href="/www6vHomeAIGC/tags/infer/" rel="tag"># infer</a>
           </div>
 
         
@@ -406,12 +317,12 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/www6vHomeAIGC/2021/05/26/gptPrompt/" rel="prev" title="Prompt-How to use">
-      <i class="fa fa-chevron-left"></i> Prompt-How to use
+    <a href="/www6vHomeAIGC/2023/06/13/gptFlashAttention/" rel="prev" title="(原理)Flash Attention">
+      <i class="fa fa-chevron-left"></i> (原理)Flash Attention
     </a></div>
       <div class="post-nav-item">
-    <a href="/www6vHomeAIGC/2021/08/11/ai/" rel="next" title="AI 应用场景">
-      AI 应用场景 <i class="fa fa-chevron-right"></i>
+    <a href="/www6vHomeAIGC/2024/01/12/gptPEFTQLora/" rel="next" title="(实战)PEFT QLoRA">
+      (实战)PEFT QLoRA <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
       </footer>
