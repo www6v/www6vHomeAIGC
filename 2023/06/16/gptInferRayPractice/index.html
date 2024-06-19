@@ -26,7 +26,7 @@
 <meta property="og:site_name" content="www6v的博客">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-06-16T08:17:44.000Z">
-<meta property="article:modified_time" content="2024-06-16T11:24:11.971Z">
+<meta property="article:modified_time" content="2024-06-19T02:57:42.275Z">
 <meta property="article:author" content="Wang Wei">
 <meta property="article:tag" content="infer">
 <meta name="twitter:card" content="summary">
@@ -224,7 +224,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2024-06-16 19:24:11" itemprop="dateModified" datetime="2024-06-16T19:24:11+08:00">2024-06-16</time>
+                <time title="修改时间：2024-06-19 10:57:42" itemprop="dateModified" datetime="2024-06-19T10:57:42+08:00">2024-06-19</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -254,23 +254,63 @@
         <p></p>
 <span id="more"></span>
 
+<h2><span id="目录">目录</span><a href="#目录" class="header-anchor">#</a></h2><div class="toc">
 
-<h1><span id="实战1">实战1</span><a href="#实战1" class="header-anchor">#</a></h1><ul>
+<!-- toc -->
+
+<ul>
+<li><a href="#%E5%AE%9E%E6%88%98">实战</a><ul>
+<li><a href="#%E7%8E%AF%E5%A2%83">环境</a></li>
+<li><a href="#%E5%AE%9E%E6%88%981">实战1</a></li>
+<li><a href="#%E5%AE%9E%E6%88%982">实战2</a></li>
+<li><a href="#%E5%AE%9E%E6%88%98320">实战3[20]</a></li>
+<li><a href="#%E5%AE%9E%E6%88%984">实战4</a></li>
+</ul>
+</li>
+<li><a href="#monitor40">monitor[40]</a><ul>
+<li><a href="#ray-dashboard41">Ray Dashboard[41]</a></li>
+<li><a href="#ray-logging">Ray logging</a></li>
+<li><a href="#built-in-ray-serve-metrics">Built-in Ray Serve metrics</a></li>
+</ul>
+</li>
+<li><a href="#%E5%8F%82%E8%80%83">参考</a><ul>
+<li><a href="#%E5%AE%9E%E6%88%981-1">实战1</a></li>
+<li><a href="#%E5%AE%9E%E6%88%982-1">实战2</a></li>
+<li><a href="#%E5%AE%9E%E6%88%983">实战3</a></li>
+<li><a href="#%E5%AE%9E%E6%88%984-1">实战4</a></li>
+<li><a href="#monitor">monitor</a></li>
+</ul>
+</li>
+</ul>
+<!-- tocstop -->
+
+</div>
+
+<h1><span id="实战">实战</span><a href="#实战" class="header-anchor">#</a></h1><h3><span id="环境">环境</span><a href="#环境" class="header-anchor">#</a></h3><p>modelscope  GPU</p>
+<h3><span id="实战1">实战1</span><a href="#实战1" class="header-anchor">#</a></h3><ul>
 <li><p>脚本[1]</p>
 </li>
 <li><p>遇到的异常[2]</p>
 </li>
 </ul>
-<h1><span id="实战2">实战2</span><a href="#实战2" class="header-anchor">#</a></h1><ul>
+<h3><span id="实战2">实战2</span><a href="#实战2" class="header-anchor">#</a></h3><ul>
 <li><p>脚本</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash"><span class="comment">## 变更模型名字</span></span></span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash"><span class="comment">## import &#x27;modelscope&#x27; package</span></span></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
 </li>
 <li><p>异常[11]</p>
 </li>
 </ul>
-<h1><span id="实战320">实战3[20]</span><a href="#实战320" class="header-anchor">#</a></h1><ul>
+<h3><span id="实战320">实战3[20]</span><a href="#实战320" class="header-anchor">#</a></h3><ul>
 <li>脚本<br>vllm   0.2.3 -&gt; 报异常<br>vllm  0.3.3 -&gt; 报另一个异常</li>
 </ul>
+<h3><span id="实战4">实战4</span><a href="#实战4" class="header-anchor">#</a></h3><ul>
+<li><p>脚本 [30]</p>
+</li>
+<li><p>异常 [31]</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"># 运行这个命令报异常</span><br><span class="line">python -m vllm.entrypoints.openai.api_server --trust-remote-code --served-model-name gpt-4 --model mistralai/Mixtral-8x7B-Instruct-v0.1 --gpu-memory-utilization 1 --tensor-parallel-size 8 --port 8000</span><br><span class="line"></span><br></pre></td></tr></table></figure></li>
+</ul>
+<h1><span id="monitor40">monitor[40]</span><a href="#monitor40" class="header-anchor">#</a></h1><h3><span id="ray-dashboard41">Ray Dashboard[41]</span><a href="#ray-dashboard41" class="header-anchor">#</a></h3><h3><span id="ray-logging">Ray logging</span><a href="#ray-logging" class="header-anchor">#</a></h3><p>Loki  grafana</p>
+<h3><span id="built-in-ray-serve-metrics">Built-in Ray Serve metrics</span><a href="#built-in-ray-serve-metrics" class="header-anchor">#</a></h3><p>Prometheus </p>
 <h1><span id="参考">参考</span><a href="#参考" class="header-anchor">#</a></h1><h3><span id="实战1">实战1</span><a href="#实战1" class="header-anchor">#</a></h3><ol>
 <li><p><a target="_blank" rel="noopener" href="https://docs.ray.io/en/master/serve/tutorials/vllm-example.html">Serve a Large Language Model with vLLM</a></p>
 </li>
@@ -287,6 +327,18 @@
 <li><a target="_blank" rel="noopener" href="https://github.com/asprenger/ray_vllm_inference">Ray vLLM Interence</a></li>
 </ol>
 <p>1xx. <a target="_blank" rel="noopener" href="https://github.com/ray-project/langchain-ray/tree/main">GitHub - ray-project&#x2F;langchain-ray: Examples on how to use LangChain and Ray</a> git</p>
+<h3><span id="实战4">实战4</span><a href="#实战4" class="header-anchor">#</a></h3><ol start="30">
+<li><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/engchina/article/details/135455197">在甲骨文云上用 Ray +Vllm 部署 Mixtral 8*7B 模型_mixtral 8x7b 部署-CSDN博客</a></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/zh515858237/article/details/135262401">报错:RuntimeError: CUDA error: no kernel image is available for execution on the device-CSDN博客</a></p>
+</li>
+</ol>
+<h3><span id="monitor">monitor</span><a href="#monitor" class="header-anchor">#</a></h3><ol start="40">
+<li><p><a target="_blank" rel="noopener" href="https://docs.ray.io/en/master/serve/monitoring.html">Monitor Your Application</a></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://docs.ray.io/en/master/ray-observability/getting-started.html">Ray Dashboard </a></p>
+</li>
+</ol>
 
     </div>
 
@@ -326,8 +378,8 @@
       <i class="fa fa-chevron-left"></i> (原理)Flash Attention
     </a></div>
       <div class="post-nav-item">
-    <a href="/www6vHomeAIGC/2024/01/12/gptPEFTQLora/" rel="next" title="(实战)PEFT QLoRA">
-      (实战)PEFT QLoRA <i class="fa fa-chevron-right"></i>
+    <a href="/www6vHomeAIGC/2023/06/19/gptRAGQanything/" rel="next" title="RAG Qanything">
+      RAG Qanything <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
       </footer>
@@ -400,7 +452,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/www6vHomeAIGC/archives/">
         
-          <span class="site-state-item-count">145</span>
+          <span class="site-state-item-count">147</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
