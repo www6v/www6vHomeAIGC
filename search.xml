@@ -774,6 +774,7 @@
 <li><a href="https://www.bilibili.com/video/BV12T42117VT/">RAGFlow：采用OCR和深度文档理解结合的新一代 RAG 引擎</a> V</li>
 <li><a href="https://www.infoq.cn/article/hjJM3kV620iDoYYOBtPs">检索增强生成引擎 RAGFlow 正式开源！</a><br>1xx. <a href="https://mp.weixin.qq.com/s/8qms4nxVsX43WSWolXgx7w">7.8K Star RAG 引擎：基于深度文档理解，最大程度降低幻觉、无限上下文快速完成 “大海捞针” 测试！</a></li>
 </ol>
+<p>1xx.  <a href="http://demo.ragflow.io/">RAGFlow Demo</a><br>    <a href="https://github.com/infiniflow/ragflow">ragflow Repo</a> git</p>
 ]]></content>
       <categories>
         <category>AIGC</category>
@@ -1555,6 +1556,7 @@
 <li><a href="#multi-representation-indexing">Multi-representation Indexing</a></li>
 <li><a href="#%E5%B1%82%E7%BA%A7%E6%80%A7%E7%B4%A2%E5%BC%95-raptor2">层级性索引-RAPTOR[2]</a></li>
 <li><a href="#%E5%81%9Atoken%E5%88%B0text%E7%BA%A7-colbert">做token到text级-ColBERT</a></li>
+<li><a href="#sprag-3">spRAG [3]</a></li>
 </ul>
 </li>
 <li><a href="#%E5%8F%82%E8%80%83">参考</a><ul>
@@ -1604,10 +1606,14 @@
 <p>相关的: 父级documents的索引</p>
 </blockquote>
 <h3><span id="层级性索引-raptor2">层级性索引-RAPTOR[2]</span><a href="#层级性索引-raptor2" class="header-anchor">#</a></h3><p>【raptor 效果也很好，就是需要总结，看总结的咋样了】<br>【raptor 原文是对 chunk 聚类，然后每个聚类做总结】</p>
-<h3><span id="做token到text级-colbert">做token到text级-ColBERT</span><a href="#做token到text级-colbert" class="header-anchor">#</a></h3><h1><span id="参考">参考</span><a href="#参考" class="header-anchor">#</a></h1><ol>
+<p>【ragflow 使用了RAPTOR】</p>
+<h3><span id="做token到text级-colbert">做token到text级-ColBERT</span><a href="#做token到text级-colbert" class="header-anchor">#</a></h3><h3><span id="sprag-3">spRAG [3]</span><a href="#sprag-3" class="header-anchor">#</a></h3><p>【这个 spRAG 的 rse 比子母 chunk 要灵活一点,   试了一下 】<br>AutoContext在嵌入各个文本块之前，先自动将文档级别的上下文信息注入到每个块中。RSE对检索到的相关文本块进行聚类，将内容相似或语义相关的块归为一组。然后，它会根据查询的需求，智能地选择和组合这些块，形成长度适当、信息相关的文本段。</p>
+<h1><span id="参考">参考</span><a href="#参考" class="header-anchor">#</a></h1><ol>
 <li><p><a href="https://mp.weixin.qq.com/s/pK2BRLrWpEKKIPFhUtGvcg">一文详看Langchain框架中的RAG多阶段优化策略：从问题转换到查询路由再到生成优化</a><br><a href="https://github.com/langchain-ai/rag-from-scratch">rag-from-scratch Repo</a> git   </p>
 </li>
 <li><p><a href="https://mp.weixin.qq.com/s/SeOG15Z2RJmiJ5sAP91B4w">基于RAPTOR实现高质量长上下文的RAG </a>   未</p>
+</li>
+<li><p><a href="https://mp.weixin.qq.com/s/1a-h9CBZtRARG7_sOK9g8Q">20240520大模型&amp;KG&amp;RAG进展回顾：spRAG优化策略、电信领域大模型及手语生成大模型</a> 未<br>RAPTOR  spRAG</p>
 </li>
 </ol>
 <p>1xx. <a href="https://mp.weixin.qq.com/s?__biz=MzAxMjc3MjkyMg==&mid=2648407870&idx=1&sn=8073f0fc8edc0897e3627f26478063c3">20240205大模型进展早报：兼看引入chunk层级结构的大模型RAG的思路：RAPTOR </a> RAPTOR</p>
@@ -6110,7 +6116,10 @@
 <li><a href="#%E6%99%BA%E8%83%BD%E9%97%AE%E7%AD%94">智能问答</a></li>
 </ul>
 </li>
-<li><a href="#nlpllm1">NLP+LLM[1]</a></li>
+<li><a href="#nlpllm">NLP+LLM</a><ul>
+<li><a href="#%E5%A4%A7%E6%A8%A1%E5%9E%8B%E7%94%A8%E4%BA%8Enlp%E7%9A%84%E8%8C%83%E5%BC%8F-1">大模型用于NLP的范式 [1]</a></li>
+</ul>
+</li>
 <li><a href="#%E5%8F%82%E8%80%83">参考</a></li>
 </ul>
 <!-- tocstop -->
@@ -6174,7 +6183,14 @@
 </ul>
 </li>
 </ul>
-<h1><span id="nlpllm1">NLP+LLM[1]</span><a href="#nlpllm1" class="header-anchor">#</a></h1><h1><span id="参考">参考</span><a href="#参考" class="header-anchor">#</a></h1><p>1.《Large Language Models Meet NLP: A Survey》<br>  <a href="https://mp.weixin.qq.com/s/dRlkv24vTCeUiVvRGmDdQg">有趣的两个RAG大模型问答新优化思路：兼看大模型与NLP的结合范式 </a><br>大模型时代的NLP的一些结合方式</p>
+<h1><span id="nlpllm">NLP+LLM</span><a href="#nlpllm" class="header-anchor">#</a></h1><h3><span id="大模型用于nlp的范式-1">大模型用于NLP的范式 [1]</span><a href="#大模型用于nlp的范式-1" class="header-anchor">#</a></h3><ul>
+<li>用于NLP的LLM分类法<ul>
+<li>包括参数冻结范式（a）<br>zero-shot  few-shot </li>
+<li>参数调整范式（b）<br>【PEFT 全参数】</li>
+</ul>
+</li>
+</ul>
+<h1><span id="参考">参考</span><a href="#参考" class="header-anchor">#</a></h1><p>1.《Large Language Models Meet NLP: A Survey》<br>  <a href="https://mp.weixin.qq.com/s/dRlkv24vTCeUiVvRGmDdQg">有趣的两个RAG大模型问答新优化思路：兼看大模型与NLP的结合范式 </a><br>大模型时代的NLP的一些结合方式</p>
 <ol start="2">
 <li><p><a href="https://www.nlplanet.org/">NLPlanet | Natural Language Processing Community</a></p>
 </li>
