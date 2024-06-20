@@ -27,7 +27,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://www6v.github.io/www6vHomeAIGC/2022/12/31/gptRAGPractice/arch.JPG">
 <meta property="article:published_time" content="2022-12-30T23:42:52.000Z">
-<meta property="article:modified_time" content="2024-05-31T03:34:23.568Z">
+<meta property="article:modified_time" content="2024-06-20T08:26:23.113Z">
 <meta property="article:author" content="Wang Wei">
 <meta property="article:tag" content="RAG">
 <meta name="twitter:card" content="summary">
@@ -226,7 +226,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2024-05-31 11:34:23" itemprop="dateModified" datetime="2024-05-31T11:34:23+08:00">2024-05-31</time>
+                <time title="修改时间：2024-06-20 16:26:23" itemprop="dateModified" datetime="2024-06-20T16:26:23+08:00">2024-06-20</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -261,7 +261,6 @@
 <!-- toc -->
 
 <ul>
-<li><a href="#vectorkg-rag1516">Vector+KG RAG[15][16]</a></li>
 <li><a href="#data-processing17">Data processing[17]</a></li>
 <li><a href="#%E5%8C%BB%E7%96%97%E9%97%AE%E7%AD%94rag20">医疗问答RAG[20]</a><ul>
 <li><a href="#%E6%9E%B6%E6%9E%84">架构</a></li>
@@ -275,7 +274,6 @@
 </ul>
 </li>
 <li><a href="#%E5%8F%82%E8%80%83">参考</a><ul>
-<li><a href="#%E7%9F%A5%E8%AF%86%E5%9B%BE%E8%B0%B1">知识图谱</a></li>
 <li><a href="#xxx">xxx</a></li>
 <li><a href="#%E5%8C%BB%E7%96%97%E9%97%AE%E7%AD%94">医疗问答</a></li>
 </ul>
@@ -286,10 +284,10 @@
 </div>
 
 
-<h1><span id="vectorkg-rag1516">Vector+KG RAG[15][16]</span><a href="#vectorkg-rag1516" class="header-anchor">#</a></h1><h1><span id="data-processing17">Data processing[17]</span><a href="#data-processing17" class="header-anchor">#</a></h1><p>长文本   变成   QA pair</p>
+<h1><span id="data-processing17">Data processing[17]</span><a href="#data-processing17" class="header-anchor">#</a></h1><p>长文本   变成   QA pair</p>
 <ul>
 <li>规则匹配</li>
-<li>利用LLM抽取</li>
+<li><strong>利用LLM抽取</strong></li>
 <li>人工处理</li>
 </ul>
 <h1><span id="医疗问答rag20">医疗问答RAG[20]</span><a href="#医疗问答rag20" class="header-anchor">#</a></h1><h3><span id="架构">架构</span><a href="#架构" class="header-anchor">#</a></h3><img src="/www6vHomeAIGC/2022/12/31/gptRAGPractice/arch.JPG" class>
@@ -320,7 +318,7 @@
 </ul>
 <h3><span id="排序模型">排序模型</span><a href="#排序模型" class="header-anchor">#</a></h3><ul>
 <li>bert模型<ul>
-<li>1个ber模型</li>
+<li>1个bert模型</li>
 <li><strong>速度慢</strong></li>
 <li><strong>格式</strong><ul>
 <li>query[sep]s2  -&gt; 经过softmax，产生2分类，0-1</li>
@@ -340,13 +338,7 @@
 <h3><span id="大模型">大模型</span><a href="#大模型" class="header-anchor">#</a></h3><ul>
 <li>综合归纳的作用</li>
 </ul>
-<h1><span id="参考">参考</span><a href="#参考" class="header-anchor">#</a></h1><h3><span id="知识图谱">知识图谱</span><a href="#知识图谱" class="header-anchor">#</a></h3><ol start="15">
-<li><p><a target="_blank" rel="noopener" href="https://neo4j.com/developer-blog/unstructured-knowledge-graph-neo4j-langchain/">Enhanced QA Integrating Unstructured Knowledge Graph Using Neo4j and LangChain</a>  </p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="https://blog.langchain.dev/using-a-knowledge-graph-to-implement-a-devops-rag-application/">Using a Knowledge Graph to implement a DevOps RAG application</a></p>
-</li>
-</ol>
-<h3><span id="xxx">xxx</span><a href="#xxx" class="header-anchor">#</a></h3><ol start="17">
+<h1><span id="参考">参考</span><a href="#参考" class="header-anchor">#</a></h1><h3><span id="xxx">xxx</span><a href="#xxx" class="header-anchor">#</a></h3><ol start="17">
 <li>&lt;&lt;大模型结合 RAG 构建客服场景自动问答系统&gt;&gt;  NVIDIA大模型日系列活动</li>
 </ol>
 <h3><span id="医疗问答">医疗问答</span><a href="#医疗问答" class="header-anchor">#</a></h3><ol start="20">

@@ -738,13 +738,17 @@
     <content><![CDATA[<p></p>
 <span id="more"></span>
 
-
-
-<h3><span id="rag-多跳问题">RAG 多跳问题</span><a href="#rag-多跳问题" class="header-anchor">#</a></h3><h1><span id="参考">参考</span><a href="#参考" class="header-anchor">#</a></h1><h3><span id="rag-多跳问题">RAG 多跳问题</span><a href="#rag-多跳问题" class="header-anchor">#</a></h3><p>1xx. <a href="https://neo4j.com/developer-blog/knowledge-graphs-llms-multi-hop-question-answering/">Knowledge Graphs &amp; LLMs: Multi-Hop Question Answering</a></p>
+<h3><span id="vectorkg-rag1516">Vector+KG RAG[15][16]</span><a href="#vectorkg-rag1516" class="header-anchor">#</a></h3><h3><span id="rag-多跳问题">RAG 多跳问题</span><a href="#rag-多跳问题" class="header-anchor">#</a></h3><h1><span id="参考">参考</span><a href="#参考" class="header-anchor">#</a></h1><h3><span id="rag-多跳问题">RAG 多跳问题</span><a href="#rag-多跳问题" class="header-anchor">#</a></h3><p>1xx. <a href="https://neo4j.com/developer-blog/knowledge-graphs-llms-multi-hop-question-answering/">Knowledge Graphs &amp; LLMs: Multi-Hop Question Answering</a></p>
 <p><a href="https://cloud.tencent.com.cn/developer/article/2409038">知识图谱和 LLM：多跳问答-腾讯云开发者社区-腾讯云</a></p>
 <p><a href="https://blog.csdn.net/qq_41185868/article/details/138514051">LLMs之KG-RAG：KG-RAG&#x2F;GraphRAG(基于知识图谱的RAG系统)的简介(可以解决多跳问题&#x2F;同时支持结构化和非结构化数据查询)、经验技巧、案例应用之详细攻略-CSDN博客</a></p>
 <p>1xx. <a href="https://blog.csdn.net/qq_36931982/article/details/139118215">MultiHop-RAG：多跳查询的基准检索增强生成_rag多跳查询-CSDN博客</a></p>
-<h3><span id="llmkg">LLM+KG</span><a href="#llmkg" class="header-anchor">#</a></h3><p><a href="https://mp.weixin.qq.com/s/buV1j4DtDiVavtGCJIsedQ">大模型辅助图谱构建的4个策略对比：兼看大模型与知识图谱结合的3个综述 </a></p>
+<h3><span id="llmkg-知识图谱">LLM+KG  知识图谱</span><a href="#llmkg-知识图谱" class="header-anchor">#</a></h3><ol start="15">
+<li><p><a href="https://neo4j.com/developer-blog/unstructured-knowledge-graph-neo4j-langchain/">Enhanced QA Integrating Unstructured Knowledge Graph Using Neo4j and LangChain</a>  </p>
+</li>
+<li><p><a href="https://blog.langchain.dev/using-a-knowledge-graph-to-implement-a-devops-rag-application/">Using a Knowledge Graph to implement a DevOps RAG application</a></p>
+</li>
+</ol>
+<p>1xx. <a href="https://mp.weixin.qq.com/s/buV1j4DtDiVavtGCJIsedQ">大模型辅助图谱构建的4个策略对比：兼看大模型与知识图谱结合的3个综述 </a></p>
 ]]></content>
       <categories>
         <category>AIGC</category>
@@ -791,9 +795,41 @@
 <span id="more"></span>
 
 
-<h1><span id="qanything">QAnything</span><a href="#qanything" class="header-anchor">#</a></h1><h3><span id="bcembedding模型-34">Bcembedding模型 [3,4]</span><a href="#bcembedding模型-34" class="header-anchor">#</a></h3><h3><span id="rerank-34">Rerank [3,4]</span><a href="#rerank-34" class="header-anchor">#</a></h3><h1><span id="参考">参考</span><a href="#参考" class="header-anchor">#</a></h1><h3><span id="qanything">QAnything</span><a href="#qanything" class="header-anchor">#</a></h3><ol start="3">
-<li><a href="https://www.bilibili.com/video/BV1HF4m1w7rY/">有道QAnything背后的故事：关于RAG的一点经验分享</a> V</li>
-<li><a href="https://mp.weixin.qq.com/s/FUex1Q984-IhQ-FoLZTf5Q">有道QAnything背后的故事—关于RAG的一点经验分享</a><br>[公众号有其他文章]</li>
+<h1><span id="qanything">QAnything</span><a href="#qanything" class="header-anchor">#</a></h1><h3><span id="arch1">Arch[1]</span><a href="#arch1" class="header-anchor">#</a></h3><p><img src="https://github.com/netease-youdao/QAnything/raw/master/docs/images/qanything_arch.png" alt="Arch"></p>
+<ul>
+<li><p>索引（indexing）<br>通过Embedding为每一个文本块生成一个向量表示，用于计算<strong>文本向量</strong>和<strong>问题向量</strong>之间的<strong>相似度</strong>。创建索引将原始文本块和Embedding向量以键值对的形式存储，以便将来进行快速和频繁的搜索。</p>
+</li>
+<li><p>检索（Retrieval）<br>使用Embedding模型将用户输入问题转换为向量，计算问题的Embedding向量和语料库中文本块Embedding向量之间的相似度，选择<strong>相似度最高的前K个文档块</strong>作为当前问题的增强上下文信息。</p>
+</li>
+<li><p>生成（Generation）<br>将检索得到的前K个文本块和用户问题一起送进大模型，让大模型基于给定的文本块来回答用户的问题。</p>
+</li>
+</ul>
+<h3><span id="1st-retrievalembedding1">1st Retrieval（embedding）[1]</span><a href="#1st-retrievalembedding1" class="header-anchor">#</a></h3><ul>
+<li><p>Bcembedding模型 [3]</p>
+<ul>
+<li>中英双语和跨语种能力</li>
+<li>多领域覆盖</li>
+</ul>
+</li>
+<li><p>Embedding 可以给出一个得分，但是这个得分描述的更多的是<strong>相似性</strong>。Embedding本质上是一个<strong>双编码器</strong>，两个文本在模型内部没有任何信息交互。只在最后计算两个向量的余弦相似度时才进行唯一一次交互。所以Embedding检索只能把<strong>最相似的</strong>文本片段给你，<strong>没有</strong>能力来判断候选文本和query之间的<strong>相关性</strong>。但是<strong>相似又不等于相关</strong>。</p>
+</li>
+</ul>
+<p>【embedding -&gt; 相似性】</p>
+<img src="/www6vHomeAIGC/2023/06/19/gptRAGQanything/embedding.png" class>
+
+<h3><span id="2nd-retrievalrerank1">2nd Retrieval（rerank）[1]</span><a href="#2nd-retrievalrerank1" class="header-anchor">#</a></h3><ul>
+<li><p>Rerank [3]</p>
+</li>
+<li><p>Rerank本质是一个<strong>Cross-Encoder</strong>的模型。Cross-Encoder能让两个文本片段一开始就在BERT模型各层中通过self-attention进行交互。</p>
+</li>
+</ul>
+<img src="/www6vHomeAIGC/2023/06/19/gptRAGQanything/reranker.png" class>
+
+<p>【rerank -&gt; 相关性】</p>
+<h1><span id="参考">参考</span><a href="#参考" class="header-anchor">#</a></h1><h3><span id="qanything">QAnything</span><a href="#qanything" class="header-anchor">#</a></h3><ol>
+<li><a href="https://github.com/netease-youdao/QAnything">QAnything Repo</a> git</li>
+<li>xxx</li>
+<li><a href="https://www.bilibili.com/video/BV1HF4m1w7rY/">有道QAnything背后的故事：关于RAG的一点经验分享</a> V<br> <a href="https://mp.weixin.qq.com/s/FUex1Q984-IhQ-FoLZTf5Q">有道QAnything背后的故事—关于RAG的一点经验分享</a>   文字版<br>[公众号有其他文章]</li>
 </ol>
 <p>1xx. <a href="https://mp.weixin.qq.com/s?__biz=MzIzMzYwNzY2NQ==&mid=2247489671&idx=1&sn=564a232c3c7919c70a7a1cf5efa77628">前沿重器[45] RAG开源项目Qanything源码阅读1-概述+服务</a></p>
 ]]></content>
@@ -8058,7 +8094,6 @@
 <!-- toc -->
 
 <ul>
-<li><a href="#vectorkg-rag1516">Vector+KG RAG[15][16]</a></li>
 <li><a href="#data-processing17">Data processing[17]</a></li>
 <li><a href="#%E5%8C%BB%E7%96%97%E9%97%AE%E7%AD%94rag20">医疗问答RAG[20]</a><ul>
 <li><a href="#%E6%9E%B6%E6%9E%84">架构</a></li>
@@ -8072,7 +8107,6 @@
 </ul>
 </li>
 <li><a href="#%E5%8F%82%E8%80%83">参考</a><ul>
-<li><a href="#%E7%9F%A5%E8%AF%86%E5%9B%BE%E8%B0%B1">知识图谱</a></li>
 <li><a href="#xxx">xxx</a></li>
 <li><a href="#%E5%8C%BB%E7%96%97%E9%97%AE%E7%AD%94">医疗问答</a></li>
 </ul>
@@ -8083,10 +8117,10 @@
 </div>
 
 
-<h1><span id="vectorkg-rag1516">Vector+KG RAG[15][16]</span><a href="#vectorkg-rag1516" class="header-anchor">#</a></h1><h1><span id="data-processing17">Data processing[17]</span><a href="#data-processing17" class="header-anchor">#</a></h1><p>长文本   变成   QA pair</p>
+<h1><span id="data-processing17">Data processing[17]</span><a href="#data-processing17" class="header-anchor">#</a></h1><p>长文本   变成   QA pair</p>
 <ul>
 <li>规则匹配</li>
-<li>利用LLM抽取</li>
+<li><strong>利用LLM抽取</strong></li>
 <li>人工处理</li>
 </ul>
 <h1><span id="医疗问答rag20">医疗问答RAG[20]</span><a href="#医疗问答rag20" class="header-anchor">#</a></h1><h3><span id="架构">架构</span><a href="#架构" class="header-anchor">#</a></h3><img src="/www6vHomeAIGC/2022/12/31/gptRAGPractice/arch.JPG" class>
@@ -8117,7 +8151,7 @@
 </ul>
 <h3><span id="排序模型">排序模型</span><a href="#排序模型" class="header-anchor">#</a></h3><ul>
 <li>bert模型<ul>
-<li>1个ber模型</li>
+<li>1个bert模型</li>
 <li><strong>速度慢</strong></li>
 <li><strong>格式</strong><ul>
 <li>query[sep]s2  -&gt; 经过softmax，产生2分类，0-1</li>
@@ -8137,13 +8171,7 @@
 <h3><span id="大模型">大模型</span><a href="#大模型" class="header-anchor">#</a></h3><ul>
 <li>综合归纳的作用</li>
 </ul>
-<h1><span id="参考">参考</span><a href="#参考" class="header-anchor">#</a></h1><h3><span id="知识图谱">知识图谱</span><a href="#知识图谱" class="header-anchor">#</a></h3><ol start="15">
-<li><p><a href="https://neo4j.com/developer-blog/unstructured-knowledge-graph-neo4j-langchain/">Enhanced QA Integrating Unstructured Knowledge Graph Using Neo4j and LangChain</a>  </p>
-</li>
-<li><p><a href="https://blog.langchain.dev/using-a-knowledge-graph-to-implement-a-devops-rag-application/">Using a Knowledge Graph to implement a DevOps RAG application</a></p>
-</li>
-</ol>
-<h3><span id="xxx">xxx</span><a href="#xxx" class="header-anchor">#</a></h3><ol start="17">
+<h1><span id="参考">参考</span><a href="#参考" class="header-anchor">#</a></h1><h3><span id="xxx">xxx</span><a href="#xxx" class="header-anchor">#</a></h3><ol start="17">
 <li>&lt;&lt;大模型结合 RAG 构建客服场景自动问答系统&gt;&gt;  NVIDIA大模型日系列活动</li>
 </ol>
 <h3><span id="医疗问答">医疗问答</span><a href="#医疗问答" class="header-anchor">#</a></h3><ol start="20">
