@@ -21,12 +21,12 @@
   </script>
 
   <meta property="og:type" content="article">
-<meta property="og:title" content="(对比学习)CLIP">
+<meta property="og:title" content="(原理|实战)CLIP">
 <meta property="og:url" content="https://www6v.github.io/2023/03/01/gptMultimodalCLIP/index.html">
 <meta property="og:site_name" content="www6v的博客">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-03-01T07:56:58.000Z">
-<meta property="article:modified_time" content="2024-05-14T23:40:45.204Z">
+<meta property="article:modified_time" content="2024-06-23T11:26:56.907Z">
 <meta property="article:author" content="Wang Wei">
 <meta property="article:tag" content="multimodal">
 <meta name="twitter:card" content="summary">
@@ -44,7 +44,7 @@
   };
 </script>
 
-  <title>(对比学习)CLIP | www6v的博客</title>
+  <title>(原理|实战)CLIP | www6v的博客</title>
   
 
 
@@ -201,7 +201,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          (对比学习)CLIP
+          (原理|实战)CLIP
         </h1>
 
         <div class="post-meta">
@@ -224,7 +224,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2024-05-15 07:40:45" itemprop="dateModified" datetime="2024-05-15T07:40:45+08:00">2024-05-15</time>
+                <time title="修改时间：2024-06-23 19:26:56" itemprop="dateModified" datetime="2024-06-23T19:26:56+08:00">2024-06-23</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -265,6 +265,7 @@
 <li><a href="#%E5%B1%80%E9%99%90">局限</a></li>
 </ul>
 </li>
+<li><a href="#%E5%AE%9E%E6%88%9810">实战[10]</a></li>
 <li><a href="#%E5%8F%82%E8%80%83">参考</a><ul>
 <li><a href="#%E5%AE%9E%E6%88%98">实战</a></li>
 </ul>
@@ -291,11 +292,21 @@
 <li>最后，计算图片向量和文字向量间的<strong>相似度</strong>，取相似度最高的那条label即可。</li>
 </ul>
 <h3><span id="局限">局限</span><a href="#局限" class="header-anchor">#</a></h3><p>  当你喂给CLIP一张图时，不管这张图片它是否有见过，CLIP都不会生成一个全新的标签，而是去全集标签中找一个最相似的给你。</p>
-<h1><span id="参考">参考</span><a href="#参考" class="header-anchor">#</a></h1><ol>
+<h1><span id="实战10">实战[10]</span><a href="#实战10" class="header-anchor">#</a></h1><h1><span id="参考">参考</span><a href="#参考" class="header-anchor">#</a></h1><ol>
 <li><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/660476765">关于多模态经典之作CLIP，还有哪些细节是你不知道的</a> 代码</li>
 </ol>
-<p>1xx. <a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/493489688">神器CLIP：连接文本和图像，打造可迁移的视觉模型</a> ***<br>1xx. <a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/486857682">【CLIP系列Paper解读】CLIP: Learning Transferable Visual Models From Natural Language Supervision</a> ***<br>1xx. <a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/646790176">CLIP 模型解读</a><br>1xx. <a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/521151393">详解CLIP (一) | 打通文本-图像预训练实现ImageNet的zero-shot分类，比肩全监督训练的ResNet50&#x2F;101</a><br>1xx. <a target="_blank" rel="noopener" href="https://blog.csdn.net/lsb2002/article/details/132275132">openai多模态大模型：clip详解及实战</a><br>1xx. <a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/555314976">CLIP：多模态领域革命者</a></p>
-<h3><span id="实战">实战</span><a href="#实战" class="header-anchor">#</a></h3><p>1xx. <a target="_blank" rel="noopener" href="https://github.com/mlfoundations/open_clip">open_clip Repo</a> git<br>1xx. <a target="_blank" rel="noopener" href="https://github.com/www6v/Chinese-CLIP">Chinese-CLIP Repo</a> git<br>1xx. langchain 中有CLIP的实现</p>
+<p>1xx. <a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/493489688">神器CLIP：连接文本和图像，打造可迁移的视觉模型</a> ***</p>
+<p>1xx. <a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/486857682">【CLIP系列Paper解读】CLIP: Learning Transferable Visual Models From Natural Language Supervision</a> ***</p>
+<p>1xx. <a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/646790176">CLIP 模型解读</a></p>
+<p>1xx. <a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/521151393">详解CLIP (一) | 打通文本-图像预训练实现ImageNet的zero-shot分类，比肩全监督训练的ResNet50&#x2F;101</a></p>
+<p>1xx. <a target="_blank" rel="noopener" href="https://blog.csdn.net/lsb2002/article/details/132275132">openai多模态大模型：clip详解及实战</a></p>
+<p>1xx. <a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/555314976">CLIP：多模态领域革命者</a></p>
+<h3><span id="实战">实战</span><a href="#实战" class="header-anchor">#</a></h3><ol start="10">
+<li><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV13K421v7Ar/">【多模态】复现OpenAI的CLIP模型</a> V<br>   clip on  resnet [mnist]<br>   <a target="_blank" rel="noopener" href="https://github.com/owenliang/mnist-clip">mnist-clip Repo</a> git</li>
+</ol>
+<p>1xx. <a target="_blank" rel="noopener" href="https://github.com/mlfoundations/open_clip">open_clip Repo</a> git<br>   <a target="_blank" rel="noopener" href="https://colab.research.google.com/drive/1TEUe2j2oXi-sKiteGYUhsCtdvXocI24w#scrollTo=YPHN7PJgKOzb">Interacting with open_clip</a><br>   Training CLIP</p>
+<p>1xx. <a target="_blank" rel="noopener" href="https://github.com/www6v/Chinese-CLIP">Chinese-CLIP Repo</a> git</p>
+<p>1xx. langchain 中有CLIP的实现</p>
 
     </div>
 
@@ -311,7 +322,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="https://www6v.github.io/2023/03/01/gptMultimodalCLIP/" title="(对比学习)CLIP">https://www6v.github.io/2023/03/01/gptMultimodalCLIP/</a>
+    <a href="https://www6v.github.io/2023/03/01/gptMultimodalCLIP/" title="(原理|实战)CLIP">https://www6v.github.io/2023/03/01/gptMultimodalCLIP/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
