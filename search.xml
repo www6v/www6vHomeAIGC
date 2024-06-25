@@ -226,8 +226,12 @@
 <li><a href="/www6vHomeAIGC/2023/04/20/gptQueryTransformation/" title="(原理|实战)Query Transformation">(原理|实战)Query Transformation</a>  </li>
 <li><a href="/www6vHomeAIGC/2023/05/14/gptRAGRouting/" title="(原理|实战)Query Routing">(原理|实战)Query Routing</a> </li>
 <li><a href="/www6vHomeAIGC/2023/05/21/gptRAGIndex/" title="(原理|实战)RAG Index">(原理|实战)RAG Index</a>   </li>
-<li><a href="/www6vHomeAIGC/2023/05/14/gptRAGRerank/" title="(原理|实战)RAG Rerank">(原理|实战)RAG Rerank</a>   </li>
+<li><a href="/www6vHomeAIGC/2023/05/14/gptRAGRerank/" title="(原理|实战)RAG Rerank">(原理|实战)RAG Rerank</a> </li>
+<li>Agentic RAG<ul>
+<li><a href="/www6vHomeAIGC/2023/06/25/gptAgenticRAG/" title="Agentic RAG">Agentic RAG</a>  </li>
 <li><a href="/www6vHomeAIGC/2023/03/02/gptRAGSelfReflective/" title="(原理|实战)Self-Reflective RAG">(原理|实战)Self-Reflective RAG</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li>Multimodal RAG  *<ul>
@@ -730,6 +734,38 @@
       </categories>
       <tags>
         <tag>PEFT</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Agentic RAG</title>
+    <url>/www6vHomeAIGC/2023/06/25/gptAgenticRAG/</url>
+    <content><![CDATA[<p></p>
+<span id="more"></span>
+
+<h1><span id="agentic-rag-1">Agentic RAG [1]</span><a href="#agentic-rag-1" class="header-anchor">#</a></h1><p>Agentic RAG 和简单 RAG 的最大区别在于 <strong>Agentic RAG 引入了 Agent 的动态编排机制，因此可以根据用户提问的不同意图，引入反馈和查询改写机制，并进行“多跳”式的知识推理，从而实现对复杂提问的回答</strong>。</p>
+<ul>
+<li><p>Self-RAG 是相对初级的 Agentic RAG，RAGFlow 中也已提供了相关实现。实践证明，Self-RAG 对于较复杂的多跳问答和多步推理可以明显提升性能。</p>
+</li>
+<li><p>Adaptive RAG</p>
+<ul>
+<li>开放域问答</li>
+<li>多跳问答</li>
+<li>自适应检索</li>
+</ul>
+</li>
+</ul>
+<h1><span id="参考">参考</span><a href="#参考" class="header-anchor">#</a></h1><ol>
+<li><a href="https://mp.weixin.qq.com/s/A8kfbH70sdU5Gd20K9Y0Lw">Agentic RAG 与图任务编排</a><br>Self-RAG     Adaptive RAG</li>
+</ol>
+<p>1xx. <a href="https://mp.weixin.qq.com/s/wuyMN7CLAT9HGYlmjLWUtA">LlamaIndex团队技术报告：“RAG的尽头是Agent”</a></p>
+<h3><span id="实战">实战</span><a href="#实战" class="header-anchor">#</a></h3><p>1xx. <a href="https://www.deeplearning.ai/short-courses/building-agentic-rag-with-llamaindex/">Building Agentic RAG with LlamaIndex - DeepLearning.AI</a><br>    <a href="https://github.com/www6v/deeplearningAI/tree/master/Building%20Agentic%20RAG%20with%20Llamaindex">Building Agentic RAG with LlamaIndex-Repo</a> git<br>    <a href="https://docs.llamaindex.ai/en/stable/examples/agent/custom_agent/">Building a Custom Agent - LlamaIndex</a><br>    <a href="https://llamahub.ai/?tab=agent">Llama Hub</a></p>
+]]></content>
+      <categories>
+        <category>AIGC</category>
+        <category>RAG</category>
+      </categories>
+      <tags>
+        <tag>RAG</tag>
       </tags>
   </entry>
   <entry>
@@ -1846,7 +1882,7 @@
 <li>Self-ask [2]<br>Self-ask是一种follow-up的使用范式，仅仅包含follow-up, immediate answer步骤，至于follow-up多少个step，完全由它自己决定，估计这就是Self-ask的名字的由来。</li>
 </ul>
 <h1><span id="参考">参考</span><a href="#参考" class="header-anchor">#</a></h1><ol>
-<li><p><a href="https://mp.weixin.qq.com/s/1POXDVJDv3ob1HqpKjb3Mg">大语言模型智能体规划能力综述: 分类、任务分解、选择、反思、记忆增强 </a> 翻译</p>
+<li><p>《Understanding the planning of LLM agents: A survey》<br><a href="https://mp.weixin.qq.com/s/1POXDVJDv3ob1HqpKjb3Mg">大语言模型智能体规划能力综述: 分类、任务分解、选择、反思、记忆增强 </a> 翻译<br>  <a href="https://zhuanlan.zhihu.com/p/693264551">Agent四大范式 | 综述：全面理解Agent工作原理</a></p>
 </li>
 <li><p><a href="https://zhuanlan.zhihu.com/p/642357544">2023年新生代大模型Agents技术,ReAct,Self-Ask,Plan-and-execute,以及AutoGPT, HuggingGPT等应用</a> ***  论文+代码</p>
 </li>
@@ -2936,8 +2972,9 @@
 </ol>
 <h3><span id="reflexion">Reflexion</span><a href="#reflexion" class="header-anchor">#</a></h3><ol start="21">
 <li><a href="https://zhuanlan.zhihu.com/p/639254455">【论文阅读】Reflexion: 大模型如何从错误经验中学习？</a></li>
-<li><a href="https://zhuanlan.zhihu.com/p/671508578">Reflexion: 带言语强化学习的语言智体</a><br>   1xx. <a href="https://blog.langchain.dev/reflection-agents/">Reflection Agents</a><br>  <a href="https://www.bilibili.com/video/BV1KJ4m1a7rZ/">LangGraph：Reflection Agents 实战</a> V</li>
+<li><a href="https://zhuanlan.zhihu.com/p/671508578">Reflexion: 带言语强化学习的语言智体</a><br>  1xx. <a href="https://blog.langchain.dev/reflection-agents/">Reflection Agents</a><br>  <a href="https://www.bilibili.com/video/BV1KJ4m1a7rZ/">LangGraph：Reflection Agents 实战</a> V</li>
 </ol>
+<h3><span id="xxx">xxx</span><a href="#xxx" class="header-anchor">#</a></h3><p><a href="https://zhuanlan.zhihu.com/p/691370751">Agent四大范式 | CRITIC：吴恩达力推Agent设计范式</a></p>
 ]]></content>
       <categories>
         <category>AIGC</category>
@@ -7934,7 +7971,7 @@
 </ol>
 <p>1xx. <a href="https://zhuanlan.zhihu.com/p/656485997">大语言模型推理性能优化综述</a></p>
 <p>1xx. <a href="https://zhuanlan.zhihu.com/p/642412124">NLP（十八）：LLM 的推理优化技术纵览</a> *** </p>
-<p>1xx. <a href="https://mp.weixin.qq.com/s/U9ESiWehnoKc9SnDz7DVKg">3万字详细解析清华大学最新综述工作：大模型高效推理综述</a></p>
+<p>1xx. 《A Survey on Efficient Inference for Large Language Models》<br><a href="https://mp.weixin.qq.com/s/U9ESiWehnoKc9SnDz7DVKg">3万字详细解析清华大学最新综述工作：大模型高效推理综述</a> 翻译<br><a href="https://mp.weixin.qq.com/s/V1dXQquifP7uHGU7QxP-Lg">无穹Paper | 如何加速大模型推理？一图读懂大语言模型高效推理技术</a> </p>
 <h3><span id="awesome-llm-inference">Awesome-LLM-Inference</span><a href="#awesome-llm-inference" class="header-anchor">#</a></h3><ol start="10">
 <li><a href="https://github.com/DefTruth/Awesome-LLM-Inference">Awesome-LLM-Inference Repo</a> git<br>1xx. <a href="https://zhuanlan.zhihu.com/p/669777159">[Awesome-LLM-Inference]🔥第三期：30篇，LLM推理论文集-500页PDF</a><br>1xx. <a href="https://zhuanlan.zhihu.com/p/658091768">[Awesome-LLM-Inference]🔥第二期: 20篇，LLM推理论文集-300页PDF</a><br>1xx. <a href="https://zhuanlan.zhihu.com/p/693680304">[LLM推理优化]🔥100+篇: 大模型推理各方向新发展整理</a></li>
 </ol>
