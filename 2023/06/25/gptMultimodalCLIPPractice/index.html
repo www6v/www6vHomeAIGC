@@ -21,17 +21,17 @@
   </script>
 
   <meta property="og:type" content="article">
-<meta property="og:title" content="RAG 评估">
-<meta property="og:url" content="https://www6v.github.io/2023/06/07/gptRAGEval/index.html">
+<meta property="og:title" content="(实战)CLIP">
+<meta property="og:url" content="https://www6v.github.io/2023/06/25/gptMultimodalCLIPPractice/index.html">
 <meta property="og:site_name" content="www6v的博客">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2023-06-07T09:02:42.000Z">
-<meta property="article:modified_time" content="2024-06-07T09:12:44.501Z">
+<meta property="article:published_time" content="2023-06-25T12:43:18.000Z">
+<meta property="article:modified_time" content="2024-06-25T13:17:51.721Z">
 <meta property="article:author" content="Wang Wei">
-<meta property="article:tag" content="RAG">
+<meta property="article:tag" content="multimodal">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="https://www6v.github.io/2023/06/07/gptRAGEval/">
+<link rel="canonical" href="https://www6v.github.io/2023/06/25/gptMultimodalCLIPPractice/">
 
 
 <script id="page-configurations">
@@ -44,7 +44,7 @@
   };
 </script>
 
-  <title>RAG 评估 | www6v的博客</title>
+  <title>(实战)CLIP | www6v的博客</title>
   
 
 
@@ -188,7 +188,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://www6v.github.io/2023/06/07/gptRAGEval/">
+    <link itemprop="mainEntityOfPage" href="https://www6v.github.io/2023/06/25/gptMultimodalCLIPPractice/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/www6vHomeAIGC/images/avatar.gif">
@@ -201,7 +201,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          RAG 评估
+          (实战)CLIP
         </h1>
 
         <div class="post-meta">
@@ -217,14 +217,14 @@
               </span>
               <span class="post-meta-item-text">发表于</span>
 
-              <time title="创建时间：2023-06-07 17:02:42" itemprop="dateCreated datePublished" datetime="2023-06-07T17:02:42+08:00">2023-06-07</time>
+              <time title="创建时间：2023-06-25 20:43:18" itemprop="dateCreated datePublished" datetime="2023-06-25T20:43:18+08:00">2023-06-25</time>
             </span>
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2024-06-07 17:12:44" itemprop="dateModified" datetime="2024-06-07T17:12:44+08:00">2024-06-07</time>
+                <time title="修改时间：2024-06-25 21:17:51" itemprop="dateModified" datetime="2024-06-25T21:17:51+08:00">2024-06-25</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -236,7 +236,7 @@
                 </span>
                   ，
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/www6vHomeAIGC/categories/AIGC/RAG/" itemprop="url" rel="index"><span itemprop="name">RAG</span></a>
+                  <a href="/www6vHomeAIGC/categories/AIGC/multimodal/" itemprop="url" rel="index"><span itemprop="name">multimodal</span></a>
                 </span>
             </span>
 
@@ -255,12 +255,33 @@
 <span id="more"></span>
 
 
+<h1><span id="clip-training-9">CLIP Training [9]</span><a href="#clip-training-9" class="header-anchor">#</a></h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"># image_encoder - ResNet or Vision Transformer</span><br><span class="line"># text_encoder - CBOW or Text Transformer</span><br><span class="line"># I[n, h, w, c] - minibatch of aligned images</span><br><span class="line"># T[n, l] - minibatch of aligned texts</span><br><span class="line"># W_i[d_i, d_e] - learned proj of image to embed</span><br><span class="line"># W_t[d_t, d_e] - learned proj of text to embed</span><br><span class="line"># t - learned temperature parameter</span><br><span class="line"># extract feature representations of each modality</span><br><span class="line"></span><br><span class="line"># -------------------------------------------------</span><br><span class="line"># 1、图像/文字数据过image/text encoder，提取单模态特征</span><br><span class="line"># 每张图片对应一个基本特征I_i</span><br><span class="line"># 每张文字对应一个基本特征T_i</span><br><span class="line"># -------------------------------------------------</span><br><span class="line">I_f = image_encoder(I) #[n, d_i]</span><br><span class="line">T_f = text_encoder(T) #[n, d_t]</span><br><span class="line"></span><br><span class="line"># -------------------------------------------------</span><br><span class="line"># 2. 图像/文字的基本特征过多模态Embedding，提取多模态特征</span><br><span class="line"># 同时对这两个多模态特征做Layer Norm</span><br><span class="line"># -------------------------------------------------</span><br><span class="line">I_e = l2_normalize(np.dot(I_f, W_i), axis=1) # [n, d_i] * [d_i, d_e] = [n, d_e]</span><br><span class="line">T_e = l2_normalize(np.dot(T_f, W_t), axis=1) # [n, d_t] * [d_t, d_e] = [n, d_e]</span><br><span class="line"></span><br><span class="line"># -------------------------------------------------</span><br><span class="line"># 3、计算图片-文字向量的余弦相似度</span><br><span class="line"># -------------------------------------------------</span><br><span class="line">logits = np.dot(I_e, T_e.T) * np.exp(t) # [n, n]</span><br><span class="line"></span><br><span class="line"># -------------------------------------------------</span><br><span class="line"># 4、计算Loss</span><br><span class="line"># -------------------------------------------------</span><br><span class="line">labels = np.arange(n)</span><br><span class="line">loss_i = cross_entropy_loss(logits, labels, axis=0)</span><br><span class="line">loss_t = cross_entropy_loss(logits, labels, axis=1)</span><br><span class="line">loss = (loss_i + loss_t)/2</span><br></pre></td></tr></table></figure>
 
 
 
-<p>1xx. <a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Jz421Q7Lw/">如何利用RAGAs评估RAG系统的好坏</a></p>
-<p><a target="_blank" rel="noopener" href="https://github.com/blackinkkkxi/RAG_langchain/blob/main/learn/evaluation/RAGAS-langchian.ipynb">使用LangChain和RAGAS对RAG系统进行自动有效评估</a></p>
-<p>1xx. <a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1aZ421W7DB/">一次搞懂RAG评估，三个角度LangChain，LlamaIndex，RAGAS</a><br>   <a target="_blank" rel="noopener" href="https://techdiylife.github.io/blog/blog.html?category1=c02&blogid=0053">RAG评估资料大全 </a><br>   RAG评估指标：两种视角理解评估指标<br>   <a target="_blank" rel="noopener" href="https://docs.smith.langchain.com/old/cookbook/testing-examples/rag_eval">RAG Evaluation</a><br>   <a target="_blank" rel="noopener" href="https://docs.smith.langchain.com/old/cookbook/testing-examples/ragas">RAG evaluation with RAGAS</a></p>
+<ul>
+<li>CLIP分为<strong>按行计算Loss</strong>和<strong>按列计算Loss</strong></li>
+<li><strong>按行计算Loss</strong>，在每一行范围内做softmax，然后计算cross_entropy（蓝色格子部分是真值）。这样计算Loss的意义是：对于每一张图片，我们都希望找到和它最相似的文字。</li>
+<li><strong>按列计算Loss</strong>，在每一列的范围内做softmax，然后计算cross_entropy（蓝色格子部分是真值）。这样计算Loss的意义是：对于每一段文字，我们都希望找到和它最相似的图片。</li>
+<li><strong>最后将这两个Loss相加取平均</strong>，代表我们在模型优化过程中<strong>考虑了“图片-&gt;文字”和“文字-&gt;图片”的双向关系</strong>。</li>
+</ul>
+<h1><span id="demo10">Demo[10]</span><a href="#demo10" class="header-anchor">#</a></h1><p>【基于clip on  resnet,   数据集为mnist中的&lt;数字文本，数字图片&gt;对】</p>
+<h1><span id="open_clip11">open_clip[11]</span><a href="#open_clip11" class="header-anchor">#</a></h1><ul>
+<li>Training CLIP</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">python -m training.main \</span><br><span class="line">    --save-frequency <span class="number">1</span> \</span><br><span class="line">    --zeroshot-frequency <span class="number">1</span> \</span><br><span class="line">    --report-to tensorboard \</span><br><span class="line">    --train-data=<span class="string">&quot;/path/to/train_data.csv&quot;</span>  \      <span class="comment"># 训练数据 </span></span><br><span class="line">    --val-data=<span class="string">&quot;/path/to/validation_data.csv&quot;</span>  \   <span class="comment"># 验证数据</span></span><br><span class="line">    --csv-img-key filepath \</span><br><span class="line">    --csv-caption-key title \</span><br><span class="line">    --imagenet-val=/path/to/imagenet/root/val/ \</span><br><span class="line">    --warmup <span class="number">10000</span> \      <span class="comment">#</span></span><br><span class="line">    --batch-size=<span class="number">128</span> \    <span class="comment">#</span></span><br><span class="line">    --lr=<span class="number">1e-3</span> \           <span class="comment">#</span></span><br><span class="line">    --wd=<span class="number">0.1</span> \       </span><br><span class="line">    --epochs=<span class="number">30</span> \         <span class="comment">#</span></span><br><span class="line">    --workers=<span class="number">8</span> \</span><br><span class="line">    --model RN50          <span class="comment"># 模型</span></span><br></pre></td></tr></table></figure>
+
+
+<h1><span id="参考">参考</span><a href="#参考" class="header-anchor">#</a></h1><h3><span id="实战">实战</span><a href="#实战" class="header-anchor">#</a></h3><ol start="9">
+<li><p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/660476765">关于多模态经典之作CLIP，还有哪些细节是你不知道的</a></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV13K421v7Ar/">【多模态】复现OpenAI的CLIP模型</a> V<br><a target="_blank" rel="noopener" href="https://github.com/owenliang/mnist-clip">mnist-clip Repo</a> git</p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://github.com/mlfoundations/open_clip">open_clip Repo</a> git<br><a target="_blank" rel="noopener" href="https://colab.research.google.com/drive/1TEUe2j2oXi-sKiteGYUhsCtdvXocI24w#scrollTo=YPHN7PJgKOzb">Interacting with open_clip</a></p>
+</li>
+</ol>
+<p>1xx. <a target="_blank" rel="noopener" href="https://github.com/www6v/Chinese-CLIP">Chinese-CLIP Repo</a> git</p>
+<p>1xx. langchain 中有CLIP的实现</p>
 
     </div>
 
@@ -276,7 +297,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="https://www6v.github.io/2023/06/07/gptRAGEval/" title="RAG 评估">https://www6v.github.io/2023/06/07/gptRAGEval/</a>
+    <a href="https://www6v.github.io/2023/06/25/gptMultimodalCLIPPractice/" title="(实战)CLIP">https://www6v.github.io/2023/06/25/gptMultimodalCLIPPractice/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
@@ -287,7 +308,7 @@
 
       <footer class="post-footer">
           <div class="post-tags">
-              <a href="/www6vHomeAIGC/tags/RAG/" rel="tag"># RAG</a>
+              <a href="/www6vHomeAIGC/tags/multimodal/" rel="tag"># multimodal</a>
           </div>
 
         
@@ -296,12 +317,12 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/www6vHomeAIGC/2023/06/05/gptAgentAutogen/" rel="prev" title="AutoGen">
-      <i class="fa fa-chevron-left"></i> AutoGen
+    <a href="/www6vHomeAIGC/2023/06/25/gptAgenticRAG/" rel="prev" title="Agentic RAG">
+      <i class="fa fa-chevron-left"></i> Agentic RAG
     </a></div>
       <div class="post-nav-item">
-    <a href="/www6vHomeAIGC/2023/06/11/gptInferRay/" rel="next" title="(原理)推理 Ray">
-      (原理)推理 Ray <i class="fa fa-chevron-right"></i>
+    <a href="/www6vHomeAIGC/2024/01/12/gptPEFTQLora/" rel="next" title="(实战)PEFT QLoRA">
+      (实战)PEFT QLoRA <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
       </footer>
