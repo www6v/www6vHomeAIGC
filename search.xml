@@ -768,6 +768,7 @@
 </ol>
 <p>1xx. <a href="https://github.com/www6v/Chinese-CLIP">Chinese-CLIP Repo</a> git</p>
 <p>1xx. langchain 中有CLIP的实现</p>
+<p>1xx. <a href="https://github.com/jina-ai/clip-as-service">GitHub - jina-ai&#x2F;clip-as-service: Scalable embedding, reasoning, ranking for images and sentences with CLIP</a> git</p>
 ]]></content>
       <categories>
         <category>AIGC</category>
@@ -794,12 +795,18 @@
 <li>自适应检索</li>
 </ul>
 </li>
+<li><p>Adaptive RAG [2]<br>Adaptive-RAG的核心在于它能够通过一个<strong>分类器</strong>来评估问题的复杂性，然后根据这个评估结果选择最合适的处理策略。<br><strong>分类器是</strong>一个<strong>较小的语言模型</strong></p>
+</li>
 </ul>
 <h1><span id="参考">参考</span><a href="#参考" class="header-anchor">#</a></h1><ol>
-<li><a href="https://mp.weixin.qq.com/s/A8kfbH70sdU5Gd20K9Y0Lw">Agentic RAG 与图任务编排</a><br>Self-RAG     Adaptive RAG</li>
+<li><p><a href="https://mp.weixin.qq.com/s/A8kfbH70sdU5Gd20K9Y0Lw">Agentic RAG 与图任务编排</a><br>Self-RAG     Adaptive RAG</p>
+</li>
+<li><p><a href="https://zhuanlan.zhihu.com/p/688547968">Adaptive-RAG：性能提升50%以上的高效RAG策略</a></p>
+</li>
 </ol>
 <p>1xx. <a href="https://mp.weixin.qq.com/s/wuyMN7CLAT9HGYlmjLWUtA">LlamaIndex团队技术报告：“RAG的尽头是Agent”</a></p>
 <h3><span id="实战">实战</span><a href="#实战" class="header-anchor">#</a></h3><p>1xx. <a href="https://www.deeplearning.ai/short-courses/building-agentic-rag-with-llamaindex/">Building Agentic RAG with LlamaIndex - DeepLearning.AI</a><br>    <a href="https://github.com/www6v/deeplearningAI/tree/master/Building%20Agentic%20RAG%20with%20Llamaindex">Building Agentic RAG with LlamaIndex-Repo</a> git<br>    <a href="https://docs.llamaindex.ai/en/stable/examples/agent/custom_agent/">Building a Custom Agent - LlamaIndex</a><br>    <a href="https://llamahub.ai/?tab=agent">Llama Hub</a></p>
+<p>​</p>
 ]]></content>
       <categories>
         <category>AIGC</category>
@@ -3016,6 +3023,7 @@
 <li><a href="https://zhuanlan.zhihu.com/p/671508578">Reflexion: 带言语强化学习的语言智体</a><br>  1xx. <a href="https://blog.langchain.dev/reflection-agents/">Reflection Agents</a><br>  <a href="https://www.bilibili.com/video/BV1KJ4m1a7rZ/">LangGraph：Reflection Agents 实战</a> V</li>
 </ol>
 <h3><span id="xxx">xxx</span><a href="#xxx" class="header-anchor">#</a></h3><p><a href="https://zhuanlan.zhihu.com/p/691370751">Agent四大范式 | CRITIC：吴恩达力推Agent设计范式</a></p>
+<h3><span id="practice">Practice</span><a href="#practice" class="header-anchor">#</a></h3><p><a href="https://github.com/andrewyng/translation-agent">Translation Agent: Agentic translation using reflection workflow</a></p>
 ]]></content>
       <categories>
         <category>AIGC</category>
@@ -4338,6 +4346,7 @@
 <li><a href="#xxx">xxx</a></li>
 <li><a href="#platform">Platform</a></li>
 <li><a href="#%E4%BA%A7%E5%93%81-%E8%B0%83%E7%A0%94">产品 &amp;调研</a></li>
+<li><a href="#modelscope-agent-agentfabric">modelscope-agent AgentFabric</a></li>
 </ul>
 </li>
 </ul>
@@ -4702,6 +4711,11 @@
 <li><a href="https://mp.weixin.qq.com/s/WDkYZF9-JRhzM467Uf8lUA">利用Coze 实现吴恩达的4种 AI Agent 设计模式</a></li>
 </ol>
 <h3><span id="产品-amp调研">产品 &amp;调研</span><a href="#产品-amp调研" class="header-anchor">#</a></h3><p>1xx. <a href="https://mp.weixin.qq.com/s/RrymA1NwHzz9Q34wITZo6w">2024 年最完整的 AI Agents 清单来了，涉及 13 个领域，上百个 Agents！ </a>  开源 闭源 ***<br>1xx. <a href="https://mp.weixin.qq.com/s/v_BvcMqd-FpwRbOD09MR0A">全球AI Agent大盘点，大语言模型创业一定要参考的60个AI智能体</a><br>1xx. <a href="https://mp.weixin.qq.com/s/KbDOBkmYsTiwkjg2-YoRrQ">大模型时代的APP–2024年 AI Agent行业报告</a> ***</p>
+<h3><span id="modelscope-agent-agentfabric">modelscope-agent  AgentFabric</span><a href="#modelscope-agent-agentfabric" class="header-anchor">#</a></h3><p>1xx. <a href="https://cloud.tencent.com/developer/article/2421616">LLM 大模型学习必知必会系列(十)：基于AgentFabric实现交互式智能体应用,Agent实战-腾讯云开发者社区-腾讯云</a></p>
+<p>1xx. <a href="https://github.com/modelscope/modelscope-agent/tree/master/apps/agentfabric">modelscope-agent&#x2F;apps&#x2F;agentfabric at master · modelscope&#x2F;modelscope-agent</a></p>
+<p>1xx. <a href="https://zhuanlan.zhihu.com/p/669397935">Modelscope Agent实操（一）：0代码创建、发布并分享一个专属Agent</a></p>
+<p>1xx. <a href="https://zhuanlan.zhihu.com/p/672235050">从agentfabric开始体验魔搭Agent</a></p>
+<p>1xx. <a href="https://zhuanlan.zhihu.com/p/679918404">社区供稿 | GLM-4适配ModelScope-Agent最佳实践</a></p>
 ]]></content>
       <categories>
         <category>AIGC</category>
@@ -5746,16 +5760,21 @@
 <h1><span id="多模态-agent10">多模态 Agent[10]</span><a href="#多模态-agent10" class="header-anchor">#</a></h1><h3><span id="范式">范式</span><a href="#范式" class="header-anchor">#</a></h3><img src="/www6vHomeAIGC/2023/02/21/gptAgentMultimodal/tasks.JPG" class>
 
 <ul>
-<li>MM-ReAct </li>
-<li>HuggingGPT, Chameleon</li>
+<li><p>MM-ReAct </p>
+</li>
+<li><p>HuggingGPT, Chameleon</p>
+</li>
+<li><p>Visual ChatGPT</p>
+</li>
 </ul>
 <h1><span id="参考">参考</span><a href="#参考" class="header-anchor">#</a></h1><h3><span id="综述">综述</span><a href="#综述" class="header-anchor">#</a></h3><ol>
 <li><a href="https://mp.weixin.qq.com/s?__biz=Mzg5NTc2OTcyOQ==&mid=2247488499&idx=1&sn=ac8c5092ddc8fd724965d12aff3f9392">2024年大型多模态智能体(Large Multimodal Agents)综述：组件, 分类，协作，评估，应用，展望</a> ***</li>
 </ol>
 <p>1xx. <a href="https://zhuanlan.zhihu.com/p/678238642">个人LLM智体的综述</a><br>1xx. <a href="https://zhuanlan.zhihu.com/p/678203245">智体AI在多模态交互领域的综述（上）</a><br>1xx. <a href="https://zhuanlan.zhihu.com/p/678222381">智体AI在多模态交互领域的综述（下）</a></p>
 <h3><span id="xxx">xxx</span><a href="#xxx" class="header-anchor">#</a></h3><ol start="10">
-<li><a href="https://www.bilibili.com/video/BV1mM411X7Zn/">多模态 Agents：用大模型语言模型串联多模态专家</a></li>
+<li><a href="https://www.bilibili.com/video/BV1mM411X7Zn/">多模态 Agents：用大模型语言模型串联多模态专家</a> V</li>
 </ol>
+<h3><span id="多模态agent">多模态Agent</span><a href="#多模态agent" class="header-anchor">#</a></h3><p>1xx. <a href="/www6vHomeAIGC/2023/01/18/gptMultimodal/" title="(综述)多模态">(综述)多模态</a> self<br>1xx. <a href="/www6vHomeAIGC/2023/03/16/gptMultimodalSurvey/" title="(Survey)多模态">(Survey)多模态</a> self</p>
 <h3><span id="app-agent">App Agent</span><a href="#app-agent" class="header-anchor">#</a></h3><p>1xx. <a href="https://zhuanlan.zhihu.com/p/677071947">AppAgent源码分析&amp;思考</a><br><a href="https://github.com/mnotgod96/AppAgent">https://github.com/mnotgod96/AppAgent</a><br><a href="https://icoz69.github.io/">https://icoz69.github.io/</a></p>
 <p>1xx. <a href="https://zhuanlan.zhihu.com/p/681424409">【LLM-agent】MOBILE-AGENT: 具有视觉感知能力的自治多模移动设备agent</a><br>   <a href="https://github.com/X-PLUG/MobileAgent">https://github.com/X-PLUG/MobileAgent</a></p>
 ]]></content>
@@ -6983,6 +7002,7 @@
 <li><a href="https://zhuanlan.zhihu.com/p/665644399">NLP（廿二）：LLM 时代的 multi-agent 系统</a></li>
 </ol>
 <p>1xx. <a href="https://mp.weixin.qq.com/s?__biz=Mzg5NTc2OTcyOQ==&mid=2247487550&idx=1&sn=28c8147920595f385bec3d3b05911ae7">MetaGPT-ICLR2024: 高效人类工作流(SOPs)融入多Agent协作，显著提升软件工程效率！</a></p>
+<p>1xx. <a href="https://zhuanlan.zhihu.com/p/696039197">多Agent系统与任务规划、记忆管理和区块链</a></p>
 ]]></content>
       <categories>
         <category>AIGC</category>
@@ -7079,7 +7099,8 @@
 <li><a href="#%E8%AE%BA%E6%96%87-1">论文</a></li>
 <li><a href="#model-architecture2">Model Architecture[2]</a></li>
 <li><a href="#%E8%AE%BA%E6%96%87-2">论文</a></li>
-<li><a href="#arch-3">Arch [3]</a></li>
+<li><a href="#arch-32">Arch [3.2]</a></li>
+<li><a href="#%E7%B1%BB%E5%9E%8B31">类型[3.1]</a></li>
 <li><a href="#%E5%85%B6%E4%BB%96">其他</a></li>
 <li><a href="#%E5%8F%82%E8%80%83">参考</a><ul>
 <li><a href="#survey">survey</a></li>
@@ -7168,13 +7189,22 @@
 
 <hr>
 <h1><span id="论文">论文</span><a href="#论文" class="header-anchor">#</a></h1><ul>
-<li><p>论文地址<br> <a href="https://arxiv.org/abs/2306.13549">A Survey on Multimodal Large Language Models</a></p>
+<li><p>论文地址<br> <a href="https://arxiv.org/pdf/2306.13549v1">A Survey on Multimodal Large Language Models</a><br> <a href="https://arxiv.org/abs/2306.13549">A Survey on Multimodal Large Language Models</a> 中国科学技术大学   腾讯</p>
 </li>
 <li><p>开源地址<br><a href="https://github.com/BradyFU/Awesome-Multimodal-Large-Language-Models">Repo</a></p>
 </li>
 </ul>
-<h1><span id="arch-3">Arch [3]</span><a href="#arch-3" class="header-anchor">#</a></h1><img src="/www6vHomeAIGC/2023/01/18/gptMultimodal/arch2.png" class>
+<h1><span id="arch-32">Arch [3.2]</span><a href="#arch-32" class="header-anchor">#</a></h1><img src="/www6vHomeAIGC/2023/01/18/gptMultimodal/arch2.png" class>
 
+<h1><span id="类型31">类型[3.1]</span><a href="#类型31" class="header-anchor">#</a></h1><ul>
+<li>本文将最近具有代表性的MLLM分为4种主要类型：<ul>
+<li><strong>多模态指令调整（MIT）</strong></li>
+<li>多模态上下文学习（M-ICL）</li>
+<li>多模态思想链（M-CoT）</li>
+<li><strong>LLM辅助视觉推理（LAVR）</strong>【类似agent】</li>
+</ul>
+</li>
+</ul>
 <hr>
 <h1><span id="其他">其他</span><a href="#其他" class="header-anchor">#</a></h1><ul>
 <li><p>对比</p>
@@ -7194,11 +7224,11 @@
 </li>
 </ul>
 <h1><span id="参考">参考</span><a href="#参考" class="header-anchor">#</a></h1><h3><span id="survey">survey</span><a href="#survey" class="header-anchor">#</a></h3><ol>
-<li><p>《Foundational Models Defining a New Era in Vision: A Survey and Outlook》大学<br> <a href="https://blog.csdn.net/qq_45368632/article/details/132180645">视觉大模型的全面解析</a><br> <a href="https://zhuanlan.zhihu.com/p/655135848">基础模型定义视觉的新时代：综述和展望</a><br> <a href="https://zhuanlan.zhihu.com/p/648578542">万字长文带你全面解读视觉大模型</a></p>
+<li><p>《Foundational Models Defining a New Era in Vision: A Survey and Outlook》<br> <a href="https://blog.csdn.net/qq_45368632/article/details/132180645">视觉大模型的全面解析</a><br> <a href="https://zhuanlan.zhihu.com/p/655135848">基础模型定义视觉的新时代：综述和展望</a><br> <a href="https://zhuanlan.zhihu.com/p/648578542">万字长文带你全面解读视觉大模型</a></p>
 </li>
 <li><p>《MM-LLMs: Recent Advances in MultiModal Large Language Models》<br><a href="https://blog.csdn.net/qq_41185868/article/details/135877268">AI之MLM：《MM-LLMs: Recent Advances in MultiModal Large Language Models多模态大语言模型的最新进展》翻译与解读</a> 翻译<br><a href="https://zhuanlan.zhihu.com/p/680487634">腾讯发布的多模态大模型（MM-LLM）的最新综述、从26个最新的多模态大模型中归纳最佳实践</a><br><a href="https://zhuanlan.zhihu.com/p/680955430">多模态大模型最新完整综述 MM-LLMs</a></p>
 </li>
-<li><p>《A Survey on Multimodal Large Language Models》  中国科学技术大学<br><a href="https://cloud.tencent.com/developer/article/2322835">MLLM首篇综述 | 一文全览多模态大模型的前世、今生和未来</a><br><a href="https://mp.weixin.qq.com/s/V5aiWUYh14q00jAn2O6VKA">多模态大语言模型全面综述：架构，训练，数据，评估，扩展，应用，挑战，机遇</a></p>
+<li><p>《A Survey on Multimodal Large Language Models》  v1 v2版本<br>3.1 <a href="https://cloud.tencent.com/developer/article/2322835">MLLM首篇综述 | 一文全览多模态大模型的前世、今生和未来</a>  v1版本<br>3.2 <a href="https://mp.weixin.qq.com/s/V5aiWUYh14q00jAn2O6VKA">多模态大语言模型全面综述：架构，训练，数据，评估，扩展，应用，挑战，机遇</a>  v2版本</p>
 </li>
 </ol>
 <h3><span id="chat">chat</span><a href="#chat" class="header-anchor">#</a></h3><p>1xx. <a href="https://zhuanlan.zhihu.com/p/670821058">[论文阅读] 双子座：一个功能强大的多模态模型系列，Gemini: A Family of Highly Capable Multimodal Models</a></p>
