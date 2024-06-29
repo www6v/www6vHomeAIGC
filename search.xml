@@ -745,9 +745,41 @@
 <span id="more"></span>
 
 
-<h3><span id="图像编辑">图像编辑</span><a href="#图像编辑" class="header-anchor">#</a></h3><p>InstructPix2Pix</p>
-<h3><span id="framework">Framework</span><a href="#framework" class="header-anchor">#</a></h3><h1><span id="参考">参考</span><a href="#参考" class="header-anchor">#</a></h1><h3><span id="图像编辑">图像编辑</span><a href="#图像编辑" class="header-anchor">#</a></h3><p>1xx. <a href="https://blog.csdn.net/huzimu_/article/details/136547375">论文阅读：Diffusion Model-Based Image Editing: A Survey_diffusion model based image editing-CSDN博客</a></p>
+<h1><span id="图像编辑">图像编辑</span><a href="#图像编辑" class="header-anchor">#</a></h1><h3><span id="大类">大类</span><a href="#大类" class="header-anchor">#</a></h3><ul>
+<li>从图片编辑的任务方面可以被分为3个大类<ul>
+<li>语义编辑semantic editing </li>
+<li>风格编辑stylistic editing</li>
+<li>结构编辑structural editing</li>
+</ul>
+</li>
+</ul>
+<h3><span id="approaches">APPROACHES</span><a href="#approaches" class="header-anchor">#</a></h3><ul>
+<li><p>TRAINING-BASED APPROACHES</p>
+<ul>
+<li>InstructPix2Pix</li>
+</ul>
+</li>
+<li><p>TESTING-TIME FINETUNING APPROACHES</p>
+</li>
+<li><p>TRAINING AND FINETUNING FREE APPROACHES</p>
+</li>
+</ul>
+<h1><span id="framework">Framework</span><a href="#framework" class="header-anchor">#</a></h1><ul>
+<li>diffusers [10]</li>
+</ul>
+<ul>
+<li>controlnet</li>
+<li>dreambooth</li>
+<li>instruct_pix2pix</li>
+</ul>
+<h1><span id="参考">参考</span><a href="#参考" class="header-anchor">#</a></h1><h3><span id="图像编辑">图像编辑</span><a href="#图像编辑" class="header-anchor">#</a></h3><ol>
+<li><a href="https://blog.csdn.net/huzimu_/article/details/136547375">论文阅读：Diffusion Model-Based Image Editing: A Survey</a><br><a href="https://github.com/SiatMMLab/Awesome-Diffusion-Model-Based-Image-Editing-Methods">Repo</a> git</li>
+</ol>
 <p>1xx.<br>《A Survey of Multimodal-Guided Image Editing with Text-to-Image Diffusion Models》<br><a href="https://github.com/xinchengshuai/Awesome-Image-Editing">A Survey of Multimodal-Guided Image Editing with Text-to-Image Diffusion Models</a></p>
+<h3><span id="instructpix2pix">InstructPix2Pix</span><a href="#instructpix2pix" class="header-anchor">#</a></h3><p><a href="https://zhuanlan.zhihu.com/p/655135961">InstructPix2Pix：用指令给图像做修改</a><br><a href="https://zhuanlan.zhihu.com/p/655372592">Prompt-to-prompt：让生成的图像保持一致</a><br><a href="https://github.com/timothybrooks/instruct-pix2pix">Repo</a> git</p>
+<h3><span id="framework">Framework</span><a href="#framework" class="header-anchor">#</a></h3><ol start="10">
+<li><a href="https://github.com/huggingface/diffusers/tree/main/examples">Repo diffusers</a> git</li>
+</ol>
 ]]></content>
       <categories>
         <category>AIGC</category>
