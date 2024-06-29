@@ -187,6 +187,10 @@
 <li><a href="/www6vHomeAIGC/2023/03/01/gptMultimodalVit/" title="ViT,ViLT">ViT,ViLT</a></li>
 </ul>
 </li>
+<li>生成<ul>
+<li><a href="/www6vHomeAIGC/2023/06/29/gptMultimodalDiffusion/" title="Diffusion">Diffusion</a></li>
+</ul>
+</li>
 <li>端到端训练LLM <ul>
 <li><a href="/www6vHomeAIGC/2023/03/15/gptMultimodalBlip/" title="(图生文)BLIP-2, Flamingo">(图生文)BLIP-2, Flamingo</a> </li>
 <li><a href="/www6vHomeAIGC/2023/03/14/gptMultimodalLlava/" title="(原理|实战)多模态  LLaVa">(原理|实战)多模态  LLaVa</a>  </li>
@@ -732,6 +736,25 @@
       </categories>
       <tags>
         <tag>PEFT</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Diffusion</title>
+    <url>/www6vHomeAIGC/2023/06/29/gptMultimodalDiffusion/</url>
+    <content><![CDATA[<p></p>
+<span id="more"></span>
+
+
+<h3><span id="图像编辑">图像编辑</span><a href="#图像编辑" class="header-anchor">#</a></h3><p>InstructPix2Pix</p>
+<h3><span id="framework">Framework</span><a href="#framework" class="header-anchor">#</a></h3><h1><span id="参考">参考</span><a href="#参考" class="header-anchor">#</a></h1><h3><span id="图像编辑">图像编辑</span><a href="#图像编辑" class="header-anchor">#</a></h3><p>1xx. <a href="https://blog.csdn.net/huzimu_/article/details/136547375">论文阅读：Diffusion Model-Based Image Editing: A Survey_diffusion model based image editing-CSDN博客</a></p>
+<p>1xx.<br>《A Survey of Multimodal-Guided Image Editing with Text-to-Image Diffusion Models》<br><a href="https://github.com/xinchengshuai/Awesome-Image-Editing">A Survey of Multimodal-Guided Image Editing with Text-to-Image Diffusion Models</a></p>
+]]></content>
+      <categories>
+        <category>AIGC</category>
+        <category>multimodal</category>
+      </categories>
+      <tags>
+        <tag>multimodal</tag>
       </tags>
   </entry>
   <entry>
@@ -3765,7 +3788,7 @@
 <h1><span id="论文">论文</span><a href="#论文" class="header-anchor">#</a></h1><ul>
 <li>论文地址<br> 《Multimodal Foundation Models:From Specialists to General-Purpose Assistants》  microsoft</li>
 </ul>
-<h1><span id="overview-0">overview [0]</span><a href="#overview-0" class="header-anchor">#</a></h1>
+<h1><span id="overview-0">overview [0]</span><a href="#overview-0" class="header-anchor">#</a></h1><img src="/www6vHomeAIGC/2023/03/16/gptMultimodalSurvey/overview.jpeg" class>
 
 <h1><span id="视觉理解-1">视觉理解 [1]</span><a href="#视觉理解-1" class="header-anchor">#</a></h1><img src="/www6vHomeAIGC/2023/03/16/gptMultimodalSurvey/understanding.png" class>
 
