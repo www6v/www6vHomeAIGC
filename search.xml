@@ -199,7 +199,8 @@
 </li>
 <li>Multimodal Agent*<ul>
 <li><a href="/www6vHomeAIGC/2023/02/21/gptAgentMultimodal/" title="Agent 多模态">Agent 多模态</a>  </li>
-<li><a href="/www6vHomeAIGC/2023/03/05/gptAgentWeb/" title="(原理)Web Agent">(原理)Web Agent</a></li>
+<li><a href="/www6vHomeAIGC/2023/03/05/gptAgentWeb/" title="(原理)Web Agent">(原理)Web Agent</a>  </li>
+<li><a href="/www6vHomeAIGC/2023/06/30/gptAgentMultimodalApp/" title="App Agent">App Agent</a></li>
 </ul>
 </li>
 </ul>
@@ -739,6 +740,24 @@
       </tags>
   </entry>
   <entry>
+    <title>App Agent</title>
+    <url>/www6vHomeAIGC/2023/06/30/gptAgentMultimodalApp/</url>
+    <content><![CDATA[<p></p>
+<span id="more"></span>
+
+
+<h1><span id="参考">参考</span><a href="#参考" class="header-anchor">#</a></h1><h3><span id="app-agent">App Agent</span><a href="#app-agent" class="header-anchor">#</a></h3><p>1xx. <a href="https://zhuanlan.zhihu.com/p/677071947">AppAgent源码分析&amp;思考</a><br><a href="https://github.com/mnotgod96/AppAgent">https://github.com/mnotgod96/AppAgent</a><br><a href="https://icoz69.github.io/">https://icoz69.github.io/</a></p>
+<p>1xx. <a href="https://zhuanlan.zhihu.com/p/681424409">【LLM-agent】MOBILE-AGENT: 具有视觉感知能力的自治多模移动设备agent</a><br>   <a href="https://github.com/X-PLUG/MobileAgent">https://github.com/X-PLUG/MobileAgent</a></p>
+]]></content>
+      <categories>
+        <category>AIGC</category>
+        <category>Agent</category>
+      </categories>
+      <tags>
+        <tag>AIGC</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Diffusion</title>
     <url>/www6vHomeAIGC/2023/06/29/gptMultimodalDiffusion/</url>
     <content><![CDATA[<p></p>
@@ -780,6 +799,7 @@
 <h3><span id="framework">Framework</span><a href="#framework" class="header-anchor">#</a></h3><ol start="10">
 <li><a href="https://github.com/huggingface/diffusers/tree/main/examples">Repo diffusers</a> git</li>
 </ol>
+<h3><span id="llms-meet-multimodal-generation-and-editing-a-survey">《LLMs Meet Multimodal Generation and Editing: A Survey》</span><a href="#llms-meet-multimodal-generation-and-editing-a-survey" class="header-anchor">#</a></h3><p>Image Generation， Image Editing<br><a href="https://github.com/YingqingHe/Awesome-LLMs-meet-Multimodal-Generation">Repo</a></p>
 ]]></content>
       <categories>
         <category>AIGC</category>
@@ -5817,9 +5837,11 @@
 <ul>
 <li><p>MM-ReAct </p>
 </li>
-<li><p>HuggingGPT, Chameleon</p>
+<li><p>HuggingGPT[21, 22] </p>
 </li>
-<li><p>Visual ChatGPT</p>
+<li><p>Chameleon</p>
+</li>
+<li><p>Visual ChatGPT [20]</p>
 </li>
 </ul>
 <h1><span id="参考">参考</span><a href="#参考" class="header-anchor">#</a></h1><h3><span id="综述">综述</span><a href="#综述" class="header-anchor">#</a></h3><ol>
@@ -5830,8 +5852,14 @@
 <li><a href="https://www.bilibili.com/video/BV1mM411X7Zn/">多模态 Agents：用大模型语言模型串联多模态专家</a> V</li>
 </ol>
 <h3><span id="多模态agent">多模态Agent</span><a href="#多模态agent" class="header-anchor">#</a></h3><p>1xx. <a href="/www6vHomeAIGC/2023/01/18/gptMultimodal/" title="(综述)多模态">(综述)多模态</a> self<br>1xx. <a href="/www6vHomeAIGC/2023/03/16/gptMultimodalSurvey/" title="(Survey)多模态">(Survey)多模态</a> self</p>
-<h3><span id="app-agent">App Agent</span><a href="#app-agent" class="header-anchor">#</a></h3><p>1xx. <a href="https://zhuanlan.zhihu.com/p/677071947">AppAgent源码分析&amp;思考</a><br><a href="https://github.com/mnotgod96/AppAgent">https://github.com/mnotgod96/AppAgent</a><br><a href="https://icoz69.github.io/">https://icoz69.github.io/</a></p>
-<p>1xx. <a href="https://zhuanlan.zhihu.com/p/681424409">【LLM-agent】MOBILE-AGENT: 具有视觉感知能力的自治多模移动设备agent</a><br>   <a href="https://github.com/X-PLUG/MobileAgent">https://github.com/X-PLUG/MobileAgent</a></p>
+<h3><span id="xxx">xxx</span><a href="#xxx" class="header-anchor">#</a></h3><ol start="20">
+<li><p>《Visual ChatGPT: Talking, Drawing and Editing with Visual Foundation Models》<br><a href="https://github.com/chenfei-wu/TaskMatrix">Visual ChatGPT</a> git</p>
+</li>
+<li><p><a href="https://nakaizura.blog.csdn.net/article/details/130856470">LLMs的自动化工具系统（HuggingGPT、AutoGPT、WebGPT、WebCPM）</a>  </p>
+</li>
+<li><p><a href="https://github.com/microsoft/JARVIS">HuggingGPT</a> git<br><a href="https://github.com/langchain-ai/langchain/blob/master/cookbook/hugginggpt.ipynb">hugginggpt in langchain</a> git<br><a href="https://github.com/camille-vanhoffelen/langchain-huggingGPT">langchain-huggingGPT</a> git</p>
+</li>
+</ol>
 ]]></content>
       <categories>
         <category>AIGC</category>
@@ -6809,7 +6837,7 @@
 <li>CREATOR[11]</li>
 <li>ToolLLM [12]</li>
 <li>Visual ChatGPT[13]</li>
-<li>HuggingGPT[14]</li>
+<li>HuggingGPT[13]</li>
 <li>Gorilla <a href="/www6vHomeAIGC/2023/04/08/gptAgentToolGorilla/" title="(原理)Gorilla">(原理)Gorilla</a></li>
 </ul>
 <h1><span id="参考">参考</span><a href="#参考" class="header-anchor">#</a></h1><ol>
@@ -6825,10 +6853,7 @@
 </li>
 <li><p>《TOOLLLM: FACILITATING LARGE LANGUAGE MODELS TO MASTER 16000+ REAL-WORLD APIS》<br><a href="https://zhuanlan.zhihu.com/p/647899563">TOOLLLM：让大型语言模型掌握真实世界的API</a><br><a href="https://github.com/OpenBMB/ToolBench">ToolBench </a> git<br><a href="https://blog.csdn.net/Dbox_boom/article/details/134815624">论文阅读：ToolLLM: Facilitating Large Language Models to Master 16000+ Real-world APIs</a></p>
 </li>
-<li><p>《Visual ChatGPT: Talking, Drawing and Editing with Visual Foundation Models》<br><a href="https://github.com/chenfei-wu/TaskMatrix">TaskMatrix</a></p>
-</li>
-<li><p><a href="https://nakaizura.blog.csdn.net/article/details/130856470">LLMs的自动化工具系统（HuggingGPT、AutoGPT、WebGPT、WebCPM）</a></p>
-</li>
+<li><a href="/www6vHomeAIGC/2023/02/21/gptAgentMultimodal/" title="Agent 多模态">Agent 多模态</a> self</li>
 </ol>
 <h3><span id="others">Others</span><a href="#others" class="header-anchor">#</a></h3><p>《Augmented Language Models》<br>1xx. <a href="https://blog.csdn.net/qq_39388410/article/details/130798125">Augmented Language Models（增强语言模型）</a><br>1xx. <a href="https://zhuanlan.zhihu.com/p/611492200">增强语言模型（ALM）之综述篇</a></p>
 ]]></content>
