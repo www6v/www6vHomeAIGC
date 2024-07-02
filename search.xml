@@ -2273,6 +2273,7 @@
 </ol>
 <p>1xx. <a href="https://mp.weixin.qq.com/s/ZoI4Dscm9f9m5-q4Dq4bag">大模型RAG问答开源框架的两个风向:兼看大模型安全的学术评测</a><br>   RAGFlow - 引入文档理解及溯源机制<br>   QAnything - 优化embeddding+召回侧方向的</p>
 <p>1xx. <a href="https://llamahub.ai/">LlamaHub</a><br>      Mix and match our Data Loaders and Agent Tools to build custom RAG apps or use our LlamaPacks as a starting point for your retrieval use cases.</p>
+<p>1xx. <a href="https://mp.weixin.qq.com/s/XRfSqYwvuGB6sDJzRm0QVA">FlashRAG：可能是最全的、最快搭建RAG的开源框架 </a></p>
 ]]></content>
       <categories>
         <category>AIGC</category>
@@ -4280,6 +4281,7 @@
 <h3><span id="plus">plus</span><a href="#plus" class="header-anchor">#</a></h3><p>1xx. <a href="https://datac.blog.csdn.net/article/details/135329602">【LMM 002】LLaVA-1.5：大型语言和视觉助手</a></p>
 <p>1xx. <a href="https://datac.blog.csdn.net/article/details/135329898">【LMM 006】LLaVA-Plus：可以学习如何使用工具的多模态Agent</a></p>
 <h3><span id="微调llava-实战">微调llava 实战</span><a href="#微调llava-实战" class="header-anchor">#</a></h3><p><a href="https://github.com/InternLM/Tutorial/blob/camp2/xtuner/readme.md">XTuner 微调 LLM：1.8B、多模态、Agent (更新撰写中)</a><br><a href="https://github.com/InternLM/Tutorial/blob/camp2/xtuner/llava/xtuner_llava.md">XTuner多模态训练与测试</a></p>
+<p><a href="https://github.com/hiyouga/LLaMA-Factory/blob/main/examples/train_lora/llava1_5_lora_sft.yaml">LLaMA-Factory  llava1_5_lora_sft</a> git</p>
 ]]></content>
       <categories>
         <category>AIGC</category>
@@ -10062,7 +10064,7 @@
 </li>
 </ol>
 <p>1xx. 《Retrieval-Augmented Generation for AI-Generated Content: A Survey》<br><a href="https://mp.weixin.qq.com/s/FKv9glaGZD0qbLmB2zg6bg">北大最新综述精读：RAG在AIGC中的前世今生，覆盖300篇论文！</a><br>   <a href="https://mp.weixin.qq.com/s?__biz=MzkzODMxNTkzNg==&mid=2247484337&idx=1&sn=484db46f6a974cb26b7659096b31cdd8">最新RAG综述来了！北京大学发布AIGC的检索增强技术综述</a></p>
-<p>1xx.  《A Survey on RAG Meets LLMs: Towards Retrieval-Augmented Large Language Models》<br><a href="https://mp.weixin.qq.com/s/AqBPzewJm8dKwjz5BBu-Ag">百度最新大模型RAG综述 | RAG 与 LLM 的融合调查：面向检索增强型大型语言模型</a></p>
+<p>1xx.  《A Survey on RAG Meets LLMs: Towards Retrieval-Augmented Large Language Models》<br><a href="https://mp.weixin.qq.com/s/AqBPzewJm8dKwjz5BBu-Ag">百度最新大模型RAG综述 | RAG 与 LLM 的融合调查：面向检索增强型大型语言模型</a><br><a href="https://mp.weixin.qq.com/s/h8z4eXsemPMeL2oI_8VnvQ">一文看懂RAG的各种套路 | 综述：当RAG遇到大语言模型</a></p>
 <p>1xx. <a href="https://mp.weixin.qq.com/s/jgyIOOzRWAgilcW4HfufNQ">行业大模型落地的一些有趣调研总结：兼看大模型RAG问答四大技术综述</a> 四大综述</p>
 <h3><span id="评估">评估</span><a href="#评估" class="header-anchor">#</a></h3><p>1xx. <a href="https://mp.weixin.qq.com/s?__biz=MzAxMjc3MjkyMg==&mid=2648404511&idx=2&sn=fefb78c1d920cb5b437f2e3da9935637">再看大模型RAG检索增强如何评估：RAGAS开源自动化评估框架</a><br>1xx. <a href="https://mp.weixin.qq.com/s?__biz=MzAxMjc3MjkyMg==&mid=2648404476&idx=2&sn=d07b27dc9162ab0aaec3108004e4cfbe">大模型RAG检索增强问答如何评估：噪声、拒答、反事实、信息整合四大能力评测任务探索 </a></p>
 ]]></content>
