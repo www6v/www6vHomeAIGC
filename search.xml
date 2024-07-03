@@ -900,7 +900,9 @@
 </ul>
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">python -m training.main \</span><br><span class="line">    --save-frequency <span class="number">1</span> \</span><br><span class="line">    --zeroshot-frequency <span class="number">1</span> \</span><br><span class="line">    --report-to tensorboard \</span><br><span class="line">    --train-data=<span class="string">&quot;/path/to/train_data.csv&quot;</span>  \      <span class="comment"># 训练数据 </span></span><br><span class="line">    --val-data=<span class="string">&quot;/path/to/validation_data.csv&quot;</span>  \   <span class="comment"># 验证数据</span></span><br><span class="line">    --csv-img-key filepath \</span><br><span class="line">    --csv-caption-key title \</span><br><span class="line">    --imagenet-val=/path/to/imagenet/root/val/ \</span><br><span class="line">    --warmup <span class="number">10000</span> \      <span class="comment">#</span></span><br><span class="line">    --batch-size=<span class="number">128</span> \    <span class="comment">#</span></span><br><span class="line">    --lr=<span class="number">1e-3</span> \           <span class="comment">#</span></span><br><span class="line">    --wd=<span class="number">0.1</span> \       </span><br><span class="line">    --epochs=<span class="number">30</span> \         <span class="comment">#</span></span><br><span class="line">    --workers=<span class="number">8</span> \</span><br><span class="line">    --model RN50          <span class="comment"># 模型</span></span><br></pre></td></tr></table></figure>
 
+<h1><span id="chinese-clip">Chinese-CLIP</span><a href="#chinese-clip" class="header-anchor">#</a></h1><h3><span id="方法20">方法[20]</span><a href="#方法20" class="header-anchor">#</a></h3><img src="/www6vHomeAIGC/2023/06/25/gptMultimodalCLIPPractice/chinese-clip.webp" class>
 
+<p>我们的核心方法在于把训练分为<strong>两阶段</strong>（如上图所示），<strong>第一阶段</strong>和LiT是一致的，<strong>冻结图像塔</strong>，<strong>让文本塔表示接近图像塔表示</strong>。当训练继续但下游精度不能再产生显著提升，即下游零样本检索的精度，我们就把训练切换到<strong>第二阶段</strong>，即<strong>解除图像塔的参数冻结，继续用contrastive tuning预训练</strong>，同样直到下游精度没有显著提升。<strong>后者的意义在于让图像塔能拟合中文世界的图像数据的分布，学习中文世界的知识</strong>。更多实验参数欢迎查看论文的附录部分。</p>
 <h1><span id="参考">参考</span><a href="#参考" class="header-anchor">#</a></h1><h3><span id="实战">实战</span><a href="#实战" class="header-anchor">#</a></h3><ol start="9">
 <li><p><a href="https://zhuanlan.zhihu.com/p/660476765">关于多模态经典之作CLIP，还有哪些细节是你不知道的</a></p>
 </li>
@@ -909,8 +911,14 @@
 <li><p><a href="https://github.com/mlfoundations/open_clip">open_clip Repo</a> git<br><a href="https://colab.research.google.com/drive/1TEUe2j2oXi-sKiteGYUhsCtdvXocI24w#scrollTo=YPHN7PJgKOzb">Interacting with open_clip</a></p>
 </li>
 </ol>
+<h3><span id="chinese-clip">Chinese-CLIP</span><a href="#chinese-clip" class="header-anchor">#</a></h3><ol start="20">
+<li><a href="https://zhuanlan.zhihu.com/p/580546929">中文CLIP模型卷土重来，这次加量不加价！</a> 论文</li>
+</ol>
+<p>1xx. <a href="https://zhuanlan.zhihu.com/p/539374033">【已重新开源】CLIP的中文副本？说不定有惊喜呢</a></p>
 <p>1xx. <a href="https://github.com/www6v/Chinese-CLIP">Chinese-CLIP Repo</a> git</p>
-<p>1xx. langchain 中有CLIP的实现</p>
+<p>1xx. <a href="https://modelscope.cn/studios/iic/chinese_clip_applications/summary">中文CLIP文到图搜索应用</a> demo</p>
+<p>1xx. <a href="https://zhuanlan.zhihu.com/p/680405647">AIGC之图片生成——基于clip内容检索</a><br><a href="https://github.com/liangwq/Chatglm_lora_multi-gpu/tree/main/APP_example/clip_retrieval">clip_retrieval</a> git<br><a href="https://github.com/liangwq/Chatglm_lora_multi-gpu">demos Repo</a>  readme有解释</p>
+<h3><span id="xxx">xxx</span><a href="#xxx" class="header-anchor">#</a></h3><p>1xx. langchain 中有CLIP的实现</p>
 <p>1xx. <a href="https://github.com/jina-ai/clip-as-service">GitHub - jina-ai&#x2F;clip-as-service: Scalable embedding, reasoning, ranking for images and sentences with CLIP</a> git</p>
 ]]></content>
       <categories>
