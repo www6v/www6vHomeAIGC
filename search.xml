@@ -951,7 +951,11 @@
 <!-- toc -->
 
 <ul>
-<li><a href="#framework">Framework</a></li>
+<li><a href="#framework">Framework</a><ul>
+<li><a href="#diffusers-10">diffusers [10]</a></li>
+<li><a href="#stable-diffusion-webui">stable-diffusion-webui</a></li>
+</ul>
+</li>
 <li><a href="#%E5%8F%82%E8%80%83">参考</a><ul>
 <li><a href="#instructpix2pix">InstructPix2Pix</a></li>
 <li><a href="#framework-1">Framework</a></li>
@@ -963,17 +967,21 @@
 </div>
 
 
-<h1><span id="framework">Framework</span><a href="#framework" class="header-anchor">#</a></h1><ul>
-<li>diffusers [10]</li>
-</ul>
-<ul>
+<h1><span id="framework">Framework</span><a href="#framework" class="header-anchor">#</a></h1><h3><span id="diffusers-10">diffusers [10]</span><a href="#diffusers-10" class="header-anchor">#</a></h3><ul>
 <li>controlnet</li>
 <li>dreambooth</li>
 <li>instruct_pix2pix</li>
 </ul>
+<h3><span id="stable-diffusion-webui">stable-diffusion-webui</span><a href="#stable-diffusion-webui" class="header-anchor">#</a></h3><ul>
+<li><p>stable-diffusion-webui-colab[11]</p>
+</li>
+<li><p>stable-diffusion-webui [阿里serverless]</p>
+</li>
+</ul>
 <h1><span id="参考">参考</span><a href="#参考" class="header-anchor">#</a></h1><h3><span id="instructpix2pix">InstructPix2Pix</span><a href="#instructpix2pix" class="header-anchor">#</a></h3><p><a href="https://zhuanlan.zhihu.com/p/655135961">InstructPix2Pix：用指令给图像做修改</a><br><a href="https://zhuanlan.zhihu.com/p/655372592">Prompt-to-prompt：让生成的图像保持一致</a><br><a href="https://github.com/timothybrooks/instruct-pix2pix">Repo</a> git</p>
 <h3><span id="framework">Framework</span><a href="#framework" class="header-anchor">#</a></h3><ol start="10">
 <li><a href="https://github.com/huggingface/diffusers/tree/main/examples">Repo diffusers</a> git</li>
+<li><a href="https://www.bilibili.com/video/BV1QS421A7zF/">可白嫖且很香—轻轻松松在colab上部署Stable Diffusion大模型！</a> V<br>   <a href="https://github.com/camenduru/stable-diffusion-webui-colab">stable-diffusion-webui-colab Repo</a> git<br>   <a href="https://github.com/camenduru/stable-diffusion-webui-colab/tree/drive">Install the WebUI Colab to Google Drive </a> git 运行这3个脚本</li>
 </ol>
 ]]></content>
       <categories>
