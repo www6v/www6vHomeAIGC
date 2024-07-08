@@ -4447,7 +4447,8 @@
 <li><a href="#llava-15-3">LLaVA 1.5 [3]</a></li>
 <li><a href="#llava-16-3">LLaVA 1.6 [3]</a></li>
 <li><a href="#%E5%8F%82%E8%80%83">参考</a><ul>
-<li><a href="#agent-%E6%96%B9%E5%90%91">Agent 方向</a></li>
+<li><a href="#basic">basic</a></li>
+<li><a href="#%E6%BC%94%E5%8C%96%E6%96%B9%E5%90%91-agent">演化方向 - Agent</a></li>
 <li><a href="#%E5%AE%9E%E6%88%98-%E5%BE%AE%E8%B0%83llava">实战 - 微调llava</a></li>
 </ul>
 </li>
@@ -4502,7 +4503,7 @@
 <h1><span id="llava-16-3">LLaVA 1.6 [3]</span><a href="#llava-16-3" class="header-anchor">#</a></h1><img src="/www6vHomeAIGC/2023/03/14/gptMultimodalLlava/llava1.6.webp" class>
 
 
-<h1><span id="参考">参考</span><a href="#参考" class="header-anchor">#</a></h1><ol>
+<h1><span id="参考">参考</span><a href="#参考" class="header-anchor">#</a></h1><h3><span id="basic">basic</span><a href="#basic" class="header-anchor">#</a></h3><ol>
 <li><p><a href="https://datac.blog.csdn.net/article/details/135329498">【LMM 001】LLaVA：大型语言和视觉助手</a></p>
 </li>
 <li><p><a href="https://zhuanlan.zhihu.com/p/625723805">miniGPT-4的同期工作: 微软LLaVa模型论文笔记</a></p>
@@ -4511,10 +4512,11 @@
 </li>
 </ol>
 <p>1xx. <a href="https://apposcmf8kb5033.pc.xiaoe-tech.com/live_pc/l_64a7d4fde4b0d1e42e7fc7e6">基于视觉指令调整的多模态聊天机器人 LLaVA｜AI新青年讲座·大型语言模型专场</a> V</p>
-<h3><span id="agent-方向">Agent 方向</span><a href="#agent-方向" class="header-anchor">#</a></h3><p>1xx. <a href="https://arxiv.org/pdf/2311.05437">《LLaVA-Plus: Learning to Use Tools for Creating Multimodal Agents》 </a><br>    <a href="https://llava-vl.github.io/llava-plus/">https://llava-vl.github.io/llava-plus/</a><br>   <a href="https://zhuanlan.zhihu.com/p/679038553">一篇文章搞懂LLaVA-Plus</a><br>   【llava + tools】  微软，清华</p>
+<h3><span id="演化方向-agent">演化方向 - Agent</span><a href="#演化方向-agent" class="header-anchor">#</a></h3><p>1xx. <a href="https://arxiv.org/pdf/2311.05437">《LLaVA-Plus: Learning to Use Tools for Creating Multimodal Agents》 </a><br>    <a href="https://llava-vl.github.io/llava-plus/">https://llava-vl.github.io/llava-plus/</a><br>   <a href="https://zhuanlan.zhihu.com/p/679038553">一篇文章搞懂LLaVA-Plus</a><br>   【llava + tools】  微软，清华</p>
 <p>1xx. 《LLaVA-Interactive: An All-in-One Demo for Image Chat, Segmentation, Generation and Editing》 Chat + Segmentation + Editing<br>    <a href="https://llava-vl.github.io/llava-interactive/">LLaVA-Interactive</a><br>   【LLaVA + 交互】</p>
-<h3><span id="实战-微调llava">实战 - 微调llava</span><a href="#实战-微调llava" class="header-anchor">#</a></h3><p><a href="https://github.com/InternLM/Tutorial/blob/camp2/xtuner/readme.md">XTuner 微调 LLM：1.8B、多模态、Agent (更新撰写中)</a><br><a href="https://github.com/InternLM/Tutorial/blob/camp2/xtuner/llava/xtuner_llava.md">XTuner多模态训练与测试</a></p>
-<p><a href="https://github.com/hiyouga/LLaMA-Factory/blob/main/examples/train_lora/llava1_5_lora_sft.yaml">LLaMA-Factory  llava1_5_lora_sft</a> git</p>
+<h3><span id="实战-微调llava">实战 - 微调llava</span><a href="#实战-微调llava" class="header-anchor">#</a></h3><p>1xx. <a href="https://github.com/InternLM/Tutorial/blob/camp2/xtuner/readme.md">XTuner 微调 LLM：1.8B、多模态、Agent (更新撰写中)</a><br>1xx. <a href="https://github.com/InternLM/Tutorial/blob/camp2/xtuner/llava/xtuner_llava.md">XTuner多模态训练与测试</a></p>
+<p>1xx. <a href="https://github.com/hiyouga/LLaMA-Factory/blob/main/examples/train_lora/llava1_5_lora_sft.yaml">LLaMA-Factory  llava1_5_lora_sft</a> git</p>
+<p>1xx. <a href="https://github.com/Coobiw/MPP-LLaVA">MPP-LLaVA</a> git<br><a href="https://zhuanlan.zhihu.com/p/664612306">多模态大模型实战-MiniGPT4Qwen系列1：3090+2小时+通义千问&#x3D;个人版双语多模态大模型</a></p>
 ]]></content>
       <categories>
         <category>AIGC</category>
@@ -5244,7 +5246,6 @@
 <h1><span id="参考">参考</span><a href="#参考" class="header-anchor">#</a></h1><ol>
 <li><a href="https://www.bilibili.com/video/BV13P411q7tH/">中科院刘静：多模态预训练的进展回顾与展望</a>  V</li>
 </ol>
-<p>1xx. <a href="https://github.com/Coobiw/MiniGPT4Qwen">MiniGPT4Qwen</a> git<br><a href="https://zhuanlan.zhihu.com/p/664612306">多模态大模型实战-MiniGPT4Qwen系列1：3090+2小时+通义千问&#x3D;个人版双语多模态大模型</a></p>
 ]]></content>
       <categories>
         <category>AIGC</category>
