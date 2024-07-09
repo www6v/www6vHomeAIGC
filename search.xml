@@ -810,7 +810,7 @@
       </tags>
   </entry>
   <entry>
-    <title>图像编辑</title>
+    <title>(综述)图像编辑</title>
     <url>/www6vHomeAIGC/2023/07/06/gptDiffusionImageEdit/</url>
     <content><![CDATA[<p></p>
 <span id="more"></span>
@@ -941,7 +941,7 @@
       </tags>
   </entry>
   <entry>
-    <title>Diffusion</title>
+    <title>(实战)Diffusion</title>
     <url>/www6vHomeAIGC/2023/06/29/gptMultimodalDiffusion/</url>
     <content><![CDATA[<p></p>
 <span id="more"></span>
@@ -951,14 +951,18 @@
 <!-- toc -->
 
 <ul>
-<li><a href="#framework">Framework</a><ul>
+<li><a href="#frameworkapi">Framework[API]</a><ul>
 <li><a href="#diffusers-10">diffusers [10]</a></li>
+</ul>
+</li>
+<li><a href="#frameworkui">Framework[UI]</a><ul>
 <li><a href="#stable-diffusion-webui">stable-diffusion-webui</a></li>
+<li><a href="#comfyui">comfyui</a></li>
 </ul>
 </li>
 <li><a href="#%E5%8F%82%E8%80%83">参考</a><ul>
 <li><a href="#instructpix2pix">InstructPix2Pix</a></li>
-<li><a href="#framework-1">Framework</a></li>
+<li><a href="#framework">Framework</a></li>
 </ul>
 </li>
 </ul>
@@ -967,21 +971,30 @@
 </div>
 
 
-<h1><span id="framework">Framework</span><a href="#framework" class="header-anchor">#</a></h1><h3><span id="diffusers-10">diffusers [10]</span><a href="#diffusers-10" class="header-anchor">#</a></h3><ul>
+<h1><span id="frameworkapi">Framework[API]</span><a href="#frameworkapi" class="header-anchor">#</a></h1><h3><span id="diffusers-10">diffusers [10]</span><a href="#diffusers-10" class="header-anchor">#</a></h3><ul>
 <li>controlnet</li>
 <li>dreambooth</li>
 <li>instruct_pix2pix</li>
 </ul>
-<h3><span id="stable-diffusion-webui">stable-diffusion-webui</span><a href="#stable-diffusion-webui" class="header-anchor">#</a></h3><ul>
-<li><p>stable-diffusion-webui-colab[11]</p>
+<h1><span id="frameworkui">Framework[UI]</span><a href="#frameworkui" class="header-anchor">#</a></h1><h3><span id="stable-diffusion-webui">stable-diffusion-webui</span><a href="#stable-diffusion-webui" class="header-anchor">#</a></h3><ul>
+<li><p>stable-diffusion-webui-colab[11]<br>没试过，colab要充值</p>
 </li>
-<li><p>stable-diffusion-webui [阿里serverless]</p>
-</li>
+<li><p>stable-diffusion-webui   on   阿里serverless [12]  </p>
+<img src="/www6vHomeAIGC/2023/06/29/gptMultimodalDiffusion/webui.jpg" class></li>
+</ul>
+<h3><span id="comfyui">comfyui</span><a href="#comfyui" class="header-anchor">#</a></h3><ul>
+<li>ComfyUI  on  阿里serverless[13]<img src="/www6vHomeAIGC/2023/06/29/gptMultimodalDiffusion/comfyUI.jpg" class></li>
 </ul>
 <h1><span id="参考">参考</span><a href="#参考" class="header-anchor">#</a></h1><h3><span id="instructpix2pix">InstructPix2Pix</span><a href="#instructpix2pix" class="header-anchor">#</a></h3><p><a href="https://zhuanlan.zhihu.com/p/655135961">InstructPix2Pix：用指令给图像做修改</a><br><a href="https://zhuanlan.zhihu.com/p/655372592">Prompt-to-prompt：让生成的图像保持一致</a><br><a href="https://github.com/timothybrooks/instruct-pix2pix">Repo</a> git</p>
 <h3><span id="framework">Framework</span><a href="#framework" class="header-anchor">#</a></h3><ol start="10">
-<li><a href="https://github.com/huggingface/diffusers/tree/main/examples">Repo diffusers</a> git</li>
-<li><a href="https://www.bilibili.com/video/BV1QS421A7zF/">可白嫖且很香—轻轻松松在colab上部署Stable Diffusion大模型！</a> V<br>   <a href="https://github.com/camenduru/stable-diffusion-webui-colab">stable-diffusion-webui-colab Repo</a> git<br>   <a href="https://github.com/camenduru/stable-diffusion-webui-colab/tree/drive">Install the WebUI Colab to Google Drive </a> git 运行这3个脚本</li>
+<li><p><a href="https://github.com/huggingface/diffusers/tree/main/examples">Repo diffusers</a> git</p>
+</li>
+<li><p><a href="https://www.bilibili.com/video/BV1QS421A7zF/">可白嫖且很香—轻轻松松在colab上部署Stable Diffusion大模型！</a> V<br> <a href="https://github.com/camenduru/stable-diffusion-webui-colab">stable-diffusion-webui-colab Repo</a> git<br> <a href="https://github.com/camenduru/stable-diffusion-webui-colab/tree/drive">Install the WebUI Colab to Google Drive </a> git 运行这3个脚本</p>
+</li>
+<li><p><a href="https://www.bilibili.com/video/BV19u411x7Bk/">超详细云端部署Stable Diffusion教程！</a> V<br>【用FC的应用模版部署】【3个月免费的serverless+NAS】</p>
+</li>
+<li><p><a href="https://alidocs.dingtalk.com/i/p/x9JOGOjr65om4QLAy0mVPNbMnOEE8z89">函数计算 ComfyUI 使用文档</a><br>用 ComfyUI 自制“粘土滤镜<br>【用FC的应用模版部署】【3个月免费的serverless+NAS】</p>
+</li>
 </ol>
 ]]></content>
       <categories>
