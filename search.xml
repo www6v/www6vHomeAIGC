@@ -891,8 +891,10 @@
 <h1><span id="controlnet20">ControlNet[20]</span><a href="#controlnet20" class="header-anchor">#</a></h1><h1><span id="参考">参考</span><a href="#参考" class="header-anchor">#</a></h1><ol>
 <li><a href="https://cloud.tencent.com/developer/article/2302436">Stable Diffusion 微调及推理优化</a><br>1xx. <a href="https://www.bilibili.com/video/BV19h4y1475y/">【论文串读】Stable Diffusion模型微调方法串读</a> V</li>
 </ol>
-<h3><span id="dreambooth">Dreambooth</span><a href="#dreambooth" class="header-anchor">#</a></h3><ol start="10">
-<li><a href="https://huggingface.co/blog/zh/dreambooth">使用 Diffusers 通过 Dreambooth 技术来训练 Stable Diffusion</a><br>  <a href="https://github.com/huggingface/diffusers/tree/main/examples/dreambooth">Dreambooth Repo</a><br>1xx. <a href="https://blog.csdn.net/qq_45670134/article/details/133498728">DreamBooth 论文精读+通俗理解</a><br>1xx. <a href="https://dreambooth.github.io/">DreamBooth Repo</a></li>
+<h3><span id="实战">实战</span><a href="#实战" class="header-anchor">#</a></h3><p>1xx. <a href="https://www.bilibili.com/video/BV1184y1g7pG/?p=4">Text Inversion</a> V<br>   【这个比较详细】<br>1xx. <a href="https://www.bilibili.com/video/BV1184y1g7pG?p=5">Dreambooth</a> V<br>   【只训练unet】<br>1xx. <a href="https://www.bilibili.com/video/BV1184y1g7pG?p=7">lora Dreambooth</a> V<br>   【冻结不训练unet，只训练lora】<br>   【为unet模型添加注意力层，注意力层是要训练的参数】<br>   【大部分代码和Dreambooth差不多】<br>1xx. <a href="https://www.bilibili.com/video/BV1Go4y1M7cK?p=2">control net</a> V<br>1xx. <a href="https://www.bilibili.com/video/BV1Go4y1M7cK?p=3">pix2pix</a> V<br><a href="https://github.com/www6v/Diffusion_Training_Examples">Code Repo</a> git</p>
+<h3><span id="dreambooth-原理">Dreambooth 原理</span><a href="#dreambooth-原理" class="header-anchor">#</a></h3><p>1xx. <a href="https://blog.csdn.net/qq_45670134/article/details/133498728">DreamBooth 论文精读+通俗理解</a><br>1xx. <a href="https://dreambooth.github.io/">DreamBooth Repo</a></p>
+<h3><span id="dreambooth-实战">Dreambooth 实战</span><a href="#dreambooth-实战" class="header-anchor">#</a></h3><ol start="10">
+<li><a href="https://huggingface.co/blog/zh/dreambooth">使用 Diffusers 通过 Dreambooth 技术来训练 Stable Diffusion</a><br><a href="https://github.com/huggingface/diffusers/tree/main/examples/dreambooth">Dreambooth Repo</a><br>1xx. <a href="https://juejin.cn/post/7282693176199987215">手把手教你微调Stable Diffusion</a><br>   lora on DreamBooth</li>
 </ol>
 <h3><span id="controlnet">ControlNet</span><a href="#controlnet" class="header-anchor">#</a></h3><ol start="20">
 <li><a href="https://github.com/lllyasviel/ControlNet">ControlNet Repo</a> git</li>
