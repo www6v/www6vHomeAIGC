@@ -1177,6 +1177,7 @@
 </li>
 <li><a href="#sd%E7%9A%84%E4%B8%BB%E8%A6%81%E5%BA%94%E7%94%A83">SD的主要应用[3]</a></li>
 <li><a href="#sd%E7%9A%84%E5%85%B6%E5%AE%83%E7%89%B9%E8%89%B2%E5%BA%94%E7%94%A83">SD的其它特色应用[3]</a></li>
+<li><a href="#evolution-5">Evolution [5]</a></li>
 <li><a href="#%E5%8F%82%E8%80%83">参考</a></li>
 </ul>
 <!-- tocstop -->
@@ -1233,11 +1234,17 @@
 <li><p><strong>可控生成</strong> 【controllable】<br>可控生成是SD最近比较火的应用，这主要归功于<a href="https://link.zhihu.com/?target=https://github.com/lllyasviel/ControlNet">ControlNet</a>，基于ControlNet可以实现对很多种类的可控生成，比如边缘，人体关键点，草图和深度图等等。</p>
 </li>
 </ul>
+<h1><span id="evolution-5">Evolution [5]</span><a href="#evolution-5" class="header-anchor">#</a></h1><img src="/www6vHomeAIGC/2023/06/29/gptMultimodalDiffusion/evolution-line.jpg" class>
+
+<img src="/www6vHomeAIGC/2023/06/29/gptMultimodalDiffusion/evolution.jpg" class>
+
+
 <h1><span id="参考">参考</span><a href="#参考" class="header-anchor">#</a></h1><ol>
 <li><a href="https://tingsongyu.github.io/PyTorch-Tutorial-2nd/chapter-8/8.6-diffusion-model.html">8.6 扩散模型——DDPM · PyTorch实用教程（第二版）</a></li>
 <li><a href="https://github.com/CompVis/stable-diffusion">https://github.com/CompVis/stable-diffusion</a></li>
 <li><a href="https://zhuanlan.zhihu.com/p/617134893">文生图模型之Stable Diffusion</a></li>
 <li><a href="https://www.bilibili.com/video/BV1Pg4y1M7Lr?p=3">38.(正课)Stable Diffusion、DALL-E、Imagen 背后_哔哩哔哩_bilibili</a><br><a href="https://speech.ee.ntu.edu.tw/~hylee/ml/ml2023-course-data/StableDiffusion%20(v2).pdf">course PPT</a></li>
+<li><a href="https://www.bilibili.com/video/BV13J4m1K73z/">【扩散生成模型串讲】一个视频梳理Diffusion模型演化进程，16个扩散相关生成模型，20+篇相关论文串讲。_哔哩哔哩_bilibili</a> V</li>
 </ol>
 ]]></content>
       <categories>
