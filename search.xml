@@ -192,9 +192,13 @@
 <li><a href="/www6vHomeAIGC/2023/06/29/gptMultimodalDiffusion/" title="(原理)Diffusion">(原理)Diffusion</a>   </li>
 <li><a href="/www6vHomeAIGC/2023/07/09/gptMultimodalDiffusionPractice/" title="(实战)Diffusion">(实战)Diffusion</a>   </li>
 <li><a href="/www6vHomeAIGC/2023/07/06/gptDiffusionImageEdit/" title="(综述)图像编辑">(综述)图像编辑</a>   </li>
+<li>fine-tuning<ul>
 <li><a href="/www6vHomeAIGC/2023/07/06/gptDiffusionFineTuning/" title="(实战) SD fine-tuning">(实战) SD fine-tuning</a>   </li>
 <li><a href="/www6vHomeAIGC/2024/07/17/gptDiffusionDreamBooth/" title="(原理|实战)DreamBooth">(原理|实战)DreamBooth</a>    </li>
 <li><a href="/www6vHomeAIGC/2023/07/17/gptDiffusionControlnet/" title="ControlNet">ControlNet</a></li>
+</ul>
+</li>
+<li><a href="/www6vHomeAIGC/2023/07/21/gptDiffusionDiT/" title="(原理|实战)DiT">(原理|实战)DiT</a></li>
 </ul>
 </li>
 <li>端到端训练LLM <ul>
@@ -844,6 +848,38 @@
       </categories>
       <tags>
         <tag>PEFT</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>(原理|实战)DiT</title>
+    <url>/www6vHomeAIGC/2023/07/21/gptDiffusionDiT/</url>
+    <content><![CDATA[<p></p>
+<span id="more"></span>
+
+
+<h1><span id="论文">论文</span><a href="#论文" class="header-anchor">#</a></h1><ul>
+<li><p>论文地址<br> <a href="https://arxiv.org/abs/2212.09748">Scalable Diffusion Models with Transformers</a> </p>
+</li>
+<li><p>开源地址<br> <a href="https://www.wpeebles.com/DiT">Scalable Diffusion Models with Transformers</a> git<br> <a href="https://github.com/facebookresearch/DiT">DiT Repo</a>  git</p>
+</li>
+</ul>
+<h1><span id="arch">Arch</span><a href="#arch" class="header-anchor">#</a></h1><p><img src="https://www.wpeebles.com/images/DiT/block.png" alt="DiT"></p>
+<h1><span id="code10">code[10]</span><a href="#code10" class="header-anchor">#</a></h1><ul>
+<li>DiT<br><a href="https://github.com/www6v/mnist-dits/blob/main/dit.py">dit</a> git</li>
+<li>DiTBlock<br><a href="https://github.com/www6v/mnist-dits/blob/main/dit_block.py">dit_block</a> git</li>
+</ul>
+<h1><span id="参考">参考</span><a href="#参考" class="header-anchor">#</a></h1><p>1xx. <a href="https://www.bilibili.com/video/BV12E421T7Zi/">AI大讲堂：文生视频谁能敌？专业拆解【DiT模型】</a> V<br>   DiT原文: <a href="https://arxiv.org/abs/2212.09748">https://arxiv.org/abs/2212.09748</a><br>   Code: <a href="https://github.com/facebookresearch/DiT">https://github.com/facebookresearch/DiT</a><br>   Huggingface: <a href="https://huggingface.co/spaces/wpeebles/DiT">https://huggingface.co/spaces/wpeebles/DiT</a></p>
+<p>1xx. <a href="https://www.bilibili.com/video/BV12J4m1379T/">14步手搓sora!Diffusion Transformer, DiT工作原理</a>  V </p>
+<h3><span id="实战">实战</span><a href="#实战" class="header-anchor">#</a></h3><ol start="10">
+<li><a href="https://www.bilibili.com/video/BV13K421h79z/">【Sora重要技术】复现DiT（Diffusion Transformer）模型</a> V ***<br>   <a href="https://github.com/owenliang/mnist-dits">dits Repo</a></li>
+</ol>
+]]></content>
+      <categories>
+        <category>AIGC</category>
+        <category>Diffusion</category>
+      </categories>
+      <tags>
+        <tag>Diffusion</tag>
       </tags>
   </entry>
   <entry>
