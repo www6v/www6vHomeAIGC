@@ -184,8 +184,8 @@
 <li>视觉理解<ul>
 <li><a href="/www6vHomeAIGC/2023/03/01/gptMultimodalCLIP/" title="(原理)CLIP">(原理)CLIP</a>  </li>
 <li><a href="/www6vHomeAIGC/2023/06/25/gptMultimodalCLIPPractice/" title="(实战)CLIP">(实战)CLIP</a>   </li>
-<li><a href="/www6vHomeAIGC/2023/03/01/gptMultimodalSAM/" title="SAM">SAM</a>   </li>
-<li><a href="/www6vHomeAIGC/2023/03/01/gptMultimodalVit/" title="ViT,ViLT">ViT,ViLT</a></li>
+<li><a href="/www6vHomeAIGC/2023/03/01/gptMultimodalSAM/" title="(原理|实战) SAM">(原理|实战) SAM</a>   </li>
+<li><a href="/www6vHomeAIGC/2023/03/01/gptMultimodalVit/" title="(原理|实战)ViT, ViLT">(原理|实战)ViT, ViLT</a></li>
 </ul>
 </li>
 <li>生成<ul>
@@ -5728,13 +5728,27 @@
       </tags>
   </entry>
   <entry>
-    <title>ViT,ViLT</title>
+    <title>(原理|实战)ViT, ViLT</title>
     <url>/www6vHomeAIGC/2023/03/01/gptMultimodalVit/</url>
     <content><![CDATA[<p></p>
 <span id="more"></span>
 
+<h1><span id="论文">论文</span><a href="#论文" class="header-anchor">#</a></h1><ul>
+<li><p>论文地址<br> <a href="https://arxiv.org/pdf/2010.11929">AN IMAGE IS WORTH 16X16 WORDS:TRANSFORMERS FOR IMAGE RECOGNITION AT SCALE</a> </p>
+</li>
+<li><p>开源地址<br><a href="https://github.com/google-research/vision_transformer">vision_transformer</a> git</p>
+</li>
+</ul>
+<h1><span id="model">model</span><a href="#model" class="header-anchor">#</a></h1><img src="/www6vHomeAIGC/2023/03/01/gptMultimodalVit/model.png" class>
 
-<h1><span id="参考">参考</span><a href="#参考" class="header-anchor">#</a></h1><h3><span id="vilt">ViLT</span><a href="#vilt" class="header-anchor">#</a></h3><p>1xx. <a href="https://zhuanlan.zhihu.com/p/369733979">ViLT：最简单的多模态Transformer</a><br>1xx. <a href="https://github.com/dandelin/vilt">ViLT</a> git<br>1xx. <a href="https://blog.csdn.net/qq_42030496/article/details/134641704">ViLT 论文精读【论文精读】</a><br>   <a href="https://www.bilibili.com/video/BV14r4y1j74y/">ViLT 论文精读【论文精读】</a> V<br>1xx. <a href="https://blog.csdn.net/m0_56722835/article/details/125071550">多模态ViLT模型下游任务微调原理及代码</a></p>
+
+<h1><span id="代码1">代码[1]</span><a href="#代码1" class="header-anchor">#</a></h1><h1><span id="参考">参考</span><a href="#参考" class="header-anchor">#</a></h1><h3><span id="vit">ViT</span><a href="#vit" class="header-anchor">#</a></h3><ol>
+<li><a href="https://www.bilibili.com/video/BV1fH4y1H7mV/">【Sora重要技术】复现ViT（Vision Transformer）模型</a> V<br>  <a href="https://github.com/owenliang/mnist-vit">mnist-vit Repo</a> git</li>
+</ol>
+<p>1xx. <a href="https://www.bilibili.com/video/BV1Uu411o7oY">VIT (Vision Transformer) 模型论文+代码(源码)从零详细解读，看不懂来打我</a> V</p>
+<p>1xx. <a href="https://blog.csdn.net/qq_43449643/article/details/135623953">详解VIT（Vision Transformer)模型原理, 代码级讲解</a><br>   <a href="https://github.com/yangyunfeng-cyber/Useful-DL-Projects-for-Exercise/blob/main/VIT/vit_model.py">VIT Repo</a> git  ***</p>
+<p>1xx. <a href="https://www.bilibili.com/video/BV1xm4y1b7Pw/">ViT｜ Vision Transformer ｜理论 + 代码</a>  V<br>   <a href="https://65d8gk.axshare.com/">PPT</a></p>
+<h3><span id="vilt">ViLT</span><a href="#vilt" class="header-anchor">#</a></h3><p>1xx. <a href="https://zhuanlan.zhihu.com/p/369733979">ViLT：最简单的多模态Transformer</a><br>1xx. <a href="https://github.com/dandelin/vilt">ViLT</a> git<br>1xx. <a href="https://blog.csdn.net/qq_42030496/article/details/134641704">ViLT 论文精读【论文精读】</a><br>   <a href="https://www.bilibili.com/video/BV14r4y1j74y/">ViLT 论文精读【论文精读】</a> V<br>1xx. <a href="https://blog.csdn.net/m0_56722835/article/details/125071550">多模态ViLT模型下游任务微调原理及代码</a></p>
 ]]></content>
       <categories>
         <category>AIGC</category>
@@ -5745,12 +5759,33 @@
       </tags>
   </entry>
   <entry>
-    <title>SAM</title>
+    <title>(原理|实战) SAM</title>
     <url>/www6vHomeAIGC/2023/03/01/gptMultimodalSAM/</url>
     <content><![CDATA[<p></p>
 <span id="more"></span>
 
-<h1><span id="参考">参考</span><a href="#参考" class="header-anchor">#</a></h1><p><a href="https://blog.csdn.net/weixin_44386956/article/details/130262260">【模型解读】【代码复现】Segment Anything Model(SAM)</a><br><a href="https://zhuanlan.zhihu.com/p/620355474">【论文解读】MetaAi SAM(Segment Anything) 分割一切</a><br><a href="https://zhuanlan.zhihu.com/p/630529550">Segment Anything(sam)项目整理汇总</a></p>
+<h1><span id="论文1">论文[1]</span><a href="#论文1" class="header-anchor">#</a></h1><ul>
+<li><p>论文地址<br><a href="https://arxiv.org/abs/2304.02643">Segment Anything Model论文</a></p>
+</li>
+<li><p>开源地址<br> <a href="https://github.com/facebookresearch/segment-anything">Segment Anything Model模型源码</a> Git</p>
+</li>
+<li><p>官网<br> <a href="https://segment-anything.com/">Segment Anything Model官网</a><br><a href="https://segment-anything.com/demo">Segment Anything Model官网demo网页端</a></p>
+</li>
+</ul>
+<h1><span id="模型2">模型[2]</span><a href="#模型2" class="header-anchor">#</a></h1><h3><span id="image-encoder">image encoder</span><a href="#image-encoder" class="header-anchor">#</a></h3><h3><span id="prompt-encoder">prompt encoder</span><a href="#prompt-encoder" class="header-anchor">#</a></h3><h3><span id="mask-decoder">mask decoder</span><a href="#mask-decoder" class="header-anchor">#</a></h3><img src="/www6vHomeAIGC/2023/03/01/gptMultimodalSAM/mask%20decoder.webp" class>
+
+<p>在prompt embeddings中插入一个可学习的token，用于docoder的输出。<br>（1）prompt toekns+output tokens进行self attn,<br>（2）用得到的token和image embedding进行 cross attn（token作为Q）<br>（3）point-wise MLP 更新token<br>（4）用image embedding和（3）的token进行cross atten（image embedding作为Q）<br>重复上述步骤2次，再将attn再通过残差进行连接，最终输出masks和iou scores。</p>
+<h1><span id="sam应用3">SAM应用[3]</span><a href="#sam应用3" class="header-anchor">#</a></h1><ul>
+<li>图像分割</li>
+<li>目标检测</li>
+<li>图像修复( image inpainting)</li>
+<li><strong>模型微调</strong></li>
+</ul>
+<h1><span id="参考">参考</span><a href="#参考" class="header-anchor">#</a></h1><ol>
+<li><a href="https://blog.csdn.net/weixin_44386956/article/details/130262260">【模型解读】【代码复现】Segment Anything Model(SAM)</a> *</li>
+<li><a href="https://zhuanlan.zhihu.com/p/620355474">【论文解读】MetaAi SAM(Segment Anything) 分割一切</a> ***<br>最下面有应用</li>
+<li><a href="https://zhuanlan.zhihu.com/p/630529550">Segment Anything(sam)项目整理汇总</a> ***<br>1xx. <a href="https://www.bilibili.com/video/BV1aV4y1d7gC/">【Segment Anything 模型深度解构】GPT时代，干翻计算机视觉第一步！</a></li>
+</ol>
 ]]></content>
       <categories>
         <category>AIGC</category>
