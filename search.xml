@@ -2,9 +2,31 @@
 <search>
   <entry>
     <title>AIGC 汇总</title>
-    <url>/www6vHomeAIGC/2022/11/16/gptSummary/</url>
+    <url>/www6vHomeAIGC/2023/11/16/gptSummary/</url>
     <content><![CDATA[<p></p>
 <span id="more"></span>
+
+<h2><span id="目录">目录</span><a href="#目录" class="header-anchor">#</a></h2><div class="toc">
+
+<!-- toc -->
+
+<ul>
+<li><a href="#basic">Basic</a></li>
+<li><a href="#deeplearning">DeepLearning</a></li>
+<li><a href="#nlp">NLP</a></li>
+<li><a href="#model">Model</a></li>
+<li><a href="#training">Training</a></li>
+<li><a href="#inference">Inference</a></li>
+<li><a href="#data">Data *</a></li>
+<li><a href="#finetuning">FineTuning</a></li>
+<li><a href="#prompt">Prompt</a></li>
+<li><a href="#langchain">Langchain</a></li>
+<li><a href="#study">Study</a></li>
+<li><a href="#research">Research</a></li>
+</ul>
+<!-- tocstop -->
+
+</div>
 
 <h2><span id="basic">Basic</span><a href="#basic" class="header-anchor">#</a></h2><ul>
 <li><a href="/www6vHomeAIGC/2021/08/11/ai/" title="AI 应用场景">AI 应用场景</a> </li>
@@ -169,6 +191,53 @@
 </ul>
 </li>
 </ul>
+<h2><span id="prompt">Prompt</span><a href="#prompt" class="header-anchor">#</a></h2><ul>
+<li><a href="/www6vHomeAIGC/2022/11/10/gptPromptEngineering/" title="(原理)Prompt Engineering">(原理)Prompt Engineering</a></li>
+<li><a href="/www6vHomeAIGC/2023/02/08/gptCOT/" title="COT">COT</a> </li>
+<li><a href="/www6vHomeAIGC/2021/05/28/gptPromptCode/" title="Prompt-Code">Prompt-Code</a></li>
+<li><a href="/www6vHomeAIGC/2021/05/26/gptPrompt/" title="Prompt-How to use">Prompt-How to use</a></li>
+</ul>
+<h2><span id="langchain">Langchain</span><a href="#langchain" class="header-anchor">#</a></h2><ul>
+<li><a href="/www6vHomeAIGC/2022/11/02/gptLangchain/" title="Langchain">Langchain</a></li>
+<li><a href="/www6vHomeAIGC/2022/12/31/gptRetrievers/" title="Retrievers">Retrievers</a> </li>
+<li><a href="/www6vHomeAIGC/2023/01/11/gptLangchainAgent/" title="Langchain  Agent">Langchain  Agent</a></li>
+</ul>
+<h2><span id="study">Study</span><a href="#study" class="header-anchor">#</a></h2><ul>
+<li><a href="/www6vHomeAIGC/2022/08/01/gptStudy/" title="GPT  学习资源">GPT  学习资源</a></li>
+<li><a href="/www6vHomeAIGC/2022/01/22/aiStudyResouce/" title="人工智能-学习资源">人工智能-学习资源</a></li>
+</ul>
+<h2><span id="research">Research</span><a href="#research" class="header-anchor">#</a></h2><ul>
+<li><a href="/www6vHomeAIGC/2024/02/11/gptPaperTools/" title="科研-工具">科研-工具</a> </li>
+<li><a href="/www6vHomeAIGC/2023/01/20/gptStudyPaper/" title="GPT 论文">GPT 论文</a></li>
+<li><a href="/www6vHomeAIGC/2023/02/25/gptSurveyList/" title="Survey List">Survey List</a> </li>
+<li><a href="/www6vHomeAIGC/2023/03/04/gptAgentPaper/" title="Paper-Agent">Paper-Agent</a></li>
+</ul>
+]]></content>
+      <categories>
+        <category>AIGC</category>
+        <category>汇总</category>
+      </categories>
+      <tags>
+        <tag>AIGC</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Vision 汇总</title>
+    <url>/www6vHomeAIGC/2023/07/23/gptVisionSummary/</url>
+    <content><![CDATA[<p></p>
+<span id="more"></span>
+
+<h2><span id="目录">目录</span><a href="#目录" class="header-anchor">#</a></h2><div class="toc">
+
+<!-- toc -->
+
+<ul>
+<li><a href="#multimodal">Multimodal *</a></li>
+</ul>
+<!-- tocstop -->
+
+</div>
+
 <h2><span id="multimodal">Multimodal *</span><a href="#multimodal" class="header-anchor">#</a></h2><ul>
 <li>Survey<ul>
 <li><a href="/www6vHomeAIGC/2023/01/18/gptMultimodal/" title="(综述)多模态">(综述)多模态</a> </li>
@@ -214,6 +283,34 @@
 </ul>
 </li>
 </ul>
+]]></content>
+      <categories>
+        <category>AIGC</category>
+        <category>汇总</category>
+      </categories>
+      <tags>
+        <tag>AIGC</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>AIGC应用 汇总</title>
+    <url>/www6vHomeAIGC/2022/07/23/gptAppSummary/</url>
+    <content><![CDATA[<p></p>
+<span id="more"></span>
+
+<h2><span id="目录">目录</span><a href="#目录" class="header-anchor">#</a></h2><div class="toc">
+
+<!-- toc -->
+
+<ul>
+<li><a href="#rag">RAG *</a></li>
+<li><a href="#agent">Agent *</a></li>
+<li><a href="#application">Application</a></li>
+</ul>
+<!-- tocstop -->
+
+</div>
+
 <h2><span id="rag">RAG *</span><a href="#rag" class="header-anchor">#</a></h2><ul>
 <li>Overview<ul>
 <li><a href="/www6vHomeAIGC/2022/11/02/gptRAG/" title="(综述)RAG">(综述)RAG</a></li>
@@ -305,27 +402,6 @@
 <li><a href="/www6vHomeAIGC/2024/02/07/gptDomainLaw/" title="法律大模型">法律大模型</a></li>
 </ul>
 </li>
-</ul>
-<h2><span id="prompt">Prompt</span><a href="#prompt" class="header-anchor">#</a></h2><ul>
-<li><a href="/www6vHomeAIGC/2022/11/10/gptPromptEngineering/" title="(原理)Prompt Engineering">(原理)Prompt Engineering</a></li>
-<li><a href="/www6vHomeAIGC/2023/02/08/gptCOT/" title="COT">COT</a> </li>
-<li><a href="/www6vHomeAIGC/2021/05/28/gptPromptCode/" title="Prompt-Code">Prompt-Code</a></li>
-<li><a href="/www6vHomeAIGC/2021/05/26/gptPrompt/" title="Prompt-How to use">Prompt-How to use</a></li>
-</ul>
-<h2><span id="langchain">Langchain</span><a href="#langchain" class="header-anchor">#</a></h2><ul>
-<li><a href="/www6vHomeAIGC/2022/11/02/gptLangchain/" title="Langchain">Langchain</a></li>
-<li><a href="/www6vHomeAIGC/2022/12/31/gptRetrievers/" title="Retrievers">Retrievers</a> </li>
-<li><a href="/www6vHomeAIGC/2023/01/11/gptLangchainAgent/" title="Langchain  Agent">Langchain  Agent</a></li>
-</ul>
-<h2><span id="study">Study</span><a href="#study" class="header-anchor">#</a></h2><ul>
-<li><a href="/www6vHomeAIGC/2022/08/01/gptStudy/" title="GPT  学习资源">GPT  学习资源</a></li>
-<li><a href="/www6vHomeAIGC/2022/01/22/aiStudyResouce/" title="人工智能-学习资源">人工智能-学习资源</a></li>
-</ul>
-<h2><span id="research">Research</span><a href="#research" class="header-anchor">#</a></h2><ul>
-<li><a href="/www6vHomeAIGC/2024/02/11/gptPaperTools/" title="科研-工具">科研-工具</a> </li>
-<li><a href="/www6vHomeAIGC/2023/01/20/gptStudyPaper/" title="GPT 论文">GPT 论文</a></li>
-<li><a href="/www6vHomeAIGC/2023/02/25/gptSurveyList/" title="Survey List">Survey List</a> </li>
-<li><a href="/www6vHomeAIGC/2023/03/04/gptAgentPaper/" title="Paper-Agent">Paper-Agent</a></li>
 </ul>
 ]]></content>
       <categories>
