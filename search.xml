@@ -1170,6 +1170,8 @@
 <li><a href="#approaches">APPROACHES</a></li>
 </ul>
 </li>
+<li><a href="#%E8%AE%BA%E6%96%872">论文[2]</a></li>
+<li><a href="#survey2">Survey[2]</a></li>
 <li><a href="#%E5%8F%82%E8%80%83">参考</a><ul>
 <li><a href="#survey">survey</a></li>
 <li><a href="#instructpix2pix">InstructPix2Pix</a></li>
@@ -1206,11 +1208,22 @@
 <li><p>TRAINING AND FINETUNING FREE APPROACHES</p>
 </li>
 </ul>
+<hr>
+<h1><span id="论文2">论文[2]</span><a href="#论文2" class="header-anchor">#</a></h1><ul>
+<li><p>论文地址<br> 《A Survey of Multimodal-Guided Image Editing with Text-to-Image Diffusion Models》</p>
+</li>
+<li><p>开源地址<br> <a href="https://github.com/xinchengshuai/Awesome-Image-Editing">A Survey of Multimodal-Guided Image Editing with Text-to-Image Diffusion Models</a></p>
+</li>
+</ul>
+<h1><span id="survey2">Survey[2]</span><a href="#survey2" class="header-anchor">#</a></h1><img src="/www6vHomeAIGC/2023/07/06/gptDiffusionImageEdit/survey.png" class>
+
 <h1><span id="参考">参考</span><a href="#参考" class="header-anchor">#</a></h1><h3><span id="survey">survey</span><a href="#survey" class="header-anchor">#</a></h3><ol>
-<li>《Diffusion Model-Based Image Editing: A Survey》<br><a href="https://blog.csdn.net/huzimu_/article/details/136547375">论文阅读：Diffusion Model-Based Image Editing: A Survey</a><br><a href="https://mp.weixin.qq.com/s/MFbCt0XfOf9fV0YbdkmR6g">基于扩散模型的图像编辑：首篇综述</a></li>
+<li><p>《Diffusion Model-Based Image Editing: A Survey》<br><a href="https://blog.csdn.net/huzimu_/article/details/136547375">论文阅读：Diffusion Model-Based Image Editing: A Survey</a><br><a href="https://mp.weixin.qq.com/s/MFbCt0XfOf9fV0YbdkmR6g">基于扩散模型的图像编辑：首篇综述</a></p>
+</li>
+<li><p>《A Survey of Multimodal-Guided Image Editing with Text-to-Image Diffusion Models》<br><a href="https://www.jiqizhixin.com/articles/2024-06-28-14">300多篇相关研究，复旦、南洋理工最新多模态图像编辑综述论文</a></p>
+</li>
 </ol>
-<p>1xx.<br>《A Survey of Multimodal-Guided Image Editing with Text-to-Image Diffusion Models》<br><a href="https://github.com/xinchengshuai/Awesome-Image-Editing">A Survey of Multimodal-Guided Image Editing with Text-to-Image Diffusion Models</a></p>
-<p>1xx. 《LLMs Meet Multimodal Generation and Editing: A Survey》<br>Image Generation， Image Editing<br><a href="https://github.com/YingqingHe/Awesome-LLMs-meet-Multimodal-Generation">Repo</a></p>
+<p>1xx. 《LLMs Meet Multimodal Generation and Editing: A Survey》 *<br>Image Generation， Image Editing<br><a href="https://github.com/YingqingHe/Awesome-LLMs-meet-Multimodal-Generation">Repo</a></p>
 <h3><span id="instructpix2pix">InstructPix2Pix</span><a href="#instructpix2pix" class="header-anchor">#</a></h3><p><a href="https://zhuanlan.zhihu.com/p/655135961">InstructPix2Pix：用指令给图像做修改</a><br><a href="https://www.timothybrooks.com/instruct-pix2pix">InstructPix2Pix Learning to Follow Image Editing Instructions</a><br><a href="https://github.com/timothybrooks/instruct-pix2pix">Repo</a> git</p>
 <h3><span id="prompt-to-prompt">Prompt-to-prompt</span><a href="#prompt-to-prompt" class="header-anchor">#</a></h3><p><a href="https://zhuanlan.zhihu.com/p/655372592">Prompt-to-prompt：让生成的图像保持一致</a><br><a href="https://prompt-to-prompt.github.io/">Prompt-to-Prompt Image Editing with Cross-Attention Control</a></p>
 ]]></content>
