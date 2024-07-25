@@ -305,7 +305,7 @@
 </ul>
 <h3><span id="端到端训练llmlmm">端到端训练LLM(LMM)</span><a href="#端到端训练llmlmm" class="header-anchor">#</a></h3><ul>
 <li><a href="/www6vHomeAIGC/2023/03/15/gptMultimodalBlip/" title="(图生文)BLIP-2, Flamingo">(图生文)BLIP-2, Flamingo</a> </li>
-<li><a href="/www6vHomeAIGC/2023/03/14/gptMultimodalLlava/" title="(原理|实战)多模态  LLaVa">(原理|实战)多模态  LLaVa</a>  </li>
+<li><a href="/www6vHomeAIGC/2023/03/14/gptMultimodalLlava/" title="(原理|实战) LLaVa 演化">(原理|实战) LLaVa 演化</a>  </li>
 <li><a href="/www6vHomeAIGC/2023/03/15/gptMultimodalMinigpt4/" title="(原理|实战)MiniGPT4">(原理|实战)MiniGPT4</a></li>
 </ul>
 <h3><span id="multimodal-agent">Multimodal Agent*</span><a href="#multimodal-agent" class="header-anchor">#</a></h3><ul>
@@ -314,14 +314,7 @@
 <li><a href="/www6vHomeAIGC/2023/06/30/gptAgentMultimodalApp/" title="Agent - UI-assistants">Agent - UI-assistants</a></li>
 </ul>
 <h1><span id="vision">Vision</span><a href="#vision" class="header-anchor">#</a></h1><ul>
-<li>Object Detection<ul>
-<li>DETR </li>
-<li>Grounding DINO</li>
-</ul>
-</li>
-<li>Segmentation</li>
-<li>Retrieval</li>
-<li>Caption+VQA</li>
+<li><a href="/www6vHomeAIGC/2023/07/25/gptVisionTask/" title="CV 任务">CV 任务</a></li>
 </ul>
 ]]></content>
       <categories>
@@ -964,6 +957,52 @@
       </categories>
       <tags>
         <tag>PEFT</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>CV 任务</title>
+    <url>/www6vHomeAIGC/2023/07/25/gptVisionTask/</url>
+    <content><![CDATA[<p></p>
+<span id="more"></span>
+
+<h1><span id="分类-1">分类 [1]</span><a href="#分类-1" class="header-anchor">#</a></h1><h3><span id="image-level">image-level</span><a href="#image-level" class="header-anchor">#</a></h3><ul>
+<li><p>image recognition</p>
+</li>
+<li><p>(Retrieval)image-text retrieval</p>
+</li>
+<li><p>Caption(image captioning) </p>
+</li>
+<li><p>VQA(visual question answering)</p>
+</li>
+</ul>
+<h3><span id="region-level">region-level</span><a href="#region-level" class="header-anchor">#</a></h3><ul>
+<li><p>Object Detection object detection</p>
+<ul>
+<li>DETR -&gt; DINO -&gt; Grounding DINO</li>
+</ul>
+</li>
+<li><p>dense caption</p>
+</li>
+<li><p>phrase grounding</p>
+</li>
+</ul>
+<h3><span id="pixel-level">pixel-level</span><a href="#pixel-level" class="header-anchor">#</a></h3><ul>
+<li>Segmentation<ul>
+<li>generic segmetation</li>
+<li>referring segmetation</li>
+</ul>
+</li>
+</ul>
+<h1><span id="参考">参考</span><a href="#参考" class="header-anchor">#</a></h1><ol>
+<li>[<a href="https://www.bilibili.com/video/BV1ds4y1k7pj/?vd_source=f6e8c1128f9f264c5ab8d9411a644036">CVPR Tutorial Talk] Towards General Vision Understanding Interface</a><br><a href="https://datarelease.blob.core.windows.net/tutorial/vision_foundation_models_2023/slides/Jianwei_CVPR2023_Tutorial.pdf">datarelease.blob.core.windows.net</a></li>
+</ol>
+]]></content>
+      <categories>
+        <category>AIGC</category>
+        <category>Vision</category>
+      </categories>
+      <tags>
+        <tag>Vision</tag>
       </tags>
   </entry>
   <entry>
@@ -4882,7 +4921,7 @@
       </tags>
   </entry>
   <entry>
-    <title>(原理|实战)多模态  LLaVa</title>
+    <title>(原理|实战) LLaVa 演化</title>
     <url>/www6vHomeAIGC/2023/03/14/gptMultimodalLlava/</url>
     <content><![CDATA[<p></p>
 <span id="more"></span>
