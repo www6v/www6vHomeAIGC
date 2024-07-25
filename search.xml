@@ -4573,7 +4573,10 @@
 </div>
 
 <h1><span id="论文">论文</span><a href="#论文" class="header-anchor">#</a></h1><ul>
-<li>论文地址<br> 《Multimodal Foundation Models:From Specialists to General-Purpose Assistants》  microsoft</li>
+<li><p>论文地址<br> 《Multimodal Foundation Models:From Specialists to General-Purpose Assistants》 .Sep 2023   - microsoft</p>
+</li>
+<li><p>开源地址<br><a href="https://github.com/Computer-Vision-in-the-Wild/CVinW_Readings">Computer Vision in the Wild (CVinW)</a></p>
+</li>
 </ul>
 <h1><span id="overview-0">overview [0]</span><a href="#overview-0" class="header-anchor">#</a></h1><img src="/www6vHomeAIGC/2023/03/16/gptMultimodalSurvey/overview.jpeg" class>
 
@@ -4584,6 +4587,15 @@
 
 <h1><span id="视觉生成-1">视觉生成 [1]</span><a href="#视觉生成-1" class="header-anchor">#</a></h1><img src="/www6vHomeAIGC/2023/03/16/gptMultimodalSurvey/generation.png" class>
 
+<ul>
+<li>四种alignment的方式<ul>
+<li>controllable<br>Controlnet</li>
+<li>editing<br>instructPix2Pix</li>
+<li>text prompts following</li>
+<li>conception Customization<br>DreamBooth<img src="/www6vHomeAIGC/2023/03/16/gptMultimodalSurvey/align.jpg" class></li>
+</ul>
+</li>
+</ul>
 <h1><span id="统一的视觉模型2">统一的视觉模型[2]</span><a href="#统一的视觉模型2" class="header-anchor">#</a></h1><h1><span id="端到端的方式训练llm2">端到端的方式训练LLM[2]</span><a href="#端到端的方式训练llm2" class="header-anchor">#</a></h1><h1><span id="多模态-agent3">多模态 Agent[3]</span><a href="#多模态-agent3" class="header-anchor">#</a></h1><h1><span id="参考">参考</span><a href="#参考" class="header-anchor">#</a></h1><h3><span id="survey">survey</span><a href="#survey" class="header-anchor">#</a></h3><p>《Multimodal Foundation Models:From Specialists to General-Purpose Assistants》  </p>
 <ol start="0">
 <li><p><a href="https://blog.csdn.net/qq_41185868/article/details/133594461">AGI之MFM：《Multimodal Foundation Models: From Specialists to General-Purpose Assistants多模态基础模型：从专家到通用助</a> 翻译</p>
