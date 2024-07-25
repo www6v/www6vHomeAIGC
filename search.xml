@@ -4559,12 +4559,17 @@
 <li><a href="#%E8%AE%BA%E6%96%87">论文</a></li>
 <li><a href="#overview-0">overview [0]</a></li>
 <li><a href="#%E8%A7%86%E8%A7%89%E7%90%86%E8%A7%A3-1">视觉理解 [1]</a></li>
-<li><a href="#%E8%A7%86%E8%A7%89%E7%94%9F%E6%88%90-1">视觉生成 [1]</a></li>
+<li><a href="#%E8%A7%86%E8%A7%89%E7%94%9F%E6%88%90-1">视觉生成 [1]</a><ul>
+<li><a href="#human-alignments-in-visual-generation">Human Alignments in Visual Generation</a></li>
+<li><a href="#text-to-image-generation-%E6%8A%80%E6%9C%AF%E6%B5%81%E6%B4%BE4%E7%B1%BB">Text-to-Image Generation  技术流派（4类）</a></li>
+</ul>
+</li>
 <li><a href="#%E7%BB%9F%E4%B8%80%E7%9A%84%E8%A7%86%E8%A7%89%E6%A8%A1%E5%9E%8B2">统一的视觉模型[2]</a></li>
 <li><a href="#%E7%AB%AF%E5%88%B0%E7%AB%AF%E7%9A%84%E6%96%B9%E5%BC%8F%E8%AE%AD%E7%BB%83llm2">端到端的方式训练LLM[2]</a></li>
 <li><a href="#%E5%A4%9A%E6%A8%A1%E6%80%81-agent3">多模态 Agent[3]</a></li>
 <li><a href="#%E5%8F%82%E8%80%83">参考</a><ul>
-<li><a href="#survey">survey</a></li>
+<li><a href="#%E7%BF%BB%E8%AF%91">翻译</a></li>
+<li><a href="#%E8%A7%A3%E8%AF%BB">解读</a></li>
 </ul>
 </li>
 </ul>
@@ -4585,18 +4590,23 @@
 <img src="/www6vHomeAIGC/2023/03/16/gptMultimodalSurvey/understanding-method.png" class>
 
 
-<h1><span id="视觉生成-1">视觉生成 [1]</span><a href="#视觉生成-1" class="header-anchor">#</a></h1><img src="/www6vHomeAIGC/2023/03/16/gptMultimodalSurvey/generation.png" class>
-
-<ul>
-<li>四种alignment的方式<ul>
+<h1><span id="视觉生成-1">视觉生成 [1]</span><a href="#视觉生成-1" class="header-anchor">#</a></h1><h3><span id="human-alignments-in-visual-generation">Human Alignments in Visual Generation</span><a href="#human-alignments-in-visual-generation" class="header-anchor">#</a></h3><ul>
+<li>四种alignment的方式 [10]<ul>
 <li>controllable<br>Controlnet</li>
 <li>editing<br>instructPix2Pix</li>
 <li>text prompts following</li>
-<li>conception Customization<br>DreamBooth<img src="/www6vHomeAIGC/2023/03/16/gptMultimodalSurvey/align.jpg" class></li>
+<li>conception Customization<br>DreamBooth<img src="/www6vHomeAIGC/2023/03/16/gptMultimodalSurvey/align.jpg" class>
+<img src="/www6vHomeAIGC/2023/03/16/gptMultimodalSurvey/generation.png" class></li>
 </ul>
 </li>
 </ul>
-<h1><span id="统一的视觉模型2">统一的视觉模型[2]</span><a href="#统一的视觉模型2" class="header-anchor">#</a></h1><h1><span id="端到端的方式训练llm2">端到端的方式训练LLM[2]</span><a href="#端到端的方式训练llm2" class="header-anchor">#</a></h1><h1><span id="多模态-agent3">多模态 Agent[3]</span><a href="#多模态-agent3" class="header-anchor">#</a></h1><h1><span id="参考">参考</span><a href="#参考" class="header-anchor">#</a></h1><h3><span id="survey">survey</span><a href="#survey" class="header-anchor">#</a></h3><p>《Multimodal Foundation Models:From Specialists to General-Purpose Assistants》  </p>
+<h3><span id="text-to-image-generation-技术流派4类">Text-to-Image Generation  技术流派（4类）</span><a href="#text-to-image-generation-技术流派4类" class="header-anchor">#</a></h3><ul>
+<li>Generative adversarial networks (GAN)</li>
+<li>Variational autoencoder (VAE)</li>
+<li>Discrete image token prediction</li>
+<li>Diffusion model</li>
+</ul>
+<h1><span id="统一的视觉模型2">统一的视觉模型[2]</span><a href="#统一的视觉模型2" class="header-anchor">#</a></h1><h1><span id="端到端的方式训练llm2">端到端的方式训练LLM[2]</span><a href="#端到端的方式训练llm2" class="header-anchor">#</a></h1><h1><span id="多模态-agent3">多模态 Agent[3]</span><a href="#多模态-agent3" class="header-anchor">#</a></h1><h1><span id="参考">参考</span><a href="#参考" class="header-anchor">#</a></h1><h3><span id="翻译">翻译</span><a href="#翻译" class="header-anchor">#</a></h3><p>《Multimodal Foundation Models:From Specialists to General-Purpose Assistants》  </p>
 <ol start="0">
 <li><p><a href="https://blog.csdn.net/qq_41185868/article/details/133594461">AGI之MFM：《Multimodal Foundation Models: From Specialists to General-Purpose Assistants多模态基础模型：从专家到通用助</a> 翻译</p>
 </li>
@@ -4605,9 +4615,14 @@
 <li><p><a href="https://yunyaniu.blog.csdn.net/article/details/133594624">AGI之MFM：《多模态基础模型：从专家到通用助手》翻译与解读之统一的视觉模型、加持LLMs的大型多模态模型</a></p>
 </li>
 <li><p><a href="https://yunyaniu.blog.csdn.net/article/details/133606408">AGI之MFM：《多模态基础模型：从专家到通用助手》翻译与解读之与LLM协同工作的多模态智能体、结论和研究趋势</a></p>
-<p><a href="https://blog.csdn.net/qq_41200212/article/details/134663233">Multimodal Foundation Models: From Specialists to General-Purpose Assistants</a></p>
 </li>
 </ol>
+<h3><span id="解读">解读</span><a href="#解读" class="header-anchor">#</a></h3><ol start="10">
+<li><a href="https://zhuanlan.zhihu.com/p/669757416">大模型系列04 -文本图像生成</a></li>
+</ol>
+<p>1xx.   <a href="https://blog.csdn.net/qq_41200212/article/details/134663233">Multimodal Foundation Models: From Specialists to General-Purpose Assistants</a>  </p>
+<p>1xx.  对应第二章节<br>  <a href="https://datarelease.blob.core.windows.net/tutorial/vision_foundation_models_2023/slides/Zhengyuan_Tutorial_T2I2023.pdf">《Alignments in Text-to-Image Generation》</a><br>   <a href="https://www.bilibili.com/video/BV14P411v7Un/">[CVPR2023 Tutorial Talk] Alignments in Text-to-Image Generation</a> V</p>
+<p>1xx. 对应第三章节<br><a href="https://datarelease.blob.core.windows.net/tutorial/vision_foundation_models_2023/slides/Jianwei_CVPR2023_Tutorial.pdf">《From Specialist to Generalist:<br>Towards General Vision Understanding Interface》</a><br>  <a href="https://www.bilibili.com/video/BV1ds4y1k7pj/?vd_source=f6e8c1128f9f264c5ab8d9411a644036">[CVPR Tutorial Talk] Towards General Vision Understanding Interface</a></p>
 ]]></content>
       <categories>
         <category>AIGC</category>
