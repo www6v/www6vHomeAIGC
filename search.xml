@@ -289,7 +289,8 @@
 <li><a href="/www6vHomeAIGC/2023/06/29/gptMultimodalDiffusion/" title="(原理)Diffusion">(原理)Diffusion</a>   </li>
 <li><a href="/www6vHomeAIGC/2023/07/09/gptMultimodalDiffusionPractice/" title="(实战)Diffusion">(实战)Diffusion</a>  </li>
 <li>Controllable  <ul>
-<li><a href="/www6vHomeAIGC/2023/07/17/gptDiffusionControlnet/" title="ControlNet">ControlNet</a></li>
+<li><a href="/www6vHomeAIGC/2023/07/29/gptDiffusionControllable/" title="(综述)Controllable">(综述)Controllable</a> </li>
+<li><a href="/www6vHomeAIGC/2023/07/17/gptDiffusionControllableWork/" title="(Work)Controllable">(Work)Controllable</a></li>
 </ul>
 </li>
 <li>editing<ul>
@@ -961,41 +962,102 @@
       </tags>
   </entry>
   <entry>
+    <title>(综述)Controllable</title>
+    <url>/www6vHomeAIGC/2023/07/29/gptDiffusionControllable/</url>
+    <content><![CDATA[<p></p>
+<span id="more"></span>
+
+
+
+<h1><span id="论文">论文</span><a href="#论文" class="header-anchor">#</a></h1><ul>
+<li>论文地址<br> <a href="http://doi.org/10.1007/s11390-024-3814-0">A Survey of Multimodal Controllable Diffusion Models</a></li>
+</ul>
+<h1><span id="论文解析">论文解析</span><a href="#论文解析" class="header-anchor">#</a></h1><p><a href="https://candied-skunk-1ca.notion.site/A-Survey-of-Multimodal-Controllable-Diffusion-Models-b736974658bd4ad79f4128690b0cfb3a?pvs=4">论文解析</a></p>
+]]></content>
+      <categories>
+        <category>AIGC</category>
+        <category>Diffusion</category>
+      </categories>
+      <tags>
+        <tag>Diffusion</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>(Work)Image Editing</title>
     <url>/www6vHomeAIGC/2023/07/27/gptDiffusionImageEditWork/</url>
     <content><![CDATA[<p></p>
 <span id="more"></span>
 
+<h2><span id="目录">目录</span><a href="#目录" class="header-anchor">#</a></h2><div class="toc">
 
-<h1><span id="论文-prompt-to-prompt">论文 Prompt-to-Prompt</span><a href="#论文-prompt-to-prompt" class="header-anchor">#</a></h1><ul>
-<li><p>论文地址<br>《Prompt-to-Prompt Image Editing with Cross-Attention Control》</p>
+<!-- toc -->
+
+<ul>
+<li><a href="#%E8%AE%BA%E6%96%87prompt-to-prompt">论文[Prompt-to-Prompt]</a></li>
+<li><a href="#%E8%AE%BA%E6%96%87instructpix2pix">论文[InstructPix2Pix]</a></li>
+<li><a href="#%E8%AE%BA%E6%96%87mgie">论文[MGIE]</a></li>
+<li><a href="#%E8%AE%BA%E6%96%87pix2pix-zero">论文[pix2pix-zero]</a></li>
+<li><a href="#%E6%80%BB%E7%BB%93">总结</a></li>
+</ul>
+<!-- tocstop -->
+
+</div>
+
+
+<h1><span id="论文prompt-to-prompt">论文[Prompt-to-Prompt]</span><a href="#论文prompt-to-prompt" class="header-anchor">#</a></h1><ul>
+<li><p>论文地址<br><a href="https://prompt-to-prompt.github.io/ptp_files/Prompt-to-Prompt_preprint.pdf">PROMPT-TO-PROMPT IMAGE EDITING<br>WITH CROSS-ATTENTION CONTROL</a></p>
 </li>
 <li><p>开源地址<br><a href="https://github.com/google/prompt-to-prompt/">Prompt-to-Prompt</a> git</p>
 </li>
-<li><p>官网<br><a href="https://prompt-to-prompt.github.io/">Prompt-to-Prompt Image Editing with Cross-Attention Control</a></p>
+<li><p>Project page<br><a href="https://prompt-to-prompt.github.io/">Project page</a> </p>
+</li>
+<li><p>论文解析<br><a href="https://candied-skunk-1ca.notion.site/Prompt-to-Prompt-3ae01e342c6b4b41adc58c6ec5233020">论文解析</a></p>
 </li>
 </ul>
-<h1><span id="论文解析">论文解析</span><a href="#论文解析" class="header-anchor">#</a></h1><p><a href="https://candied-skunk-1ca.notion.site/Prompt-to-Prompt-3ae01e342c6b4b41adc58c6ec5233020">论文解析</a></p>
 <hr>
-<h1><span id="论文">论文</span><a href="#论文" class="header-anchor">#</a></h1><ul>
-<li><p>论文地址<br> <a href>InstructPix2Pix</a> </p>
+<h1><span id="论文instructpix2pix">论文[InstructPix2Pix]</span><a href="#论文instructpix2pix" class="header-anchor">#</a></h1><ul>
+<li><p>论文地址<br> <a href="https://arxiv.org/pdf/2211.09800">InstructPix2Pix: Learning to Follow Image Editing Instructions</a> </p>
 </li>
 <li><p>开源地址<br><a href="https://github.com/timothybrooks/instruct-pix2pix">Repo</a> git</p>
 </li>
-<li><p>官网<br><a href="https://www.timothybrooks.com/instruct-pix2pix">InstructPix2Pix Learning to Follow Image Editing Instructions</a></p>
+<li><p>Project page<br><a href="https://www.timothybrooks.com/instruct-pix2pix">Project page</a> </p>
+</li>
+<li><p>论文解析<br><a href="https://candied-skunk-1ca.notion.site/InstructPix2Pix-aedf2e9b6acd48fab6928f717065288c?pvs=4">论文解析</a></p>
 </li>
 </ul>
-<h1><span id="论文解析">论文解析</span><a href="#论文解析" class="header-anchor">#</a></h1><p><a href="https://candied-skunk-1ca.notion.site/InstructPix2Pix-aedf2e9b6acd48fab6928f717065288c?pvs=4">论文解析</a></p>
 <hr>
-<h1><span id="论文-mgie">论文 MGIE</span><a href="#论文-mgie" class="header-anchor">#</a></h1><ul>
-<li><p>论文地址<br><a href="https://openreview.net/pdf?id=S1RKWSyZ2Y">MGIE</a></p>
+<h1><span id="论文mgie">论文[MGIE]</span><a href="#论文mgie" class="header-anchor">#</a></h1><ul>
+<li><p>论文地址<br><a href="https://openreview.net/pdf?id=S1RKWSyZ2Y">MGIE</a> 2024  Apple</p>
 </li>
 <li><p>开源地址<br><a href="https://github.com/apple/ml-mgie">Repo</a> git<br><a href="https://github.com/tsujuifu/pytorch_mgie">Repo</a> git  </p>
 </li>
-<li><p>官网<br><a href="https://mllm-ie.github.io/">[ICLR’24] MGIE</a></p>
+<li><p>Project page<br><a href="https://mllm-ie.github.io/">Project page</a> </p>
+</li>
+<li><p>论文解析<br><a href="https://candied-skunk-1ca.notion.site/MGIE-d6bfedcc92ae42a48a64ac199ce2aa14?pvs=4">MGIE</a></p>
 </li>
 </ul>
-<h1><span id="论文解析">论文解析</span><a href="#论文解析" class="header-anchor">#</a></h1><p><a href="https://candied-skunk-1ca.notion.site/MGIE-d6bfedcc92ae42a48a64ac199ce2aa14?pvs=4">MGIE</a></p>
+<hr>
+<h1><span id="论文pix2pix-zero">论文[pix2pix-zero]</span><a href="#论文pix2pix-zero" class="header-anchor">#</a></h1><ul>
+<li><p>论文地址<br><a href="https://arxiv.org/pdf/2302.03027">Zero-shot Image-to-Image Translation</a> </p>
+</li>
+<li><p>开源地址<br><a href="https://github.com/pix2pixzero/pix2pix-zero">pix2pix-zero</a> git</p>
+</li>
+<li><p>Project page<br><a href="https://pix2pixzero.github.io/">Project page</a><br>官网有个介绍视频 看过不错</p>
+</li>
+<li><p>论文解析<br><a href="https://candied-skunk-1ca.notion.site/pix2pix-zero-f79b1c40cde44f40aeeb8eb34482aa28?pvs=4">论文解析</a></p>
+</li>
+</ul>
+<hr>
+<h1><span id="总结">总结</span><a href="#总结" class="header-anchor">#</a></h1><ul>
+<li><p>Prompt-to-Prompt<br>train-free，察觉到了attention map的妙用</p>
+</li>
+<li><p>pix2pix-zero<br>察觉到了attention map的妙用  </p>
+</li>
+<li><p>InstructPix2Pix<br>trainable，training数据基于Prompt-to-Prompt </p>
+</li>
+<li><p>MGIE<br>基于LMM</p>
+</li>
+</ul>
 ]]></content>
       <categories>
         <category>AIGC</category>
@@ -1084,20 +1146,29 @@
       </tags>
   </entry>
   <entry>
-    <title>ControlNet</title>
-    <url>/www6vHomeAIGC/2023/07/17/gptDiffusionControlnet/</url>
+    <title>(Work)Controllable</title>
+    <url>/www6vHomeAIGC/2023/07/17/gptDiffusionControllableWork/</url>
     <content><![CDATA[<p></p>
 <span id="more"></span>
 
 
-
-<h1><span id="controlnet">ControlNet</span><a href="#controlnet" class="header-anchor">#</a></h1><h3><span id="structure-1">structure [1]</span><a href="#structure-1" class="header-anchor">#</a></h3><img src="/www6vHomeAIGC/2023/07/17/gptDiffusionControlnet/sd.png" class>
-
-
-<h1><span id="参考">参考</span><a href="#参考" class="header-anchor">#</a></h1><h3><span id="controlnet">ControlNet</span><a href="#controlnet" class="header-anchor">#</a></h3><ol>
-<li><a href="https://github.com/lllyasviel/ControlNet">ControlNet Repo</a> git</li>
-</ol>
-<p>2 . <a href="https://www.bilibili.com/video/BV1fs4y177nu/">【AI论文精读】【图像生成】全网最详细controlnet论文逐段精读</a> V</p>
+<h1><span id="论文controlnet">论文[ControlNet]</span><a href="#论文controlnet" class="header-anchor">#</a></h1><ul>
+<li><p>论文地址<br><a href="https://arxiv.org/abs/2302.05543">Adding Conditional Control to Text-to-Image Diffusion Models</a> </p>
+</li>
+<li><p>开源地址<br><a href="https://github.com/lllyasviel/ControlNet">ControlNet</a> git</p>
+</li>
+<li><p>论文解析<br><a href="https://candied-skunk-1ca.notion.site/ControlNet-76c3d54a18424e20a25a3e4a8a71b8e3?pvs=4">论文解析</a></p>
+</li>
+</ul>
+<hr>
+<h1><span id="论文t2i-adapter">论文[T2I-Adapter]</span><a href="#论文t2i-adapter" class="header-anchor">#</a></h1><ul>
+<li><p>论文地址<br><a href="https://arxiv.org/pdf/2302.08453">T2I-Adapter</a> </p>
+</li>
+<li><p>开源地址<br><a href="https://github.com/TencentARC/T2I-Adapter">T2I-Adapter</a> git</p>
+</li>
+<li><p>论文解析<br><a href="https://candied-skunk-1ca.notion.site/T2I-Adapter-26eef5080f084dacb6e89d643d31e53d?pvs=4">论文解析</a></p>
+</li>
+</ul>
 ]]></content>
       <categories>
         <category>AIGC</category>
@@ -1118,17 +1189,19 @@
 <!-- toc -->
 
 <ul>
-<li><a href="#frameworkapi">Framework[API]</a><ul>
-<li><a href="#diffusers-10">diffusers [10]</a></li>
+<li><a href="#api-based">API-based</a><ul>
+<li><a href="#diffusion-models-class-%E5%AE%98%E6%96%B9%E8%AF%BE%E7%A8%8B">diffusion-models-class [官方课程]</a></li>
+<li><a href="#diffusers-%E9%87%8D%E7%82%B9pipeline-10">diffusers 重点pipeline [10]</a></li>
 </ul>
 </li>
-<li><a href="#frameworkui">Framework[UI]</a><ul>
+<li><a href="#ui-based">UI-based</a><ul>
 <li><a href="#stable-diffusion-webui">stable-diffusion-webui</a></li>
 <li><a href="#comfyui">comfyui</a></li>
 </ul>
 </li>
 <li><a href="#%E5%8F%82%E8%80%83">参考</a><ul>
-<li><a href="#framework">Framework</a></li>
+<li><a href="#api-based-1">API-based</a></li>
+<li><a href="#ui-based-1">UI-based</a></li>
 </ul>
 </li>
 </ul>
@@ -1137,12 +1210,18 @@
 </div>
 
 
-<h1><span id="frameworkapi">Framework[API]</span><a href="#frameworkapi" class="header-anchor">#</a></h1><h3><span id="diffusers-10">diffusers [10]</span><a href="#diffusers-10" class="header-anchor">#</a></h3><ul>
+<h1><span id="api-based">API-based</span><a href="#api-based" class="header-anchor">#</a></h1><h3><span id="diffusion-models-class-官方课程">diffusion-models-class [官方课程]</span><a href="#diffusion-models-class-官方课程" class="header-anchor">#</a></h3><ul>
+<li><a href="https://candied-skunk-1ca.notion.site/Unit-1-An-Introduction-to-Diffusion-Models-f0ee4c8bc4914ef8961b48241064b2b7?pvs=4">Unit 1: An Introduction to Diffusion Models</a></li>
+<li><a href="https://candied-skunk-1ca.notion.site/Unit-2-Fine-Tuning-Guidance-and-Conditioning-27180b80a58e4bd2860019c4237a8532?pvs=4">Unit 2: Fine-Tuning, Guidance and Conditioning</a></li>
+<li><a href="https://candied-skunk-1ca.notion.site/Unit-3-Stable-Diffusion-a8770ac5b0214c2f9cfce878812b5bf8?pvs=4">Unit 3: Stable Diffusion</a></li>
+<li><a href="https://candied-skunk-1ca.notion.site/Unit-4-Going-Further-with-Diffusion-Models-e997fe47d4e64069bba59ac81b7a4718?pvs=4">Unit 4: Going Further with Diffusion Models</a></li>
+</ul>
+<h3><span id="diffusers-重点pipeline-10">diffusers 重点pipeline [10]</span><a href="#diffusers-重点pipeline-10" class="header-anchor">#</a></h3><ul>
 <li>controlnet 【controllable】</li>
 <li>dreambooth 【fine tuning】</li>
 <li>instruct_pix2pix 【image edit】</li>
 </ul>
-<h1><span id="frameworkui">Framework[UI]</span><a href="#frameworkui" class="header-anchor">#</a></h1><h3><span id="stable-diffusion-webui">stable-diffusion-webui</span><a href="#stable-diffusion-webui" class="header-anchor">#</a></h3><ul>
+<h1><span id="ui-based">UI-based</span><a href="#ui-based" class="header-anchor">#</a></h1><h3><span id="stable-diffusion-webui">stable-diffusion-webui</span><a href="#stable-diffusion-webui" class="header-anchor">#</a></h3><ul>
 <li><p>stable-diffusion-webui-colab[11]<br>没试过，colab要充值</p>
 </li>
 <li><p>stable-diffusion-webui   on   阿里serverless [12]  </p>
@@ -1151,9 +1230,10 @@
 <h3><span id="comfyui">comfyui</span><a href="#comfyui" class="header-anchor">#</a></h3><ul>
 <li>ComfyUI  on  阿里serverless[13]<img src="/www6vHomeAIGC/2023/07/09/gptMultimodalDiffusionPractice/comfyUI.jpg" class></li>
 </ul>
-<h1><span id="参考">参考</span><a href="#参考" class="header-anchor">#</a></h1><h3><span id="framework">Framework</span><a href="#framework" class="header-anchor">#</a></h3><ol start="10">
-<li><p><a href="https://github.com/huggingface/diffusers/tree/main/examples">Repo diffusers</a> git</p>
-</li>
+<h1><span id="参考">参考</span><a href="#参考" class="header-anchor">#</a></h1><h3><span id="api-based">API-based</span><a href="#api-based" class="header-anchor">#</a></h3><ol start="10">
+<li><a href="https://github.com/huggingface/diffusers/tree/main/examples">Repo diffusers</a> git</li>
+</ol>
+<h3><span id="ui-based">UI-based</span><a href="#ui-based" class="header-anchor">#</a></h3><ol start="11">
 <li><p><a href="https://www.bilibili.com/video/BV1QS421A7zF/">可白嫖且很香—轻轻松松在colab上部署Stable Diffusion大模型！</a> V<br> <a href="https://github.com/camenduru/stable-diffusion-webui-colab">stable-diffusion-webui-colab Repo</a> git<br> <a href="https://github.com/camenduru/stable-diffusion-webui-colab/tree/drive">Install the WebUI Colab to Google Drive </a> git 运行这3个脚本</p>
 </li>
 <li><p><a href="https://www.bilibili.com/video/BV19u411x7Bk/">超详细云端部署Stable Diffusion教程！</a> V<br>【用FC的应用模版部署】【3个月免费的serverless+NAS】</p>
