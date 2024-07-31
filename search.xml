@@ -290,16 +290,16 @@
 <li><a href="/www6vHomeAIGC/2023/07/09/gptMultimodalDiffusionPractice/" title="(实战)Diffusion">(实战)Diffusion</a>  </li>
 <li>Controllable  <ul>
 <li><a href="/www6vHomeAIGC/2023/07/29/gptDiffusionControllable/" title="(综述)Controllable">(综述)Controllable</a> </li>
-<li><a href="/www6vHomeAIGC/2023/07/17/gptDiffusionControllableWork/" title="(Work)Controllable">(Work)Controllable</a></li>
+<li><a href="/www6vHomeAIGC/2023/07/17/gptDiffusionControllableWork/" title="(Work|实战)Controllable">(Work|实战)Controllable</a></li>
 </ul>
 </li>
 <li>editing<ul>
 <li><a href="/www6vHomeAIGC/2023/07/06/gptDiffusionImageEdit/" title="(综述)Image Editing">(综述)Image Editing</a>   </li>
-<li><a href="/www6vHomeAIGC/2023/07/27/gptDiffusionImageEditWork/" title="(Work)Image Editing">(Work)Image Editing</a></li>
+<li><a href="/www6vHomeAIGC/2023/07/27/gptDiffusionImageEditWork/" title="(Work|实战)Image Editing">(Work|实战)Image Editing</a></li>
 </ul>
 </li>
 <li>concept customization [fine-tuning]<ul>
-<li><a href="/www6vHomeAIGC/2023/07/06/gptDiffusionFineTuning/" title="(实战) SD fine-tuning">(实战) SD fine-tuning</a>   </li>
+<li><a href="/www6vHomeAIGC/2023/07/06/gptDiffusionFineTuning/" title="(work|实战) SD fine-tuning">(work|实战) SD fine-tuning</a>   </li>
 <li><a href="/www6vHomeAIGC/2024/07/17/gptDiffusionDreamBooth/" title="(原理|实战)DreamBooth">(原理|实战)DreamBooth</a></li>
 </ul>
 </li>
@@ -983,7 +983,7 @@
       </tags>
   </entry>
   <entry>
-    <title>(Work)Image Editing</title>
+    <title>(Work|实战)Image Editing</title>
     <url>/www6vHomeAIGC/2023/07/27/gptDiffusionImageEditWork/</url>
     <content><![CDATA[<p></p>
 <span id="more"></span>
@@ -998,6 +998,7 @@
 <li><a href="#%E8%AE%BA%E6%96%87mgie">论文[MGIE]</a></li>
 <li><a href="#%E8%AE%BA%E6%96%87pix2pix-zero">论文[pix2pix-zero]</a></li>
 <li><a href="#%E6%80%BB%E7%BB%93">总结</a></li>
+<li><a href="#%E5%AE%9E%E6%88%98">实战</a></li>
 </ul>
 <!-- tocstop -->
 
@@ -1058,6 +1059,8 @@
 <li><p>MGIE<br>基于LMM</p>
 </li>
 </ul>
+<hr>
+<h1><span id="实战">实战</span><a href="#实战" class="header-anchor">#</a></h1><p>1xx. <a href="https://candied-skunk-1ca.notion.site/editing-5d04c1bbd0d34be4b3fb0087cb670efd?pvs=4">InstructPix2Pix</a>  diffusers<br>1xx. <a href="https://www.bilibili.com/video/BV1Go4y1M7cK?p=3">InstructPix2Pix</a> V<br><a href="https://github.com/www6v/Diffusion_Training_Examples">Code Repo</a> git</p>
 ]]></content>
       <categories>
         <category>AIGC</category>
@@ -1146,7 +1149,7 @@
       </tags>
   </entry>
   <entry>
-    <title>(Work)Controllable</title>
+    <title>(Work|实战)Controllable</title>
     <url>/www6vHomeAIGC/2023/07/17/gptDiffusionControllableWork/</url>
     <content><![CDATA[<p></p>
 <span id="more"></span>
@@ -1167,6 +1170,13 @@
 <li><p>开源地址<br><a href="https://github.com/TencentARC/T2I-Adapter">T2I-Adapter</a> git</p>
 </li>
 <li><p>论文解析<br><a href="https://candied-skunk-1ca.notion.site/T2I-Adapter-26eef5080f084dacb6e89d643d31e53d?pvs=4">论文解析</a></p>
+</li>
+</ul>
+<hr>
+<h1><span id="实战">实战</span><a href="#实战" class="header-anchor">#</a></h1><ul>
+<li><p><a href="https://candied-skunk-1ca.notion.site/controllable-763edf3a43b94e03a1ff0faee9ac41c2?pvs=4">ControlNet + t2i_adapter + Custom Diffusion </a>  diffusers</p>
+</li>
+<li><p><a href="https://www.bilibili.com/video/BV1Go4y1M7cK?p=2">control net</a> V</p>
 </li>
 </ul>
 ]]></content>
@@ -1251,7 +1261,7 @@
       </tags>
   </entry>
   <entry>
-    <title>(实战) SD fine-tuning</title>
+    <title>(work|实战) SD fine-tuning</title>
     <url>/www6vHomeAIGC/2023/07/06/gptDiffusionFineTuning/</url>
     <content><![CDATA[<p></p>
 <span id="more"></span>
@@ -1265,6 +1275,7 @@
 <li><a href="#%E5%AF%B9%E6%AF%94%E6%80%BB%E7%BB%932">对比总结[2]</a></li>
 <li><a href="#%E5%8F%82%E8%80%83">参考</a><ul>
 <li><a href="#%E5%AE%9E%E6%88%98">实战</a></li>
+<li><a href="#%E5%AE%9E%E6%88%98-1">实战</a></li>
 </ul>
 </li>
 </ul>
@@ -1308,7 +1319,8 @@
 <li><a href="https://cloud.tencent.com/developer/article/2302436">Stable Diffusion 微调及推理优化</a></li>
 <li><a href="https://www.bilibili.com/video/BV19h4y1475y/">【论文串读】Stable Diffusion模型微调方法串读</a> V</li>
 </ol>
-<h3><span id="实战">实战</span><a href="#实战" class="header-anchor">#</a></h3><p>1xx. <a href="https://www.bilibili.com/video/BV1184y1g7pG/?p=4">Text Inversion</a> V<br>   【这个比较详细】<br>1xx. <a href="https://www.bilibili.com/video/BV1184y1g7pG?p=5">Dreambooth</a> V<br>   【只训练unet】<br>1xx. <a href="https://www.bilibili.com/video/BV1184y1g7pG?p=7">lora Dreambooth</a> V<br>   【冻结不训练unet，只训练lora】<br>   【为unet模型添加注意力层，注意力层是要训练的参数】<br>   【大部分代码和Dreambooth差不多】<br>1xx. <a href="https://www.bilibili.com/video/BV1Go4y1M7cK?p=2">control net</a> V<br>1xx. <a href="https://www.bilibili.com/video/BV1Go4y1M7cK?p=3">pix2pix</a> V<br><a href="https://github.com/www6v/Diffusion_Training_Examples">Code Repo</a> git</p>
+<h3><span id="实战">实战</span><a href="#实战" class="header-anchor">#</a></h3><p>1xx. <a href="https://www.bilibili.com/video/BV1184y1g7pG/?p=4">Text Inversion</a> V<br>   【这个比较详细】<br>1xx. <a href="https://www.bilibili.com/video/BV1184y1g7pG?p=5">Dreambooth</a> V<br>   【只训练unet】<br>1xx. <a href="https://www.bilibili.com/video/BV1184y1g7pG?p=7">lora Dreambooth</a> V<br>   【冻结不训练unet，只训练lora】<br>   【为unet模型添加注意力层，注意力层是要训练的参数】<br>   【大部分代码和Dreambooth差不多】</p>
+<h3><span id="实战">实战</span><a href="#实战" class="header-anchor">#</a></h3><p>1xx. <a href="https://candied-skunk-1ca.notion.site/concept-customization-067033e842b044729d81aed1d96608fd?pvs=4">dreambooth + textual_inversion</a>  diffusers</p>
 ]]></content>
       <categories>
         <category>AIGC</category>
