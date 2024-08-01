@@ -25,22 +25,11 @@
 <meta property="og:url" content="https://www6v.github.io/2023/06/29/gptMultimodalDiffusion/index.html">
 <meta property="og:site_name" content="www6v的博客">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://www6v.github.io/www6vHomeAIGC/2023/06/29/gptMultimodalDiffusion/1.jpg">
-<meta property="og:image" content="https://www6v.github.io/www6vHomeAIGC/2023/06/29/gptMultimodalDiffusion/ddpm-struct.png">
-<meta property="og:image" content="https://www6v.github.io/www6vHomeAIGC/2023/06/29/gptMultimodalDiffusion/train1.jpg">
-<meta property="og:image" content="https://www6v.github.io/www6vHomeAIGC/2023/06/29/gptMultimodalDiffusion/train2.jpg">
-<meta property="og:image" content="https://www6v.github.io/www6vHomeAIGC/2023/06/29/gptMultimodalDiffusion/infer.jpg">
-<meta property="og:image" content="https://www6v.github.io/www6vHomeAIGC/2023/06/29/gptMultimodalDiffusion/ldm.jpg">
-<meta property="og:image" content="https://www6v.github.io/www6vHomeAIGC/2023/06/29/gptMultimodalDiffusion/3.jpg">
-<meta property="og:image" content="https://www6v.github.io/www6vHomeAIGC/2023/06/29/gptMultimodalDiffusion/2.jpg">
-<meta property="og:image" content="https://www6v.github.io/www6vHomeAIGC/2023/06/29/gptMultimodalDiffusion/evolution-line.jpg">
-<meta property="og:image" content="https://www6v.github.io/www6vHomeAIGC/2023/06/29/gptMultimodalDiffusion/evolution.jpg">
 <meta property="article:published_time" content="2023-06-29T09:28:21.000Z">
-<meta property="article:modified_time" content="2024-07-20T18:07:26.911Z">
+<meta property="article:modified_time" content="2024-08-01T06:22:13.239Z">
 <meta property="article:author" content="Wang Wei">
 <meta property="article:tag" content="multimodal">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://www6v.github.io/www6vHomeAIGC/2023/06/29/gptMultimodalDiffusion/1.jpg">
 
 <link rel="canonical" href="https://www6v.github.io/2023/06/29/gptMultimodalDiffusion/">
 
@@ -235,7 +224,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2024-07-21 02:07:26" itemprop="dateModified" datetime="2024-07-21T02:07:26+08:00">2024-07-21</time>
+                <time title="修改时间：2024-08-01 14:22:13" itemprop="dateModified" datetime="2024-08-01T14:22:13+08:00">2024-08-01</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -265,90 +254,9 @@
         <p></p>
 <span id="more"></span>
 
-<h2><span id="目录">目录</span><a href="#目录" class="header-anchor">#</a></h2><div class="toc">
-
-<!-- toc -->
-
-<ul>
-<li><a href="#diffusion">Diffusion</a><ul>
-<li><a href="#ddpm-%E5%AE%9E%E7%8E%B0%E5%99%AA%E5%A3%B0%E5%88%B0%E5%9B%BE%E7%89%87%E6%AD%A5%E9%AA%A41">DDPM 实现噪声到图片步骤[1]</a></li>
-<li><a href="#ddpm-%E6%A8%A1%E5%9E%8B%E7%BB%93%E6%9E%841">DDPM 模型结构[1]</a></li>
-<li><a href="#ddpm%E8%AE%AD%E7%BB%834">DDPM——训练[4]</a></li>
-<li><a href="#ddpm%E6%8E%A8%E7%90%864">DDPM——推理[4]</a></li>
-<li><a href="#diffusion-model-%E6%8B%93%E5%B1%95-stable-diffusion-1">Diffusion Model 拓展 —— Stable Diffusion [1]</a></li>
-</ul>
-</li>
-<li><a href="#sd%E7%9A%84%E4%B8%BB%E8%A6%81%E5%BA%94%E7%94%A83">SD的主要应用[3]</a></li>
-<li><a href="#sd%E7%9A%84%E5%85%B6%E5%AE%83%E7%89%B9%E8%89%B2%E5%BA%94%E7%94%A83">SD的其它特色应用[3]</a></li>
-<li><a href="#evolution-5">Evolution [5]</a></li>
-<li><a href="#%E5%8F%82%E8%80%83">参考</a></li>
-</ul>
-<!-- tocstop -->
-
-</div>
 
 
-<h1><span id="diffusion">Diffusion</span><a href="#diffusion" class="header-anchor">#</a></h1><h3><span id="ddpm-实现噪声到图片步骤1">DDPM 实现噪声到图片步骤[1]</span><a href="#ddpm-实现噪声到图片步骤1" class="header-anchor">#</a></h3><p>DDPM实现从噪声生成图像的步骤就清晰了：</p>
-<ol>
-<li><strong>前向过程：将原图逐步添加噪声， 共1000步</strong></li>
-<li><strong>反向过程：利用神经网络学习加噪图像到噪声的变换，使得模型可以去噪</strong></li>
-<li><strong>推理使用：随机采样，得到高斯噪声，然后逐步去噪，经过1000步去噪，得到清晰图像。</strong><img src="/www6vHomeAIGC/2023/06/29/gptMultimodalDiffusion/1.jpg" class></li>
-</ol>
-<h3><span id="ddpm-模型结构1">DDPM 模型结构[1]</span><a href="#ddpm-模型结构1" class="header-anchor">#</a></h3><img src="/www6vHomeAIGC/2023/06/29/gptMultimodalDiffusion/ddpm-struct.png" class>
-
-<h3><span id="ddpm训练4">DDPM——训练[4]</span><a href="#ddpm训练4" class="header-anchor">#</a></h3><ul>
-<li><p>训练过程 - 正向</p>
-<img src="/www6vHomeAIGC/2023/06/29/gptMultimodalDiffusion/train1.jpg" class>
-</li>
-<li><p>训练过程 - 反向 predict noise </p>
-<img src="/www6vHomeAIGC/2023/06/29/gptMultimodalDiffusion/train2.jpg" class></li>
-</ul>
-<h3><span id="ddpm推理4">DDPM——推理[4]</span><a href="#ddpm推理4" class="header-anchor">#</a></h3><ul>
-<li>生图-推理<img src="/www6vHomeAIGC/2023/06/29/gptMultimodalDiffusion/infer.jpg" class></li>
-</ul>
-<h3><span id="diffusion-model-拓展-stable-diffusion-1">Diffusion Model 拓展 —— Stable Diffusion [1]</span><a href="#diffusion-model-拓展-stable-diffusion-1" class="header-anchor">#</a></h3><p>Stable Diffusion 背后的技术是<strong>LDM（latent diffusion model）</strong></p>
-<p>LDM论文中有一幅图很好的解释了LDM的思想：首先在pixel space，需要有encoder和decoder，在latent space采用了多头注意力机制，并且除了时间步信息，加入了conditioning模块，其中的引导信息可以是文本、图片、表征向量等等一切内容，然后为引导信息配一个embedding模块，就可以将引导信息加入模型中。</p>
-<p>SD是一个<strong>基于latent的扩散模型</strong>，它在UNet中引入text condition来实现基于文本生成图像。SD的核心来源于<a href="https://link.zhihu.com/?target=https://arxiv.org/abs/2112.10752">Latent Diffusion</a>这个工作，常规的扩散模型是基于pixel的生成模型，而Latent Diffusion是基于latent的生成模型，它先采用一个autoencoder将图像压缩到latent空间，然后用扩散模型来生成图像的latents，最后送入autoencoder的decoder模块就可以得到生成的图像。[3]</p>
-<img src="/www6vHomeAIGC/2023/06/29/gptMultimodalDiffusion/ldm.jpg" class>
-
-
-<p>SD模型的主体结构如下图所示，主要包括三个模型：</p>
-<ul>
-<li><strong>autoencoder</strong>：encoder将图像压缩到latent空间，而decoder将latent解码为图像；</li>
-<li><strong>CLIP text encoder</strong>：提取输入text的text embeddings，通过cross attention方式送入扩散模型的UNet中作为condition；</li>
-<li><strong>UNet</strong>：扩散模型的主体，用来实现文本引导下的latent生成。<img src="/www6vHomeAIGC/2023/06/29/gptMultimodalDiffusion/3.jpg" class></li>
-</ul>
-<p>这里配上李宏毅老师的结构示意图，可知道LDM的核心在于2当中，处理的不再是像素空间，而是一个特征空间</p>
-<img src="/www6vHomeAIGC/2023/06/29/gptMultimodalDiffusion/2.jpg" class>
-
-
-<h1><span id="sd的主要应用3">SD的主要应用[3]</span><a href="#sd的主要应用3" class="header-anchor">#</a></h1><ul>
-<li>文生图</li>
-<li>图生图</li>
-<li>图像inpainting</li>
-</ul>
-<h1><span id="sd的其它特色应用3">SD的其它特色应用[3]</span><a href="#sd的其它特色应用3" class="header-anchor">#</a></h1><ul>
-<li><p><strong>个性化生成</strong>  【fine-tuning】<br>英伟达的<a href="https://link.zhihu.com/?target=https://arxiv.org/abs/2208.01618">Textual Inversion</a>和谷歌的<a href="https://link.zhihu.com/?target=https://arxiv.org/abs/2208.12242">DreamBooth</a></p>
-</li>
-<li><p><strong>风格化finetune模型</strong> 【fine-tuning】<br>目前finetune SD模型的方法主要有两种：一种是直接finetune了UNet，但是容易过拟合，而且存储成本；另外一种低成本的方法是基于微软的<a href="https://link.zhihu.com/?target=https://arxiv.org/abs/2106.09685">LoRA</a>，LoRA本来是用于finetune语言模型的，但是现在已经可以用来finetune SD模型了，具体可以见博客<a href="https://link.zhihu.com/?target=https://huggingface.co/blog/lora">Using LoRA for Efficient Stable Diffusion Fine-Tuning</a>。</p>
-</li>
-<li><p><strong>图像编辑</strong> 【image edit】<br>谷歌的<a href="https://link.zhihu.com/?target=https://prompt-to-prompt.github.io/">prompt-to-prompt</a>和加州伯克利的<a href="https://link.zhihu.com/?target=https://www.timothybrooks.com/instruct-pix2pix">instruct-pix2pix</a></p>
-</li>
-<li><p><strong>可控生成</strong> 【controllable】<br>可控生成是SD最近比较火的应用，这主要归功于<a href="https://link.zhihu.com/?target=https://github.com/lllyasviel/ControlNet">ControlNet</a>，基于ControlNet可以实现对很多种类的可控生成，比如边缘，人体关键点，草图和深度图等等。</p>
-</li>
-</ul>
-<h1><span id="evolution-5">Evolution [5]</span><a href="#evolution-5" class="header-anchor">#</a></h1><img src="/www6vHomeAIGC/2023/06/29/gptMultimodalDiffusion/evolution-line.jpg" class>
-
-<img src="/www6vHomeAIGC/2023/06/29/gptMultimodalDiffusion/evolution.jpg" class>
-
-
-<h1><span id="参考">参考</span><a href="#参考" class="header-anchor">#</a></h1><ol>
-<li><a target="_blank" rel="noopener" href="https://tingsongyu.github.io/PyTorch-Tutorial-2nd/chapter-8/8.6-diffusion-model.html">8.6 扩散模型——DDPM · PyTorch实用教程（第二版）</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/CompVis/stable-diffusion">https://github.com/CompVis/stable-diffusion</a></li>
-<li><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/617134893">文生图模型之Stable Diffusion</a></li>
-<li><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Pg4y1M7Lr?p=3">38.(正课)Stable Diffusion、DALL-E、Imagen 背后_哔哩哔哩_bilibili</a><br><a target="_blank" rel="noopener" href="https://speech.ee.ntu.edu.tw/~hylee/ml/ml2023-course-data/StableDiffusion%20(v2).pdf">course PPT</a></li>
-<li><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV13J4m1K73z/">【扩散生成模型串讲】一个视频梳理Diffusion模型演化进程，16个扩散相关生成模型，20+篇相关论文串讲。_哔哩哔哩_bilibili</a> V</li>
-</ol>
+<h1><span id="diffusion-原理">Diffusion 原理</span><a href="#diffusion-原理" class="header-anchor">#</a></h1><p><a target="_blank" rel="noopener" href="https://candied-skunk-1ca.notion.site/Diffusion-8cdcc8079d7d42c2a193ae6baf06246e?pvs=4">(原理)Diffusion</a></p>
 
     </div>
 

@@ -1404,15 +1404,120 @@
       </tags>
   </entry>
   <entry>
-    <title>Agent - UI-assistants</title>
-    <url>/www6vHomeAIGC/2023/06/30/gptAgentMultimodalApp/</url>
+    <title>(原理)Agent 多模态</title>
+    <url>/www6vHomeAIGC/2023/02/21/gptAgentMultimodal/</url>
     <content><![CDATA[<p></p>
 <span id="more"></span>
 
 
-<h1><span id="参考">参考</span><a href="#参考" class="header-anchor">#</a></h1><h3><span id="app-agent">App Agent</span><a href="#app-agent" class="header-anchor">#</a></h3><p>1xx. <a href="https://zhuanlan.zhihu.com/p/677071947">AppAgent源码分析&amp;思考</a><br><a href="https://github.com/mnotgod96/AppAgent">https://github.com/mnotgod96/AppAgent</a><br><a href="https://icoz69.github.io/">https://icoz69.github.io/</a></p>
-<p>1xx. <a href="https://zhuanlan.zhihu.com/p/681424409">【LLM-agent】MOBILE-AGENT: 具有视觉感知能力的自治多模移动设备agent</a><br>   <a href="https://github.com/X-PLUG/MobileAgent">https://github.com/X-PLUG/MobileAgent</a></p>
-<p>1xx. <a href="https://github.com/OpenAdaptAI/OpenAdapt">https://github.com/OpenAdaptAI/OpenAdapt</a></p>
+
+<h2><span id="目录">目录</span><a href="#目录" class="header-anchor">#</a></h2><div class="toc">
+
+<!-- toc -->
+
+<ul>
+<li><a href="#%E8%AE%BA%E6%96%87">论文</a></li>
+<li><a href="#survey">Survey</a><ul>
+<li><a href="#%E7%B1%BB%E5%9E%8B-i%E6%97%A0%E9%95%BF%E6%9C%9F%E8%AE%B0%E5%BF%86%E7%9A%84%E9%97%AD%E6%BA%90-llms-%E4%BD%9C%E4%B8%BA%E8%A7%84%E5%88%92%E5%99%A8">类型 I：无长期记忆的闭源 LLMs 作为规划器。</a></li>
+<li><a href="#%E7%B1%BB%E5%9E%8B-ii%E6%97%A0%E9%95%BF%E6%9C%9F%E8%AE%B0%E5%BF%86%E7%9A%84%E5%BE%AE%E8%B0%83-llms-%E4%BD%9C%E4%B8%BA%E8%A7%84%E5%88%92%E5%99%A8">类型 II：无长期记忆的微调 LLMs 作为规划器。</a></li>
+<li><a href="#%E7%B1%BB%E5%9E%8B-iv%E5%85%B7%E6%9C%89%E6%9C%AC%E5%9C%B0%E9%95%BF%E6%9C%9F%E8%AE%B0%E5%BF%86%E7%9A%84%E8%A7%84%E5%88%92%E5%99%A8">类型 IV：具有本地长期记忆的规划器。</a></li>
+</ul>
+</li>
+<li><a href="#%E5%A4%9A%E6%A8%A1%E6%80%81-agent1">多模态 Agent[1]</a></li>
+<li><a href="#%E5%A4%9A%E6%A8%A1%E6%80%81-agent10">多模态 Agent[10]</a><ul>
+<li><a href="#%E8%8C%83%E5%BC%8F">范式</a></li>
+<li><a href="#works">works</a></li>
+</ul>
+</li>
+<li><a href="#%E5%8F%82%E8%80%83">参考</a><ul>
+<li><a href="#%E7%BB%BC%E8%BF%B0">综述</a></li>
+<li><a href="#xxx">xxx</a></li>
+<li><a href="#%E5%A4%9A%E6%A8%A1%E6%80%81agent">多模态Agent</a></li>
+<li><a href="#xxx-1">xxx</a></li>
+</ul>
+</li>
+</ul>
+<!-- tocstop -->
+
+</div>
+
+
+
+<h1><span id="论文">论文</span><a href="#论文" class="header-anchor">#</a></h1><ul>
+<li><p>论文地址<br> <a href="https://arxiv.org/abs/2402.15116">《Large Multimodal Agents: A Survey》</a> </p>
+</li>
+<li><p>开源地址<br> <a href="https://github.com/jun0wanan/awesome-large-multimodal-agents">Repo</a> git</p>
+</li>
+</ul>
+<h1><span id="survey">Survey</span><a href="#survey" class="header-anchor">#</a></h1><h3><span id="类型-i无长期记忆的闭源-llms-作为规划器">类型 I：无长期记忆的闭源 LLMs 作为规划器。</span><a href="#类型-i无长期记忆的闭源-llms-作为规划器" class="header-anchor">#</a></h3><p><a href="https://arxiv.org/pdf/2303.04671.pdf"><strong>Visual ChatGPT</strong></a>  ***</p>
+<p><a href="https://arxiv.org/pdf/2303.11381.pdf"><strong>MM-REACT</strong></a>  ***</p>
+<p><a href="https://arxiv.org/pdf/2303.08128.pdf"><strong>ViperGPT</strong></a> </p>
+<p><a href="https://arxiv.org/pdf/2303.17580.pdf"><strong>HuggingGPT</strong></a>  ***</p>
+<p><a href="https://arxiv.org/pdf/2304.09842.pdf"><strong>Chameleon</strong></a> ***</p>
+<p><a href="https://arxiv.org/pdf/2311.00571.pdf"><strong>LLaVA-Interactive</strong></a> ***</p>
+<p><a href="https://arxiv.org/pdf/2401.01614"><strong>SeeAct</strong></a> </p>
+<p><a href="https://arxiv.org/pdf/2310.01415.pdf"><strong>GPT-Driver</strong></a> </p>
+<p><a href="https://arxiv.org/pdf/2401.16158.pdf"><strong>Mobile-Agent</strong></a> </p>
+<h3><span id="类型-ii无长期记忆的微调-llms-作为规划器">类型 II：无长期记忆的微调 LLMs 作为规划器。</span><a href="#类型-ii无长期记忆的微调-llms-作为规划器" class="header-anchor">#</a></h3><p><a href="https://arxiv.org/pdf/2306.08640.pdf"><strong>LLaVA-Plus</strong></a> </p>
+<p><a href="https://arxiv.org/pdf/2305.18752.pdf"><strong>GPT4Tools</strong></a> </p>
+<h3><span id="类型-iv具有本地长期记忆的规划器">类型 IV：具有本地长期记忆的规划器。</span><a href="#类型-iv具有本地长期记忆的规划器" class="header-anchor">#</a></h3><p><a href="https://arxiv.org/pdf/2311.05997.pdf"><strong>JARV IS-1</strong></a> </p>
+<p><a href="https://arxiv.org/pdf/2312.13771.pdf"><strong>AppAgent</strong></a> </p>
+<p><a href="https://arxiv.org/pdf/2307.07162.pdf"><strong>DLAH</strong></a> </p>
+<h1><span id="多模态-agent1">多模态 Agent[1]</span><a href="#多模态-agent1" class="header-anchor">#</a></h1><ul>
+<li><p>核心组件</p>
+<ul>
+<li><strong>感知</strong>组件关注处理多模态信息</li>
+<li><strong>规划器</strong>负责推理和制定计划</li>
+<li><strong>行动</strong>组件执行计划</li>
+<li><strong>记忆</strong>组件则涉及长期和短期记忆</li>
+</ul>
+</li>
+<li><p>四种类型</p>
+<ul>
+<li>无长期记忆的闭源 LLMs 作为规划器</li>
+<li>无长期记忆的微调 LLMs 作为规划器</li>
+<li>具有间接长期记忆的规划器 </li>
+<li>具有本地长期记忆的规划器</li>
+</ul>
+</li>
+<li><p>多智能体协作</p>
+<ul>
+<li>讨论了 LMAs 如何通过协作框架共同实现共同目标。</li>
+</ul>
+</li>
+</ul>
+<h1><span id="多模态-agent10">多模态 Agent[10]</span><a href="#多模态-agent10" class="header-anchor">#</a></h1><h3><span id="范式">范式</span><a href="#范式" class="header-anchor">#</a></h3><img src="/www6vHomeAIGC/2023/02/21/gptAgentMultimodal/tasks.JPG" class>
+
+<ul>
+<li><p>MM-ReAct </p>
+</li>
+<li><p>HuggingGPT[21, 22] </p>
+</li>
+<li><p>Chameleon</p>
+</li>
+<li><p>Visual ChatGPT [20]</p>
+</li>
+</ul>
+<h3><span id="works">works</span><a href="#works" class="header-anchor">#</a></h3><img src="/www6vHomeAIGC/2023/02/21/gptAgentMultimodal/works.jpg" class>
+
+
+<h1><span id="参考">参考</span><a href="#参考" class="header-anchor">#</a></h1><h3><span id="综述">综述</span><a href="#综述" class="header-anchor">#</a></h3><ol>
+<li><a href="https://mp.weixin.qq.com/s?__biz=Mzg5NTc2OTcyOQ==&mid=2247488499&idx=1&sn=ac8c5092ddc8fd724965d12aff3f9392">2024年大型多模态智能体(Large Multimodal Agents)综述：组件, 分类，协作，评估，应用，展望</a> ***</li>
+</ol>
+<p>1xx. <a href="https://zhuanlan.zhihu.com/p/678203245">智体AI在多模态交互领域的综述（上）</a><br>1xx. <a href="https://zhuanlan.zhihu.com/p/678222381">智体AI在多模态交互领域的综述（下）</a></p>
+<h3><span id="xxx">xxx</span><a href="#xxx" class="header-anchor">#</a></h3><ol start="10">
+<li><a href="https://www.bilibili.com/video/BV1mM411X7Zn/">多模态 Agents：用大模型语言模型串联多模态专家</a> V</li>
+</ol>
+<h3><span id="多模态agent">多模态Agent</span><a href="#多模态agent" class="header-anchor">#</a></h3><p>1xx. <a href="/www6vHomeAIGC/2023/01/18/gptMultimodal/" title="(综述)多模态">(综述)多模态</a> self<br>1xx. <a href="/www6vHomeAIGC/2023/03/16/gptMultimodalSurvey/" title="(Survey)多模态">(Survey)多模态</a> self</p>
+<h3><span id="xxx">xxx</span><a href="#xxx" class="header-anchor">#</a></h3><ol start="20">
+<li><p>《Visual ChatGPT: Talking, Drawing and Editing with Visual Foundation Models》<br><a href="https://github.com/chenfei-wu/TaskMatrix">Visual ChatGPT</a> git</p>
+</li>
+<li><p><a href="https://nakaizura.blog.csdn.net/article/details/130856470">LLMs的自动化工具系统（HuggingGPT、AutoGPT、WebGPT、WebCPM）</a>  </p>
+</li>
+<li><p><a href="https://github.com/microsoft/JARVIS">HuggingGPT</a> git<br><a href="https://github.com/langchain-ai/langchain/blob/master/cookbook/hugginggpt.ipynb">hugginggpt in langchain</a> git<br><a href="https://github.com/camille-vanhoffelen/langchain-huggingGPT">langchain-huggingGPT</a> git</p>
+</li>
+</ol>
+<p>1xx. <a href="https://mp.weixin.qq.com/s/VXe6CHI_29Rw8xaOjfbqOQ">Visual Programming——实现通用人工智能的另一种方式 </a> 2022  best paper</p>
 ]]></content>
       <categories>
         <category>AIGC</category>
@@ -1439,6 +1544,25 @@
       </categories>
       <tags>
         <tag>Agent</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Agent - UI-assistants</title>
+    <url>/www6vHomeAIGC/2023/06/30/gptAgentMultimodalApp/</url>
+    <content><![CDATA[<p></p>
+<span id="more"></span>
+
+
+<h1><span id="参考">参考</span><a href="#参考" class="header-anchor">#</a></h1><h3><span id="app-agent">App Agent</span><a href="#app-agent" class="header-anchor">#</a></h3><p>1xx. <a href="https://zhuanlan.zhihu.com/p/677071947">AppAgent源码分析&amp;思考</a><br><a href="https://github.com/mnotgod96/AppAgent">https://github.com/mnotgod96/AppAgent</a><br><a href="https://icoz69.github.io/">https://icoz69.github.io/</a></p>
+<p>1xx. <a href="https://zhuanlan.zhihu.com/p/681424409">【LLM-agent】MOBILE-AGENT: 具有视觉感知能力的自治多模移动设备agent</a><br>   <a href="https://github.com/X-PLUG/MobileAgent">https://github.com/X-PLUG/MobileAgent</a></p>
+<p>1xx. <a href="https://github.com/OpenAdaptAI/OpenAdapt">https://github.com/OpenAdaptAI/OpenAdapt</a></p>
+]]></content>
+      <categories>
+        <category>AIGC</category>
+        <category>Agent</category>
+      </categories>
+      <tags>
+        <tag>AIGC</tag>
       </tags>
   </entry>
   <entry>
@@ -1744,197 +1868,6 @@
       </tags>
   </entry>
   <entry>
-    <title>(原理)Gorilla</title>
-    <url>/www6vHomeAIGC/2023/04/08/gptAgentToolGorilla/</url>
-    <content><![CDATA[<p></p>
-<span id="more"></span>
-
-<h2><span id="目录">目录</span><a href="#目录" class="header-anchor">#</a></h2><div class="toc">
-
-<!-- toc -->
-
-<ul>
-<li><a href="#%E8%AE%BA%E6%96%87">论文</a></li>
-<li><a href="#%E6%96%B9%E6%B3%95%E8%AE%BA1">方法论[1]</a><ul>
-<li><a href="#%E6%95%B0%E6%8D%AE%E9%9B%86%E6%94%B6%E9%9B%86">数据集收集</a></li>
-<li><a href="#gorilla">Gorilla</a></li>
-</ul>
-</li>
-<li><a href="#%E5%8F%82%E8%80%83">参考</a></li>
-</ul>
-<!-- tocstop -->
-
-</div>
-
-<h1><span id="论文">论文</span><a href="#论文" class="header-anchor">#</a></h1><ul>
-<li><p>论文地址<br> <a href="https://ar5iv.labs.arxiv.org/html/2305.15334">Gorilla: Large Language Model Connected with Massive APIs</a> </p>
-</li>
-<li><p>开源地址<br> <a href="https://github.com/ShishirPatil/gorilla">gorilla</a> git</p>
-</li>
-</ul>
-<h1><span id="方法论1">方法论[1]</span><a href="#方法论1" class="header-anchor">#</a></h1><h3><span id="数据集收集">数据集收集</span><a href="#数据集收集" class="header-anchor">#</a></h3><p><strong>API文档</strong></p>
-<ul>
-<li>HuggingFace平台托管和提供了约203,681个模型。然而，其中许多模型的文档质量较差，缺乏依赖项，模型卡中没有信息等问题。</li>
-<li>为了筛选出质量较好的模型，从每个领域选择了前20个模型。考虑了多模态数据领域的7个领域，CV领域的8个领域，NLP领域的12个领域，音频领域的5个领域，表格数据领域的2个领域和强化学习领域的2个领域。</li>
-<li>经过筛选，从HuggingFace获得了总共925个模型。从TensorFlow Hub获得了801个模型，并从Torch Hub获得了95个模型。</li>
-<li>这些模型的信息被转换为<strong>JSON对象</strong>，其中包含了领域（domain）、框架（framework）、功能（functionality）、API名称（api_name）、API调用（api_call）、API参数（api_arguments）、环境要求（environment_requirements）、示例代码（example_code）、性能（performance）和描述（description）等字段。</li>
-<li>选择这些字段是为了将其泛化到机器学习领域之外的其他领域，包括RESTful API调用。<br><strong>总而言之</strong>，通过筛选和整理，从HuggingFace、TensorFlow Hub和Torch Hub等平台获取了<strong>总共1,645个模型</strong>的信息，并将其以<strong>JSON对象</strong>的形式进行了记录和描述。这些信息包括模型的领域、框架、功能、API调用示例、性能等，以便在机器学习和其他领域中使用和参考。</li>
-</ul>
-<p><strong>指令生成 （Instruction Generation ）</strong></p>
-<ul>
-<li>在<strong>self-instruct</strong>范例[42]的指导下，使用GPT-4生成了合成指令数据。</li>
-<li>提供了三个上下文示例和一个参考API文档，要求模型生成调用API的真实世界用例。</li>
-<li>明确指示模型在创建指令时不要使用任何API名称或提示。</li>
-<li>为每个三个模型中心构建了六个示例（<strong>指令-API对</strong>），共计18个点，这些数据是手动生成或修改的。</li>
-<li>对于<strong>1,645个</strong>API数据点中的每一个，从相应的六个指令示例中随机选择3个，生成<strong>总共10个指令-API对</strong>。</li>
-<li>强调只需要使用GPT-4生成指令，可以与开源替代方案（如LLaMA、Alpaca等）进行交换。<br><strong>总而言之</strong>，通过使用GPT-4生成指令，并结合上下文示例和参考API文档，在每个模型中心构建了六个示例，共计18个点。这些示例被用于<strong>生成1,645个API数据点中的每一个的指令-API对，生成总共10个对应关系</strong>。与开源替代方案相比，GPT-4的指令生成功能被应用在这个过程中。</li>
-</ul>
-<h3><span id="gorilla">Gorilla</span><a href="#gorilla" class="header-anchor">#</a></h3><p><strong>带有约束的API调用（API Call with Constraints）</strong></p>
-<ul>
-<li>API调用通常具有固有的<strong>约束</strong>，这些约束要求LLM不仅理解API调用的功能，还要<strong>根据不同的约束参数对调用进行分类</strong>。</li>
-<li>机器学习API调用中常见的约束集是参数大小和准确性的下限。这些约束要求LLM能够根据提示理解和回答问题，例如根据提示选择参数少于10M的图像分类模型，并且至少保持70%的ImageNet准确率。</li>
-<li><strong>对LLM来说，理解和推理出请求中嵌入的各种约束是一个巨大的挑战</strong>。LLM需要细致地理解用户的功能描述，并能够正确地处理伴随这些调用的复杂约束。</li>
-<li>这个挑战凸显了在实际API调用中对LLM的复杂要求。仅仅理解API调用的基本功能是不够的，<strong>模型还必须能够应对伴随这些调用的约束，如参数大小和准确性要求</strong>。<br>总而言之，在机器学习API调用中，LLM面临着理解和处理约束的挑战。除了理解API调用的基本功能外，LLM还需要能够识别和满足伴随调用的约束要求，如参数大小和准确性的下限。这需要模型具备更细致的理解和推理能力，以满足实际API调用的复杂需求。</li>
-</ul>
-<h1><span id="参考">参考</span><a href="#参考" class="header-anchor">#</a></h1><ol>
-<li><a href="https://zhuanlan.zhihu.com/p/640697382">Gorilla：与大规模API相连的大型语言模型</a> ***</li>
-</ol>
-<p>1xx. <a href="https://apposcmf8kb5033.pc.xiaoe-tech.com/live_pc/l_64a7d5afe4b09d7237a04b5b">Gorilla：链接海量API的大型语言模型</a> V<br>1xx. <a href="https://zhuanlan.zhihu.com/p/632583909">大猩猩（Gorilla）🦍，连接大量 API 的大型语言模型，能成为未来AI应用的核心么？</a> ***</p>
-<p>1xx. <a href="https://gorilla.cs.berkeley.edu/">Gorilla: Large Language Model Connected with Massive APIs</a><br>1xx. <a href="https://gorilla.cs.berkeley.edu/blog.html">Gorilla blog</a></p>
-]]></content>
-      <categories>
-        <category>AIGC</category>
-        <category>agent</category>
-      </categories>
-      <tags>
-        <tag>agent</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>(原理)Agent 多模态</title>
-    <url>/www6vHomeAIGC/2023/02/21/gptAgentMultimodal/</url>
-    <content><![CDATA[<p></p>
-<span id="more"></span>
-
-
-
-<h2><span id="目录">目录</span><a href="#目录" class="header-anchor">#</a></h2><div class="toc">
-
-<!-- toc -->
-
-<ul>
-<li><a href="#%E8%AE%BA%E6%96%87">论文</a></li>
-<li><a href="#survey">Survey</a><ul>
-<li><a href="#%E7%B1%BB%E5%9E%8B-i%E6%97%A0%E9%95%BF%E6%9C%9F%E8%AE%B0%E5%BF%86%E7%9A%84%E9%97%AD%E6%BA%90-llms-%E4%BD%9C%E4%B8%BA%E8%A7%84%E5%88%92%E5%99%A8">类型 I：无长期记忆的闭源 LLMs 作为规划器。</a></li>
-<li><a href="#%E7%B1%BB%E5%9E%8B-ii%E6%97%A0%E9%95%BF%E6%9C%9F%E8%AE%B0%E5%BF%86%E7%9A%84%E5%BE%AE%E8%B0%83-llms-%E4%BD%9C%E4%B8%BA%E8%A7%84%E5%88%92%E5%99%A8">类型 II：无长期记忆的微调 LLMs 作为规划器。</a></li>
-<li><a href="#%E7%B1%BB%E5%9E%8B-iv%E5%85%B7%E6%9C%89%E6%9C%AC%E5%9C%B0%E9%95%BF%E6%9C%9F%E8%AE%B0%E5%BF%86%E7%9A%84%E8%A7%84%E5%88%92%E5%99%A8">类型 IV：具有本地长期记忆的规划器。</a></li>
-</ul>
-</li>
-<li><a href="#%E5%A4%9A%E6%A8%A1%E6%80%81-agent1">多模态 Agent[1]</a></li>
-<li><a href="#%E5%A4%9A%E6%A8%A1%E6%80%81-agent10">多模态 Agent[10]</a><ul>
-<li><a href="#%E8%8C%83%E5%BC%8F">范式</a></li>
-<li><a href="#works">works</a></li>
-</ul>
-</li>
-<li><a href="#%E5%8F%82%E8%80%83">参考</a><ul>
-<li><a href="#%E7%BB%BC%E8%BF%B0">综述</a></li>
-<li><a href="#xxx">xxx</a></li>
-<li><a href="#%E5%A4%9A%E6%A8%A1%E6%80%81agent">多模态Agent</a></li>
-<li><a href="#xxx-1">xxx</a></li>
-</ul>
-</li>
-</ul>
-<!-- tocstop -->
-
-</div>
-
-
-
-<h1><span id="论文">论文</span><a href="#论文" class="header-anchor">#</a></h1><ul>
-<li><p>论文地址<br> <a href="https://arxiv.org/abs/2402.15116">《Large Multimodal Agents: A Survey》</a> </p>
-</li>
-<li><p>开源地址<br> <a href="https://github.com/jun0wanan/awesome-large-multimodal-agents">Repo</a> git</p>
-</li>
-</ul>
-<h1><span id="survey">Survey</span><a href="#survey" class="header-anchor">#</a></h1><h3><span id="类型-i无长期记忆的闭源-llms-作为规划器">类型 I：无长期记忆的闭源 LLMs 作为规划器。</span><a href="#类型-i无长期记忆的闭源-llms-作为规划器" class="header-anchor">#</a></h3><p><a href="https://arxiv.org/pdf/2303.04671.pdf"><strong>Visual ChatGPT</strong></a>  ***</p>
-<p><a href="https://arxiv.org/pdf/2303.11381.pdf"><strong>MM-REACT</strong></a>  ***</p>
-<p><a href="https://arxiv.org/pdf/2303.08128.pdf"><strong>ViperGPT</strong></a> </p>
-<p><a href="https://arxiv.org/pdf/2303.17580.pdf"><strong>HuggingGPT</strong></a>  ***</p>
-<p><a href="https://arxiv.org/pdf/2304.09842.pdf"><strong>Chameleon</strong></a> ***</p>
-<p><a href="https://arxiv.org/pdf/2311.00571.pdf"><strong>LLaVA-Interactive</strong></a> ***</p>
-<p><a href="https://arxiv.org/pdf/2401.01614"><strong>SeeAct</strong></a> </p>
-<p><a href="https://arxiv.org/pdf/2310.01415.pdf"><strong>GPT-Driver</strong></a> </p>
-<p><a href="https://arxiv.org/pdf/2401.16158.pdf"><strong>Mobile-Agent</strong></a> </p>
-<h3><span id="类型-ii无长期记忆的微调-llms-作为规划器">类型 II：无长期记忆的微调 LLMs 作为规划器。</span><a href="#类型-ii无长期记忆的微调-llms-作为规划器" class="header-anchor">#</a></h3><p><a href="https://arxiv.org/pdf/2306.08640.pdf"><strong>LLaVA-Plus</strong></a> </p>
-<p><a href="https://arxiv.org/pdf/2305.18752.pdf"><strong>GPT4Tools</strong></a> </p>
-<h3><span id="类型-iv具有本地长期记忆的规划器">类型 IV：具有本地长期记忆的规划器。</span><a href="#类型-iv具有本地长期记忆的规划器" class="header-anchor">#</a></h3><p><a href="https://arxiv.org/pdf/2311.05997.pdf"><strong>JARV IS-1</strong></a> </p>
-<p><a href="https://arxiv.org/pdf/2312.13771.pdf"><strong>AppAgent</strong></a> </p>
-<p><a href="https://arxiv.org/pdf/2307.07162.pdf"><strong>DLAH</strong></a> </p>
-<h1><span id="多模态-agent1">多模态 Agent[1]</span><a href="#多模态-agent1" class="header-anchor">#</a></h1><ul>
-<li><p>核心组件</p>
-<ul>
-<li><strong>感知</strong>组件关注处理多模态信息</li>
-<li><strong>规划器</strong>负责推理和制定计划</li>
-<li><strong>行动</strong>组件执行计划</li>
-<li><strong>记忆</strong>组件则涉及长期和短期记忆</li>
-</ul>
-</li>
-<li><p>四种类型</p>
-<ul>
-<li>无长期记忆的闭源 LLMs 作为规划器</li>
-<li>无长期记忆的微调 LLMs 作为规划器</li>
-<li>具有间接长期记忆的规划器 </li>
-<li>具有本地长期记忆的规划器</li>
-</ul>
-</li>
-<li><p>多智能体协作</p>
-<ul>
-<li>讨论了 LMAs 如何通过协作框架共同实现共同目标。</li>
-</ul>
-</li>
-</ul>
-<h1><span id="多模态-agent10">多模态 Agent[10]</span><a href="#多模态-agent10" class="header-anchor">#</a></h1><h3><span id="范式">范式</span><a href="#范式" class="header-anchor">#</a></h3><img src="/www6vHomeAIGC/2023/02/21/gptAgentMultimodal/tasks.JPG" class>
-
-<ul>
-<li><p>MM-ReAct </p>
-</li>
-<li><p>HuggingGPT[21, 22] </p>
-</li>
-<li><p>Chameleon</p>
-</li>
-<li><p>Visual ChatGPT [20]</p>
-</li>
-</ul>
-<h3><span id="works">works</span><a href="#works" class="header-anchor">#</a></h3><img src="/www6vHomeAIGC/2023/02/21/gptAgentMultimodal/works.jpg" class>
-
-
-<h1><span id="参考">参考</span><a href="#参考" class="header-anchor">#</a></h1><h3><span id="综述">综述</span><a href="#综述" class="header-anchor">#</a></h3><ol>
-<li><a href="https://mp.weixin.qq.com/s?__biz=Mzg5NTc2OTcyOQ==&mid=2247488499&idx=1&sn=ac8c5092ddc8fd724965d12aff3f9392">2024年大型多模态智能体(Large Multimodal Agents)综述：组件, 分类，协作，评估，应用，展望</a> ***</li>
-</ol>
-<p>1xx. <a href="https://zhuanlan.zhihu.com/p/678203245">智体AI在多模态交互领域的综述（上）</a><br>1xx. <a href="https://zhuanlan.zhihu.com/p/678222381">智体AI在多模态交互领域的综述（下）</a></p>
-<h3><span id="xxx">xxx</span><a href="#xxx" class="header-anchor">#</a></h3><ol start="10">
-<li><a href="https://www.bilibili.com/video/BV1mM411X7Zn/">多模态 Agents：用大模型语言模型串联多模态专家</a> V</li>
-</ol>
-<h3><span id="多模态agent">多模态Agent</span><a href="#多模态agent" class="header-anchor">#</a></h3><p>1xx. <a href="/www6vHomeAIGC/2023/01/18/gptMultimodal/" title="(综述)多模态">(综述)多模态</a> self<br>1xx. <a href="/www6vHomeAIGC/2023/03/16/gptMultimodalSurvey/" title="(Survey)多模态">(Survey)多模态</a> self</p>
-<h3><span id="xxx">xxx</span><a href="#xxx" class="header-anchor">#</a></h3><ol start="20">
-<li><p>《Visual ChatGPT: Talking, Drawing and Editing with Visual Foundation Models》<br><a href="https://github.com/chenfei-wu/TaskMatrix">Visual ChatGPT</a> git</p>
-</li>
-<li><p><a href="https://nakaizura.blog.csdn.net/article/details/130856470">LLMs的自动化工具系统（HuggingGPT、AutoGPT、WebGPT、WebCPM）</a>  </p>
-</li>
-<li><p><a href="https://github.com/microsoft/JARVIS">HuggingGPT</a> git<br><a href="https://github.com/langchain-ai/langchain/blob/master/cookbook/hugginggpt.ipynb">hugginggpt in langchain</a> git<br><a href="https://github.com/camille-vanhoffelen/langchain-huggingGPT">langchain-huggingGPT</a> git</p>
-</li>
-</ol>
-<p>1xx. <a href="https://mp.weixin.qq.com/s/VXe6CHI_29Rw8xaOjfbqOQ">Visual Programming——实现通用人工智能的另一种方式 </a> 2022  best paper</p>
-]]></content>
-      <categories>
-        <category>AIGC</category>
-        <category>Agent</category>
-      </categories>
-      <tags>
-        <tag>AIGC</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>(原理)Toolformer</title>
     <url>/www6vHomeAIGC/2023/02/03/gptAgentToolformer/</url>
     <content><![CDATA[<p></p>
@@ -2059,6 +1992,73 @@
 <h3><span id="agenttuning-实战">AgentTuning 实战</span><a href="#agenttuning-实战" class="header-anchor">#</a></h3><p>1xx. <a href="https://zhuanlan.zhihu.com/p/690012170">2024年大模型Agent tuning关键技术Fireact, Agent-FLAN, AgentOhana, Agent LUMOS, STE, ETO,MoE, DebateGPT等</a></p>
 <p>1xx. <a href="https://mp.weixin.qq.com/s/UCO_m38QcWdCoT_DIFc96A">Agent-FLAN 技术报告——社区翻译版 </a></p>
 <p>1xx. <a href="https://cloud.tencent.com/developer/article/2421687">LLM 大模型学习必知必会系列(九)：Agent微调最佳实践，用消费级显卡训练属于自己的Agent！</a></p>
+]]></content>
+      <categories>
+        <category>AIGC</category>
+        <category>agent</category>
+      </categories>
+      <tags>
+        <tag>agent</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>(原理)Gorilla</title>
+    <url>/www6vHomeAIGC/2023/04/08/gptAgentToolGorilla/</url>
+    <content><![CDATA[<p></p>
+<span id="more"></span>
+
+<h2><span id="目录">目录</span><a href="#目录" class="header-anchor">#</a></h2><div class="toc">
+
+<!-- toc -->
+
+<ul>
+<li><a href="#%E8%AE%BA%E6%96%87">论文</a></li>
+<li><a href="#%E6%96%B9%E6%B3%95%E8%AE%BA1">方法论[1]</a><ul>
+<li><a href="#%E6%95%B0%E6%8D%AE%E9%9B%86%E6%94%B6%E9%9B%86">数据集收集</a></li>
+<li><a href="#gorilla">Gorilla</a></li>
+</ul>
+</li>
+<li><a href="#%E5%8F%82%E8%80%83">参考</a></li>
+</ul>
+<!-- tocstop -->
+
+</div>
+
+<h1><span id="论文">论文</span><a href="#论文" class="header-anchor">#</a></h1><ul>
+<li><p>论文地址<br> <a href="https://ar5iv.labs.arxiv.org/html/2305.15334">Gorilla: Large Language Model Connected with Massive APIs</a> </p>
+</li>
+<li><p>开源地址<br> <a href="https://github.com/ShishirPatil/gorilla">gorilla</a> git</p>
+</li>
+</ul>
+<h1><span id="方法论1">方法论[1]</span><a href="#方法论1" class="header-anchor">#</a></h1><h3><span id="数据集收集">数据集收集</span><a href="#数据集收集" class="header-anchor">#</a></h3><p><strong>API文档</strong></p>
+<ul>
+<li>HuggingFace平台托管和提供了约203,681个模型。然而，其中许多模型的文档质量较差，缺乏依赖项，模型卡中没有信息等问题。</li>
+<li>为了筛选出质量较好的模型，从每个领域选择了前20个模型。考虑了多模态数据领域的7个领域，CV领域的8个领域，NLP领域的12个领域，音频领域的5个领域，表格数据领域的2个领域和强化学习领域的2个领域。</li>
+<li>经过筛选，从HuggingFace获得了总共925个模型。从TensorFlow Hub获得了801个模型，并从Torch Hub获得了95个模型。</li>
+<li>这些模型的信息被转换为<strong>JSON对象</strong>，其中包含了领域（domain）、框架（framework）、功能（functionality）、API名称（api_name）、API调用（api_call）、API参数（api_arguments）、环境要求（environment_requirements）、示例代码（example_code）、性能（performance）和描述（description）等字段。</li>
+<li>选择这些字段是为了将其泛化到机器学习领域之外的其他领域，包括RESTful API调用。<br><strong>总而言之</strong>，通过筛选和整理，从HuggingFace、TensorFlow Hub和Torch Hub等平台获取了<strong>总共1,645个模型</strong>的信息，并将其以<strong>JSON对象</strong>的形式进行了记录和描述。这些信息包括模型的领域、框架、功能、API调用示例、性能等，以便在机器学习和其他领域中使用和参考。</li>
+</ul>
+<p><strong>指令生成 （Instruction Generation ）</strong></p>
+<ul>
+<li>在<strong>self-instruct</strong>范例[42]的指导下，使用GPT-4生成了合成指令数据。</li>
+<li>提供了三个上下文示例和一个参考API文档，要求模型生成调用API的真实世界用例。</li>
+<li>明确指示模型在创建指令时不要使用任何API名称或提示。</li>
+<li>为每个三个模型中心构建了六个示例（<strong>指令-API对</strong>），共计18个点，这些数据是手动生成或修改的。</li>
+<li>对于<strong>1,645个</strong>API数据点中的每一个，从相应的六个指令示例中随机选择3个，生成<strong>总共10个指令-API对</strong>。</li>
+<li>强调只需要使用GPT-4生成指令，可以与开源替代方案（如LLaMA、Alpaca等）进行交换。<br><strong>总而言之</strong>，通过使用GPT-4生成指令，并结合上下文示例和参考API文档，在每个模型中心构建了六个示例，共计18个点。这些示例被用于<strong>生成1,645个API数据点中的每一个的指令-API对，生成总共10个对应关系</strong>。与开源替代方案相比，GPT-4的指令生成功能被应用在这个过程中。</li>
+</ul>
+<h3><span id="gorilla">Gorilla</span><a href="#gorilla" class="header-anchor">#</a></h3><p><strong>带有约束的API调用（API Call with Constraints）</strong></p>
+<ul>
+<li>API调用通常具有固有的<strong>约束</strong>，这些约束要求LLM不仅理解API调用的功能，还要<strong>根据不同的约束参数对调用进行分类</strong>。</li>
+<li>机器学习API调用中常见的约束集是参数大小和准确性的下限。这些约束要求LLM能够根据提示理解和回答问题，例如根据提示选择参数少于10M的图像分类模型，并且至少保持70%的ImageNet准确率。</li>
+<li><strong>对LLM来说，理解和推理出请求中嵌入的各种约束是一个巨大的挑战</strong>。LLM需要细致地理解用户的功能描述，并能够正确地处理伴随这些调用的复杂约束。</li>
+<li>这个挑战凸显了在实际API调用中对LLM的复杂要求。仅仅理解API调用的基本功能是不够的，<strong>模型还必须能够应对伴随这些调用的约束，如参数大小和准确性要求</strong>。<br>总而言之，在机器学习API调用中，LLM面临着理解和处理约束的挑战。除了理解API调用的基本功能外，LLM还需要能够识别和满足伴随调用的约束要求，如参数大小和准确性的下限。这需要模型具备更细致的理解和推理能力，以满足实际API调用的复杂需求。</li>
+</ul>
+<h1><span id="参考">参考</span><a href="#参考" class="header-anchor">#</a></h1><ol>
+<li><a href="https://zhuanlan.zhihu.com/p/640697382">Gorilla：与大规模API相连的大型语言模型</a> ***</li>
+</ol>
+<p>1xx. <a href="https://apposcmf8kb5033.pc.xiaoe-tech.com/live_pc/l_64a7d5afe4b09d7237a04b5b">Gorilla：链接海量API的大型语言模型</a> V<br>1xx. <a href="https://zhuanlan.zhihu.com/p/632583909">大猩猩（Gorilla）🦍，连接大量 API 的大型语言模型，能成为未来AI应用的核心么？</a> ***</p>
+<p>1xx. <a href="https://gorilla.cs.berkeley.edu/">Gorilla: Large Language Model Connected with Massive APIs</a><br>1xx. <a href="https://gorilla.cs.berkeley.edu/blog.html">Gorilla blog</a></p>
 ]]></content>
       <categories>
         <category>AIGC</category>
@@ -2297,27 +2297,6 @@
       </categories>
       <tags>
         <tag>COT</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>ChatGLM</title>
-    <url>/www6vHomeAIGC/2023/01/06/gptChatGLM/</url>
-    <content><![CDATA[<p></p>
-<span id="more"></span>
-
-
-
-<p><a href="https://www.bilibili.com/video/BV1ju411T74Y/">第十一课：ChatGLM</a> V<br><a href="https://blog.csdn.net/v_JULY_v/article/details/129880836">ChatGLM两代的部署&#x2F;微调&#x2F;实现：从基座GLM、ChatGLM的LoRA&#x2F;P-Tuning微调、6B源码解读到ChatGLM2的微调与实现</a></p>
-<p><a href="https://zhuanlan.zhihu.com/p/625468667">【Instruction Tuning】ChatGLM 微调实战（附源码）</a></p>
-<p><a href="https://github.com/www6v/transformers_tasks/blob/main/LLM/chatglm_finetune/readme.md">Finetune ChatGLM-6B</a></p>
-<p><a href="https://mp.weixin.qq.com/s?__biz=MzAxMjc3MjkyMg==&mid=2648401516&idx=1&sn=80b3cfecc9f4338b87fcd9bc91ef2465">也看支持32K上下文的ChatGLM2-6B模型：优化点简读及现有开源模型主流训练优化点概述 </a></p>
-]]></content>
-      <categories>
-        <category>AIGC</category>
-        <category>ChatGLM</category>
-      </categories>
-      <tags>
-        <tag>ChatGLM</tag>
       </tags>
   </entry>
   <entry>
@@ -3046,6 +3025,27 @@
       </tags>
   </entry>
   <entry>
+    <title>ChatGLM</title>
+    <url>/www6vHomeAIGC/2023/01/06/gptChatGLM/</url>
+    <content><![CDATA[<p></p>
+<span id="more"></span>
+
+
+
+<p><a href="https://www.bilibili.com/video/BV1ju411T74Y/">第十一课：ChatGLM</a> V<br><a href="https://blog.csdn.net/v_JULY_v/article/details/129880836">ChatGLM两代的部署&#x2F;微调&#x2F;实现：从基座GLM、ChatGLM的LoRA&#x2F;P-Tuning微调、6B源码解读到ChatGLM2的微调与实现</a></p>
+<p><a href="https://zhuanlan.zhihu.com/p/625468667">【Instruction Tuning】ChatGLM 微调实战（附源码）</a></p>
+<p><a href="https://github.com/www6v/transformers_tasks/blob/main/LLM/chatglm_finetune/readme.md">Finetune ChatGLM-6B</a></p>
+<p><a href="https://mp.weixin.qq.com/s?__biz=MzAxMjc3MjkyMg==&mid=2648401516&idx=1&sn=80b3cfecc9f4338b87fcd9bc91ef2465">也看支持32K上下文的ChatGLM2-6B模型：优化点简读及现有开源模型主流训练优化点概述 </a></p>
+]]></content>
+      <categories>
+        <category>AIGC</category>
+        <category>ChatGLM</category>
+      </categories>
+      <tags>
+        <tag>ChatGLM</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>(List) Pretrain 数据集</title>
     <url>/www6vHomeAIGC/2023/04/24/gptDataSetPretrainList/</url>
     <content><![CDATA[<p></p>
@@ -3268,28 +3268,6 @@
       </tags>
   </entry>
   <entry>
-    <title>(List)SFT数据集</title>
-    <url>/www6vHomeAIGC/2023/04/24/gptDatasetSFTList/</url>
-    <content><![CDATA[<p></p>
-<span id="more"></span>
-
-
-<h1><span id="sft数据集12">SFT数据集[1][2]</span><a href="#sft数据集12" class="header-anchor">#</a></h1><h1><span id="参考">参考</span><a href="#参考" class="header-anchor">#</a></h1><ol>
-<li><p><a href="https://mp.weixin.qq.com/s?__biz=MzAxMjc3MjkyMg==&mid=2648402424&idx=1&sn=e2d26821b6e9a5a2871e0ddbca565c30">大模型再总结及ChatSQL实践案例分享：大模型训练数据及工具的5张脑图总结及ChatSQL开源项目实现解析</a><br>1、通用指令微调数据</p>
-</li>
-<li><p><a href="https://github.com/chaoswork/sft_datasets">开源SFT数据集整理</a></p>
-</li>
-</ol>
-]]></content>
-      <categories>
-        <category>AIGC</category>
-        <category>SFT</category>
-      </categories>
-      <tags>
-        <tag>SFT</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>(Survey)Dataset</title>
     <url>/www6vHomeAIGC/2023/04/01/gptDatasetSurvey/</url>
     <content><![CDATA[<p></p>
@@ -3325,6 +3303,49 @@
       </categories>
       <tags>
         <tag>dataset</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>(List)SFT数据集</title>
+    <url>/www6vHomeAIGC/2023/04/24/gptDatasetSFTList/</url>
+    <content><![CDATA[<p></p>
+<span id="more"></span>
+
+
+<h1><span id="sft数据集12">SFT数据集[1][2]</span><a href="#sft数据集12" class="header-anchor">#</a></h1><h1><span id="参考">参考</span><a href="#参考" class="header-anchor">#</a></h1><ol>
+<li><p><a href="https://mp.weixin.qq.com/s?__biz=MzAxMjc3MjkyMg==&mid=2648402424&idx=1&sn=e2d26821b6e9a5a2871e0ddbca565c30">大模型再总结及ChatSQL实践案例分享：大模型训练数据及工具的5张脑图总结及ChatSQL开源项目实现解析</a><br>1、通用指令微调数据</p>
+</li>
+<li><p><a href="https://github.com/chaoswork/sft_datasets">开源SFT数据集整理</a></p>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>AIGC</category>
+        <category>SFT</category>
+      </categories>
+      <tags>
+        <tag>SFT</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>(综述)Controllable</title>
+    <url>/www6vHomeAIGC/2023/07/29/gptDiffusionControllable/</url>
+    <content><![CDATA[<p></p>
+<span id="more"></span>
+
+
+
+<h1><span id="论文">论文</span><a href="#论文" class="header-anchor">#</a></h1><ul>
+<li>论文地址<br> <a href="http://doi.org/10.1007/s11390-024-3814-0">A Survey of Multimodal Controllable Diffusion Models</a></li>
+</ul>
+<h1><span id="论文解析">论文解析</span><a href="#论文解析" class="header-anchor">#</a></h1><p><a href="https://candied-skunk-1ca.notion.site/A-Survey-of-Multimodal-Controllable-Diffusion-Models-b736974658bd4ad79f4128690b0cfb3a?pvs=4">论文解析</a></p>
+]]></content>
+      <categories>
+        <category>AIGC</category>
+        <category>Diffusion</category>
+      </categories>
+      <tags>
+        <tag>Diffusion</tag>
       </tags>
   </entry>
   <entry>
@@ -3415,27 +3436,6 @@
       </categories>
       <tags>
         <tag>对话</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>(综述)Controllable</title>
-    <url>/www6vHomeAIGC/2023/07/29/gptDiffusionControllable/</url>
-    <content><![CDATA[<p></p>
-<span id="more"></span>
-
-
-
-<h1><span id="论文">论文</span><a href="#论文" class="header-anchor">#</a></h1><ul>
-<li>论文地址<br> <a href="http://doi.org/10.1007/s11390-024-3814-0">A Survey of Multimodal Controllable Diffusion Models</a></li>
-</ul>
-<h1><span id="论文解析">论文解析</span><a href="#论文解析" class="header-anchor">#</a></h1><p><a href="https://candied-skunk-1ca.notion.site/A-Survey-of-Multimodal-Controllable-Diffusion-Models-b736974658bd4ad79f4128690b0cfb3a?pvs=4">论文解析</a></p>
-]]></content>
-      <categories>
-        <category>AIGC</category>
-        <category>Diffusion</category>
-      </categories>
-      <tags>
-        <tag>Diffusion</tag>
       </tags>
   </entry>
   <entry>
@@ -3637,84 +3637,6 @@
       </tags>
   </entry>
   <entry>
-    <title>(综述)Image Editing</title>
-    <url>/www6vHomeAIGC/2023/07/06/gptDiffusionImageEdit/</url>
-    <content><![CDATA[<p></p>
-<span id="more"></span>
-
-<h2><span id="目录">目录</span><a href="#目录" class="header-anchor">#</a></h2><div class="toc">
-
-<!-- toc -->
-
-<ul>
-<li><a href="#%E8%AE%BA%E6%96%87">论文</a></li>
-<li><a href="#%E5%9B%BE%E5%83%8F%E7%BC%96%E8%BE%911">图像编辑[1]</a><ul>
-<li><a href="#%E5%A4%A7%E7%B1%BB">大类</a></li>
-<li><a href="#approaches">APPROACHES</a></li>
-</ul>
-</li>
-<li><a href="#%E8%AE%BA%E6%96%872">论文[2]</a></li>
-<li><a href="#survey2">Survey[2]</a></li>
-<li><a href="#%E5%8F%82%E8%80%83">参考</a><ul>
-<li><a href="#survey">survey</a></li>
-</ul>
-</li>
-</ul>
-<!-- tocstop -->
-
-</div>
-
-<h1><span id="论文">论文</span><a href="#论文" class="header-anchor">#</a></h1><ul>
-<li><p>论文地址<br> <a href="https://arxiv.org/abs/2402.17525">《Diffusion Model-Based Image Editing: A Survey》</a> </p>
-</li>
-<li><p>开源地址<br> <a href="https://github.com/SiatMMLab/Awesome-Diffusion-Model-Based-Image-Editing-Methods">Repo</a> git</p>
-</li>
-</ul>
-<h1><span id="图像编辑1">图像编辑[1]</span><a href="#图像编辑1" class="header-anchor">#</a></h1><h3><span id="大类">大类</span><a href="#大类" class="header-anchor">#</a></h3><ul>
-<li>从图片编辑的任务方面可以被分为3个大类<ul>
-<li>语义编辑semantic editing </li>
-<li>风格编辑stylistic editing</li>
-<li>结构编辑structural editing</li>
-</ul>
-</li>
-</ul>
-<h3><span id="approaches">APPROACHES</span><a href="#approaches" class="header-anchor">#</a></h3><ul>
-<li><p>TRAINING-BASED APPROACHES</p>
-<ul>
-<li>InstructPix2Pix</li>
-</ul>
-</li>
-<li><p>TESTING-TIME FINETUNING APPROACHES</p>
-</li>
-<li><p>TRAINING AND FINETUNING FREE APPROACHES</p>
-</li>
-</ul>
-<hr>
-<h1><span id="论文2">论文[2]</span><a href="#论文2" class="header-anchor">#</a></h1><ul>
-<li><p>论文地址<br> 《A Survey of Multimodal-Guided Image Editing with Text-to-Image Diffusion Models》 复旦、南洋理工</p>
-</li>
-<li><p>开源地址<br> <a href="https://github.com/xinchengshuai/Awesome-Image-Editing">A Survey of Multimodal-Guided Image Editing with Text-to-Image Diffusion Models</a></p>
-</li>
-</ul>
-<h1><span id="survey2">Survey[2]</span><a href="#survey2" class="header-anchor">#</a></h1><img src="/www6vHomeAIGC/2023/07/06/gptDiffusionImageEdit/survey.png" class>
-
-<h1><span id="参考">参考</span><a href="#参考" class="header-anchor">#</a></h1><h3><span id="survey">survey</span><a href="#survey" class="header-anchor">#</a></h3><ol>
-<li><p>《Diffusion Model-Based Image Editing: A Survey》<br><a href="https://blog.csdn.net/huzimu_/article/details/136547375">论文阅读：Diffusion Model-Based Image Editing: A Survey</a><br><a href="https://mp.weixin.qq.com/s/MFbCt0XfOf9fV0YbdkmR6g">基于扩散模型的图像编辑：首篇综述</a></p>
-</li>
-<li><p>《A Survey of Multimodal-Guided Image Editing with Text-to-Image Diffusion Models》<br><a href="https://www.jiqizhixin.com/articles/2024-06-28-14">300多篇相关研究，复旦、南洋理工最新多模态图像编辑综述论文</a></p>
-</li>
-</ol>
-<p>1xx. 《LLMs Meet Multimodal Generation and Editing: A Survey》 *<br>Image Generation， Image Editing<br><a href="https://github.com/YingqingHe/Awesome-LLMs-meet-Multimodal-Generation">Repo</a></p>
-]]></content>
-      <categories>
-        <category>AIGC</category>
-        <category>Diffusion</category>
-      </categories>
-      <tags>
-        <tag>Diffusion</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>(Work|实战)Image Editing</title>
     <url>/www6vHomeAIGC/2023/07/27/gptDiffusionImageEditWork/</url>
     <content><![CDATA[<p></p>
@@ -3803,36 +3725,6 @@
       </tags>
   </entry>
   <entry>
-    <title>短文本相似度</title>
-    <url>/www6vHomeAIGC/2023/02/18/gptDocSimilarity/</url>
-    <content><![CDATA[<p></p>
-<span id="more"></span>
-
-<h2><span id="目录">目录</span><a href="#目录" class="header-anchor">#</a></h2><div class="toc">
-
-<!-- toc -->
-
-<ul>
-<li><a href="#%E5%8F%82%E8%80%83">参考</a></li>
-</ul>
-<!-- tocstop -->
-
-</div>
-
-
-
-<h1><span id="参考">参考</span><a href="#参考" class="header-anchor">#</a></h1><p>1xx. <a href="https://zhuanlan.zhihu.com/p/111414376">短文本相似度算法研究</a><br>1xx. <a href="https://zhuanlan.zhihu.com/p/113133510">Sentence-Bert论文笔记</a><br>1xx. <a href="https://www.bilibili.com/video/BV13h4y1a7z6/">SentenceBert模型：文本语义去重</a> V</p>
-<p>1xx. <a href="https://zhuanlan.zhihu.com/p/113017752">传统方法TF-IDF解决短文本相似度问题</a><br>1xx. <a href="https://zhuanlan.zhihu.com/p/113224707">传统方法BM25解决短文本相似度问题</a></p>
-]]></content>
-      <categories>
-        <category>AIGC</category>
-        <category>短文本相似度</category>
-      </categories>
-      <tags>
-        <tag>短文本相似度</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>文档智能</title>
     <url>/www6vHomeAIGC/2023/04/19/gptDocumentAI/</url>
     <content><![CDATA[<p></p>
@@ -3885,6 +3777,36 @@
       </categories>
       <tags>
         <tag>DocumentAI</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>短文本相似度</title>
+    <url>/www6vHomeAIGC/2023/02/18/gptDocSimilarity/</url>
+    <content><![CDATA[<p></p>
+<span id="more"></span>
+
+<h2><span id="目录">目录</span><a href="#目录" class="header-anchor">#</a></h2><div class="toc">
+
+<!-- toc -->
+
+<ul>
+<li><a href="#%E5%8F%82%E8%80%83">参考</a></li>
+</ul>
+<!-- tocstop -->
+
+</div>
+
+
+
+<h1><span id="参考">参考</span><a href="#参考" class="header-anchor">#</a></h1><p>1xx. <a href="https://zhuanlan.zhihu.com/p/111414376">短文本相似度算法研究</a><br>1xx. <a href="https://zhuanlan.zhihu.com/p/113133510">Sentence-Bert论文笔记</a><br>1xx. <a href="https://www.bilibili.com/video/BV13h4y1a7z6/">SentenceBert模型：文本语义去重</a> V</p>
+<p>1xx. <a href="https://zhuanlan.zhihu.com/p/113017752">传统方法TF-IDF解决短文本相似度问题</a><br>1xx. <a href="https://zhuanlan.zhihu.com/p/113224707">传统方法BM25解决短文本相似度问题</a></p>
+]]></content>
+      <categories>
+        <category>AIGC</category>
+        <category>短文本相似度</category>
+      </categories>
+      <tags>
+        <tag>短文本相似度</tag>
       </tags>
   </entry>
   <entry>
@@ -4006,6 +3928,107 @@
       </tags>
   </entry>
   <entry>
+    <title>(综述)Image Editing</title>
+    <url>/www6vHomeAIGC/2023/07/06/gptDiffusionImageEdit/</url>
+    <content><![CDATA[<p></p>
+<span id="more"></span>
+
+<h2><span id="目录">目录</span><a href="#目录" class="header-anchor">#</a></h2><div class="toc">
+
+<!-- toc -->
+
+<ul>
+<li><a href="#%E8%AE%BA%E6%96%87">论文</a></li>
+<li><a href="#%E5%9B%BE%E5%83%8F%E7%BC%96%E8%BE%911">图像编辑[1]</a><ul>
+<li><a href="#%E5%A4%A7%E7%B1%BB">大类</a></li>
+<li><a href="#approaches">APPROACHES</a></li>
+</ul>
+</li>
+<li><a href="#%E8%AE%BA%E6%96%872">论文[2]</a></li>
+<li><a href="#survey2">Survey[2]</a></li>
+<li><a href="#%E5%8F%82%E8%80%83">参考</a><ul>
+<li><a href="#survey">survey</a></li>
+</ul>
+</li>
+</ul>
+<!-- tocstop -->
+
+</div>
+
+<h1><span id="论文">论文</span><a href="#论文" class="header-anchor">#</a></h1><ul>
+<li><p>论文地址<br> <a href="https://arxiv.org/abs/2402.17525">《Diffusion Model-Based Image Editing: A Survey》</a> </p>
+</li>
+<li><p>开源地址<br> <a href="https://github.com/SiatMMLab/Awesome-Diffusion-Model-Based-Image-Editing-Methods">Repo</a> git</p>
+</li>
+</ul>
+<h1><span id="图像编辑1">图像编辑[1]</span><a href="#图像编辑1" class="header-anchor">#</a></h1><h3><span id="大类">大类</span><a href="#大类" class="header-anchor">#</a></h3><ul>
+<li>从图片编辑的任务方面可以被分为3个大类<ul>
+<li>语义编辑semantic editing </li>
+<li>风格编辑stylistic editing</li>
+<li>结构编辑structural editing</li>
+</ul>
+</li>
+</ul>
+<h3><span id="approaches">APPROACHES</span><a href="#approaches" class="header-anchor">#</a></h3><ul>
+<li><p>TRAINING-BASED APPROACHES</p>
+<ul>
+<li>InstructPix2Pix</li>
+</ul>
+</li>
+<li><p>TESTING-TIME FINETUNING APPROACHES</p>
+</li>
+<li><p>TRAINING AND FINETUNING FREE APPROACHES</p>
+</li>
+</ul>
+<hr>
+<h1><span id="论文2">论文[2]</span><a href="#论文2" class="header-anchor">#</a></h1><ul>
+<li><p>论文地址<br> 《A Survey of Multimodal-Guided Image Editing with Text-to-Image Diffusion Models》 复旦、南洋理工</p>
+</li>
+<li><p>开源地址<br> <a href="https://github.com/xinchengshuai/Awesome-Image-Editing">A Survey of Multimodal-Guided Image Editing with Text-to-Image Diffusion Models</a></p>
+</li>
+</ul>
+<h1><span id="survey2">Survey[2]</span><a href="#survey2" class="header-anchor">#</a></h1><img src="/www6vHomeAIGC/2023/07/06/gptDiffusionImageEdit/survey.png" class>
+
+<h1><span id="参考">参考</span><a href="#参考" class="header-anchor">#</a></h1><h3><span id="survey">survey</span><a href="#survey" class="header-anchor">#</a></h3><ol>
+<li><p>《Diffusion Model-Based Image Editing: A Survey》<br><a href="https://blog.csdn.net/huzimu_/article/details/136547375">论文阅读：Diffusion Model-Based Image Editing: A Survey</a><br><a href="https://mp.weixin.qq.com/s/MFbCt0XfOf9fV0YbdkmR6g">基于扩散模型的图像编辑：首篇综述</a></p>
+</li>
+<li><p>《A Survey of Multimodal-Guided Image Editing with Text-to-Image Diffusion Models》<br><a href="https://www.jiqizhixin.com/articles/2024-06-28-14">300多篇相关研究，复旦、南洋理工最新多模态图像编辑综述论文</a></p>
+</li>
+</ol>
+<p>1xx. 《LLMs Meet Multimodal Generation and Editing: A Survey》 *<br>Image Generation， Image Editing<br><a href="https://github.com/YingqingHe/Awesome-LLMs-meet-Multimodal-Generation">Repo</a></p>
+]]></content>
+      <categories>
+        <category>AIGC</category>
+        <category>Diffusion</category>
+      </categories>
+      <tags>
+        <tag>Diffusion</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>法律大模型</title>
+    <url>/www6vHomeAIGC/2024/02/07/gptDomainLaw/</url>
+    <content><![CDATA[<p></p>
+<span id="more"></span>
+
+
+
+<h3><span id="法律大模型">法律大模型</span><a href="#法律大模型" class="header-anchor">#</a></h3><ul>
+<li>ChatLaw </li>
+<li>LawGPT_zh</li>
+</ul>
+<h1><span id="参考">参考</span><a href="#参考" class="header-anchor">#</a></h1><p>1xx. <a href="https://mp.weixin.qq.com/s?__biz=MzAxMjc3MjkyMg==&mid=2648402872&idx=1&sn=0649e8f7490e057680cff1be16157209">再看法律领域微调模型及外挂知识库问答优化方案：从引入关键词、领域嵌入到知识库细化、意图识别及知识增强项目案例 </a></p>
+<p>1xx. <a href="https://finisky.github.io/lawyer-llama-summary/">训练中文垂类大模型：Lawyer LLaMA </a></p>
+]]></content>
+      <categories>
+        <category>AIGC</category>
+        <category>垂类大模型</category>
+      </categories>
+      <tags>
+        <tag>垂类大模型</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>金融大模型</title>
     <url>/www6vHomeAIGC/2022/11/24/gptDomainFinance/</url>
     <content><![CDATA[<p></p>
@@ -4069,59 +4092,6 @@
       </categories>
       <tags>
         <tag>金融大模型</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>法律大模型</title>
-    <url>/www6vHomeAIGC/2024/02/07/gptDomainLaw/</url>
-    <content><![CDATA[<p></p>
-<span id="more"></span>
-
-
-
-<h3><span id="法律大模型">法律大模型</span><a href="#法律大模型" class="header-anchor">#</a></h3><ul>
-<li>ChatLaw </li>
-<li>LawGPT_zh</li>
-</ul>
-<h1><span id="参考">参考</span><a href="#参考" class="header-anchor">#</a></h1><p>1xx. <a href="https://mp.weixin.qq.com/s?__biz=MzAxMjc3MjkyMg==&mid=2648402872&idx=1&sn=0649e8f7490e057680cff1be16157209">再看法律领域微调模型及外挂知识库问答优化方案：从引入关键词、领域嵌入到知识库细化、意图识别及知识增强项目案例 </a></p>
-<p>1xx. <a href="https://finisky.github.io/lawyer-llama-summary/">训练中文垂类大模型：Lawyer LLaMA </a></p>
-]]></content>
-      <categories>
-        <category>AIGC</category>
-        <category>垂类大模型</category>
-      </categories>
-      <tags>
-        <tag>垂类大模型</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>医疗大模型</title>
-    <url>/www6vHomeAIGC/2023/02/07/gptDomainMed/</url>
-    <content><![CDATA[<p></p>
-<span id="more"></span>
-
-<h3><span id="医疗大模型">医疗大模型</span><a href="#医疗大模型" class="header-anchor">#</a></h3><ul>
-<li>LLaMA<ul>
-<li>ChatDoctor  </li>
-<li>华驼&#x2F;本草  哈工大</li>
-<li>PMC-LLaMA 上海交大</li>
-</ul>
-</li>
-<li>ChatGLM-6B<ul>
-<li>ChatGLM-Med  哈工大</li>
-<li>DoctorGLM</li>
-<li>明医 (MING)  MedicalGPT-zh  上海交通大学</li>
-</ul>
-</li>
-</ul>
-<h1><span id="参考">参考</span><a href="#参考" class="header-anchor">#</a></h1><p>1xx. <a href="https://mp.weixin.qq.com/s?__biz=MzAxMjc3MjkyMg==&mid=2648402886&idx=1&sn=0552d60744645a84d13bb0cef57f321c">再看23个医疗领域微调大模型集合：兼看CareLlama医疗模型的一些实践经验与开放医疗数据 </a><br>1xx. <a href="https://mp.weixin.qq.com/s?__biz=MzAxMjc3MjkyMg==&mid=2648402589&idx=1&sn=3ba9d50fad433adeb8dd6c623b06c42d">大模型遇上心理健康咨询：MeChat、QiaoBan、SoulChat、MindChat四大心理健康领域微调模型总结 </a><br>1xx. <a href="https://mp.weixin.qq.com/s?__biz=MzAxMjc3MjkyMg==&mid=2648402638&idx=1&sn=b9329498806e2b93b2d6817a17941bff">大模型常见错误、反馈的来源及自我修正方法：兼论两个有趣的同名中医微调垂域模型 </a></p>
-]]></content>
-      <categories>
-        <category>AIGC</category>
-        <category>垂类大模型</category>
-      </categories>
-      <tags>
-        <tag>垂类大模型</tag>
       </tags>
   </entry>
   <entry>
@@ -4190,6 +4160,36 @@
       </categories>
       <tags>
         <tag>Embedding</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>医疗大模型</title>
+    <url>/www6vHomeAIGC/2023/02/07/gptDomainMed/</url>
+    <content><![CDATA[<p></p>
+<span id="more"></span>
+
+<h3><span id="医疗大模型">医疗大模型</span><a href="#医疗大模型" class="header-anchor">#</a></h3><ul>
+<li>LLaMA<ul>
+<li>ChatDoctor  </li>
+<li>华驼&#x2F;本草  哈工大</li>
+<li>PMC-LLaMA 上海交大</li>
+</ul>
+</li>
+<li>ChatGLM-6B<ul>
+<li>ChatGLM-Med  哈工大</li>
+<li>DoctorGLM</li>
+<li>明医 (MING)  MedicalGPT-zh  上海交通大学</li>
+</ul>
+</li>
+</ul>
+<h1><span id="参考">参考</span><a href="#参考" class="header-anchor">#</a></h1><p>1xx. <a href="https://mp.weixin.qq.com/s?__biz=MzAxMjc3MjkyMg==&mid=2648402886&idx=1&sn=0552d60744645a84d13bb0cef57f321c">再看23个医疗领域微调大模型集合：兼看CareLlama医疗模型的一些实践经验与开放医疗数据 </a><br>1xx. <a href="https://mp.weixin.qq.com/s?__biz=MzAxMjc3MjkyMg==&mid=2648402589&idx=1&sn=3ba9d50fad433adeb8dd6c623b06c42d">大模型遇上心理健康咨询：MeChat、QiaoBan、SoulChat、MindChat四大心理健康领域微调模型总结 </a><br>1xx. <a href="https://mp.weixin.qq.com/s?__biz=MzAxMjc3MjkyMg==&mid=2648402638&idx=1&sn=b9329498806e2b93b2d6817a17941bff">大模型常见错误、反馈的来源及自我修正方法：兼论两个有趣的同名中医微调垂域模型 </a></p>
+]]></content>
+      <categories>
+        <category>AIGC</category>
+        <category>垂类大模型</category>
+      </categories>
+      <tags>
+        <tag>垂类大模型</tag>
       </tags>
   </entry>
   <entry>
@@ -4319,6 +4319,103 @@
       </categories>
       <tags>
         <tag>Emergent</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>(原理)PEFT</title>
+    <url>/www6vHomeAIGC/2022/11/18/gptFineTuning/</url>
+    <content><![CDATA[<p></p>
+<span id="more"></span>
+
+<h2><span id="目录">目录</span><a href="#目录" class="header-anchor">#</a></h2><div class="toc">
+
+<!-- toc -->
+
+<ul>
+<li><a href="#%E5%88%86%E7%B1%BB">分类</a></li>
+<li><a href="#peft-%E5%88%86%E7%B1%BB-11">PEFT 分类 [1.1]</a></li>
+<li><a href="#%E5%8F%82%E8%80%83">参考</a><ul>
+<li><a href="#%E5%8E%9F%E7%90%86">原理</a></li>
+</ul>
+</li>
+</ul>
+<!-- tocstop -->
+
+</div>
+
+<h1><span id="分类">分类</span><a href="#分类" class="header-anchor">#</a></h1><ul>
+<li><p>全量微调</p>
+</li>
+<li><p>局部微调</p>
+<ul>
+<li>PEFT(Parameter-Efficient Fine-Tuning)  PEFT</li>
+</ul>
+</li>
+</ul>
+<h1><span id="peft-分类-11">PEFT 分类 [1.1]</span><a href="#peft-分类-11" class="header-anchor">#</a></h1><img src="/www6vHomeAIGC/2022/11/18/gptFineTuning/category.png" class>
+
+<p>高效微调技术可以粗略分为以下三大类：增加额外参数（A）、选取一部分参数更新（S）、引入重参数化（R）。而在增加额外参数这类方法中，又主要分为类适配器（Adapter-like）方法和软提示（Soft prompts）两个小类。</p>
+<ul>
+<li><p>PEFT</p>
+<ul>
+<li>[本质   基于有监督学习]</li>
+</ul>
+</li>
+<li><p>PEFT(Parameter-Efficient Fine-Tuning)  PEFT</p>
+<ul>
+<li><p><strong>引入重参数化（R）</strong>    </p>
+<ul>
+<li><strong>LoRA</strong> [2021 Microsoft]<br>Low-Rank Adaptation of LLMs<br>LoRA   【 并联方式的外挂】 [效果比较好]</li>
+<li>QLoRA [2023 University of Washington]<br> Efficient Finetuning of Quantized LLMs</li>
+<li>AdaLoRA [2023 Microsoft]<br> Adaptive Budget Allocation for PEFT</li>
+</ul>
+</li>
+<li><p>增加额外参数（A）</p>
+<ul>
+<li><strong>软提示（Soft prompts）</strong> <ul>
+<li>Prefix Tuning[2021 Stanford]<br>增加一个可被训练的Embedding层<br>【难实现】</li>
+<li><strong>Prompt Tuning</strong> [2021 Google]<br>【简化版本的Prefix Tuning】</li>
+<li><strong>P-Turning v1</strong> [2021 Tsinghua]</li>
+<li><strong>P-Turning v2</strong> [2022 Tsinghua]</li>
+</ul>
+</li>
+<li>Adapter-Tuning[2019 Google]<br>【 串联方式的外挂】</li>
+</ul>
+</li>
+<li><p>选取一部分参数更新（S）</p>
+<ul>
+<li>BitFit</li>
+</ul>
+</li>
+<li><p>additive</p>
+<ul>
+<li>IA3</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>统一微调框架<br>  UniPELT</p>
+</li>
+<li><p>总结[3]</p>
+<img src="/www6vHomeAIGC/2022/11/18/gptFineTuning/overview.jpg" class></li>
+</ul>
+<h1><span id="参考">参考</span><a href="#参考" class="header-anchor">#</a></h1><h3><span id="原理">原理</span><a href="#原理" class="header-anchor">#</a></h3><ol>
+<li><p><a href="https://github.com/www6v/llm-action#llm%E5%BE%AE%E8%B0%83%E6%8A%80%E6%9C%AF%E5%8E%9F%E7%90%86">llm微调技术原理</a>  李国东<br>1.1 <a href="https://zhuanlan.zhihu.com/p/635152813">大模型参数高效微调技术原理综述（一）-背景、参数高效微调简介</a><br>1.2  <a href="https://zhuanlan.zhihu.com/p/649755252">大模型参数高效微调技术原理综述（七）-最佳实践、总结</a></p>
+</li>
+<li><p><a href="https://www.bilibili.com/video/BV1t8411D7v4?p=8">大模型干货教程看这一个就够了~2023年全网最硬核最全面的大模型公开课|大模型微调 | ChatGLM | LangChain</a> V ***</p>
+</li>
+<li><p><a href="https://aicarrier.feishu.cn/file/H1YvbRyacopEs6xzgZ8c9DDcnIh">大模型参数高效微调技术原理及实践</a> pdf<br><a href="https://www.bilibili.com/video/BV1qw411c7Hd/">如何高效微调大模型？技术原理与最佳实践揭秘！</a> V ***</p>
+</li>
+</ol>
+<p>1xx. <a href="https://blog.csdn.net/v_JULY_v/article/details/132116949">LLM高效参数微调方法：从Prefix Tuning、Prompt Tuning、P-Tuning V1&#x2F;V2到LoRA、QLoRA(含对模型量化的解释)</a> **</p>
+<p>1xx. <a href="https://mp.weixin.qq.com/s?__biz=MzAxMjc3MjkyMg==&mid=2648402136&idx=1&sn=554331e397015c4da95fb0d0929f5aa1">7月末关于大模型微调数据工程与评估的技术综述：从数据构造方案到模型评估范式的论文梳理指引 </a> 对齐-论文集<br>   <a href="https://github.com/GaryYufei/AlignLLMHumanSurvey">AlignLLMHumanSurvey</a> git</p>
+]]></content>
+      <categories>
+        <category>AIGC</category>
+        <category>PEFT</category>
+      </categories>
+      <tags>
+        <tag>PEFT</tag>
       </tags>
   </entry>
   <entry>
@@ -4461,93 +4558,24 @@
       </tags>
   </entry>
   <entry>
-    <title>(原理)PEFT</title>
-    <url>/www6vHomeAIGC/2022/11/18/gptFineTuning/</url>
+    <title>(实战)PEFT 概述</title>
+    <url>/www6vHomeAIGC/2022/12/20/gptFineTuningPEFT/</url>
     <content><![CDATA[<p></p>
 <span id="more"></span>
 
-<h2><span id="目录">目录</span><a href="#目录" class="header-anchor">#</a></h2><div class="toc">
+<h1><span id="huggingface-peft中的任务1">Huggingface  PEFT中的任务[1]</span><a href="#huggingface-peft中的任务1" class="header-anchor">#</a></h1><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">class TaskType(str, enum.Enum):</span><br><span class="line">    SEQ_CLS = &quot;SEQ_CLS&quot;  # 3. 序列分类任务</span><br><span class="line">    SEQ_2_SEQ_LM = &quot;SEQ_2_SEQ_LM&quot;  # 2. 条件生成任务</span><br><span class="line">    CAUSAL_LM = &quot;CAUSAL_LM&quot;  #  1. 因果语言建模任务</span><br><span class="line">    TOKEN_CLS = &quot;TOKEN_CLS&quot;  #  4. Token 分类任务</span><br><span class="line">    QUESTION_ANS = &quot;QUESTION_ANS&quot;</span><br><span class="line">    FEATURE_EXTRACTION = &quot;FEATURE_EXTRACTION&quot;</span><br></pre></td></tr></table></figure>
 
-<!-- toc -->
-
-<ul>
-<li><a href="#%E5%88%86%E7%B1%BB">分类</a></li>
-<li><a href="#peft-%E5%88%86%E7%B1%BB-11">PEFT 分类 [1.1]</a></li>
-<li><a href="#%E5%8F%82%E8%80%83">参考</a><ul>
-<li><a href="#%E5%8E%9F%E7%90%86">原理</a></li>
-</ul>
-</li>
-</ul>
-<!-- tocstop -->
-
-</div>
-
-<h1><span id="分类">分类</span><a href="#分类" class="header-anchor">#</a></h1><ul>
-<li><p>全量微调</p>
-</li>
-<li><p>局部微调</p>
-<ul>
-<li>PEFT(Parameter-Efficient Fine-Tuning)  PEFT</li>
-</ul>
-</li>
-</ul>
-<h1><span id="peft-分类-11">PEFT 分类 [1.1]</span><a href="#peft-分类-11" class="header-anchor">#</a></h1><img src="/www6vHomeAIGC/2022/11/18/gptFineTuning/category.png" class>
-
-<p>高效微调技术可以粗略分为以下三大类：增加额外参数（A）、选取一部分参数更新（S）、引入重参数化（R）。而在增加额外参数这类方法中，又主要分为类适配器（Adapter-like）方法和软提示（Soft prompts）两个小类。</p>
-<ul>
-<li><p>PEFT</p>
-<ul>
-<li>[本质   基于有监督学习]</li>
-</ul>
-</li>
-<li><p>PEFT(Parameter-Efficient Fine-Tuning)  PEFT</p>
-<ul>
-<li><p><strong>引入重参数化（R）</strong>    </p>
-<ul>
-<li><strong>LoRA</strong> [2021 Microsoft]<br>Low-Rank Adaptation of LLMs<br>LoRA   【 并联方式的外挂】 [效果比较好]</li>
-<li>QLoRA [2023 University of Washington]<br> Efficient Finetuning of Quantized LLMs</li>
-<li>AdaLoRA [2023 Microsoft]<br> Adaptive Budget Allocation for PEFT</li>
-</ul>
-</li>
-<li><p>增加额外参数（A）</p>
-<ul>
-<li><strong>软提示（Soft prompts）</strong> <ul>
-<li>Prefix Tuning[2021 Stanford]<br>增加一个可被训练的Embedding层<br>【难实现】</li>
-<li><strong>Prompt Tuning</strong> [2021 Google]<br>【简化版本的Prefix Tuning】</li>
-<li><strong>P-Turning v1</strong> [2021 Tsinghua]</li>
-<li><strong>P-Turning v2</strong> [2022 Tsinghua]</li>
-</ul>
-</li>
-<li>Adapter-Tuning[2019 Google]<br>【 串联方式的外挂】</li>
-</ul>
-</li>
-<li><p>选取一部分参数更新（S）</p>
-<ul>
-<li>BitFit</li>
-</ul>
-</li>
-<li><p>additive</p>
-<ul>
-<li>IA3</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p>统一微调框架<br>  UniPELT</p>
-</li>
-<li><p>总结[3]</p>
-<img src="/www6vHomeAIGC/2022/11/18/gptFineTuning/overview.jpg" class></li>
-</ul>
-<h1><span id="参考">参考</span><a href="#参考" class="header-anchor">#</a></h1><h3><span id="原理">原理</span><a href="#原理" class="header-anchor">#</a></h3><ol>
-<li><p><a href="https://github.com/www6v/llm-action#llm%E5%BE%AE%E8%B0%83%E6%8A%80%E6%9C%AF%E5%8E%9F%E7%90%86">llm微调技术原理</a>  李国东<br>1.1 <a href="https://zhuanlan.zhihu.com/p/635152813">大模型参数高效微调技术原理综述（一）-背景、参数高效微调简介</a><br>1.2  <a href="https://zhuanlan.zhihu.com/p/649755252">大模型参数高效微调技术原理综述（七）-最佳实践、总结</a></p>
-</li>
-<li><p><a href="https://www.bilibili.com/video/BV1t8411D7v4?p=8">大模型干货教程看这一个就够了~2023年全网最硬核最全面的大模型公开课|大模型微调 | ChatGLM | LangChain</a> V ***</p>
-</li>
-<li><p><a href="https://aicarrier.feishu.cn/file/H1YvbRyacopEs6xzgZ8c9DDcnIh">大模型参数高效微调技术原理及实践</a> pdf<br><a href="https://www.bilibili.com/video/BV1qw411c7Hd/">如何高效微调大模型？技术原理与最佳实践揭秘！</a> V ***</p>
-</li>
+<h3><span id="1-因果语言建模任务causal-language-modeling">1. 因果语言建模任务（Causal Language Modeling）</span><a href="#1-因果语言建模任务causal-language-modeling" class="header-anchor">#</a></h3><p>  因果语言建模任务（CLM），在这种建模方法中，模型试图预测给定上下文中的下一个单词，该上下文通常包括在当前单词之前的所有单词。</p>
+<h3><span id="2-条件生成任务conditional-generation">2. 条件生成任务（Conditional Generation）</span><a href="#2-条件生成任务conditional-generation" class="header-anchor">#</a></h3><p>  条件生成任务（Conditional Generation），根据给定的输入（可能是文本、图片等）生成符合条件的输出。<br>  条件生成的应用包括但不限于机器翻译、文本摘要、图像描述等。这些任务通常需要模型在输入和输出之间建立复杂的映射关系。</p>
+<blockquote>
+<p>因果语言建模任务  vs.  条件生成任务<br>  因果语言建模主要关注于生成连贯、自然的文本，而条件生成关注于生成满足特定条件或任务要求的文本。这两种建模方法在某些场景下可能会互相使用和结合，以实现更复杂的自然语言处理任务。</p>
+</blockquote>
+<h3><span id="3-序列分类任务sequence-classification">3. 序列分类任务（Sequence Classification）</span><a href="#3-序列分类任务sequence-classification" class="header-anchor">#</a></h3><p>  序列分类（Sequence Classification），对整个句子进行分类。如: 获取评论的情绪，检测电子邮件是否为垃圾邮件，确定句子在语法上是否正确或两个句子在逻辑上是否相关等</p>
+<h3><span id="4-token-分类任务token-classification">4. Token 分类任务（Token Classification）</span><a href="#4-token-分类任务token-classification" class="header-anchor">#</a></h3><p>  Token 分类任务（Token Classification），对句子中的每个词进行分类。如: 识别句子的语法成分（名词、动词、形容词）或命名实体（人、地点、组织）。</p>
+<h1><span id="参考">参考</span><a href="#参考" class="header-anchor">#</a></h1><ol>
+<li><a href="https://zhuanlan.zhihu.com/p/651744834">大模型参数高效微调技术实战（一）-PEFT概述</a></li>
+<li><a href="https://github.com/www6v/llm-action#llm%E5%BE%AE%E8%B0%83%E5%AE%9E%E6%88%98">LLM微调实战</a> 李国东</li>
 </ol>
-<p>1xx. <a href="https://blog.csdn.net/v_JULY_v/article/details/132116949">LLM高效参数微调方法：从Prefix Tuning、Prompt Tuning、P-Tuning V1&#x2F;V2到LoRA、QLoRA(含对模型量化的解释)</a> **</p>
-<p>1xx. <a href="https://mp.weixin.qq.com/s?__biz=MzAxMjc3MjkyMg==&mid=2648402136&idx=1&sn=554331e397015c4da95fb0d0929f5aa1">7月末关于大模型微调数据工程与评估的技术综述：从数据构造方案到模型评估范式的论文梳理指引 </a> 对齐-论文集<br>   <a href="https://github.com/GaryYufei/AlignLLMHumanSurvey">AlignLLMHumanSurvey</a> git</p>
 ]]></content>
       <categories>
         <category>AIGC</category>
@@ -4574,34 +4602,6 @@
       </categories>
       <tags>
         <tag>Fine-Tuning</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>(实战)PEFT 概述</title>
-    <url>/www6vHomeAIGC/2022/12/20/gptFineTuningPEFT/</url>
-    <content><![CDATA[<p></p>
-<span id="more"></span>
-
-<h1><span id="huggingface-peft中的任务1">Huggingface  PEFT中的任务[1]</span><a href="#huggingface-peft中的任务1" class="header-anchor">#</a></h1><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">class TaskType(str, enum.Enum):</span><br><span class="line">    SEQ_CLS = &quot;SEQ_CLS&quot;  # 3. 序列分类任务</span><br><span class="line">    SEQ_2_SEQ_LM = &quot;SEQ_2_SEQ_LM&quot;  # 2. 条件生成任务</span><br><span class="line">    CAUSAL_LM = &quot;CAUSAL_LM&quot;  #  1. 因果语言建模任务</span><br><span class="line">    TOKEN_CLS = &quot;TOKEN_CLS&quot;  #  4. Token 分类任务</span><br><span class="line">    QUESTION_ANS = &quot;QUESTION_ANS&quot;</span><br><span class="line">    FEATURE_EXTRACTION = &quot;FEATURE_EXTRACTION&quot;</span><br></pre></td></tr></table></figure>
-
-<h3><span id="1-因果语言建模任务causal-language-modeling">1. 因果语言建模任务（Causal Language Modeling）</span><a href="#1-因果语言建模任务causal-language-modeling" class="header-anchor">#</a></h3><p>  因果语言建模任务（CLM），在这种建模方法中，模型试图预测给定上下文中的下一个单词，该上下文通常包括在当前单词之前的所有单词。</p>
-<h3><span id="2-条件生成任务conditional-generation">2. 条件生成任务（Conditional Generation）</span><a href="#2-条件生成任务conditional-generation" class="header-anchor">#</a></h3><p>  条件生成任务（Conditional Generation），根据给定的输入（可能是文本、图片等）生成符合条件的输出。<br>  条件生成的应用包括但不限于机器翻译、文本摘要、图像描述等。这些任务通常需要模型在输入和输出之间建立复杂的映射关系。</p>
-<blockquote>
-<p>因果语言建模任务  vs.  条件生成任务<br>  因果语言建模主要关注于生成连贯、自然的文本，而条件生成关注于生成满足特定条件或任务要求的文本。这两种建模方法在某些场景下可能会互相使用和结合，以实现更复杂的自然语言处理任务。</p>
-</blockquote>
-<h3><span id="3-序列分类任务sequence-classification">3. 序列分类任务（Sequence Classification）</span><a href="#3-序列分类任务sequence-classification" class="header-anchor">#</a></h3><p>  序列分类（Sequence Classification），对整个句子进行分类。如: 获取评论的情绪，检测电子邮件是否为垃圾邮件，确定句子在语法上是否正确或两个句子在逻辑上是否相关等</p>
-<h3><span id="4-token-分类任务token-classification">4. Token 分类任务（Token Classification）</span><a href="#4-token-分类任务token-classification" class="header-anchor">#</a></h3><p>  Token 分类任务（Token Classification），对句子中的每个词进行分类。如: 识别句子的语法成分（名词、动词、形容词）或命名实体（人、地点、组织）。</p>
-<h1><span id="参考">参考</span><a href="#参考" class="header-anchor">#</a></h1><ol>
-<li><a href="https://zhuanlan.zhihu.com/p/651744834">大模型参数高效微调技术实战（一）-PEFT概述</a></li>
-<li><a href="https://github.com/www6v/llm-action#llm%E5%BE%AE%E8%B0%83%E5%AE%9E%E6%88%98">LLM微调实战</a> 李国东</li>
-</ol>
-]]></content>
-      <categories>
-        <category>AIGC</category>
-        <category>PEFT</category>
-      </categories>
-      <tags>
-        <tag>PEFT</tag>
       </tags>
   </entry>
   <entry>
@@ -4666,47 +4666,6 @@
       </tags>
   </entry>
   <entry>
-    <title>(原理)Flash Attention</title>
-    <url>/www6vHomeAIGC/2023/06/13/gptFlashAttention/</url>
-    <content><![CDATA[<p></p>
-<span id="more"></span>
-
-
-
-<h1><span id="核心要点1">核心要点[1]</span><a href="#核心要点1" class="header-anchor">#</a></h1><ul>
-<li><p>为什么<strong>加快了计算</strong>？Fast</p>
-<ul>
-<li><strong>降低了耗时的HBM访问次数</strong>。采用Tiling技术分块<strong>从HBM加载数据到SRAM进行融合计算</strong>。</li>
-</ul>
-</li>
-<li><p>为什么<strong>节省了内存</strong>？Memory-Efficient</p>
-<ul>
-<li><strong>不再对中间矩阵S，P进行存储</strong>。在反向的时候通过Recomputation重新计算来计算梯度。</li>
-</ul>
-</li>
-<li><p>为什么是<strong>精准注意力</strong>？Exact Attention</p>
-<ul>
-<li>算法流程只是<strong>分块计算</strong>，无近似操作。</li>
-</ul>
-</li>
-</ul>
-<h1><span id="参考">参考</span><a href="#参考" class="header-anchor">#</a></h1><ol>
-<li><a href="https://www.bilibili.com/video/BV1SW4y1X7kh?spm_id_from=333.880.my_history.page.click">FlashAttention: 更快训练更长上下文的GPT【论文粗读·6】</a> v</li>
-</ol>
-<p><a href="https://readpaper.feishu.cn/docx/AC7JdtLrhoKpgxxSRM8cfUounsh">FlashAttention: 更快训练更长上下文的GPT</a></p>
-<p>1xx. <a href="https://www.bilibili.com/video/BV1zs4y1J7tb?spm_id_from=333.880.my_history.page.click">论文分享：新型注意力算法FlashAttention</a> v</p>
-<p>1xx.  <a href="https://www.bilibili.com/video/BV1he411d7on?spm_id_from=333.880.my_history.page.click"><em>Flash</em>Attention与标准注意力机制模型比较</a> v</p>
-<p>1xx. <a href="https://www.bilibili.com/video/BV1Kj411e7gJ?spm_id_from=333.880.my_history.page.click"><em>flash</em>attention原理深入分析</a> v</p>
-]]></content>
-      <categories>
-        <category>AIGC</category>
-        <category>FlashAttention</category>
-      </categories>
-      <tags>
-        <tag>FlashAttention</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>(原理|实战) OpenAI Function Call</title>
     <url>/www6vHomeAIGC/2022/11/16/gptFunctionCall/</url>
     <content><![CDATA[<p></p>
@@ -4763,6 +4722,47 @@
       </tags>
   </entry>
   <entry>
+    <title>(原理)Flash Attention</title>
+    <url>/www6vHomeAIGC/2023/06/13/gptFlashAttention/</url>
+    <content><![CDATA[<p></p>
+<span id="more"></span>
+
+
+
+<h1><span id="核心要点1">核心要点[1]</span><a href="#核心要点1" class="header-anchor">#</a></h1><ul>
+<li><p>为什么<strong>加快了计算</strong>？Fast</p>
+<ul>
+<li><strong>降低了耗时的HBM访问次数</strong>。采用Tiling技术分块<strong>从HBM加载数据到SRAM进行融合计算</strong>。</li>
+</ul>
+</li>
+<li><p>为什么<strong>节省了内存</strong>？Memory-Efficient</p>
+<ul>
+<li><strong>不再对中间矩阵S，P进行存储</strong>。在反向的时候通过Recomputation重新计算来计算梯度。</li>
+</ul>
+</li>
+<li><p>为什么是<strong>精准注意力</strong>？Exact Attention</p>
+<ul>
+<li>算法流程只是<strong>分块计算</strong>，无近似操作。</li>
+</ul>
+</li>
+</ul>
+<h1><span id="参考">参考</span><a href="#参考" class="header-anchor">#</a></h1><ol>
+<li><a href="https://www.bilibili.com/video/BV1SW4y1X7kh?spm_id_from=333.880.my_history.page.click">FlashAttention: 更快训练更长上下文的GPT【论文粗读·6】</a> v</li>
+</ol>
+<p><a href="https://readpaper.feishu.cn/docx/AC7JdtLrhoKpgxxSRM8cfUounsh">FlashAttention: 更快训练更长上下文的GPT</a></p>
+<p>1xx. <a href="https://www.bilibili.com/video/BV1zs4y1J7tb?spm_id_from=333.880.my_history.page.click">论文分享：新型注意力算法FlashAttention</a> v</p>
+<p>1xx.  <a href="https://www.bilibili.com/video/BV1he411d7on?spm_id_from=333.880.my_history.page.click"><em>Flash</em>Attention与标准注意力机制模型比较</a> v</p>
+<p>1xx. <a href="https://www.bilibili.com/video/BV1Kj411e7gJ?spm_id_from=333.880.my_history.page.click"><em>flash</em>attention原理深入分析</a> v</p>
+]]></content>
+      <categories>
+        <category>AIGC</category>
+        <category>FlashAttention</category>
+      </categories>
+      <tags>
+        <tag>FlashAttention</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>GPU 算力</title>
     <url>/www6vHomeAIGC/2023/05/23/gptGPU/</url>
     <content><![CDATA[<p></p>
@@ -4795,6 +4795,37 @@
       </categories>
       <tags>
         <tag>GPU</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>(原理)幻觉问题</title>
+    <url>/www6vHomeAIGC/2023/02/06/gptHallucination/</url>
+    <content><![CDATA[<p></p>
+<span id="more"></span>
+
+<h1><span id="幻觉-vs-事实性1">幻觉 vs 事实性[1]</span><a href="#幻觉-vs-事实性1" class="header-anchor">#</a></h1><p><strong>幻觉</strong>主要是指LLM生成毫无根据或毫无根据的内容，幻觉可以理解为模型倾向于”生成与某些来源相关的无意义或不真实的内容”。这与<strong>事实性问题</strong>不同，后者强调模型学习、获取和利用事实性知识的能力。</p>
+<p>举例说明两者的<strong>区别</strong>：</p>
+<p>如果一个LLM在被要求创作”一个关于兔子和狼交朋友的童话故事”时，创作出了一个关于”兔子和狗交朋友”的故事，那么它就表现出了幻觉。不过，这并不一定是事实性错误。<br>如果生成的内容包含准确的信息，但与提示的具体内容有出入，那就是<strong>幻觉</strong>，而<strong>不是事实性问题</strong>。<br>例如，如果LLM的输出包含了比提示指定更多的细节或不同的元素，但事实仍然正确，这就是<strong>幻觉</strong>。</p>
+<p>相反，如果LLM避免给出直接答案，而是说”我不知道”，或者给出了一个准确的答案，但遗漏了一些正确的细节，那么这就是<strong>事实性问题</strong>，而<strong>不是幻觉</strong>。</p>
+<p>此外，值得注意的是，<strong>幻觉有时会产生一些内容，虽然与原始输入内容有偏差，但在事实方面仍然是准确的</strong>。</p>
+<h1><span id="参考">参考</span><a href="#参考" class="header-anchor">#</a></h1><ol>
+<li><a href="https://mp.weixin.qq.com/s?__biz=MzAxMjc3MjkyMg==&mid=2648404394&idx=1&sn=d7cfcf2cd9aa6756d3cbff938f5f4cf2">再看大模型事实性的界定、错误的起因、评估及前沿缓解方案：Survey on Factuality in LLMS</a></li>
+</ol>
+<p>1xx. <a href="https://mp.weixin.qq.com/s?__biz=MzAxMjc3MjkyMg==&mid=2648403998&idx=1&sn=400cc902434bc04df508a55e192d2455">再看大模型幻觉问题如何缓解 ：Chain-of-Verification-一种基于链式验证思想的自我修正工作解读 </a></p>
+<p>1xx. <a href="https://mp.weixin.qq.com/s?__biz=MzAxMjc3MjkyMg==&mid=2648405983&idx=2&sn=95dc9c7a12bed99b63c775d4b90519d8">也看缓解大模型幻觉的多阶段RAG框架：加入混合检索、过程理由生成与验证的方案 </a></p>
+<p>1xx. <a href="https://arxiv.org/abs/2309.01219">大模型幻觉综述</a><br>   <a href="https://arxiv.org/abs/2309.05922">大模型幻觉综述</a></p>
+<p>1xx. <a href="https://mp.weixin.qq.com/s?__biz=MzAxMjc3MjkyMg==&mid=2648405791&idx=2&sn=d7dada69e6d5ab5fba1333d234b947ef">网络安全领域微调模型SecGPT：兼看大模型幻觉的度量方式、评估benchmark及RAG增强不同方式 </a> 大模型幻觉综述</p>
+<p>1xx. <a href="https://mp.weixin.qq.com/s?__biz=MzAxMjc3MjkyMg==&mid=2648403602&idx=1&sn=f2365b05630094f8d0de7ff784abe233">大模型前沿热点最新综述：大模型微调遗忘、Agent智能体、幻觉及RAG检索增强模型推介</a> 大模型微调遗忘</p>
+<p>1xx. <a href="https://mp.weixin.qq.com/s?__biz=MzAxMjc3MjkyMg==&mid=2648403341&idx=1&sn=86cdaaf2c3a73439d2591a2f3dd0b9e0">值得一读的大模型生成幻觉研究综述：大模型幻觉的起因、评估以及减轻策略总结 </a></p>
+<p>1xx. <a href="https://zhuanlan.zhihu.com/p/642648601">大模型的幻觉问题调研: LLM Hallucination Survey</a><br>   <a href="https://mp.weixin.qq.com/s?__biz=MzU5NDg2MjgxMg==&mid=2247485189&idx=1&sn=95d6eb333dde007f262a2955b90bc7ec">人工智能海洋中的塞壬之歌：大型语言模型LLM中的幻觉研究综述（一） </a><br>   <a href="https://mp.weixin.qq.com/s/eGMwNz0F1dQsNDnsLNYr8Q">大型语言模型的幻觉研究｜减轻及避免大模型LLM幻觉（二）</a></p>
+<p>1xx. <a href="https://mp.weixin.qq.com/s/N7NOsLHr8HYCMp5XGCBDjg">LLM之幻觉（一）：大语言模型幻觉解决方案综述</a></p>
+]]></content>
+      <categories>
+        <category>AIGC</category>
+        <category>Hallucination</category>
+      </categories>
+      <tags>
+        <tag>Hallucination</tag>
       </tags>
   </entry>
   <entry>
@@ -4865,34 +4896,51 @@
       </tags>
   </entry>
   <entry>
-    <title>(原理)幻觉问题</title>
-    <url>/www6vHomeAIGC/2023/02/06/gptHallucination/</url>
+    <title>(原理)推理-框架</title>
+    <url>/www6vHomeAIGC/2023/03/21/gptInferFramework/</url>
     <content><![CDATA[<p></p>
 <span id="more"></span>
 
-<h1><span id="幻觉-vs-事实性1">幻觉 vs 事实性[1]</span><a href="#幻觉-vs-事实性1" class="header-anchor">#</a></h1><p><strong>幻觉</strong>主要是指LLM生成毫无根据或毫无根据的内容，幻觉可以理解为模型倾向于”生成与某些来源相关的无意义或不真实的内容”。这与<strong>事实性问题</strong>不同，后者强调模型学习、获取和利用事实性知识的能力。</p>
-<p>举例说明两者的<strong>区别</strong>：</p>
-<p>如果一个LLM在被要求创作”一个关于兔子和狼交朋友的童话故事”时，创作出了一个关于”兔子和狗交朋友”的故事，那么它就表现出了幻觉。不过，这并不一定是事实性错误。<br>如果生成的内容包含准确的信息，但与提示的具体内容有出入，那就是<strong>幻觉</strong>，而<strong>不是事实性问题</strong>。<br>例如，如果LLM的输出包含了比提示指定更多的细节或不同的元素，但事实仍然正确，这就是<strong>幻觉</strong>。</p>
-<p>相反，如果LLM避免给出直接答案，而是说”我不知道”，或者给出了一个准确的答案，但遗漏了一些正确的细节，那么这就是<strong>事实性问题</strong>，而<strong>不是幻觉</strong>。</p>
-<p>此外，值得注意的是，<strong>幻觉有时会产生一些内容，虽然与原始输入内容有偏差，但在事实方面仍然是准确的</strong>。</p>
+<h2><span id="目录">目录</span><a href="#目录" class="header-anchor">#</a></h2><div class="toc">
+
+<!-- toc -->
+
+<ul>
+<li><a href="#%E6%8E%A8%E7%90%86-%E6%A1%86%E6%9E%B61">推理 框架[1]</a></li>
+<li><a href="#%E5%8F%82%E8%80%83">参考</a></li>
+</ul>
+<!-- tocstop -->
+
+</div>
+
+<h1><span id="推理-框架1">推理 框架[1]</span><a href="#推理-框架1" class="header-anchor">#</a></h1><img src="/www6vHomeAIGC/2023/03/21/gptInferFramework/inference.jpg" class>
+
+<ul>
+<li><p>inference execute engine(server)<br>vLLM，TensorRT， deepspeed</p>
+</li>
+<li><p>inference execute engine(pc&#x2F;edge 移动端)<br> llama.cpp<br> mlc-llm<br> ollama</p>
+</li>
+<li><p>inference Server<br>Triton Server,  Ray</p>
+</li>
+<li><p>Chat Server [2]<br>FastChat, XInference,  modelscope  SWIFT</p>
+</li>
+</ul>
 <h1><span id="参考">参考</span><a href="#参考" class="header-anchor">#</a></h1><ol>
-<li><a href="https://mp.weixin.qq.com/s?__biz=MzAxMjc3MjkyMg==&mid=2648404394&idx=1&sn=d7cfcf2cd9aa6756d3cbff938f5f4cf2">再看大模型事实性的界定、错误的起因、评估及前沿缓解方案：Survey on Factuality in LLMS</a></li>
+<li><p><a href="https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&__biz=MzA5MTIxNTY4MQ==&scene=1&album_id=2959126655292211206">探秘LLM应用开发</a>   8-19</p>
+</li>
+<li><p><a href="https://cloud.tencent.com/developer/article/2422454">LLM 大模型学习必知必会系列(十二)：VLLM性能飞跃部署实践：从推理加速到高效部署的全方位优化[更多内容：XInference&#x2F;FastChat等框架]</a></p>
+</li>
 </ol>
-<p>1xx. <a href="https://mp.weixin.qq.com/s?__biz=MzAxMjc3MjkyMg==&mid=2648403998&idx=1&sn=400cc902434bc04df508a55e192d2455">再看大模型幻觉问题如何缓解 ：Chain-of-Verification-一种基于链式验证思想的自我修正工作解读 </a></p>
-<p>1xx. <a href="https://mp.weixin.qq.com/s?__biz=MzAxMjc3MjkyMg==&mid=2648405983&idx=2&sn=95dc9c7a12bed99b63c775d4b90519d8">也看缓解大模型幻觉的多阶段RAG框架：加入混合检索、过程理由生成与验证的方案 </a></p>
-<p>1xx. <a href="https://arxiv.org/abs/2309.01219">大模型幻觉综述</a><br>   <a href="https://arxiv.org/abs/2309.05922">大模型幻觉综述</a></p>
-<p>1xx. <a href="https://mp.weixin.qq.com/s?__biz=MzAxMjc3MjkyMg==&mid=2648405791&idx=2&sn=d7dada69e6d5ab5fba1333d234b947ef">网络安全领域微调模型SecGPT：兼看大模型幻觉的度量方式、评估benchmark及RAG增强不同方式 </a> 大模型幻觉综述</p>
-<p>1xx. <a href="https://mp.weixin.qq.com/s?__biz=MzAxMjc3MjkyMg==&mid=2648403602&idx=1&sn=f2365b05630094f8d0de7ff784abe233">大模型前沿热点最新综述：大模型微调遗忘、Agent智能体、幻觉及RAG检索增强模型推介</a> 大模型微调遗忘</p>
-<p>1xx. <a href="https://mp.weixin.qq.com/s?__biz=MzAxMjc3MjkyMg==&mid=2648403341&idx=1&sn=86cdaaf2c3a73439d2591a2f3dd0b9e0">值得一读的大模型生成幻觉研究综述：大模型幻觉的起因、评估以及减轻策略总结 </a></p>
-<p>1xx. <a href="https://zhuanlan.zhihu.com/p/642648601">大模型的幻觉问题调研: LLM Hallucination Survey</a><br>   <a href="https://mp.weixin.qq.com/s?__biz=MzU5NDg2MjgxMg==&mid=2247485189&idx=1&sn=95d6eb333dde007f262a2955b90bc7ec">人工智能海洋中的塞壬之歌：大型语言模型LLM中的幻觉研究综述（一） </a><br>   <a href="https://mp.weixin.qq.com/s/eGMwNz0F1dQsNDnsLNYr8Q">大型语言模型的幻觉研究｜减轻及避免大模型LLM幻觉（二）</a></p>
-<p>1xx. <a href="https://mp.weixin.qq.com/s/N7NOsLHr8HYCMp5XGCBDjg">LLM之幻觉（一）：大语言模型幻觉解决方案综述</a></p>
+<p>1xx. <a href="https://mp.weixin.qq.com/s?__biz=MzA5MTIxNTY4MQ==&mid=2461142079&idx=1&sn=07d9033203c0064408fe0af33d1f9414">一文探秘LLM应用开发(18)-模型部署与推理(框架工具-Triton Server、RayLLM、OpenLLM)</a></p>
+<p>1xx. <a href="https://mp.weixin.qq.com/s?__biz=MzA5MTIxNTY4MQ==&mid=2461142012&idx=1&sn=dafb0b676cdf6d41fd9bd54f9b6a82d3">一文探秘LLM应用开发(16)-模型部署与推理(框架工具-TGI，vLLM，TensorRT-LLM，DS-MII) </a></p>
+<p>1xx. <a href="https://zhuanlan.zhihu.com/p/659792625">大模型推理框架概述</a></p>
 ]]></content>
       <categories>
         <category>AIGC</category>
-        <category>Hallucination</category>
+        <category>Inference</category>
       </categories>
       <tags>
-        <tag>Hallucination</tag>
+        <tag>Inference</tag>
       </tags>
   </entry>
   <entry>
@@ -5002,54 +5050,6 @@
       </categories>
       <tags>
         <tag>AIGC</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>(原理)推理-框架</title>
-    <url>/www6vHomeAIGC/2023/03/21/gptInferFramework/</url>
-    <content><![CDATA[<p></p>
-<span id="more"></span>
-
-<h2><span id="目录">目录</span><a href="#目录" class="header-anchor">#</a></h2><div class="toc">
-
-<!-- toc -->
-
-<ul>
-<li><a href="#%E6%8E%A8%E7%90%86-%E6%A1%86%E6%9E%B61">推理 框架[1]</a></li>
-<li><a href="#%E5%8F%82%E8%80%83">参考</a></li>
-</ul>
-<!-- tocstop -->
-
-</div>
-
-<h1><span id="推理-框架1">推理 框架[1]</span><a href="#推理-框架1" class="header-anchor">#</a></h1><img src="/www6vHomeAIGC/2023/03/21/gptInferFramework/inference.jpg" class>
-
-<ul>
-<li><p>inference execute engine(server)<br>vLLM，TensorRT， deepspeed</p>
-</li>
-<li><p>inference execute engine(pc&#x2F;edge 移动端)<br> llama.cpp<br> mlc-llm<br> ollama</p>
-</li>
-<li><p>inference Server<br>Triton Server,  Ray</p>
-</li>
-<li><p>Chat Server [2]<br>FastChat, XInference,  modelscope  SWIFT</p>
-</li>
-</ul>
-<h1><span id="参考">参考</span><a href="#参考" class="header-anchor">#</a></h1><ol>
-<li><p><a href="https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&__biz=MzA5MTIxNTY4MQ==&scene=1&album_id=2959126655292211206">探秘LLM应用开发</a>   8-19</p>
-</li>
-<li><p><a href="https://cloud.tencent.com/developer/article/2422454">LLM 大模型学习必知必会系列(十二)：VLLM性能飞跃部署实践：从推理加速到高效部署的全方位优化[更多内容：XInference&#x2F;FastChat等框架]</a></p>
-</li>
-</ol>
-<p>1xx. <a href="https://mp.weixin.qq.com/s?__biz=MzA5MTIxNTY4MQ==&mid=2461142079&idx=1&sn=07d9033203c0064408fe0af33d1f9414">一文探秘LLM应用开发(18)-模型部署与推理(框架工具-Triton Server、RayLLM、OpenLLM)</a></p>
-<p>1xx. <a href="https://mp.weixin.qq.com/s?__biz=MzA5MTIxNTY4MQ==&mid=2461142012&idx=1&sn=dafb0b676cdf6d41fd9bd54f9b6a82d3">一文探秘LLM应用开发(16)-模型部署与推理(框架工具-TGI，vLLM，TensorRT-LLM，DS-MII) </a></p>
-<p>1xx. <a href="https://zhuanlan.zhihu.com/p/659792625">大模型推理框架概述</a></p>
-]]></content>
-      <categories>
-        <category>AIGC</category>
-        <category>Inference</category>
-      </categories>
-      <tags>
-        <tag>Inference</tag>
       </tags>
   </entry>
   <entry>
@@ -5530,6 +5530,36 @@
       </tags>
   </entry>
   <entry>
+    <title>(Survey)Instruct Tuning</title>
+    <url>/www6vHomeAIGC/2023/03/12/gptInstructTuningSurvey/</url>
+    <content><![CDATA[<p></p>
+<span id="more"></span>
+
+<h2><span id="目录">目录</span><a href="#目录" class="header-anchor">#</a></h2><div class="toc">
+
+<!-- toc -->
+
+<ul>
+<li><a href="#%E5%8F%82%E8%80%83">参考</a></li>
+</ul>
+<!-- tocstop -->
+
+</div>
+
+
+
+<h1><span id="参考">参考</span><a href="#参考" class="header-anchor">#</a></h1><p>1xx. <a href="https://arxiv.org/abs/2308.10792">大语言模型指令微调综述</a><br>    <a href="https://zhuanlan.zhihu.com/p/654054370">一篇关于LLM指令微调的综述</a><br>1xx. <a href="https://zhuanlan.zhihu.com/p/657138921">[论文]大语言模型指令调优综述</a><br>1xx. <a href="https://blog.csdn.net/qq_41185868/article/details/132613338">Paper：《Instruction Tuning for Large Language Models: A Survey—大型语言模型的指令调优的综述》翻译与解读</a><br>1xx. <a href="https://github.com/xiaoya-li/Instruction-Tuning-Survey">Instruction Tuning for Large Language Models: A Survey</a> git</p>
+<p>【前面大部分是Instruct-Tuning， 中间一部分是Multi-modality Instruction Tuning】</p>
+]]></content>
+      <categories>
+        <category>AIGC</category>
+        <category>Instruct-Tuning</category>
+      </categories>
+      <tags>
+        <tag>Instruct-Tuning</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>(原理)Instruct Tuning</title>
     <url>/www6vHomeAIGC/2023/01/06/gptInstructTuning/</url>
     <content><![CDATA[<p></p>
@@ -5604,36 +5634,6 @@
 <p>1xx. <a href="https://zhuanlan.zhihu.com/p/629461665">【LLM系列之FLAN-T5&#x2F;PaLM】Scaling Instruction-Finetuned Language Models</a></p>
 <p>1xx. <a href="https://zhuanlan.zhihu.com/p/597036814">如何优化大模型的In-Context Learning效果？</a></p>
 <p>1xx. <a href="https://nakaizura.blog.csdn.net/article/details/128265846">Instruction Tuning（FLAN、instructGPT、chatGPT）</a></p>
-]]></content>
-      <categories>
-        <category>AIGC</category>
-        <category>Instruct-Tuning</category>
-      </categories>
-      <tags>
-        <tag>Instruct-Tuning</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>(Survey)Instruct Tuning</title>
-    <url>/www6vHomeAIGC/2023/03/12/gptInstructTuningSurvey/</url>
-    <content><![CDATA[<p></p>
-<span id="more"></span>
-
-<h2><span id="目录">目录</span><a href="#目录" class="header-anchor">#</a></h2><div class="toc">
-
-<!-- toc -->
-
-<ul>
-<li><a href="#%E5%8F%82%E8%80%83">参考</a></li>
-</ul>
-<!-- tocstop -->
-
-</div>
-
-
-
-<h1><span id="参考">参考</span><a href="#参考" class="header-anchor">#</a></h1><p>1xx. <a href="https://arxiv.org/abs/2308.10792">大语言模型指令微调综述</a><br>    <a href="https://zhuanlan.zhihu.com/p/654054370">一篇关于LLM指令微调的综述</a><br>1xx. <a href="https://zhuanlan.zhihu.com/p/657138921">[论文]大语言模型指令调优综述</a><br>1xx. <a href="https://blog.csdn.net/qq_41185868/article/details/132613338">Paper：《Instruction Tuning for Large Language Models: A Survey—大型语言模型的指令调优的综述》翻译与解读</a><br>1xx. <a href="https://github.com/xiaoya-li/Instruction-Tuning-Survey">Instruction Tuning for Large Language Models: A Survey</a> git</p>
-<p>【前面大部分是Instruct-Tuning， 中间一部分是Multi-modality Instruction Tuning】</p>
 ]]></content>
       <categories>
         <category>AIGC</category>
@@ -5902,43 +5902,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Langchain  Agent</title>
-    <url>/www6vHomeAIGC/2023/01/11/gptLangchainAgent/</url>
-    <content><![CDATA[<p></p>
-<span id="more"></span>
-
-
-
-<h1><span id="langchain-agent">Langchain Agent</span><a href="#langchain-agent" class="header-anchor">#</a></h1><ul>
-<li>Conversational</li>
-<li>OpenAI assistants</li>
-<li>OpenAI functions</li>
-<li>OpenAI Multi Functions Agent</li>
-<li>OpenAI tools<br>OpenAI parallel function calling (a.k.a. tool calling)</li>
-<li>ReAct<br>ZeroShotReactAgent</li>
-<li>Self-ask with search</li>
-<li>Structured tool chat</li>
-</ul>
-<h1><span id="langchain-apps">Langchain Apps</span><a href="#langchain-apps" class="header-anchor">#</a></h1><h3><span id="rag-chroma-private-2">rag-chroma-private [2]</span><a href="#rag-chroma-private-2" class="header-anchor">#</a></h3><p><strong>本地 部署</strong><br>This template performs RAG with no reliance on external APIs.<br>It utilizes <strong>Ollama the LLM, GPT4All for embeddings, and Chroma for the vectorstore</strong>.</p>
-<h3><span id="research-assistant-34">research-assistant [3][4]</span><a href="#research-assistant-34" class="header-anchor">#</a></h3><p>This template implements a version of<br>“GPT Researcher” that you can use as a starting point for a <strong>research agent</strong>.</p>
-<h1><span id="langgraph5">LangGraph[5]</span><a href="#langgraph5" class="header-anchor">#</a></h1><h1><span id="参考">参考</span><a href="#参考" class="header-anchor">#</a></h1><ol>
-<li><a href="https://github.com/www6v/langchain-app">Langchain Apps</a> Project Code</li>
-<li><a href="https://www.bilibili.com/video/BV1JV411F7Yj/">LangChain Agents 保姆级教程 | 动画演示 讲清 核心模块 Agents | Code 讲解 | Demo 演示</a></li>
-<li><a href="https://blog.langchain.dev/exploring-uxs-besides-chat-with-research-assistant/">“Research Assistant”: Exploring UXs Besides Chat</a></li>
-<li><a href="https://www.youtube.com/watch?v=DjuXACWYkkU">Building a Research Assistant from Scratch</a> </li>
-<li><a href="https://blog.langchain.dev/langgraph/">LangGraph</a></li>
-<li><a href="https://github.com/www6v/gpt-researcher/">gpt-researcher</a></li>
-</ol>
-]]></content>
-      <categories>
-        <category>AIGC</category>
-        <category>Langchain</category>
-      </categories>
-      <tags>
-        <tag>GPT</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>大模型</title>
     <url>/www6vHomeAIGC/2023/02/17/gptLargeModel/</url>
     <content><![CDATA[<p></p>
@@ -6072,6 +6035,107 @@
       </tags>
   </entry>
   <entry>
+    <title>Langchain  Agent</title>
+    <url>/www6vHomeAIGC/2023/01/11/gptLangchainAgent/</url>
+    <content><![CDATA[<p></p>
+<span id="more"></span>
+
+
+
+<h1><span id="langchain-agent">Langchain Agent</span><a href="#langchain-agent" class="header-anchor">#</a></h1><ul>
+<li>Conversational</li>
+<li>OpenAI assistants</li>
+<li>OpenAI functions</li>
+<li>OpenAI Multi Functions Agent</li>
+<li>OpenAI tools<br>OpenAI parallel function calling (a.k.a. tool calling)</li>
+<li>ReAct<br>ZeroShotReactAgent</li>
+<li>Self-ask with search</li>
+<li>Structured tool chat</li>
+</ul>
+<h1><span id="langchain-apps">Langchain Apps</span><a href="#langchain-apps" class="header-anchor">#</a></h1><h3><span id="rag-chroma-private-2">rag-chroma-private [2]</span><a href="#rag-chroma-private-2" class="header-anchor">#</a></h3><p><strong>本地 部署</strong><br>This template performs RAG with no reliance on external APIs.<br>It utilizes <strong>Ollama the LLM, GPT4All for embeddings, and Chroma for the vectorstore</strong>.</p>
+<h3><span id="research-assistant-34">research-assistant [3][4]</span><a href="#research-assistant-34" class="header-anchor">#</a></h3><p>This template implements a version of<br>“GPT Researcher” that you can use as a starting point for a <strong>research agent</strong>.</p>
+<h1><span id="langgraph5">LangGraph[5]</span><a href="#langgraph5" class="header-anchor">#</a></h1><h1><span id="参考">参考</span><a href="#参考" class="header-anchor">#</a></h1><ol>
+<li><a href="https://github.com/www6v/langchain-app">Langchain Apps</a> Project Code</li>
+<li><a href="https://www.bilibili.com/video/BV1JV411F7Yj/">LangChain Agents 保姆级教程 | 动画演示 讲清 核心模块 Agents | Code 讲解 | Demo 演示</a></li>
+<li><a href="https://blog.langchain.dev/exploring-uxs-besides-chat-with-research-assistant/">“Research Assistant”: Exploring UXs Besides Chat</a></li>
+<li><a href="https://www.youtube.com/watch?v=DjuXACWYkkU">Building a Research Assistant from Scratch</a> </li>
+<li><a href="https://blog.langchain.dev/langgraph/">LangGraph</a></li>
+<li><a href="https://github.com/www6v/gpt-researcher/">gpt-researcher</a></li>
+</ol>
+]]></content>
+      <categories>
+        <category>AIGC</category>
+        <category>Langchain</category>
+      </categories>
+      <tags>
+        <tag>GPT</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>(实战)Training</title>
+    <url>/www6vHomeAIGC/2023/01/15/gptLargeModelTrainingPractice/</url>
+    <content><![CDATA[<p></p>
+<span id="more"></span>
+
+
+<h1><span id="参考">参考</span><a href="#参考" class="header-anchor">#</a></h1><p>1xx. <a href="https://zhuanlan.zhihu.com/p/636270877">【LLM】从零开始训练大模型</a> ***  未<br>     <a href="https://www.bilibili.com/video/BV1a14y1o7fr/">从零开始训练大模型</a> V<br>1xx. <a href="http://arthurchiao.art/blog/how-to-train-a-gpt-assistant-zh/">[译] 如何训练一个企业级 GPT 助手（OpenAI，2023）</a> 未<br>1xx. <a href="https://github.com/www6v/fullStackLLM/blob/master/08-fine-tuning/huggingface/index.ipynb">chatgpt2 训练</a>  10.5   10.6</p>
+<h3><span id="小模型训练-poc">小模型训练 PoC</span><a href="#小模型训练-poc" class="header-anchor">#</a></h3><p>1xx. <a href="https://zhuanlan.zhihu.com/p/660759033">LLM从0开始预训练系列：1、大模型训练踩坑</a><br>1xx. <a href="http://arthurchiao.art/blog/gpt-as-a-finite-state-markov-chain-zh/">[译] GPT 是如何工作的：200 行 Python 代码实现一个极简 GPT（2023）</a>  未</p>
+]]></content>
+      <categories>
+        <category>AIGC</category>
+        <category>train</category>
+      </categories>
+      <tags>
+        <tag>train</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>大模型 排行榜</title>
+    <url>/www6vHomeAIGC/2023/01/04/gptLeaderBoard/</url>
+    <content><![CDATA[<p></p>
+<span id="more"></span>
+
+<h2><span id="目录">目录</span><a href="#目录" class="header-anchor">#</a></h2><div class="toc">
+
+<!-- toc -->
+
+<ul>
+<li><a href="#%E5%A4%A7%E6%A8%A1%E5%9E%8B">大模型</a><ul>
+<li><a href="#%E6%8E%92%E8%A1%8C%E6%A6%9C">排行榜</a></li>
+<li><a href="#%E4%B8%AD%E5%9B%BD%E6%8E%92%E8%A1%8C%E6%A6%9C">中国排行榜</a></li>
+</ul>
+</li>
+</ul>
+<!-- tocstop -->
+
+</div>
+
+<h1><span id="大模型">大模型</span><a href="#大模型" class="header-anchor">#</a></h1><h3><span id="排行榜">排行榜</span><a href="#排行榜" class="header-anchor">#</a></h3><p><a href="https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard">HuggingFaceH 大模型排行榜</a></p>
+<p><a href="https://www.promptingguide.ai/models/collection">LLM Collection</a></p>
+<h3><span id="中国排行榜">中国排行榜</span><a href="#中国排行榜" class="header-anchor">#</a></h3><p><a href="https://github.com/www6v/awesome-LLMs-In-China">中国大模型 </a></p>
+<ul>
+<li>通用 39</li>
+<li>金融 25</li>
+<li>司法 8</li>
+<li>法律 6</li>
+<li>医学 13</li>
+<li>医疗 24</li>
+<li>教育 13</li>
+<li>科研 17</li>
+<li>工业 23</li>
+<li>政务 12</li>
+<li>运维 7</li>
+</ul>
+]]></content>
+      <categories>
+        <category>AIGC</category>
+        <category>leaderBoard</category>
+      </categories>
+      <tags>
+        <tag>leaderBoard</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>(原理)Training</title>
     <url>/www6vHomeAIGC/2022/11/19/gptLargeModelTraining/</url>
     <content><![CDATA[<p></p>
@@ -6152,70 +6216,6 @@
       </categories>
       <tags>
         <tag>train</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>(实战)Training</title>
-    <url>/www6vHomeAIGC/2023/01/15/gptLargeModelTrainingPractice/</url>
-    <content><![CDATA[<p></p>
-<span id="more"></span>
-
-
-<h1><span id="参考">参考</span><a href="#参考" class="header-anchor">#</a></h1><p>1xx. <a href="https://zhuanlan.zhihu.com/p/636270877">【LLM】从零开始训练大模型</a> ***  未<br>     <a href="https://www.bilibili.com/video/BV1a14y1o7fr/">从零开始训练大模型</a> V<br>1xx. <a href="http://arthurchiao.art/blog/how-to-train-a-gpt-assistant-zh/">[译] 如何训练一个企业级 GPT 助手（OpenAI，2023）</a> 未<br>1xx. <a href="https://github.com/www6v/fullStackLLM/blob/master/08-fine-tuning/huggingface/index.ipynb">chatgpt2 训练</a>  10.5   10.6</p>
-<h3><span id="小模型训练-poc">小模型训练 PoC</span><a href="#小模型训练-poc" class="header-anchor">#</a></h3><p>1xx. <a href="https://zhuanlan.zhihu.com/p/660759033">LLM从0开始预训练系列：1、大模型训练踩坑</a><br>1xx. <a href="http://arthurchiao.art/blog/gpt-as-a-finite-state-markov-chain-zh/">[译] GPT 是如何工作的：200 行 Python 代码实现一个极简 GPT（2023）</a>  未</p>
-]]></content>
-      <categories>
-        <category>AIGC</category>
-        <category>train</category>
-      </categories>
-      <tags>
-        <tag>train</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>大模型 排行榜</title>
-    <url>/www6vHomeAIGC/2023/01/04/gptLeaderBoard/</url>
-    <content><![CDATA[<p></p>
-<span id="more"></span>
-
-<h2><span id="目录">目录</span><a href="#目录" class="header-anchor">#</a></h2><div class="toc">
-
-<!-- toc -->
-
-<ul>
-<li><a href="#%E5%A4%A7%E6%A8%A1%E5%9E%8B">大模型</a><ul>
-<li><a href="#%E6%8E%92%E8%A1%8C%E6%A6%9C">排行榜</a></li>
-<li><a href="#%E4%B8%AD%E5%9B%BD%E6%8E%92%E8%A1%8C%E6%A6%9C">中国排行榜</a></li>
-</ul>
-</li>
-</ul>
-<!-- tocstop -->
-
-</div>
-
-<h1><span id="大模型">大模型</span><a href="#大模型" class="header-anchor">#</a></h1><h3><span id="排行榜">排行榜</span><a href="#排行榜" class="header-anchor">#</a></h3><p><a href="https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard">HuggingFaceH 大模型排行榜</a></p>
-<p><a href="https://www.promptingguide.ai/models/collection">LLM Collection</a></p>
-<h3><span id="中国排行榜">中国排行榜</span><a href="#中国排行榜" class="header-anchor">#</a></h3><p><a href="https://github.com/www6v/awesome-LLMs-In-China">中国大模型 </a></p>
-<ul>
-<li>通用 39</li>
-<li>金融 25</li>
-<li>司法 8</li>
-<li>法律 6</li>
-<li>医学 13</li>
-<li>医疗 24</li>
-<li>教育 13</li>
-<li>科研 17</li>
-<li>工业 23</li>
-<li>政务 12</li>
-<li>运维 7</li>
-</ul>
-]]></content>
-      <categories>
-        <category>AIGC</category>
-        <category>leaderBoard</category>
-      </categories>
-      <tags>
-        <tag>leaderBoard</tag>
       </tags>
   </entry>
   <entry>
@@ -6702,64 +6702,6 @@
       </tags>
   </entry>
   <entry>
-    <title>(原理)CLIP</title>
-    <url>/www6vHomeAIGC/2023/03/01/gptMultimodalCLIP/</url>
-    <content><![CDATA[<p></p>
-<span id="more"></span>
-
-<h2><span id="目录">目录</span><a href="#目录" class="header-anchor">#</a></h2><div class="toc">
-
-<!-- toc -->
-
-<ul>
-<li><a href="#clip-%E5%9C%A8%E8%AE%AD%E7%BB%83%E8%BF%87%E7%A8%8B%E4%B8%AD%E5%81%9A%E4%BA%86%E5%93%AA%E4%BA%9B%E4%BA%8B%E6%83%85elmo1">CLIP 在训练过程中做了哪些事情？[Elmo][1]</a></li>
-<li><a href="#clip-zero-shot%E6%8E%A8%E7%90%861">CLIP Zero-shot推理[1]</a><ul>
-<li><a href="#%E6%AD%A5%E9%AA%A4">步骤</a></li>
-<li><a href="#%E5%B1%80%E9%99%90">局限</a></li>
-</ul>
-</li>
-<li><a href="#%E5%8F%82%E8%80%83">参考</a></li>
-</ul>
-<!-- tocstop -->
-
-</div>
-
-<h1><span id="clip-在训练过程中做了哪些事情elmo1">CLIP 在训练过程中做了哪些事情？[Elmo][1]</span><a href="#clip-在训练过程中做了哪些事情elmo1" class="header-anchor">#</a></h1><p>在训练过程中，CLIP（Contrastive Language-Image Pre-training）模型主要进行了以下几个步骤：</p>
-<ol>
-<li><strong>数据预处理</strong> : CLIP 使用了一个大规模的数据集，包含 4 亿个 “图像 - 文本” 对，这些数据需要进行清洗和预处理，以便于模型学习。</li>
-<li><strong>特征提取</strong> : 通过 Text Encoder 和 Image Encoder 分别对文本和图像进行特征提取。Text Encoder 通常是基于 Transformer 的模型，而 Image Encoder 可以是基于 CNN（卷积神经网络）或者 VIT（Vision Transformer）的模型。</li>
-<li><strong>对比学习</strong> : CLIP 采用对比学习的策略，通过对比正确的图像 - 文本对与错误的图像 - 文本对，使得模型能够学习到正确对的特征表示与其他对的区分。具体来说，CLIP 通过 InfoNCE 损失函数来最大化正确对的相似度，同时最小化错误对的相似度。</li>
-<li><strong>特征空间对齐</strong> : 通过对比学习，CLIP 将图像和文本的特征映射到一个共享的多模态特征空间中，使得图像特征和文本特征可以直接进行相似度比较。</li>
-<li><strong>参数优化</strong> : 通过反向传播和梯度下降等方法，不断调整模型参数，以最小化损失函数，从而优化模型性能。</li>
-<li><strong>Zero-shot 推理能力的培养</strong> : 在训练过程中，CLIP 学习了如何通过文本提示（prompts）来进行 zero-shot 的图像分类，即在没有直接观测到的类别标签下，通过文本描述来识别图像内容。</li>
-<li><strong>模型评估与调整</strong> : 通过在验证集上的评估，调整模型结构和超参数，以提高模型的泛化能力和性能。</li>
-</ol>
-<p>通过这些训练步骤，CLIP 能够学习到一个强大的多模态特征表示，使其能够在多种视觉任务上进行 zero-shot 或 few-shot 的推理。</p>
-<h1><span id="clip-zero-shot推理1">CLIP Zero-shot推理[1]</span><a href="#clip-zero-shot推理1" class="header-anchor">#</a></h1><h3><span id="步骤">步骤</span><a href="#步骤" class="header-anchor">#</a></h3><ul>
-<li>首先，我们创建一个<strong>标签全集</strong>，如图中（2）所示，并得到每一个<strong>标签的特征向量</strong></li>
-<li>然后，我们取一张图片，如图中（3）所示，过Image Encoder后得到该<strong>图片的特征向量</strong></li>
-<li>最后，计算图片向量和文字向量间的<strong>相似度</strong>，取相似度最高的那条label即可。</li>
-</ul>
-<h3><span id="局限">局限</span><a href="#局限" class="header-anchor">#</a></h3><p>  当你喂给CLIP一张图时，不管这张图片它是否有见过，CLIP都不会生成一个全新的标签，而是去全集标签中找一个最相似的给你。</p>
-<h1><span id="参考">参考</span><a href="#参考" class="header-anchor">#</a></h1><ol>
-<li><a href="https://zhuanlan.zhihu.com/p/660476765">关于多模态经典之作CLIP，还有哪些细节是你不知道的</a> 代码</li>
-</ol>
-<p>1xx. <a href="https://zhuanlan.zhihu.com/p/493489688">神器CLIP：连接文本和图像，打造可迁移的视觉模型</a> ***</p>
-<p>1xx. <a href="https://zhuanlan.zhihu.com/p/486857682">【CLIP系列Paper解读】CLIP: Learning Transferable Visual Models From Natural Language Supervision</a> ***</p>
-<p>1xx. <a href="https://zhuanlan.zhihu.com/p/646790176">CLIP 模型解读</a></p>
-<p>1xx. <a href="https://zhuanlan.zhihu.com/p/521151393">详解CLIP (一) | 打通文本-图像预训练实现ImageNet的zero-shot分类，比肩全监督训练的ResNet50&#x2F;101</a></p>
-<p>1xx. <a href="https://blog.csdn.net/lsb2002/article/details/132275132">openai多模态大模型：clip详解及实战</a></p>
-<p>1xx. <a href="https://zhuanlan.zhihu.com/p/555314976">CLIP：多模态领域革命者</a></p>
-]]></content>
-      <categories>
-        <category>AIGC</category>
-        <category>multimodal</category>
-      </categories>
-      <tags>
-        <tag>multimodal</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>(图生文)BLIP-2, Flamingo</title>
     <url>/www6vHomeAIGC/2023/03/15/gptMultimodalBlip/</url>
     <content><![CDATA[<p></p>
@@ -6821,6 +6763,64 @@
 <p>1xx. <a href="https://mp.weixin.qq.com/s?__biz=MzAxMjc3MjkyMg==&mid=2648400402&idx=1&sn=efd84698e6a207b2035995ec2e255417">MiniGPT-4实现原理及其核心BLIP2模型实践：从代表性图文对数据集、BLIP2模型结构到调用实践</a> *</p>
 <p>1xx. <a href="https://zhuanlan.zhihu.com/p/606364639">BLIP2：下一代多模态模型的雏形</a></p>
 <h3><span id="flamingo">Flamingo</span><a href="#flamingo" class="header-anchor">#</a></h3><p>1xx. <a href="https://www.bilibili.com/video/BV1pu411G7ce">[论文速览]Flamingo: a Visual Language Model for Few-Shot Learning[2204.14198]</a> V<br>1xx.  <a href="https://zhuanlan.zhihu.com/p/511517344">DeepMind出手！多模态小样本打败精调</a><br>1xx. <a href="https://github.com/Luodian/Otter">Otter  on OpenFlamingo</a> git<br>1xx. <a href="https://github.com/mlfoundations/open_flamingo">open_flamingo</a> git</p>
+]]></content>
+      <categories>
+        <category>AIGC</category>
+        <category>multimodal</category>
+      </categories>
+      <tags>
+        <tag>multimodal</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>(原理)CLIP</title>
+    <url>/www6vHomeAIGC/2023/03/01/gptMultimodalCLIP/</url>
+    <content><![CDATA[<p></p>
+<span id="more"></span>
+
+<h2><span id="目录">目录</span><a href="#目录" class="header-anchor">#</a></h2><div class="toc">
+
+<!-- toc -->
+
+<ul>
+<li><a href="#clip-%E5%9C%A8%E8%AE%AD%E7%BB%83%E8%BF%87%E7%A8%8B%E4%B8%AD%E5%81%9A%E4%BA%86%E5%93%AA%E4%BA%9B%E4%BA%8B%E6%83%85elmo1">CLIP 在训练过程中做了哪些事情？[Elmo][1]</a></li>
+<li><a href="#clip-zero-shot%E6%8E%A8%E7%90%861">CLIP Zero-shot推理[1]</a><ul>
+<li><a href="#%E6%AD%A5%E9%AA%A4">步骤</a></li>
+<li><a href="#%E5%B1%80%E9%99%90">局限</a></li>
+</ul>
+</li>
+<li><a href="#%E5%8F%82%E8%80%83">参考</a></li>
+</ul>
+<!-- tocstop -->
+
+</div>
+
+<h1><span id="clip-在训练过程中做了哪些事情elmo1">CLIP 在训练过程中做了哪些事情？[Elmo][1]</span><a href="#clip-在训练过程中做了哪些事情elmo1" class="header-anchor">#</a></h1><p>在训练过程中，CLIP（Contrastive Language-Image Pre-training）模型主要进行了以下几个步骤：</p>
+<ol>
+<li><strong>数据预处理</strong> : CLIP 使用了一个大规模的数据集，包含 4 亿个 “图像 - 文本” 对，这些数据需要进行清洗和预处理，以便于模型学习。</li>
+<li><strong>特征提取</strong> : 通过 Text Encoder 和 Image Encoder 分别对文本和图像进行特征提取。Text Encoder 通常是基于 Transformer 的模型，而 Image Encoder 可以是基于 CNN（卷积神经网络）或者 VIT（Vision Transformer）的模型。</li>
+<li><strong>对比学习</strong> : CLIP 采用对比学习的策略，通过对比正确的图像 - 文本对与错误的图像 - 文本对，使得模型能够学习到正确对的特征表示与其他对的区分。具体来说，CLIP 通过 InfoNCE 损失函数来最大化正确对的相似度，同时最小化错误对的相似度。</li>
+<li><strong>特征空间对齐</strong> : 通过对比学习，CLIP 将图像和文本的特征映射到一个共享的多模态特征空间中，使得图像特征和文本特征可以直接进行相似度比较。</li>
+<li><strong>参数优化</strong> : 通过反向传播和梯度下降等方法，不断调整模型参数，以最小化损失函数，从而优化模型性能。</li>
+<li><strong>Zero-shot 推理能力的培养</strong> : 在训练过程中，CLIP 学习了如何通过文本提示（prompts）来进行 zero-shot 的图像分类，即在没有直接观测到的类别标签下，通过文本描述来识别图像内容。</li>
+<li><strong>模型评估与调整</strong> : 通过在验证集上的评估，调整模型结构和超参数，以提高模型的泛化能力和性能。</li>
+</ol>
+<p>通过这些训练步骤，CLIP 能够学习到一个强大的多模态特征表示，使其能够在多种视觉任务上进行 zero-shot 或 few-shot 的推理。</p>
+<h1><span id="clip-zero-shot推理1">CLIP Zero-shot推理[1]</span><a href="#clip-zero-shot推理1" class="header-anchor">#</a></h1><h3><span id="步骤">步骤</span><a href="#步骤" class="header-anchor">#</a></h3><ul>
+<li>首先，我们创建一个<strong>标签全集</strong>，如图中（2）所示，并得到每一个<strong>标签的特征向量</strong></li>
+<li>然后，我们取一张图片，如图中（3）所示，过Image Encoder后得到该<strong>图片的特征向量</strong></li>
+<li>最后，计算图片向量和文字向量间的<strong>相似度</strong>，取相似度最高的那条label即可。</li>
+</ul>
+<h3><span id="局限">局限</span><a href="#局限" class="header-anchor">#</a></h3><p>  当你喂给CLIP一张图时，不管这张图片它是否有见过，CLIP都不会生成一个全新的标签，而是去全集标签中找一个最相似的给你。</p>
+<h1><span id="参考">参考</span><a href="#参考" class="header-anchor">#</a></h1><ol>
+<li><a href="https://zhuanlan.zhihu.com/p/660476765">关于多模态经典之作CLIP，还有哪些细节是你不知道的</a> 代码</li>
+</ol>
+<p>1xx. <a href="https://zhuanlan.zhihu.com/p/493489688">神器CLIP：连接文本和图像，打造可迁移的视觉模型</a> ***</p>
+<p>1xx. <a href="https://zhuanlan.zhihu.com/p/486857682">【CLIP系列Paper解读】CLIP: Learning Transferable Visual Models From Natural Language Supervision</a> ***</p>
+<p>1xx. <a href="https://zhuanlan.zhihu.com/p/646790176">CLIP 模型解读</a></p>
+<p>1xx. <a href="https://zhuanlan.zhihu.com/p/521151393">详解CLIP (一) | 打通文本-图像预训练实现ImageNet的zero-shot分类，比肩全监督训练的ResNet50&#x2F;101</a></p>
+<p>1xx. <a href="https://blog.csdn.net/lsb2002/article/details/132275132">openai多模态大模型：clip详解及实战</a></p>
+<p>1xx. <a href="https://zhuanlan.zhihu.com/p/555314976">CLIP：多模态领域革命者</a></p>
 ]]></content>
       <categories>
         <category>AIGC</category>
@@ -6916,90 +6916,9 @@
     <content><![CDATA[<p></p>
 <span id="more"></span>
 
-<h2><span id="目录">目录</span><a href="#目录" class="header-anchor">#</a></h2><div class="toc">
-
-<!-- toc -->
-
-<ul>
-<li><a href="#diffusion">Diffusion</a><ul>
-<li><a href="#ddpm-%E5%AE%9E%E7%8E%B0%E5%99%AA%E5%A3%B0%E5%88%B0%E5%9B%BE%E7%89%87%E6%AD%A5%E9%AA%A41">DDPM 实现噪声到图片步骤[1]</a></li>
-<li><a href="#ddpm-%E6%A8%A1%E5%9E%8B%E7%BB%93%E6%9E%841">DDPM 模型结构[1]</a></li>
-<li><a href="#ddpm%E8%AE%AD%E7%BB%834">DDPM——训练[4]</a></li>
-<li><a href="#ddpm%E6%8E%A8%E7%90%864">DDPM——推理[4]</a></li>
-<li><a href="#diffusion-model-%E6%8B%93%E5%B1%95-stable-diffusion-1">Diffusion Model 拓展 —— Stable Diffusion [1]</a></li>
-</ul>
-</li>
-<li><a href="#sd%E7%9A%84%E4%B8%BB%E8%A6%81%E5%BA%94%E7%94%A83">SD的主要应用[3]</a></li>
-<li><a href="#sd%E7%9A%84%E5%85%B6%E5%AE%83%E7%89%B9%E8%89%B2%E5%BA%94%E7%94%A83">SD的其它特色应用[3]</a></li>
-<li><a href="#evolution-5">Evolution [5]</a></li>
-<li><a href="#%E5%8F%82%E8%80%83">参考</a></li>
-</ul>
-<!-- tocstop -->
-
-</div>
 
 
-<h1><span id="diffusion">Diffusion</span><a href="#diffusion" class="header-anchor">#</a></h1><h3><span id="ddpm-实现噪声到图片步骤1">DDPM 实现噪声到图片步骤[1]</span><a href="#ddpm-实现噪声到图片步骤1" class="header-anchor">#</a></h3><p>DDPM实现从噪声生成图像的步骤就清晰了：</p>
-<ol>
-<li><strong>前向过程：将原图逐步添加噪声， 共1000步</strong></li>
-<li><strong>反向过程：利用神经网络学习加噪图像到噪声的变换，使得模型可以去噪</strong></li>
-<li><strong>推理使用：随机采样，得到高斯噪声，然后逐步去噪，经过1000步去噪，得到清晰图像。</strong><img src="/www6vHomeAIGC/2023/06/29/gptMultimodalDiffusion/1.jpg" class></li>
-</ol>
-<h3><span id="ddpm-模型结构1">DDPM 模型结构[1]</span><a href="#ddpm-模型结构1" class="header-anchor">#</a></h3><img src="/www6vHomeAIGC/2023/06/29/gptMultimodalDiffusion/ddpm-struct.png" class>
-
-<h3><span id="ddpm训练4">DDPM——训练[4]</span><a href="#ddpm训练4" class="header-anchor">#</a></h3><ul>
-<li><p>训练过程 - 正向</p>
-<img src="/www6vHomeAIGC/2023/06/29/gptMultimodalDiffusion/train1.jpg" class>
-</li>
-<li><p>训练过程 - 反向 predict noise </p>
-<img src="/www6vHomeAIGC/2023/06/29/gptMultimodalDiffusion/train2.jpg" class></li>
-</ul>
-<h3><span id="ddpm推理4">DDPM——推理[4]</span><a href="#ddpm推理4" class="header-anchor">#</a></h3><ul>
-<li>生图-推理<img src="/www6vHomeAIGC/2023/06/29/gptMultimodalDiffusion/infer.jpg" class></li>
-</ul>
-<h3><span id="diffusion-model-拓展-stable-diffusion-1">Diffusion Model 拓展 —— Stable Diffusion [1]</span><a href="#diffusion-model-拓展-stable-diffusion-1" class="header-anchor">#</a></h3><p>Stable Diffusion 背后的技术是<strong>LDM（latent diffusion model）</strong></p>
-<p>LDM论文中有一幅图很好的解释了LDM的思想：首先在pixel space，需要有encoder和decoder，在latent space采用了多头注意力机制，并且除了时间步信息，加入了conditioning模块，其中的引导信息可以是文本、图片、表征向量等等一切内容，然后为引导信息配一个embedding模块，就可以将引导信息加入模型中。</p>
-<p>SD是一个<strong>基于latent的扩散模型</strong>，它在UNet中引入text condition来实现基于文本生成图像。SD的核心来源于<a href="https://link.zhihu.com/?target=https://arxiv.org/abs/2112.10752">Latent Diffusion</a>这个工作，常规的扩散模型是基于pixel的生成模型，而Latent Diffusion是基于latent的生成模型，它先采用一个autoencoder将图像压缩到latent空间，然后用扩散模型来生成图像的latents，最后送入autoencoder的decoder模块就可以得到生成的图像。[3]</p>
-<img src="/www6vHomeAIGC/2023/06/29/gptMultimodalDiffusion/ldm.jpg" class>
-
-
-<p>SD模型的主体结构如下图所示，主要包括三个模型：</p>
-<ul>
-<li><strong>autoencoder</strong>：encoder将图像压缩到latent空间，而decoder将latent解码为图像；</li>
-<li><strong>CLIP text encoder</strong>：提取输入text的text embeddings，通过cross attention方式送入扩散模型的UNet中作为condition；</li>
-<li><strong>UNet</strong>：扩散模型的主体，用来实现文本引导下的latent生成。<img src="/www6vHomeAIGC/2023/06/29/gptMultimodalDiffusion/3.jpg" class></li>
-</ul>
-<p>这里配上李宏毅老师的结构示意图，可知道LDM的核心在于2当中，处理的不再是像素空间，而是一个特征空间</p>
-<img src="/www6vHomeAIGC/2023/06/29/gptMultimodalDiffusion/2.jpg" class>
-
-
-<h1><span id="sd的主要应用3">SD的主要应用[3]</span><a href="#sd的主要应用3" class="header-anchor">#</a></h1><ul>
-<li>文生图</li>
-<li>图生图</li>
-<li>图像inpainting</li>
-</ul>
-<h1><span id="sd的其它特色应用3">SD的其它特色应用[3]</span><a href="#sd的其它特色应用3" class="header-anchor">#</a></h1><ul>
-<li><p><strong>个性化生成</strong>  【fine-tuning】<br>英伟达的<a href="https://link.zhihu.com/?target=https://arxiv.org/abs/2208.01618">Textual Inversion</a>和谷歌的<a href="https://link.zhihu.com/?target=https://arxiv.org/abs/2208.12242">DreamBooth</a></p>
-</li>
-<li><p><strong>风格化finetune模型</strong> 【fine-tuning】<br>目前finetune SD模型的方法主要有两种：一种是直接finetune了UNet，但是容易过拟合，而且存储成本；另外一种低成本的方法是基于微软的<a href="https://link.zhihu.com/?target=https://arxiv.org/abs/2106.09685">LoRA</a>，LoRA本来是用于finetune语言模型的，但是现在已经可以用来finetune SD模型了，具体可以见博客<a href="https://link.zhihu.com/?target=https://huggingface.co/blog/lora">Using LoRA for Efficient Stable Diffusion Fine-Tuning</a>。</p>
-</li>
-<li><p><strong>图像编辑</strong> 【image edit】<br>谷歌的<a href="https://link.zhihu.com/?target=https://prompt-to-prompt.github.io/">prompt-to-prompt</a>和加州伯克利的<a href="https://link.zhihu.com/?target=https://www.timothybrooks.com/instruct-pix2pix">instruct-pix2pix</a></p>
-</li>
-<li><p><strong>可控生成</strong> 【controllable】<br>可控生成是SD最近比较火的应用，这主要归功于<a href="https://link.zhihu.com/?target=https://github.com/lllyasviel/ControlNet">ControlNet</a>，基于ControlNet可以实现对很多种类的可控生成，比如边缘，人体关键点，草图和深度图等等。</p>
-</li>
-</ul>
-<h1><span id="evolution-5">Evolution [5]</span><a href="#evolution-5" class="header-anchor">#</a></h1><img src="/www6vHomeAIGC/2023/06/29/gptMultimodalDiffusion/evolution-line.jpg" class>
-
-<img src="/www6vHomeAIGC/2023/06/29/gptMultimodalDiffusion/evolution.jpg" class>
-
-
-<h1><span id="参考">参考</span><a href="#参考" class="header-anchor">#</a></h1><ol>
-<li><a href="https://tingsongyu.github.io/PyTorch-Tutorial-2nd/chapter-8/8.6-diffusion-model.html">8.6 扩散模型——DDPM · PyTorch实用教程（第二版）</a></li>
-<li><a href="https://github.com/CompVis/stable-diffusion">https://github.com/CompVis/stable-diffusion</a></li>
-<li><a href="https://zhuanlan.zhihu.com/p/617134893">文生图模型之Stable Diffusion</a></li>
-<li><a href="https://www.bilibili.com/video/BV1Pg4y1M7Lr?p=3">38.(正课)Stable Diffusion、DALL-E、Imagen 背后_哔哩哔哩_bilibili</a><br><a href="https://speech.ee.ntu.edu.tw/~hylee/ml/ml2023-course-data/StableDiffusion%20(v2).pdf">course PPT</a></li>
-<li><a href="https://www.bilibili.com/video/BV13J4m1K73z/">【扩散生成模型串讲】一个视频梳理Diffusion模型演化进程，16个扩散相关生成模型，20+篇相关论文串讲。_哔哩哔哩_bilibili</a> V</li>
-</ol>
+<h1><span id="diffusion-原理">Diffusion 原理</span><a href="#diffusion-原理" class="header-anchor">#</a></h1><p><a href="https://candied-skunk-1ca.notion.site/Diffusion-8cdcc8079d7d42c2a193ae6baf06246e?pvs=4">(原理)Diffusion</a></p>
 ]]></content>
       <categories>
         <category>AIGC</category>
@@ -7550,6 +7469,62 @@
       </tags>
   </entry>
   <entry>
+    <title>(原理|实战)ViT, ViLT</title>
+    <url>/www6vHomeAIGC/2023/03/01/gptMultimodalVit/</url>
+    <content><![CDATA[<p></p>
+<span id="more"></span>
+
+<h1><span id="论文">论文</span><a href="#论文" class="header-anchor">#</a></h1><ul>
+<li><p>论文地址<br> <a href="https://arxiv.org/pdf/2010.11929">AN IMAGE IS WORTH 16X16 WORDS:TRANSFORMERS FOR IMAGE RECOGNITION AT SCALE</a> </p>
+</li>
+<li><p>开源地址<br><a href="https://github.com/google-research/vision_transformer">vision_transformer</a> git</p>
+</li>
+</ul>
+<h1><span id="model">model</span><a href="#model" class="header-anchor">#</a></h1><img src="/www6vHomeAIGC/2023/03/01/gptMultimodalVit/model.png" class>
+
+
+<h1><span id="代码1">代码[1]</span><a href="#代码1" class="header-anchor">#</a></h1><h1><span id="参考">参考</span><a href="#参考" class="header-anchor">#</a></h1><h3><span id="vit">ViT</span><a href="#vit" class="header-anchor">#</a></h3><ol>
+<li><a href="https://www.bilibili.com/video/BV1fH4y1H7mV/">【Sora重要技术】复现ViT（Vision Transformer）模型</a> V<br>  <a href="https://github.com/owenliang/mnist-vit">mnist-vit Repo</a> git</li>
+</ol>
+<p>1xx. <a href="https://www.bilibili.com/video/BV1Uu411o7oY">VIT (Vision Transformer) 模型论文+代码(源码)从零详细解读，看不懂来打我</a> V</p>
+<p>1xx. <a href="https://blog.csdn.net/qq_43449643/article/details/135623953">详解VIT（Vision Transformer)模型原理, 代码级讲解</a><br>   <a href="https://github.com/yangyunfeng-cyber/Useful-DL-Projects-for-Exercise/blob/main/VIT/vit_model.py">VIT Repo</a> git  ***</p>
+<p>1xx. <a href="https://www.bilibili.com/video/BV1xm4y1b7Pw/">ViT｜ Vision Transformer ｜理论 + 代码</a>  V<br>   <a href="https://65d8gk.axshare.com/">PPT</a></p>
+<h3><span id="vilt">ViLT</span><a href="#vilt" class="header-anchor">#</a></h3><p>1xx. <a href="https://zhuanlan.zhihu.com/p/369733979">ViLT：最简单的多模态Transformer</a><br>1xx. <a href="https://github.com/dandelin/vilt">ViLT</a> git<br>1xx. <a href="https://blog.csdn.net/qq_42030496/article/details/134641704">ViLT 论文精读【论文精读】</a><br>   <a href="https://www.bilibili.com/video/BV14r4y1j74y/">ViLT 论文精读【论文精读】</a> V<br>1xx. <a href="https://blog.csdn.net/m0_56722835/article/details/125071550">多模态ViLT模型下游任务微调原理及代码</a></p>
+]]></content>
+      <categories>
+        <category>AIGC</category>
+        <category>ViT</category>
+      </categories>
+      <tags>
+        <tag>ViT</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>NL2SQL</title>
+    <url>/www6vHomeAIGC/2023/01/03/gptNL2SQL/</url>
+    <content><![CDATA[<p></p>
+<span id="more"></span>
+
+
+<h1><span id="参考">参考</span><a href="#参考" class="header-anchor">#</a></h1><p>1xx. <a href="https://github.com/www6v/NL2SQL">https://github.com/www6v/NL2SQL</a><br>1xx. <a href="https://github.com/www6v/nl2sql-">https://github.com/www6v/nl2sql-</a><br>1xx. <a href="https://blog.langchain.dev/llms-and-sql/">LLMs and SQL</a><br>1xx. <a href="https://zhuanlan.zhihu.com/p/640580808">大模型与数据科学：从Text-to-SQL 开始（一）</a> 多款产品</p>
+<p>百度千帆-ppt<br>QCon-ppt</p>
+<p>1xx. <a href="https://mp.weixin.qq.com/s?__biz=MzUxNzk5MTU3OQ==&mid=2247487028&idx=1&sn=7b6767878b7f6b891fc69e408f248ef1">语义解析 (Text-to-SQL) 技术研究及应用 上篇 </a><br>1xx. <a href="https://mp.weixin.qq.com/s/5lTLW5OOuRMo2zjbzMxr_Q">语义解析 (Text-to-SQL) 技术研究及应用 下篇 </a></p>
+<p>1xx. <a href="https://zhuanlan.zhihu.com/p/670509396">LLM在中文Text2SQL的实践</a><br>1xx. <a href="https://zhuanlan.zhihu.com/p/673474672">LLM在中文Text2SQL任务上的优化V2.0</a><br>1xx. <a href="https://zhuanlan.zhihu.com/p/670913902">LLM在中文Text2SQL任务上的优化V1.0</a></p>
+<p>1xx. <a href="https://mp.weixin.qq.com/s?__biz=MzAxMjc3MjkyMg==&mid=2648402400&idx=1&sn=fe122657b35f27090aaca9c144d1d23b">也看大模型与数据库查询分析的落地结合：C3 Text2SQL方案及Data-Copilot数据自动化编排机制的实现思想阅读 </a> ***</p>
+<p>1xx. <a href="https://zhuanlan.zhihu.com/p/668557045">C3: Zero-shot Text-to-SQL with ChatGPT笔记</a><br>1xx. <a href="https://github.com/bigbigwatermalon/C3SQL">C3SQL  </a> git</p>
+<p>1xx. <a href="https://mp.weixin.qq.com/s?__biz=MzAxMjc3MjkyMg==&mid=2648402424&idx=1&sn=e2d26821b6e9a5a2871e0ddbca565c30">大模型再总结及ChatSQL实践案例分享：大模型训练数据及工具的5张脑图总结及ChatSQL开源项目实现解析 </a></p>
+<p>1xx. <a href="https://mp.weixin.qq.com/s/Ffm8ooH8je2553IcLkJBmw">大模型Text2SQL主流数据集及可用实践项目：兼看利用大模型进行5W1H新闻要素提取 </a><br>   问题2:关于Text2sql当前的可用项目及数据集<br>   <a href="https://github.com/www6v/Awesome-Text2SQL">https://github.com/www6v/Awesome-Text2SQL</a></p>
+<h3><span id="project">Project</span><a href="#project" class="header-anchor">#</a></h3><p><a href="https://github.com/eosphoros-ai/DB-GPT">DB-GPT Repo</a> git<br><a href="https://mp.weixin.qq.com/s?__biz=Mzg2MjkwNzY4OA==&mid=2247487442&idx=1&sn=7889420553058119506bd677298e69d4">开源 Text-to-SQL 工具哪家强？Vanna 让 SQL 小白也能轻松玩转数据分析！</a><br><a href="https://mp.weixin.qq.com/s?__biz=Mzg2MjkwNzY4OA==&mid=2247487419&idx=1&sn=31fb6947c97793bc58b645444a1b587c">YC孵化的Text-to-SQL未来之星：Defog开源 SQLCoder模型，打造企业级数据分析利器 </a><br><a href="https://mp.weixin.qq.com/s?__biz=Mzg2MjkwNzY4OA==&mid=2247487328&idx=1&sn=dd20578ab376aaa11fee526d4787ce58">WrenAI：开源Text-to-SQL引擎让 SQL触手可及，数据分析的“GPT”时刻来了？</a><br><a href="https://mp.weixin.qq.com/s?__biz=Mzg2MjkwNzY4OA==&mid=2247487260&idx=1&sn=53b5d036c9f2e039d4fc26c8053355b8">Dataherald 核心 Text-to-SQL 引擎全面开源！</a></p>
+]]></content>
+      <categories>
+        <category>AIGC</category>
+        <category>NL2SQL</category>
+      </categories>
+      <tags>
+        <tag>NL2SQL</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>(Survey)多模态</title>
     <url>/www6vHomeAIGC/2023/03/16/gptMultimodalSurvey/</url>
     <content><![CDATA[<p></p>
@@ -7706,62 +7681,6 @@
       </categories>
       <tags>
         <tag>multimodal</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>(原理|实战)ViT, ViLT</title>
-    <url>/www6vHomeAIGC/2023/03/01/gptMultimodalVit/</url>
-    <content><![CDATA[<p></p>
-<span id="more"></span>
-
-<h1><span id="论文">论文</span><a href="#论文" class="header-anchor">#</a></h1><ul>
-<li><p>论文地址<br> <a href="https://arxiv.org/pdf/2010.11929">AN IMAGE IS WORTH 16X16 WORDS:TRANSFORMERS FOR IMAGE RECOGNITION AT SCALE</a> </p>
-</li>
-<li><p>开源地址<br><a href="https://github.com/google-research/vision_transformer">vision_transformer</a> git</p>
-</li>
-</ul>
-<h1><span id="model">model</span><a href="#model" class="header-anchor">#</a></h1><img src="/www6vHomeAIGC/2023/03/01/gptMultimodalVit/model.png" class>
-
-
-<h1><span id="代码1">代码[1]</span><a href="#代码1" class="header-anchor">#</a></h1><h1><span id="参考">参考</span><a href="#参考" class="header-anchor">#</a></h1><h3><span id="vit">ViT</span><a href="#vit" class="header-anchor">#</a></h3><ol>
-<li><a href="https://www.bilibili.com/video/BV1fH4y1H7mV/">【Sora重要技术】复现ViT（Vision Transformer）模型</a> V<br>  <a href="https://github.com/owenliang/mnist-vit">mnist-vit Repo</a> git</li>
-</ol>
-<p>1xx. <a href="https://www.bilibili.com/video/BV1Uu411o7oY">VIT (Vision Transformer) 模型论文+代码(源码)从零详细解读，看不懂来打我</a> V</p>
-<p>1xx. <a href="https://blog.csdn.net/qq_43449643/article/details/135623953">详解VIT（Vision Transformer)模型原理, 代码级讲解</a><br>   <a href="https://github.com/yangyunfeng-cyber/Useful-DL-Projects-for-Exercise/blob/main/VIT/vit_model.py">VIT Repo</a> git  ***</p>
-<p>1xx. <a href="https://www.bilibili.com/video/BV1xm4y1b7Pw/">ViT｜ Vision Transformer ｜理论 + 代码</a>  V<br>   <a href="https://65d8gk.axshare.com/">PPT</a></p>
-<h3><span id="vilt">ViLT</span><a href="#vilt" class="header-anchor">#</a></h3><p>1xx. <a href="https://zhuanlan.zhihu.com/p/369733979">ViLT：最简单的多模态Transformer</a><br>1xx. <a href="https://github.com/dandelin/vilt">ViLT</a> git<br>1xx. <a href="https://blog.csdn.net/qq_42030496/article/details/134641704">ViLT 论文精读【论文精读】</a><br>   <a href="https://www.bilibili.com/video/BV14r4y1j74y/">ViLT 论文精读【论文精读】</a> V<br>1xx. <a href="https://blog.csdn.net/m0_56722835/article/details/125071550">多模态ViLT模型下游任务微调原理及代码</a></p>
-]]></content>
-      <categories>
-        <category>AIGC</category>
-        <category>ViT</category>
-      </categories>
-      <tags>
-        <tag>ViT</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>NL2SQL</title>
-    <url>/www6vHomeAIGC/2023/01/03/gptNL2SQL/</url>
-    <content><![CDATA[<p></p>
-<span id="more"></span>
-
-
-<h1><span id="参考">参考</span><a href="#参考" class="header-anchor">#</a></h1><p>1xx. <a href="https://github.com/www6v/NL2SQL">https://github.com/www6v/NL2SQL</a><br>1xx. <a href="https://github.com/www6v/nl2sql-">https://github.com/www6v/nl2sql-</a><br>1xx. <a href="https://blog.langchain.dev/llms-and-sql/">LLMs and SQL</a><br>1xx. <a href="https://zhuanlan.zhihu.com/p/640580808">大模型与数据科学：从Text-to-SQL 开始（一）</a> 多款产品</p>
-<p>百度千帆-ppt<br>QCon-ppt</p>
-<p>1xx. <a href="https://mp.weixin.qq.com/s?__biz=MzUxNzk5MTU3OQ==&mid=2247487028&idx=1&sn=7b6767878b7f6b891fc69e408f248ef1">语义解析 (Text-to-SQL) 技术研究及应用 上篇 </a><br>1xx. <a href="https://mp.weixin.qq.com/s/5lTLW5OOuRMo2zjbzMxr_Q">语义解析 (Text-to-SQL) 技术研究及应用 下篇 </a></p>
-<p>1xx. <a href="https://zhuanlan.zhihu.com/p/670509396">LLM在中文Text2SQL的实践</a><br>1xx. <a href="https://zhuanlan.zhihu.com/p/673474672">LLM在中文Text2SQL任务上的优化V2.0</a><br>1xx. <a href="https://zhuanlan.zhihu.com/p/670913902">LLM在中文Text2SQL任务上的优化V1.0</a></p>
-<p>1xx. <a href="https://mp.weixin.qq.com/s?__biz=MzAxMjc3MjkyMg==&mid=2648402400&idx=1&sn=fe122657b35f27090aaca9c144d1d23b">也看大模型与数据库查询分析的落地结合：C3 Text2SQL方案及Data-Copilot数据自动化编排机制的实现思想阅读 </a> ***</p>
-<p>1xx. <a href="https://zhuanlan.zhihu.com/p/668557045">C3: Zero-shot Text-to-SQL with ChatGPT笔记</a><br>1xx. <a href="https://github.com/bigbigwatermalon/C3SQL">C3SQL  </a> git</p>
-<p>1xx. <a href="https://mp.weixin.qq.com/s?__biz=MzAxMjc3MjkyMg==&mid=2648402424&idx=1&sn=e2d26821b6e9a5a2871e0ddbca565c30">大模型再总结及ChatSQL实践案例分享：大模型训练数据及工具的5张脑图总结及ChatSQL开源项目实现解析 </a></p>
-<p>1xx. <a href="https://mp.weixin.qq.com/s/Ffm8ooH8je2553IcLkJBmw">大模型Text2SQL主流数据集及可用实践项目：兼看利用大模型进行5W1H新闻要素提取 </a><br>   问题2:关于Text2sql当前的可用项目及数据集<br>   <a href="https://github.com/www6v/Awesome-Text2SQL">https://github.com/www6v/Awesome-Text2SQL</a></p>
-<h3><span id="project">Project</span><a href="#project" class="header-anchor">#</a></h3><p><a href="https://github.com/eosphoros-ai/DB-GPT">DB-GPT Repo</a> git<br><a href="https://mp.weixin.qq.com/s?__biz=Mzg2MjkwNzY4OA==&mid=2247487442&idx=1&sn=7889420553058119506bd677298e69d4">开源 Text-to-SQL 工具哪家强？Vanna 让 SQL 小白也能轻松玩转数据分析！</a><br><a href="https://mp.weixin.qq.com/s?__biz=Mzg2MjkwNzY4OA==&mid=2247487419&idx=1&sn=31fb6947c97793bc58b645444a1b587c">YC孵化的Text-to-SQL未来之星：Defog开源 SQLCoder模型，打造企业级数据分析利器 </a><br><a href="https://mp.weixin.qq.com/s?__biz=Mzg2MjkwNzY4OA==&mid=2247487328&idx=1&sn=dd20578ab376aaa11fee526d4787ce58">WrenAI：开源Text-to-SQL引擎让 SQL触手可及，数据分析的“GPT”时刻来了？</a><br><a href="https://mp.weixin.qq.com/s?__biz=Mzg2MjkwNzY4OA==&mid=2247487260&idx=1&sn=53b5d036c9f2e039d4fc26c8053355b8">Dataherald 核心 Text-to-SQL 引擎全面开源！</a></p>
-]]></content>
-      <categories>
-        <category>AIGC</category>
-        <category>NL2SQL</category>
-      </categories>
-      <tags>
-        <tag>NL2SQL</tag>
       </tags>
   </entry>
   <entry>
@@ -7998,58 +7917,6 @@
       </tags>
   </entry>
   <entry>
-    <title>P-Tuning</title>
-    <url>/www6vHomeAIGC/2023/03/24/gptPEFTPtuning/</url>
-    <content><![CDATA[<p></p>
-<span id="more"></span>
-
-<h1><span id="p-tuning2">P-Tuning[2]</span><a href="#p-tuning2" class="header-anchor">#</a></h1><ul>
-<li>P-Tuning 的创新之处在于将提示（Prompt）转化为<strong>可学习的嵌入层（Embedding Layer）</strong></li>
-</ul>
-<h3><span id="架构">架构</span><a href="#架构" class="header-anchor">#</a></h3><img src="/www6vHomeAIGC/2023/03/24/gptPEFTPtuning/ptuning.png" class>
-
-<ul>
-<li><p>一个关于“The capital of Britain is [MASK]” 示例：</p>
-<ul>
-<li>蓝色是上下文 “Britain” </li>
-<li>红色是目标单词 “[MASK]”， </li>
-<li>橙色区域是提示词。</li>
-</ul>
-</li>
-<li><p>传统方式 与 P-Tuning 对比： </p>
-<ul>
-<li>在（a）中，提示生成器只接收离散奖励； </li>
-<li>在（b）中，连续的<strong>提示嵌入（Prompt Embedding）</strong> 和<strong>提示编码器（Prompt Encoder）</strong>以可微的方式进行 优化。</li>
-</ul>
-</li>
-</ul>
-<h1><span id="p-tuning-v22">P-Tuning v2[2]</span><a href="#p-tuning-v22" class="header-anchor">#</a></h1><h3><span id="背景">背景</span><a href="#背景" class="header-anchor">#</a></h3><p>之前的方法在以下两方面有所<strong>限制</strong>：<br>• 模型规模差异：在大型预训练模型中，Prompt Tuning 和<br>P-Tuning 能取得与全面微调相似的效果，但在参数较少<br>的模型上则表现不佳。<br>• 任务类型差异：无论是 Prompt Tuning 还是 P-Tuning，<br>在序列标注任务上的表现都较差。</p>
-<h3><span id="目的">目的</span><a href="#目的" class="header-anchor">#</a></h3><p>P-Tuning v2 旨在使提示调整（Prompt Tuning）在不同规模的预训练模型上，针对各种下游任务都能达到类似全面微调（Fine-tuning）的效果。</p>
-<h3><span id="架构-1">架构 [1]</span><a href="#架构-1" class="header-anchor">#</a></h3><img src="/www6vHomeAIGC/2023/03/24/gptPEFTPtuning/ptuning-v2.png" class>
-<p>在每一层都加入了Prompts tokens 作为输入,  而不是仅仅加在输入层</p>
-<h1><span id="总结">总结</span><a href="#总结" class="header-anchor">#</a></h1><img src="/www6vHomeAIGC/2023/03/24/gptPEFTPtuning/compare.png" class>
-<ul>
-<li>P-tuning  和 Prompt Tuning 仅仅更新<strong>第一个Transformer层</strong></li>
-<li>Prefix tuning 和 P-Tuning v2 针对<strong>每一个Transformer 层</strong>进行更新</li>
-<li>Prefix tuning 和 P-Tuning 需要<strong>重新参数化(PromptEncoder)</strong>, 而Prompt Tuning 和 P-Tuning v2则<strong>不需要</strong></li>
-<li>简单将<strong>P-Tuning</strong>认为是针对 <strong>Prompt Tuning</strong>的<strong>改进</strong>,    <strong>P-Tuning v2</strong> 认为是针对 <strong>Prefix tuning</strong> 的<strong>改进</strong>.</li>
-</ul>
-<h1><span id="参考">参考</span><a href="#参考" class="header-anchor">#</a></h1><ol>
-<li><p><a href="https://aicarrier.feishu.cn/file/H1YvbRyacopEs6xzgZ8c9DDcnIh">大模型参数高效微调技术原理及实践</a> pdf<br><a href="https://www.bilibili.com/video/BV1qw411c7Hd/">如何高效微调大模型？技术原理与最佳实践揭秘！</a> V *** </p>
-</li>
-<li><p>《3-大模型微调技术揭秘-PEFT》 Ai大模型微调</p>
-</li>
-</ol>
-]]></content>
-      <categories>
-        <category>AIGC</category>
-        <category>PEFT</category>
-      </categories>
-      <tags>
-        <tag>PEFT</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>(实战)PEFT P-Tuning</title>
     <url>/www6vHomeAIGC/2024/01/28/gptPEFTPtuningPractice/</url>
     <content><![CDATA[<p></p>
@@ -8138,100 +8005,55 @@
       </tags>
   </entry>
   <entry>
-    <title>科研-工具</title>
-    <url>/www6vHomeAIGC/2024/02/11/gptPaperTools/</url>
+    <title>P-Tuning</title>
+    <url>/www6vHomeAIGC/2023/03/24/gptPEFTPtuning/</url>
     <content><![CDATA[<p></p>
 <span id="more"></span>
 
+<h1><span id="p-tuning2">P-Tuning[2]</span><a href="#p-tuning2" class="header-anchor">#</a></h1><ul>
+<li>P-Tuning 的创新之处在于将提示（Prompt）转化为<strong>可学习的嵌入层（Embedding Layer）</strong></li>
+</ul>
+<h3><span id="架构">架构</span><a href="#架构" class="header-anchor">#</a></h3><img src="/www6vHomeAIGC/2023/03/24/gptPEFTPtuning/ptuning.png" class>
 
-<h1><span id="论文管理1">论文管理[1]</span><a href="#论文管理1" class="header-anchor">#</a></h1><ul>
-<li><p>Readpaper<br><a href="https://readpaper.com/new">https://readpaper.com/new</a><br>论文在线阅读，论文搜索，管理</p>
-</li>
-<li><p>Connected Papers 引用关系<br><a href="https://www.connectedpapers.com/">https://www.connectedpapers.com/</a></p>
-</li>
-<li><p>AI 顶会倒计时<br><a href="https://aideadlin.es/?sub=ML,CV,NLP">https://aideadlin.es/?sub=ML,CV,NLP</a></p>
-</li>
-<li><p>Aminer<br><a href="https://www.aminer.cn/">https://www.aminer.cn/</a><br>最新的进展如何<br>还有个必读论文系列</p>
-</li>
-</ul>
-<h1><span id="写作1">写作[1]</span><a href="#写作1" class="header-anchor">#</a></h1><ul>
-<li><p>DeepL翻译<br>deepl.com&#x2F;translator</p>
-</li>
-<li><p>overleaf<br>overleaf.com&#x2F;project</p>
-</li>
-</ul>
-<h1><span id="论文元素-1">论文元素 [1]</span><a href="#论文元素-1" class="header-anchor">#</a></h1><ul>
-<li><p>quillbot.com&#x2F;<br>改写, 检查语法, 摘要生成</p>
-</li>
-<li><p>Table generator<br><a href="https://www.tablesgenerator.com/latex_tables">https://www.tablesgenerator.com/latex_tables</a><br>latex表格生成</p>
-</li>
-<li><p>echarts<br><a href="https://echarts.apache.org/examples/en/index.html#chart-type-bar">https://echarts.apache.org/examples/en/index.html#chart-type-bar</a><br>画图</p>
-</li>
-<li><p>detexify Latex符号<br><a href="http://detexify.kirelabs.org/classify.html">http://detexify.kirelabs.org/classify.html</a><br>手绘符号转换成latex代码</p>
-</li>
-<li><p>DBLP<br>dblp.uni-trier.de&#x2F;<br>latex引用</p>
-</li>
-<li><p>esoda 词组用法示例<br>esoda.org&#x2F;</p>
-</li>
-<li><p>wikidiff 近义词理解<br><a href="https://wikidiff.com/neglect/omit">https://wikidiff.com/neglect/omit</a></p>
-</li>
-<li><p>在线latex公式编辑器<br><a href="https://www.latexlive.com/##">https://www.latexlive.com/##</a></p>
-</li>
-<li><p>mathpix 公式图片转换成latex<br><a href="https://mathpix.com/">https://mathpix.com/</a><br>公式图片识别成latex公式</p>
-</li>
-</ul>
-<h1><span id="aigc-文档分析amp科研">AIGC 文档分析&amp;科研</span><a href="#aigc-文档分析amp科研" class="header-anchor">#</a></h1><ul>
-<li><p>在线文档分析<br>Microsoft Edge Dev + new Bing  ***</p>
-</li>
-<li><p>文献查找 + 润色<br>Skype + new Bing  ***</p>
-</li>
-<li><p>本地文档分析</p>
 <ul>
-<li><p>VPN</p>
+<li><p>一个关于“The capital of Britain is [MASK]” 示例：</p>
 <ul>
-<li>chatpdf  收费  ***<br><a href="https://www.chatpdf.com/">Chat with any PDF</a> 总结文献</li>
-<li><a href="https://chatdoc.com/">Chat with documents</a></li>
+<li>蓝色是上下文 “Britain” </li>
+<li>红色是目标单词 “[MASK]”， </li>
+<li>橙色区域是提示词。</li>
 </ul>
 </li>
-<li><p>非VPN</p>
+<li><p>传统方式 与 P-Tuning 对比： </p>
 <ul>
-<li><a href="https://chatpaper.org/">ChatPaper</a>  Paper 中文<br><a href="https://github.com/kaixindelele/ChatPaper">ChatPaper</a> git</li>
-<li><a href="https://chat2doc.cn/">阅读文档的好帮手</a>  收费</li>
-<li><a href="https://lightpdf.com/chatdoc">LightPDF AI Tools</a> *** </li>
-<li><a href="https://docalysis.com/files/hwylw4">docalysis</a> ***</li>
+<li>在（a）中，提示生成器只接收离散奖励； </li>
+<li>在（b）中，连续的<strong>提示嵌入（Prompt Embedding）</strong> 和<strong>提示编码器（Prompt Encoder）</strong>以可微的方式进行 优化。</li>
 </ul>
 </li>
 </ul>
-</li>
-</ul>
-<h1><span id="newbing-chat-2">NewBing chat [2]</span><a href="#newbing-chat-2" class="header-anchor">#</a></h1><img src="/www6vHomeAIGC/2024/02/11/gptPaperTools/newBing.jpg" class>
-
-<h3><span id="学术prompt">学术Prompt</span><a href="#学术prompt" class="header-anchor">#</a></h3><ul>
-<li>在线文献全文分析 [new Bing] <ul>
-<li>帮我总结一下这篇文章的<strong>要点</strong></li>
-<li>帮我正对本研究论文写一篇<strong>总结报告</strong>， 600字</li>
-<li>帮我总结本研究的讨论部分 采用了哪种<strong>写作框架</strong>， 是否进行了与其它研究的对比，有无表明本研究的<strong>局限性</strong>和<strong>未来研究可能性</strong>?</li>
-<li>帮我总结本研究的方法部分用了哪些<strong>研究方法</strong>？</li>
-<li>本研究方法部分的Western Blot是如何实施的？</li>
-<li>总结下本论文Introduction部分在写作方面，有哪些<strong>词汇和句式</strong>值得在SCI论文写作中积累借鉴</li>
-</ul>
-</li>
-</ul>
-<h1><span id="tools">Tools</span><a href="#tools" class="header-anchor">#</a></h1><ul>
-<li><a href="https://app.seaml.es/">Seamless for science</a> bibi1<br>abstract</li>
-<li><a href="https://typeset.io/">scispace</a>  bibi1<br>润色 判重</li>
-<li><a href="https://www.txyz.ai/">txyz</a></li>
+<h1><span id="p-tuning-v22">P-Tuning v2[2]</span><a href="#p-tuning-v22" class="header-anchor">#</a></h1><h3><span id="背景">背景</span><a href="#背景" class="header-anchor">#</a></h3><p>之前的方法在以下两方面有所<strong>限制</strong>：<br>• 模型规模差异：在大型预训练模型中，Prompt Tuning 和<br>P-Tuning 能取得与全面微调相似的效果，但在参数较少<br>的模型上则表现不佳。<br>• 任务类型差异：无论是 Prompt Tuning 还是 P-Tuning，<br>在序列标注任务上的表现都较差。</p>
+<h3><span id="目的">目的</span><a href="#目的" class="header-anchor">#</a></h3><p>P-Tuning v2 旨在使提示调整（Prompt Tuning）在不同规模的预训练模型上，针对各种下游任务都能达到类似全面微调（Fine-tuning）的效果。</p>
+<h3><span id="架构-1">架构 [1]</span><a href="#架构-1" class="header-anchor">#</a></h3><img src="/www6vHomeAIGC/2023/03/24/gptPEFTPtuning/ptuning-v2.png" class>
+<p>在每一层都加入了Prompts tokens 作为输入,  而不是仅仅加在输入层</p>
+<h1><span id="总结">总结</span><a href="#总结" class="header-anchor">#</a></h1><img src="/www6vHomeAIGC/2023/03/24/gptPEFTPtuning/compare.png" class>
+<ul>
+<li>P-tuning  和 Prompt Tuning 仅仅更新<strong>第一个Transformer层</strong></li>
+<li>Prefix tuning 和 P-Tuning v2 针对<strong>每一个Transformer 层</strong>进行更新</li>
+<li>Prefix tuning 和 P-Tuning 需要<strong>重新参数化(PromptEncoder)</strong>, 而Prompt Tuning 和 P-Tuning v2则<strong>不需要</strong></li>
+<li>简单将<strong>P-Tuning</strong>认为是针对 <strong>Prompt Tuning</strong>的<strong>改进</strong>,    <strong>P-Tuning v2</strong> 认为是针对 <strong>Prefix tuning</strong> 的<strong>改进</strong>.</li>
 </ul>
 <h1><span id="参考">参考</span><a href="#参考" class="header-anchor">#</a></h1><ol>
-<li><a href="https://zhuanlan.zhihu.com/p/661767969">工欲善科研，必先利其器</a></li>
-<li><a href="https://www.bilibili.com/video/BV18M4y1C7HY/">整合chatGPT的新必应（NewBing chat）简直就是科研神器！</a></li>
+<li><p><a href="https://aicarrier.feishu.cn/file/H1YvbRyacopEs6xzgZ8c9DDcnIh">大模型参数高效微调技术原理及实践</a> pdf<br><a href="https://www.bilibili.com/video/BV1qw411c7Hd/">如何高效微调大模型？技术原理与最佳实践揭秘！</a> V *** </p>
+</li>
+<li><p>《3-大模型微调技术揭秘-PEFT》 Ai大模型微调</p>
+</li>
 </ol>
 ]]></content>
       <categories>
-        <category>科研</category>
+        <category>AIGC</category>
+        <category>PEFT</category>
       </categories>
       <tags>
-        <tag>科研</tag>
+        <tag>PEFT</tag>
       </tags>
   </entry>
   <entry>
@@ -8393,6 +8215,103 @@
       </categories>
       <tags>
         <tag>prompt</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>科研-工具</title>
+    <url>/www6vHomeAIGC/2024/02/11/gptPaperTools/</url>
+    <content><![CDATA[<p></p>
+<span id="more"></span>
+
+
+<h1><span id="论文管理1">论文管理[1]</span><a href="#论文管理1" class="header-anchor">#</a></h1><ul>
+<li><p>Readpaper<br><a href="https://readpaper.com/new">https://readpaper.com/new</a><br>论文在线阅读，论文搜索，管理</p>
+</li>
+<li><p>Connected Papers 引用关系<br><a href="https://www.connectedpapers.com/">https://www.connectedpapers.com/</a></p>
+</li>
+<li><p>AI 顶会倒计时<br><a href="https://aideadlin.es/?sub=ML,CV,NLP">https://aideadlin.es/?sub=ML,CV,NLP</a></p>
+</li>
+<li><p>Aminer<br><a href="https://www.aminer.cn/">https://www.aminer.cn/</a><br>最新的进展如何<br>还有个必读论文系列</p>
+</li>
+</ul>
+<h1><span id="写作1">写作[1]</span><a href="#写作1" class="header-anchor">#</a></h1><ul>
+<li><p>DeepL翻译<br>deepl.com&#x2F;translator</p>
+</li>
+<li><p>overleaf<br>overleaf.com&#x2F;project</p>
+</li>
+</ul>
+<h1><span id="论文元素-1">论文元素 [1]</span><a href="#论文元素-1" class="header-anchor">#</a></h1><ul>
+<li><p>quillbot.com&#x2F;<br>改写, 检查语法, 摘要生成</p>
+</li>
+<li><p>Table generator<br><a href="https://www.tablesgenerator.com/latex_tables">https://www.tablesgenerator.com/latex_tables</a><br>latex表格生成</p>
+</li>
+<li><p>echarts<br><a href="https://echarts.apache.org/examples/en/index.html#chart-type-bar">https://echarts.apache.org/examples/en/index.html#chart-type-bar</a><br>画图</p>
+</li>
+<li><p>detexify Latex符号<br><a href="http://detexify.kirelabs.org/classify.html">http://detexify.kirelabs.org/classify.html</a><br>手绘符号转换成latex代码</p>
+</li>
+<li><p>DBLP<br>dblp.uni-trier.de&#x2F;<br>latex引用</p>
+</li>
+<li><p>esoda 词组用法示例<br>esoda.org&#x2F;</p>
+</li>
+<li><p>wikidiff 近义词理解<br><a href="https://wikidiff.com/neglect/omit">https://wikidiff.com/neglect/omit</a></p>
+</li>
+<li><p>在线latex公式编辑器<br><a href="https://www.latexlive.com/##">https://www.latexlive.com/##</a></p>
+</li>
+<li><p>mathpix 公式图片转换成latex<br><a href="https://mathpix.com/">https://mathpix.com/</a><br>公式图片识别成latex公式</p>
+</li>
+</ul>
+<h1><span id="aigc-文档分析amp科研">AIGC 文档分析&amp;科研</span><a href="#aigc-文档分析amp科研" class="header-anchor">#</a></h1><ul>
+<li><p>在线文档分析<br>Microsoft Edge Dev + new Bing  ***</p>
+</li>
+<li><p>文献查找 + 润色<br>Skype + new Bing  ***</p>
+</li>
+<li><p>本地文档分析</p>
+<ul>
+<li><p>VPN</p>
+<ul>
+<li>chatpdf  收费  ***<br><a href="https://www.chatpdf.com/">Chat with any PDF</a> 总结文献</li>
+<li><a href="https://chatdoc.com/">Chat with documents</a></li>
+</ul>
+</li>
+<li><p>非VPN</p>
+<ul>
+<li><a href="https://chatpaper.org/">ChatPaper</a>  Paper 中文<br><a href="https://github.com/kaixindelele/ChatPaper">ChatPaper</a> git</li>
+<li><a href="https://chat2doc.cn/">阅读文档的好帮手</a>  收费</li>
+<li><a href="https://lightpdf.com/chatdoc">LightPDF AI Tools</a> *** </li>
+<li><a href="https://docalysis.com/files/hwylw4">docalysis</a> ***</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h1><span id="newbing-chat-2">NewBing chat [2]</span><a href="#newbing-chat-2" class="header-anchor">#</a></h1><img src="/www6vHomeAIGC/2024/02/11/gptPaperTools/newBing.jpg" class>
+
+<h3><span id="学术prompt">学术Prompt</span><a href="#学术prompt" class="header-anchor">#</a></h3><ul>
+<li>在线文献全文分析 [new Bing] <ul>
+<li>帮我总结一下这篇文章的<strong>要点</strong></li>
+<li>帮我正对本研究论文写一篇<strong>总结报告</strong>， 600字</li>
+<li>帮我总结本研究的讨论部分 采用了哪种<strong>写作框架</strong>， 是否进行了与其它研究的对比，有无表明本研究的<strong>局限性</strong>和<strong>未来研究可能性</strong>?</li>
+<li>帮我总结本研究的方法部分用了哪些<strong>研究方法</strong>？</li>
+<li>本研究方法部分的Western Blot是如何实施的？</li>
+<li>总结下本论文Introduction部分在写作方面，有哪些<strong>词汇和句式</strong>值得在SCI论文写作中积累借鉴</li>
+</ul>
+</li>
+</ul>
+<h1><span id="tools">Tools</span><a href="#tools" class="header-anchor">#</a></h1><ul>
+<li><a href="https://app.seaml.es/">Seamless for science</a> bibi1<br>abstract</li>
+<li><a href="https://typeset.io/">scispace</a>  bibi1<br>润色 判重</li>
+<li><a href="https://www.txyz.ai/">txyz</a></li>
+</ul>
+<h1><span id="参考">参考</span><a href="#参考" class="header-anchor">#</a></h1><ol>
+<li><a href="https://zhuanlan.zhihu.com/p/661767969">工欲善科研，必先利其器</a></li>
+<li><a href="https://www.bilibili.com/video/BV18M4y1C7HY/">整合chatGPT的新必应（NewBing chat）简直就是科研神器！</a></li>
+</ol>
+]]></content>
+      <categories>
+        <category>科研</category>
+      </categories>
+      <tags>
+        <tag>科研</tag>
       </tags>
   </entry>
   <entry>
@@ -8815,63 +8734,6 @@
       </tags>
   </entry>
   <entry>
-    <title>(实战)模型压缩-量化</title>
-    <url>/www6vHomeAIGC/2024/03/22/gptQuantizationPractice/</url>
-    <content><![CDATA[<p></p>
-<span id="more"></span>
-
-<h2><span id="目录">目录</span><a href="#目录" class="header-anchor">#</a></h2><div class="toc">
-
-<!-- toc -->
-
-<ul>
-<li><a href="#%E5%AE%9E%E6%88%98-ptq1">实战-PTQ[1]</a><ul>
-<li><a href="#%E9%87%8F%E5%8C%96%E4%B8%8E8bit%E6%A8%A1%E5%9E%8B%E8%AE%AD%E7%BB%83">量化与8bit模型训练</a></li>
-</ul>
-</li>
-<li><a href="#%E5%AE%9E%E6%88%982-%E9%87%8F%E5%8C%96%E6%8E%A8%E7%90%86-%E9%87%8F%E5%8C%96%E6%8E%A8%E7%90%86-8">实战2-量化推理 量化推理 [8]</a></li>
-<li><a href="#%E5%8F%82%E8%80%83">参考</a></li>
-</ul>
-<!-- tocstop -->
-
-</div>
-
-<h1><span id="实战-ptq1">实战-PTQ[1]</span><a href="#实战-ptq1" class="header-anchor">#</a></h1><h3><span id="量化与8bit模型训练">量化与8bit模型训练</span><a href="#量化与8bit模型训练" class="header-anchor">#</a></h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> torch</span><br><span class="line">model = AutoModelForCausalLM.from_pretrained(<span class="string">&quot;D:/Pretrained_models/modelscope/Llama-2-7b-ms&quot;</span>, low_cpu_mem_usage=<span class="literal">True</span>, </span><br><span class="line">                                             torch_dtype=torch.half, device_map=<span class="string">&quot;auto&quot;</span>, load_in_8bit=<span class="literal">True</span>)</span><br></pre></td></tr></table></figure>
-
-<h1><span id="实战2-量化推理-量化推理-8">实战2-量化推理 量化推理 [8]</span><a href="#实战2-量化推理-量化推理-8" class="header-anchor">#</a></h1><ul>
-<li><p>Training的模型</p>
-<img src="/www6vHomeAIGC/2024/03/22/gptQuantizationPractice/dirs.png" class>
-</li>
-<li><p>合并后的模型</p>
-<img src="/www6vHomeAIGC/2024/03/22/gptQuantizationPractice/dir.png" class>
-</li>
-<li><p>4bit量化推理</p>
-<img src="/www6vHomeAIGC/2024/03/22/gptQuantizationPractice/xtuner-chat.png" class></li>
-</ul>
-<blockquote>
-<p>Training的时候要用tmux</p>
-</blockquote>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">tmux new -s finetune</span></span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">tmux attach -t finetune</span></span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">ctcl +b , D</span></span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>16bit量化推理慢,  要用4bit量化推理</p>
-</blockquote>
-<h1><span id="参考">参考</span><a href="#参考" class="header-anchor">#</a></h1><ol>
-<li><p><a href="https://www.bilibili.com/video/BV1EN411g7Yn/"> 量化与8bit模型训练</a> V<br><a href="https://www.bilibili.com/video/BV1EN411g7Yn/">【手把手带你实战HuggingFace Transformers-低精度训练篇】量化与8bit模型训练</a><br>   <a href="https://github.com/www6v/transformers-code/blob/master/04-Kbit%20Training/26-8bits_training/llama2_lora_8bit.ipynb">llama2_lora_8bit.ipynb</a></p>
-</li>
-<li><p><a href="https://github.com/www6v/tutorial/tree/main/xtuner">internLM fine-tuning on xtuner</a><br><a href="https://www.bilibili.com/video/BV1yK4y1B75J/">(4)XTuner 大模型单卡低成本微调实战</a> V</p>
-</li>
-</ol>
-]]></content>
-      <categories>
-        <category>AIGC</category>
-        <category>量化</category>
-      </categories>
-      <tags>
-        <tag>量化</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>(原理)模型压缩-量化概述</title>
     <url>/www6vHomeAIGC/2023/02/19/gptQuantization/</url>
     <content><![CDATA[<p></p>
@@ -8997,77 +8859,53 @@
       </tags>
   </entry>
   <entry>
-    <title>(原理)Weight Only(LLM.int8(), GPTQ, AWQ)</title>
-    <url>/www6vHomeAIGC/2023/03/26/gptQuantizationWeight/</url>
+    <title>(实战)模型压缩-量化</title>
+    <url>/www6vHomeAIGC/2024/03/22/gptQuantizationPractice/</url>
     <content><![CDATA[<p></p>
 <span id="more"></span>
 
-<h1><span id="llmint8-2">LLM.int8() [2]</span><a href="#llmint8-2" class="header-anchor">#</a></h1><h3><span id="原理">原理</span><a href="#原理" class="header-anchor">#</a></h3><p>LLM.int8()是一种采用<strong>混合精度分解</strong>的量化方法。该方案先做了一个矩阵分解，对绝大部分权重和激活用8bit量化（vector-wise）。对<strong>离群特征</strong>的几个维度保留16bit，对其做高精度的矩阵乘法。</p>
-<h3><span id="算法">算法</span><a href="#算法" class="header-anchor">#</a></h3><p>LLM.int8() 通过三个步骤完成矩阵乘法计算:</p>
+<h2><span id="目录">目录</span><a href="#目录" class="header-anchor">#</a></h2><div class="toc">
+
+<!-- toc -->
+
 <ul>
-<li>从输入的隐含状态中，按列提取<strong>异常值 (离群特征，即大于某个阈值的值)。</strong></li>
-<li>对离群特征进行 FP16 矩阵运算，对非离群特征进行量化，做 INT8 矩阵运算；</li>
-<li>反量化非离群值的矩阵乘结果，并与离群值矩阵乘结果相加，获得最终的 FP16 结果。</li>
+<li><a href="#%E5%AE%9E%E6%88%98-ptq1">实战-PTQ[1]</a><ul>
+<li><a href="#%E9%87%8F%E5%8C%96%E4%B8%8E8bit%E6%A8%A1%E5%9E%8B%E8%AE%AD%E7%BB%83">量化与8bit模型训练</a></li>
 </ul>
-<h1><span id="gptq2">GPTQ[2]</span><a href="#gptq2" class="header-anchor">#</a></h1><h3><span id="原理">原理</span><a href="#原理" class="header-anchor">#</a></h3><p>GPTQ 采用<strong>int4&#x2F;fp16 (W4A16) 的混合量化</strong>方案，其中<strong>模型权重</strong>被量化为 <strong>int4</strong> 数值类型，而<strong>激活值</strong>则保留在 <strong>float16</strong>，是一种<strong>仅权重量化</strong>方法。在推理阶段，模型权重被动态地反量化回 float16 并在该数值类型下进行实际的运算；同 OBQ  一样，GPTQ还是从<strong>单层量化</strong>的角度考虑，<strong>希望找到一个量化过的权重，使的新的权重和老的权重之间输出的结果差别最小</strong>。</p>
-<p>GPTQ 将权重分组（如：128列为一组）为多个子矩阵（block）。对某个 block 内的所有参数逐个量化，每个参数量化后，需要适当调整这个 block 内其他未量化的参数，以弥补量化造成的精度损失。因此，GPTQ 量化需要准备校准数据集。</p>
-<h3><span id="实现">实现</span><a href="#实现" class="header-anchor">#</a></h3><p>AutoGPTQ 代码库集成到了 Transformers 中，让用户使用 GPTQ 算法在 <strong>8 bit、4 bit、3 bit</strong>，甚至是 <strong>2 bit</strong> 精度下量化和运行模型成为可能。当使用 <strong>int4 量化</strong>时，精度的下降可以忽略不计，同时在小批量推理上保持着与 fp16 基线相当的速度。需要注意的是，GPTQ 方法与 bitsandbytes 提出的训练后量化方法有所不同，GPTQ 需要<strong>在量化阶段</strong>提供一个<strong>校准数据集</strong>。</p>
-<h1><span id="awq-3">AWQ [3]</span><a href="#awq-3" class="header-anchor">#</a></h1><h3><span id="技术原理">技术原理</span><a href="#技术原理" class="header-anchor">#</a></h3><p>AWQ是一种对大模型<strong>仅权重量化</strong>方法。通过<strong>保护更“重要”的权重不进行量化</strong>，从而在不进行训练的情况下提高准确率。</p>
-<h3><span id="实现">实现</span><a href="#实现" class="header-anchor">#</a></h3><p>目前，除了官方提供了对于AWQ的支持（llm-awq）之外，社区有相当多的工具（如：<strong>AutoAWQ</strong>、<strong>vLLM</strong>、 HuggingFace TGI、LMDeploy、 <strong>TensorRT-LLM</strong>、FastChat 等）提供了对AWQ的支持。</p>
-<h1><span id="总结">总结</span><a href="#总结" class="header-anchor">#</a></h1><ul>
-<li><p>LLM.int8()<br> 属于 round-to-nearest (RTN) 量化：舍入到最近的定点数。<br>【keyword: 混合精度分解    离群值】</p>
 </li>
-<li><p>GPT-Q<br> 把量化问题视作<strong>优化问题</strong>，逐层寻找最优的量化权重。<br>【keyword: 混合量化  优化问题】</p>
-</li>
+<li><a href="#%E5%AE%9E%E6%88%982-%E9%87%8F%E5%8C%96%E6%8E%A8%E7%90%86-%E9%87%8F%E5%8C%96%E6%8E%A8%E7%90%86-8">实战2-量化推理 量化推理 [8]</a></li>
+<li><a href="#%E5%8F%82%E8%80%83">参考</a></li>
 </ul>
-<h3><span id="awq-vs-gptq-1">AWQ vs GPTQ [1]</span><a href="#awq-vs-gptq-1" class="header-anchor">#</a></h3><table>
-<thead>
-<tr>
-<th><strong>特征&#x2F;算法</strong></th>
-<th><strong>AWQ</strong></th>
-<th><strong>GPTQ</strong></th>
-</tr>
-</thead>
-<tbody><tr>
-<td><strong>设计目的</strong></td>
-<td>量化大型语言模型，<strong>特别强调保护显著权重</strong>，以减少量化误差。</td>
-<td><strong>专为GPT模型设计</strong>，高效地完成权重量化，以减少计算和存储成本。</td>
-</tr>
-<tr>
-<td><strong>量化方法</strong></td>
-<td>基于<strong>激活分布</strong>而不是权重来选择保护的权重。</td>
-<td><strong>一次性权重量化</strong>，基于近似二阶信息。</td>
-</tr>
-<tr>
-<td><strong>精度和效率</strong></td>
-<td>在不同模型和位精度上<strong>都表现优异</strong>，能够提高视觉语言模型的性能。</td>
-<td>在<strong>极低位数量化（如2位）</strong>下仍保持合理准确度，能在<strong>短时间</strong>内量化大规模模型。</td>
-</tr>
-<tr>
-<td><strong>硬件适应性</strong></td>
-<td>支持高效推理框架，适用于桌面和移动GPU。</td>
-<td>使得在单个GPU上执行大规模模型成为可能，提高了推理速度。</td>
-</tr>
-<tr>
-<td><strong>应用范围</strong></td>
-<td>适用于<strong>多种模型和任务</strong>，包括<strong>多模态</strong>语言模型。</td>
-<td><strong>专门针对GPT模型</strong>，适用于高计算需求的模型。</td>
-</tr>
-<tr>
-<td><strong>推理性能提升</strong></td>
-<td>提供显著的速度提升，尤其在边缘设备上表现突出。</td>
-<td>在高端和成本效益高的GPU上均实现显著的推理速度提升。</td>
-</tr>
-</tbody></table>
+<!-- tocstop -->
+
+</div>
+
+<h1><span id="实战-ptq1">实战-PTQ[1]</span><a href="#实战-ptq1" class="header-anchor">#</a></h1><h3><span id="量化与8bit模型训练">量化与8bit模型训练</span><a href="#量化与8bit模型训练" class="header-anchor">#</a></h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> torch</span><br><span class="line">model = AutoModelForCausalLM.from_pretrained(<span class="string">&quot;D:/Pretrained_models/modelscope/Llama-2-7b-ms&quot;</span>, low_cpu_mem_usage=<span class="literal">True</span>, </span><br><span class="line">                                             torch_dtype=torch.half, device_map=<span class="string">&quot;auto&quot;</span>, load_in_8bit=<span class="literal">True</span>)</span><br></pre></td></tr></table></figure>
+
+<h1><span id="实战2-量化推理-量化推理-8">实战2-量化推理 量化推理 [8]</span><a href="#实战2-量化推理-量化推理-8" class="header-anchor">#</a></h1><ul>
+<li><p>Training的模型</p>
+<img src="/www6vHomeAIGC/2024/03/22/gptQuantizationPractice/dirs.png" class>
+</li>
+<li><p>合并后的模型</p>
+<img src="/www6vHomeAIGC/2024/03/22/gptQuantizationPractice/dir.png" class>
+</li>
+<li><p>4bit量化推理</p>
+<img src="/www6vHomeAIGC/2024/03/22/gptQuantizationPractice/xtuner-chat.png" class></li>
+</ul>
+<blockquote>
+<p>Training的时候要用tmux</p>
+</blockquote>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">tmux new -s finetune</span></span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">tmux attach -t finetune</span></span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">ctcl +b , D</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>16bit量化推理慢,  要用4bit量化推理</p>
+</blockquote>
 <h1><span id="参考">参考</span><a href="#参考" class="header-anchor">#</a></h1><ol>
-<li><p>《8-实战Transformers模型量化》 Ai大模型微调</p>
+<li><p><a href="https://www.bilibili.com/video/BV1EN411g7Yn/"> 量化与8bit模型训练</a> V<br><a href="https://www.bilibili.com/video/BV1EN411g7Yn/">【手把手带你实战HuggingFace Transformers-低精度训练篇】量化与8bit模型训练</a><br>   <a href="https://github.com/www6v/transformers-code/blob/master/04-Kbit%20Training/26-8bits_training/llama2_lora_8bit.ipynb">llama2_lora_8bit.ipynb</a></p>
 </li>
-<li><p><a href="https://zhuanlan.zhihu.com/p/680212402">大模型量化技术原理-LLM.int8()、GPTQ</a></p>
-</li>
-<li><p><a href="https://zhuanlan.zhihu.com/p/681578090">大模型量化技术原理-AWQ、AutoAWQ</a></p>
+<li><p><a href="https://github.com/www6v/tutorial/tree/main/xtuner">internLM fine-tuning on xtuner</a><br><a href="https://www.bilibili.com/video/BV1yK4y1B75J/">(4)XTuner 大模型单卡低成本微调实战</a> V</p>
 </li>
 </ol>
-<p>1xx. <a href="https://mp.weixin.qq.com/s?__biz=MzAxMjc3MjkyMg==&mid=2648399136&idx=1&sn=bd0a7237940c2ac800e06ae6d247349e">NLP大模型压缩关键技术解读：用于大型Transformer的8-bit矩阵乘法原理及其简单实现</a><br>   <a href="https://huggingface.co/blog/zh/hf-bitsandbytes-integration">大规模 Transformer 模型 8 比特矩阵乘简介 - 基于 Hugging Face Transformers、Accelerate 以及 bitsandbytes </a>  LLM.int8()</p>
 ]]></content>
       <categories>
         <category>AIGC</category>
@@ -9151,6 +8989,87 @@
       </categories>
       <tags>
         <tag>RAG</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>(原理)Weight Only(LLM.int8(), GPTQ, AWQ)</title>
+    <url>/www6vHomeAIGC/2023/03/26/gptQuantizationWeight/</url>
+    <content><![CDATA[<p></p>
+<span id="more"></span>
+
+<h1><span id="llmint8-2">LLM.int8() [2]</span><a href="#llmint8-2" class="header-anchor">#</a></h1><h3><span id="原理">原理</span><a href="#原理" class="header-anchor">#</a></h3><p>LLM.int8()是一种采用<strong>混合精度分解</strong>的量化方法。该方案先做了一个矩阵分解，对绝大部分权重和激活用8bit量化（vector-wise）。对<strong>离群特征</strong>的几个维度保留16bit，对其做高精度的矩阵乘法。</p>
+<h3><span id="算法">算法</span><a href="#算法" class="header-anchor">#</a></h3><p>LLM.int8() 通过三个步骤完成矩阵乘法计算:</p>
+<ul>
+<li>从输入的隐含状态中，按列提取<strong>异常值 (离群特征，即大于某个阈值的值)。</strong></li>
+<li>对离群特征进行 FP16 矩阵运算，对非离群特征进行量化，做 INT8 矩阵运算；</li>
+<li>反量化非离群值的矩阵乘结果，并与离群值矩阵乘结果相加，获得最终的 FP16 结果。</li>
+</ul>
+<h1><span id="gptq2">GPTQ[2]</span><a href="#gptq2" class="header-anchor">#</a></h1><h3><span id="原理">原理</span><a href="#原理" class="header-anchor">#</a></h3><p>GPTQ 采用<strong>int4&#x2F;fp16 (W4A16) 的混合量化</strong>方案，其中<strong>模型权重</strong>被量化为 <strong>int4</strong> 数值类型，而<strong>激活值</strong>则保留在 <strong>float16</strong>，是一种<strong>仅权重量化</strong>方法。在推理阶段，模型权重被动态地反量化回 float16 并在该数值类型下进行实际的运算；同 OBQ  一样，GPTQ还是从<strong>单层量化</strong>的角度考虑，<strong>希望找到一个量化过的权重，使的新的权重和老的权重之间输出的结果差别最小</strong>。</p>
+<p>GPTQ 将权重分组（如：128列为一组）为多个子矩阵（block）。对某个 block 内的所有参数逐个量化，每个参数量化后，需要适当调整这个 block 内其他未量化的参数，以弥补量化造成的精度损失。因此，GPTQ 量化需要准备校准数据集。</p>
+<h3><span id="实现">实现</span><a href="#实现" class="header-anchor">#</a></h3><p>AutoGPTQ 代码库集成到了 Transformers 中，让用户使用 GPTQ 算法在 <strong>8 bit、4 bit、3 bit</strong>，甚至是 <strong>2 bit</strong> 精度下量化和运行模型成为可能。当使用 <strong>int4 量化</strong>时，精度的下降可以忽略不计，同时在小批量推理上保持着与 fp16 基线相当的速度。需要注意的是，GPTQ 方法与 bitsandbytes 提出的训练后量化方法有所不同，GPTQ 需要<strong>在量化阶段</strong>提供一个<strong>校准数据集</strong>。</p>
+<h1><span id="awq-3">AWQ [3]</span><a href="#awq-3" class="header-anchor">#</a></h1><h3><span id="技术原理">技术原理</span><a href="#技术原理" class="header-anchor">#</a></h3><p>AWQ是一种对大模型<strong>仅权重量化</strong>方法。通过<strong>保护更“重要”的权重不进行量化</strong>，从而在不进行训练的情况下提高准确率。</p>
+<h3><span id="实现">实现</span><a href="#实现" class="header-anchor">#</a></h3><p>目前，除了官方提供了对于AWQ的支持（llm-awq）之外，社区有相当多的工具（如：<strong>AutoAWQ</strong>、<strong>vLLM</strong>、 HuggingFace TGI、LMDeploy、 <strong>TensorRT-LLM</strong>、FastChat 等）提供了对AWQ的支持。</p>
+<h1><span id="总结">总结</span><a href="#总结" class="header-anchor">#</a></h1><ul>
+<li><p>LLM.int8()<br> 属于 round-to-nearest (RTN) 量化：舍入到最近的定点数。<br>【keyword: 混合精度分解    离群值】</p>
+</li>
+<li><p>GPT-Q<br> 把量化问题视作<strong>优化问题</strong>，逐层寻找最优的量化权重。<br>【keyword: 混合量化  优化问题】</p>
+</li>
+</ul>
+<h3><span id="awq-vs-gptq-1">AWQ vs GPTQ [1]</span><a href="#awq-vs-gptq-1" class="header-anchor">#</a></h3><table>
+<thead>
+<tr>
+<th><strong>特征&#x2F;算法</strong></th>
+<th><strong>AWQ</strong></th>
+<th><strong>GPTQ</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>设计目的</strong></td>
+<td>量化大型语言模型，<strong>特别强调保护显著权重</strong>，以减少量化误差。</td>
+<td><strong>专为GPT模型设计</strong>，高效地完成权重量化，以减少计算和存储成本。</td>
+</tr>
+<tr>
+<td><strong>量化方法</strong></td>
+<td>基于<strong>激活分布</strong>而不是权重来选择保护的权重。</td>
+<td><strong>一次性权重量化</strong>，基于近似二阶信息。</td>
+</tr>
+<tr>
+<td><strong>精度和效率</strong></td>
+<td>在不同模型和位精度上<strong>都表现优异</strong>，能够提高视觉语言模型的性能。</td>
+<td>在<strong>极低位数量化（如2位）</strong>下仍保持合理准确度，能在<strong>短时间</strong>内量化大规模模型。</td>
+</tr>
+<tr>
+<td><strong>硬件适应性</strong></td>
+<td>支持高效推理框架，适用于桌面和移动GPU。</td>
+<td>使得在单个GPU上执行大规模模型成为可能，提高了推理速度。</td>
+</tr>
+<tr>
+<td><strong>应用范围</strong></td>
+<td>适用于<strong>多种模型和任务</strong>，包括<strong>多模态</strong>语言模型。</td>
+<td><strong>专门针对GPT模型</strong>，适用于高计算需求的模型。</td>
+</tr>
+<tr>
+<td><strong>推理性能提升</strong></td>
+<td>提供显著的速度提升，尤其在边缘设备上表现突出。</td>
+<td>在高端和成本效益高的GPU上均实现显著的推理速度提升。</td>
+</tr>
+</tbody></table>
+<h1><span id="参考">参考</span><a href="#参考" class="header-anchor">#</a></h1><ol>
+<li><p>《8-实战Transformers模型量化》 Ai大模型微调</p>
+</li>
+<li><p><a href="https://zhuanlan.zhihu.com/p/680212402">大模型量化技术原理-LLM.int8()、GPTQ</a></p>
+</li>
+<li><p><a href="https://zhuanlan.zhihu.com/p/681578090">大模型量化技术原理-AWQ、AutoAWQ</a></p>
+</li>
+</ol>
+<p>1xx. <a href="https://mp.weixin.qq.com/s?__biz=MzAxMjc3MjkyMg==&mid=2648399136&idx=1&sn=bd0a7237940c2ac800e06ae6d247349e">NLP大模型压缩关键技术解读：用于大型Transformer的8-bit矩阵乘法原理及其简单实现</a><br>   <a href="https://huggingface.co/blog/zh/hf-bitsandbytes-integration">大规模 Transformer 模型 8 比特矩阵乘简介 - 基于 Hugging Face Transformers、Accelerate 以及 bitsandbytes </a>  LLM.int8()</p>
+]]></content>
+      <categories>
+        <category>AIGC</category>
+        <category>量化</category>
+      </categories>
+      <tags>
+        <tag>量化</tag>
       </tags>
   </entry>
   <entry>
@@ -9428,32 +9347,6 @@
       </tags>
   </entry>
   <entry>
-    <title>RAG KG</title>
-    <url>/www6vHomeAIGC/2023/06/19/gptRAGKG/</url>
-    <content><![CDATA[<p></p>
-<span id="more"></span>
-
-<h3><span id="vectorkg-rag1516">Vector+KG RAG[15][16]</span><a href="#vectorkg-rag1516" class="header-anchor">#</a></h3><h3><span id="rag-多跳问题">RAG 多跳问题</span><a href="#rag-多跳问题" class="header-anchor">#</a></h3><h1><span id="参考">参考</span><a href="#参考" class="header-anchor">#</a></h1><h3><span id="rag-多跳问题">RAG 多跳问题</span><a href="#rag-多跳问题" class="header-anchor">#</a></h3><p>1xx. <a href="https://neo4j.com/developer-blog/knowledge-graphs-llms-multi-hop-question-answering/">Knowledge Graphs &amp; LLMs: Multi-Hop Question Answering</a></p>
-<p><a href="https://cloud.tencent.com.cn/developer/article/2409038">知识图谱和 LLM：多跳问答-腾讯云开发者社区-腾讯云</a></p>
-<p><a href="https://blog.csdn.net/qq_41185868/article/details/138514051">LLMs之KG-RAG：KG-RAG&#x2F;GraphRAG(基于知识图谱的RAG系统)的简介(可以解决多跳问题&#x2F;同时支持结构化和非结构化数据查询)、经验技巧、案例应用之详细攻略-CSDN博客</a></p>
-<p>1xx. <a href="https://blog.csdn.net/qq_36931982/article/details/139118215">MultiHop-RAG：多跳查询的基准检索增强生成_rag多跳查询-CSDN博客</a></p>
-<h3><span id="llmkg-知识图谱">LLM+KG  知识图谱</span><a href="#llmkg-知识图谱" class="header-anchor">#</a></h3><ol start="15">
-<li><p><a href="https://neo4j.com/developer-blog/unstructured-knowledge-graph-neo4j-langchain/">Enhanced QA Integrating Unstructured Knowledge Graph Using Neo4j and LangChain</a>  </p>
-</li>
-<li><p><a href="https://blog.langchain.dev/using-a-knowledge-graph-to-implement-a-devops-rag-application/">Using a Knowledge Graph to implement a DevOps RAG application</a></p>
-</li>
-</ol>
-<p>1xx. <a href="https://mp.weixin.qq.com/s/buV1j4DtDiVavtGCJIsedQ">大模型辅助图谱构建的4个策略对比：兼看大模型与知识图谱结合的3个综述 </a></p>
-]]></content>
-      <categories>
-        <category>AIGC</category>
-        <category>RAG</category>
-      </categories>
-      <tags>
-        <tag>RAG</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>(原理)Modular RAG</title>
     <url>/www6vHomeAIGC/2023/04/21/gptRAGModularRAG/</url>
     <content><![CDATA[<p></p>
@@ -9578,6 +9471,32 @@
 </li>
 <li><a href="/www6vHomeAIGC/2022/12/07/gptRAGPerformance/" title="(原理)Advanced RAG">(原理)Advanced RAG</a>  self</li>
 </ol>
+]]></content>
+      <categories>
+        <category>AIGC</category>
+        <category>RAG</category>
+      </categories>
+      <tags>
+        <tag>RAG</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>RAG KG</title>
+    <url>/www6vHomeAIGC/2023/06/19/gptRAGKG/</url>
+    <content><![CDATA[<p></p>
+<span id="more"></span>
+
+<h3><span id="vectorkg-rag1516">Vector+KG RAG[15][16]</span><a href="#vectorkg-rag1516" class="header-anchor">#</a></h3><h3><span id="rag-多跳问题">RAG 多跳问题</span><a href="#rag-多跳问题" class="header-anchor">#</a></h3><h1><span id="参考">参考</span><a href="#参考" class="header-anchor">#</a></h1><h3><span id="rag-多跳问题">RAG 多跳问题</span><a href="#rag-多跳问题" class="header-anchor">#</a></h3><p>1xx. <a href="https://neo4j.com/developer-blog/knowledge-graphs-llms-multi-hop-question-answering/">Knowledge Graphs &amp; LLMs: Multi-Hop Question Answering</a></p>
+<p><a href="https://cloud.tencent.com.cn/developer/article/2409038">知识图谱和 LLM：多跳问答-腾讯云开发者社区-腾讯云</a></p>
+<p><a href="https://blog.csdn.net/qq_41185868/article/details/138514051">LLMs之KG-RAG：KG-RAG&#x2F;GraphRAG(基于知识图谱的RAG系统)的简介(可以解决多跳问题&#x2F;同时支持结构化和非结构化数据查询)、经验技巧、案例应用之详细攻略-CSDN博客</a></p>
+<p>1xx. <a href="https://blog.csdn.net/qq_36931982/article/details/139118215">MultiHop-RAG：多跳查询的基准检索增强生成_rag多跳查询-CSDN博客</a></p>
+<h3><span id="llmkg-知识图谱">LLM+KG  知识图谱</span><a href="#llmkg-知识图谱" class="header-anchor">#</a></h3><ol start="15">
+<li><p><a href="https://neo4j.com/developer-blog/unstructured-knowledge-graph-neo4j-langchain/">Enhanced QA Integrating Unstructured Knowledge Graph Using Neo4j and LangChain</a>  </p>
+</li>
+<li><p><a href="https://blog.langchain.dev/using-a-knowledge-graph-to-implement-a-devops-rag-application/">Using a Knowledge Graph to implement a DevOps RAG application</a></p>
+</li>
+</ol>
+<p>1xx. <a href="https://mp.weixin.qq.com/s/buV1j4DtDiVavtGCJIsedQ">大模型辅助图谱构建的4个策略对比：兼看大模型与知识图谱结合的3个综述 </a></p>
 ]]></content>
       <categories>
         <category>AIGC</category>
@@ -10611,63 +10530,6 @@
       </tags>
   </entry>
   <entry>
-    <title>GPT  学习资源</title>
-    <url>/www6vHomeAIGC/2022/08/01/gptStudy/</url>
-    <content><![CDATA[<p></p>
-<span id="more"></span>
-
-<h2><span id="目录">目录</span><a href="#目录" class="header-anchor">#</a></h2><div class="toc">
-
-<!-- toc -->
-
-<ul>
-<li><a href="#%E5%B7%A5%E7%A8%8B">工程</a></li>
-<li><a href="#%E8%AF%BE%E7%A8%8B">课程</a><ul>
-<li><a href="#%E6%9E%81%E5%AE%A2%E6%97%B6%E9%97%B4">极客时间</a></li>
-<li><a href="#%E7%9F%A5%E4%B9%8E">知乎</a></li>
-<li><a href="#%E6%B8%85%E5%8D%8E">清华</a></li>
-<li><a href="#%E7%99%BE%E5%BA%A6">百度</a></li>
-<li><a href="#%E4%B9%9D%E5%A4%A9">九天</a></li>
-</ul>
-</li>
-<li><a href="#%E5%B7%A5%E4%B8%9A%E7%95%8C">工业界</a></li>
-</ul>
-<!-- tocstop -->
-
-</div>
-
-<h1><span id="工程">工程</span><a href="#工程" class="header-anchor">#</a></h1><ul>
-<li><a href="https://github.com/www6v/openai-cookbook">openai-cookbook</a><br><a href="https://cookbook.openai.com/">cookbook.openai</a></li>
-</ul>
-<h1><span id="课程">课程</span><a href="#课程" class="header-anchor">#</a></h1><h3><span id="极客时间">极客时间</span><a href="#极客时间" class="header-anchor">#</a></h3><ul>
-<li><a href="https://shimo.im/docs/47kgM6NewnSO613V">尚硅谷×极客时间《AI 大模型实战训练营》大纲</a> </li>
-<li><a href="https://shimo.im/docs/XKq42v7061SxZ2AN/read">AI 大模型应用开发实战营1期大纲</a> </li>
-<li><a href="https://w.1yb.co/KqBR58E">《AI 大模型微调训练营》大纲</a>  </li>
-<li><a href="https://time.geekbang.org/opencourse/videointro/100540901">GitHub Copilot 实践课</a>  </li>
-<li><a href="https://time.geekbang.org/opencourse/videointro/100541101">ChatGPT 从 0 到 1</a>  基础</li>
-<li><a href="https://time.geekbang.org/opencourse/videointro/100541201">ChatGPT 和预训练模型实战课</a></li>
-</ul>
-<h3><span id="知乎">知乎</span><a href="#知乎" class="header-anchor">#</a></h3><ul>
-<li><a href="https://agiclass.feishu.cn/docx/DDzxdQZBooXw9Jx4DdWcLZjLnHd">《AI 大模型全栈工程师》课程表（第 02 期） </a>  </li>
-<li><a href="https://www.zhihu.com/people/dou-hong-jian-44/posts">AI Box专栏</a>  中国人大  AI ***<br>大模型survey</li>
-</ul>
-<h3><span id="清华">清华</span><a href="#清华" class="header-anchor">#</a></h3><ul>
-<li><a href="https://www.zhihu.com/education/video-course/1545850719483392000">【清华 NLP X OpenBMB】大模型公开课｜带你从入门到实战</a>  V ***</li>
-</ul>
-<h3><span id="百度">百度</span><a href="#百度" class="header-anchor">#</a></h3><p><a href="https://cloud.baidu.com/qianfandev/topic/267956">《大模型应用实践》实训营</a></p>
-<h3><span id="九天">九天</span><a href="#九天" class="header-anchor">#</a></h3><p><a href="https://appze9inzwc2314.pc.xiaoe-tech.com/p/t_pc/goods_pc_detail/goods_detail/p_64467371e4b0cf39e6c0c026?fromH5=true&entry_type=2002&share_type=5&type=3&entry=2">大模型技术实战课 </a></p>
-<h1><span id="工业界">工业界</span><a href="#工业界" class="header-anchor">#</a></h1><p><a href="https://rocketmq-learning.com/">rocketmq-learning 社区</a></p>
-]]></content>
-      <categories>
-        <category>AIGC</category>
-        <category>gpt</category>
-        <category>study</category>
-      </categories>
-      <tags>
-        <tag>gpt</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>(原理)SELF-INSTRUCT, Self-QA</title>
     <url>/www6vHomeAIGC/2023/02/21/gptSelfInstruct/</url>
     <content><![CDATA[<p></p>
@@ -10741,8 +10603,8 @@
       </tags>
   </entry>
   <entry>
-    <title>GPT 论文</title>
-    <url>/www6vHomeAIGC/2023/01/20/gptStudyPaper/</url>
+    <title>GPT  学习资源</title>
+    <url>/www6vHomeAIGC/2022/08/01/gptStudy/</url>
     <content><![CDATA[<p></p>
 <span id="more"></span>
 
@@ -10751,50 +10613,42 @@
 <!-- toc -->
 
 <ul>
-<li><a href="#paper">Paper</a></li>
-<li><a href="#gpt%E7%A0%94%E7%A9%B6%E6%96%B9%E5%90%911">GPT研究方向[1]</a></li>
-<li><a href="#%E5%8F%82%E8%80%83">参考</a></li>
+<li><a href="#%E5%B7%A5%E7%A8%8B">工程</a></li>
+<li><a href="#%E8%AF%BE%E7%A8%8B">课程</a><ul>
+<li><a href="#%E6%9E%81%E5%AE%A2%E6%97%B6%E9%97%B4">极客时间</a></li>
+<li><a href="#%E7%9F%A5%E4%B9%8E">知乎</a></li>
+<li><a href="#%E6%B8%85%E5%8D%8E">清华</a></li>
+<li><a href="#%E7%99%BE%E5%BA%A6">百度</a></li>
+<li><a href="#%E4%B9%9D%E5%A4%A9">九天</a></li>
+</ul>
+</li>
+<li><a href="#%E5%B7%A5%E4%B8%9A%E7%95%8C">工业界</a></li>
 </ul>
 <!-- tocstop -->
 
 </div>
 
-<h1><span id="paper">Paper</span><a href="#paper" class="header-anchor">#</a></h1><ul>
-<li><p><a href="https://github.com/www6v/paper-reading">paper-reading</a> 李牧大神</p>
-<ul>
-<li>Transformer  *** <ul>
-<li>GPT-4</li>
-<li>Instruct GPT *** </li>
-<li>GPT, GPT-2, GPT-3 精读  ***</li>
+<h1><span id="工程">工程</span><a href="#工程" class="header-anchor">#</a></h1><ul>
+<li><a href="https://github.com/www6v/openai-cookbook">openai-cookbook</a><br><a href="https://cookbook.openai.com/">cookbook.openai</a></li>
 </ul>
-</li>
-<li>多模态<ul>
-<li>CLIP</li>
-<li>ViLT</li>
+<h1><span id="课程">课程</span><a href="#课程" class="header-anchor">#</a></h1><h3><span id="极客时间">极客时间</span><a href="#极客时间" class="header-anchor">#</a></h3><ul>
+<li><a href="https://shimo.im/docs/47kgM6NewnSO613V">尚硅谷×极客时间《AI 大模型实战训练营》大纲</a> </li>
+<li><a href="https://shimo.im/docs/XKq42v7061SxZ2AN/read">AI 大模型应用开发实战营1期大纲</a> </li>
+<li><a href="https://w.1yb.co/KqBR58E">《AI 大模型微调训练营》大纲</a>  </li>
+<li><a href="https://time.geekbang.org/opencourse/videointro/100540901">GitHub Copilot 实践课</a>  </li>
+<li><a href="https://time.geekbang.org/opencourse/videointro/100541101">ChatGPT 从 0 到 1</a>  基础</li>
+<li><a href="https://time.geekbang.org/opencourse/videointro/100541201">ChatGPT 和预训练模型实战课</a></li>
 </ul>
-</li>
-<li>Chain of Thought  ***</li>
+<h3><span id="知乎">知乎</span><a href="#知乎" class="header-anchor">#</a></h3><ul>
+<li><a href="https://agiclass.feishu.cn/docx/DDzxdQZBooXw9Jx4DdWcLZjLnHd">《AI 大模型全栈工程师》课程表（第 02 期） </a>  </li>
+<li><a href="https://www.zhihu.com/people/dou-hong-jian-44/posts">AI Box专栏</a>  中国人大  AI ***<br>大模型survey</li>
 </ul>
-</li>
-<li><p><a href="https://shimo.im/docs/XKq42v7061SxZ2AN/read">AI 大模型应用开发实战营1期大纲</a><br>基础篇 - 论文 *** </p>
-</li>
-<li><p><a href="https://blog.csdn.net/v_JULY_v/article/details/129508065">LLM&#x2F;ChatGPT与多模态必读论文150篇(已更至第101篇)</a> </p>
-</li>
-<li><p><a href="https://github.com/zjunlp/LLMAgentPapers">LLMAgentPapers</a> 浙江大学</p>
-</li>
-<li><p><a href="https://github.com/zjunlp/Prompt4ReasoningPapers">Prompt4ReasoningPapers</a> 浙江大学</p>
-</li>
+<h3><span id="清华">清华</span><a href="#清华" class="header-anchor">#</a></h3><ul>
+<li><a href="https://www.zhihu.com/education/video-course/1545850719483392000">【清华 NLP X OpenBMB】大模型公开课｜带你从入门到实战</a>  V ***</li>
 </ul>
-<h1><span id="gpt研究方向1">GPT研究方向[1]</span><a href="#gpt研究方向1" class="header-anchor">#</a></h1><ul>
-<li>Efficient (PEFT)</li>
-<li>Existing stuff(pretrained model)  -应用<br>New directions</li>
-<li>Plug-and-play<br> 通用模块组件，能用在各个领域， baseline</li>
-<li>Dataset,  evaluation and survey</li>
-</ul>
-<h1><span id="参考">参考</span><a href="#参考" class="header-anchor">#</a></h1><ol>
-<li><a href="https://www.bilibili.com/video/BV1oX4y1d7X6">大模型时代下做科研的四个思路【论文精读·52】</a></li>
-</ol>
-<p>1xx. <a href="https://zhuanlan.zhihu.com/p/673788545">AI Agent &amp; 大模型经典论文推荐</a></p>
+<h3><span id="百度">百度</span><a href="#百度" class="header-anchor">#</a></h3><p><a href="https://cloud.baidu.com/qianfandev/topic/267956">《大模型应用实践》实训营</a></p>
+<h3><span id="九天">九天</span><a href="#九天" class="header-anchor">#</a></h3><p><a href="https://appze9inzwc2314.pc.xiaoe-tech.com/p/t_pc/goods_pc_detail/goods_detail/p_64467371e4b0cf39e6c0c026?fromH5=true&entry_type=2002&share_type=5&type=3&entry=2">大模型技术实战课 </a></p>
+<h1><span id="工业界">工业界</span><a href="#工业界" class="header-anchor">#</a></h1><p><a href="https://rocketmq-learning.com/">rocketmq-learning 社区</a></p>
 ]]></content>
       <categories>
         <category>AIGC</category>
@@ -11024,6 +10878,71 @@
       </categories>
       <tags>
         <tag>AIGC</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>GPT 论文</title>
+    <url>/www6vHomeAIGC/2023/01/20/gptStudyPaper/</url>
+    <content><![CDATA[<p></p>
+<span id="more"></span>
+
+<h2><span id="目录">目录</span><a href="#目录" class="header-anchor">#</a></h2><div class="toc">
+
+<!-- toc -->
+
+<ul>
+<li><a href="#paper">Paper</a></li>
+<li><a href="#gpt%E7%A0%94%E7%A9%B6%E6%96%B9%E5%90%911">GPT研究方向[1]</a></li>
+<li><a href="#%E5%8F%82%E8%80%83">参考</a></li>
+</ul>
+<!-- tocstop -->
+
+</div>
+
+<h1><span id="paper">Paper</span><a href="#paper" class="header-anchor">#</a></h1><ul>
+<li><p><a href="https://github.com/www6v/paper-reading">paper-reading</a> 李牧大神</p>
+<ul>
+<li>Transformer  *** <ul>
+<li>GPT-4</li>
+<li>Instruct GPT *** </li>
+<li>GPT, GPT-2, GPT-3 精读  ***</li>
+</ul>
+</li>
+<li>多模态<ul>
+<li>CLIP</li>
+<li>ViLT</li>
+</ul>
+</li>
+<li>Chain of Thought  ***</li>
+</ul>
+</li>
+<li><p><a href="https://shimo.im/docs/XKq42v7061SxZ2AN/read">AI 大模型应用开发实战营1期大纲</a><br>基础篇 - 论文 *** </p>
+</li>
+<li><p><a href="https://blog.csdn.net/v_JULY_v/article/details/129508065">LLM&#x2F;ChatGPT与多模态必读论文150篇(已更至第101篇)</a> </p>
+</li>
+<li><p><a href="https://github.com/zjunlp/LLMAgentPapers">LLMAgentPapers</a> 浙江大学</p>
+</li>
+<li><p><a href="https://github.com/zjunlp/Prompt4ReasoningPapers">Prompt4ReasoningPapers</a> 浙江大学</p>
+</li>
+</ul>
+<h1><span id="gpt研究方向1">GPT研究方向[1]</span><a href="#gpt研究方向1" class="header-anchor">#</a></h1><ul>
+<li>Efficient (PEFT)</li>
+<li>Existing stuff(pretrained model)  -应用<br>New directions</li>
+<li>Plug-and-play<br> 通用模块组件，能用在各个领域， baseline</li>
+<li>Dataset,  evaluation and survey</li>
+</ul>
+<h1><span id="参考">参考</span><a href="#参考" class="header-anchor">#</a></h1><ol>
+<li><a href="https://www.bilibili.com/video/BV1oX4y1d7X6">大模型时代下做科研的四个思路【论文精读·52】</a></li>
+</ol>
+<p>1xx. <a href="https://zhuanlan.zhihu.com/p/673788545">AI Agent &amp; 大模型经典论文推荐</a></p>
+]]></content>
+      <categories>
+        <category>AIGC</category>
+        <category>gpt</category>
+        <category>study</category>
+      </categories>
+      <tags>
+        <tag>gpt</tag>
       </tags>
   </entry>
   <entry>
@@ -11572,6 +11491,28 @@
       </tags>
   </entry>
   <entry>
+    <title>(实战)Transformer</title>
+    <url>/www6vHomeAIGC/2023/02/16/gptTransformerCode/</url>
+    <content><![CDATA[<p></p>
+<span id="more"></span>
+
+
+
+<h1><span id="参考">参考</span><a href="#参考" class="header-anchor">#</a></h1><p>1xx. <a href="https://github.com/www6v/AIGC/blob/master/transformer/transformer.ipynb">transformer.ipynb</a> git<br>   <a href="https://www.bilibili.com/video/BV1nc411y7m4/">Transformer代码实现</a></p>
+<p>1xx. <a href="https://paperswithcode.com/method/transformer">Transformer</a><br>   <a href="https://github.com/tunz/transformer-pytorch/blob/e7266679f0b32fd99135ea617213f986ceede056/model/transformer.py#L201">transformer.py</a> git</p>
+<p>1xx. <a href="http://arthurchiao.art/blog/transformers-from-scratch-zh/">[译] Transformer 是如何工作的：600 行 Python 代码实现 self-attention 和两类 Transformer（2019）</a> V, github<br>    Transformers from scratch</p>
+<p>1xx. <a href="https://blog.csdn.net/v_JULY_v/article/details/130090649">从零实现Transformer的简易版与强大版：从300多行到3000多行</a></p>
+<p>1xx. <a href="https://zhuanlan.zhihu.com/p/398039366">Transformer源码详解（Pytorch版本）</a></p>
+]]></content>
+      <categories>
+        <category>AIGC</category>
+        <category>Transformer</category>
+      </categories>
+      <tags>
+        <tag>Transformer</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>(原理)Zero Deepspeed</title>
     <url>/www6vHomeAIGC/2023/03/23/gptTrainZeroDeepspeed/</url>
     <content><![CDATA[<p></p>
@@ -11761,25 +11702,109 @@
       </tags>
   </entry>
   <entry>
-    <title>(实战)Transformer</title>
-    <url>/www6vHomeAIGC/2023/02/16/gptTransformerCode/</url>
+    <title>Vision 汇总</title>
+    <url>/www6vHomeAIGC/2023/07/23/gptVisionSummary/</url>
     <content><![CDATA[<p></p>
 <span id="more"></span>
 
+<h2><span id="目录">目录</span><a href="#目录" class="header-anchor">#</a></h2><div class="toc">
 
+<!-- toc -->
 
-<h1><span id="参考">参考</span><a href="#参考" class="header-anchor">#</a></h1><p>1xx. <a href="https://github.com/www6v/AIGC/blob/master/transformer/transformer.ipynb">transformer.ipynb</a> git<br>   <a href="https://www.bilibili.com/video/BV1nc411y7m4/">Transformer代码实现</a></p>
-<p>1xx. <a href="https://paperswithcode.com/method/transformer">Transformer</a><br>   <a href="https://github.com/tunz/transformer-pytorch/blob/e7266679f0b32fd99135ea617213f986ceede056/model/transformer.py#L201">transformer.py</a> git</p>
-<p>1xx. <a href="http://arthurchiao.art/blog/transformers-from-scratch-zh/">[译] Transformer 是如何工作的：600 行 Python 代码实现 self-attention 和两类 Transformer（2019）</a> V, github<br>    Transformers from scratch</p>
-<p>1xx. <a href="https://blog.csdn.net/v_JULY_v/article/details/130090649">从零实现Transformer的简易版与强大版：从300多行到3000多行</a></p>
-<p>1xx. <a href="https://zhuanlan.zhihu.com/p/398039366">Transformer源码详解（Pytorch版本）</a></p>
+<ul>
+<li><a href="#multimodal">Multimodal *</a><ul>
+<li><a href="#survey">Survey</a></li>
+<li><a href="#train">Train *</a></li>
+<li><a href="#%E8%A7%86%E8%A7%89%E7%90%86%E8%A7%A3">视觉理解</a></li>
+<li><a href="#%E7%94%9F%E6%88%90">生成</a></li>
+<li><a href="#%E7%AB%AF%E5%88%B0%E7%AB%AF%E8%AE%AD%E7%BB%83llmlmm">端到端训练LLM(LMM)</a></li>
+<li><a href="#multimodal-agent">Multimodal Agent*</a></li>
+</ul>
+</li>
+<li><a href="#vision">Vision</a></li>
+</ul>
+<!-- tocstop -->
+
+</div>
+
+<h1><span id="multimodal">Multimodal *</span><a href="#multimodal" class="header-anchor">#</a></h1><h3><span id="survey">Survey</span><a href="#survey" class="header-anchor">#</a></h3><ul>
+<li><a href="/www6vHomeAIGC/2023/01/18/gptMultimodal/" title="(综述)多模态">(综述)多模态</a> </li>
+<li><a href="/www6vHomeAIGC/2023/03/16/gptMultimodalSurvey/" title="(Survey)多模态">(Survey)多模态</a></li>
+<li><a href="/www6vHomeAIGC/2024/04/04/gptMultimodalSeries/" title="多模态 系列">多模态 系列</a></li>
+</ul>
+<h3><span id="train">Train  *</span><a href="#train" class="header-anchor">#</a></h3><ul>
+<li><a href="/www6vHomeAIGC/2023/03/04/gptMultimodalPretrain/" title="(原理)多模态预训练 概述">(原理)多模态预训练 概述</a>  </li>
+<li><a href="/www6vHomeAIGC/2023/03/15/gptMultimodalInstructTuning/" title="(综述)多模态InstructTuning">(综述)多模态InstructTuning</a></li>
+</ul>
+<h3><span id="视觉理解">视觉理解</span><a href="#视觉理解" class="header-anchor">#</a></h3><ul>
+<li><p>Vision Encoder</p>
+<ul>
+<li><strong>multimodal learning</strong><ul>
+<li><a href="/www6vHomeAIGC/2023/03/01/gptMultimodalCLIP/" title="(原理)CLIP">(原理)CLIP</a>  </li>
+<li><a href="/www6vHomeAIGC/2023/06/25/gptMultimodalCLIPPractice/" title="(实战)CLIP">(实战)CLIP</a></li>
+</ul>
+</li>
+<li><strong>Supervised Learning</strong><ul>
+<li><a href="/www6vHomeAIGC/2023/03/01/gptMultimodalVit/" title="(原理|实战)ViT, ViLT">(原理|实战)ViT, ViLT</a></li>
+</ul>
+</li>
+<li><strong>self-distillation</strong><ul>
+<li>DINO</li>
+</ul>
+</li>
+<li><strong>Auto-encoding</strong><ul>
+<li>VQVAE</li>
+</ul>
+</li>
+<li>Masked Modeling<ul>
+<li>MAE</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Segmentation<br>+ <a href="/www6vHomeAIGC/2023/03/01/gptMultimodalSAM/" title="(原理|实战) SAM">(原理|实战) SAM</a></p>
+</li>
+</ul>
+<h3><span id="生成">生成</span><a href="#生成" class="header-anchor">#</a></h3><ul>
+<li><a href="/www6vHomeAIGC/2023/06/29/gptMultimodalDiffusion/" title="(原理)Diffusion">(原理)Diffusion</a>   </li>
+<li><a href="/www6vHomeAIGC/2023/07/09/gptMultimodalDiffusionPractice/" title="(实战)Diffusion">(实战)Diffusion</a>  </li>
+<li>Controllable  <ul>
+<li><a href="/www6vHomeAIGC/2023/07/29/gptDiffusionControllable/" title="(综述)Controllable">(综述)Controllable</a> </li>
+<li><a href="/www6vHomeAIGC/2023/07/17/gptDiffusionControllableWork/" title="(Work|实战)Controllable">(Work|实战)Controllable</a></li>
+</ul>
+</li>
+<li>editing<ul>
+<li><a href="/www6vHomeAIGC/2023/07/06/gptDiffusionImageEdit/" title="(综述)Image Editing">(综述)Image Editing</a>   </li>
+<li><a href="/www6vHomeAIGC/2023/07/27/gptDiffusionImageEditWork/" title="(Work|实战)Image Editing">(Work|实战)Image Editing</a></li>
+</ul>
+</li>
+<li>concept customization [fine-tuning]<ul>
+<li><a href="/www6vHomeAIGC/2023/07/06/gptDiffusionFineTuning/" title="(work|实战) SD fine-tuning">(work|实战) SD fine-tuning</a>   </li>
+<li><a href="/www6vHomeAIGC/2024/07/17/gptDiffusionDreamBooth/" title="(原理|实战)DreamBooth">(原理|实战)DreamBooth</a></li>
+</ul>
+</li>
+<li><a href="/www6vHomeAIGC/2023/07/21/gptDiffusionDiT/" title="(原理|实战)DiT">(原理|实战)DiT</a></li>
+</ul>
+<h3><span id="端到端训练llmlmm">端到端训练LLM(LMM)</span><a href="#端到端训练llmlmm" class="header-anchor">#</a></h3><ul>
+<li><a href="/www6vHomeAIGC/2023/03/15/gptMultimodalBlip/" title="(图生文)BLIP-2, Flamingo">(图生文)BLIP-2, Flamingo</a> </li>
+<li><a href="/www6vHomeAIGC/2023/03/14/gptMultimodalLlava/" title="(原理|实战) LLaVa 演化">(原理|实战) LLaVa 演化</a>  </li>
+<li><a href="/www6vHomeAIGC/2023/03/15/gptMultimodalMinigpt4/" title="(原理|实战)MiniGPT4">(原理|实战)MiniGPT4</a></li>
+</ul>
+<h3><span id="multimodal-agent">Multimodal Agent*</span><a href="#multimodal-agent" class="header-anchor">#</a></h3><ul>
+<li><a href="/www6vHomeAIGC/2023/02/21/gptAgentMultimodal/" title="(原理)Agent 多模态">(原理)Agent 多模态</a>  </li>
+<li><a href="/www6vHomeAIGC/2023/03/05/gptAgentWeb/" title="(原理)Web Agent">(原理)Web Agent</a>  </li>
+<li><a href="/www6vHomeAIGC/2023/06/30/gptAgentMultimodalApp/" title="Agent - UI-assistants">Agent - UI-assistants</a></li>
+</ul>
+<h1><span id="vision">Vision</span><a href="#vision" class="header-anchor">#</a></h1><ul>
+<li><a href="/www6vHomeAIGC/2023/07/25/gptVisionTask/" title="CV 任务">CV 任务</a></li>
+</ul>
 ]]></content>
       <categories>
         <category>AIGC</category>
-        <category>Transformer</category>
+        <category>汇总</category>
       </categories>
       <tags>
-        <tag>Transformer</tag>
+        <tag>AIGC</tag>
       </tags>
   </entry>
   <entry>
@@ -11927,112 +11952,6 @@
       </categories>
       <tags>
         <tag>Vision</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Vision 汇总</title>
-    <url>/www6vHomeAIGC/2023/07/23/gptVisionSummary/</url>
-    <content><![CDATA[<p></p>
-<span id="more"></span>
-
-<h2><span id="目录">目录</span><a href="#目录" class="header-anchor">#</a></h2><div class="toc">
-
-<!-- toc -->
-
-<ul>
-<li><a href="#multimodal">Multimodal *</a><ul>
-<li><a href="#survey">Survey</a></li>
-<li><a href="#train">Train *</a></li>
-<li><a href="#%E8%A7%86%E8%A7%89%E7%90%86%E8%A7%A3">视觉理解</a></li>
-<li><a href="#%E7%94%9F%E6%88%90">生成</a></li>
-<li><a href="#%E7%AB%AF%E5%88%B0%E7%AB%AF%E8%AE%AD%E7%BB%83llmlmm">端到端训练LLM(LMM)</a></li>
-<li><a href="#multimodal-agent">Multimodal Agent*</a></li>
-</ul>
-</li>
-<li><a href="#vision">Vision</a></li>
-</ul>
-<!-- tocstop -->
-
-</div>
-
-<h1><span id="multimodal">Multimodal *</span><a href="#multimodal" class="header-anchor">#</a></h1><h3><span id="survey">Survey</span><a href="#survey" class="header-anchor">#</a></h3><ul>
-<li><a href="/www6vHomeAIGC/2023/01/18/gptMultimodal/" title="(综述)多模态">(综述)多模态</a> </li>
-<li><a href="/www6vHomeAIGC/2023/03/16/gptMultimodalSurvey/" title="(Survey)多模态">(Survey)多模态</a></li>
-<li><a href="/www6vHomeAIGC/2024/04/04/gptMultimodalSeries/" title="多模态 系列">多模态 系列</a></li>
-</ul>
-<h3><span id="train">Train  *</span><a href="#train" class="header-anchor">#</a></h3><ul>
-<li><a href="/www6vHomeAIGC/2023/03/04/gptMultimodalPretrain/" title="(原理)多模态预训练 概述">(原理)多模态预训练 概述</a>  </li>
-<li><a href="/www6vHomeAIGC/2023/03/15/gptMultimodalInstructTuning/" title="(综述)多模态InstructTuning">(综述)多模态InstructTuning</a></li>
-</ul>
-<h3><span id="视觉理解">视觉理解</span><a href="#视觉理解" class="header-anchor">#</a></h3><ul>
-<li><p>Vision Encoder</p>
-<ul>
-<li><strong>multimodal learning</strong><ul>
-<li><a href="/www6vHomeAIGC/2023/03/01/gptMultimodalCLIP/" title="(原理)CLIP">(原理)CLIP</a>  </li>
-<li><a href="/www6vHomeAIGC/2023/06/25/gptMultimodalCLIPPractice/" title="(实战)CLIP">(实战)CLIP</a></li>
-</ul>
-</li>
-<li><strong>Supervised Learning</strong><ul>
-<li><a href="/www6vHomeAIGC/2023/03/01/gptMultimodalVit/" title="(原理|实战)ViT, ViLT">(原理|实战)ViT, ViLT</a></li>
-</ul>
-</li>
-<li><strong>self-distillation</strong><ul>
-<li>DINO</li>
-</ul>
-</li>
-<li><strong>Auto-encoding</strong><ul>
-<li>VQVAE</li>
-</ul>
-</li>
-<li>Masked Modeling<ul>
-<li>MAE</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p>Segmentation<br>+ <a href="/www6vHomeAIGC/2023/03/01/gptMultimodalSAM/" title="(原理|实战) SAM">(原理|实战) SAM</a></p>
-</li>
-</ul>
-<h3><span id="生成">生成</span><a href="#生成" class="header-anchor">#</a></h3><ul>
-<li><a href="/www6vHomeAIGC/2023/06/29/gptMultimodalDiffusion/" title="(原理)Diffusion">(原理)Diffusion</a>   </li>
-<li><a href="/www6vHomeAIGC/2023/07/09/gptMultimodalDiffusionPractice/" title="(实战)Diffusion">(实战)Diffusion</a>  </li>
-<li>Controllable  <ul>
-<li><a href="/www6vHomeAIGC/2023/07/29/gptDiffusionControllable/" title="(综述)Controllable">(综述)Controllable</a> </li>
-<li><a href="/www6vHomeAIGC/2023/07/17/gptDiffusionControllableWork/" title="(Work|实战)Controllable">(Work|实战)Controllable</a></li>
-</ul>
-</li>
-<li>editing<ul>
-<li><a href="/www6vHomeAIGC/2023/07/06/gptDiffusionImageEdit/" title="(综述)Image Editing">(综述)Image Editing</a>   </li>
-<li><a href="/www6vHomeAIGC/2023/07/27/gptDiffusionImageEditWork/" title="(Work|实战)Image Editing">(Work|实战)Image Editing</a></li>
-</ul>
-</li>
-<li>concept customization [fine-tuning]<ul>
-<li><a href="/www6vHomeAIGC/2023/07/06/gptDiffusionFineTuning/" title="(work|实战) SD fine-tuning">(work|实战) SD fine-tuning</a>   </li>
-<li><a href="/www6vHomeAIGC/2024/07/17/gptDiffusionDreamBooth/" title="(原理|实战)DreamBooth">(原理|实战)DreamBooth</a></li>
-</ul>
-</li>
-<li><a href="/www6vHomeAIGC/2023/07/21/gptDiffusionDiT/" title="(原理|实战)DiT">(原理|实战)DiT</a></li>
-</ul>
-<h3><span id="端到端训练llmlmm">端到端训练LLM(LMM)</span><a href="#端到端训练llmlmm" class="header-anchor">#</a></h3><ul>
-<li><a href="/www6vHomeAIGC/2023/03/15/gptMultimodalBlip/" title="(图生文)BLIP-2, Flamingo">(图生文)BLIP-2, Flamingo</a> </li>
-<li><a href="/www6vHomeAIGC/2023/03/14/gptMultimodalLlava/" title="(原理|实战) LLaVa 演化">(原理|实战) LLaVa 演化</a>  </li>
-<li><a href="/www6vHomeAIGC/2023/03/15/gptMultimodalMinigpt4/" title="(原理|实战)MiniGPT4">(原理|实战)MiniGPT4</a></li>
-</ul>
-<h3><span id="multimodal-agent">Multimodal Agent*</span><a href="#multimodal-agent" class="header-anchor">#</a></h3><ul>
-<li><a href="/www6vHomeAIGC/2023/02/21/gptAgentMultimodal/" title="(原理)Agent 多模态">(原理)Agent 多模态</a>  </li>
-<li><a href="/www6vHomeAIGC/2023/03/05/gptAgentWeb/" title="(原理)Web Agent">(原理)Web Agent</a>  </li>
-<li><a href="/www6vHomeAIGC/2023/06/30/gptAgentMultimodalApp/" title="Agent - UI-assistants">Agent - UI-assistants</a></li>
-</ul>
-<h1><span id="vision">Vision</span><a href="#vision" class="header-anchor">#</a></h1><ul>
-<li><a href="/www6vHomeAIGC/2023/07/25/gptVisionTask/" title="CV 任务">CV 任务</a></li>
-</ul>
-]]></content>
-      <categories>
-        <category>AIGC</category>
-        <category>汇总</category>
-      </categories>
-      <tags>
-        <tag>AIGC</tag>
       </tags>
   </entry>
 </search>
