@@ -234,7 +234,6 @@
 <ul>
 <li><a href="#multimodal">Multimodal *</a><ul>
 <li><a href="#survey">Survey</a></li>
-<li><a href="#train">Train *</a></li>
 <li><a href="#%E8%A7%86%E8%A7%89%E7%90%86%E8%A7%A3">视觉理解</a></li>
 <li><a href="#%E7%94%9F%E6%88%90">生成</a></li>
 <li><a href="#%E7%AB%AF%E5%88%B0%E7%AB%AF%E8%AE%AD%E7%BB%83llmlmm">端到端训练LLM(LMM)</a></li>
@@ -252,15 +251,10 @@
 <li><a href="/www6vHomeAIGC/2023/03/16/gptMultimodalSurvey/" title="(Survey)多模态">(Survey)多模态</a></li>
 <li><a href="/www6vHomeAIGC/2024/04/04/gptMultimodalSeries/" title="多模态 系列">多模态 系列</a></li>
 </ul>
-<h3><span id="train">Train  *</span><a href="#train" class="header-anchor">#</a></h3><ul>
-<li><a href="/www6vHomeAIGC/2023/03/04/gptMultimodalPretrain/" title="(原理)多模态预训练 概述">(原理)多模态预训练 概述</a>  </li>
-<li><a href="/www6vHomeAIGC/2023/03/15/gptMultimodalInstructTuning/" title="(综述)多模态InstructTuning">(综述)多模态InstructTuning</a></li>
-</ul>
 <h3><span id="视觉理解">视觉理解</span><a href="#视觉理解" class="header-anchor">#</a></h3><ul>
-<li><a href="/www6vHomeAIGC/2023/08/02/gptMultimodalEncoder/" title="Vision Encoder">Vision Encoder</a> 
-</li>
-<li><p>Segmentation<br>+ <a href="/www6vHomeAIGC/2023/03/01/gptMultimodalSAM/" title="(原理|实战) SAM">(原理|实战) SAM</a></p>
-</li>
+<li><a href="/www6vHomeAIGC/2023/08/02/gptMultimodalEncoder/" title="Vision Encoder">Vision Encoder</a> </li>
+<li><a href="/www6vHomeAIGC/2023/08/05/gptMultimodalConnector/" title="(原理)Connector">(原理)Connector</a>  	</li>
+<li>Segmentation<br>+ <a href="/www6vHomeAIGC/2023/03/01/gptMultimodalSAM/" title="(原理|实战) SAM">(原理|实战) SAM</a></li>
 </ul>
 <h3><span id="生成">生成</span><a href="#生成" class="header-anchor">#</a></h3><ul>
 <li><a href="/www6vHomeAIGC/2023/06/29/gptMultimodalDiffusion/" title="(原理)Diffusion">(原理)Diffusion</a>   </li>
@@ -291,7 +285,12 @@
 <h3><span id="端到端训练llmlmm">端到端训练LLM(LMM)</span><a href="#端到端训练llmlmm" class="header-anchor">#</a></h3><ul>
 <li><a href="/www6vHomeAIGC/2023/03/15/gptMultimodalBlip/" title="(图生文)BLIP-2, Flamingo">(图生文)BLIP-2, Flamingo</a> </li>
 <li><a href="/www6vHomeAIGC/2023/03/14/gptMultimodalLlava/" title="(原理|实战) LLaVa 演化">(原理|实战) LLaVa 演化</a>  </li>
-<li><a href="/www6vHomeAIGC/2023/03/15/gptMultimodalMinigpt4/" title="(原理|实战)MiniGPT4">(原理|实战)MiniGPT4</a></li>
+<li><a href="/www6vHomeAIGC/2023/03/15/gptMultimodalMinigpt4/" title="(原理|实战)MiniGPT4">(原理|实战)MiniGPT4</a>    </li>
+<li>Train  *<ul>
+<li><a href="/www6vHomeAIGC/2023/03/04/gptMultimodalPretrain/" title="(原理)多模态预训练 概述">(原理)多模态预训练 概述</a>  </li>
+<li><a href="/www6vHomeAIGC/2023/03/15/gptMultimodalInstructTuning/" title="(综述)多模态InstructTuning">(综述)多模态InstructTuning</a></li>
+</ul>
+</li>
 </ul>
 <h3><span id="multimodal-agent">Multimodal Agent*</span><a href="#multimodal-agent" class="header-anchor">#</a></h3><ul>
 <li><a href="/www6vHomeAIGC/2023/02/21/gptAgentMultimodal/" title="(原理)Agent 多模态">(原理)Agent 多模态</a>  </li>
@@ -978,6 +977,24 @@
       </categories>
       <tags>
         <tag>PEFT</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>(原理)Connector</title>
+    <url>/www6vHomeAIGC/2023/08/05/gptMultimodalConnector/</url>
+    <content><![CDATA[<p></p>
+<span id="more"></span>
+
+
+
+<h1><span id="connector">Connector</span><a href="#connector" class="header-anchor">#</a></h1><p><a href="https://candied-skunk-1ca.notion.site/Connector-6db25052e8e542c29e43f503fd572475?pvs=4">Connector</a></p>
+]]></content>
+      <categories>
+        <category>AIGC</category>
+        <category>multimodal</category>
+      </categories>
+      <tags>
+        <tag>multimodal</tag>
       </tags>
   </entry>
   <entry>
