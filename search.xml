@@ -91,17 +91,24 @@
 <li><a href="/www6vHomeAIGC/2023/06/12/gptInfervLLMPractice/" title="(实战)推理 vLLM">(实战)推理 vLLM</a>  </li>
 <li><a href="/www6vHomeAIGC/2023/06/02/gptInferTensorRT/" title="(原理|实战)推理 TensorRT-LLM">(原理|实战)推理 TensorRT-LLM</a>  </li>
 <li><a href="/www6vHomeAIGC/2023/06/11/gptInferRay/" title="(原理)推理 Ray">(原理)推理 Ray</a>   </li>
-<li><a href="/www6vHomeAIGC/2023/06/16/gptInferRayPractice/" title="推理 Ray">推理 Ray</a></li>
+<li><a href="/www6vHomeAIGC/2023/06/16/gptInferRayPractice/" title="(实战)推理 Ray">(实战)推理 Ray</a></li>
 </ul>
 </li>
 <li>优化<ul>
-<li><a href="/www6vHomeAIGC/2023/01/01/gptInference/" title="(综述)推理优化">(综述)推理优化</a></li>
+<li><a href="/www6vHomeAIGC/2023/01/01/gptInference/" title="(总结)推理优化">(总结)推理优化</a></li>
+<li><a href="/www6vHomeAIGC/2023/08/14/gptInferenceSurvey/" title="(综述)推理优化">(综述)推理优化</a></li>
+<li>系统层优化<ul>
 <li><a href="/www6vHomeAIGC/2023/06/01/gptInferKVCache/" title="(原理)推理 KV Cache">(原理)推理 KV Cache</a>  </li>
-<li><a href="/www6vHomeAIGC/2023/06/13/gptFlashAttention/" title="(原理)Flash Attention">(原理)Flash Attention</a>  </li>
+<li><a href="/www6vHomeAIGC/2023/06/13/gptFlashAttention/" title="(原理)Flash Attention">(原理)Flash Attention</a></li>
+</ul>
+</li>
+<li>模型层优化 <ul>
 <li>模型压缩<ul>
 <li><a href="/www6vHomeAIGC/2023/02/19/gptQuantization/" title="(原理)模型压缩-量化概述">(原理)模型压缩-量化概述</a> </li>
 <li><a href="/www6vHomeAIGC/2023/03/26/gptQuantizationWeight/" title="(原理)Weight Only(LLM.int8(), GPTQ, AWQ)">(原理)Weight Only(LLM.int8(), GPTQ, AWQ)</a> </li>
 <li><a href="/www6vHomeAIGC/2024/03/22/gptQuantizationPractice/" title="(实战)模型压缩-量化">(实战)模型压缩-量化</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -456,6 +463,8 @@
 <li><p>解析<br><a href="https://candied-skunk-1ca.notion.site/PhotoMaker-f4b3e96a9ed046838b7255e026bd1abf?pvs=4">解析</a></p>
 </li>
 </ul>
+<hr>
+<h1><span id="总结">总结</span><a href="#总结" class="header-anchor">#</a></h1><p>【InstantID : ipAdaptor +controlnet,  image Contoll的思路】<br>【photomaker: image  Edit 的思路】</p>
 ]]></content>
       <categories>
         <category>AIGC</category>
@@ -980,6 +989,68 @@
       </tags>
   </entry>
   <entry>
+    <title>(综述)推理优化</title>
+    <url>/www6vHomeAIGC/2023/08/14/gptInferenceSurvey/</url>
+    <content><![CDATA[<p></p>
+<span id="more"></span>
+
+
+<h2><span id="目录">目录</span><a href="#目录" class="header-anchor">#</a></h2><div class="toc">
+
+<!-- toc -->
+
+<ul>
+<li><a href="#%E8%AE%BA%E6%96%87">论文</a></li>
+<li><a href="#%E6%8E%A8%E7%90%86-10">推理 [10]</a><ul>
+<li><a href="#llm-algorithmiceval-survey">LLM Algorithmic&#x2F;Eval Survey</a></li>
+<li><a href="#llm-traininference-framework%E7%B3%BB%E7%BB%9F%E5%B1%82%E4%BC%98%E5%8C%96">LLM Train&#x2F;Inference Framework[系统层优化]</a></li>
+<li><a href="#continuousin-flight-batching%E7%B3%BB%E7%BB%9F%E5%B1%82%E4%BC%98%E5%8C%96">Continuous&#x2F;In-flight Batching[系统层优化]</a></li>
+<li><a href="#weightactivation-quantizecompress%E6%A8%A1%E5%9E%8B%E5%B1%82%E4%BC%98%E5%8C%96">Weight&#x2F;Activation Quantize&#x2F;Compress[模型层优化]</a></li>
+<li><a href="#ioflops-awaresparse-attention-%E6%A8%A1%E5%9E%8B%E5%B1%82%E4%BC%98%E5%8C%96">IO&#x2F;FLOPs-Aware&#x2F;Sparse Attention [模型层优化]</a></li>
+<li><a href="#kv-cache-schedulingquantizedropping%E7%B3%BB%E7%BB%9F%E5%B1%82%E4%BC%98%E5%8C%96">KV Cache Scheduling&#x2F;Quantize&#x2F;Dropping[系统层优化]</a></li>
+<li><a href="#promptcontext-compression%E6%95%B0%E6%8D%AE%E5%B1%82%E4%BC%98%E5%8C%96">Prompt&#x2F;Context Compression[数据层优化]</a></li>
+<li><a href="#long-context-attentionkv-cache-optimization">Long Context Attention&#x2F;KV Cache Optimization</a></li>
+<li><a href="#parallel-decodingsampling%E7%B3%BB%E7%BB%9F%E5%B1%82%E4%BC%98%E5%8C%96">Parallel Decoding&#x2F;Sampling[系统层优化]</a></li>
+</ul>
+</li>
+<li><a href="#%E5%8F%82%E8%80%83">参考</a><ul>
+<li><a href="#awesome-llm-inference">Awesome-LLM-Inference</a></li>
+</ul>
+</li>
+</ul>
+<!-- tocstop -->
+
+</div>
+
+
+<h1><span id="论文">论文</span><a href="#论文" class="header-anchor">#</a></h1><ul>
+<li><p>论文地址<br> <a href="https://arxiv.org/abs/2404.14294">A Survey on Efficient Inference for Large Language Models</a> </p>
+</li>
+<li><p>论文解析<br><a href="https://candied-skunk-1ca.notion.site/A-Survey-on-Efficient-Inference-for-Large-Language-Models-22145473188e437881bf566241492bea?pvs=4">论文解析</a></p>
+</li>
+</ul>
+<h1><span id="推理-10">推理 [10]</span><a href="#推理-10" class="header-anchor">#</a></h1><h3><span id="llm-algorithmicx2feval-survey">LLM Algorithmic&#x2F;Eval Survey</span><a href="#llm-algorithmicx2feval-survey" class="header-anchor">#</a></h3><p><a href="https://github.com/AIoT-MLSys-Lab/Efficient-LLMs-Survey">Efficient Large Language Models: A Survey</a></p>
+<h3><span id="llm-trainx2finference-framework系统层优化">LLM Train&#x2F;Inference Framework[系统层优化]</span><a href="#llm-trainx2finference-framework系统层优化" class="header-anchor">#</a></h3><p>Megatron-LM<br>vLLM ***<br>TensorRT-LLM ***<br>DeepSpeed-FastGen 2x vLLM?  ***<br>PETALS</p>
+<h3><span id="continuousx2fin-flight-batching系统层优化">Continuous&#x2F;In-flight Batching[系统层优化]</span><a href="#continuousx2fin-flight-batching系统层优化" class="header-anchor">#</a></h3><p>Continuous Batching ***<br>In-flight Batching</p>
+<h3><span id="weightx2factivation-quantizex2fcompress模型层优化">Weight&#x2F;Activation Quantize&#x2F;Compress[模型层优化]</span><a href="#weightx2factivation-quantizex2fcompress模型层优化" class="header-anchor">#</a></h3><p>ZeroQuant<br>GPTQ<br>SmoothQuant<br>AWQ ***<br>SparQ</p>
+<h3><span id="iox2fflops-awarex2fsparse-attention-模型层优化">IO&#x2F;FLOPs-Aware&#x2F;Sparse Attention [模型层优化]</span><a href="#iox2fflops-awarex2fsparse-attention-模型层优化" class="header-anchor">#</a></h3><p>MQA ***<br>FlashAttention ***<br>GQA</p>
+<h3><span id="kv-cache-schedulingx2fquantizex2fdropping系统层优化">KV Cache Scheduling&#x2F;Quantize&#x2F;Dropping[系统层优化]</span><a href="#kv-cache-schedulingx2fquantizex2fdropping系统层优化" class="header-anchor">#</a></h3><p>PagedAttention ***<br>TensorRT-LLM KV Cache FP8</p>
+<h3><span id="promptx2fcontext-compression数据层优化">Prompt&#x2F;Context Compression[数据层优化]</span><a href="#promptx2fcontext-compression数据层优化" class="header-anchor">#</a></h3><p>Selective-Context<br>LLMLingua ***<br>LongLLMLingua ***</p>
+<h3><span id="long-context-attentionx2fkv-cache-optimization">Long Context Attention&#x2F;KV Cache Optimization</span><a href="#long-context-attentionx2fkv-cache-optimization" class="header-anchor">#</a></h3><p>RingAttention<br>KVQuant<br>RAGCache<br>KCache</p>
+<h3><span id="parallel-decodingx2fsampling系统层优化">Parallel Decoding&#x2F;Sampling[系统层优化]</span><a href="#parallel-decodingx2fsampling系统层优化" class="header-anchor">#</a></h3><p>Speculative Sampling ***</p>
+<h1><span id="参考">参考</span><a href="#参考" class="header-anchor">#</a></h1><h3><span id="awesome-llm-inference">Awesome-LLM-Inference</span><a href="#awesome-llm-inference" class="header-anchor">#</a></h3><ol start="10">
+<li><a href="https://github.com/DefTruth/Awesome-LLM-Inference">Awesome-LLM-Inference Repo</a> git<br>1xx.  <a href="https://zhuanlan.zhihu.com/p/669777159">[Awesome-LLM-Inference]🔥第三期：30篇，LLM推理论文集-500页PDF</a><br>1xx.  <a href="https://zhuanlan.zhihu.com/p/658091768">[Awesome-LLM-Inference]🔥第二期: 20篇，LLM推理论文集-300页PDF</a><br>1xx.  <a href="https://zhuanlan.zhihu.com/p/693680304">[LLM推理优化]🔥100+篇: 大模型推理各方向新发展整理</a></li>
+</ol>
+]]></content>
+      <categories>
+        <category>AIGC</category>
+        <category>Inference</category>
+      </categories>
+      <tags>
+        <tag>Inference</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>(原理)Connector</title>
     <url>/www6vHomeAIGC/2023/08/05/gptMultimodalConnector/</url>
     <content><![CDATA[<p></p>
@@ -1293,12 +1364,56 @@
 </li>
 </ul>
 <hr>
+<h1><span id="论文ip-adapter">论文[IP-Adapter]</span><a href="#论文ip-adapter" class="header-anchor">#</a></h1><ul>
+<li><p>论文地址<br><a href="https://arxiv.org/pdf/2308.06721">IP-Adapter: Text Compatible Image Prompt Adapter for Text-to-Image Diffusion Models</a></p>
+</li>
+<li><p>开源地址<br><a href="https://github.com/tencent-ailab/IP-Adapter">IP-Adapter</a> git<br> enable a pretrained text-to-image diffusion model to generate images <strong>with image prompt</strong><br> 有很多notebook的demo</p>
+</li>
+<li><p>Project page<br><a href="https://ip-adapter.github.io/">Project page</a>   </p>
+</li>
+<li><p>论文解析<br><a href="https://candied-skunk-1ca.notion.site/IP-Adapter-40dfd1f30d38456b8776a90871716c73?pvs=4">论文解析</a></p>
+</li>
+</ul>
+<hr>
 <h1><span id="实战">实战</span><a href="#实战" class="header-anchor">#</a></h1><ul>
 <li><p><a href="https://candied-skunk-1ca.notion.site/controllable-763edf3a43b94e03a1ff0faee9ac41c2?pvs=4">ControlNet + t2i_adapter + Custom Diffusion </a>  diffusers</p>
 </li>
 <li><p><a href="https://www.bilibili.com/video/BV1Go4y1M7cK?p=2">control net</a> V</p>
 </li>
 </ul>
+<hr>
+<h1><span id="总结metaso">总结[metaso]</span><a href="#总结metaso" class="header-anchor">#</a></h1><table>
+<thead>
+<tr>
+<th></th>
+<th><strong>功能定位</strong></th>
+<th><strong>性能与效率</strong></th>
+<th><strong>应用场景</strong></th>
+<th>总结</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>ControlNet</strong></td>
+<td>主要用于对图像生成过程中的<strong>特定部分</strong>进行控制</td>
+<td><strong>较大</strong>且可能需要较多计算资源</td>
+<td>适用于需要对图像特定区域进行<strong>精细控制</strong>的场景</td>
+<td>【ControlNet  <strong>结构控制</strong>， image2image】</td>
+</tr>
+<tr>
+<td><strong>T2I-Adapter</strong></td>
+<td>专注于将<strong>文本提示转换为图像</strong></td>
+<td><strong>较小</strong>且更高效，适合资源受限的环境</td>
+<td>适用于需要<strong>从文本描述生成图像</strong>的场景</td>
+<td>【T2I-Adapter  <strong>多种控制</strong>, text2image】</td>
+</tr>
+<tr>
+<td><strong>IP-Adapter</strong></td>
+<td>用于<strong>分析图像提示并提取特征</strong>，再将其用于图像生成</td>
+<td>在图像质量和对齐方面表现优异</td>
+<td>适用于需要结合图像和文本提示进行<strong>复杂图像生成</strong>的场景</td>
+<td>【IP-Adapter <strong>风格特征控制</strong>,  text2image|image2image 】</td>
+</tr>
+</tbody></table>
 ]]></content>
       <categories>
         <category>AIGC</category>
@@ -1807,7 +1922,7 @@
       </tags>
   </entry>
   <entry>
-    <title>推理 Ray</title>
+    <title>(实战)推理 Ray</title>
     <url>/www6vHomeAIGC/2023/06/16/gptInferRayPractice/</url>
     <content><![CDATA[<p></p>
 <span id="more"></span>
@@ -9049,7 +9164,7 @@
       </tags>
   </entry>
   <entry>
-    <title>(综述)推理优化</title>
+    <title>(总结)推理优化</title>
     <url>/www6vHomeAIGC/2023/01/01/gptInference/</url>
     <content><![CDATA[<p></p>
 <span id="more"></span>
@@ -9065,21 +9180,8 @@
 <li><a href="#kv-cache">KV Cache</a></li>
 </ul>
 </li>
-<li><a href="#%E6%8E%A8%E7%90%86-10">推理 [10]</a><ul>
-<li><a href="#llm-algorithmiceval-survey">LLM Algorithmic&#x2F;Eval Survey</a></li>
-<li><a href="#llm-traininference-framework">LLM Train&#x2F;Inference Framework</a></li>
-<li><a href="#continuousin-flight-batching">Continuous&#x2F;In-flight Batching</a></li>
-<li><a href="#weightactivation-quantizecompress">Weight&#x2F;Activation Quantize&#x2F;Compress</a></li>
-<li><a href="#ioflops-awaresparse-attention">IO&#x2F;FLOPs-Aware&#x2F;Sparse Attention</a></li>
-<li><a href="#kv-cache-schedulingquantizedropping">KV Cache Scheduling&#x2F;Quantize&#x2F;Dropping</a></li>
-<li><a href="#promptcontext-compression">Prompt&#x2F;Context Compression</a></li>
-<li><a href="#long-context-attentionkv-cache-optimization">Long Context Attention&#x2F;KV Cache Optimization</a></li>
-<li><a href="#parallel-decodingsampling">Parallel Decoding&#x2F;Sampling</a></li>
-</ul>
-</li>
 <li><a href="#%E5%8F%82%E8%80%83">参考</a><ul>
 <li><a href="#%E7%BB%BC%E8%BF%B0">综述</a></li>
-<li><a href="#awesome-llm-inference">Awesome-LLM-Inference</a></li>
 </ul>
 </li>
 </ul>
@@ -9103,16 +9205,7 @@
 <li>量化（Quantization）</li>
 <li>低秩分解（Low-Rank Factorization）</li>
 </ul>
-<h3><span id="kv-cache">KV Cache</span><a href="#kv-cache" class="header-anchor">#</a></h3><h1><span id="推理-10">推理 [10]</span><a href="#推理-10" class="header-anchor">#</a></h1><h3><span id="llm-algorithmicx2feval-survey">LLM Algorithmic&#x2F;Eval Survey</span><a href="#llm-algorithmicx2feval-survey" class="header-anchor">#</a></h3><p><a href="https://github.com/AIoT-MLSys-Lab/Efficient-LLMs-Survey">Efficient Large Language Models: A Survey</a></p>
-<h3><span id="llm-trainx2finference-framework">LLM Train&#x2F;Inference Framework</span><a href="#llm-trainx2finference-framework" class="header-anchor">#</a></h3><p>Megatron-LM<br>vLLM ***<br>TensorRT-LLM ***<br>DeepSpeed-FastGen 2x vLLM?  ***<br>PETALS</p>
-<h3><span id="continuousx2fin-flight-batching">Continuous&#x2F;In-flight Batching</span><a href="#continuousx2fin-flight-batching" class="header-anchor">#</a></h3><p>Continuous Batching<br>In-flight Batching</p>
-<h3><span id="weightx2factivation-quantizex2fcompress">Weight&#x2F;Activation Quantize&#x2F;Compress</span><a href="#weightx2factivation-quantizex2fcompress" class="header-anchor">#</a></h3><p>ZeroQuant<br>GPTQ<br>SmoothQuant<br>AWQ<br>SparQ</p>
-<h3><span id="iox2fflops-awarex2fsparse-attention">IO&#x2F;FLOPs-Aware&#x2F;Sparse Attention</span><a href="#iox2fflops-awarex2fsparse-attention" class="header-anchor">#</a></h3><p>MQA<br>FlashAttention ***<br>GQA</p>
-<h3><span id="kv-cache-schedulingx2fquantizex2fdropping">KV Cache Scheduling&#x2F;Quantize&#x2F;Dropping</span><a href="#kv-cache-schedulingx2fquantizex2fdropping" class="header-anchor">#</a></h3><p>PagedAttention ***<br>TensorRT-LLM KV Cache FP8</p>
-<h3><span id="promptx2fcontext-compression">Prompt&#x2F;Context Compression</span><a href="#promptx2fcontext-compression" class="header-anchor">#</a></h3><p>Selective-Context<br>LLMLingua ***<br>LongLLMLingua ***</p>
-<h3><span id="long-context-attentionx2fkv-cache-optimization">Long Context Attention&#x2F;KV Cache Optimization</span><a href="#long-context-attentionx2fkv-cache-optimization" class="header-anchor">#</a></h3><p>RingAttention<br>KVQuant<br>RAGCache<br>KCache</p>
-<h3><span id="parallel-decodingx2fsampling">Parallel Decoding&#x2F;Sampling</span><a href="#parallel-decodingx2fsampling" class="header-anchor">#</a></h3><p>Speculative Sampling ***</p>
-<h1><span id="参考">参考</span><a href="#参考" class="header-anchor">#</a></h1><h3><span id="综述">综述</span><a href="#综述" class="header-anchor">#</a></h3><ol>
+<h3><span id="kv-cache">KV Cache</span><a href="#kv-cache" class="header-anchor">#</a></h3><h1><span id="参考">参考</span><a href="#参考" class="header-anchor">#</a></h1><h3><span id="综述">综述</span><a href="#综述" class="header-anchor">#</a></h3><ol>
 <li><p><a href="https://mp.weixin.qq.com/s/glPPSqHjsnDjC0DZSuuPzA">一文探秘LLM应用开发(13)-模型部署与推理(优化理论) </a> </p>
 </li>
 <li><p><a href="https://lilianweng.github.io/posts/2023-01-10-inference-optimization/">Large Transformer Model Inference Optimization </a></p>
@@ -9120,10 +9213,7 @@
 </ol>
 <p>1xx. <a href="https://zhuanlan.zhihu.com/p/656485997">大语言模型推理性能优化综述</a></p>
 <p>1xx. <a href="https://zhuanlan.zhihu.com/p/642412124">NLP（十八）：LLM 的推理优化技术纵览</a> *** </p>
-<p>1xx. 《A Survey on Efficient Inference for Large Language Models》<br><a href="https://mp.weixin.qq.com/s/U9ESiWehnoKc9SnDz7DVKg">3万字详细解析清华大学最新综述工作：大模型高效推理综述</a> 翻译<br><a href="https://mp.weixin.qq.com/s/V1dXQquifP7uHGU7QxP-Lg">无穹Paper | 如何加速大模型推理？一图读懂大语言模型高效推理技术</a> </p>
-<h3><span id="awesome-llm-inference">Awesome-LLM-Inference</span><a href="#awesome-llm-inference" class="header-anchor">#</a></h3><ol start="10">
-<li><a href="https://github.com/DefTruth/Awesome-LLM-Inference">Awesome-LLM-Inference Repo</a> git<br>1xx. <a href="https://zhuanlan.zhihu.com/p/669777159">[Awesome-LLM-Inference]🔥第三期：30篇，LLM推理论文集-500页PDF</a><br>1xx. <a href="https://zhuanlan.zhihu.com/p/658091768">[Awesome-LLM-Inference]🔥第二期: 20篇，LLM推理论文集-300页PDF</a><br>1xx. <a href="https://zhuanlan.zhihu.com/p/693680304">[LLM推理优化]🔥100+篇: 大模型推理各方向新发展整理</a></li>
-</ol>
+<p>1xx. 《A Survey on Efficient Inference for Large Language Models》<br><a href="https://mp.weixin.qq.com/s/U9ESiWehnoKc9SnDz7DVKg">3万字详细解析清华大学最新综述工作：大模型高效推理综述</a> 翻译<br><a href="https://mp.weixin.qq.com/s/V1dXQquifP7uHGU7QxP-Lg">无穹Paper | 如何加速大模型推理？一图读懂大语言模型高效推理技术</a></p>
 ]]></content>
       <categories>
         <category>AIGC</category>
