@@ -73,11 +73,15 @@
 <li><a href="/www6vHomeAIGC/2023/01/15/gptLargeModelTrainingPractice/" title="(实战)Training">(实战)Training</a> </li>
 <li><a href="/www6vHomeAIGC/2023/02/03/gptContinualPretraining/" title="(原理|实战)继续Pre-Training">(原理|实战)继续Pre-Training</a>  </li>
 <li><a href="/www6vHomeAIGC/2023/02/21/gptChineseLlama/" title="(实战)Chinese-LLaMA PT+SFT">(实战)Chinese-LLaMA PT+SFT</a>   </li>
-<li><a href="/www6vHomeAIGC/2024/02/01/gptPrecision/" title="(原理|实战)混合精度">(原理|实战)混合精度</a> </li>
 <li>分布式<ul>
 <li><a href="/www6vHomeAIGC/2023/01/06/gptTrainParallelism/" title="(原理)分布式并行Training">(原理)分布式并行Training</a>    </li>
 <li><a href="/www6vHomeAIGC/2023/03/23/gptTrainZeroDeepspeed/" title="(原理)Zero Deepspeed">(原理)Zero Deepspeed</a>    </li>
 <li><a href="/www6vHomeAIGC/2023/03/25/gptTrainDeepspeedPractice/" title="(实战)Deepspeed">(实战)Deepspeed</a></li>
+</ul>
+</li>
+<li>低精度<ul>
+<li><a href="/www6vHomeAIGC/2023/08/16/gptLowPrecision/" title="低精度训练">低精度训练</a>    </li>
+<li><a href="/www6vHomeAIGC/2024/02/01/gptPrecision/" title="(原理|实战)混合精度">(原理|实战)混合精度</a></li>
 </ul>
 </li>
 </ul>
@@ -105,8 +109,8 @@
 <li>模型层优化 <ul>
 <li>模型压缩<ul>
 <li><a href="/www6vHomeAIGC/2023/02/19/gptQuantization/" title="(原理)量化">(原理)量化</a> </li>
-<li><a href="/www6vHomeAIGC/2023/03/26/gptQuantizationWeight/" title="(原理)Weight Only(LLM.int8(), GPTQ, AWQ)">(原理)Weight Only(LLM.int8(), GPTQ, AWQ)</a> </li>
-<li><a href="/www6vHomeAIGC/2024/03/22/gptQuantizationPractice/" title="(实战)模型压缩-量化">(实战)模型压缩-量化</a></li>
+<li><a href="/www6vHomeAIGC/2023/03/26/gptQuantizationWeight/" title="(原理)PTQ-Weight Only">(原理)PTQ-Weight Only</a> </li>
+<li><a href="/www6vHomeAIGC/2024/03/22/gptQuantizationPractice/" title="(实战)量化">(实战)量化</a></li>
 </ul>
 </li>
 </ul>
@@ -609,7 +613,8 @@
     <content><![CDATA[<p></p>
 <span id="more"></span>
 
-<h1><span id="量化实战">量化实战</span><a href="#量化实战" class="header-anchor">#</a></h1><p><a href="https://candied-skunk-1ca.notion.site/1213172a99a949ceba7e8e2164710a77?pvs=4">(实战)量化</a></p>
+<h1><span id="量化实战">量化实战</span><a href="#量化实战" class="header-anchor">#</a></h1><p><a href="https://candied-skunk-1ca.notion.site/1213172a99a949ceba7e8e2164710a77?pvs=4">(实战)量化-推理</a></p>
+<p><a href="https://candied-skunk-1ca.notion.site/PTQ-0a18129c05a8447fac9155a56a26ecab?pvs=4">(实战)量化-PTQ</a></p>
 ]]></content>
       <categories>
         <category>AIGC</category>
@@ -792,10 +797,6 @@
 <li><a href="#loss-scale12">Loss Scale[1][2]</a></li>
 </ul>
 </li>
-<li><a href="#%E5%AE%9E%E6%88%98">实战</a><ul>
-<li><a href="#llama%E5%8D%8A%E7%B2%BE%E5%BA%A6%E8%AE%AD%E7%BB%8320">llama半精度训练[20]</a></li>
-</ul>
-</li>
 <li><a href="#%E5%8F%82%E8%80%83">参考</a><ul>
 <li><a href="#%E5%8E%9F%E7%90%86">原理</a></li>
 <li><a href="#%E4%BB%A3%E7%A0%81">代码</a></li>
@@ -816,11 +817,7 @@
 <img src="/www6vHomeAIGC/2024/02/01/gptPrecision/loss-scale.jpg" class> 
 
 
-<h1><span id="实战">实战</span><a href="#实战" class="header-anchor">#</a></h1><h3><span id="llama半精度训练20">llama半精度训练[20]</span><a href="#llama半精度训练20" class="header-anchor">#</a></h3><ul>
-<li>现象<br>loss先变大，再为0<br>loss爆炸，loss消失</li>
-<li>解决方案<br>padding&#x3D;left<br>改为padding&#x3D;right</li>
-</ul>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> torch</span><br><span class="line">model = AutoModelForCausalLM.from_pretrained(<span class="string">&quot;D:/Pretrained_models/modelscope/Llama-2-7b-ms&quot;</span>, low_cpu_mem_usage=<span class="literal">True</span>, torch_dtype=torch.half, device_map=<span class="string">&quot;auto&quot;</span>)</span><br></pre></td></tr></table></figure>
+
 
 
 <h1><span id="参考">参考</span><a href="#参考" class="header-anchor">#</a></h1><h3><span id="原理">原理</span><a href="#原理" class="header-anchor">#</a></h3><ol>
@@ -828,9 +825,7 @@
 <li><a href="https://zhuanlan.zhihu.com/p/103685761">浅谈混合精度训练</a></li>
 <li><a href="https://zhuanlan.zhihu.com/p/441591808">全网最全-混合精度训练原理</a>  ***<br>1xx. <a href="https://zhuanlan.zhihu.com/p/608634079">【深度学习】混合精度训练与显存分析</a></li>
 </ol>
-<h3><span id="代码">代码</span><a href="#代码" class="header-anchor">#</a></h3><ol start="20">
-<li><a href="https://www.bilibili.com/video/BV1CB4y1R78v/">半精度训练与LLaMA2训练实战</a> 有代码<br><a href="https://github.com/www6v/transformers-code/blob/master/04-Kbit%20Training/25-16bits_training/llama2_lora_16bit.ipynb">llama2_lora_16bit.ipynb</a><br>1xx. <a href="https://zhuanlan.zhihu.com/p/165152789">PyTorch的自动混合精度（AMP）</a><br>1xx. <a href="https://tensorflow.google.cn/guide/mixed_precision?hl=zh-cn">混合精度</a></li>
-</ol>
+<h3><span id="代码">代码</span><a href="#代码" class="header-anchor">#</a></h3><p>1xx. <a href="https://zhuanlan.zhihu.com/p/165152789">PyTorch的自动混合精度（AMP）</a><br>1xx. <a href="https://tensorflow.google.cn/guide/mixed_precision?hl=zh-cn">混合精度</a></p>
 ]]></content>
       <categories>
         <category>AIGC</category>
@@ -945,6 +940,22 @@
       </categories>
       <tags>
         <tag>PEFT</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>低精度训练</title>
+    <url>/www6vHomeAIGC/2023/08/16/gptLowPrecision/</url>
+    <content><![CDATA[<p></p>
+<span id="more"></span>
+
+<h1><span id="低精度训练">低精度训练</span><a href="#低精度训练" class="header-anchor">#</a></h1><p><a href="https://candied-skunk-1ca.notion.site/cb067e2d0bc545d898cd43dd1091c8b3?pvs=4">低精度训练</a></p>
+]]></content>
+      <categories>
+        <category>AIGC</category>
+        <category>低精度</category>
+      </categories>
+      <tags>
+        <tag>低精度</tag>
       </tags>
   </entry>
   <entry>
