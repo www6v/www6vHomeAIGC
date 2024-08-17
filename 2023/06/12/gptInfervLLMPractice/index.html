@@ -26,7 +26,7 @@
 <meta property="og:site_name" content="www6v的博客">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-06-12T06:19:45.000Z">
-<meta property="article:modified_time" content="2024-06-12T06:27:22.287Z">
+<meta property="article:modified_time" content="2024-08-17T11:24:56.983Z">
 <meta property="article:author" content="Wang Wei">
 <meta property="article:tag" content="infer">
 <meta name="twitter:card" content="summary">
@@ -224,7 +224,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2024-06-12 14:27:22" itemprop="dateModified" datetime="2024-06-12T14:27:22+08:00">2024-06-12</time>
+                <time title="修改时间：2024-08-17 19:24:56" itemprop="dateModified" datetime="2024-08-17T19:24:56+08:00">2024-08-17</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -254,31 +254,7 @@
         <p></p>
 <span id="more"></span>
 
-<h1><span id="实战">实战</span><a href="#实战" class="header-anchor">#</a></h1><h3><span id="llama-chinese-on-vllm11">Llama-Chinese on vLLM[11]</span><a href="#llama-chinese-on-vllm11" class="header-anchor">#</a></h3><ul>
-<li>vLLM异步推理</li>
-<li>流式返回</li>
-</ul>
-<h3><span id="qwen-on-vllm12">Qwen on vLLM[12]</span><a href="#qwen-on-vllm12" class="header-anchor">#</a></h3><ul>
-<li>vLLM异步推理</li>
-<li>流式返回</li>
-</ul>
-<h3><span id="qwen-on-vllm13">Qwen on vLLM[13]</span><a href="#qwen-on-vllm13" class="header-anchor">#</a></h3><ul>
-<li><p>离线推理   </p>
-</li>
-<li><p>适配OpenAI-API的API服务</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">python -m vllm.entrypoints.openai.api_server \</span><br><span class="line">    --model Qwen/Qwen1.5-7B-Chat</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>多卡推理<br>传递参数 <code>--tensor-parallel-size</code> 来运行多GPU服务</p>
-</li>
-<li><p>量化推理<br>在运行服务时添加 <code>--quantization</code> 参数</p>
-</li>
-</ul>
-<h1><span id="参考">参考</span><a href="#参考" class="header-anchor">#</a></h1><h3><span id="实战">实战</span><a href="#实战" class="header-anchor">#</a></h3><ol start="11">
-<li><a target="_blank" rel="noopener" href="https://github.com/LlamaFamily/Llama-Chinese/blob/main/inference-speed/GPU/vllm_example/api_server.py">Llama-Chinese Repo</a> git</li>
-<li><a target="_blank" rel="noopener" href="https://github.com/owenliang/qwen-vllm/blob/master/vllm_server.py">qwen-vllm Repo</a> git<br><a target="_blank" rel="noopener" href="https://github.com/QwenLM/Qwen/blob/main/README_CN.md#%E9%83%A8%E7%BD%B2">Qwen（通义千问） Repo</a>  git</li>
-<li><a target="_blank" rel="noopener" href="https://qwen.readthedocs.io/zh-cn/latest/deployment/vllm.html">qwen doc</a></li>
-</ol>
-<h3><span id="源代码">源代码</span><a href="#源代码" class="header-anchor">#</a></h3><p>1xx.<a target="_blank" rel="noopener" href="https://blog.csdn.net/just_sort/article/details/132115735">VLLM推理流程梳理</a><br>1xx. <a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/641999400">LLM 高速推理框架 vLLM 源代码分析 &#x2F; vLLM Source Code Analysis</a> ***<br>1xx. <a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1qE42157Rn/">vLLM源码阅读s2——是如何进行离线推理的</a> V</p>
+<h1><span id="推理-vllm-实战">推理 vLLM 实战</span><a href="#推理-vllm-实战" class="header-anchor">#</a></h1><p><a target="_blank" rel="noopener" href="https://candied-skunk-1ca.notion.site/vllm-a35a50c4cd2c4875a8de173575275217?pvs=4">(实战)推理 vLLM</a></p>
 
     </div>
 
