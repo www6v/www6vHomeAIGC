@@ -273,7 +273,14 @@
 <li><a href="/www6vHomeAIGC/2023/08/01/gptDiffusionXL/" title="(原理)SD XL">(原理)SD XL</a>   </li>
 <li>Controllable  <ul>
 <li><a href="/www6vHomeAIGC/2023/07/29/gptDiffusionControllable/" title="(综述)Controllable">(综述)Controllable</a> </li>
-<li><a href="/www6vHomeAIGC/2023/07/17/gptDiffusionControllableWork/" title="(Work|实战)Controllable">(Work|实战)Controllable</a></li>
+<li><a href="/www6vHomeAIGC/2023/07/17/gptDiffusionControllableWork/" title="(Work|实战)Controllable">(Work|实战)Controllable</a>
+<ul>
+<li><a href="/www6vHomeAIGC/2023/08/22/gptDiffusionControlNet/" title="(原理|实战)ControlNet">(原理|实战)ControlNet</a> </li>
+<li><a href="/www6vHomeAIGC/2023/08/22/gptDiffusionT2IAdapter/" title="(原理|实战)T2I-Adapter">(原理|实战)T2I-Adapter</a> </li>
+<li><a href="/www6vHomeAIGC/2023/08/22/gptDiffusionIPAdapter/" title="(原理|实战)IP-Adapter">(原理|实战)IP-Adapter</a> </li>
+<li><a href="/www6vHomeAIGC/2023/08/22/gptDiffusionReferenceNet/" title="(原理|实战)ReferenceNet">(原理|实战)ReferenceNet</a></li>
+</ul>
+</li>
 <li><a href="/www6vHomeAIGC/2023/08/01/gptDiffusionGuidance/" title="(原理)Guidance">(原理)Guidance</a></li>
 </ul>
 </li>
@@ -904,6 +911,74 @@
       </tags>
   </entry>
   <entry>
+    <title>(原理|实战)ReferenceNet</title>
+    <url>/www6vHomeAIGC/2023/08/22/gptDiffusionReferenceNet/</url>
+    <content><![CDATA[<p></p>
+<span id="more"></span>
+
+<h1><span id="referencenet">ReferenceNet</span><a href="#referencenet" class="header-anchor">#</a></h1><p><a href="https://candied-skunk-1ca.notion.site/ReferenceNet-22a14d3a669e4d7f8c99409e34252349?pvs=4">(原理|实战)ReferenceNet</a></p>
+]]></content>
+      <categories>
+        <category>AIGC</category>
+        <category>Diffusion</category>
+      </categories>
+      <tags>
+        <tag>Diffusion</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>(原理|实战)IP-Adapter</title>
+    <url>/www6vHomeAIGC/2023/08/22/gptDiffusionIPAdapter/</url>
+    <content><![CDATA[<p></p>
+<span id="more"></span>
+
+
+<h1><span id="ip-adapter">IP-Adapter</span><a href="#ip-adapter" class="header-anchor">#</a></h1><p>  <a href="https://candied-skunk-1ca.notion.site/IP-Adapter-40dfd1f30d38456b8776a90871716c73?pvs=4">(原理|实战)IP-Adapter</a></p>
+]]></content>
+      <categories>
+        <category>AIGC</category>
+        <category>Diffusion</category>
+      </categories>
+      <tags>
+        <tag>Diffusion</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>(原理|实战)T2I-Adapter</title>
+    <url>/www6vHomeAIGC/2023/08/22/gptDiffusionT2IAdapter/</url>
+    <content><![CDATA[<p></p>
+<span id="more"></span>
+
+
+<h1><span id="t2i-adapter">T2I-Adapter</span><a href="#t2i-adapter" class="header-anchor">#</a></h1><p>  <a href="https://candied-skunk-1ca.notion.site/T2I-Adapter-26eef5080f084dacb6e89d643d31e53d?pvs=4">(原理|实战)T2I-Adapter</a></p>
+]]></content>
+      <categories>
+        <category>AIGC</category>
+        <category>Diffusion</category>
+      </categories>
+      <tags>
+        <tag>Diffusion</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>(原理|实战)ControlNet</title>
+    <url>/www6vHomeAIGC/2023/08/22/gptDiffusionControlNet/</url>
+    <content><![CDATA[<p></p>
+<span id="more"></span>
+
+
+
+<h1><span id="controlnet">ControlNet</span><a href="#controlnet" class="header-anchor">#</a></h1><p>  <a href="https://candied-skunk-1ca.notion.site/ControlNet-76c3d54a18424e20a25a3e4a8a71b8e3?pvs=4">(原理|实战)ControlNet</a></p>
+]]></content>
+      <categories>
+        <category>AIGC</category>
+        <category>Diffusion</category>
+      </categories>
+      <tags>
+        <tag>Diffusion</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>低精度训练</title>
     <url>/www6vHomeAIGC/2023/08/16/gptLowPrecision/</url>
     <content><![CDATA[<p></p>
@@ -1277,42 +1352,11 @@
 <span id="more"></span>
 
 
-<h1><span id="论文controlnet">论文[ControlNet]</span><a href="#论文controlnet" class="header-anchor">#</a></h1><ul>
-<li><p>论文地址<br><a href="https://arxiv.org/abs/2302.05543">Adding Conditional Control to Text-to-Image Diffusion Models</a> </p>
-</li>
-<li><p>开源地址<br><a href="https://github.com/lllyasviel/ControlNet">ControlNet</a> git</p>
-</li>
-<li><p>论文解析<br><a href="https://candied-skunk-1ca.notion.site/ControlNet-76c3d54a18424e20a25a3e4a8a71b8e3?pvs=4">论文解析</a></p>
-</li>
-</ul>
-<hr>
-<h1><span id="论文t2i-adapter">论文[T2I-Adapter]</span><a href="#论文t2i-adapter" class="header-anchor">#</a></h1><ul>
-<li><p>论文地址<br><a href="https://arxiv.org/pdf/2302.08453">T2I-Adapter</a> </p>
-</li>
-<li><p>开源地址<br><a href="https://github.com/TencentARC/T2I-Adapter">T2I-Adapter</a> git</p>
-</li>
-<li><p>论文解析<br><a href="https://candied-skunk-1ca.notion.site/T2I-Adapter-26eef5080f084dacb6e89d643d31e53d?pvs=4">论文解析</a></p>
-</li>
-</ul>
-<hr>
-<h1><span id="论文ip-adapter">论文[IP-Adapter]</span><a href="#论文ip-adapter" class="header-anchor">#</a></h1><ul>
-<li><p>论文地址<br><a href="https://arxiv.org/pdf/2308.06721">IP-Adapter: Text Compatible Image Prompt Adapter for Text-to-Image Diffusion Models</a></p>
-</li>
-<li><p>开源地址<br><a href="https://github.com/tencent-ailab/IP-Adapter">IP-Adapter</a> git<br> enable a pretrained text-to-image diffusion model to generate images <strong>with image prompt</strong><br> 有很多notebook的demo</p>
-</li>
-<li><p>Project page<br><a href="https://ip-adapter.github.io/">Project page</a>   </p>
-</li>
-<li><p>论文解析<br><a href="https://candied-skunk-1ca.notion.site/IP-Adapter-40dfd1f30d38456b8776a90871716c73?pvs=4">论文解析</a></p>
-</li>
-</ul>
-<hr>
+
+
 <h1><span id="实战">实战</span><a href="#实战" class="header-anchor">#</a></h1><ul>
-<li><p><a href="https://candied-skunk-1ca.notion.site/controllable-763edf3a43b94e03a1ff0faee9ac41c2?pvs=4">ControlNet + t2i_adapter + Custom Diffusion </a>  diffusers</p>
-</li>
-<li><p><a href="https://www.bilibili.com/video/BV1Go4y1M7cK?p=2">control net</a> V</p>
-</li>
+<li><a href="https://candied-skunk-1ca.notion.site/controllable-763edf3a43b94e03a1ff0faee9ac41c2?pvs=4">ControlNet + t2i_adapter + Custom Diffusion </a>  diffusers</li>
 </ul>
-<hr>
 <h1><span id="总结metaso">总结[metaso]</span><a href="#总结metaso" class="header-anchor">#</a></h1><table>
 <thead>
 <tr>
