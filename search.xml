@@ -2258,20 +2258,12 @@
       </tags>
   </entry>
   <entry>
-    <title>(原理)推理 KV Cache</title>
+    <title>(原理) KV Cache</title>
     <url>/www6vHomeAIGC/2023/06/01/gptInferKVCache/</url>
     <content><![CDATA[<p></p>
 <span id="more"></span>
 
-<h1><span id="kv-cache是否使用对比1">KV Cache是否使用对比[1]</span><a href="#kv-cache是否使用对比1" class="header-anchor">#</a></h1><img src="/www6vHomeAIGC/2023/06/01/gptInferKVCache/1.webp" class>
-<img src="/www6vHomeAIGC/2023/06/01/gptInferKVCache/2.webp" class>
-<img src="/www6vHomeAIGC/2023/06/01/gptInferKVCache/3.webp" class>
-<img src="/www6vHomeAIGC/2023/06/01/gptInferKVCache/4.webp" class>
-
-
-<h1><span id="参考">参考</span><a href="#参考" class="header-anchor">#</a></h1><h3><span id="kv-cache">KV Cache</span><a href="#kv-cache" class="header-anchor">#</a></h3><ol>
-<li><a href="https://juejin.cn/post/7362789570217885759">大模型推理优化技术-KV Cache </a> 有代码 ***<br>1xx. <a href="https://zhuanlan.zhihu.com/p/659770503">NLP（二十）：漫谈 KV Cache 优化方法，深度理解 StreamingLLM</a> ***<br>1xx. <a href="https://zhuanlan.zhihu.com/p/662498827">大模型推理加速：看图学KV Cache</a> ***</li>
-</ol>
+<h1><span id="kv-cache">KV Cache</span><a href="#kv-cache" class="header-anchor">#</a></h1><p><a href="https://candied-skunk-1ca.notion.site/KV-Cache-52168038d1874bce9d5cf68c5930f5c1?pvs=4">(原理) KV Cache</a></p>
 ]]></content>
       <categories>
         <category>AIGC</category>
