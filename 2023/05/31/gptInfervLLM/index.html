@@ -21,21 +21,15 @@
   </script>
 
   <meta property="og:type" content="article">
-<meta property="og:title" content="(原理)推理 vLLM">
+<meta property="og:title" content="(原理) vLLM">
 <meta property="og:url" content="https://www6v.github.io/2023/05/31/gptInfervLLM/index.html">
 <meta property="og:site_name" content="www6v的博客">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://cdn.prod.website-files.com/618399cd49d125734c8dec95/663e103a10d15c2ecfd84ac9_K3J79pEM-PAXQiK8DfT2YlotBhcZeLy-UFqhja4dFMDp4478X1tfCGnEgWDkNAMIOMXQvCVo_5EWsVspC07wSLaD4T3n_oqCf3i8mdFFcV1uDCbcmD0-thbwVdbcpTA41teD8ErJxi3jTIrXZsAjcm4.png">
-<meta property="og:image" content="https://blog.vllm.ai/assets/figures/annimation0.gif">
-<meta property="og:image" content="https://blog.vllm.ai/assets/figures/annimation1.gif">
-<meta property="og:image" content="https://images.ctfassets.net/xjan103pcp94/1LJioEsEdQQpDCxYNWirU6/82b9fbfc5b78b10c1d4508b60e72fdcf/cb_02_diagram-static-batching.png">
-<meta property="og:image" content="https://images.ctfassets.net/xjan103pcp94/744TAv4dJIQqeHcEaz5lko/b823cc2d92bbb0d82eb252901e1dce6d/cb_03_diagram-continuous-batching.png">
 <meta property="article:published_time" content="2023-05-31T14:24:07.000Z">
-<meta property="article:modified_time" content="2024-06-12T07:11:04.632Z">
+<meta property="article:modified_time" content="2024-08-25T08:42:50.046Z">
 <meta property="article:author" content="Wang Wei">
 <meta property="article:tag" content="infer">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://cdn.prod.website-files.com/618399cd49d125734c8dec95/663e103a10d15c2ecfd84ac9_K3J79pEM-PAXQiK8DfT2YlotBhcZeLy-UFqhja4dFMDp4478X1tfCGnEgWDkNAMIOMXQvCVo_5EWsVspC07wSLaD4T3n_oqCf3i8mdFFcV1uDCbcmD0-thbwVdbcpTA41teD8ErJxi3jTIrXZsAjcm4.png">
 
 <link rel="canonical" href="https://www6v.github.io/2023/05/31/gptInfervLLM/">
 
@@ -50,7 +44,7 @@
   };
 </script>
 
-  <title>(原理)推理 vLLM | www6v的博客</title>
+  <title>(原理) vLLM | www6v的博客</title>
   
 
 
@@ -207,7 +201,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          (原理)推理 vLLM
+          (原理) vLLM
         </h1>
 
         <div class="post-meta">
@@ -230,7 +224,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2024-06-12 15:11:04" itemprop="dateModified" datetime="2024-06-12T15:11:04+08:00">2024-06-12</time>
+                <time title="修改时间：2024-08-25 16:42:50" itemprop="dateModified" datetime="2024-08-25T16:42:50+08:00">2024-08-25</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -260,56 +254,8 @@
         <p></p>
 <span id="more"></span>
 
-<h2><span id="目录">目录</span><a href="#目录" class="header-anchor">#</a></h2><div class="toc">
 
-<!-- toc -->
-
-<ul>
-<li><a href="#key-features-2">Key features [2]</a></li>
-<li><a href="#architecture3">Architecture[3]</a></li>
-<li><a href="#pagedattention4">PagedAttention[4]</a></li>
-<li><a href="#continuous-batching101">continuous batching[10.1]</a><ul>
-<li><a href="#%E6%9C%B4%E7%B4%A0%E6%89%B9%E5%A4%84%E7%90%86-%E9%9D%99%E6%80%81%E6%89%B9%E5%A4%84%E7%90%86">朴素批处理 &#x2F; 静态批处理</a></li>
-<li><a href="#%E8%BF%9E%E7%BB%AD%E6%89%B9%E5%A4%84%E7%90%86">连续批处理</a></li>
-</ul>
-</li>
-<li><a href="#%E5%8F%82%E8%80%83">参考</a><ul>
-<li><a href="#%E5%8E%9F%E7%90%86">原理</a></li>
-<li><a href="#continuous-batching">continuous batching</a></li>
-</ul>
-</li>
-</ul>
-<!-- tocstop -->
-
-</div>
-
-<h1><span id="key-features-2">Key features [2]</span><a href="#key-features-2" class="header-anchor">#</a></h1><ul>
-<li><strong>page attention</strong>[1]<br> memory sharing</li>
-<li>Continuous <strong>batching</strong> of incoming requests</li>
-<li>Quantization: <ul>
-<li><strong>GPTQ</strong></li>
-<li><strong>AWQ</strong></li>
-<li>SqueezeLLM</li>
-<li><strong>FP8 KV Cache</strong></li>
-</ul>
-</li>
-</ul>
-<h1><span id="architecture3">Architecture[3]</span><a href="#architecture3" class="header-anchor">#</a></h1><p><img src="https://cdn.prod.website-files.com/618399cd49d125734c8dec95/663e103a10d15c2ecfd84ac9_K3J79pEM-PAXQiK8DfT2YlotBhcZeLy-UFqhja4dFMDp4478X1tfCGnEgWDkNAMIOMXQvCVo_5EWsVspC07wSLaD4T3n_oqCf3i8mdFFcV1uDCbcmD0-thbwVdbcpTA41teD8ErJxi3jTIrXZsAjcm4.png" alt="Architecture"></p>
-<h1><span id="pagedattention4">PagedAttention[4]</span><a href="#pagedattention4" class="header-anchor">#</a></h1><p><img src="https://blog.vllm.ai/assets/figures/annimation0.gif" alt="PagedAttention: KV Cache are partitioned into blocks. Blocks do not need to be contiguous in memory space. "></p>
-<p><img src="https://blog.vllm.ai/assets/figures/annimation1.gif" alt="Example generation process for a request with PagedAttention. "></p>
-<h1><span id="continuous-batching101">continuous batching[10.1]</span><a href="#continuous-batching101" class="header-anchor">#</a></h1><h3><span id="朴素批处理-x2f-静态批处理">朴素批处理 &#x2F; 静态批处理</span><a href="#朴素批处理-x2f-静态批处理" class="header-anchor">#</a></h3><p><img src="https://images.ctfassets.net/xjan103pcp94/1LJioEsEdQQpDCxYNWirU6/82b9fbfc5b78b10c1d4508b60e72fdcf/cb_02_diagram-static-batching.png" alt="朴素批处理 / 静态批处理"></p>
-<h3><span id="连续批处理">连续批处理</span><a href="#连续批处理" class="header-anchor">#</a></h3><p><img src="https://images.ctfassets.net/xjan103pcp94/744TAv4dJIQqeHcEaz5lko/b823cc2d92bbb0d82eb252901e1dce6d/cb_03_diagram-continuous-batching.png" alt="连续批处理"></p>
-<h1><span id="参考">参考</span><a href="#参考" class="header-anchor">#</a></h1><h3><span id="原理">原理</span><a href="#原理" class="header-anchor">#</a></h3><ol>
-<li><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1cP41187wY/">VLLM ——高效GPU训练框架</a>  V</li>
-<li><a target="_blank" rel="noopener" href="https://github.com/vllm-project/vllm">vllm</a> git</li>
-<li><a target="_blank" rel="noopener" href="https://www.hopsworks.ai/dictionary/vllm">vLLM</a></li>
-<li><a target="_blank" rel="noopener" href="https://blog.vllm.ai/2023/06/20/vllm.html">vLLM: Easy, Fast, and Cheap LLM Serving with PagedAttention</a>   看动图</li>
-</ol>
-<h3><span id="continuous-batching">continuous batching</span><a href="#continuous-batching" class="header-anchor">#</a></h3><ol start="10">
-<li><a target="_blank" rel="noopener" href="https://www.anyscale.com/blog/continuous-batching-llm-inference">How continuous batching enables 23x throughput in LLM inference while reducing p50 latency</a><br>   10.1. <a target="_blank" rel="noopener" href="https://juejin.cn/post/7277917295271723048">如何通过连续批处理(continuous batching)将LLM推理吞吐量提升23倍，同时减少延迟</a> ***<br>   <a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/652165071">continuous batching在LLM推理中的意义</a> ***<br>   <a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/bs3puOXFZYg5K-zfyDfpOw">Continuous Batching：一种提升 LLM 部署吞吐量的利器</a> *<br>   <a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/655700809">Continuous Batching：解锁LLM潜力！让LLM推断速度飙升23倍，降低延迟！</a> QA<br>   <a target="_blank" rel="noopener" href="https://github.com/ray-project/ray/blob/cc983fc3e64c1ba215e981a43dd0119c03c74ff1/doc/source/serve/doc_code/vllm_example.py">vllm_example  Repo</a> git<br>   <a target="_blank" rel="noopener" href="https://github.com/anyscale/llm-continuous-batching-benchmarks">llm-continuous-batching-benchmarks Repo</a> git</li>
-</ol>
-<p>1xx. <a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_27590277/article/details/135710435">大模型推理核心技术：Continuous Batching详解</a></p>
-<p>1xx. <a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/688551989">从continuous batching到vLLM中的batching</a></p>
+<h1><span id="vllm">vLLM</span><a href="#vllm" class="header-anchor">#</a></h1><p><a target="_blank" rel="noopener" href="https://candied-skunk-1ca.notion.site/vLLM-ccb00d32fef14f92b0f7ab4c1c1db390?pvs=4">(原理) vLLM</a></p>
 
     </div>
 
@@ -325,7 +271,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="https://www6v.github.io/2023/05/31/gptInfervLLM/" title="(原理)推理 vLLM">https://www6v.github.io/2023/05/31/gptInfervLLM/</a>
+    <a href="https://www6v.github.io/2023/05/31/gptInfervLLM/" title="(原理) vLLM">https://www6v.github.io/2023/05/31/gptInfervLLM/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
