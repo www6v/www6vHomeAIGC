@@ -21,18 +21,15 @@
   </script>
 
   <meta property="og:type" content="article">
-<meta property="og:title" content="(原理)Zero Deepspeed">
+<meta property="og:title" content="(原理) Deepspeed Zero">
 <meta property="og:url" content="https://www6v.github.io/2023/03/23/gptTrainZeroDeepspeed/index.html">
 <meta property="og:site_name" content="www6v的博客">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://www6v.github.io/www6vHomeAIGC/2023/03/23/gptTrainZeroDeepspeed/zero.png">
-<meta property="og:image" content="https://www6v.github.io/www6vHomeAIGC/2023/03/23/gptTrainZeroDeepspeed/zeroOffload.png">
 <meta property="article:published_time" content="2023-03-23T01:48:55.000Z">
-<meta property="article:modified_time" content="2024-05-02T11:08:56.117Z">
+<meta property="article:modified_time" content="2024-08-28T02:32:09.912Z">
 <meta property="article:author" content="Wang Wei">
 <meta property="article:tag" content="Zero">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://www6v.github.io/www6vHomeAIGC/2023/03/23/gptTrainZeroDeepspeed/zero.png">
 
 <link rel="canonical" href="https://www6v.github.io/2023/03/23/gptTrainZeroDeepspeed/">
 
@@ -47,7 +44,7 @@
   };
 </script>
 
-  <title>(原理)Zero Deepspeed | www6v的博客</title>
+  <title>(原理) Deepspeed Zero | www6v的博客</title>
   
 
 
@@ -204,7 +201,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          (原理)Zero Deepspeed
+          (原理) Deepspeed Zero
         </h1>
 
         <div class="post-meta">
@@ -227,7 +224,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2024-05-02 19:08:56" itemprop="dateModified" datetime="2024-05-02T19:08:56+08:00">2024-05-02</time>
+                <time title="修改时间：2024-08-28 10:32:09" itemprop="dateModified" datetime="2024-08-28T10:32:09+08:00">2024-08-28</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -257,53 +254,7 @@
         <p></p>
 <span id="more"></span>
 
-
-<h1><span id="zero-dp-1-2">ZeRO-DP [1] [2]</span><a href="#zero-dp-1-2" class="header-anchor">#</a></h1><ul>
-<li>ZeRO-DP<br>是一种<strong>分布式数据并行</strong>训练方法，通过<strong>减少冗余数据</strong>来降低每个设备的显存占用，从而允许训练更大的模型</li>
-</ul>
-<h3><span id="zero-dp-三个优化阶段">ZeRO-DP 三个优化阶段</span><a href="#zero-dp-三个优化阶段" class="header-anchor">#</a></h3><img src="/www6vHomeAIGC/2023/03/23/gptTrainZeroDeepspeed/zero.png" class>
-
-<p>以 Adam优化器，64张GPU为例计算</p>
-<ul>
-<li><p>naive DP的通信量<br>通信量是<strong>2X</strong><br>显存占用<strong>16X</strong></p>
-</li>
-<li><p>ZeRO Stage 1 （Pos）<br>总的通信量为<strong>2X，跟naive DP一致</strong><br>显存方面 约为<strong>naive DP的 1&#x2F;4</strong></p>
-</li>
-<li><p>ZeRO Stage 2 （Pos+g）<br>通信量也是<strong>2X, 跟naive DP一致</strong><br>显存方面  约为<strong>naive DP的1&#x2F;8</strong></p>
-</li>
-<li><p>ZeRO Stage 3 （Pos+g+p）<br>总的通信量为，为<strong>naive DP的1.5倍</strong>，增加50%通信量<br>显存方面  约为<strong>naive DP的1&#x2F;32</strong></p>
-</li>
-</ul>
-<h1><span id="zero-offload3">ZeRO-Offload[3]</span><a href="#zero-offload3" class="header-anchor">#</a></h1><ul>
-<li>ZeRO-Offload[2]<br>ZeRO技术的一个扩展，它将部分数据和计算从GPU（或其他主要训练设备）卸载到CPU，从而减轻了GPU的显存负担，并使得在有限GPU资源下训练更大的模型成为可能</li>
-</ul>
-<p><strong>现在要做的就是沿着边把数据流图切分为两部分，分别对应GPU和CPU，</strong>计算节点（矩形节点）落在哪个设备，哪个设备就执行计算，数据节点（圆形）落在哪个设备，哪个设备就负责存储，将被切分的边权重加起来，就是CPU和GPU的通信数据量。<br>ZeRO-Offload的切分思路是：图中有四个计算类节点：<strong>FWD、BWD、Param update和float2half</strong>，前两个计算复杂度大致是 O(MB) ， B 是batch size，后两个计算复杂度是 O(M) 。为了不降低计算效率，<strong>将前两个节点放在GPU，后两个节点不但计算量小还需要和Adam状态打交道，所以放在CPU上</strong>，Adam状态自然也放在内存中，为了简化数据图，将前两个节点融合成一个节点<strong>FWD-BWD Super Node</strong>，将后两个节点融合成一个节点<strong>Update Super Node</strong>。如下图右边所示，沿着gradient 16和parameter 16两条边切分。</p>
-<img src="/www6vHomeAIGC/2023/03/23/gptTrainZeroDeepspeed/zeroOffload.png" class>
-
-
-<h1><span id="deepspeed-2">DeepSpeed [2]</span><a href="#deepspeed-2" class="header-anchor">#</a></h1><h3><span id="key-feature">Key feature</span><a href="#key-feature" class="header-anchor">#</a></h3><ul>
-<li>ZeRO（Zero Redundancy Optimizer）</li>
-<li>模型并行（Model Parallelism）</li>
-<li>流水线并行（Pipeline Parallelism）</li>
-<li>稀疏注意力（Sparse Attention）</li>
-<li>显存和带宽优化</li>
-</ul>
-<h1><span id="pytorch-fsdp-10">PyTorch FSDP [10]</span><a href="#pytorch-fsdp-10" class="header-anchor">#</a></h1><p>FairScale 说 <strong>FSDP 相当于 ZeRO3 的优化</strong></p>
-<h1><span id="参考">参考</span><a href="#参考" class="header-anchor">#</a></h1><ol>
-<li><p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/664604792">[Transformer 101系列] LLM分布式训练面面观</a> ***</p>
-</li>
-<li><p>《大模型分布式训练框架Microsoft DeepSpeed》 Ai大模型微调</p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_43336281/article/details/126475071">震惊！我竟然在1080Ti上加载了一个35亿参数的模型（ZeRO, Zero Redundancy Optimizer）</a></p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/644133265">FSDP 深度解析：2023 年了，大模型训练还要不要用 PyTorch 的 FSDP ？</a></p>
-</li>
-</ol>
-<p>1xx. <a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/610587671">【深度学习】【分布式训练】DeepSpeed：AllReduce与ZeRO-DP</a></p>
-<p>1xx. <a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_18555105/article/details/130513812">Zero系列三部曲：Zero、Zero-Offload、Zero-Infinity</a></p>
-<p>1xx. <a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/618865052">图解大模型训练之：数据并行下篇( DeepSpeed ZeRO，零冗余优化)</a></p>
-<p>1xx. <a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/617133971">图解大模型训练之：数据并行上篇(DP, DDP与ZeRO)</a></p>
-<p>1xx. <a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1mc411y7jW/">Deepspeed大模型分布式框架精讲</a>  V 原理+实操    ***</p>
+<h1><span id="deepspeed-zero">Deepspeed Zero</span><a href="#deepspeed-zero" class="header-anchor">#</a></h1><p><a target="_blank" rel="noopener" href="https://candied-skunk-1ca.notion.site/Zero-Deepspeed-85c9344a27624649a36b66f3e2e4c4d1?pvs=74">(原理) Deepspeed Zero</a></p>
 
     </div>
 
@@ -319,7 +270,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="https://www6v.github.io/2023/03/23/gptTrainZeroDeepspeed/" title="(原理)Zero Deepspeed">https://www6v.github.io/2023/03/23/gptTrainZeroDeepspeed/</a>
+    <a href="https://www6v.github.io/2023/03/23/gptTrainZeroDeepspeed/" title="(原理) Deepspeed Zero">https://www6v.github.io/2023/03/23/gptTrainZeroDeepspeed/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
