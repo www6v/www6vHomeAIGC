@@ -75,7 +75,7 @@
 <li><a href="/www6vHomeAIGC/2023/02/21/gptChineseLlama/" title="(实战)Chinese-LLaMA PT+SFT">(实战)Chinese-LLaMA PT+SFT</a>   </li>
 <li>分布式<ul>
 <li><a href="/www6vHomeAIGC/2023/01/06/gptTrainParallelism/" title="(原理)分布式并行Training">(原理)分布式并行Training</a>    </li>
-<li><a href="/www6vHomeAIGC/2023/03/23/gptTrainZeroDeepspeed/" title="(原理)Zero Deepspeed">(原理)Zero Deepspeed</a>    </li>
+<li><a href="/www6vHomeAIGC/2023/03/23/gptTrainZeroDeepspeed/" title="(原理) Deepspeed Zero">(原理) Deepspeed Zero</a>    </li>
 <li><a href="/www6vHomeAIGC/2023/03/25/gptTrainDeepspeedPractice/" title="(实战)Deepspeed">(实战)Deepspeed</a></li>
 </ul>
 </li>
@@ -274,31 +274,61 @@
 <li>Segmentation<br>+ <a href="/www6vHomeAIGC/2023/03/01/gptMultimodalSAM/" title="(原理|实战) SAM">(原理|实战) SAM</a></li>
 </ul>
 <h3><span id="生成">生成</span><a href="#生成" class="header-anchor">#</a></h3><ul>
+<li>Diffusion<ul>
 <li><a href="/www6vHomeAIGC/2023/06/29/gptMultimodalDiffusion/" title="(原理)Diffusion">(原理)Diffusion</a>   </li>
 <li><a href="/www6vHomeAIGC/2023/07/09/gptMultimodalDiffusionPractice/" title="(实战)Diffusion">(实战)Diffusion</a>  </li>
 <li><a href="/www6vHomeAIGC/2023/08/01/gptDiffusionXL/" title="(原理)SD XL">(原理)SD XL</a>   </li>
 <li><a href="/www6vHomeAIGC/2023/08/27/gptDiffusionunCLIP/" title="(原理)unCLIP">(原理)unCLIP</a> </li>
+<li><a href="/www6vHomeAIGC/2023/08/01/gptDiffusionGuidance/" title="(原理)Guidance">(原理)Guidance</a></li>
+</ul>
+</li>
 <li>Controllable  <ul>
 <li><a href="/www6vHomeAIGC/2023/07/29/gptDiffusionControllable/" title="(综述)Controllable">(综述)Controllable</a> </li>
-<li><a href="/www6vHomeAIGC/2023/07/17/gptDiffusionControllableWork/" title="(Work|实战)Controllable">(Work|实战)Controllable</a>
-<ul>
-<li><a href="/www6vHomeAIGC/2023/08/22/gptDiffusionControlNet/" title="(原理|实战)ControlNet">(原理|实战)ControlNet</a> </li>
-<li><a href="/www6vHomeAIGC/2023/08/22/gptDiffusionT2IAdapter/" title="(原理|实战)T2I-Adapter">(原理|实战)T2I-Adapter</a> </li>
-<li><a href="/www6vHomeAIGC/2023/08/22/gptDiffusionIPAdapter/" title="(原理|实战)IP-Adapter">(原理|实战)IP-Adapter</a> </li>
+<li><a href="/www6vHomeAIGC/2023/07/17/gptDiffusionControllableWork/" title="(Work|实战)Controllable">(Work|实战)Controllable</a></li>
+<li>Spatial Control<ul>
+<li>Dense control<ul>
+<li>single<ul>
+<li><a href="/www6vHomeAIGC/2023/08/22/gptDiffusionControlNet/" title="(原理|实战)ControlNet">(原理|实战)ControlNet</a></li>
+</ul>
+</li>
+<li>multi <ul>
+<li><a href="/www6vHomeAIGC/2023/08/22/gptDiffusionT2IAdapter/" title="(原理|实战)T2I-Adapter">(原理|实战)T2I-Adapter</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>layout&#x2F;box<ul>
+<li>GLIGEN</li>
+<li>Reco</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Style control<ul>
+<li>subject-driven<ul>
+<li>concept customization [fine-tuning]<ul>
+<li><a href="/www6vHomeAIGC/2023/07/06/gptDiffusionFineTuning/" title="(work|实战) fine-tuning">(work|实战) fine-tuning</a>   </li>
+<li><a href="/www6vHomeAIGC/2024/07/17/gptDiffusionDreamBooth/" title="(原理|实战)DreamBooth">(原理|实战)DreamBooth</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>image-driven<ul>
+<li><a href="/www6vHomeAIGC/2023/08/22/gptDiffusionIPAdapter/" title="(原理|实战)IP-Adapter">(原理|实战)IP-Adapter</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Sementic Control</li>
+<li>其他<ul>
 <li><a href="/www6vHomeAIGC/2023/08/22/gptDiffusionReferenceNet/" title="(原理|实战)ReferenceNet">(原理|实战)ReferenceNet</a></li>
 </ul>
 </li>
-<li><a href="/www6vHomeAIGC/2023/08/01/gptDiffusionGuidance/" title="(原理)Guidance">(原理)Guidance</a></li>
 </ul>
 </li>
 <li>editing<ul>
 <li><a href="/www6vHomeAIGC/2023/07/06/gptDiffusionImageEdit/" title="(综述)Image Editing">(综述)Image Editing</a>   </li>
 <li><a href="/www6vHomeAIGC/2023/07/27/gptDiffusionImageEditWork/" title="(Work|实战)Image Editing">(Work|实战)Image Editing</a></li>
-</ul>
-</li>
-<li>concept customization [fine-tuning]<ul>
-<li><a href="/www6vHomeAIGC/2023/07/06/gptDiffusionFineTuning/" title="(work|实战) fine-tuning">(work|实战) fine-tuning</a>   </li>
-<li><a href="/www6vHomeAIGC/2024/07/17/gptDiffusionDreamBooth/" title="(原理|实战)DreamBooth">(原理|实战)DreamBooth</a></li>
 </ul>
 </li>
 <li>人像生图<ul>
