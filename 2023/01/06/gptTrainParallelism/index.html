@@ -21,19 +21,15 @@
   </script>
 
   <meta property="og:type" content="article">
-<meta property="og:title" content="(原理)分布式并行Training">
+<meta property="og:title" content="(原理)分布式训练">
 <meta property="og:url" content="https://www6v.github.io/2023/01/06/gptTrainParallelism/index.html">
 <meta property="og:site_name" content="www6v的博客">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://www6v.github.io/www6vHomeAIGC/2023/01/06/gptTrainParallelism/pararllelTraining.jpg">
-<meta property="og:image" content="https://www6v.github.io/www6vHomeAIGC/2023/01/06/gptTrainParallelism/tensor.png">
-<meta property="og:image" content="https://www6v.github.io/www6vHomeAIGC/2023/01/06/gptTrainParallelism/pipeline.png">
 <meta property="article:published_time" content="2023-01-05T21:51:54.000Z">
-<meta property="article:modified_time" content="2024-05-03T00:13:50.141Z">
+<meta property="article:modified_time" content="2024-09-05T06:51:39.758Z">
 <meta property="article:author" content="Wang Wei">
 <meta property="article:tag" content="train">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://www6v.github.io/www6vHomeAIGC/2023/01/06/gptTrainParallelism/pararllelTraining.jpg">
 
 <link rel="canonical" href="https://www6v.github.io/2023/01/06/gptTrainParallelism/">
 
@@ -48,7 +44,7 @@
   };
 </script>
 
-  <title>(原理)分布式并行Training | www6v的博客</title>
+  <title>(原理)分布式训练 | www6v的博客</title>
   
 
 
@@ -205,7 +201,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          (原理)分布式并行Training
+          (原理)分布式训练
         </h1>
 
         <div class="post-meta">
@@ -228,7 +224,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2024-05-03 08:13:50" itemprop="dateModified" datetime="2024-05-03T08:13:50+08:00">2024-05-03</time>
+                <time title="修改时间：2024-09-05 14:51:39" itemprop="dateModified" datetime="2024-09-05T14:51:39+08:00">2024-09-05</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -258,115 +254,8 @@
         <p></p>
 <span id="more"></span>
 
-<h2><span id="目录">目录</span><a href="#目录" class="header-anchor">#</a></h2><div class="toc">
 
-<!-- toc -->
-
-<ul>
-<li><a href="#%E5%88%86%E5%B8%83%E5%BC%8F%E5%B9%B6%E8%A1%8C-1">分布式并行 [1]</a><ul>
-<li><a href="#%E6%95%B0%E6%8D%AE%E5%B9%B6%E8%A1%8C-4">数据并行 [4]</a></li>
-<li><a href="#%E6%A8%A1%E5%9E%8B%E5%B9%B6%E8%A1%8C">模型并行</a><ul>
-<li><a href="#%E5%BC%A0%E9%87%8F%E5%B9%B6%E8%A1%8C-3">张量并行 [3]</a></li>
-<li><a href="#%E6%B5%81%E6%B0%B4%E7%BA%BF%E5%B9%B6%E8%A1%8C-3">流水线并行 [3]</a></li>
-</ul>
-</li>
-<li><a href="#%E5%A4%9A%E7%BB%B4%E6%B7%B7%E5%90%88%E5%B9%B6%E8%A1%8C5">多维混合并行[5]</a><ul>
-<li><a href="#dp-pp">DP + PP</a></li>
-<li><a href="#3d-%E5%B9%B6%E8%A1%8Cdp-pp-tp">3D 并行（DP + PP + TP）</a></li>
-<li><a href="#zero-dp-pp-tp">ZeRO-DP + PP + TP</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a href="#%E6%A1%86%E6%9E%B6">框架</a></li>
-<li><a href="#%E6%B5%81%E6%B0%B4%E7%BA%BF%E5%B9%B6%E8%A1%8Cpipeline-parallelism-pp4kimi">流水线并行（Pipeline Parallelism, PP）[4][kimi]</a><ul>
-<li><a href="#%E5%8F%AF%E8%83%BD%E5%AD%98%E5%9C%A8%E7%9A%84%E9%97%AE%E9%A2%98">可能存在的问题</a></li>
-<li><a href="#%E5%A6%82%E4%BD%95%E4%BC%98%E5%8C%96">如何优化</a></li>
-</ul>
-</li>
-<li><a href="#%E5%8F%82%E8%80%83">参考</a><ul>
-<li><a href="#%E5%AE%9E%E6%88%98">实战</a></li>
-<li><a href="#%E5%85%B6%E4%BB%96">其他</a></li>
-</ul>
-</li>
-</ul>
-<!-- tocstop -->
-
-</div>
-
-
-<h1><span id="分布式并行-1">分布式并行 [1]</span><a href="#分布式并行-1" class="header-anchor">#</a></h1><img src="/www6vHomeAIGC/2023/01/06/gptTrainParallelism/pararllelTraining.jpg" class>
-
-<h3><span id="数据并行-4">数据并行 [4]</span><a href="#数据并行-4" class="header-anchor">#</a></h3><p>数据并行可以分为<strong>中心化方式</strong>的和<strong>无中心化方式</strong>的，对应于pytorch里面的<strong>DataParallel</strong>和<strong>DistributedDataParallel(DDP)</strong></p>
-<h3><span id="模型并行">模型并行</span><a href="#模型并行" class="header-anchor">#</a></h3><p><strong>张量并行</strong>与<strong>流水线并行</strong>都属于<strong>模型并行</strong>，<br>区别在于对模型参数的切分“方向”不同：<br><strong>张量并行</strong>把模型的<strong>每层进行切分 (intra-layer)<strong>，而</strong>流水线并行</strong>则<strong>按层进行切分 (inter-layer) 并在不同设备处理</strong>。[2]</p>
-<h5><span id="张量并行-3">张量并行 [3]</span><a href="#张量并行-3" class="header-anchor">#</a></h5> <img src="/www6vHomeAIGC/2023/01/06/gptTrainParallelism/tensor.png" class>
-
-<ul>
-<li>Megatron-LM（1D）</li>
-<li>Colossal-AI（2D、2.5D、3D）</li>
-</ul>
-<h5><span id="流水线并行-3">流水线并行 [3]</span><a href="#流水线并行-3" class="header-anchor">#</a></h5><img src="/www6vHomeAIGC/2023/01/06/gptTrainParallelism/pipeline.png" class>
-
-<ul>
-<li>GPipe</li>
-<li>PipeDream</li>
-</ul>
-<h3><span id="多维混合并行5">多维混合并行[5]</span><a href="#多维混合并行5" class="header-anchor">#</a></h3><h5><span id="dp-pp">DP + PP</span><a href="#dp-pp" class="header-anchor">#</a></h5><h5><span id="3d-并行dp-pp-tp">3D 并行（DP + PP + TP）</span><a href="#3d-并行dp-pp-tp" class="header-anchor">#</a></h5><h5><span id="zero-dp-pp-tp">ZeRO-DP + PP + TP</span><a href="#zero-dp-pp-tp" class="header-anchor">#</a></h5><h1><span id="框架">框架</span><a href="#框架" class="header-anchor">#</a></h1><ul>
-<li>Megatron-LM（张量并行）</li>
-<li>DeepSpeed（Zero-DP）</li>
-<li>Colossal-AI（高维模型并行，如2D、2.5D、3D）</li>
-<li>Alpa（自动并行）</li>
-</ul>
-<h1><span id="流水线并行pipeline-parallelism-pp4kimi">流水线并行（Pipeline Parallelism, PP）[4][kimi]</span><a href="#流水线并行pipeline-parallelism-pp4kimi" class="header-anchor">#</a></h1><p>引入流水线并行（Pipeline Parallelism, PP）后可能会存在以下<strong>问题</strong>以及相应的<strong>优化方法</strong>：</p>
-<h3><span id="可能存在的问题">可能存在的问题</span><a href="#可能存在的问题" class="header-anchor">#</a></h3><ol>
-<li><p><strong>理论上界与朴素串行方式的差异</strong>：在理想情况下，不需要流水线并行，直接对mini-batch的样本做前向和反向操作。<strong>朴素串行方式会导致硬件利用率低，因为每个micro-batch串行逐个做前向和反向，导致大量计算资源闲置</strong>。</p>
-</li>
-<li><p><strong>Gpipe流水线并行的等待时间</strong>：<strong>Gpipe流水线并行需要等所有micro-batch都计算完才能执行反向过程</strong>，这会导致额外的等待时间，增加了总耗时。</p>
-</li>
-<li><p><strong>硬件资源的浪费</strong>：由于不同阶段的计算吞吐不同，可能会导致硬件资源的浪费。</p>
-</li>
-</ol>
-<h3><span id="如何优化">如何优化</span><a href="#如何优化" class="header-anchor">#</a></h3><ol>
-<li><p><strong>Bubble Ratio分析</strong>：定义<strong>bubble ratio</strong>来衡量流水线算法对硬件的浪费程度，值越小说明流水线效率越高。通过调整micro-batch的大小，可以减少气泡空腔的面积，提高硬件利用率。</p>
-</li>
-<li><p><strong>Micro-batch大小分析</strong>：通过调整micro-batch的大小b，可以使得流水线并行的额外耗时尽可能小。这通常需要通过实际测试来进行性能分析。</p>
-</li>
-<li><p><strong>PipeDream (Non-Interleaved 1F1B)<strong>：</strong>通过解耦同一个mini-batch的不同micro-batch，允许它们独立地进行前向和反向计算</strong>，从而减少显存的使用，并提高硬件资源的利用率。</p>
-</li>
-<li><p><strong>Interleaved 1F1B</strong>：将流水线切分更细，使得每个设备可以分配更多的算力，减少了每个layer的计算时间，从而减少了总耗时。</p>
-</li>
-<li><p><strong>Re-materialization（Checkpointing）</strong>：使用checkpoint技术，即只保留每个stage的输入activation，并在backward时从stage开头重新计算，以减少显存占用。</p>
-</li>
-<li><p><strong>优化通信策略</strong>：对于跨mesh的通信，使用优化策略，如scatter-gather或all-gather，以减少通信开销。</p>
-</li>
-<li><p><strong>动态规划求解</strong>：使用动态规划来优化子图和计算资源的划分，减少计算图中的非密集型算子，以降低搜索空间。</p>
-</li>
-<li><p><strong>Alpa自动化搜索</strong>：Alpa通过数学建模和优化来寻找接近最优的并行策略，可以自动化地搜索并行策略，减少人工设计的工作量。</p>
-</li>
-</ol>
-<p>通过上述方法，可以在一定程度上优化流水线并行带来的问题，提高模型训练的效率和硬件资源的利用率。</p>
-<h1><span id="参考">参考</span><a href="#参考" class="header-anchor">#</a></h1><h3><span id></span><a href="#" class="header-anchor">#</a></h3><ol>
-<li><p><a target="_blank" rel="noopener" href="https://lilianweng.github.io/posts/2021-09-25-train-large/">How to Train Really Large Models on Many GPUs? </a></p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="https://finisky.github.io/how-to-train-large-language-model/">大模型分布式训练的并行策略</a> *</p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/v_JULY_v/article/details/132462452">大模型并行训练指南：通俗理解Megatron-DeepSpeed之模型并行与数据并行</a>  ***</p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/664604792">[Transformer 101系列] LLM分布式训练面面观</a> ***</p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/661279318">大模型分布式训练并行技术（六）-多维混合并行</a></p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="https://www.zhihu.com/question/601594836/answer/3032763174">上半年大模型遍地开花，大模型发展中有哪些经验和教训？</a> 分布式训练框架</p>
-</li>
-</ol>
-<p>1xx. <a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/598714869">大模型分布式训练并行技术（一）-概述</a></p>
-<p>1xx. <a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/465967735">分布式训练硬核技术——通信原语</a> </p>
-<p>1xx. <a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/613196255">图解大模型训练之：流水线并行（Pipeline Parallelism），以Gpipe为例</a>  系列文章 </p>
-<p>1xx. <a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/622212228">图解大模型训练之：张量模型并行(TP)，Megatron-LM</a> ***</p>
-<p>1xx. <a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/450854172">全网最全-超大模型+分布式训练架构和经典论文</a> </p>
-<p>1xx. <a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/350707888">大规模训练系列之技术挑战</a></p>
-<h3><span id="实战">实战</span><a href="#实战" class="header-anchor">#</a></h3><p>1xx. <a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/636488690">大模型流水线并行（Pipeline）实战</a></p>
-<h3><span id="其他">其他</span><a href="#其他" class="header-anchor">#</a></h3><p>1xx. <a target="_blank" rel="noopener" href="https://techdiylife.github.io/big-model-training/deepspeed/deepspeed-chat.html">第1章：DeepSpeed-Chat 模型训练实战</a>  Bili<br>      <a target="_blank" rel="noopener" href="https://github.com/microsoft/DeepSpeedExamples/tree/master/applications/DeepSpeed-Chat">DeepSpeed-Chat</a></p>
+<h1><span id="分布式训练">分布式训练</span><a href="#分布式训练" class="header-anchor">#</a></h1><p><a target="_blank" rel="noopener" href="https://candied-skunk-1ca.notion.site/b23e09b21dee4e7595122d2c5f3943ae?pvs=4">(原理)分布式训练</a></p>
 
     </div>
 
@@ -382,7 +271,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="https://www6v.github.io/2023/01/06/gptTrainParallelism/" title="(原理)分布式并行Training">https://www6v.github.io/2023/01/06/gptTrainParallelism/</a>
+    <a href="https://www6v.github.io/2023/01/06/gptTrainParallelism/" title="(原理)分布式训练">https://www6v.github.io/2023/01/06/gptTrainParallelism/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
@@ -480,7 +369,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/www6vHomeAIGC/archives/">
         
-          <span class="site-state-item-count">180</span>
+          <span class="site-state-item-count">183</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
