@@ -126,7 +126,12 @@
 </li>
 </ul>
 </li>
-<li><strong><a href="/www6vHomeAIGC/2023/06/13/gptFlashAttention/" title="(原理)Flash Attention">(原理)Flash Attention</a></strong></li>
+<li><strong><a href="/www6vHomeAIGC/2023/06/13/gptFlashAttention/" title="(原理)Flash Attention">(原理)Flash Attention</a></strong> </li>
+<li>调度<ul>
+<li><strong><a href="/www6vHomeAIGC/2023/09/18/gptInferContinuousBatching/" title="Continuous Batching">Continuous Batching</a></strong> </li>
+<li><strong><a href="/www6vHomeAIGC/2023/09/18/gptInferChunkedPrefill/" title="Chunked Prefill">Chunked Prefill</a></strong></li>
+</ul>
+</li>
 </ul>
 </li>
 <li>模型层优化 <ul>
@@ -956,6 +961,38 @@
       </categories>
       <tags>
         <tag>PEFT</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Chunked Prefill</title>
+    <url>/www6vHomeAIGC/2023/09/18/gptInferChunkedPrefill/</url>
+    <content><![CDATA[<p></p>
+<span id="more"></span>
+
+<h1><span id="chunked-prefill">Chunked Prefill</span><a href="#chunked-prefill" class="header-anchor">#</a></h1><p><a href="https://candied-skunk-1ca.notion.site/chunked-prefill-102bfe21108480a7af99fee1f56fd5af?pvs=4">Chunked Prefill</a></p>
+]]></content>
+      <categories>
+        <category>AIGC</category>
+        <category>Inference</category>
+      </categories>
+      <tags>
+        <tag>Inference</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Continuous Batching</title>
+    <url>/www6vHomeAIGC/2023/09/18/gptInferContinuousBatching/</url>
+    <content><![CDATA[<p></p>
+<span id="more"></span>
+
+<h1><span id="continuous-batching">Continuous Batching</span><a href="#continuous-batching" class="header-anchor">#</a></h1><p><a href="https://candied-skunk-1ca.notion.site/Continuous-batching-3ce74a6d992944fba6314e21b3c3ec22">Continuous Batching</a></p>
+]]></content>
+      <categories>
+        <category>AIGC</category>
+        <category>Inference</category>
+      </categories>
+      <tags>
+        <tag>Inference</tag>
       </tags>
   </entry>
   <entry>
