@@ -19,6 +19,7 @@
 <li><a href="#inference">Inference *</a></li>
 <li><a href="#data">Data</a></li>
 <li><a href="#finetuning">FineTuning *</a></li>
+<li><a href="#%E5%B9%B3%E5%8F%B0">平台</a></li>
 <li><a href="#prompt">Prompt</a></li>
 <li><a href="#langchain">Langchain</a></li>
 <li><a href="#study">Study</a></li>
@@ -225,10 +226,9 @@
 <li><a href="/www6vHomeAIGC/2024/01/26/gptFineTuningBert/" title="Fine Tuning-Bert">Fine Tuning-Bert</a></li>
 </ul>
 </li>
-<li>平台<ul>
-<li><a href="/www6vHomeAIGC/2023/05/24/gptLLamaFactory/" title="LLama-Factory">LLama-Factory</a></li>
 </ul>
-</li>
+<h2><span id="平台">平台</span><a href="#平台" class="header-anchor">#</a></h2><ul>
+<li><strong><a href="/www6vHomeAIGC/2023/05/24/gptLLamaFactory/" title="LLama-Factory">LLama-Factory</a></strong></li>
 </ul>
 <h2><span id="prompt">Prompt</span><a href="#prompt" class="header-anchor">#</a></h2><ul>
 <li><a href="/www6vHomeAIGC/2022/11/10/gptPromptEngineering/" title="(原理)Prompt Engineering">(原理)Prompt Engineering</a></li>
@@ -2530,66 +2530,8 @@
     <content><![CDATA[<p></p>
 <span id="more"></span>
 
-<h2><span id="目录">目录</span><a href="#目录" class="header-anchor">#</a></h2><div class="toc">
 
-<!-- toc -->
-
-<ul>
-<li><a href="#%E6%8E%A8%E7%90%86llama31">推理llama3[1]</a><ul>
-<li><a href="#llama-factory-%E5%AE%89%E8%A3%85">LLaMA-Factory 安装</a></li>
-<li><a href="#%E6%8E%A8%E7%90%86llama3">推理llama3</a></li>
-</ul>
-</li>
-<li><a href="#agent-tuning2">Agent Tuning[2]</a><ul>
-<li><a href="#%E7%8E%AF%E5%A2%83%E5%87%86%E5%A4%87">环境准备</a></li>
-<li><a href="#%E8%AE%AD%E7%BB%83%E6%B5%81%E7%A8%8B">训练流程</a></li>
-</ul>
-</li>
-<li><a href="#%E5%8F%82%E8%80%83">参考</a></li>
-</ul>
-<!-- tocstop -->
-
-</div>
-
-<h1><span id="推理llama31">推理llama3[1]</span><a href="#推理llama31" class="header-anchor">#</a></h1><h3><span id="llama-factory-安装">LLaMA-Factory 安装</span><a href="#llama-factory-安装" class="header-anchor">#</a></h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">安装llamafactory-cli命令</span></span><br><span class="line">git clone https://github.com/hiyouga/LLaMA-Factory.git</span><br><span class="line">conda create -n llama_factory python=3.10</span><br><span class="line">conda activate llama_factory</span><br><span class="line">cd LLaMA-Factory</span><br><span class="line">pip install -e .[metrics]</span><br></pre></td></tr></table></figure>
-
-<h3><span id="推理llama3">推理llama3</span><a href="#推理llama3" class="header-anchor">#</a></h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#模型下载</span></span><br><span class="line"><span class="keyword">from</span> modelscope <span class="keyword">import</span> snapshot_download</span><br><span class="line">model_dir = snapshot_download(<span class="string">&#x27;LLM-Research/Meta-Llama-3-8B-Instruct&#x27;</span>)</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">配置</span></span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">vim examples/inference/llama3.yaml</span></span><br><span class="line">model_name_or_path: /home/wei/models/model/LLM-Research/Meta-Llama-3-8B-Instruct</span><br><span class="line">template: llama3</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">阿里云必须加这句，不然页面会报异常</span></span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash"><span class="built_in">export</span> GRADIO_ROOT_PATH=/<span class="variable">$&#123;JUPYTER_NAME&#125;</span>/proxy/7860/</span></span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">启动</span></span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">llamafactory-cli webchat examples/inference/llama3.yaml</span></span><br></pre></td></tr></table></figure>
-<ul>
-<li><p>Command</p>
-<img src="/www6vHomeAIGC/2023/05/24/gptLLamaFactory/command.JPG" class>
-</li>
-<li><p>WebUI</p>
-<img src="/www6vHomeAIGC/2023/05/24/gptLLamaFactory/webui.JPG" class></li>
-</ul>
-<h1><span id="agent-tuning2">Agent Tuning[2]</span><a href="#agent-tuning2" class="header-anchor">#</a></h1><h3><span id="环境准备">环境准备</span><a href="#环境准备" class="header-anchor">#</a></h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash"><span class="built_in">source</span> code</span></span><br><span class="line">git clone -b v0.7.1  https://github.com/hiyouga/LLaMA-Factory.git</span><br><span class="line">git switch -c v0.7.1</span><br><span class="line">cd LLaMA-Factory</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">package 安装</span></span><br><span class="line">conda create -n llama_factory python=3.10</span><br><span class="line">conda activate llama_factory</span><br><span class="line">pip install llmtuner==0.5.1</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">环境变量</span></span><br><span class="line">export CUDA_VISIBLE_DEVICES=0 # 使用第一块 GPU</span><br><span class="line">export USE_MODELSCOPE_HUB=1 # 使用魔搭社区下载渠道</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">阿里云必须加这句，不然页面会报异常</span></span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash"><span class="built_in">export</span> GRADIO_ROOT_PATH=/<span class="variable">$&#123;JUPYTER_NAME&#125;</span>/proxy/7860/</span></span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">启动</span></span><br><span class="line">python -m llmtuner.webui.interface</span><br></pre></td></tr></table></figure>
-
-<h3><span id="训练流程">训练流程</span><a href="#训练流程" class="header-anchor">#</a></h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">flash-attn 安装</span></span><br><span class="line">pip install flash-attn --no-build-isolation</span><br><span class="line"></span><br><span class="line">pip install modelscope -U</span><br></pre></td></tr></table></figure>
-
-
-
-<ul>
-<li><p>训练脚本</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">训练轮数 1.0</span></span><br><span class="line"></span><br><span class="line">CUDA_VISIBLE_DEVICES=0 python src/train_bash.py \</span><br><span class="line">    --stage sft \</span><br><span class="line">    --do_train True \</span><br><span class="line">    --model_name_or_path 01ai/Yi-6B \</span><br><span class="line">    --finetuning_type lora \</span><br><span class="line">    --template default \</span><br><span class="line">    --flash_attn True \</span><br><span class="line">    --dataset_dir data \</span><br><span class="line">    --dataset glaive_toolcall,alpaca_gpt4_en,alpaca_gpt4_zh,oaast_sft_zh \</span><br><span class="line">    --cutoff_len 1024 \</span><br><span class="line">    --learning_rate 5e-05 \</span><br><span class="line">    --num_train_epochs 1.0 \</span><br><span class="line">    --max_samples 8000 \</span><br><span class="line">    --per_device_train_batch_size 4 \</span><br><span class="line">    --gradient_accumulation_steps 4 \</span><br><span class="line">    --lr_scheduler_type cosine \</span><br><span class="line">    --max_grad_norm 1.0 \</span><br><span class="line">    --logging_steps 5 \</span><br><span class="line">    --save_steps 100 \</span><br><span class="line">    --warmup_steps 0 \</span><br><span class="line">    --lora_rank 8 \</span><br><span class="line">    --lora_dropout 0.1 \</span><br><span class="line">    --lora_target all \</span><br><span class="line">    --output_dir saves/Yi-6B/lora/yi-agent-6b \</span><br><span class="line">    --fp16 True \</span><br><span class="line">    --plot_loss True </span><br></pre></td></tr></table></figure>
-</li>
-<li><p>训练配置</p>
-<img src="/www6vHomeAIGC/2023/05/24/gptLLamaFactory/agentTuningUI.png" class>
-
-</li>
-<li><p>训练结果</p>
-<img src="/www6vHomeAIGC/2023/05/24/gptLLamaFactory/agentTuningUI-result.png" class>
-</li>
-<li><p>效果展示<br>工具调用 - 查询天气<br>【1个epoch好像有点问题】</p>
-<img src="/www6vHomeAIGC/2023/05/24/gptLLamaFactory/agentTuningUI-chat.png" class></li>
-</ul>
-<h1><span id="参考">参考</span><a href="#参考" class="header-anchor">#</a></h1><ol>
-<li><p><a href="https://zhuanlan.zhihu.com/p/695287607">LLaMA-Factory QuickStart</a></p>
-</li>
-<li><p><a href="https://zhuanlan.zhihu.com/p/678989191">单卡 3 小时训练专属大模型 Agent：基于 LLaMA Factory 实战</a></p>
-</li>
-</ol>
-<p>1xx. <a href="https://zhuanlan.zhihu.com/p/699777943">LLaMA-Factory微调多模态大语言模型教程</a></p>
+<h1><span id="llama-factory">LLama-Factory</span><a href="#llama-factory" class="header-anchor">#</a></h1><p><a href="https://candied-skunk-1ca.notion.site/LLama-Factory-b6e286a1e9054c5399eebc5ffaeac82e?pvs=4">LLama-Factory</a></p>
 ]]></content>
       <categories>
         <category>AIGC</category>
