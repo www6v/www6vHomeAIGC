@@ -25,13 +25,11 @@
 <meta property="og:url" content="https://www6v.github.io/2023/04/21/gptRAGModularRAG/index.html">
 <meta property="og:site_name" content="www6v的博客">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://www6v.github.io/www6vHomeAIGC/2023/04/21/gptRAGModularRAG/moduleRAG.webp">
 <meta property="article:published_time" content="2023-04-21T11:22:24.000Z">
-<meta property="article:modified_time" content="2024-05-14T08:42:38.902Z">
+<meta property="article:modified_time" content="2024-09-21T14:01:23.451Z">
 <meta property="article:author" content="Wang Wei">
 <meta property="article:tag" content="RAG">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://www6v.github.io/www6vHomeAIGC/2023/04/21/gptRAGModularRAG/moduleRAG.webp">
 
 <link rel="canonical" href="https://www6v.github.io/2023/04/21/gptRAGModularRAG/">
 
@@ -226,7 +224,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2024-05-14 16:42:38" itemprop="dateModified" datetime="2024-05-14T16:42:38+08:00">2024-05-14</time>
+                <time title="修改时间：2024-09-21 22:01:23" itemprop="dateModified" datetime="2024-09-21T22:01:23+08:00">2024-09-21</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -256,125 +254,8 @@
         <p></p>
 <span id="more"></span>
 
-<h2><span id="目录">目录</span><a href="#目录" class="header-anchor">#</a></h2><div class="toc">
 
-<!-- toc -->
-
-<ul>
-<li><a href="#modular-rag1">Modular RAG[1]</a><ul>
-<li><a href="#indexing">indexing</a></li>
-<li><a href="#pre-retrival%E9%98%B6%E6%AE%B5">pre-retrival阶段</a></li>
-<li><a href="#retrieval">Retrieval</a></li>
-<li><a href="#post-retrieval-%E5%8C%85%E6%8B%AC%E4%B8%80%E4%BA%9B%E5%90%8E%E5%A4%84%E7%90%86%E7%9A%84%E6%A8%A1%E5%9D%97">post-retrieval 包括一些后处理的模块</a></li>
-<li><a href="#generation%E9%98%B6%E6%AE%B5">Generation阶段</a></li>
-<li><a href="#orchestraction%E9%98%B6%E6%AE%B5">orchestraction阶段</a></li>
-</ul>
-</li>
-<li><a href="#%E5%8F%82%E8%80%83">参考</a><ul>
-<li><a href="#modular-rag">Modular RAG</a></li>
-</ul>
-</li>
-</ul>
-<!-- tocstop -->
-
-</div>
-
-<h1><span id="modular-rag1">Modular RAG[1]</span><a href="#modular-rag1" class="header-anchor">#</a></h1><img src="/www6vHomeAIGC/2023/04/21/gptRAGModularRAG/moduleRAG.webp" class>
-
-<h3><span id="indexing">indexing</span><a href="#indexing" class="header-anchor">#</a></h3><ul>
-<li><strong>chunk优化</strong><ul>
-<li>small-to-big<br>用小块做索引，但召回大块</li>
-<li>sliding window<br>滑动窗口，提高语义连贯性</li>
-<li>summary摘要（解决跨文档）以及结构化的组织<br>例如使用知识图谱进行文档内容的组织，根据文档结构进行层级组织</li>
-</ul>
-</li>
-</ul>
-<h3><span id="pre-retrival阶段">pre-retrival阶段</span><a href="#pre-retrival阶段" class="header-anchor">#</a></h3><ul>
-<li><strong>query-routing</strong> [2]<ul>
-<li>Metadata Router&#x2F; Filter  问题的分发</li>
-<li>Semantic Router  意图分类</li>
-</ul>
-</li>
-<li><strong>query-expansion</strong>  <ul>
-<li>Multi-Query 一变多</li>
-<li>Sub-Query 拆分子query</li>
-<li>CoVe[3]</li>
-</ul>
-</li>
-<li><strong>query transformer</strong> <ul>
-<li>query rewrite改写</li>
-<li>HyDE</li>
-<li>Step-back Prompting</li>
-</ul>
-</li>
-<li><strong>query construction</strong>  <ul>
-<li>text-cypher  </li>
-<li>text2sql </li>
-<li>将结构化知识利用起来</li>
-</ul>
-</li>
-</ul>
-<h3><span id="retrieval">Retrieval</span><a href="#retrieval" class="header-anchor">#</a></h3><ul>
-<li><strong>Retriver Selection</strong> 检索方式的选择<ul>
-<li>Sparse Retriever<br>稀疏检索（es字符串匹配）</li>
-<li>Dense Retriever<br>稠密检索（向量化检索）</li>
-</ul>
-</li>
-<li>Retriever Fine-tuning  检索的微调  [4] #<ul>
-<li>SFT<br>【embedding tuning】</li>
-<li>adapter</li>
-</ul>
-</li>
-</ul>
-<h3><span id="post-retrieval-包括一些后处理的模块">post-retrieval 包括一些后处理的模块</span><a href="#post-retrieval-包括一些后处理的模块" class="header-anchor">#</a></h3><ul>
-<li><strong>rerank重排</strong><ul>
-<li>Rule-base Rerank  基于规则的</li>
-<li>Model-base Rerank 基于模型的<br>基于大模型llm本身的</li>
-</ul>
-</li>
-<li>compresion&#x2F;selection 上下文压缩 <ul>
-<li>llmlingua </li>
-<li>recomp</li>
-<li>selective context</li>
-<li>核心在于利用不同的手段，将上下文中不重要的信息进行剔除</li>
-</ul>
-</li>
-</ul>
-<h3><span id="generation阶段">Generation阶段</span><a href="#generation阶段" class="header-anchor">#</a></h3><ul>
-<li>Generator Selection<ul>
-<li>Cloud API-base Generator</li>
-<li>On-Premises</li>
-</ul>
-</li>
-<li>Generator Fine-tuning  [4] #<ul>
-<li>SFT </li>
-<li>Distillation</li>
-<li>Dual FT<br>Fine-tuning both Generator and Retriever to align their preferences<br>RA-DIT</li>
-</ul>
-</li>
-<li>则包括对底层基础模型的一些事情，比如基于cloud-api，还是进行SFT微调。<br>【Generator 指的就是LLM】</li>
-</ul>
-<h3><span id="orchestraction阶段">orchestraction阶段</span><a href="#orchestraction阶段" class="header-anchor">#</a></h3><ul>
-<li>Scheduling</li>
-<li>Fusion<ul>
-<li>Possibility Ensemble</li>
-<li>RRF (Reciprocal Rank Fusion )</li>
-</ul>
-</li>
-<li>则包括对各个模块之间的执行和通信进行管理</li>
-</ul>
-<blockquote>
-<p> #符号   Modular RAG 相对 advanced RAG 的特殊阶段</p>
-</blockquote>
-<h1><span id="参考">参考</span><a href="#参考" class="header-anchor">#</a></h1><h3><span id="modular-rag">Modular RAG</span><a href="#modular-rag" class="header-anchor">#</a></h3><ol>
-<li><p><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/j07PkTCoxBzAhkyON1puPg">值得一看的大模型RAG问答总括性梳理：模块化(Modular)RAG范式的定义、构成及机遇 </a><br>1xx. <a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s?__biz=MzAxMjc3MjkyMg==&mid=2648407638&idx=1&sn=5c167b4a11bc483f5790ef1e0340d670">大模型RAG问答行业最佳案例及微调、推理双阶段实现模式：基于模块化(Modular)RAG自定义RAG Flow </a></p>
-</li>
-<li><a href="/www6vHomeAIGC/2023/05/14/gptRAGRouting/" title="(原理|实战)Query Routing">(原理|实战)Query Routing</a>  self
-</li>
-<li><p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/669977863">如何使用LLMs：Chain of Verification (CoVe)</a><br> <a target="_blank" rel="noopener" href="https://sourajit16-02-93.medium.com/chain-of-verification-cove-understanding-implementation-e7338c7f4cb5">Chain of Verification (CoVe) — Understanding &amp; Implementation</a></p>
-</li>
-<li><a href="/www6vHomeAIGC/2022/12/07/gptRAGPerformance/" title="(原理)Advanced RAG">(原理)Advanced RAG</a>  self</li>
-</ol>
+<h1><span id="modular-rag">Modular RAG</span><a href="#modular-rag" class="header-anchor">#</a></h1><p><a target="_blank" rel="noopener" href="https://candied-skunk-1ca.notion.site/Modular-RAG-108bfe21108480468c35c5b45d991778?pvs=4">(原理)Modular RAG</a></p>
 
     </div>
 
