@@ -19,7 +19,7 @@
 <li><a href="#inference">Inference *</a></li>
 <li><a href="#data">Data</a></li>
 <li><a href="#finetuning">FineTuning *</a></li>
-<li><a href="#%E5%B9%B3%E5%8F%B0">平台</a></li>
+<li><a href="#llops">LLOps</a></li>
 <li><a href="#prompt">Prompt</a></li>
 <li><a href="#langchain">Langchain</a></li>
 <li><a href="#study">Study</a></li>
@@ -36,9 +36,7 @@
 </ul>
 <h2><span id="deeplearning">DeepLearning</span><a href="#deeplearning" class="header-anchor">#</a></h2><ul>
 <li><a href="/www6vHomeAIGC/2022/06/11/aiDeepLearning/" title="Deep Learning">Deep Learning</a></li>
-<li><a href="/www6vHomeAIGC/2023/03/28/gptPytorch/" title="(实战)Pytorch">(实战)Pytorch</a> </li>
-<li><a href="/www6vHomeAIGC/2023/05/23/gptGPU/" title="GPU 算力">GPU 算力</a> </li>
-<li><a href="/www6vHomeAIGC/2023/07/01/gptGPUComputing/" title="GPU 计算">GPU 计算</a></li>
+<li><strong><a href="/www6vHomeAIGC/2023/03/28/gptPytorch/" title="(实战)PyTorch">(实战)PyTorch</a></strong></li>
 </ul>
 <h2><span id="nlp">NLP</span><a href="#nlp" class="header-anchor">#</a></h2><ul>
 <li><a href="/www6vHomeAIGC/2023/02/05/gptNLPTask/" title="NLP+LLM">NLP+LLM</a>  </li>
@@ -232,8 +230,10 @@
 </ul>
 </li>
 </ul>
-<h2><span id="平台">平台</span><a href="#平台" class="header-anchor">#</a></h2><ul>
+<h2><span id="llops">LLOps</span><a href="#llops" class="header-anchor">#</a></h2><ul>
 <li><strong><a href="/www6vHomeAIGC/2023/05/24/gptLLamaFactory/" title="LLama-Factory">LLama-Factory</a></strong></li>
+<li><strong><a href="/www6vHomeAIGC/2023/07/01/gptGPUComputing/" title="显存估算">显存估算</a></strong> </li>
+<li><a href="/www6vHomeAIGC/2023/05/23/gptGPU/" title="GPU 算力">GPU 算力</a></li>
 </ul>
 <h2><span id="prompt">Prompt</span><a href="#prompt" class="header-anchor">#</a></h2><ul>
 <li><a href="/www6vHomeAIGC/2022/11/10/gptPromptEngineering/" title="(原理)Prompt Engineering">(原理)Prompt Engineering</a></li>
@@ -1727,63 +1727,13 @@
       </tags>
   </entry>
   <entry>
-    <title>GPU 计算</title>
+    <title>显存估算</title>
     <url>/www6vHomeAIGC/2023/07/01/gptGPUComputing/</url>
     <content><![CDATA[<p></p>
 <span id="more"></span>
 
-<h2><span id="目录">目录</span><a href="#目录" class="header-anchor">#</a></h2><div class="toc">
 
-<!-- toc -->
-
-<ul>
-<li><a href="#%E8%AE%AD%E7%BB%83%E5%9C%BA%E6%99%AF">训练场景</a><ul>
-<li><a href="#%E5%85%AC%E5%BC%8F1">公式[1]</a></li>
-<li><a href="#%E8%AE%AD%E7%BB%83%E7%9A%84%E5%B9%B6%E8%A1%8C%E8%AE%A1%E7%AE%97%E5%85%AC%E5%BC%8F1">训练的并行计算公式[1]</a></li>
-</ul>
-</li>
-<li><a href="#%E6%8E%A8%E7%90%86%E5%9C%BA%E6%99%AF">推理场景</a><ul>
-<li><a href="#%E5%85%AC%E5%BC%8F1-1">公式[1]</a></li>
-</ul>
-</li>
-<li><a href="#%E5%B7%A5%E5%85%B7">工具</a></li>
-<li><a href="#%E5%8F%82%E8%80%83">参考</a></li>
-</ul>
-<!-- tocstop -->
-
-</div>
-
-<h1><span id="训练场景">训练场景</span><a href="#训练场景" class="header-anchor">#</a></h1><h3><span id="公式1">公式[1]</span><a href="#公式1" class="header-anchor">#</a></h3><p>训练显存消耗（可估算部分）主要包括：<strong>模型参数（Model）+ 优化器状态（Optimizer status）+梯度值（Gradient）+激活值（Activation）</strong>。根据数值的变化，可将显存消耗分为<strong>静态&#x2F;动态值</strong>。训练过程中，<strong>模型参数、优化器状态</strong>一般不会变化，这两部分归属于<strong>静态值</strong>；<strong>激活值、梯度值</strong>会随着计算过程发生变化，将它们归类到<strong>动态值</strong>。 </p>
-<ul>
-<li><p>模型显存（Model Memory)</p>
-</li>
-<li><p>优化器状态（Optimizer status）</p>
-</li>
-<li><p>梯度值（Gradient）</p>
-</li>
-<li><p>激活值（Activation）</p>
-</li>
-<li><p>总结[2]<br><strong>xB的大模型，训练的显存占用约为12-16x GB</strong>。（默认全精度float32存储）</p>
-</li>
-</ul>
-<h3><span id="训练的并行计算公式1">训练的并行计算公式[1]</span><a href="#训练的并行计算公式1" class="header-anchor">#</a></h3><ul>
-<li>3D并行</li>
-<li>重计算（Recomputation）</li>
-<li>Zero方法</li>
-</ul>
-<h1><span id="推理场景">推理场景</span><a href="#推理场景" class="header-anchor">#</a></h1><h3><span id="公式1">公式[1]</span><a href="#公式1" class="header-anchor">#</a></h3><p>  1.2 * ModelMemory</p>
-<h1><span id="工具">工具</span><a href="#工具" class="header-anchor">#</a></h1><ul>
-<li><p>使用 <strong>HuggingFace Accelerate Web 工具</strong>计算，实际值 &#x3D; Total Size x 1.2<br><a href="https://huggingface.co/spaces/hf-accelerate/model-memory-usage">model-memory-usage</a> git</p>
-</li>
-<li><p>使用 <strong>HuggingFace Accelerate 命令行工具</strong>计算</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">accelerate estimate-memory meta-llama/Llama-2-13b-chat-hf</span></span><br></pre></td></tr></table></figure></li>
-</ul>
-<h1><span id="参考">参考</span><a href="#参考" class="header-anchor">#</a></h1><ol>
-<li><p><a href="https://zhuanlan.zhihu.com/p/687226668">[LLM]大模型显存计算公式与优化</a>  定量</p>
-</li>
-<li><p><a href="https://zhuanlan.zhihu.com/p/680434161">大模型训练显存估算</a>  定性</p>
-</li>
-</ol>
+<h1><span id="显存估算">显存估算</span><a href="#显存估算" class="header-anchor">#</a></h1><p><a href="https://candied-skunk-1ca.notion.site/e4e6bd5f7c43430fa2e805c5a2777308?pvs=4">显存估算</a></p>
 ]]></content>
       <categories>
         <category>AIGC</category>
@@ -4087,38 +4037,12 @@
       </tags>
   </entry>
   <entry>
-    <title>(实战)Pytorch</title>
+    <title>(实战)PyTorch</title>
     <url>/www6vHomeAIGC/2023/03/28/gptPytorch/</url>
     <content><![CDATA[<p></p>
 <span id="more"></span>
 
-
-<h1><span id="pytorch课程-1">PyTorch课程 [1]</span><a href="#pytorch课程-1" class="header-anchor">#</a></h1><ul>
-<li><p>第一章：张量的计算和操作</p>
-<ul>
-<li><strong>常见张量计算</strong></li>
-<li>张量的几何操作<br>【用的不多】</li>
-<li>爱因斯坦求和 [11]</li>
-<li><strong>pytorch求导</strong></li>
-</ul>
-</li>
-<li><p>第三章：训练数据的处理</p>
-</li>
-<li><p>第四章：深入理解pytorch的模型</p>
-<ul>
-<li>pytorch的<strong>损失函数</strong> [10]</li>
-</ul>
-</li>
-</ul>
-<h1><span id="教程2">教程[2]</span><a href="#教程2" class="header-anchor">#</a></h1><h1><span id="参考">参考</span><a href="#参考" class="header-anchor">#</a></h1><h3><span id="基础">基础</span><a href="#基础" class="header-anchor">#</a></h3><ol>
-<li><a href="https://github.com/www6v/AIGC/tree/master/framework/pytorch">Pytorch</a>  卢老师</li>
-<li><a href="https://mp.weixin.qq.com/s/qrSLPcc9Pmyc2cWOYgQ1Jw">《PyTorch实用教程》（第二版）开源了！</a>  PDF电子版<br><a href="https://github.com/www6v/PyTorch-Tutorial-2nd">PyTorch 实用教程（第二版）</a> git<br><a href="https://tingsongyu.github.io/PyTorch-Tutorial-2nd/">PyTorch 实用教程（第二版）</a>  gitbook</li>
-</ol>
-<h3><span id="分布式">分布式</span><a href="#分布式" class="header-anchor">#</a></h3><p>1xx. <a href="https://zhuanlan.zhihu.com/p/343951042">PyTorch 源码解读之 DP &amp; DDP：模型并行和分布式训练解析</a> 源码<br>1xx. <a href="https://www.bilibili.com/video/BV1xZ4y1S7dG/">33、完整讲解PyTorch多GPU分布式训练代码编写</a>   V<br>    DP不建议使用,  DDP建议使用<br>    <a href="https://pytorch.org/tutorials/beginner/dist_overview.html">PyTorch Distributed Overview</a></p>
-<h3><span id="basic">basic</span><a href="#basic" class="header-anchor">#</a></h3><ol start="10">
-<li><a href="https://www.zhihu.com/tardis/bd/art/35709485?source_id=1001">损失函数｜交叉熵损失函数</a></li>
-<li><a href="https://zhuanlan.zhihu.com/p/672346603">看图学 AI：einsum 爱因斯坦求和约定到底是怎么回事？</a></li>
-</ol>
+<h1><span id="pytorch-实战">PyTorch 实战</span><a href="#pytorch-实战" class="header-anchor">#</a></h1><p><a href="https://candied-skunk-1ca.notion.site/PyTorch-bae29b5883fd45f7a20c97918382da12?pvs=4">(实战)PyTorch</a></p>
 ]]></content>
       <categories>
         <category>AIGC</category>
