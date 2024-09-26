@@ -21,17 +21,15 @@
   </script>
 
   <meta property="og:type" content="article">
-<meta property="og:title" content="NLP+LLM">
+<meta property="og:title" content="NLP &amp; LLM">
 <meta property="og:url" content="https://www6v.github.io/2023/02/05/gptNLPTask/index.html">
 <meta property="og:site_name" content="www6v的博客">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://www6v.github.io/www6vHomeAIGC/2023/02/05/gptNLPTask/NLP_tasks.jpg">
 <meta property="article:published_time" content="2023-02-05T08:37:13.000Z">
-<meta property="article:modified_time" content="2024-09-26T09:38:29.226Z">
+<meta property="article:modified_time" content="2024-09-26T10:20:34.571Z">
 <meta property="article:author" content="Wang Wei">
 <meta property="article:tag" content="NLP">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://www6v.github.io/www6vHomeAIGC/2023/02/05/gptNLPTask/NLP_tasks.jpg">
 
 <link rel="canonical" href="https://www6v.github.io/2023/02/05/gptNLPTask/">
 
@@ -46,7 +44,7 @@
   };
 </script>
 
-  <title>NLP+LLM | www6v的博客</title>
+  <title>NLP & LLM | www6v的博客</title>
   
 
 
@@ -203,7 +201,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          NLP+LLM
+          NLP & LLM
         </h1>
 
         <div class="post-meta">
@@ -226,7 +224,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2024-09-26 17:38:29" itemprop="dateModified" datetime="2024-09-26T17:38:29+08:00">2024-09-26</time>
+                <time title="修改时间：2024-09-26 18:20:34" itemprop="dateModified" datetime="2024-09-26T18:20:34+08:00">2024-09-26</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -256,101 +254,8 @@
         <p></p>
 <span id="more"></span>
 
-<h2><span id="目录">目录</span><a href="#目录" class="header-anchor">#</a></h2><div class="toc">
 
-<!-- toc -->
-
-<ul>
-<li><a href="#nlp%E4%BB%BB%E5%8A%A12">NLP任务[2]</a></li>
-<li><a href="#%E8%87%AA%E7%84%B6%E8%AF%AD%E8%A8%80%E5%A4%84%E7%90%863">自然语言处理[3]</a><ul>
-<li><a href="#%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5">基本概念</a></li>
-<li><a href="#%E4%BF%A1%E6%81%AF%E6%8A%BD%E5%8F%96">信息抽取</a></li>
-<li><a href="#%E6%99%BA%E8%83%BD%E9%97%AE%E7%AD%94">智能问答</a></li>
-</ul>
-</li>
-<li><a href="#nlpllm">NLP+LLM</a><ul>
-<li><a href="#%E5%A4%A7%E6%A8%A1%E5%9E%8B%E7%94%A8%E4%BA%8Enlp%E7%9A%84%E8%8C%83%E5%BC%8F-1">大模型用于NLP的范式 [1]</a></li>
-</ul>
-</li>
-<li><a href="#%E5%8F%82%E8%80%83">参考</a></li>
-</ul>
-<!-- tocstop -->
-
-</div>
-
-<h1><span id="nlp任务2">NLP任务[2]</span><a href="#nlp任务2" class="header-anchor">#</a></h1><img src="/www6vHomeAIGC/2023/02/05/gptNLPTask/NLP_tasks.jpg" class>
-
-
-<ul>
-<li><strong>文本摘要</strong> text summarization</li>
-<li><strong>信息提取</strong> information extraction</li>
-<li><strong>问答</strong> question answering</li>
-<li><strong>文本分类</strong> text classification</li>
-<li>对话 conversation</li>
-<li>代码生成 code generation</li>
-<li><strong>推理</strong> reasoning</li>
-</ul>
-<h1><span id="自然语言处理3">自然语言处理[3]</span><a href="#自然语言处理3" class="header-anchor">#</a></h1><h3><span id="基本概念">基本概念</span><a href="#基本概念" class="header-anchor">#</a></h3><ul>
-<li><p>类型</p>
-<ul>
-<li>自然语言理解（Natural Language  Understanding，NLU）</li>
-<li>自然语言生成（Natural Language Generation，NLG）</li>
-</ul>
-</li>
-<li><p>主要难点</p>
-<ul>
-<li>自然语言处理难的<strong>根本原因</strong>：自然语言在各个层面都广泛存在的各种各样的<strong>歧义性</strong></li>
-</ul>
-</li>
-</ul>
-<h3><span id="信息抽取">信息抽取</span><a href="#信息抽取" class="header-anchor">#</a></h3><ul>
-<li><p>概述<br>从自然语言构成的<strong>非结构化文本</strong>中抽取指定类型的实体、关系、事件等信息，进而形成<strong>结构化数据</strong>。</p>
-</li>
-<li><p>命名实体识别（Named Entity Recognition，** NER**）</p>
-</li>
-<li><p>关系抽取（Relation Extraction，RE）</p>
-</li>
-<li><p>事件抽取（Event Extraction）</p>
-</li>
-</ul>
-<h3><span id="智能问答">智能问答</span><a href="#智能问答" class="header-anchor">#</a></h3><ul>
-<li><p>类型</p>
-<ul>
-<li>事实类（Factoid）</li>
-<li>是非类（Yes&#x2F;No）</li>
-<li>定义类（Definition）</li>
-<li>列表类（List）</li>
-<li>比较类（Comparison）<br>【多跳】</li>
-<li>意见类（Opinion）</li>
-<li>指导类（How-to）</li>
-</ul>
-</li>
-<li><p>主要类型</p>
-<ul>
-<li>阅读理解（Machine Reading Comprehension，MRC）</li>
-<li>表格问答（Table based Question Answering, TBQA）</li>
-<li>社区问答（Community Question Answering，CQA）</li>
-<li>知识图谱问答（Knowledge based Question Answering，KBQA）</li>
-<li>开放领域问答（Open-domain Question Answering，ODQA）</li>
-</ul>
-</li>
-</ul>
-<h1><span id="nlpllm">NLP+LLM</span><a href="#nlpllm" class="header-anchor">#</a></h1><h3><span id="大模型用于nlp的范式-1">大模型用于NLP的范式 [1]</span><a href="#大模型用于nlp的范式-1" class="header-anchor">#</a></h3><ul>
-<li>用于NLP的LLM分类法<ul>
-<li>包括参数冻结范式（a）<br>zero-shot  few-shot </li>
-<li>参数调整范式（b）<br>【PEFT 全参数】</li>
-</ul>
-</li>
-</ul>
-<h1><span id="参考">参考</span><a href="#参考" class="header-anchor">#</a></h1><p>1.《Large Language Models Meet NLP: A Survey》<br>  <a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/dRlkv24vTCeUiVvRGmDdQg">有趣的两个RAG大模型问答新优化思路：兼看大模型与NLP的结合范式 </a><br>  大模型时代的NLP的一些结合方式</p>
-<ol start="2">
-<li><p><a target="_blank" rel="noopener" href="https://www.nlplanet.org/">NLPlanet | Natural Language Processing Community</a></p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="https://intro-nlp.github.io/">自然语言处理导论</a><br>第一章 绪论<br>第七章 信息抽取<br>第十章 智能问答</p>
-</li>
-</ol>
-<p>1xx. <a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s?__biz=MzAxMjc3MjkyMg==&mid=2648399456&idx=1&sn=af2ee30aee9e7f6ed441b8335de033b1">关于ChatGPT解锁NLP任务的一次总结汇报：从应用变化、14类NLP任务使用案例看选型思考</a></p>
-<p>1xx. <a target="_blank" rel="noopener" href="https://www.deeplearning.ai/resources/natural-language-processing/">A Complete Guide to Natural Language Processing</a></p>
+<h1><span id="nlp-amp-llm">NLP &amp; LLM</span><a href="#nlp-amp-llm" class="header-anchor">#</a></h1><p><a target="_blank" rel="noopener" href="https://candied-skunk-1ca.notion.site/NLP-LLM-10dbfe21108480ae8b5cc825540816b0?pvs=4">NLP &amp; LLM</a></p>
 
     </div>
 
@@ -366,7 +271,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="https://www6v.github.io/2023/02/05/gptNLPTask/" title="NLP+LLM">https://www6v.github.io/2023/02/05/gptNLPTask/</a>
+    <a href="https://www6v.github.io/2023/02/05/gptNLPTask/" title="NLP &amp; LLM">https://www6v.github.io/2023/02/05/gptNLPTask/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
