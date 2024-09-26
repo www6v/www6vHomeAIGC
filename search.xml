@@ -240,6 +240,7 @@
 <h2><span id="llops">LLOps</span><a href="#llops" class="header-anchor">#</a></h2><ul>
 <li><strong><a href="/www6vHomeAIGC/2023/05/24/gptLLamaFactory/" title="LLama-Factory">LLama-Factory</a></strong></li>
 <li><strong><a href="/www6vHomeAIGC/2023/07/01/gptGPUComputing/" title="显存估算">显存估算</a></strong> </li>
+<li><strong><a href="/www6vHomeAIGC/2023/09/26/gptLLMOpsPaaS/" title="LLM PaaS">LLM PaaS</a></strong>  </li>
 <li><a href="/www6vHomeAIGC/2023/05/23/gptGPU/" title="GPU 算力">GPU 算力</a> </li>
 <li><a href="/www6vHomeAIGC/2022/12/28/gptLLMOps/" title="LLMOps">LLMOps</a></li>
 </ul>
@@ -972,6 +973,23 @@
       </categories>
       <tags>
         <tag>PEFT</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>LLM PaaS</title>
+    <url>/www6vHomeAIGC/2023/09/26/gptLLMOpsPaaS/</url>
+    <content><![CDATA[<p></p>
+<span id="more"></span>
+
+
+<h1><span id="llm-paas">LLM PaaS</span><a href="#llm-paas" class="header-anchor">#</a></h1><p><a href="https://candied-skunk-1ca.notion.site/9ddf2032d70b4722ad34a48cb305d80b?pvs=4">LLM PaaS</a></p>
+]]></content>
+      <categories>
+        <category>AIGC</category>
+        <category>LLMOps</category>
+      </categories>
+      <tags>
+        <tag>LLMOps</tag>
       </tags>
   </entry>
   <entry>
