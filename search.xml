@@ -180,7 +180,8 @@
 </ul>
 </li>
 <li>Instruction Diversity<ul>
-<li><strong><a href="/www6vHomeAIGC/2023/02/21/gptSelfInstruct/" title="(原理)SELF-INSTRUCT, Self-QA">(原理)SELF-INSTRUCT, Self-QA</a></strong></li>
+<li><strong><a href="/www6vHomeAIGC/2023/02/21/gptSelfInstruct/" title="(原理)SELF-INSTRUCT">(原理)SELF-INSTRUCT</a></strong> </li>
+<li><strong><a href="/www6vHomeAIGC/2023/09/27/gptDataSelfQA/" title="(原理|实战)Self-QA">(原理|实战)Self-QA</a></strong></li>
 </ul>
 </li>
 <li>Instruction Complexity  <ul>
@@ -973,6 +974,22 @@
       </categories>
       <tags>
         <tag>PEFT</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>(原理|实战)Self-QA</title>
+    <url>/www6vHomeAIGC/2023/09/27/gptDataSelfQA/</url>
+    <content><![CDATA[<p></p>
+<span id="more"></span>
+
+<h1><span id="self-qa">Self-QA</span><a href="#self-qa" class="header-anchor">#</a></h1><p><a href="https://candied-skunk-1ca.notion.site/Self-QA-10ebfe21108480999eadec23ffadb6fe?pvs=4">(原理|实战)Self-QA</a></p>
+]]></content>
+      <categories>
+        <category>AIGC</category>
+        <category>Data</category>
+      </categories>
+      <tags>
+        <tag>Data</tag>
       </tags>
   </entry>
   <entry>
@@ -6411,13 +6428,13 @@
       </tags>
   </entry>
   <entry>
-    <title>(原理)SELF-INSTRUCT, Self-QA</title>
+    <title>(原理)SELF-INSTRUCT</title>
     <url>/www6vHomeAIGC/2023/02/21/gptSelfInstruct/</url>
     <content><![CDATA[<p></p>
 <span id="more"></span>
 
 
-<h1><span id="self-instruct-self-qa">SELF-INSTRUCT, Self-QA</span><a href="#self-instruct-self-qa" class="header-anchor">#</a></h1><p><a href="https://candied-skunk-1ca.notion.site/SELF-INSTRUCT-Self-QA-10dbfe21108480adb3c9c6b4d13b57d0?pvs=4">(原理)SELF-INSTRUCT, Self-QA</a></p>
+<h1><span id="self-instruct">SELF-INSTRUCT</span><a href="#self-instruct" class="header-anchor">#</a></h1><p><a href="https://candied-skunk-1ca.notion.site/SELF-INSTRUCT-10dbfe21108480adb3c9c6b4d13b57d0?pvs=4">(原理)SELF-INSTRUCT</a></p>
 ]]></content>
       <categories>
         <category>AIGC</category>
