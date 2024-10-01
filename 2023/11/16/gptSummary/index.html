@@ -26,7 +26,7 @@
 <meta property="og:site_name" content="www6v的博客">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-11-16T07:02:55.000Z">
-<meta property="article:modified_time" content="2024-10-01T04:15:24.139Z">
+<meta property="article:modified_time" content="2024-10-01T11:08:02.529Z">
 <meta property="article:author" content="Wang Wei">
 <meta property="article:tag" content="AIGC">
 <meta name="twitter:card" content="summary">
@@ -228,7 +228,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2024-10-01 12:15:24" itemprop="dateModified" datetime="2024-10-01T12:15:24+08:00">2024-10-01</time>
+                <time title="修改时间：2024-10-01 19:08:02" itemprop="dateModified" datetime="2024-10-01T19:08:02+08:00">2024-10-01</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -273,6 +273,7 @@
 <li><a href="#finetuning">FineTuning *</a></li>
 <li><a href="#%E5%9E%82%E7%B1%BB%E6%A8%A1%E5%9E%8B">垂类模型</a></li>
 <li><a href="#llops">LLOps</a></li>
+<li><a href="#mlsys">MLSys</a></li>
 <li><a href="#prompt">Prompt</a></li>
 <li><a href="#langchain">Langchain</a></li>
 <li><a href="#study">Study</a></li>
@@ -330,8 +331,7 @@
 <li><a href="/www6vHomeAIGC/2023/02/03/gptContinualPretraining/" title="(原理|实战)继续Pre-Training">(原理|实战)继续Pre-Training</a>  </li>
 <li><a href="/www6vHomeAIGC/2023/02/21/gptChineseLlama/" title="(实战)Chinese-LLaMA PT+SFT">(实战)Chinese-LLaMA PT+SFT</a>   </li>
 <li>分布式 <ul>
-<li><strong><a href="/www6vHomeAIGC/2023/01/06/gptTrainParallelism/" title="(原理)分布式训练">(原理)分布式训练</a></strong> </li>
-<li><strong><a href="/www6vHomeAIGC/2023/09/08/gptTrainCommunication/" title="(原理)通信原语">(原理)通信原语</a></strong>     </li>
+<li><strong><a href="/www6vHomeAIGC/2023/01/06/gptTrainParallelism/" title="(原理)分布式训练">(原理)分布式训练</a></strong>     </li>
 <li><strong><a href="/www6vHomeAIGC/2023/09/08/gptTrainPipelineParallelism/" title="(原理|实战)流水线并行(PP)">(原理|实战)流水线并行(PP)</a></strong> </li>
 <li><strong><a href="/www6vHomeAIGC/2023/09/08/gptTrainTensorParallelism/" title="(原理)张量并行(TP)">(原理)张量并行(TP)</a></strong></li>
 <li>DP<ul>
@@ -497,6 +497,10 @@
 <li><a href="/www6vHomeAIGC/2023/05/23/gptGPU/" title="GPU 算力">GPU 算力</a> </li>
 <li><a href="/www6vHomeAIGC/2022/12/28/gptLLMOps/" title="LLMOps">LLMOps</a></li>
 </ul>
+<h2><span id="mlsys">MLSys</span><a href="#mlsys" class="header-anchor">#</a></h2><ul>
+<li><strong><a href="/www6vHomeAIGC/2023/09/08/gptTrainCommunication/" title="(原理)通信原语">(原理)通信原语</a></strong> </li>
+<li><strong><a href="/www6vHomeAIGC/2023/10/01/gptParameterServer/" title="Parameter Server">Parameter Server</a></strong></li>
+</ul>
 <h2><span id="prompt">Prompt</span><a href="#prompt" class="header-anchor">#</a></h2><ul>
 <li><a href="/www6vHomeAIGC/2022/11/10/gptPromptEngineering/" title="(原理)Prompt Engineering">(原理)Prompt Engineering</a></li>
 <li><a href="/www6vHomeAIGC/2023/02/08/gptCOT/" title="COT">COT</a> </li>
@@ -553,8 +557,8 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/www6vHomeAIGC/2023/09/27/gptDataSelfQA/" rel="prev" title="(原理|实战)Self-QA">
-      <i class="fa fa-chevron-left"></i> (原理|实战)Self-QA
+    <a href="/www6vHomeAIGC/2023/10/01/gptParameterServer/" rel="prev" title="Parameter Server">
+      <i class="fa fa-chevron-left"></i> Parameter Server
     </a></div>
       <div class="post-nav-item">
     <a href="/www6vHomeAIGC/2024/01/12/gptPEFTQLora/" rel="next" title="(实战)PEFT QLoRA">
@@ -631,20 +635,20 @@
       <div class="site-state-item site-state-posts">
           <a href="/www6vHomeAIGC/archives/">
         
-          <span class="site-state-item-count">190</span>
+          <span class="site-state-item-count">191</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/www6vHomeAIGC/categories/">
           
-        <span class="site-state-item-count">70</span>
+        <span class="site-state-item-count">71</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/www6vHomeAIGC/tags/">
           
-        <span class="site-state-item-count">65</span>
+        <span class="site-state-item-count">66</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>

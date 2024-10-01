@@ -21,6 +21,7 @@
 <li><a href="#finetuning">FineTuning *</a></li>
 <li><a href="#%E5%9E%82%E7%B1%BB%E6%A8%A1%E5%9E%8B">垂类模型</a></li>
 <li><a href="#llops">LLOps</a></li>
+<li><a href="#mlsys">MLSys</a></li>
 <li><a href="#prompt">Prompt</a></li>
 <li><a href="#langchain">Langchain</a></li>
 <li><a href="#study">Study</a></li>
@@ -78,8 +79,7 @@
 <li><a href="/www6vHomeAIGC/2023/02/03/gptContinualPretraining/" title="(原理|实战)继续Pre-Training">(原理|实战)继续Pre-Training</a>  </li>
 <li><a href="/www6vHomeAIGC/2023/02/21/gptChineseLlama/" title="(实战)Chinese-LLaMA PT+SFT">(实战)Chinese-LLaMA PT+SFT</a>   </li>
 <li>分布式 <ul>
-<li><strong><a href="/www6vHomeAIGC/2023/01/06/gptTrainParallelism/" title="(原理)分布式训练">(原理)分布式训练</a></strong> </li>
-<li><strong><a href="/www6vHomeAIGC/2023/09/08/gptTrainCommunication/" title="(原理)通信原语">(原理)通信原语</a></strong>     </li>
+<li><strong><a href="/www6vHomeAIGC/2023/01/06/gptTrainParallelism/" title="(原理)分布式训练">(原理)分布式训练</a></strong>     </li>
 <li><strong><a href="/www6vHomeAIGC/2023/09/08/gptTrainPipelineParallelism/" title="(原理|实战)流水线并行(PP)">(原理|实战)流水线并行(PP)</a></strong> </li>
 <li><strong><a href="/www6vHomeAIGC/2023/09/08/gptTrainTensorParallelism/" title="(原理)张量并行(TP)">(原理)张量并行(TP)</a></strong></li>
 <li>DP<ul>
@@ -244,6 +244,10 @@
 <li><strong><a href="/www6vHomeAIGC/2023/09/26/gptLLMOpsPaaS/" title="LLM PaaS">LLM PaaS</a></strong>  </li>
 <li><a href="/www6vHomeAIGC/2023/05/23/gptGPU/" title="GPU 算力">GPU 算力</a> </li>
 <li><a href="/www6vHomeAIGC/2022/12/28/gptLLMOps/" title="LLMOps">LLMOps</a></li>
+</ul>
+<h2><span id="mlsys">MLSys</span><a href="#mlsys" class="header-anchor">#</a></h2><ul>
+<li><strong><a href="/www6vHomeAIGC/2023/09/08/gptTrainCommunication/" title="(原理)通信原语">(原理)通信原语</a></strong> </li>
+<li><strong><a href="/www6vHomeAIGC/2023/10/01/gptParameterServer/" title="Parameter Server">Parameter Server</a></strong></li>
 </ul>
 <h2><span id="prompt">Prompt</span><a href="#prompt" class="header-anchor">#</a></h2><ul>
 <li><a href="/www6vHomeAIGC/2022/11/10/gptPromptEngineering/" title="(原理)Prompt Engineering">(原理)Prompt Engineering</a></li>
@@ -974,6 +978,23 @@
       </categories>
       <tags>
         <tag>PEFT</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Parameter Server</title>
+    <url>/www6vHomeAIGC/2023/10/01/gptParameterServer/</url>
+    <content><![CDATA[<p></p>
+<span id="more"></span>
+
+
+<h1><span id="parameter-server">Parameter Server</span><a href="#parameter-server" class="header-anchor">#</a></h1><p><a href="https://candied-skunk-1ca.notion.site/Parameter-Server-b7ba4d2c8de44339997cff6697f51df5?pvs=4">Parameter Server</a></p>
+]]></content>
+      <categories>
+        <category>AIGC</category>
+        <category>MLSys</category>
+      </categories>
+      <tags>
+        <tag>MLSys</tag>
       </tags>
   </entry>
   <entry>
