@@ -75,7 +75,7 @@
 <h2><span id="training">Training  *</span><a href="#training" class="header-anchor">#</a></h2><ul>
 <li>训练<ul>
 <li><a href="/www6vHomeAIGC/2022/11/19/gptLargeModelTraining/" title="(原理)Training">(原理)Training</a></li>
-<li><a href="/www6vHomeAIGC/2023/01/15/gptLargeModelTrainingPractice/" title="(实战)Training">(实战)Training</a> </li>
+<li><strong><a href="/www6vHomeAIGC/2023/01/15/gptLargeModelTrainingPractice/" title="(实战)Pre-Training">(实战)Pre-Training</a></strong> </li>
 <li><a href="/www6vHomeAIGC/2023/02/03/gptContinualPretraining/" title="(原理|实战)继续Pre-Training">(原理|实战)继续Pre-Training</a>  </li>
 <li><a href="/www6vHomeAIGC/2023/02/21/gptChineseLlama/" title="(实战)Chinese-LLaMA PT+SFT">(实战)Chinese-LLaMA PT+SFT</a>   </li>
 <li>分布式 <ul>
@@ -7588,21 +7588,19 @@
       </tags>
   </entry>
   <entry>
-    <title>(实战)Training</title>
+    <title>(实战)Pre-Training</title>
     <url>/www6vHomeAIGC/2023/01/15/gptLargeModelTrainingPractice/</url>
     <content><![CDATA[<p></p>
 <span id="more"></span>
 
-
-<h1><span id="参考">参考</span><a href="#参考" class="header-anchor">#</a></h1><p>1xx. <a href="https://zhuanlan.zhihu.com/p/636270877">【LLM】从零开始训练大模型</a> ***  未<br>     <a href="https://www.bilibili.com/video/BV1a14y1o7fr/">从零开始训练大模型</a> V<br>1xx. <a href="http://arthurchiao.art/blog/how-to-train-a-gpt-assistant-zh/">[译] 如何训练一个企业级 GPT 助手（OpenAI，2023）</a> 未<br>1xx. <a href="https://github.com/www6v/fullStackLLM/blob/master/08-fine-tuning/huggingface/index.ipynb">chatgpt2 训练</a>  10.5   10.6</p>
-<h3><span id="小模型训练-poc">小模型训练 PoC</span><a href="#小模型训练-poc" class="header-anchor">#</a></h3><p>1xx. <a href="https://zhuanlan.zhihu.com/p/660759033">LLM从0开始预训练系列：1、大模型训练踩坑</a><br>1xx. <a href="http://arthurchiao.art/blog/gpt-as-a-finite-state-markov-chain-zh/">[译] GPT 是如何工作的：200 行 Python 代码实现一个极简 GPT（2023）</a>  未</p>
+<h1><span id="pre-training-实战">Pre-Training 实战</span><a href="#pre-training-实战" class="header-anchor">#</a></h1><p><a href="https://candied-skunk-1ca.notion.site/Pre-Training-4284cd3148a0430185a9ef14041afc56?pvs=4">(实战)Pre-Training</a></p>
 ]]></content>
       <categories>
         <category>AIGC</category>
-        <category>train</category>
+        <category>Pre-Training</category>
       </categories>
       <tags>
-        <tag>train</tag>
+        <tag>Pre-Training</tag>
       </tags>
   </entry>
   <entry>
