@@ -191,12 +191,12 @@
 </ul>
 </li>
 <li>Task composition<ul>
-<li><a href="/www6vHomeAIGC/2023/02/06/gptDatasetSFT/" title="(原理)SFT 数据组合">(原理)SFT 数据组合</a></li>
+<li><strong><a href="/www6vHomeAIGC/2023/02/06/gptDatasetSFT/" title="(原理)SFT 数据组合">(原理)SFT 数据组合</a></strong></li>
 </ul>
 </li>
 </ul>
 <ul>
-<li><a href="/www6vHomeAIGC/2023/04/26/gptDataSFTScaling/" title="(原理)SFT Scaling">(原理)SFT Scaling</a>  </li>
+<li><strong><a href="/www6vHomeAIGC/2023/04/26/gptDataSFTScaling/" title="(原理)SFT Scaling">(原理)SFT Scaling</a></strong>  </li>
 <li><a href="/www6vHomeAIGC/2023/05/05/gptDataSelection/" title="(原理)Data Selection">(原理)Data Selection</a></li>
 </ul>
 </li>
@@ -233,7 +233,7 @@
 </li>
 </ul>
 <h2><span id="垂类模型">垂类模型</span><a href="#垂类模型" class="header-anchor">#</a></h2><ul>
-<li><a href="/www6vHomeAIGC/2023/01/04/gptDomain/" title="垂类大模型">垂类大模型</a> </li>
+<li><strong><a href="/www6vHomeAIGC/2023/01/04/gptDomain/" title="垂类大模型">垂类大模型</a></strong> </li>
 <li><a href="/www6vHomeAIGC/2022/11/24/gptDomainFinance/" title="金融大模型">金融大模型</a>   </li>
 <li><a href="/www6vHomeAIGC/2023/02/07/gptDomainMed/" title="医疗大模型">医疗大模型</a>   </li>
 <li><a href="/www6vHomeAIGC/2024/02/07/gptDomainLaw/" title="法律大模型">法律大模型</a></li>
@@ -3325,48 +3325,7 @@
     <content><![CDATA[<p></p>
 <span id="more"></span>
 
-
-<h1><span id="论文">论文</span><a href="#论文" class="header-anchor">#</a></h1><ul>
-<li>论文地址<br> 《When Scaling Meets LLM Fine-tuning: The Effect of Data, Model and Fine-tuning Method》</li>
-</ul>
-<h1><span id="摘要1">摘要[1]</span><a href="#摘要1" class="header-anchor">#</a></h1><p>这篇论文研究了大型语言模型（LLMs）的微调（finetuning）问题，尤其是在不同规模因素下的微调性能。作者探讨了包括LLM模型大小、预训练数据大小、新微调参数大小和微调数据大小在内的多个因素，并考虑了两种微调方法：全模型微调（FMT）和参数高效微调（PET，包括prompt tuning和LoRA）。研究发现LLM微调遵循基于<strong>功率的乘法联合规模法则</strong>，<strong>LLM模型规模的增加对微调性能的提升大于预训练数据规模的增加，而PET参数规模的增加通常效果不佳</strong>。此外，<strong>微调方法的选择高度依赖于具体任务和微调数据</strong>。</p>
-<p>【 功率的乘法联合规模法则: 微调数据数量 &lt;–&gt; xxx】<br>【模型大小(标题里的Model ) &gt; 预训练数据(标题里的Data),   PET参数(标题里的Fine-tuning Method) 无效】<br>【微调方法的选择高度依赖于具体任务和微调数据】</p>
-<h1><span id="实验方法1">实验方法[1]</span><a href="#实验方法1" class="header-anchor">#</a></h1><p>实验基于两组预训练的双语LLMs（英语&amp;德语，英语&amp;中文），模型大小从1B到16B。作者在WMT机器翻译（英语-德语、英语-中文）和多语言摘要（英语、德语、法语和西班牙语）任务上进行了大规模研究，最多使用20M微调示例。实验设置包括：</p>
-<ul>
-<li><strong>下游任务</strong>：选择机器翻译和多语言摘要作为微调的下游任务。</li>
-<li><strong>LLMs和预训练</strong>：采用解码器仅Transformer模型，使用修改后的UL2目标进行训练。</li>
-<li><strong>微调设置</strong>：研究了三种微调方法（FMT、Prompt和LoRA），并探索了四种不同的规模因素。</li>
-<li><strong>评估</strong>：使用基于token级别的困惑度（PPL）选择最佳检查点进行评估，并使用BLEURT和RougeL评估生成质量。</li>
-</ul>
-<h1><span id="结论1">结论[1]</span><a href="#结论1" class="header-anchor">#</a></h1><ul>
-<li>提出了一个乘法联合规模法则来描述微调数据大小和其他规模因素之间的规模关系。</li>
-<li>LLM模型规模的增加对微调性能的提升大于预训练数据规模的增加。</li>
-<li>PET参数规模的增加对于LoRA和Prompt的效果有限，且有时甚至会导致反向规模效应。</li>
-<li>微调方法的选择对于下游任务来说并不简单，需要根据任务特性和微调数据的可用性来决定。</li>
-<li>微调可能会提高模型对相关任务的零样本泛化能力，尤其是当基础LLM较大时，Prompt和LoRA通常比FMT表现得更好。</li>
-</ul>
-<p>作者指出，尽管研究提供了有价值的见解，但也存在一些局限性，如联合规模法则主要基于封闭生成任务的实证结果，缺乏理论基础。未来的工作将扩展到多模态LLMs，探索微调数据质量的影响，并考虑开放和创造性的生成任务以及微调的多任务设置。</p>
-<h1><span id="重要结论2">重要结论[2]</span><a href="#重要结论2" class="header-anchor">#</a></h1><p>作者们探讨了大型语言模型（LLMs）在微调（finetuning）过程中不同规模因素对性能的影响。以下是论文的一些重要结论及其对“SCALING”概念的解释：</p>
-<ol>
-<li><p><strong>乘法联合缩放法则</strong>：作者提出了一个基于<strong>乘法的联合缩放法则（multiplicative joint scaling law）</strong>，用于描述微调数据大小与其他缩放因素（如LLM模型大小、预训练数据大小、PET参数大小）之间的关系。这个法则表明，<strong>微调性能与这些因素的乘法组合有关</strong>，而不是简单的加法关系。</p>
-</li>
-<li><p><strong>模型大小对微调的影响</strong>：研究发现，<strong>增加LLM模型的大小对微调性能的提升比增加预训练数据的大小更为显著</strong>。这表明在有限资源下，<strong>优先考虑扩大模型规模而不是数据规模</strong>，可能会带来更好的微调效果。</p>
-</li>
-<li><p><strong>参数高效微调（PET）的局限性</strong>：尽管PET方法（如prompt tuning和LoRA）旨在通过优化少量参数来提高性能，但研究发现<strong>增加PET参数的大小对于微调性能的提升效果有限，有时甚至会出现反向缩放现象</strong>。</p>
-</li>
-<li><p><strong>任务和数据依赖性</strong>：微调的缩放特性高度依赖于具体任务和数据。这意味着<strong>没有一种通用的最优微调方法</strong>，选择哪种微调方法需要根据下游任务的特性和可用的微调数据量来决定。</p>
-</li>
-<li><p><strong>微调对零样本泛化能力的影响</strong>：尽管微调通常是为了提高特定任务的性能，但研究发现，基于LLM的微调仍然可以促进对相关任务的零样本泛化能力。特别是PET方法在保留模型的泛化能力方面表现更好。</p>
-</li>
-<li><p><strong>微调数据量的临界点</strong>：论文中还讨论了不同微调方法之间的临界点，即在特定的微调数据量下，一种方法可能比另一种方法表现得更好。这个临界点会随着任务和模型大小的不同而变化。</p>
-</li>
-</ol>
-<p>这些结论对理解LLM微调过程中的“SCALING”具有重要意义。它们揭示了不同规模因素如何相互作用以及它们对微调性能的共同影响，为在实际应用中选择和优化微调策略提供了理论依据。通过这些发现，研究者和实践者可以更好地理解在特定条件下如何有效地缩放和配置他们的模型以获得最佳性能。</p>
-<h1><span id="参考">参考</span><a href="#参考" class="header-anchor">#</a></h1><ol>
-<li><a href>请帮我读篇论文，详细的写出摘要，实验方法，结论</a> kimi</li>
-<li><a href>请帮我读篇论文，论文有哪些重要的结论？ 这些结论是如何解释题目中的SCALING的？</a> kimi</li>
-</ol>
-<p>1xx. <a href="https://mp.weixin.qq.com/s?__biz=MzAxMjc3MjkyMg==&mid=2648409027&idx=1&sn=4083853fd0bfb1790d8df6b4414b6583">值得一看的大模型预训练数据选择策略总结：兼读20240229大模型进展早报 </a><br>《When Scaling Meets LLM Finetuning: The Effect of Data， Model and Finetuning Method»</p>
+<h1><span id="sft-scaling">SFT Scaling</span><a href="#sft-scaling" class="header-anchor">#</a></h1><p><a href="https://candied-skunk-1ca.notion.site/SFT-Scaling-36916e81271a4c1d963d9f357b919508?pvs=4">(原理)SFT Scaling</a></p>
 ]]></content>
       <categories>
         <category>AIGC</category>
@@ -6745,69 +6704,7 @@
     <content><![CDATA[<p></p>
 <span id="more"></span>
 
-<h2><span id="目录">目录</span><a href="#目录" class="header-anchor">#</a></h2><div class="toc">
-
-<!-- toc -->
-
-<ul>
-<li><a href="#%E8%AE%BA%E6%96%87">论文</a></li>
-<li><a href="#%E9%97%AE%E9%A2%981">问题[1]</a></li>
-<li><a href="#%E5%AE%9E%E9%AA%8C%E7%BB%93%E6%9E%9C1">实验结果[1]</a></li>
-<li><a href="#%E9%97%AE%E9%A2%982-%E5%9C%A8sft%E4%B8%AD%E7%BB%93%E5%90%88%E4%B8%89%E7%A7%8D%E8%83%BD%E5%8A%9B%E6%97%B6%E6%98%AF%E5%90%A6%E5%AD%98%E5%9C%A8%E6%80%A7%E8%83%BD%E5%86%B2%E7%AA%81kimipaper">问题2 在SFT中结合三种能力时是否存在性能冲突？[kimi][paper]</a><ul>
-<li><a href="#%E7%BB%93%E8%AE%BA">结论：</a></li>
-</ul>
-</li>
-<li><a href="#%E9%97%AE%E9%A2%983-%E5%AF%BC%E8%87%B4%E6%80%A7%E8%83%BD%E5%86%B2%E7%AA%81%E7%9A%84%E5%85%B3%E9%94%AE%E5%9B%A0%E7%B4%A0%E6%98%AF%E4%BB%80%E4%B9%88kimipaper">问题3 导致性能冲突的关键因素是什么？[kimi][paper]</a></li>
-<li><a href="#%E5%8F%82%E8%80%83">参考</a></li>
-</ul>
-<!-- tocstop -->
-
-</div>
-
-<h1><span id="论文">论文</span><a href="#论文" class="header-anchor">#</a></h1><ul>
-<li>论文地址<br> 《HOW ABILITIES IN LARGE LANGUAGE MODELS ARE AFFECTED BY SUPERVISED FINE-TUNING DATA COM- POSITION》<br>keyword: SFT 数据组合</li>
-</ul>
-<h1><span id="问题1">问题[1]</span><a href="#问题1" class="header-anchor">#</a></h1><p>1、推理、编码和通用能力如何随SFT数据量而变化？<br>2、在SFT中结合三种能力时是否存在性能冲突？<br>3、导致性能冲突的关键因素是什么？<br>4、不同的SFT策略对组合数据有什么影响？</p>
-<h1><span id="实验结果1">实验结果[1]</span><a href="#实验结果1" class="header-anchor">#</a></h1><p>1、不同的能力表现出不同的扩展模式，在数据量相同的情况下，<strong>较大的模型通常表现出更优越的性能</strong>。<br>2、随着数据量的持续增加，<strong>数学推理和代码生成能力也在不断提高</strong>，<strong>一般能力</strong>则是在样本数达到<strong>一千左右</strong>时才得到提升，且提升速度较慢。<br>3、在<strong>数据量较低</strong>的情况下，数据组合会带来各种能力的<strong>提高</strong>，而在<strong>数据量较高</strong>的情况下，能力则会发生<strong>冲突</strong>。<br>4、组成<strong>数据量</strong>会影响<strong>性能</strong>，而<strong>组成比例</strong>的影响则<strong>微乎其微</strong>。</p>
-<p>【模型大小】</p>
-<p>【数据数量】</p>
-<p>【数据数量 &lt;–&gt;  多样性】？</p>
-<p>【组成比例】</p>
-<h1><span id="问题2-在sft中结合三种能力时是否存在性能冲突kimipaper">问题2 在SFT中结合三种能力时是否存在性能冲突？[kimi][paper]</span><a href="#问题2-在sft中结合三种能力时是否存在性能冲突kimipaper" class="header-anchor">#</a></h1><p>问题2 探讨的是在监督式微调（Supervised Fine-Tuning, SFT）中结合推理、编码和通用能力时是否存在性能冲突。</p>
-<h3><span id="结论">结论：</span><a href="#结论" class="header-anchor">#</a></h3><ol>
-<li><p><strong>性能冲突的存在</strong>：在高资源设置下，即当SFT数据集混合使用时，不同能力领域（如数学推理、编码和通用对齐能力）之间会发生性能冲突。然而，在低资源设置下，混合数据源能够提升性能。</p>
-</li>
-<li><p><strong>性能冲突与资源量的关系</strong>：随着数据量的增加，特定任务的性能可能会因为其他任务的存在而下降。这表明在数据量较大时，不同任务之间可能会相互干扰，导致性能冲突。</p>
-</li>
-<li><p><strong>模型大小对性能的影响</strong>：随着模型大小的增加，在低资源设置下，数学和通用能力的性能提升更加明显。</p>
-</li>
-</ol>
-<h1><span id="问题3-导致性能冲突的关键因素是什么kimipaper">问题3 导致性能冲突的关键因素是什么？[kimi][paper]</span><a href="#问题3-导致性能冲突的关键因素是什么kimipaper" class="header-anchor">#</a></h1><p>在SFT（监督式微调）中结合推理、编码和通用能力时，导致性能冲突的关键因素包括：</p>
-<ol>
-<li><p><strong>数据组成和比例</strong>：当不同能力领域的数据混合在一起进行SFT时，如果<strong>数据量充足</strong>，来自其他领域的数据可能会被视为<strong>噪声</strong>，从而影响特定领域的性能。</p>
-</li>
-<li><p><strong>模型大小</strong>：<strong>较大的模型</strong>在相同数据量下通常表现<strong>更好</strong>，并且在低资源设置下对于数学和通用能力的性能增益更大。</p>
-</li>
-<li><p><strong>训练策略</strong>：多任务学习虽然能够保留专业能力，但对通用能力的伤害最大；而顺序训练和混合顺序训练虽然保留了通用能力，但会丢失太多的专业能力。</p>
-</li>
-<li><p><strong>数据量与能力的关系</strong>：数学推理和编码能力随着数据量的增加而持续提高，而通用能力在大约一千个样本后趋于平稳。</p>
-</li>
-<li><p><strong>任务特性差异</strong>：推理和编码任务需要复杂的逻辑来分解任务指令和处理非语言和符号特征，而对齐人类意图则需要多样性和理解模糊的人类指令。</p>
-</li>
-</ol>
-<p>相应的结论包括：</p>
-<ul>
-<li>在<strong>低资源设置下</strong>，混合数据源可以<strong>提高性能</strong>，但在<strong>高资源设置</strong>下，可能会导致<strong>性能下降</strong>。</li>
-<li><strong>数据量</strong>直接<strong>影响力能表现</strong>，而<strong>数据比例</strong>的影响<strong>不显著</strong>。</li>
-<li>提出的<strong>双阶段混合微调（DMT）策略</strong>有效地减轻了多任务学习中的性能冲突和顺序训练中的灾难性遗忘，实现了通用与专业能力之间的平衡。</li>
-</ul>
-<p>这些结论强调了在SFT阶段理解和解决数据组成问题对于全面提高LLMs（大型语言模型）的能力至关重要。</p>
-<h1><span id="参考">参考</span><a href="#参考" class="header-anchor">#</a></h1><ol>
-<li><a href="https://mp.weixin.qq.com/s?__biz=MzAxMjc3MjkyMg==&mid=2648404728&idx=2&sn=1cb2203648271720d421c963ebcc03b3">SFT微调的数据组合及训练策略如何影响大模型性能：4个经典问题及实验结论分享 </a></li>
-</ol>
-<p>1xx. <a href="https://mp.weixin.qq.com/s?__biz=MzAxMjc3MjkyMg==&mid=2648401381&idx=1&sn=c24d896aab990ffdf30107a7c6c1ea4f">再看大模型微调与应用：3大行业18个开源垂直微调模型、微调数据、工具资源及有趣的AIGC应用集合</a> 二 三</p>
-<p>1xx. <a href="https://mp.weixin.qq.com/s?__biz=MzAxMjc3MjkyMg==&mid=2648400009&idx=1&sn=f72c0a9cb7c19184995156c3ef169b74">也谈大模型研发中的微调数据规模评估与质量问题：数据规模大小的影响评估、数据主要问题及清洗项目</a></p>
-<p>1xx. <a href="https://mp.weixin.qq.com/s?__biz=MzAxMjc3MjkyMg==&mid=2648400342&idx=1&sn=d344ced5035fc804f490b00469746fc8">也谈微调数据质量、多样性规模对大模型性能的影响与评估方案：Belle项目开源实验工作报告介绍 </a></p>
+<h1><span id="sft-数据组合">SFT 数据组合</span><a href="#sft-数据组合" class="header-anchor">#</a></h1><p><a href="https://candied-skunk-1ca.notion.site/SFT-0f98cbb2b48d46a182a19ed0ee9fc719?pvs=4">(原理)SFT 数据组合</a></p>
 ]]></content>
       <categories>
         <category>AIGC</category>
@@ -8081,109 +7978,7 @@
     <content><![CDATA[<p></p>
 <span id="more"></span>
 
-<h2><span id="目录">目录</span><a href="#目录" class="header-anchor">#</a></h2><div class="toc">
-
-<!-- toc -->
-
-<ul>
-<li><a href="#domain-specialization-0">Domain Specialization [0]</a><ul>
-<li><a href="#%E6%80%BB%E7%BB%93-chatmind">总结 [chatmind]</a></li>
-</ul>
-</li>
-<li><a href="#%E9%A2%86%E5%9F%9F%E5%BE%AE%E8%B0%83%E6%A8%A1%E5%9E%8B-1">领域微调模型 [1]</a></li>
-<li><a href="#%E5%85%B3%E6%B3%A8%E7%82%B9-2">关注点 [2]</a></li>
-<li><a href="#%E5%8F%82%E8%80%83">参考</a></li>
-</ul>
-<!-- tocstop -->
-
-</div>
-
-<h1><span id="domain-specialization-0">Domain Specialization [0]</span><a href="#domain-specialization-0" class="header-anchor">#</a></h1><img src="/www6vHomeAIGC/2023/01/04/gptDomain/domain.JPG" class>
-
-<p>LLM（Large Language Models）的领域专业化可以理解为将广泛训练的通用LLM调整到特定领域内以实现最佳操作。为了应对第1节中提到的领域专业化的三个挑战，LLM领域专业化的方法可以分为三类：外部增强、提示设计和模型微调。这些类别对应了对LLM的不同访问级别的假设，即无访问（黑盒）、部分访问（灰盒）和完全访问（白盒）。黑盒假设通常表示我们只能访问模型API（例如ChatGPT），除了生成的输出之外不知道任何信息；灰盒假设表示我们有限的信息（例如GPT-3 API中生成的标记的概率），这些信息可以指导我们设计和微调一个合适的提示，以更好地引出领域知识；白盒假设表示我们完全可以访问LLM（例如LLaMA及其变体），包括参数设置、训练数据和模型架构。</p>
-<p>除了基于LLM可访问性的分类法之外，根据使用的训练策略，可以将LLM领域专业化方法分类为以下几种：使用领域特定数据对现有模型进行微调，从头开始为特定领域训练模型，或者使用混合训练策略。另一个分类法可以基于干预级别：预训练干预涉及修改预训练过程以鼓励领域特定知识，微调干预涉及在微调阶段进行调整，推理时干预涉及修改模型在实际应用中的行为以生成更多领域特定的输出。此外，也可以基于评估和反馈机制来建立分类法：固定评估设置了一个恒定的基准，动态评估涉及使用不断变化的基准进行持续性能评估，基于用户反馈的评估使用直接用户输入作为调整模型响应的信号。</p>
-<p>在这份调查中，我们根据LLM的可访问性对现有方法进行分类，并在图2中概述了每种方法。具体来说，1）外部增强（黑盒）不一定需要访问LLM的内部参数空间，使得对资源有限的用户（如计算资源、领域特定数据）最易于访问。如图2（b）所示，通过使用外部资源或工具，将领域特定知识合并到输入提示、生成的输出或两者中，有效地调整LLM的性能而不修改其内部结构。2）提示设计（灰盒）通过访问LLM的梯度或损失值设计各种类型的提示，从而对模型的行为进行更精细的控制。3）模型微调（白盒）需要最多的访问和资源，因为它涉及更新LLM的参数，直接将领域特定知识纳入模型中（图2（d））。</p>
-<p>不同类别方法之间的关系：<br>• 不同的专业化水平：每种方法在不同的专业化水平上操作（即黑盒、灰盒和白盒）。使用外部知识进行增强提供了领域特定信息的集中注入，而提示工程则在输入层面上塑造模型的推理过程。模型微调修改了LLM的内部参数，导致模型行为发生更深刻的变化。</p>
-<p>• 权衡：这些方法在计算成本、实施便利性和泛化能力方面存在不同的权衡。使用外部信息进行增强和设计特定任务的指令通常比LLM的知识更新计算成本低，但可能无法达到相同水平的性能改进。模型微调和神经适配器可以提供更实质性的性能提升，但在实施上可能更具挑战性，并且如果出现过拟合，可能会导致泛化能力降低。</p>
-<p>• 互补性：这三种方法可以独立使用或组合使用，以在领域特定任务上实现更好的性能。例如，可以将外部知识与经过微调的LLM结合起来，充分利用专业化知识和优化的参数。同样，精心设计的提示可以与神经适配器一起使用，引导模型的输出同时利用新学习的领域特定知识。</p>
-<h3><span id="总结-chatmind">总结 [chatmind]</span><a href="#总结-chatmind" class="header-anchor">#</a></h3><ul>
-<li>LLM（Large Language Models）领域专业化<ul>
-<li>领域专业化的定义<ul>
-<li>将广泛训练的通用LLM调整到特定领域内以实现最佳操作</li>
-</ul>
-</li>
-<li>领域专业化的挑战<ul>
-<li>挑战一：领域专业化的需求</li>
-<li>挑战二：领域专业化的数据稀缺性</li>
-<li>挑战三：领域专业化的知识缺乏</li>
-</ul>
-</li>
-<li>LLM领域专业化的方法<ul>
-<li>方法一：<strong>外部增强</strong>  黑盒 <ul>
-<li>利用外部资源来增强LLM的领域专业化</li>
-<li>例如，使用特定领域的数据集进行预训练</li>
-</ul>
-</li>
-<li>方法二：<strong>提示设计</strong> 灰盒<ul>
-<li>设计适当的提示来引导LLM生成符合特定领域需求的内容</li>
-<li>根据领域知识和需求，精心设计提示</li>
-</ul>
-</li>
-<li>方法三：<strong>模型微调</strong> 白盒<ul>
-<li>对预训练的LLM进行微调，使其更适应特定领域的任务和数据</li>
-<li>通过在特定领域的数据集上进行迭代训练，优化模型性能</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>LLM访问级别的假设<ul>
-<li><strong>无访问（黑盒）</strong>假设<ul>
-<li>只能访问模型API，无法获取其他信息</li>
-<li>仅通过生成的输出来进行操作</li>
-</ul>
-</li>
-<li><strong>部分访问（灰盒）</strong>假设<ul>
-<li>拥有有限的信息，如生成的标记概率</li>
-<li>可根据这些信息设计提示来引导LLM生成符合领域知识的内容</li>
-</ul>
-</li>
-<li><strong>完全访问（白盒）</strong>假设<ul>
-<li>可以完全访问LLM，获取其所有信息</li>
-<li>可以根据需要进行修改和优化</li>
-</ul>
-</li>
-<li>不同访问级别的假设对应不同的方法和操作方式</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h1><span id="领域微调模型-1">领域微调模型 [1]</span><a href="#领域微调模型-1" class="header-anchor">#</a></h1><ul>
-<li>注入领域知识，分成三种：<ul>
-<li>继续预训练注入</li>
-<li>微调注入以及</li>
-<li>外挂注入</li>
-</ul>
-</li>
-</ul>
-<h1><span id="关注点-2">关注点 [2]</span><a href="#关注点-2" class="header-anchor">#</a></h1><ul>
-<li><strong>领域相关数据</strong>  是Continue PreTrain的关键</li>
-<li><strong>混合通用数据</strong>以<strong>缓解模型遗忘通用能力</strong></li>
-<li><strong>领域模型Continue PreTrain</strong>时可以同步加入<strong>SFT数据</strong>，即MIP，Multi-Task Instruction PreTraining</li>
-<li>仅用SFT做领域模型时，<strong>资源有限</strong>就用在<strong>Chat模型基础上训练</strong>，<strong>资源充足</strong>就在<strong>Base模型上训练</strong>。（<strong>资源&#x3D;数据+显卡</strong>）<br>+在Chat模型上进行SFT时，请一定<strong>遵循Chat模型原有的系统指令&amp;数据输入格式</strong>。</li>
-<li>领域评测集时必要内容，建议有两份，一份选择题形式自动评测、一份开放形式人工评测。</li>
-</ul>
-<h1><span id="参考">参考</span><a href="#参考" class="header-anchor">#</a></h1><ol start="0">
-<li><p>《Domain Specialization as the Key to Make Large Language Models Disruptive: A Comprehensive Survey》<br><a href="https://zhuanlan.zhihu.com/p/635480023">目前有哪些方式训练一个领域的大语言模型？ Beyond One-Model-Fits-All A Survey of Domain Specialization LLM</a></p>
-</li>
-<li><p><a href="https://mp.weixin.qq.com/s?__biz=MzAxMjc3MjkyMg==&mid=2648401405&idx=1&sn=59baf4a22d9a9abeb42599ac91e11a79">领域微调大模型入局的自我和解：领域微调大模型若一定要做，则务必想的若干个前提条件 </a></p>
-</li>
-<li><p><a href="https://zhuanlan.zhihu.com/p/648798461">领域大模型-训练Trick&amp;落地思考</a></p>
-</li>
-</ol>
-<p>1xx. <a href="https://zhuanlan.zhihu.com/p/642611747">垂直领域大模型的一些思考及开源模型汇总</a><br>1xx. <a href="https://mp.weixin.qq.com/s?__biz=MzAxMjc3MjkyMg==&mid=2648403459&idx=2&sn=0219fc098c208e36cd32940e71089fd2">层出不穷的垂域微调大模型非最全汇总：12大领域、57个领域微调模型概述及对垂直行业问答的一些讨论 </a> 领域模型集合<br>    <a href="https://github.com/www6v/Awesome-Domain-LLM">Awesome-Domain-LLM</a><br>1xx. <a href="https://blog.csdn.net/v_JULY_v/article/details/131550529?spm=1001.2014.3001.5502">医疗金融法律大模型：从ChatDoctor到BloombergGPT&#x2F;FinGPT&#x2F;FinBERT、ChatLaw&#x2F;LawGPT_zh</a><br>1xx. <a href="https://mp.weixin.qq.com/s?__biz=MzAxMjc3MjkyMg==&mid=2648400666&idx=1&sn=bc47e8c4eca6fc4baaded42fa3c6bd77">再谈垂直领域大模型及今日前沿速递：金融领域FinBERT、BloombergGPT以及法律领域微调模型LawGPT_zh</a></p>
-<p>1xx. <a href="/www6vHomeAIGC/2023/01/04/gptLeaderBoard/" title="大模型 排行榜">大模型 排行榜</a> self<br>1xx. <a href="https://github.com/www6v/Awesome-Domain-LLM">Awesome-Domain-LLM</a>  git 全</p>
-<p>1xx. <a href="https://mp.weixin.qq.com/s/jgyIOOzRWAgilcW4HfufNQ">行业大模型落地的一些有趣调研总结：兼看大模型RAG问答四大技术综述 </a>  腾讯 行业大模型调研报告 ***</p>
+<h1><span id="垂类大模型">垂类大模型</span><a href="#垂类大模型" class="header-anchor">#</a></h1><p><a href="https://candied-skunk-1ca.notion.site/05ad83c78a264b4f90310923580070a6?pvs=4">垂类大模型</a></p>
 ]]></content>
       <categories>
         <category>AIGC</category>

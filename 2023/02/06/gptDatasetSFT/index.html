@@ -26,7 +26,7 @@
 <meta property="og:site_name" content="www6v的博客">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-02-06T11:04:41.000Z">
-<meta property="article:modified_time" content="2024-05-05T11:03:43.632Z">
+<meta property="article:modified_time" content="2024-10-01T03:57:57.517Z">
 <meta property="article:author" content="Wang Wei">
 <meta property="article:tag" content="SFT">
 <meta name="twitter:card" content="summary">
@@ -224,7 +224,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2024-05-05 19:03:43" itemprop="dateModified" datetime="2024-05-05T19:03:43+08:00">2024-05-05</time>
+                <time title="修改时间：2024-10-01 11:57:57" itemprop="dateModified" datetime="2024-10-01T11:57:57+08:00">2024-10-01</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -254,69 +254,7 @@
         <p></p>
 <span id="more"></span>
 
-<h2><span id="目录">目录</span><a href="#目录" class="header-anchor">#</a></h2><div class="toc">
-
-<!-- toc -->
-
-<ul>
-<li><a href="#%E8%AE%BA%E6%96%87">论文</a></li>
-<li><a href="#%E9%97%AE%E9%A2%981">问题[1]</a></li>
-<li><a href="#%E5%AE%9E%E9%AA%8C%E7%BB%93%E6%9E%9C1">实验结果[1]</a></li>
-<li><a href="#%E9%97%AE%E9%A2%982-%E5%9C%A8sft%E4%B8%AD%E7%BB%93%E5%90%88%E4%B8%89%E7%A7%8D%E8%83%BD%E5%8A%9B%E6%97%B6%E6%98%AF%E5%90%A6%E5%AD%98%E5%9C%A8%E6%80%A7%E8%83%BD%E5%86%B2%E7%AA%81kimipaper">问题2 在SFT中结合三种能力时是否存在性能冲突？[kimi][paper]</a><ul>
-<li><a href="#%E7%BB%93%E8%AE%BA">结论：</a></li>
-</ul>
-</li>
-<li><a href="#%E9%97%AE%E9%A2%983-%E5%AF%BC%E8%87%B4%E6%80%A7%E8%83%BD%E5%86%B2%E7%AA%81%E7%9A%84%E5%85%B3%E9%94%AE%E5%9B%A0%E7%B4%A0%E6%98%AF%E4%BB%80%E4%B9%88kimipaper">问题3 导致性能冲突的关键因素是什么？[kimi][paper]</a></li>
-<li><a href="#%E5%8F%82%E8%80%83">参考</a></li>
-</ul>
-<!-- tocstop -->
-
-</div>
-
-<h1><span id="论文">论文</span><a href="#论文" class="header-anchor">#</a></h1><ul>
-<li>论文地址<br> 《HOW ABILITIES IN LARGE LANGUAGE MODELS ARE AFFECTED BY SUPERVISED FINE-TUNING DATA COM- POSITION》<br>keyword: SFT 数据组合</li>
-</ul>
-<h1><span id="问题1">问题[1]</span><a href="#问题1" class="header-anchor">#</a></h1><p>1、推理、编码和通用能力如何随SFT数据量而变化？<br>2、在SFT中结合三种能力时是否存在性能冲突？<br>3、导致性能冲突的关键因素是什么？<br>4、不同的SFT策略对组合数据有什么影响？</p>
-<h1><span id="实验结果1">实验结果[1]</span><a href="#实验结果1" class="header-anchor">#</a></h1><p>1、不同的能力表现出不同的扩展模式，在数据量相同的情况下，<strong>较大的模型通常表现出更优越的性能</strong>。<br>2、随着数据量的持续增加，<strong>数学推理和代码生成能力也在不断提高</strong>，<strong>一般能力</strong>则是在样本数达到<strong>一千左右</strong>时才得到提升，且提升速度较慢。<br>3、在<strong>数据量较低</strong>的情况下，数据组合会带来各种能力的<strong>提高</strong>，而在<strong>数据量较高</strong>的情况下，能力则会发生<strong>冲突</strong>。<br>4、组成<strong>数据量</strong>会影响<strong>性能</strong>，而<strong>组成比例</strong>的影响则<strong>微乎其微</strong>。</p>
-<p>【模型大小】</p>
-<p>【数据数量】</p>
-<p>【数据数量 &lt;–&gt;  多样性】？</p>
-<p>【组成比例】</p>
-<h1><span id="问题2-在sft中结合三种能力时是否存在性能冲突kimipaper">问题2 在SFT中结合三种能力时是否存在性能冲突？[kimi][paper]</span><a href="#问题2-在sft中结合三种能力时是否存在性能冲突kimipaper" class="header-anchor">#</a></h1><p>问题2 探讨的是在监督式微调（Supervised Fine-Tuning, SFT）中结合推理、编码和通用能力时是否存在性能冲突。</p>
-<h3><span id="结论">结论：</span><a href="#结论" class="header-anchor">#</a></h3><ol>
-<li><p><strong>性能冲突的存在</strong>：在高资源设置下，即当SFT数据集混合使用时，不同能力领域（如数学推理、编码和通用对齐能力）之间会发生性能冲突。然而，在低资源设置下，混合数据源能够提升性能。</p>
-</li>
-<li><p><strong>性能冲突与资源量的关系</strong>：随着数据量的增加，特定任务的性能可能会因为其他任务的存在而下降。这表明在数据量较大时，不同任务之间可能会相互干扰，导致性能冲突。</p>
-</li>
-<li><p><strong>模型大小对性能的影响</strong>：随着模型大小的增加，在低资源设置下，数学和通用能力的性能提升更加明显。</p>
-</li>
-</ol>
-<h1><span id="问题3-导致性能冲突的关键因素是什么kimipaper">问题3 导致性能冲突的关键因素是什么？[kimi][paper]</span><a href="#问题3-导致性能冲突的关键因素是什么kimipaper" class="header-anchor">#</a></h1><p>在SFT（监督式微调）中结合推理、编码和通用能力时，导致性能冲突的关键因素包括：</p>
-<ol>
-<li><p><strong>数据组成和比例</strong>：当不同能力领域的数据混合在一起进行SFT时，如果<strong>数据量充足</strong>，来自其他领域的数据可能会被视为<strong>噪声</strong>，从而影响特定领域的性能。</p>
-</li>
-<li><p><strong>模型大小</strong>：<strong>较大的模型</strong>在相同数据量下通常表现<strong>更好</strong>，并且在低资源设置下对于数学和通用能力的性能增益更大。</p>
-</li>
-<li><p><strong>训练策略</strong>：多任务学习虽然能够保留专业能力，但对通用能力的伤害最大；而顺序训练和混合顺序训练虽然保留了通用能力，但会丢失太多的专业能力。</p>
-</li>
-<li><p><strong>数据量与能力的关系</strong>：数学推理和编码能力随着数据量的增加而持续提高，而通用能力在大约一千个样本后趋于平稳。</p>
-</li>
-<li><p><strong>任务特性差异</strong>：推理和编码任务需要复杂的逻辑来分解任务指令和处理非语言和符号特征，而对齐人类意图则需要多样性和理解模糊的人类指令。</p>
-</li>
-</ol>
-<p>相应的结论包括：</p>
-<ul>
-<li>在<strong>低资源设置下</strong>，混合数据源可以<strong>提高性能</strong>，但在<strong>高资源设置</strong>下，可能会导致<strong>性能下降</strong>。</li>
-<li><strong>数据量</strong>直接<strong>影响力能表现</strong>，而<strong>数据比例</strong>的影响<strong>不显著</strong>。</li>
-<li>提出的<strong>双阶段混合微调（DMT）策略</strong>有效地减轻了多任务学习中的性能冲突和顺序训练中的灾难性遗忘，实现了通用与专业能力之间的平衡。</li>
-</ul>
-<p>这些结论强调了在SFT阶段理解和解决数据组成问题对于全面提高LLMs（大型语言模型）的能力至关重要。</p>
-<h1><span id="参考">参考</span><a href="#参考" class="header-anchor">#</a></h1><ol>
-<li><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s?__biz=MzAxMjc3MjkyMg==&mid=2648404728&idx=2&sn=1cb2203648271720d421c963ebcc03b3">SFT微调的数据组合及训练策略如何影响大模型性能：4个经典问题及实验结论分享 </a></li>
-</ol>
-<p>1xx. <a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s?__biz=MzAxMjc3MjkyMg==&mid=2648401381&idx=1&sn=c24d896aab990ffdf30107a7c6c1ea4f">再看大模型微调与应用：3大行业18个开源垂直微调模型、微调数据、工具资源及有趣的AIGC应用集合</a> 二 三</p>
-<p>1xx. <a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s?__biz=MzAxMjc3MjkyMg==&mid=2648400009&idx=1&sn=f72c0a9cb7c19184995156c3ef169b74">也谈大模型研发中的微调数据规模评估与质量问题：数据规模大小的影响评估、数据主要问题及清洗项目</a></p>
-<p>1xx. <a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s?__biz=MzAxMjc3MjkyMg==&mid=2648400342&idx=1&sn=d344ced5035fc804f490b00469746fc8">也谈微调数据质量、多样性规模对大模型性能的影响与评估方案：Belle项目开源实验工作报告介绍 </a></p>
+<h1><span id="sft-数据组合">SFT 数据组合</span><a href="#sft-数据组合" class="header-anchor">#</a></h1><p><a target="_blank" rel="noopener" href="https://candied-skunk-1ca.notion.site/SFT-0f98cbb2b48d46a182a19ed0ee9fc719?pvs=4">(原理)SFT 数据组合</a></p>
 
     </div>
 
