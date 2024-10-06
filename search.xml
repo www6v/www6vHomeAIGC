@@ -131,7 +131,11 @@
 </li>
 </ul>
 </li>
+<li>FlashAttention    <ul>
 <li><strong><a href="/www6vHomeAIGC/2023/06/13/gptFlashAttention/" title="(原理)Flash Attention">(原理)Flash Attention</a></strong> </li>
+<li><strong><a href="/www6vHomeAIGC/2023/10/06/gptInferFlashDecoding/" title="(原理)Flash Decoding">(原理)Flash Decoding</a></strong></li>
+</ul>
+</li>
 <li>调度<ul>
 <li><strong><a href="/www6vHomeAIGC/2023/09/18/gptInferContinuousBatching/" title="Continuous Batching">Continuous Batching</a></strong> </li>
 <li><strong><a href="/www6vHomeAIGC/2023/09/18/gptInferChunkedPrefill/" title="Chunked Prefill">Chunked Prefill</a></strong></li>
@@ -141,6 +145,7 @@
 <li><strong><a href="/www6vHomeAIGC/2023/10/05/gptInferDistServe/" title="DistServe">DistServe</a></strong></li>
 </ul>
 </li>
+<li><strong><a href="/www6vHomeAIGC/2023/10/06/gptInferSpeculativeDecoding/" title="Speculative Decoding">Speculative Decoding</a></strong></li>
 </ul>
 </li>
 <li>模型层优化 <ul>
@@ -251,7 +256,7 @@
 </ul>
 <h2><span id="mlsys">MLSys</span><a href="#mlsys" class="header-anchor">#</a></h2><ul>
 <li><strong><a href="/www6vHomeAIGC/2023/09/08/gptTrainCommunication/" title="(原理)通信原语">(原理)通信原语</a></strong> </li>
-<li><strong><a href="/www6vHomeAIGC/2023/10/01/gptParameterServer/" title="Parameter Server">Parameter Server</a></strong></li>
+<li><strong><a href="/www6vHomeAIGC/2023/10/01/gptParameterServer/" title="(原理|实战)Parameter Server">(原理|实战)Parameter Server</a></strong></li>
 </ul>
 <h2><span id="prompt">Prompt</span><a href="#prompt" class="header-anchor">#</a></h2><ul>
 <li><a href="/www6vHomeAIGC/2022/11/10/gptPromptEngineering/" title="(原理)Prompt Engineering">(原理)Prompt Engineering</a></li>
@@ -903,6 +908,40 @@
       </tags>
   </entry>
   <entry>
+    <title>(原理)Flash Decoding</title>
+    <url>/www6vHomeAIGC/2023/10/06/gptInferFlashDecoding/</url>
+    <content><![CDATA[<p></p>
+<span id="more"></span>
+
+
+
+<h1><span id="flash-decoding">Flash Decoding</span><a href="#flash-decoding" class="header-anchor">#</a></h1><p><a href="https://candied-skunk-1ca.notion.site/Flash-Decoding-110bfe2110848085aa6dde60217c486a?pvs=4">(原理)Flash Decoding</a></p>
+]]></content>
+      <categories>
+        <category>AIGC</category>
+        <category>Infer</category>
+      </categories>
+      <tags>
+        <tag>Infer</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Speculative Decoding</title>
+    <url>/www6vHomeAIGC/2023/10/06/gptInferSpeculativeDecoding/</url>
+    <content><![CDATA[<p></p>
+<span id="more"></span>
+
+<h1><span id="speculative-decoding">Speculative Decoding</span><a href="#speculative-decoding" class="header-anchor">#</a></h1><p><a href="https://candied-skunk-1ca.notion.site/Speculative-Decoding-117bfe2110848060a00efd475a0abbac?pvs=4">Speculative Decoding</a></p>
+]]></content>
+      <categories>
+        <category>AIGC</category>
+        <category>infer</category>
+      </categories>
+      <tags>
+        <tag>infer</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>DistServe</title>
     <url>/www6vHomeAIGC/2023/10/05/gptInferDistServe/</url>
     <content><![CDATA[<p></p>
@@ -920,13 +959,13 @@
       </tags>
   </entry>
   <entry>
-    <title>Parameter Server</title>
+    <title>(原理|实战)Parameter Server</title>
     <url>/www6vHomeAIGC/2023/10/01/gptParameterServer/</url>
     <content><![CDATA[<p></p>
 <span id="more"></span>
 
 
-<h1><span id="parameter-server">Parameter Server</span><a href="#parameter-server" class="header-anchor">#</a></h1><p><a href="https://candied-skunk-1ca.notion.site/Parameter-Server-b7ba4d2c8de44339997cff6697f51df5?pvs=4">Parameter Server</a></p>
+<h1><span id="parameter-server">Parameter Server</span><a href="#parameter-server" class="header-anchor">#</a></h1><p><a href="https://candied-skunk-1ca.notion.site/Parameter-Server-b7ba4d2c8de44339997cff6697f51df5?pvs=4">(原理|实战)Parameter Server</a></p>
 ]]></content>
       <categories>
         <category>AIGC</category>
