@@ -149,7 +149,13 @@
 <li>模型层优化 <ul>
 <li>模型压缩<ul>
 <li><strong><a href="/www6vHomeAIGC/2023/02/19/gptQuantization/" title="(原理)量化">(原理)量化</a></strong> </li>
+<li>PTQ<ul>
 <li><strong><a href="/www6vHomeAIGC/2023/03/26/gptQuantizationWeight/" title="(原理)PTQ-Weight Only">(原理)PTQ-Weight Only</a></strong> </li>
+<li><strong><a href="/www6vHomeAIGC/2023/10/12/gptQuantizationInt8/" title="(原理|实战)LLM.int8()">(原理|实战)LLM.int8()</a></strong></li>
+<li><strong><a href="/www6vHomeAIGC/2023/10/12/gptQuantizationGPTQ/" title="(原理|实战)GPTQ">(原理|实战)GPTQ</a></strong></li>
+<li><strong><a href="/www6vHomeAIGC/2023/10/12/gptQuantizationAWQ/" title="(原理|实战)AWQ">(原理|实战)AWQ</a></strong></li>
+</ul>
+</li>
 <li><strong><a href="/www6vHomeAIGC/2024/03/22/gptQuantizationPractice/" title="(实战)量化">(实战)量化</a></strong></li>
 </ul>
 </li>
@@ -706,7 +712,6 @@
 <span id="more"></span>
 
 <h1><span id="量化实战">量化实战</span><a href="#量化实战" class="header-anchor">#</a></h1><p><a href="https://candied-skunk-1ca.notion.site/1213172a99a949ceba7e8e2164710a77?pvs=4">(实战)量化-推理</a></p>
-<p><a href="https://candied-skunk-1ca.notion.site/PTQ-0a18129c05a8447fac9155a56a26ecab?pvs=4">(实战)量化-PTQ</a></p>
 ]]></content>
       <categories>
         <category>AIGC</category>
@@ -911,6 +916,56 @@
       </categories>
       <tags>
         <tag>PEFT</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>(原理|实战)AWQ</title>
+    <url>/www6vHomeAIGC/2023/10/12/gptQuantizationAWQ/</url>
+    <content><![CDATA[<p></p>
+<span id="more"></span>
+
+
+
+<h1><span id="awq">AWQ</span><a href="#awq" class="header-anchor">#</a></h1><p><a href="https://candied-skunk-1ca.notion.site/AWQ-11dbfe211084806396a0fc0f87983446?pvs=4">(原理|实战)AWQ</a></p>
+]]></content>
+      <categories>
+        <category>AIGC</category>
+        <category>量化</category>
+      </categories>
+      <tags>
+        <tag>量化</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>(原理|实战)GPTQ</title>
+    <url>/www6vHomeAIGC/2023/10/12/gptQuantizationGPTQ/</url>
+    <content><![CDATA[<p></p>
+<span id="more"></span>
+
+<h1><span id="gptq">GPTQ</span><a href="#gptq" class="header-anchor">#</a></h1><p><a href="https://candied-skunk-1ca.notion.site/GPTQ-11dbfe21108480cb8510ed7d85a64371?pvs=4">(原理|实战)GPTQ</a></p>
+]]></content>
+      <categories>
+        <category>AIGC</category>
+        <category>量化</category>
+      </categories>
+      <tags>
+        <tag>量化</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>(原理|实战)LLM.int8()</title>
+    <url>/www6vHomeAIGC/2023/10/12/gptQuantizationInt8/</url>
+    <content><![CDATA[<p></p>
+<span id="more"></span>
+
+<h1><span id="llmint8">LLM.int8()</span><a href="#llmint8" class="header-anchor">#</a></h1><p><a href="https://candied-skunk-1ca.notion.site/LLM-int8-11dbfe21108480d0b6adc341aed9ec3d?pvs=4">(原理|实战)LLM.int8()</a></p>
+]]></content>
+      <categories>
+        <category>AIGC</category>
+        <category>量化</category>
+      </categories>
+      <tags>
+        <tag>量化</tag>
       </tags>
   </entry>
   <entry>
