@@ -124,7 +124,6 @@
 <li><strong><a href="/www6vHomeAIGC/2023/06/01/gptInferKVCache/" title="(原理) KV Cache">(原理) KV Cache</a></strong>  </li>
 <li><strong><a href="/www6vHomeAIGC/2023/09/02/gptInferKVCacheOptimize/" title="(原理)KV Cache 优化">(原理)KV Cache 优化</a></strong></li>
 <li>Compress  <ul>
-<li><strong><a href="/www6vHomeAIGC/2023/09/02/gptInferKVCacheStreamingLLM/" title="Streaming LLM">Streaming LLM</a></strong>   Window </li>
 <li><strong><a href="/www6vHomeAIGC/2023/09/02/gptInferKVCacheQuantization/" title="KV Cache 量化">KV Cache 量化</a></strong> Quantization</li>
 </ul>
 </li>
@@ -152,6 +151,10 @@
 <li><strong><a href="/www6vHomeAIGC/2023/02/19/gptQuantization/" title="(原理)量化">(原理)量化</a></strong> </li>
 <li><strong><a href="/www6vHomeAIGC/2023/03/26/gptQuantizationWeight/" title="(原理)PTQ-Weight Only">(原理)PTQ-Weight Only</a></strong> </li>
 <li><strong><a href="/www6vHomeAIGC/2024/03/22/gptQuantizationPractice/" title="(实战)量化">(实战)量化</a></strong></li>
+</ul>
+</li>
+<li>Sparse Attention<ul>
+<li><strong><a href="/www6vHomeAIGC/2023/09/02/gptInferKVCacheStreamingLLM/" title="Streaming LLM">Streaming LLM</a></strong></li>
 </ul>
 </li>
 </ul>
