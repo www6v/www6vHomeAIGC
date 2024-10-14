@@ -154,6 +154,8 @@
 <li><strong><a href="/www6vHomeAIGC/2023/10/12/gptQuantizationInt8/" title="(原理|实战)LLM.int8()">(原理|实战)LLM.int8()</a></strong></li>
 <li><strong><a href="/www6vHomeAIGC/2023/10/12/gptQuantizationGPTQ/" title="(原理|实战)GPTQ">(原理|实战)GPTQ</a></strong></li>
 <li><strong><a href="/www6vHomeAIGC/2023/10/12/gptQuantizationAWQ/" title="(原理|实战)AWQ">(原理|实战)AWQ</a></strong></li>
+<li><strong><a href="/www6vHomeAIGC/2023/10/14/gptQuantizationSmoothQuant/" title="(原理)SmoothQuant">(原理)SmoothQuant</a></strong> </li>
+<li><strong><a href="/www6vHomeAIGC/2023/10/14/gptQuantizationFP8/" title="(原理)FP8">(原理)FP8</a></strong></li>
 </ul>
 </li>
 <li><strong><a href="/www6vHomeAIGC/2024/03/22/gptQuantizationPractice/" title="(实战)量化">(实战)量化</a></strong></li>
@@ -916,6 +918,38 @@
       </categories>
       <tags>
         <tag>PEFT</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>(原理)FP8</title>
+    <url>/www6vHomeAIGC/2023/10/14/gptQuantizationFP8/</url>
+    <content><![CDATA[<p></p>
+<span id="more"></span>
+
+<h1><span id="fp8">FP8</span><a href="#fp8" class="header-anchor">#</a></h1><p><a href="https://candied-skunk-1ca.notion.site/FP8-12c3b58d744e43299dad0badc397f592?pvs=4">(原理)FP8</a></p>
+]]></content>
+      <categories>
+        <category>AIGC</category>
+        <category>量化</category>
+      </categories>
+      <tags>
+        <tag>量化</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>(原理)SmoothQuant</title>
+    <url>/www6vHomeAIGC/2023/10/14/gptQuantizationSmoothQuant/</url>
+    <content><![CDATA[<p></p>
+<span id="more"></span>
+
+<h1><span id="smoothquant">SmoothQuant</span><a href="#smoothquant" class="header-anchor">#</a></h1><p><a href="https://candied-skunk-1ca.notion.site/SmoothQuant-11dbfe21108480fc83f8ea2a495092b7?pvs=4">(原理)SmoothQuant</a></p>
+]]></content>
+      <categories>
+        <category>AIGC</category>
+        <category>量化</category>
+      </categories>
+      <tags>
+        <tag>量化</tag>
       </tags>
   </entry>
   <entry>
@@ -4857,44 +4891,6 @@
       </tags>
   </entry>
   <entry>
-    <title>(原理)多模态 RAG</title>
-    <url>/www6vHomeAIGC/2023/03/14/gptRAGMultimodal/</url>
-    <content><![CDATA[<p></p>
-<span id="more"></span>
-
-<h2><span id="目录">目录</span><a href="#目录" class="header-anchor">#</a></h2><div class="toc">
-
-<!-- toc -->
-
-<ul>
-<li><a href="#%E5%A4%9A%E6%A8%A1%E6%80%81rag-12">多模态RAG [1][2]</a></li>
-<li><a href="#%E5%8F%82%E8%80%83">参考</a><ul>
-<li><a href="#%E5%8E%9F%E7%90%86">原理</a></li>
-</ul>
-</li>
-</ul>
-<!-- tocstop -->
-
-</div>
-
-<h1><span id="多模态rag-12">多模态RAG [1][2]</span><a href="#多模态rag-12" class="header-anchor">#</a></h1><h1><span id="参考">参考</span><a href="#参考" class="header-anchor">#</a></h1><h3><span id="原理">原理</span><a href="#原理" class="header-anchor">#</a></h3><ol>
-<li><p><a href="https://zhuanlan.zhihu.com/p/661465330?utm_id=0">NLP（廿一）：从 RAG 到 Self-RAG —— LLM 的知识增强</a> *** </p>
-</li>
-<li><p>《Retrieving Multimodal Information for Augmented Generation: A Survey》<br><a href="https://zhuanlan.zhihu.com/p/665078079">万字综述：2023年多模态检索增强生成技术(mRAG)最新进展与趋势-图片、代码、图谱、视频、声音、文本</a><br><a href="https://zhuanlan.zhihu.com/p/678812531">多模态RAG综述</a></p>
-</li>
-</ol>
-<p>1xx. <a href="https://mp.weixin.qq.com/s?__biz=MzAxMjc3MjkyMg==&mid=2648409004&idx=2&sn=7f36d3ff5e170442486a5d413373c563">朴素多模态RAG如何实现？兼看RAG上下文过滤方案FILCO及202402大模型早报 </a>    多模态RAG 两种实现方式</p>
-<p>1xx. <a href="https://mp.weixin.qq.com/s/9xU7OOBqee4sM_TZuzQ-Ew">视觉的跨界 Wiki-LLaVA | lmage + Question 的奇妙反应，生成多模态大型语言模型（MLLMs）！</a></p>
-]]></content>
-      <categories>
-        <category>AIGC</category>
-        <category>RAG</category>
-      </categories>
-      <tags>
-        <tag>RAG</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>(实战)多模态 RAG</title>
     <url>/www6vHomeAIGC/2023/03/14/gptRAGMultimodalPractice/</url>
     <content><![CDATA[<p></p>
@@ -4985,6 +4981,44 @@
 <li><a href="https://github.com/langchain-ai/langchain/tree/master/templates/rag-chroma-multi-modal-multi-vector">rag-chroma-multi-modal-multi-vector</a><br>GPT-4V(image summaries embedding) + GPT-4V (answer synthesis)</li>
 </ol>
 <h3><span id="llamaindex">llamaindex</span><a href="#llamaindex" class="header-anchor">#</a></h3><p>1xx. <a href="https://mp.weixin.qq.com/s/93CdvD8FLZjaA7E724bf7g">朴素多模态RAG如何实现？兼看RAG上下文过滤方案FILCO及202402大模型早报 </a><br>1xx. <a href="https://docs.llamaindex.ai/en/stable/examples/multi_modal/gpt4v_multi_modal_retrieval/">Advanced Multi-Modal Retrieval using GPT4V and Multi-Modal Index&#x2F;Retriever</a><br>1xx. <a href="https://www.llamaindex.ai/blog/multimodal-rag-pipeline-with-llamaindex-and-neo4j-a2c542eb0206">Multimodal RAG pipeline with LlamaIndex and Neo4j</a><br>1xx. <a href="https://github.com/tomasonjo/blogs/blob/master/llm/neo4j_llama_multimodal.ipynb">neo4j_llama_multimodal.ipynb</a> git</p>
+]]></content>
+      <categories>
+        <category>AIGC</category>
+        <category>RAG</category>
+      </categories>
+      <tags>
+        <tag>RAG</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>(原理)多模态 RAG</title>
+    <url>/www6vHomeAIGC/2023/03/14/gptRAGMultimodal/</url>
+    <content><![CDATA[<p></p>
+<span id="more"></span>
+
+<h2><span id="目录">目录</span><a href="#目录" class="header-anchor">#</a></h2><div class="toc">
+
+<!-- toc -->
+
+<ul>
+<li><a href="#%E5%A4%9A%E6%A8%A1%E6%80%81rag-12">多模态RAG [1][2]</a></li>
+<li><a href="#%E5%8F%82%E8%80%83">参考</a><ul>
+<li><a href="#%E5%8E%9F%E7%90%86">原理</a></li>
+</ul>
+</li>
+</ul>
+<!-- tocstop -->
+
+</div>
+
+<h1><span id="多模态rag-12">多模态RAG [1][2]</span><a href="#多模态rag-12" class="header-anchor">#</a></h1><h1><span id="参考">参考</span><a href="#参考" class="header-anchor">#</a></h1><h3><span id="原理">原理</span><a href="#原理" class="header-anchor">#</a></h3><ol>
+<li><p><a href="https://zhuanlan.zhihu.com/p/661465330?utm_id=0">NLP（廿一）：从 RAG 到 Self-RAG —— LLM 的知识增强</a> *** </p>
+</li>
+<li><p>《Retrieving Multimodal Information for Augmented Generation: A Survey》<br><a href="https://zhuanlan.zhihu.com/p/665078079">万字综述：2023年多模态检索增强生成技术(mRAG)最新进展与趋势-图片、代码、图谱、视频、声音、文本</a><br><a href="https://zhuanlan.zhihu.com/p/678812531">多模态RAG综述</a></p>
+</li>
+</ol>
+<p>1xx. <a href="https://mp.weixin.qq.com/s?__biz=MzAxMjc3MjkyMg==&mid=2648409004&idx=2&sn=7f36d3ff5e170442486a5d413373c563">朴素多模态RAG如何实现？兼看RAG上下文过滤方案FILCO及202402大模型早报 </a>    多模态RAG 两种实现方式</p>
+<p>1xx. <a href="https://mp.weixin.qq.com/s/9xU7OOBqee4sM_TZuzQ-Ew">视觉的跨界 Wiki-LLaVA | lmage + Question 的奇妙反应，生成多模态大型语言模型（MLLMs）！</a></p>
 ]]></content>
       <categories>
         <category>AIGC</category>
