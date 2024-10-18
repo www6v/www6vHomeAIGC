@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 6.3.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/www6vHomeAIGC/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/www6vHomeAIGC/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/www6vHomeAIGC/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/www6vHomeAIGC/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/www6vHomeAIGC/css/main.css">
+
+
+<link rel="stylesheet" href="/www6vHomeAIGC/lib/font-awesome/css/font-awesome.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"www6v.github.io","root":"/www6vHomeAIGC/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"always","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta property="og:type" content="article">
+<meta property="og:title" content="(原理)Toolformer">
+<meta property="og:url" content="https://www6v.github.io/2023/02/03/gptAgentToolformer/index.html">
+<meta property="og:site_name" content="www6v的博客">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2023-02-03T14:26:11.000Z">
+<meta property="article:modified_time" content="2024-10-16T02:13:16.679Z">
+<meta property="article:author" content="Wang Wei">
+<meta property="article:tag" content="Tool">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="https://www6v.github.io/2023/02/03/gptAgentToolformer/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>(原理)Toolformer | www6v的博客</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/www6vHomeAIGC/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">www6v的博客</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">记录技术点滴</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/www6vHomeAIGC/" rel="section"><i class="fa fa-fw fa-home"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/www6vHomeAIGC/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/www6vHomeAIGC/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/www6vHomeAIGC/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://www6v.github.io/2023/02/03/gptAgentToolformer/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/www6vHomeAIGC/images/avatar.gif">
+      <meta itemprop="name" content="Wang Wei">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="www6v的博客">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          (原理)Toolformer
+        </h1>
+
+        <div class="post-meta">
+
+
+
+
+
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2023-02-03 22:26:11" itemprop="dateCreated datePublished" datetime="2023-02-03T22:26:11+08:00">2023-02-03</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2024-10-16 10:13:16" itemprop="dateModified" datetime="2024-10-16T10:13:16+08:00">2024-10-16</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/www6vHomeAIGC/categories/AIGC/" itemprop="url" rel="index"><span itemprop="name">AIGC</span></a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/www6vHomeAIGC/categories/AIGC/Tool/" itemprop="url" rel="index"><span itemprop="name">Tool</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p></p>
+<span id="more"></span>
+
+<h1><span id="论文">论文</span><a href="#论文" class="header-anchor">#</a></h1><ul>
+<li><p>论文地址<br> <a target="_blank" rel="noopener" href="https://arxiv.org/abs/2302.04761">Toolformer: Language Models Can Teach Themselves to Use Tools</a>  </p>
+</li>
+<li><p>开源地址<br><a target="_blank" rel="noopener" href="https://github.com/lucidrains/toolformer-pytorch">Implementation of Toolformer</a>  git</p>
+</li>
+</ul>
+<h1><span id="toolformer1">Toolformer[1]</span><a href="#toolformer1" class="header-anchor">#</a></h1><ul>
+<li>🔑关键词和摘要<ul>
+<li>Keywords: Large-scale PLMs,  Tool Learning</li>
+<li>xxx<ul>
+<li>驱动语言模型去使用简单的模型来调用外部的工具</li>
+<li>Toolformer通过语言模型的方法去决定去调用哪些API，传入哪些参数</li>
+<li>Tooformer是在自监督层面执行的，只需要对每个API的语言描述</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>⚙️研究设计和结论<ul>
+<li>方法   <ul>
+<li>Toolformer调用示例：xxx</li>
+<li>关键要素：<ul>
+<li>模型对工具的使用应该是自监督的，这样可以省去很大的标注开销</li>
+<li>模型应该自行地去决定在何时间，用何方法来调用工具</li>
+</ul>
+</li>
+<li><strong>方法概要：</strong><ul>
+<li>受到in-context learning的启发，给定少量的人写的关于API的描述，让模型去自行生成潜在API调用的语言建模数据</li>
+<li>构建一个自监督的Loss函数，让模型来决定哪些API的调用有助于它的语言建模的预测</li>
+</ul>
+</li>
+<li><strong>方法细节：</strong><ul>
+<li>xxx<ul>
+<li>给定一个纯文本数据集，构建出一个带有API调用的数据集，然后在此数据集上做微调</li>
+<li>第一步：使用in-context learning来生成大量的潜在可能的API调用</li>
+<li>第二步：执行这些API，返回得到结果</li>
+<li>第三步：检查返回的结果是否有助于语言模型的预测，过滤掉其他的API</li>
+</ul>
+</li>
+<li>API调用采样<ul>
+<li>给每一个API来撰写提示来鼓励模型使用这些API，例如QA的提示是 xxx</li>
+<li>对于文本的每一个位置，如果这个位置是<api>（即API调用的开始）的概率大于一个阈值，则将此位置保留到一个集合I中</api></li>
+<li>对于集合I中的每一个位置，通过模型生成最多m个API调用，并且以结尾（如果生成的调用没有以结尾，直接舍去）</li>
+</ul>
+</li>
+<li>API执行<ul>
+<li>去执行所有的API调用，返回文本序列</li>
+</ul>
+</li>
+<li>API过滤<ul>
+<li>构建自监督的语言模型的loss函数</li>
+<li>第一个的含义：进行API的调用，并且使用API结果的Loss</li>
+<li>第二个的含义：空字符串的Loss和调用API但不返回结果Loss的最小值</li>
+<li>这时我们希望模型使用API并且返回结果对语言建模有帮助，且帮助很明显-&gt;前者的loss显著比后者小</li>
+</ul>
+</li>
+<li>微调和推理<ul>
+<li>在经过如上操作后，就可以得到带有API调用的数据集，然后将模型在上面进行微调</li>
+<li>当模型在解码阶段输出”-&gt;”符号时，意味着需要调用API了，调用得到返回结果然后拼接上去</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>实验<ul>
+<li>模型：GPT-J （67亿参数）</li>
+<li>原始数据：CCNet</li>
+<li>知识探测任务LAMA<ul>
+<li>Toolformer可以大幅超过之前的方法，甚至是GPT-3等大模型</li>
+</ul>
+</li>
+<li>数学数据集</li>
+<li>问答</li>
+<li>这里即使是Toolformer也无法超越GPT-3，可见预训练规模可以囊括更多知识</li>
+<li>模型规模的影响</li>
+<li>模型的参数量到一定规模后才拥有使用工具的能力</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>📚论文贡献<ul>
+<li>优点<ul>
+<li>将语言模型使用外部工具的进行很自然的结合</li>
+<li><strong>不需要标注大量数据，使用自监督的方法进行学习</strong></li>
+</ul>
+</li>
+<li>缺点<ul>
+<li><strong>工具无法交互，也无法链式使用（每个API调用都是独立的）</strong></li>
+<li>定义的工具尚且有限，扩展工具则需要用模型标注新的数据</li>
+<li>随着基础模型zero-shot能力的增强，这种需要构建数据并且fine-tune的做法可能会比较麻烦</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>OpenBMB BMTools: <a target="_blank" rel="noopener" href="https://github.com/OpenBMB/BMTools">https://github.com/OpenBMB/BMTools</a></li>
+</ul>
+<h1><span id="参考">参考</span><a href="#参考" class="header-anchor">#</a></h1><ol>
+<li><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV18s4y1u7nJ/">清华博士带你搞懂大模型自学工具使用（Toolformer)【论文速读】</a> V 有思维导图<br>1xx. <a target="_blank" rel="noopener" href="https://finisky.github.io/toolformer-summary/">使LLM善假于物: Toolformer </a><br>1xx. <a target="_blank" rel="noopener" href="https://lilianweng.github.io/posts/2023-03-15-prompt-engineering/#external-apis">Prompt Engineering </a><br>1xx. <a target="_blank" rel="noopener" href="https://nakaizura.blog.csdn.net/article/details/130817902">Toolformer and Tool Learning（LLMs如何使用工具）</a></li>
+</ol>
+
+    </div>
+
+    
+    
+    
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>Wang Wei
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://www6v.github.io/2023/02/03/gptAgentToolformer/" title="(原理)Toolformer">https://www6v.github.io/2023/02/03/gptAgentToolformer/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/www6vHomeAIGC/tags/Tool/" rel="tag"># Tool</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/www6vHomeAIGC/2023/02/03/gptEmergent/" rel="prev" title="(原理)涌现现象">
+      <i class="fa fa-chevron-left"></i> (原理)涌现现象
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/www6vHomeAIGC/2023/02/05/gptNLPTask/" rel="next" title="NLP & LLM">
+      NLP & LLM <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Wang Wei</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/www6vHomeAIGC/archives/">
+        
+          <span class="site-state-item-count">199</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/www6vHomeAIGC/categories/">
+          
+        <span class="site-state-item-count">73</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/www6vHomeAIGC/tags/">
+          
+        <span class="site-state-item-count">68</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/www6v" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;www6v" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:www6v@126.com" title="E-Mail → mailto:www6v@126.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+      </span>
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2024</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Wang Wei</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/www6vHomeAIGC/lib/anime.min.js"></script>
+  <script src="/www6vHomeAIGC/lib/velocity/velocity.min.js"></script>
+  <script src="/www6vHomeAIGC/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/www6vHomeAIGC/js/utils.js"></script>
+
+<script src="/www6vHomeAIGC/js/motion.js"></script>
+
+
+<script src="/www6vHomeAIGC/js/schemes/muse.js"></script>
+
+
+<script src="/www6vHomeAIGC/js/next-boot.js"></script>
+
+
+
+
+  
+  <script>
+    (function(){
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      bp.src = (curProtocol === 'https') ? 'https://zz.bdstatic.com/linksubmit/push.js' : 'http://push.zhanzhang.baidu.com/push.js';
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+    })();
+  </script>
+
+
+
+
+  
+<script src="/www6vHomeAIGC/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>
