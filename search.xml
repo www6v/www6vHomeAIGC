@@ -1,6 +1,135 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>LLM 推理 汇总</title>
+    <url>/www6vHomeAIGC/2023/12/11/gptInferSummary/</url>
+    <content><![CDATA[<p></p>
+<span id="more"></span>
+
+
+
+<h2><span id="inference">Inference *</span><a href="#inference" class="header-anchor">#</a></h2><ul>
+<li>框架<ul>
+<li><a href="/www6vHomeAIGC/2023/03/21/gptInferFramework/" title="(原理)推理-框架">(原理)推理-框架</a> </li>
+<li><a href="/www6vHomeAIGC/2023/02/02/gptInferFrameworkPractice/" title="(实战)推理-lmdeploy">(实战)推理-lmdeploy</a> </li>
+<li>vLLM<ul>
+<li><strong><a href="/www6vHomeAIGC/2023/05/31/gptInfervLLM/" title="(原理) vLLM">(原理) vLLM</a></strong> </li>
+<li><strong><a href="/www6vHomeAIGC/2023/06/12/gptInfervLLMPractice/" title="(实战) vLLM">(实战) vLLM</a></strong></li>
+</ul>
+</li>
+<li><strong><a href="/www6vHomeAIGC/2023/06/02/gptInferTensorRT/" title="(原理|实战) TensorRT-LLM">(原理|实战) TensorRT-LLM</a></strong> </li>
+<li>Ray<ul>
+<li><a href="/www6vHomeAIGC/2023/06/11/gptInferRay/" title="(原理)推理 Ray">(原理)推理 Ray</a>   </li>
+<li><a href="/www6vHomeAIGC/2023/06/16/gptInferRayPractice/" title="(实战)推理 Ray">(实战)推理 Ray</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>优化<ul>
+<li><a href="/www6vHomeAIGC/2023/01/01/gptInference/" title="(总结)推理优化">(总结)推理优化</a></li>
+<li><p><strong><a href="/www6vHomeAIGC/2023/08/14/gptInferenceSurvey/" title="(综述)推理优化">(综述)推理优化</a></strong></p>
+</li>
+<li><p><strong><a href="/www6vHomeAIGC/2024/09/11/gptInferenceSurvey1/" title="(综述)推理优化">(综述)推理优化</a></strong> </p>
+</li>
+<li><p>系统层优化</p>
+<ul>
+<li>Attention Opt.<ul>
+<li>FlashAttention    <ul>
+<li><strong><a href="/www6vHomeAIGC/2023/06/13/gptFlashAttention/" title="(原理)Flash Attention">(原理)Flash Attention</a></strong> </li>
+<li><strong><a href="/www6vHomeAIGC/2023/11/15/gptInferFlashAttention2/" title="(原理)FlashAttention2">(原理)FlashAttention2</a></strong>  </li>
+<li><strong><a href="/www6vHomeAIGC/2023/10/06/gptInferFlashDecoding/" title="(原理)Flash Decoding">(原理)Flash Decoding</a></strong></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>SpeculativeDecoding<ul>
+<li><strong><a href="/www6vHomeAIGC/2023/10/06/gptInferSpeculativeDecoding/" title="Speculative Decoding">Speculative Decoding</a></strong> </li>
+<li><strong><a href="/www6vHomeAIGC/2023/10/21/gptInferSpeculativeDecodingSurvey/" title="(Survey)Speculative Decoding">(Survey)Speculative Decoding</a></strong> </li>
+<li><strong><a href="/www6vHomeAIGC/2023/11/12/gptInferMedusa/" title="Medusa">Medusa</a></strong>   </li>
+<li><strong><a href="/www6vHomeAIGC/2023/11/12/gptInferEagle/" title="EAGLE">EAGLE</a></strong> </li>
+<li><strong><a href="/www6vHomeAIGC/2023/11/12/gptInferSpecInfer/" title="SpecInfer">SpecInfer</a></strong></li>
+</ul>
+</li>
+<li>Memory Management<ul>
+<li>KVCache<ul>
+<li><strong><a href="/www6vHomeAIGC/2023/06/01/gptInferKVCache/" title="(原理) KV Cache">(原理) KV Cache</a></strong>  </li>
+<li><strong><a href="/www6vHomeAIGC/2023/09/02/gptInferKVCacheOptimize/" title="(原理)KV Cache 优化">(原理)KV Cache 优化</a></strong></li>
+<li><strong><a href="/www6vHomeAIGC/2024/11/15/gptInferKVCacheRadixAttention/" title="(原理|实战)RadixAttention">(原理|实战)RadixAttention</a></strong> </li>
+<li>Compress  <ul>
+<li><strong><a href="/www6vHomeAIGC/2023/09/02/gptInferKVCacheQuantization/" title="KV Cache 量化">KV Cache 量化</a></strong> Quantization</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>系统层优化</p>
+<ul>
+<li>Batch<ul>
+<li><strong><a href="/www6vHomeAIGC/2023/09/18/gptInferContinuousBatching/" title="Continuous Batching">Continuous Batching</a></strong> </li>
+<li><strong><a href="/www6vHomeAIGC/2023/09/18/gptInferChunkedPrefill/" title="Chunked Prefill">Chunked Prefill</a></strong></li>
+</ul>
+</li>
+<li>PD 分离<ul>
+<li><strong><a href="/www6vHomeAIGC/2023/10/05/gptInferDistServe/" title="DistServe">DistServe</a></strong> </li>
+<li><strong><a href="/www6vHomeAIGC/2023/10/19/gptInferMooncake/" title="Mooncake">Mooncake</a></strong></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>模型层优化 </p>
+<ul>
+<li>模型压缩<ul>
+<li><strong><a href="/www6vHomeAIGC/2023/10/21/gptQuantizationSurvey/" title="(Survey)Quantization">(Survey)Quantization</a></strong>   </li>
+<li><strong><a href="/www6vHomeAIGC/2023/02/19/gptQuantization/" title="(原理)量化">(原理)量化</a></strong> </li>
+<li>PTQ<ul>
+<li><strong><a href="/www6vHomeAIGC/2023/03/26/gptQuantizationWeight/" title="(原理)PTQ-Weight Only">(原理)PTQ-Weight Only</a></strong> </li>
+<li><strong><a href="/www6vHomeAIGC/2023/10/12/gptQuantizationInt8/" title="(原理|实战)LLM.int8()">(原理|实战)LLM.int8()</a></strong></li>
+<li><strong><a href="/www6vHomeAIGC/2023/10/12/gptQuantizationGPTQ/" title="(原理|实战)GPTQ">(原理|实战)GPTQ</a></strong></li>
+<li><strong><a href="/www6vHomeAIGC/2023/10/12/gptQuantizationAWQ/" title="(原理|实战)AWQ">(原理|实战)AWQ</a></strong></li>
+<li><strong><a href="/www6vHomeAIGC/2023/10/14/gptQuantizationSmoothQuant/" title="(原理)SmoothQuant">(原理)SmoothQuant</a></strong> </li>
+<li><strong><a href="/www6vHomeAIGC/2023/10/14/gptQuantizationFP8/" title="(原理)FP8">(原理)FP8</a></strong></li>
+</ul>
+</li>
+<li><strong><a href="/www6vHomeAIGC/2024/03/22/gptQuantizationPractice/" title="(实战)量化">(实战)量化</a></strong></li>
+</ul>
+</li>
+<li>Sparse Attention<ul>
+<li><strong><a href="/www6vHomeAIGC/2023/09/02/gptInferKVCacheStreamingLLM/" title="Streaming LLM">Streaming LLM</a></strong></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>其他<ul>
+<li><strong><a href="/www6vHomeAIGC/2023/03/30/gptTemperature/" title="推理常见参数">推理常见参数</a></strong></li>
+</ul>
+</li>
+</ul>
+<h2><span id="llops">LLOps</span><a href="#llops" class="header-anchor">#</a></h2><ul>
+<li><strong><a href="/www6vHomeAIGC/2023/05/24/gptLLamaFactory/" title="LLama-Factory">LLama-Factory</a></strong></li>
+<li><strong><a href="/www6vHomeAIGC/2023/07/01/gptGPUComputing/" title="显存估算">显存估算</a></strong> </li>
+<li><strong><a href="/www6vHomeAIGC/2023/09/26/gptLLMOpsPaaS/" title="LLM PaaS">LLM PaaS</a></strong>  </li>
+<li><a href="/www6vHomeAIGC/2023/05/23/gptGPU/" title="GPU 算力">GPU 算力</a> </li>
+<li><a href="/www6vHomeAIGC/2022/12/28/gptLLMOps/" title="LLMOps">LLMOps</a></li>
+</ul>
+<h2><span id="mlsys">MLSys</span><a href="#mlsys" class="header-anchor">#</a></h2><ul>
+<li><strong><a href="/www6vHomeAIGC/2023/09/08/gptTrainCommunication/" title="(原理)通信原语">(原理)通信原语</a></strong> </li>
+<li><strong><a href="/www6vHomeAIGC/2023/10/01/gptParameterServer/" title="(原理|实战)Parameter Server">(原理|实战)Parameter Server</a></strong></li>
+</ul>
+]]></content>
+      <categories>
+        <category>AIGC</category>
+        <category>汇总</category>
+      </categories>
+      <tags>
+        <tag>AIGC</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>AIGC 汇总</title>
     <url>/www6vHomeAIGC/2023/11/16/gptSummary/</url>
     <content><![CDATA[<p></p>
@@ -16,12 +145,9 @@
 <li><a href="#nlp">NLP</a></li>
 <li><a href="#model">Model *</a></li>
 <li><a href="#training">Training *</a></li>
-<li><a href="#inference">Inference *</a></li>
 <li><a href="#data">Data</a></li>
 <li><a href="#finetuning">FineTuning *</a></li>
 <li><a href="#%E5%9E%82%E7%B1%BB%E6%A8%A1%E5%9E%8B">垂类模型</a></li>
-<li><a href="#llops">LLOps</a></li>
-<li><a href="#mlsys">MLSys</a></li>
 <li><a href="#prompt">Prompt</a></li>
 <li><a href="#langchain">Langchain</a></li>
 <li><a href="#study">Study</a></li>
@@ -95,82 +221,6 @@
 <li><strong><a href="/www6vHomeAIGC/2024/02/01/gptPrecision/" title="(原理|实战)混合精度">(原理|实战)混合精度</a></strong></li>
 </ul>
 </li>
-</ul>
-</li>
-</ul>
-<h2><span id="inference">Inference *</span><a href="#inference" class="header-anchor">#</a></h2><ul>
-<li>框架<ul>
-<li><a href="/www6vHomeAIGC/2023/03/21/gptInferFramework/" title="(原理)推理-框架">(原理)推理-框架</a> </li>
-<li><a href="/www6vHomeAIGC/2023/02/02/gptInferFrameworkPractice/" title="(实战)推理-lmdeploy">(实战)推理-lmdeploy</a> </li>
-<li>vLLM<ul>
-<li><strong><a href="/www6vHomeAIGC/2023/05/31/gptInfervLLM/" title="(原理) vLLM">(原理) vLLM</a></strong> </li>
-<li><strong><a href="/www6vHomeAIGC/2023/06/12/gptInfervLLMPractice/" title="(实战) vLLM">(实战) vLLM</a></strong></li>
-</ul>
-</li>
-<li><strong><a href="/www6vHomeAIGC/2023/06/02/gptInferTensorRT/" title="(原理|实战) TensorRT-LLM">(原理|实战) TensorRT-LLM</a></strong> </li>
-<li>Ray<ul>
-<li><a href="/www6vHomeAIGC/2023/06/11/gptInferRay/" title="(原理)推理 Ray">(原理)推理 Ray</a>   </li>
-<li><a href="/www6vHomeAIGC/2023/06/16/gptInferRayPractice/" title="(实战)推理 Ray">(实战)推理 Ray</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li>优化<ul>
-<li><a href="/www6vHomeAIGC/2023/01/01/gptInference/" title="(总结)推理优化">(总结)推理优化</a></li>
-<li><strong><a href="/www6vHomeAIGC/2023/08/14/gptInferenceSurvey/" title="(综述)推理优化">(综述)推理优化</a></strong></li>
-<li><strong><a href="/www6vHomeAIGC/2024/09/11/gptInferenceSurvey1/" title="(综述)推理优化">(综述)推理优化</a></strong> </li>
-<li>系统层优化<ul>
-<li>KVCache<ul>
-<li><strong><a href="/www6vHomeAIGC/2023/06/01/gptInferKVCache/" title="(原理) KV Cache">(原理) KV Cache</a></strong>  </li>
-<li><strong><a href="/www6vHomeAIGC/2023/09/02/gptInferKVCacheOptimize/" title="(原理)KV Cache 优化">(原理)KV Cache 优化</a></strong></li>
-<li>Compress  <ul>
-<li><strong><a href="/www6vHomeAIGC/2023/09/02/gptInferKVCacheQuantization/" title="KV Cache 量化">KV Cache 量化</a></strong> Quantization</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>FlashAttention    <ul>
-<li><strong><a href="/www6vHomeAIGC/2023/06/13/gptFlashAttention/" title="(原理)Flash Attention">(原理)Flash Attention</a></strong> </li>
-<li><strong><a href="/www6vHomeAIGC/2023/10/06/gptInferFlashDecoding/" title="(原理)Flash Decoding">(原理)Flash Decoding</a></strong></li>
-</ul>
-</li>
-<li>调度<ul>
-<li><strong><a href="/www6vHomeAIGC/2023/09/18/gptInferContinuousBatching/" title="Continuous Batching">Continuous Batching</a></strong> </li>
-<li><strong><a href="/www6vHomeAIGC/2023/09/18/gptInferChunkedPrefill/" title="Chunked Prefill">Chunked Prefill</a></strong></li>
-</ul>
-</li>
-<li>PD 分离<ul>
-<li><strong><a href="/www6vHomeAIGC/2023/10/05/gptInferDistServe/" title="DistServe">DistServe</a></strong></li>
-</ul>
-</li>
-<li><strong><a href="/www6vHomeAIGC/2023/10/06/gptInferSpeculativeDecoding/" title="Speculative Decoding">Speculative Decoding</a></strong></li>
-</ul>
-</li>
-<li>模型层优化 <ul>
-<li>模型压缩<ul>
-<li><strong><a href="/www6vHomeAIGC/2023/02/19/gptQuantization/" title="(原理)量化">(原理)量化</a></strong> </li>
-<li>PTQ<ul>
-<li><strong><a href="/www6vHomeAIGC/2023/03/26/gptQuantizationWeight/" title="(原理)PTQ-Weight Only">(原理)PTQ-Weight Only</a></strong> </li>
-<li><strong><a href="/www6vHomeAIGC/2023/10/12/gptQuantizationInt8/" title="(原理|实战)LLM.int8()">(原理|实战)LLM.int8()</a></strong></li>
-<li><strong><a href="/www6vHomeAIGC/2023/10/12/gptQuantizationGPTQ/" title="(原理|实战)GPTQ">(原理|实战)GPTQ</a></strong></li>
-<li><strong><a href="/www6vHomeAIGC/2023/10/12/gptQuantizationAWQ/" title="(原理|实战)AWQ">(原理|实战)AWQ</a></strong></li>
-<li><strong><a href="/www6vHomeAIGC/2023/10/14/gptQuantizationSmoothQuant/" title="(原理)SmoothQuant">(原理)SmoothQuant</a></strong> </li>
-<li><strong><a href="/www6vHomeAIGC/2023/10/14/gptQuantizationFP8/" title="(原理)FP8">(原理)FP8</a></strong></li>
-</ul>
-</li>
-<li><strong><a href="/www6vHomeAIGC/2024/03/22/gptQuantizationPractice/" title="(实战)量化">(实战)量化</a></strong></li>
-</ul>
-</li>
-<li>Sparse Attention<ul>
-<li><strong><a href="/www6vHomeAIGC/2023/09/02/gptInferKVCacheStreamingLLM/" title="Streaming LLM">Streaming LLM</a></strong></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>其他<ul>
-<li><strong><a href="/www6vHomeAIGC/2023/03/30/gptTemperature/" title="推理常见参数">推理常见参数</a></strong></li>
 </ul>
 </li>
 </ul>
@@ -260,17 +310,6 @@
 <li><a href="/www6vHomeAIGC/2022/11/24/gptDomainFinance/" title="金融大模型">金融大模型</a>   </li>
 <li><a href="/www6vHomeAIGC/2023/02/07/gptDomainMed/" title="医疗大模型">医疗大模型</a>   </li>
 <li><a href="/www6vHomeAIGC/2024/02/07/gptDomainLaw/" title="法律大模型">法律大模型</a></li>
-</ul>
-<h2><span id="llops">LLOps</span><a href="#llops" class="header-anchor">#</a></h2><ul>
-<li><strong><a href="/www6vHomeAIGC/2023/05/24/gptLLamaFactory/" title="LLama-Factory">LLama-Factory</a></strong></li>
-<li><strong><a href="/www6vHomeAIGC/2023/07/01/gptGPUComputing/" title="显存估算">显存估算</a></strong> </li>
-<li><strong><a href="/www6vHomeAIGC/2023/09/26/gptLLMOpsPaaS/" title="LLM PaaS">LLM PaaS</a></strong>  </li>
-<li><a href="/www6vHomeAIGC/2023/05/23/gptGPU/" title="GPU 算力">GPU 算力</a> </li>
-<li><a href="/www6vHomeAIGC/2022/12/28/gptLLMOps/" title="LLMOps">LLMOps</a></li>
-</ul>
-<h2><span id="mlsys">MLSys</span><a href="#mlsys" class="header-anchor">#</a></h2><ul>
-<li><strong><a href="/www6vHomeAIGC/2023/09/08/gptTrainCommunication/" title="(原理)通信原语">(原理)通信原语</a></strong> </li>
-<li><strong><a href="/www6vHomeAIGC/2023/10/01/gptParameterServer/" title="(原理|实战)Parameter Server">(原理|实战)Parameter Server</a></strong></li>
 </ul>
 <h2><span id="prompt">Prompt</span><a href="#prompt" class="header-anchor">#</a></h2><ul>
 <li><a href="/www6vHomeAIGC/2022/11/10/gptPromptEngineering/" title="(原理)Prompt Engineering">(原理)Prompt Engineering</a></li>
@@ -544,6 +583,22 @@
       </categories>
       <tags>
         <tag>AIGC</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>(原理|实战)RadixAttention</title>
+    <url>/www6vHomeAIGC/2024/11/15/gptInferKVCacheRadixAttention/</url>
+    <content><![CDATA[<p></p>
+<span id="more"></span>
+
+<h1><span id="radixattention">RadixAttention</span><a href="#radixattention" class="header-anchor">#</a></h1><p><a href="https://candied-skunk-1ca.notion.site/RadixAttention-105bfe211084807581eccf952ba3bb59?pvs=4">(原理|实战)RadixAttention</a></p>
+]]></content>
+      <categories>
+        <category>AIGC</category>
+        <category>Inference</category>
+      </categories>
+      <tags>
+        <tag>Inference</tag>
       </tags>
   </entry>
   <entry>
@@ -918,6 +973,118 @@
       </categories>
       <tags>
         <tag>PEFT</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>(原理)FlashAttention2</title>
+    <url>/www6vHomeAIGC/2023/11/15/gptInferFlashAttention2/</url>
+    <content><![CDATA[<p></p>
+<span id="more"></span>
+
+<h1><span id="flash-attention2">Flash Attention2</span><a href="#flash-attention2" class="header-anchor">#</a></h1><p><a href="https://candied-skunk-1ca.notion.site/Flash-Attention2-110bfe21108480f782fcc7258d860ccc?pvs=4">(原理)Flash Attention2</a></p>
+]]></content>
+      <categories>
+        <category>AIGC</category>
+        <category>Infer</category>
+      </categories>
+      <tags>
+        <tag>Infer</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>SpecInfer</title>
+    <url>/www6vHomeAIGC/2023/11/12/gptInferSpecInfer/</url>
+    <content><![CDATA[<p></p>
+<span id="more"></span>
+
+<h1><span id="specinfer">SpecInfer</span><a href="#specinfer" class="header-anchor">#</a></h1><p><a href="https://candied-skunk-1ca.notion.site/SpecInfer-8b75821e44384cecba4541f7aa758adb?pvs=4">SpecInfer</a></p>
+]]></content>
+      <categories>
+        <category>AIGC</category>
+        <category>infer</category>
+      </categories>
+      <tags>
+        <tag>infer</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>EAGLE</title>
+    <url>/www6vHomeAIGC/2023/11/12/gptInferEagle/</url>
+    <content><![CDATA[<p></p>
+<span id="more"></span>
+
+<h1><span id="eagle">EAGLE</span><a href="#eagle" class="header-anchor">#</a></h1><p><a href="https://candied-skunk-1ca.notion.site/EAGLE-126bfe2110848058aeb0ed8c2d06319b?pvs=4">EAGLE</a></p>
+]]></content>
+      <categories>
+        <category>AIGC</category>
+        <category>Inference</category>
+      </categories>
+      <tags>
+        <tag>Inference</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Medusa</title>
+    <url>/www6vHomeAIGC/2023/11/12/gptInferMedusa/</url>
+    <content><![CDATA[<p></p>
+<span id="more"></span>
+
+<h1><span id="medusa">Medusa</span><a href="#medusa" class="header-anchor">#</a></h1><p><a href="https://candied-skunk-1ca.notion.site/Medusa-31e27ea0a51d4c818c804a654a3c839a?pvs=4">Medusa</a></p>
+]]></content>
+      <categories>
+        <category>AIGC</category>
+        <category>Inference</category>
+      </categories>
+      <tags>
+        <tag>Inference</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>(Survey)Quantization</title>
+    <url>/www6vHomeAIGC/2023/10/21/gptQuantizationSurvey/</url>
+    <content><![CDATA[<p></p>
+<span id="more"></span>
+
+<h1><span id="quantization">Quantization</span><a href="#quantization" class="header-anchor">#</a></h1><p><a href="https://candied-skunk-1ca.notion.site/A-Survey-of-Low-bit-Large-Language-Models-Basics-Systems-and-Algorithms-116bfe2110848045b3e0c165318ec16b?pvs=4">A Survey of Low-bit Large Language Models: Basics, Systems, and Algorithms</a></p>
+]]></content>
+      <categories>
+        <category>AIGC</category>
+        <category>量化</category>
+      </categories>
+      <tags>
+        <tag>量化</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>(Survey)Speculative Decoding</title>
+    <url>/www6vHomeAIGC/2023/10/21/gptInferSpeculativeDecodingSurvey/</url>
+    <content><![CDATA[<p></p>
+<span id="more"></span>
+
+<h1><span id="speculative-decoding">Speculative Decoding</span><a href="#speculative-decoding" class="header-anchor">#</a></h1><p><a href="https://candied-skunk-1ca.notion.site/Unlocking-Efficiency-in-Large-Language-Model-Inference-A-Comprehensive-Survey-of-Speculative-Decodi-117bfe2110848059977ece3df3f9791d?pvs=4">(Survey)Speculative Decoding </a></p>
+]]></content>
+      <categories>
+        <category>AIGC</category>
+        <category>infer</category>
+      </categories>
+      <tags>
+        <tag>infer</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Mooncake</title>
+    <url>/www6vHomeAIGC/2023/10/19/gptInferMooncake/</url>
+    <content><![CDATA[<p></p>
+<span id="more"></span>
+
+<h1><span id="mooncake">Mooncake</span><a href="#mooncake" class="header-anchor">#</a></h1><p><a href="https://candied-skunk-1ca.notion.site/Mooncake-d7d1506860df44bca7a2f880a1352285?pvs=4">Mooncake</a></p>
+]]></content>
+      <categories>
+        <category>AIGC</category>
+        <category>Inference</category>
+      </categories>
+      <tags>
+        <tag>Inference</tag>
       </tags>
   </entry>
   <entry>
@@ -1376,7 +1543,8 @@
 
 
 
-<h1><span id="论文">论文</span><a href="#论文" class="header-anchor">#</a></h1><p><a href="https://candied-skunk-1ca.notion.site/A-Survey-on-Efficient-Inference-for-Large-Language-Models-22145473188e437881bf566241492bea?pvs=4">A Survey on Efficient Inference for Large Language Models</a></p>
+<h1><span id="论文">论文</span><a href="#论文" class="header-anchor">#</a></h1><p><a href="https://candied-skunk-1ca.notion.site/A-Survey-on-Efficient-Inference-for-Large-Language-Models-22145473188e437881bf566241492bea?pvs=4">A Survey on Efficient Inference for Large Language Models</a> 翻译</p>
+<p><a href="https://candied-skunk-1ca.notion.site/A-Survey-on-Efficient-Inference-for-Large-Language-Models-135bfe2110848034bf45ea8e5d1d2fdb?pvs=4">A Survey on Efficient Inference for Large Language Models</a> 总结</p>
 <h1><span id="inference-papers">Inference Papers</span><a href="#inference-papers" class="header-anchor">#</a></h1><p><a href="https://candied-skunk-1ca.notion.site/Inference-Papers-bd22ef1d8c274d6f9951c394a95ff427?pvs=4">Inference Papers</a></p>
 ]]></content>
       <categories>
@@ -4891,6 +5059,44 @@
       </tags>
   </entry>
   <entry>
+    <title>(原理)多模态 RAG</title>
+    <url>/www6vHomeAIGC/2023/03/14/gptRAGMultimodal/</url>
+    <content><![CDATA[<p></p>
+<span id="more"></span>
+
+<h2><span id="目录">目录</span><a href="#目录" class="header-anchor">#</a></h2><div class="toc">
+
+<!-- toc -->
+
+<ul>
+<li><a href="#%E5%A4%9A%E6%A8%A1%E6%80%81rag-12">多模态RAG [1][2]</a></li>
+<li><a href="#%E5%8F%82%E8%80%83">参考</a><ul>
+<li><a href="#%E5%8E%9F%E7%90%86">原理</a></li>
+</ul>
+</li>
+</ul>
+<!-- tocstop -->
+
+</div>
+
+<h1><span id="多模态rag-12">多模态RAG [1][2]</span><a href="#多模态rag-12" class="header-anchor">#</a></h1><h1><span id="参考">参考</span><a href="#参考" class="header-anchor">#</a></h1><h3><span id="原理">原理</span><a href="#原理" class="header-anchor">#</a></h3><ol>
+<li><p><a href="https://zhuanlan.zhihu.com/p/661465330?utm_id=0">NLP（廿一）：从 RAG 到 Self-RAG —— LLM 的知识增强</a> *** </p>
+</li>
+<li><p>《Retrieving Multimodal Information for Augmented Generation: A Survey》<br><a href="https://zhuanlan.zhihu.com/p/665078079">万字综述：2023年多模态检索增强生成技术(mRAG)最新进展与趋势-图片、代码、图谱、视频、声音、文本</a><br><a href="https://zhuanlan.zhihu.com/p/678812531">多模态RAG综述</a></p>
+</li>
+</ol>
+<p>1xx. <a href="https://mp.weixin.qq.com/s?__biz=MzAxMjc3MjkyMg==&mid=2648409004&idx=2&sn=7f36d3ff5e170442486a5d413373c563">朴素多模态RAG如何实现？兼看RAG上下文过滤方案FILCO及202402大模型早报 </a>    多模态RAG 两种实现方式</p>
+<p>1xx. <a href="https://mp.weixin.qq.com/s/9xU7OOBqee4sM_TZuzQ-Ew">视觉的跨界 Wiki-LLaVA | lmage + Question 的奇妙反应，生成多模态大型语言模型（MLLMs）！</a></p>
+]]></content>
+      <categories>
+        <category>AIGC</category>
+        <category>RAG</category>
+      </categories>
+      <tags>
+        <tag>RAG</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>(实战)多模态 RAG</title>
     <url>/www6vHomeAIGC/2023/03/14/gptRAGMultimodalPractice/</url>
     <content><![CDATA[<p></p>
@@ -4981,44 +5187,6 @@
 <li><a href="https://github.com/langchain-ai/langchain/tree/master/templates/rag-chroma-multi-modal-multi-vector">rag-chroma-multi-modal-multi-vector</a><br>GPT-4V(image summaries embedding) + GPT-4V (answer synthesis)</li>
 </ol>
 <h3><span id="llamaindex">llamaindex</span><a href="#llamaindex" class="header-anchor">#</a></h3><p>1xx. <a href="https://mp.weixin.qq.com/s/93CdvD8FLZjaA7E724bf7g">朴素多模态RAG如何实现？兼看RAG上下文过滤方案FILCO及202402大模型早报 </a><br>1xx. <a href="https://docs.llamaindex.ai/en/stable/examples/multi_modal/gpt4v_multi_modal_retrieval/">Advanced Multi-Modal Retrieval using GPT4V and Multi-Modal Index&#x2F;Retriever</a><br>1xx. <a href="https://www.llamaindex.ai/blog/multimodal-rag-pipeline-with-llamaindex-and-neo4j-a2c542eb0206">Multimodal RAG pipeline with LlamaIndex and Neo4j</a><br>1xx. <a href="https://github.com/tomasonjo/blogs/blob/master/llm/neo4j_llama_multimodal.ipynb">neo4j_llama_multimodal.ipynb</a> git</p>
-]]></content>
-      <categories>
-        <category>AIGC</category>
-        <category>RAG</category>
-      </categories>
-      <tags>
-        <tag>RAG</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>(原理)多模态 RAG</title>
-    <url>/www6vHomeAIGC/2023/03/14/gptRAGMultimodal/</url>
-    <content><![CDATA[<p></p>
-<span id="more"></span>
-
-<h2><span id="目录">目录</span><a href="#目录" class="header-anchor">#</a></h2><div class="toc">
-
-<!-- toc -->
-
-<ul>
-<li><a href="#%E5%A4%9A%E6%A8%A1%E6%80%81rag-12">多模态RAG [1][2]</a></li>
-<li><a href="#%E5%8F%82%E8%80%83">参考</a><ul>
-<li><a href="#%E5%8E%9F%E7%90%86">原理</a></li>
-</ul>
-</li>
-</ul>
-<!-- tocstop -->
-
-</div>
-
-<h1><span id="多模态rag-12">多模态RAG [1][2]</span><a href="#多模态rag-12" class="header-anchor">#</a></h1><h1><span id="参考">参考</span><a href="#参考" class="header-anchor">#</a></h1><h3><span id="原理">原理</span><a href="#原理" class="header-anchor">#</a></h3><ol>
-<li><p><a href="https://zhuanlan.zhihu.com/p/661465330?utm_id=0">NLP（廿一）：从 RAG 到 Self-RAG —— LLM 的知识增强</a> *** </p>
-</li>
-<li><p>《Retrieving Multimodal Information for Augmented Generation: A Survey》<br><a href="https://zhuanlan.zhihu.com/p/665078079">万字综述：2023年多模态检索增强生成技术(mRAG)最新进展与趋势-图片、代码、图谱、视频、声音、文本</a><br><a href="https://zhuanlan.zhihu.com/p/678812531">多模态RAG综述</a></p>
-</li>
-</ol>
-<p>1xx. <a href="https://mp.weixin.qq.com/s?__biz=MzAxMjc3MjkyMg==&mid=2648409004&idx=2&sn=7f36d3ff5e170442486a5d413373c563">朴素多模态RAG如何实现？兼看RAG上下文过滤方案FILCO及202402大模型早报 </a>    多模态RAG 两种实现方式</p>
-<p>1xx. <a href="https://mp.weixin.qq.com/s/9xU7OOBqee4sM_TZuzQ-Ew">视觉的跨界 Wiki-LLaVA | lmage + Question 的奇妙反应，生成多模态大型语言模型（MLLMs）！</a></p>
 ]]></content>
       <categories>
         <category>AIGC</category>

@@ -184,6 +184,825 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://www6v.github.io/2023/10/14/gptQuantizationFP8/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/www6vHomeAIGC/images/avatar.gif">
+      <meta itemprop="name" content="Wang Wei">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="www6v的博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/www6vHomeAIGC/2023/10/14/gptQuantizationFP8/" class="post-title-link" itemprop="url">(原理)FP8</a>
+        </h2>
+
+        <div class="post-meta">
+
+
+
+
+
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2023-10-14 13:33:46" itemprop="dateCreated datePublished" datetime="2023-10-14T13:33:46+08:00">2023-10-14</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2024-10-14 13:41:01" itemprop="dateModified" datetime="2024-10-14T13:41:01+08:00">2024-10-14</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/www6vHomeAIGC/categories/AIGC/" itemprop="url" rel="index"><span itemprop="name">AIGC</span></a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/www6vHomeAIGC/categories/AIGC/%E9%87%8F%E5%8C%96/" itemprop="url" rel="index"><span itemprop="name">量化</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p></p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/www6vHomeAIGC/2023/10/14/gptQuantizationFP8/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://www6v.github.io/2023/10/14/gptQuantizationSmoothQuant/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/www6vHomeAIGC/images/avatar.gif">
+      <meta itemprop="name" content="Wang Wei">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="www6v的博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/www6vHomeAIGC/2023/10/14/gptQuantizationSmoothQuant/" class="post-title-link" itemprop="url">(原理)SmoothQuant</a>
+        </h2>
+
+        <div class="post-meta">
+
+
+
+
+
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2023-10-14 13:33:21" itemprop="dateCreated datePublished" datetime="2023-10-14T13:33:21+08:00">2023-10-14</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2024-10-14 13:41:41" itemprop="dateModified" datetime="2024-10-14T13:41:41+08:00">2024-10-14</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/www6vHomeAIGC/categories/AIGC/" itemprop="url" rel="index"><span itemprop="name">AIGC</span></a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/www6vHomeAIGC/categories/AIGC/%E9%87%8F%E5%8C%96/" itemprop="url" rel="index"><span itemprop="name">量化</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p></p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/www6vHomeAIGC/2023/10/14/gptQuantizationSmoothQuant/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://www6v.github.io/2023/10/12/gptQuantizationAWQ/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/www6vHomeAIGC/images/avatar.gif">
+      <meta itemprop="name" content="Wang Wei">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="www6v的博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/www6vHomeAIGC/2023/10/12/gptQuantizationAWQ/" class="post-title-link" itemprop="url">(原理|实战)AWQ</a>
+        </h2>
+
+        <div class="post-meta">
+
+
+
+
+
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2023-10-12 14:34:07" itemprop="dateCreated datePublished" datetime="2023-10-12T14:34:07+08:00">2023-10-12</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2024-10-12 14:45:15" itemprop="dateModified" datetime="2024-10-12T14:45:15+08:00">2024-10-12</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/www6vHomeAIGC/categories/AIGC/" itemprop="url" rel="index"><span itemprop="name">AIGC</span></a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/www6vHomeAIGC/categories/AIGC/%E9%87%8F%E5%8C%96/" itemprop="url" rel="index"><span itemprop="name">量化</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p></p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/www6vHomeAIGC/2023/10/12/gptQuantizationAWQ/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://www6v.github.io/2023/10/12/gptQuantizationGPTQ/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/www6vHomeAIGC/images/avatar.gif">
+      <meta itemprop="name" content="Wang Wei">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="www6v的博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/www6vHomeAIGC/2023/10/12/gptQuantizationGPTQ/" class="post-title-link" itemprop="url">(原理|实战)GPTQ</a>
+        </h2>
+
+        <div class="post-meta">
+
+
+
+
+
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2023-10-12 14:33:48" itemprop="dateCreated datePublished" datetime="2023-10-12T14:33:48+08:00">2023-10-12</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2024-10-12 14:43:59" itemprop="dateModified" datetime="2024-10-12T14:43:59+08:00">2024-10-12</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/www6vHomeAIGC/categories/AIGC/" itemprop="url" rel="index"><span itemprop="name">AIGC</span></a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/www6vHomeAIGC/categories/AIGC/%E9%87%8F%E5%8C%96/" itemprop="url" rel="index"><span itemprop="name">量化</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p></p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/www6vHomeAIGC/2023/10/12/gptQuantizationGPTQ/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://www6v.github.io/2023/10/12/gptQuantizationInt8/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/www6vHomeAIGC/images/avatar.gif">
+      <meta itemprop="name" content="Wang Wei">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="www6v的博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/www6vHomeAIGC/2023/10/12/gptQuantizationInt8/" class="post-title-link" itemprop="url">(原理|实战)LLM.int8()</a>
+        </h2>
+
+        <div class="post-meta">
+
+
+
+
+
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2023-10-12 14:33:20" itemprop="dateCreated datePublished" datetime="2023-10-12T14:33:20+08:00">2023-10-12</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2024-10-12 14:42:51" itemprop="dateModified" datetime="2024-10-12T14:42:51+08:00">2024-10-12</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/www6vHomeAIGC/categories/AIGC/" itemprop="url" rel="index"><span itemprop="name">AIGC</span></a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/www6vHomeAIGC/categories/AIGC/%E9%87%8F%E5%8C%96/" itemprop="url" rel="index"><span itemprop="name">量化</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p></p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/www6vHomeAIGC/2023/10/12/gptQuantizationInt8/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://www6v.github.io/2023/10/06/gptInferFlashDecoding/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/www6vHomeAIGC/images/avatar.gif">
+      <meta itemprop="name" content="Wang Wei">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="www6v的博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/www6vHomeAIGC/2023/10/06/gptInferFlashDecoding/" class="post-title-link" itemprop="url">(原理)Flash Decoding</a>
+        </h2>
+
+        <div class="post-meta">
+
+
+
+
+
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2023-10-06 17:52:36" itemprop="dateCreated datePublished" datetime="2023-10-06T17:52:36+08:00">2023-10-06</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2024-10-06 18:02:58" itemprop="dateModified" datetime="2024-10-06T18:02:58+08:00">2024-10-06</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/www6vHomeAIGC/categories/AIGC/" itemprop="url" rel="index"><span itemprop="name">AIGC</span></a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/www6vHomeAIGC/categories/AIGC/Infer/" itemprop="url" rel="index"><span itemprop="name">Infer</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p></p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/www6vHomeAIGC/2023/10/06/gptInferFlashDecoding/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://www6v.github.io/2023/10/06/gptInferSpeculativeDecoding/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/www6vHomeAIGC/images/avatar.gif">
+      <meta itemprop="name" content="Wang Wei">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="www6v的博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/www6vHomeAIGC/2023/10/06/gptInferSpeculativeDecoding/" class="post-title-link" itemprop="url">Speculative Decoding</a>
+        </h2>
+
+        <div class="post-meta">
+
+
+
+
+
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2023-10-06 17:40:58" itemprop="dateCreated datePublished" datetime="2023-10-06T17:40:58+08:00">2023-10-06</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2024-11-12 07:14:14" itemprop="dateModified" datetime="2024-11-12T07:14:14+08:00">2024-11-12</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/www6vHomeAIGC/categories/AIGC/" itemprop="url" rel="index"><span itemprop="name">AIGC</span></a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/www6vHomeAIGC/categories/AIGC/infer/" itemprop="url" rel="index"><span itemprop="name">infer</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p></p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/www6vHomeAIGC/2023/10/06/gptInferSpeculativeDecoding/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://www6v.github.io/2023/10/05/gptInferDistServe/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/www6vHomeAIGC/images/avatar.gif">
+      <meta itemprop="name" content="Wang Wei">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="www6v的博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/www6vHomeAIGC/2023/10/05/gptInferDistServe/" class="post-title-link" itemprop="url">DistServe</a>
+        </h2>
+
+        <div class="post-meta">
+
+
+
+
+
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2023-10-05 22:43:07" itemprop="dateCreated datePublished" datetime="2023-10-05T22:43:07+08:00">2023-10-05</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2024-10-05 22:45:21" itemprop="dateModified" datetime="2024-10-05T22:45:21+08:00">2024-10-05</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/www6vHomeAIGC/categories/AIGC/" itemprop="url" rel="index"><span itemprop="name">AIGC</span></a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/www6vHomeAIGC/categories/AIGC/Inference/" itemprop="url" rel="index"><span itemprop="name">Inference</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p></p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/www6vHomeAIGC/2023/10/05/gptInferDistServe/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://www6v.github.io/2023/10/01/gptParameterServer/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/www6vHomeAIGC/images/avatar.gif">
+      <meta itemprop="name" content="Wang Wei">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="www6v的博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/www6vHomeAIGC/2023/10/01/gptParameterServer/" class="post-title-link" itemprop="url">(原理|实战)Parameter Server</a>
+        </h2>
+
+        <div class="post-meta">
+
+
+
+
+
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2023-10-01 19:07:27" itemprop="dateCreated datePublished" datetime="2023-10-01T19:07:27+08:00">2023-10-01</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2024-10-06 17:37:02" itemprop="dateModified" datetime="2024-10-06T17:37:02+08:00">2024-10-06</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/www6vHomeAIGC/categories/AIGC/" itemprop="url" rel="index"><span itemprop="name">AIGC</span></a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/www6vHomeAIGC/categories/AIGC/MLSys/" itemprop="url" rel="index"><span itemprop="name">MLSys</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p></p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/www6vHomeAIGC/2023/10/01/gptParameterServer/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="https://www6v.github.io/2023/09/27/gptDataSelfQA/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1636,829 +2455,10 @@
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://www6v.github.io/2023/08/22/gptDiffusionControlNet/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/www6vHomeAIGC/images/avatar.gif">
-      <meta itemprop="name" content="Wang Wei">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="www6v的博客">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/www6vHomeAIGC/2023/08/22/gptDiffusionControlNet/" class="post-title-link" itemprop="url">(原理|实战)ControlNet</a>
-        </h2>
-
-        <div class="post-meta">
-
-
-
-
-
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2023-08-22 18:26:17" itemprop="dateCreated datePublished" datetime="2023-08-22T18:26:17+08:00">2023-08-22</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2024-08-22 18:42:55" itemprop="dateModified" datetime="2024-08-22T18:42:55+08:00">2024-08-22</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/www6vHomeAIGC/categories/AIGC/" itemprop="url" rel="index"><span itemprop="name">AIGC</span></a>
-                </span>
-                  ，
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/www6vHomeAIGC/categories/AIGC/Diffusion/" itemprop="url" rel="index"><span itemprop="name">Diffusion</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p></p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/www6vHomeAIGC/2023/08/22/gptDiffusionControlNet/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://www6v.github.io/2023/08/16/gptLowPrecision/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/www6vHomeAIGC/images/avatar.gif">
-      <meta itemprop="name" content="Wang Wei">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="www6v的博客">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/www6vHomeAIGC/2023/08/16/gptLowPrecision/" class="post-title-link" itemprop="url">低精度训练</a>
-        </h2>
-
-        <div class="post-meta">
-
-
-
-
-
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2023-08-16 11:50:58" itemprop="dateCreated datePublished" datetime="2023-08-16T11:50:58+08:00">2023-08-16</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2024-08-16 11:53:23" itemprop="dateModified" datetime="2024-08-16T11:53:23+08:00">2024-08-16</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/www6vHomeAIGC/categories/AIGC/" itemprop="url" rel="index"><span itemprop="name">AIGC</span></a>
-                </span>
-                  ，
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/www6vHomeAIGC/categories/AIGC/%E4%BD%8E%E7%B2%BE%E5%BA%A6/" itemprop="url" rel="index"><span itemprop="name">低精度</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p></p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/www6vHomeAIGC/2023/08/16/gptLowPrecision/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://www6v.github.io/2023/08/14/gptInferenceSurvey/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/www6vHomeAIGC/images/avatar.gif">
-      <meta itemprop="name" content="Wang Wei">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="www6v的博客">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/www6vHomeAIGC/2023/08/14/gptInferenceSurvey/" class="post-title-link" itemprop="url">(综述)推理优化</a>
-        </h2>
-
-        <div class="post-meta">
-
-
-
-
-
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2023-08-14 13:23:31" itemprop="dateCreated datePublished" datetime="2023-08-14T13:23:31+08:00">2023-08-14</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2024-09-11 17:38:21" itemprop="dateModified" datetime="2024-09-11T17:38:21+08:00">2024-09-11</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/www6vHomeAIGC/categories/AIGC/" itemprop="url" rel="index"><span itemprop="name">AIGC</span></a>
-                </span>
-                  ，
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/www6vHomeAIGC/categories/AIGC/Inference/" itemprop="url" rel="index"><span itemprop="name">Inference</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p></p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/www6vHomeAIGC/2023/08/14/gptInferenceSurvey/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://www6v.github.io/2023/08/05/gptMultimodalConnector/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/www6vHomeAIGC/images/avatar.gif">
-      <meta itemprop="name" content="Wang Wei">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="www6v的博客">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/www6vHomeAIGC/2023/08/05/gptMultimodalConnector/" class="post-title-link" itemprop="url">(原理)Connector</a>
-        </h2>
-
-        <div class="post-meta">
-
-
-
-
-
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2023-08-05 18:38:14" itemprop="dateCreated datePublished" datetime="2023-08-05T18:38:14+08:00">2023-08-05</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2024-08-05 18:40:28" itemprop="dateModified" datetime="2024-08-05T18:40:28+08:00">2024-08-05</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/www6vHomeAIGC/categories/AIGC/" itemprop="url" rel="index"><span itemprop="name">AIGC</span></a>
-                </span>
-                  ，
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/www6vHomeAIGC/categories/AIGC/multimodal/" itemprop="url" rel="index"><span itemprop="name">multimodal</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p></p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/www6vHomeAIGC/2023/08/05/gptMultimodalConnector/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://www6v.github.io/2023/08/02/gptMultimodalEncoder/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/www6vHomeAIGC/images/avatar.gif">
-      <meta itemprop="name" content="Wang Wei">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="www6v的博客">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/www6vHomeAIGC/2023/08/02/gptMultimodalEncoder/" class="post-title-link" itemprop="url">Vision Encoder</a>
-        </h2>
-
-        <div class="post-meta">
-
-
-
-
-
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2023-08-02 15:02:15" itemprop="dateCreated datePublished" datetime="2023-08-02T15:02:15+08:00">2023-08-02</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2024-08-02 15:15:35" itemprop="dateModified" datetime="2024-08-02T15:15:35+08:00">2024-08-02</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/www6vHomeAIGC/categories/AIGC/" itemprop="url" rel="index"><span itemprop="name">AIGC</span></a>
-                </span>
-                  ，
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/www6vHomeAIGC/categories/AIGC/multimodal/" itemprop="url" rel="index"><span itemprop="name">multimodal</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p></p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/www6vHomeAIGC/2023/08/02/gptMultimodalEncoder/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://www6v.github.io/2023/08/01/gptDiffusionGuidance/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/www6vHomeAIGC/images/avatar.gif">
-      <meta itemprop="name" content="Wang Wei">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="www6v的博客">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/www6vHomeAIGC/2023/08/01/gptDiffusionGuidance/" class="post-title-link" itemprop="url">(原理)Guidance</a>
-        </h2>
-
-        <div class="post-meta">
-
-
-
-
-
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2023-08-01 19:19:40" itemprop="dateCreated datePublished" datetime="2023-08-01T19:19:40+08:00">2023-08-01</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2024-08-01 19:23:16" itemprop="dateModified" datetime="2024-08-01T19:23:16+08:00">2024-08-01</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/www6vHomeAIGC/categories/AIGC/" itemprop="url" rel="index"><span itemprop="name">AIGC</span></a>
-                </span>
-                  ，
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/www6vHomeAIGC/categories/AIGC/Diffusion/" itemprop="url" rel="index"><span itemprop="name">Diffusion</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p></p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/www6vHomeAIGC/2023/08/01/gptDiffusionGuidance/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://www6v.github.io/2023/08/01/gptDiffusionXL/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/www6vHomeAIGC/images/avatar.gif">
-      <meta itemprop="name" content="Wang Wei">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="www6v的博客">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/www6vHomeAIGC/2023/08/01/gptDiffusionXL/" class="post-title-link" itemprop="url">(原理)SD XL</a>
-        </h2>
-
-        <div class="post-meta">
-
-
-
-
-
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2023-08-01 19:12:57" itemprop="dateCreated datePublished" datetime="2023-08-01T19:12:57+08:00">2023-08-01</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2024-08-01 19:18:09" itemprop="dateModified" datetime="2024-08-01T19:18:09+08:00">2024-08-01</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/www6vHomeAIGC/categories/AIGC/" itemprop="url" rel="index"><span itemprop="name">AIGC</span></a>
-                </span>
-                  ，
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/www6vHomeAIGC/categories/AIGC/Diffusion/" itemprop="url" rel="index"><span itemprop="name">Diffusion</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p></p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/www6vHomeAIGC/2023/08/01/gptDiffusionXL/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://www6v.github.io/2023/07/29/gptDiffusionControllable/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/www6vHomeAIGC/images/avatar.gif">
-      <meta itemprop="name" content="Wang Wei">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="www6v的博客">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/www6vHomeAIGC/2023/07/29/gptDiffusionControllable/" class="post-title-link" itemprop="url">(综述)Controllable</a>
-        </h2>
-
-        <div class="post-meta">
-
-
-
-
-
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2023-07-29 16:47:08" itemprop="dateCreated datePublished" datetime="2023-07-29T16:47:08+08:00">2023-07-29</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2024-07-29 16:53:10" itemprop="dateModified" datetime="2024-07-29T16:53:10+08:00">2024-07-29</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/www6vHomeAIGC/categories/AIGC/" itemprop="url" rel="index"><span itemprop="name">AIGC</span></a>
-                </span>
-                  ，
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/www6vHomeAIGC/categories/AIGC/Diffusion/" itemprop="url" rel="index"><span itemprop="name">Diffusion</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p></p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/www6vHomeAIGC/2023/07/29/gptDiffusionControllable/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://www6v.github.io/2023/07/27/gptDiffusionImageEditWork/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/www6vHomeAIGC/images/avatar.gif">
-      <meta itemprop="name" content="Wang Wei">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="www6v的博客">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/www6vHomeAIGC/2023/07/27/gptDiffusionImageEditWork/" class="post-title-link" itemprop="url">(Work|实战)Image Editing</a>
-        </h2>
-
-        <div class="post-meta">
-
-
-
-
-
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2023-07-27 09:29:58" itemprop="dateCreated datePublished" datetime="2023-07-27T09:29:58+08:00">2023-07-27</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2024-09-03 14:53:13" itemprop="dateModified" datetime="2024-09-03T14:53:13+08:00">2024-09-03</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/www6vHomeAIGC/categories/AIGC/" itemprop="url" rel="index"><span itemprop="name">AIGC</span></a>
-                </span>
-                  ，
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/www6vHomeAIGC/categories/AIGC/Diffusion/" itemprop="url" rel="index"><span itemprop="name">Diffusion</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p></p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/www6vHomeAIGC/2023/07/27/gptDiffusionImageEditWork/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/www6vHomeAIGC/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/www6vHomeAIGC/">1</a><span class="page-number current">2</span><a class="page-number" href="/www6vHomeAIGC/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/www6vHomeAIGC/page/8/">8</a><a class="extend next" rel="next" href="/www6vHomeAIGC/page/3/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+    <a class="extend prev" rel="prev" href="/www6vHomeAIGC/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/www6vHomeAIGC/">1</a><span class="page-number current">2</span><a class="page-number" href="/www6vHomeAIGC/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/www6vHomeAIGC/page/9/">9</a><a class="extend next" rel="next" href="/www6vHomeAIGC/page/3/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
 
 
@@ -2524,7 +2524,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/www6vHomeAIGC/archives/">
         
-          <span class="site-state-item-count">199</span>
+          <span class="site-state-item-count">208</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
