@@ -47,7 +47,8 @@
 <li><strong><a href="/www6vHomeAIGC/2023/10/21/gptInferSpeculativeDecodingSurvey/" title="(Survey)Speculative Decoding">(Survey)Speculative Decoding</a></strong> </li>
 <li><strong><a href="/www6vHomeAIGC/2023/11/12/gptInferMedusa/" title="Medusa">Medusa</a></strong>   </li>
 <li><strong><a href="/www6vHomeAIGC/2023/11/12/gptInferEagle/" title="EAGLE">EAGLE</a></strong> </li>
-<li><strong><a href="/www6vHomeAIGC/2023/11/12/gptInferSpecInfer/" title="SpecInfer">SpecInfer</a></strong></li>
+<li><strong><a href="/www6vHomeAIGC/2023/11/12/gptInferSpecInfer/" title="SpecInfer">SpecInfer</a></strong>   </li>
+<li><strong><a href="/www6vHomeAIGC/2023/11/18/gptInferSpeculativeDecodingvLLM/" title="(vLLM)Speculative Decoding">(vLLM)Speculative Decoding</a></strong></li>
 </ul>
 </li>
 <li>Memory Management<ul>
@@ -88,12 +89,12 @@
 <li>PTQ<ul>
 <li><strong><a href="/www6vHomeAIGC/2023/03/26/gptQuantizationWeight/" title="(原理)PTQ-Weight Only">(原理)PTQ-Weight Only</a></strong> </li>
 <li>Weight Only <ul>
-<li><strong><a href="/www6vHomeAIGC/2023/10/12/gptQuantizationInt8/" title="(原理|实战)LLM.int8()">(原理|实战)LLM.int8()</a></strong></li>
 <li><strong><a href="/www6vHomeAIGC/2023/10/12/gptQuantizationGPTQ/" title="(原理|实战)GPTQ">(原理|实战)GPTQ</a></strong></li>
 <li><strong><a href="/www6vHomeAIGC/2023/10/12/gptQuantizationAWQ/" title="(原理|实战)AWQ">(原理|实战)AWQ</a></strong></li>
 </ul>
 </li>
 <li>Weight&amp;Activation<ul>
+<li><strong><a href="/www6vHomeAIGC/2023/10/12/gptQuantizationInt8/" title="(原理|实战)LLM.int8()">(原理|实战)LLM.int8()</a></strong>              </li>
 <li><strong><a href="/www6vHomeAIGC/2023/10/14/gptQuantizationSmoothQuant/" title="(原理)SmoothQuant">(原理)SmoothQuant</a></strong></li>
 </ul>
 </li>
@@ -987,6 +988,23 @@
       </categories>
       <tags>
         <tag>PEFT</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>(vLLM)Speculative Decoding</title>
+    <url>/www6vHomeAIGC/2023/11/18/gptInferSpeculativeDecodingvLLM/</url>
+    <content><![CDATA[<p></p>
+<span id="more"></span>
+
+
+<h1><span id="vllm-speculative-decoding">(vLLM) Speculative Decoding</span><a href="#vllm-speculative-decoding" class="header-anchor">#</a></h1><p><a href="https://candied-skunk-1ca.notion.site/vLLM-Speculative-Decoding-81c9a87ab53947c19c7ba22bcaee5125?pvs=4">(vLLM) Speculative Decoding</a></p>
+]]></content>
+      <categories>
+        <category>AIGC</category>
+        <category>infer</category>
+      </categories>
+      <tags>
+        <tag>infer</tag>
       </tags>
   </entry>
   <entry>
