@@ -184,6 +184,8 @@
 <h2><span id="model">Model *</span><a href="#model" class="header-anchor">#</a></h2><ul>
 <li>Backbone <ul>
 <li><strong><a href="/www6vHomeAIGC/2022/11/30/gptTransformer/" title="(原理)Transformer">(原理)Transformer</a></strong> </li>
+<li><strong><a href="/www6vHomeAIGC/2023/11/19/gptSelfAttention/" title="(原理)Self-Attention">(原理)Self-Attention</a></strong> </li>
+<li><strong><a href="/www6vHomeAIGC/2023/11/19/gptModelGQA/" title="(原理)GQA">(原理)GQA</a></strong>   </li>
 <li><a href="/www6vHomeAIGC/2023/02/16/gptTransformerCode/" title="(实战)Transformer">(实战)Transformer</a>  </li>
 <li><a href="/www6vHomeAIGC/2023/04/18/gptEmbedding/" title="(原理)Embedding">(原理)Embedding</a></li>
 </ul>
@@ -988,6 +990,40 @@
       </categories>
       <tags>
         <tag>PEFT</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>(原理)GQA</title>
+    <url>/www6vHomeAIGC/2023/11/19/gptModelGQA/</url>
+    <content><![CDATA[<p></p>
+<span id="more"></span>
+
+
+
+<p><a href="https://candied-skunk-1ca.notion.site/GQA-984685a6ee2441a0879cc0e18066a641?pvs=4">(原理)GQA</a></p>
+]]></content>
+      <categories>
+        <category>AIGC</category>
+        <category>model</category>
+      </categories>
+      <tags>
+        <tag>model</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>(原理)Self-Attention</title>
+    <url>/www6vHomeAIGC/2023/11/19/gptSelfAttention/</url>
+    <content><![CDATA[<p></p>
+<span id="more"></span>
+
+<h1><span id="self-attention">Self-Attention</span><a href="#self-attention" class="header-anchor">#</a></h1><p><a href="https://candied-skunk-1ca.notion.site/Self-Attention-142bfe21108480f6a0c0cdbf9262a7e3?pvs=4">(原理)Self-Attention</a></p>
+]]></content>
+      <categories>
+        <category>AIGC</category>
+        <category>model</category>
+      </categories>
+      <tags>
+        <tag>model</tag>
       </tags>
   </entry>
   <entry>
