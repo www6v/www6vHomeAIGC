@@ -127,6 +127,7 @@
 <li><a href="/www6vHomeAIGC/2022/12/28/gptLLMOps/" title="LLMOps">LLMOps</a></li>
 </ul>
 <h2><span id="mlsys">MLSys</span><a href="#mlsys" class="header-anchor">#</a></h2><ul>
+<li><strong><a href="/www6vHomeAIGC/2023/11/21/gptMLSysCUDA/" title="CUDA 编程">CUDA 编程</a></strong> </li>
 <li><strong><a href="/www6vHomeAIGC/2023/09/08/gptTrainCommunication/" title="(原理)通信原语">(原理)通信原语</a></strong> </li>
 <li><strong><a href="/www6vHomeAIGC/2023/10/01/gptParameterServer/" title="(原理|实战)Parameter Server">(原理|实战)Parameter Server</a></strong></li>
 </ul>
@@ -985,6 +986,23 @@
       </categories>
       <tags>
         <tag>PEFT</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>CUDA 编程</title>
+    <url>/www6vHomeAIGC/2023/11/21/gptMLSysCUDA/</url>
+    <content><![CDATA[<p></p>
+<span id="more"></span>
+
+
+<h1><span id="cuda-编程">CUDA 编程</span><a href="#cuda-编程" class="header-anchor">#</a></h1><p><a href="https://candied-skunk-1ca.notion.site/CUDA-145bfe21108480eea4ffd58735a564f6?pvs=4">CUDA 编程</a></p>
+]]></content>
+      <categories>
+        <category>AIGC</category>
+        <category>CUDA</category>
+      </categories>
+      <tags>
+        <tag>CUDA</tag>
       </tags>
   </entry>
   <entry>
