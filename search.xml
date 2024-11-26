@@ -137,7 +137,11 @@
 <li><strong><a href="/www6vHomeAIGC/2023/09/08/gptTrainPipelineParallelism/" title="(原理|实战)流水线并行(PP)">(原理|实战)流水线并行(PP)</a></strong></li>
 </ul>
 </li>
-<li><strong><a href="/www6vHomeAIGC/2023/11/26/gptTrainMegatron/" title="(原理)Megatron">(原理)Megatron</a></strong></li>
+<li>混合并行<ul>
+<li><strong><a href="/www6vHomeAIGC/2023/11/26/gptTrainMegatron/" title="(原理)Megatron">(原理)Megatron</a></strong>  </li>
+<li><strong><a href="/www6vHomeAIGC/2023/11/26/gptTrainHybridParallel/" title="(原理)混合并行">(原理)混合并行</a></strong></li>
+</ul>
+</li>
 </ul>
 </li>
 <li>低精度<ul>
@@ -995,6 +999,22 @@
       </categories>
       <tags>
         <tag>PEFT</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>(原理)混合并行</title>
+    <url>/www6vHomeAIGC/2023/11/26/gptTrainHybridParallel/</url>
+    <content><![CDATA[<p></p>
+<span id="more"></span>
+
+<h1><span id="混合并行">混合并行</span><a href="#混合并行" class="header-anchor">#</a></h1><p><a href="https://candied-skunk-1ca.notion.site/111bfe2110848026bf8ff0d2c779e3ed?pvs=4">(原理)混合并行</a></p>
+]]></content>
+      <categories>
+        <category>AIGC</category>
+        <category>train</category>
+      </categories>
+      <tags>
+        <tag>train</tag>
       </tags>
   </entry>
   <entry>
