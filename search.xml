@@ -150,6 +150,7 @@
 <h2><span id="llops">LLOps</span><a href="#llops" class="header-anchor">#</a></h2><ul>
 <li><strong><a href="/www6vHomeAIGC/2023/05/24/gptLLamaFactory/" title="LLama-Factory">LLama-Factory</a></strong></li>
 <li><strong><a href="/www6vHomeAIGC/2023/07/01/gptGPUComputing/" title="显存估算">显存估算</a></strong> </li>
+<li><strong><a href="/www6vHomeAIGC/2023/12/23/gptGPUMetrics/" title="GPU 指标&amp;监控">GPU 指标&amp;监控</a></strong>  </li>
 <li><strong><a href="/www6vHomeAIGC/2023/09/26/gptLLMOpsPaaS/" title="LLM PaaS">LLM PaaS</a></strong>  </li>
 <li><a href="/www6vHomeAIGC/2023/05/23/gptGPU/" title="GPU 算力">GPU 算力</a> </li>
 <li><a href="/www6vHomeAIGC/2022/12/28/gptLLMOps/" title="LLMOps">LLMOps</a></li>
@@ -970,6 +971,23 @@
       </categories>
       <tags>
         <tag>PEFT</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>GPU 指标&amp;监控</title>
+    <url>/www6vHomeAIGC/2023/12/23/gptGPUMetrics/</url>
+    <content><![CDATA[<p></p>
+<span id="more"></span>
+
+
+<h1><span id="gpu-指标amp监控">GPU 指标&amp;监控</span><a href="#gpu-指标amp监控" class="header-anchor">#</a></h1><p><a href="https://candied-skunk-1ca.notion.site/165bfe21108480e29fa1d06e4852a6e0?pvs=4">GPU 指标&amp;监控</a></p>
+]]></content>
+      <categories>
+        <category>AIGC</category>
+        <category>GPU</category>
+      </categories>
+      <tags>
+        <tag>GPU</tag>
       </tags>
   </entry>
   <entry>
