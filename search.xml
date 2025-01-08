@@ -201,6 +201,16 @@
 </ul>
 <h2><span id="deeplearning">DeepLearning</span><a href="#deeplearning" class="header-anchor">#</a></h2><ul>
 <li><strong><a href="/www6vHomeAIGC/2022/06/11/aiDeepLearning/" title="Deep Learning">Deep Learning</a></strong></li>
+<li>正则化<ul>
+<li><strong><a href="/www6vHomeAIGC/2024/01/08/gptDeeplearningWeightDecay/" title="(原理&amp;实战)权重衰减">(原理&amp;实战)权重衰减</a></strong> </li>
+<li><strong><a href="/www6vHomeAIGC/2024/01/08/gptDeeplearningDropout/" title="(原理&amp;实战)Dropout">(原理&amp;实战)Dropout</a></strong></li>
+</ul>
+</li>
+<li>网络优化<ul>
+<li><strong><a href="/www6vHomeAIGC/2024/01/08/gptDeeplearningLearningRate/" title="(原理)学习率">(原理)学习率</a></strong>  </li>
+<li><strong><a href="/www6vHomeAIGC/2024/01/08/gptDeeplearningNorm/" title="规范化 Norm">规范化 Norm</a></strong></li>
+</ul>
+</li>
 <li><strong><a href="/www6vHomeAIGC/2023/03/28/gptPytorch/" title="(实战)PyTorch">(实战)PyTorch</a></strong></li>
 </ul>
 <h2><span id="nlp">NLP</span><a href="#nlp" class="header-anchor">#</a></h2><ul>
@@ -730,6 +740,76 @@
       </categories>
       <tags>
         <tag>Precision</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>规范化 Norm</title>
+    <url>/www6vHomeAIGC/2024/01/08/gptDeeplearningNorm/</url>
+    <content><![CDATA[<p></p>
+<span id="more"></span>
+
+
+
+<h1><span id="规范化-norm">规范化 Norm</span><a href="#规范化-norm" class="header-anchor">#</a></h1><p><a href="https://candied-skunk-1ca.notion.site/Norm-172bfe21108480b2991cc365d3086945?pvs=4">规范化 Norm</a></p>
+]]></content>
+      <categories>
+        <category>AIGC</category>
+        <category>deepLearning</category>
+      </categories>
+      <tags>
+        <tag>deepLearning</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>(原理)学习率</title>
+    <url>/www6vHomeAIGC/2024/01/08/gptDeeplearningLearningRate/</url>
+    <content><![CDATA[<p></p>
+<span id="more"></span>
+
+
+<h1><span id="学习率">学习率</span><a href="#学习率" class="header-anchor">#</a></h1><p><a href="https://candied-skunk-1ca.notion.site/172bfe211084806f8de8cdd5a9b249ad?pvs=4">(原理)学习率</a></p>
+]]></content>
+      <categories>
+        <category>AIGC</category>
+        <category>deepLearning</category>
+      </categories>
+      <tags>
+        <tag>deepLearning</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>(原理&amp;实战)Dropout</title>
+    <url>/www6vHomeAIGC/2024/01/08/gptDeeplearningDropout/</url>
+    <content><![CDATA[<p></p>
+<span id="more"></span>
+
+
+
+<h1><span id="dropout">Dropout</span><a href="#dropout" class="header-anchor">#</a></h1><p><a href="https://candied-skunk-1ca.notion.site/Dropout-16fbfe21108480259446f7c7feb39aca?pvs=4">(原理&amp;实战)Dropout</a></p>
+]]></content>
+      <categories>
+        <category>AIGC</category>
+        <category>deepLearning</category>
+      </categories>
+      <tags>
+        <tag>deepLearning</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>(原理&amp;实战)权重衰减</title>
+    <url>/www6vHomeAIGC/2024/01/08/gptDeeplearningWeightDecay/</url>
+    <content><![CDATA[<p></p>
+<span id="more"></span>
+
+
+<h1><span id="权重衰减-weightdecay">权重衰减 WeightDecay</span><a href="#权重衰减-weightdecay" class="header-anchor">#</a></h1><p><a href="https://candied-skunk-1ca.notion.site/16fbfe21108480ea8682d89d64f5b00c?pvs=4">(原理&amp;实战)权重衰减</a></p>
+]]></content>
+      <categories>
+        <category>AIGC</category>
+        <category>deepLearning</category>
+      </categories>
+      <tags>
+        <tag>deepLearning</tag>
       </tags>
   </entry>
   <entry>
