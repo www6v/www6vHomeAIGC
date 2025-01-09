@@ -201,6 +201,7 @@
 </ul>
 <h2><span id="deeplearning">DeepLearning</span><a href="#deeplearning" class="header-anchor">#</a></h2><ul>
 <li><strong><a href="/www6vHomeAIGC/2022/06/11/aiDeepLearning/" title="Deep Learning">Deep Learning</a></strong></li>
+<li><strong><a href="/www6vHomeAIGC/2024/01/09/gptDeeplearningForwardBackward/" title="(原理&amp;实战)前向&#x2F;反向传播">(原理&amp;实战)前向&#x2F;反向传播</a></strong></li>
 <li>正则化<ul>
 <li><strong><a href="/www6vHomeAIGC/2024/01/08/gptDeeplearningWeightDecay/" title="(原理&amp;实战)权重衰减">(原理&amp;实战)权重衰减</a></strong> </li>
 <li><strong><a href="/www6vHomeAIGC/2024/01/08/gptDeeplearningDropout/" title="(原理&amp;实战)Dropout">(原理&amp;实战)Dropout</a></strong></li>
@@ -740,6 +741,22 @@
       </categories>
       <tags>
         <tag>Precision</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>(原理&amp;实战)前向/反向传播</title>
+    <url>/www6vHomeAIGC/2024/01/09/gptDeeplearningForwardBackward/</url>
+    <content><![CDATA[<p></p>
+<span id="more"></span>
+
+<h1><span id="前向x2f反向传播">前向&#x2F;反向传播</span><a href="#前向x2f反向传播" class="header-anchor">#</a></h1><p><a href="https://candied-skunk-1ca.notion.site/164bfe211084800d80dbe868719ce79a?pvs=4">(原理&amp;实战)前向&#x2F;反向传播</a></p>
+]]></content>
+      <categories>
+        <category>AIGC</category>
+        <category>deepLearning</category>
+      </categories>
+      <tags>
+        <tag>deepLearning</tag>
       </tags>
   </entry>
   <entry>
