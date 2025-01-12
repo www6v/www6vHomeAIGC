@@ -202,6 +202,7 @@
 <h2><span id="deeplearning">DeepLearning</span><a href="#deeplearning" class="header-anchor">#</a></h2><ul>
 <li><strong><a href="/www6vHomeAIGC/2022/06/11/aiDeepLearning/" title="Deep Learning">Deep Learning</a></strong></li>
 <li><strong><a href="/www6vHomeAIGC/2024/01/09/gptDeeplearningForwardBackward/" title="(原理&amp;实战)前向&#x2F;反向传播">(原理&amp;实战)前向&#x2F;反向传播</a></strong></li>
+<li><strong><a href="/www6vHomeAIGC/2024/01/12/gptDeeplearningLoss/" title="(原理&amp;实战)交叉熵损失">(原理&amp;实战)交叉熵损失</a></strong></li>
 <li>正则化<ul>
 <li><strong><a href="/www6vHomeAIGC/2024/01/08/gptDeeplearningWeightDecay/" title="(原理&amp;实战)权重衰减">(原理&amp;实战)权重衰减</a></strong> </li>
 <li><strong><a href="/www6vHomeAIGC/2024/01/08/gptDeeplearningDropout/" title="(原理&amp;实战)Dropout">(原理&amp;实战)Dropout</a></strong></li>
@@ -231,12 +232,18 @@
 <li>Foundation Models<ul>
 <li><a href="/www6vHomeAIGC/2022/10/30/gptLargeModelSurvey/" title="(综述)大模型">(综述)大模型</a></li>
 <li><a href="/www6vHomeAIGC/2023/02/17/gptLargeModel/" title="大模型">大模型</a> </li>
-<li><a href="/www6vHomeAIGC/2022/12/11/gptFamily/" title="GPT 系列">GPT 系列</a>  </li>
-<li><a href="/www6vHomeAIGC/2023/01/06/gptChatGLM/" title="ChatGLM">ChatGLM</a>    </li>
+<li>decode-only<ul>
+<li><a href="/www6vHomeAIGC/2022/12/11/gptFamily/" title="GPT 系列">GPT 系列</a>    </li>
 <li>LLaMA<ul>
 <li><strong><a href="/www6vHomeAIGC/2023/01/01/gptLlama/" title="LLaMA">LLaMA</a></strong>   </li>
 <li><a href="/www6vHomeAIGC/2023/02/24/gptLlamaFamily/" title="LLaMA 家族">LLaMA 家族</a>   </li>
 <li><strong><a href="/www6vHomeAIGC/2024/09/04/gptLlama3-1/" title="Llama3.1">Llama3.1</a></strong></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>encode-only<ul>
+<li><strong><a href="/www6vHomeAIGC/2024/01/12/gptBERT/" title="(原理)BERT">(原理)BERT</a></strong></li>
 </ul>
 </li>
 <li><a href="/www6vHomeAIGC/2023/01/04/gptLeaderBoard/" title="大模型 排行榜">大模型 排行榜</a></li>
@@ -503,10 +510,10 @@
 ]]></content>
       <categories>
         <category>AIGC</category>
-        <category>LLaMA</category>
+        <category>model</category>
       </categories>
       <tags>
-        <tag>LLaMA</tag>
+        <tag>model</tag>
       </tags>
   </entry>
   <entry>
@@ -741,6 +748,38 @@
       </categories>
       <tags>
         <tag>Precision</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>(原理)BERT</title>
+    <url>/www6vHomeAIGC/2024/01/12/gptBERT/</url>
+    <content><![CDATA[<p></p>
+<span id="more"></span>
+
+<h1><span id="bert">BERT</span><a href="#bert" class="header-anchor">#</a></h1><p><a href="https://candied-skunk-1ca.notion.site/BERT-16abfe211084808fb8a3d0769c37c3db?pvs=4">(原理)BERT</a></p>
+]]></content>
+      <categories>
+        <category>AIGC</category>
+        <category>model</category>
+      </categories>
+      <tags>
+        <tag>model</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>(原理&amp;实战)交叉熵损失</title>
+    <url>/www6vHomeAIGC/2024/01/12/gptDeeplearningLoss/</url>
+    <content><![CDATA[<p></p>
+<span id="more"></span>
+
+<h1><span id="交叉熵损失">交叉熵损失</span><a href="#交叉熵损失" class="header-anchor">#</a></h1><p><a href="https://candied-skunk-1ca.notion.site/176bfe21108480e19198ec69bf135e38?pvs=4">(原理&amp;实战)交叉熵损失</a></p>
+]]></content>
+      <categories>
+        <category>AIGC</category>
+        <category>deepLearning</category>
+      </categories>
+      <tags>
+        <tag>deepLearning</tag>
       </tags>
   </entry>
   <entry>
@@ -4596,10 +4635,10 @@
 ]]></content>
       <categories>
         <category>AIGC</category>
-        <category>LLaMA</category>
+        <category>model</category>
       </categories>
       <tags>
-        <tag>LLaMA</tag>
+        <tag>model</tag>
       </tags>
   </entry>
   <entry>
@@ -5659,27 +5698,6 @@
       </tags>
   </entry>
   <entry>
-    <title>ChatGLM</title>
-    <url>/www6vHomeAIGC/2023/01/06/gptChatGLM/</url>
-    <content><![CDATA[<p></p>
-<span id="more"></span>
-
-
-
-<p><a href="https://www.bilibili.com/video/BV1ju411T74Y/">第十一课：ChatGLM</a> V<br><a href="https://blog.csdn.net/v_JULY_v/article/details/129880836">ChatGLM两代的部署&#x2F;微调&#x2F;实现：从基座GLM、ChatGLM的LoRA&#x2F;P-Tuning微调、6B源码解读到ChatGLM2的微调与实现</a></p>
-<p><a href="https://zhuanlan.zhihu.com/p/625468667">【Instruction Tuning】ChatGLM 微调实战（附源码）</a></p>
-<p><a href="https://github.com/www6v/transformers_tasks/blob/main/LLM/chatglm_finetune/readme.md">Finetune ChatGLM-6B</a></p>
-<p><a href="https://mp.weixin.qq.com/s?__biz=MzAxMjc3MjkyMg==&mid=2648401516&idx=1&sn=80b3cfecc9f4338b87fcd9bc91ef2465">也看支持32K上下文的ChatGLM2-6B模型：优化点简读及现有开源模型主流训练优化点概述 </a></p>
-]]></content>
-      <categories>
-        <category>AIGC</category>
-        <category>ChatGLM</category>
-      </categories>
-      <tags>
-        <tag>ChatGLM</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>(原理)分布式训练</title>
     <url>/www6vHomeAIGC/2023/01/06/gptTrainParallelism/</url>
     <content><![CDATA[<p></p>
@@ -5826,10 +5844,10 @@
 ]]></content>
       <categories>
         <category>AIGC</category>
-        <category>LLaMA</category>
+        <category>model</category>
       </categories>
       <tags>
-        <tag>LLaMA</tag>
+        <tag>model</tag>
       </tags>
   </entry>
   <entry>
