@@ -285,6 +285,100 @@
       </tags>
   </entry>
   <entry>
+    <title>人工智能-学习资源</title>
+    <url>/www6vHomeAIGC/2022/01/22/aiStudyResouce/</url>
+    <content><![CDATA[<p></p>
+<span id="more"></span>
+
+<h2><span id="书籍">书籍</span><a href="#书籍" class="header-anchor">#</a></h2><ul>
+<li>理论<ul>
+<li>《人工智能的数据基础》</li>
+<li>《统计学习方法》 v2</li>
+<li>The Hundred-Page Machine Learning Book - 入门</li>
+<li>西瓜书 ***</li>
+<li>花书</li>
+</ul>
+</li>
+<li>框架<ul>
+<li>Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow, v3 - 入门</li>
+<li>Deep Learning with PyTorch - 入门</li>
+<li>Deep Learning with Python - v2 - keras库</li>
+</ul>
+</li>
+</ul>
+<h2><span id="机器学习">机器学习</span><a href="#机器学习" class="header-anchor">#</a></h2><ul>
+<li>浙大 - 吴浩基   ***</li>
+<li>周志华 《机器学习初步》 *** </li>
+<li>Coursera吴恩达- 《machine learning》+ 笔记  入门  *** </li>
+<li><a href="https://www.bilibili.com/video/av79340208/">Machine Learning A-Z Hands-On Python &amp; R In Data Science</a>  Udemy 入门  ***</li>
+<li><a href="https://www.bilibili.com/video/BV1KB4y1E73v">【人工智能系列】【中文】机器学习A-Z Machine Learning in Chinese(前7部分)</a></li>
+<li><a href="https://www.bilibili.com/video/BV1jF411A7VF/">[Coursera公开课] [机器学习专项课程1&#x2F;4] 机器学习基础：案例研究</a>  ***</li>
+<li><a href="https://www.bilibili.com/video/BV1Bg411Z77N">聚类算法：层次聚类、k-means 聚类、k-medoids 聚类、密度聚类</a>  ***</li>
+</ul>
+<h2><span id="深度学习">深度学习</span><a href="#深度学习" class="header-anchor">#</a></h2><ul>
+<li>《动手学深度学习- 第二版 -pyTorch》  ***<br>b站有视频课<br><a href="http://zh.d2l.ai/index.html">《动手学深度学习》</a> 在线<br>电子书+jupternote代码</li>
+<li>《神经网络和深度学习 》 复旦  </li>
+<li>Coursera吴恩达《深度学习》 + 笔记  ***</li>
+<li>老唐 ***</li>
+<li>莫烦Python </li>
+<li>北京大学 TensorFlow 2.0</li>
+<li>算法可视化  ***</li>
+<li>李宏毅 台湾</li>
+</ul>
+<h2><span id="nlp-amp-大模型">NLP &amp; 大模型</span><a href="#nlp-amp-大模型" class="header-anchor">#</a></h2><ul>
+<li><p><a href="https://www.zhihu.com/education/video-course/1546509363711614976">沈向洋带你读论文——CV &amp; NLP 专题</a> V </p>
+</li>
+<li><p><a href="https://www.bilibili.com/video/BV1C14y147dp">2022年首发！B站讲的最好的【NLP自然语言处理】保姆级教程！</a>  V  有实践  *** </p>
+</li>
+<li><p>MLNLP第六期学术研讨会开始报名</p>
+</li>
+</ul>
+<h2><span id="知识图谱">知识图谱</span><a href="#知识图谱" class="header-anchor">#</a></h2><ul>
+<li><a href="https://www.bilibili.com/video/BV1VT411G7Y6?p=6">【国家级精品课】浙江大学教授（新全44集）知识图谱公开课分享</a>  ***</li>
+</ul>
+<h2><span id="极客时间">极客时间</span><a href="#极客时间" class="header-anchor">#</a></h2><ul>
+<li>极客时间<ul>
+<li>《AI 技术内参》  洪亮劼   全 ***</li>
+<li>《机器学习 40 讲》  王天一 </li>
+<li>《人工智能基础课》  王天一<br> 机器学习，深度学习</li>
+<li>《成为AI产品经理》  刘海丰 京东   </li>
+<li>《零基础实战机器学习》 黄佳  ***</li>
+<li>《PyTorch深度学习实战》方远 大厂</li>
+<li><a href="https://time.geekbang.org/course/intro/100023001?tab=catalog">TensorFlow 快速入门与实战</a></li>
+<li><a href="https://time.geekbang.org/course/intro/315">TensorFlow 2 项目进阶实战</a></li>
+<li><a href="https://time.geekbang.org/course/intro/100046401">NLP 实战高手课</a></li>
+</ul>
+</li>
+<li><a href="https://time.geekbang.org/course/detail/100005001-3090">深度学习应用实践 60 讲</a><ul>
+<li>深度学习在CTR预估的应用   张俊林</li>
+<li>深度学习在图像理解中的应用  熊鹏飞</li>
+</ul>
+</li>
+<li><a href="https://time.geekbang.org/course/detail/100005001-3090">深度学习应用实践 60 讲</a><ul>
+<li>知识图谱技术实践  邵蓥侠</li>
+</ul>
+</li>
+<li>极客训练营<br>-《机器学习训练营1期》  视频课</li>
+</ul>
+<h2><span id="中国大学mooc">中国大学MOOC</span><a href="#中国大学mooc" class="header-anchor">#</a></h2><ul>
+<li>中国大学MOOC <a href="https://www.icourse163.org/learn/HIT-1206320802?tid=1468208513#/learn/announce">深度学习基础</a>   哈尔滨工业大学</li>
+<li>中国大学MOOC <a href="https://www.icourse163.org/course/FUDAN-1205806833">深度学习及其应用</a>   复旦</li>
+<li>中国大学MOOC <a href="https://www.icourse163.org/course/ZUCC-1206146808">深度学习应用开发-TensorFlow实践</a>  浙大城市学院</li>
+</ul>
+<h2><span id="培训">培训</span><a href="#培训" class="header-anchor">#</a></h2><ul>
+<li><a href="http://bit.baidu.com/">百度技术培训中心</a>  *** 认证， 自动驾驶，人工智能培训  </li>
+<li><a href="http://bit.baidu.com/courseRouteDetail?id=111">人工智能学习路线</a>  百度技术培训中心</li>
+</ul>
+]]></content>
+      <categories>
+        <category>AIGC</category>
+        <category>学习资源</category>
+      </categories>
+      <tags>
+        <tag>学习资源</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>(原理)Agent 多模态</title>
     <url>/www6vHomeAIGC/2023/02/21/gptAgentMultimodal/</url>
     <content><![CDATA[<p></p>
@@ -409,100 +503,6 @@
       </tags>
   </entry>
   <entry>
-    <title>人工智能-学习资源</title>
-    <url>/www6vHomeAIGC/2022/01/22/aiStudyResouce/</url>
-    <content><![CDATA[<p></p>
-<span id="more"></span>
-
-<h2><span id="书籍">书籍</span><a href="#书籍" class="header-anchor">#</a></h2><ul>
-<li>理论<ul>
-<li>《人工智能的数据基础》</li>
-<li>《统计学习方法》 v2</li>
-<li>The Hundred-Page Machine Learning Book - 入门</li>
-<li>西瓜书 ***</li>
-<li>花书</li>
-</ul>
-</li>
-<li>框架<ul>
-<li>Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow, v3 - 入门</li>
-<li>Deep Learning with PyTorch - 入门</li>
-<li>Deep Learning with Python - v2 - keras库</li>
-</ul>
-</li>
-</ul>
-<h2><span id="机器学习">机器学习</span><a href="#机器学习" class="header-anchor">#</a></h2><ul>
-<li>浙大 - 吴浩基   ***</li>
-<li>周志华 《机器学习初步》 *** </li>
-<li>Coursera吴恩达- 《machine learning》+ 笔记  入门  *** </li>
-<li><a href="https://www.bilibili.com/video/av79340208/">Machine Learning A-Z Hands-On Python &amp; R In Data Science</a>  Udemy 入门  ***</li>
-<li><a href="https://www.bilibili.com/video/BV1KB4y1E73v">【人工智能系列】【中文】机器学习A-Z Machine Learning in Chinese(前7部分)</a></li>
-<li><a href="https://www.bilibili.com/video/BV1jF411A7VF/">[Coursera公开课] [机器学习专项课程1&#x2F;4] 机器学习基础：案例研究</a>  ***</li>
-<li><a href="https://www.bilibili.com/video/BV1Bg411Z77N">聚类算法：层次聚类、k-means 聚类、k-medoids 聚类、密度聚类</a>  ***</li>
-</ul>
-<h2><span id="深度学习">深度学习</span><a href="#深度学习" class="header-anchor">#</a></h2><ul>
-<li>《动手学深度学习- 第二版 -pyTorch》  ***<br>b站有视频课<br><a href="http://zh.d2l.ai/index.html">《动手学深度学习》</a> 在线<br>电子书+jupternote代码</li>
-<li>《神经网络和深度学习 》 复旦  </li>
-<li>Coursera吴恩达《深度学习》 + 笔记  ***</li>
-<li>老唐 ***</li>
-<li>莫烦Python </li>
-<li>北京大学 TensorFlow 2.0</li>
-<li>算法可视化  ***</li>
-<li>李宏毅 台湾</li>
-</ul>
-<h2><span id="nlp-amp-大模型">NLP &amp; 大模型</span><a href="#nlp-amp-大模型" class="header-anchor">#</a></h2><ul>
-<li><p><a href="https://www.zhihu.com/education/video-course/1546509363711614976">沈向洋带你读论文——CV &amp; NLP 专题</a> V </p>
-</li>
-<li><p><a href="https://www.bilibili.com/video/BV1C14y147dp">2022年首发！B站讲的最好的【NLP自然语言处理】保姆级教程！</a>  V  有实践  *** </p>
-</li>
-<li><p>MLNLP第六期学术研讨会开始报名</p>
-</li>
-</ul>
-<h2><span id="知识图谱">知识图谱</span><a href="#知识图谱" class="header-anchor">#</a></h2><ul>
-<li><a href="https://www.bilibili.com/video/BV1VT411G7Y6?p=6">【国家级精品课】浙江大学教授（新全44集）知识图谱公开课分享</a>  ***</li>
-</ul>
-<h2><span id="极客时间">极客时间</span><a href="#极客时间" class="header-anchor">#</a></h2><ul>
-<li>极客时间<ul>
-<li>《AI 技术内参》  洪亮劼   全 ***</li>
-<li>《机器学习 40 讲》  王天一 </li>
-<li>《人工智能基础课》  王天一<br> 机器学习，深度学习</li>
-<li>《成为AI产品经理》  刘海丰 京东   </li>
-<li>《零基础实战机器学习》 黄佳  ***</li>
-<li>《PyTorch深度学习实战》方远 大厂</li>
-<li><a href="https://time.geekbang.org/course/intro/100023001?tab=catalog">TensorFlow 快速入门与实战</a></li>
-<li><a href="https://time.geekbang.org/course/intro/315">TensorFlow 2 项目进阶实战</a></li>
-<li><a href="https://time.geekbang.org/course/intro/100046401">NLP 实战高手课</a></li>
-</ul>
-</li>
-<li><a href="https://time.geekbang.org/course/detail/100005001-3090">深度学习应用实践 60 讲</a><ul>
-<li>深度学习在CTR预估的应用   张俊林</li>
-<li>深度学习在图像理解中的应用  熊鹏飞</li>
-</ul>
-</li>
-<li><a href="https://time.geekbang.org/course/detail/100005001-3090">深度学习应用实践 60 讲</a><ul>
-<li>知识图谱技术实践  邵蓥侠</li>
-</ul>
-</li>
-<li>极客训练营<br>-《机器学习训练营1期》  视频课</li>
-</ul>
-<h2><span id="中国大学mooc">中国大学MOOC</span><a href="#中国大学mooc" class="header-anchor">#</a></h2><ul>
-<li>中国大学MOOC <a href="https://www.icourse163.org/learn/HIT-1206320802?tid=1468208513#/learn/announce">深度学习基础</a>   哈尔滨工业大学</li>
-<li>中国大学MOOC <a href="https://www.icourse163.org/course/FUDAN-1205806833">深度学习及其应用</a>   复旦</li>
-<li>中国大学MOOC <a href="https://www.icourse163.org/course/ZUCC-1206146808">深度学习应用开发-TensorFlow实践</a>  浙大城市学院</li>
-</ul>
-<h2><span id="培训">培训</span><a href="#培训" class="header-anchor">#</a></h2><ul>
-<li><a href="http://bit.baidu.com/">百度技术培训中心</a>  *** 认证， 自动驾驶，人工智能培训  </li>
-<li><a href="http://bit.baidu.com/courseRouteDetail?id=111">人工智能学习路线</a>  百度技术培训中心</li>
-</ul>
-]]></content>
-      <categories>
-        <category>AIGC</category>
-        <category>学习资源</category>
-      </categories>
-      <tags>
-        <tag>学习资源</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Agent - UI-assistants</title>
     <url>/www6vHomeAIGC/2023/06/30/gptAgentMultimodalApp/</url>
     <content><![CDATA[<p></p>
@@ -519,6 +519,25 @@
       </categories>
       <tags>
         <tag>AIGC</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Paper-Agent</title>
+    <url>/www6vHomeAIGC/2023/03/04/gptAgentPaper/</url>
+    <content><![CDATA[<p></p>
+<span id="more"></span>
+
+<p>1xx. <a href="https://github.com/zjunlp/LLMAgentPapers">LLM Agents Papers</a> ***</p>
+<p>1xx. <a href="https://zhuanlan.zhihu.com/p/662506575">28 篇最新论文解读 LLMs-based Agents</a><br>1xx. <a href="https://zhuanlan.zhihu.com/p/661741663">ICLR’24 Agent论文合集：RL-based、LLM-based 前沿研究汇总</a><br>1xx. <a href="https://zhuanlan.zhihu.com/p/665282216">ICLR’24 大语言模型智能体最新研究进展丨智能体应用篇</a><br>1xx. <a href="https://mp.weixin.qq.com/s/GGRWQJ-eBvHerB9H9JPCjg">ICLR’24 大语言模型智能体最新研究进展丨智能体能力篇 </a><br>   <a href="https://mp.weixin.qq.com/s/eYnZY1GFWMKdU_Z57iSEJg">ICLR’24 大语言模型智能体最新研究进展 </a><br>1xx. <a href="https://github.com/www6v/LLM-Agents-Papers"> LLM-Agents-Papers</a></p>
+<p>1xx. <a href="https://www.bilibili.com/read/cv27126779/">AGI新突破！52篇论文尽览大模型Agent最新研究进展！</a></p>
+<p>1xx. <a href="https://zhuanlan.zhihu.com/p/673788545">AI Agent &amp; 大模型经典论文推荐</a>  ***</p>
+]]></content>
+      <categories>
+        <category>AIGC</category>
+        <category>Agent</category>
+      </categories>
+      <tags>
+        <tag>Agent</tag>
       </tags>
   </entry>
   <entry>
@@ -574,25 +593,6 @@
       </categories>
       <tags>
         <tag>model</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Paper-Agent</title>
-    <url>/www6vHomeAIGC/2023/03/04/gptAgentPaper/</url>
-    <content><![CDATA[<p></p>
-<span id="more"></span>
-
-<p>1xx. <a href="https://github.com/zjunlp/LLMAgentPapers">LLM Agents Papers</a> ***</p>
-<p>1xx. <a href="https://zhuanlan.zhihu.com/p/662506575">28 篇最新论文解读 LLMs-based Agents</a><br>1xx. <a href="https://zhuanlan.zhihu.com/p/661741663">ICLR’24 Agent论文合集：RL-based、LLM-based 前沿研究汇总</a><br>1xx. <a href="https://zhuanlan.zhihu.com/p/665282216">ICLR’24 大语言模型智能体最新研究进展丨智能体应用篇</a><br>1xx. <a href="https://mp.weixin.qq.com/s/GGRWQJ-eBvHerB9H9JPCjg">ICLR’24 大语言模型智能体最新研究进展丨智能体能力篇 </a><br>   <a href="https://mp.weixin.qq.com/s/eYnZY1GFWMKdU_Z57iSEJg">ICLR’24 大语言模型智能体最新研究进展 </a><br>1xx. <a href="https://github.com/www6v/LLM-Agents-Papers"> LLM-Agents-Papers</a></p>
-<p>1xx. <a href="https://www.bilibili.com/read/cv27126779/">AGI新突破！52篇论文尽览大模型Agent最新研究进展！</a></p>
-<p>1xx. <a href="https://zhuanlan.zhihu.com/p/673788545">AI Agent &amp; 大模型经典论文推荐</a>  ***</p>
-]]></content>
-      <categories>
-        <category>AIGC</category>
-        <category>Agent</category>
-      </categories>
-      <tags>
-        <tag>Agent</tag>
       </tags>
   </entry>
   <entry>
@@ -1040,214 +1040,6 @@
       </tags>
   </entry>
   <entry>
-    <title>(原理)LIMA, LESS</title>
-    <url>/www6vHomeAIGC/2023/04/27/gptDataSFTQuality/</url>
-    <content><![CDATA[<p></p>
-<span id="more"></span>
-
-<h2><span id="目录">目录</span><a href="#目录" class="header-anchor">#</a></h2><div class="toc">
-
-<!-- toc -->
-
-<ul>
-<li><a href="#lima-1kimi">LIMA [1][kimi]</a></li>
-<li><a href="#less-%E6%A0%B8%E5%BF%83%E6%80%9D%E6%83%B3-10">LESS 核心思想 [10]</a></li>
-<li><a href="#less10kimi">LESS[10][kimi]</a><ul>
-<li><a href="#%E5%AE%9E%E9%AA%8C%E6%96%B9%E6%B3%95">实验方法：</a></li>
-<li><a href="#%E7%BB%93%E8%AE%BA">结论：</a></li>
-</ul>
-</li>
-<li><a href="#%E5%8F%82%E8%80%83">参考</a><ul>
-<li><a href="#lima">LIMA</a></li>
-<li><a href="#less">LESS</a></li>
-</ul>
-</li>
-</ul>
-<!-- tocstop -->
-
-</div>
-
-<h1><span id="lima-1kimi">LIMA [1][kimi]</span><a href="#lima-1kimi" class="header-anchor">#</a></h1><p>LIMA（Less Is More for Alignment）的实验通过一系列设计精良的步骤来探究数据质量、多样性以及数量对模型性能的影响，从而得出了<strong>提高数据质量和增加提示多样性比单纯增加数据量更能提升模型性能的结论</strong>。以下是<strong>实验方法</strong>的关键步骤：</p>
-<ol>
-<li><p><strong>精心策划的微调数据</strong>：LIMA模型在<strong>1000个</strong>精心策划的提示和回复上进行了<strong>微调</strong>，这些数据被设计为模拟真实用户与AI助手的交互。</p>
-</li>
-<li><p><strong>消融实验</strong>：通过消融实验，研究者们观察了在增加数据量的同时不增加提示多样性时，模型性能的提升是否有限；而在优化数据质量时，性能是否有显著提升。</p>
-</li>
-<li><p><strong>数据构造</strong>：研究者从Stack Exchange、wikiHow和Pushshift Reddit数据集收集数据，并进行了<strong>质量和多样性</strong>的控制。这些数据集被用来构造训练样本，以确保输入的多样性和输出的一致性。</p>
-</li>
-<li><p><strong>质量与多样性的对比</strong>：研究者比较了经过质量过滤的Stack Exchange数据和同质化的wikiHow数据对模型性能的影响。结果显示，更<strong>多样化的Stack Exchange数据在性能上优于同质化的wikiHow数据</strong>。 【多样化】</p>
-</li>
-<li><p><strong>数量的对比</strong>：研究者对从Stack Exchange抽取的指数级增加的训练集进行了测试，发现<strong>训练集的翻倍并没有改善响应质量</strong>，从而说明单纯增加数据量并不一定能提升性能。【数量】</p>
-</li>
-<li><p><strong>质量控制的实验</strong>：研究者还比较了未经过任何质量或风格过滤的Stack Exchange数据集与经过过滤的数据集上训练的模型性能，发现<strong>过滤后</strong>的数据集上训练的模型性能<strong>更优</strong>。【质量】</p>
-</li>
-<li><p><strong>人类评估</strong>：为了评估LIMA模型的性能，研究者进行了人类偏好研究，将LIMA的输出与其他几个基线模型的输出进行比较，并让人群工作者选择他们更喜欢的输出。</p>
-</li>
-</ol>
-<p>通过这些实验步骤，LIMA的研究得出了<strong>数据质量和提示多样性对于提升模型性能的重要性远超过单纯增加数据量的结论</strong>。这些发现支持了“浅层对齐假说”，即模型在预训练阶段已经学习到了几乎所有知识和能力，而微调过程主要是学习与人类交互的风格和格式。</p>
-<ul>
-<li><p>总结 [1]</p>
-<p>消融实验显示，<strong>当扩大数据量而不同时扩大提示多样性时，收益会大大减少，而在优化数据质量时，收益会大大增加</strong><br>【<strong>数量</strong> &lt;–&gt; <strong>多样性</strong>  <strong>质量</strong>】</p>
-</li>
-</ul>
-<h1><span id="less-核心思想-10">LESS 核心思想 [10]</span><a href="#less-核心思想-10" class="header-anchor">#</a></h1><p>通过仅给出<strong>少数体现特定能力的示例</strong>，从大量指令数据集中<strong>有效地选择5%有影响力的数据</strong>用于目标指令微调，结果优于全量数据集进行微调，并且所选子集在不同模型参数规模和不同模型系列中仍然普遍有效。</p>
-<h1><span id="less10kimi">LESS[10][kimi]</span><a href="#less10kimi" class="header-anchor">#</a></h1><p>LESS（Selecting Influential Data for Targeted Instruction Tuning）的实验方法和相应的结论如下：</p>
-<h3><span id="实验方法">实验方法：</span><a href="#实验方法" class="header-anchor">#</a></h3><ol>
-<li><p><strong>热身训练（Warmup Training）</strong>：使用LoRA（Low-Rank Adaptation）技术对预训练模型进行热身训练，以适应特定的数据分布。</p>
-</li>
-<li><p><strong>梯度数据存储（Gradient Data Store）</strong>：构建了一个具有投影低维梯度特征的梯度数据存储，该存储可以重复用于不同的目标任务。</p>
-</li>
-<li><p><strong>数据选择算法</strong>：利用数据存储和算法选择与体现特定能力的少数示例最相似的训练数据点。?</p>
-</li>
-<li><p><strong>模型训练</strong>：使用选择的数据子集来训练目标模型。</p>
-</li>
-<li><p><strong>评估</strong>：在不同的下游任务上评估LESS选择的数据子集的性能，包括MMLU、TYDIQA和BBH数据集。</p>
-</li>
-</ol>
-<h3><span id="结论">结论：</span><a href="#结论" class="header-anchor">#</a></h3><ol>
-<li><p><strong>LESS的有效性</strong>：LESS<strong>在不同的模型中都是有效的</strong>，能够在多个评估数据集上提高性能。</p>
-</li>
-<li><p><strong>数据子集的性能</strong>：<strong>使用LESS选择的5%的数据通常优于使用完整数据集进行训练的结果</strong>。这表明完整数据集可能包含与特定目标任务无关或有害的数据点。</p>
-</li>
-<li><p><strong>数据的可转移性</strong>：使用较小模型选择的数据可以提高较大模型和不同模型系列的性能，证明了LESS选择的数据具有高度的可转移性。</p>
-</li>
-<li><p><strong>与其他方法的比较</strong>：LESS是唯一一致有效的方法，相较于其他基线方法（如随机选择、BM25、DSIR、RDS）表现出更好的性能。</p>
-</li>
-<li><p><strong>计算成本</strong>：LESS的计算成本较高，但由于其有效性，这一成本是合理的。</p>
-</li>
-<li><p><strong>定性分析</strong>：LESS选择的数据能够体现预期下游应用所需的推理技能，而不是仅仅基于表面形式线索。</p>
-</li>
-<li><p><strong>局限性</strong>：LESS需要热身训练阶段，这增加了计算负载。此外，使用补全Token的平均梯度可能导致性能问题。还有，最小化验证损失并不总能提高任务性能，且数据选择中的线性度假设是LESS的一个限制。</p>
-</li>
-</ol>
-<p>总体而言，LESS通过选择与目标任务高度相关的数据点，能够在指令微调中实现高效的性能提升，尽管存在一些局限性和计算成本。</p>
-<p>【总结:  少量有<strong>质量</strong>的数据  优于  全量数据 】 【数据选择算法】</p>
-<h1><span id="参考">参考</span><a href="#参考" class="header-anchor">#</a></h1><h3><span id="lima">LIMA</span><a href="#lima" class="header-anchor">#</a></h3><ol>
-<li><a href="https://mp.weixin.qq.com/s/c50HrOfKOqgqGPVRHf6EpA">大模型微调究竟需要多少数据：从三个现有代表工作看几组结论及一点思考 </a><br>  <strong>指令格式的多样性</strong><br>  《LIMA: Less Is More for Alignment》<br>  《MAYBE ONLY 0.5% DATA IS NEEDED》</li>
-</ol>
-<p>1xx. <a href="https://blog.csdn.net/jinniulema/article/details/133915276">【论文笔记】LIMA: Less Is More for Alignment</a></p>
-<h3><span id="less">LESS</span><a href="#less" class="header-anchor">#</a></h3><ol start="10">
-<li><a href="https://zhuanlan.zhihu.com/p/686007325">LESS：仅选择5%有影响力的数据优于全量数据集进行目标指令微调</a></li>
-</ol>
-<p>1xx. <a href="https://zhuanlan.zhihu.com/p/686687923">LESS 实践：用少量的数据进行目标指令微调</a></p>
-]]></content>
-      <categories>
-        <category>AIGC</category>
-        <category>dataset</category>
-      </categories>
-      <tags>
-        <tag>dataset</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>(原理)SFT Scaling</title>
-    <url>/www6vHomeAIGC/2023/04/26/gptDataSFTScaling/</url>
-    <content><![CDATA[<p></p>
-<span id="more"></span>
-
-<h1><span id="sft-scaling">SFT Scaling</span><a href="#sft-scaling" class="header-anchor">#</a></h1><p><a href="https://candied-skunk-1ca.notion.site/SFT-Scaling-36916e81271a4c1d963d9f357b919508?pvs=4">(原理)SFT Scaling</a></p>
-]]></content>
-      <categories>
-        <category>AIGC</category>
-        <category>dataset</category>
-      </categories>
-      <tags>
-        <tag>dataset</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>(原理)Data Selection</title>
-    <url>/www6vHomeAIGC/2023/05/05/gptDataSelection/</url>
-    <content><![CDATA[<p></p>
-<span id="more"></span>
-
-<h2><span id="目录">目录</span><a href="#目录" class="header-anchor">#</a></h2><div class="toc">
-
-<!-- toc -->
-
-<ul>
-<li><a href="#ifd1">IFD[1]</a></li>
-<li><a href="#mods2">MoDS[2]</a></li>
-<li><a href="#deita-3">DEITA [3]</a><ul>
-<li><a href="#%E5%A4%8D%E6%9D%82%E6%80%A7%E8%AF%84%E5%88%86">复杂性评分</a></li>
-<li><a href="#%E8%B4%A8%E9%87%8F%E8%AF%84%E5%88%86">质量评分</a></li>
-<li><a href="#%E5%A4%9A%E6%A0%B7%E6%80%A7%E7%AD%9B%E9%80%89">多样性筛选</a></li>
-</ul>
-</li>
-<li><a href="#%E5%8F%82%E8%80%83">参考</a></li>
-</ul>
-<!-- tocstop -->
-
-</div>
-
-<h1><span id="ifd1">IFD[1]</span><a href="#ifd1" class="header-anchor">#</a></h1><ul>
-<li>三个步骤<ul>
-<li>Learning from Brief Experience<br>利用少量进行进行<strong>模型初学</strong> </li>
-<li>Evaluating Based on Experience<br>利用初学模型计算原始数据中所有<strong>IFD指标</strong><ul>
-<li>算法<ul>
-<li>条件回答分数（ Conditioned Answer Score，CAS）</li>
-<li>直接答案分数（Direct Answer Score，DAS）</li>
-<li>指令跟随难度（Instruction-Following Difficulty，IFD）分数</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>Retraining from Self-Guided Experience<br>利用<strong>樱桃数据</strong>进行模型<strong>重训练</strong></li>
-</ul>
-</li>
-</ul>
-<h1><span id="mods2">MoDS[2]</span><a href="#mods2" class="header-anchor">#</a></h1><ul>
-<li><p>质量筛选<br>采用OpenAssistant的<strong>reward-model</strong>-debertav3-large-v2模型（一个基于<strong>DeBERTa架构</strong>设计的奖励模型）对数据进行<strong>质量打分</strong>。</p>
-</li>
-<li><p>多样性筛选<br>为了避免所选质量数据高度相似，通过<strong>K-Center-Greedy算法</strong>进行数据筛选，在最大化多样性的情况下，使指令数据集最小。<br>在该步骤中，采用<strong>BERT模型</strong>为指令数据生成句向量来计算不同数据之间的距离。</p>
-</li>
-<li><p>必要性筛选</p>
-</li>
-</ul>
-<h1><span id="deita-3">DEITA [3]</span><a href="#deita-3" class="header-anchor">#</a></h1><h3><span id="复杂性评分">复杂性评分</span><a href="#复杂性评分" class="header-anchor">#</a></h3><ul>
-<li>复杂性评估的方法  <ul>
-<li>Random Selection：随机选择样本。</li>
-<li>Instruction Length：按照指令的长度计算复杂性。</li>
-<li><strong>Perplexity</strong>：通过预训练模型计算回复的困惑度作为复杂性指标，困惑值越大意味着数据样本越难。</li>
-<li><strong>Direct Scoring</strong>：利用ChaGPT给指令的复杂性打分。</li>
-<li>Instruction Node：利用ChatGPT将指令转换成语义树，通过树的节点数作为复杂性指标。</li>
-<li><strong>Instag Complexity</strong>：利用ChatGPT对部分数据进行打标签，再训练一个Llama模型，再利用训练后的Llama模型对全量数据预测，标签越多说明数据约复杂。</li>
-<li><strong>IFD</strong>：指令跟随难度作为复杂性指标。</li>
-</ul>
-</li>
-</ul>
-<p>DEITA评估复杂性的方法，主要先对一个小规模种子数据集（2k）进行数据复杂性<strong>扩展</strong>，再利<strong>用ChatGPT对扩展数据进行打分</strong>，并<strong>训练一个Llama1-7B的模型</strong>，最后利用训练后的模型对数据的打分作为复杂性评估指标。</p>
-<h3><span id="质量评分">质量评分</span><a href="#质量评分" class="header-anchor">#</a></h3><ul>
-<li>质量评估的方法有<ul>
-<li>Random Selection：随机选择样本。</li>
-<li>Response Length：采用输出长度作为质量评估指标。</li>
-<li>Direct Scoring：利用ChatGPT直接评估对特定指令输出结果的准确性。</li>
-</ul>
-</li>
-</ul>
-<p>DEITA评估质量的方法，<strong>与评估复杂性方法一致</strong>。先对一个小规模种子数据集（2k，与复杂性数据一致）进行数据质量扩展，再利用ChatGPT对扩展数据进行打分并训练一个Llama1-7B的模型，最后利用训练后的模型对数据的打分作为质量评估指标。</p>
-<p><strong>数据质量扩展</strong>，通过特殊的提示词利用ChatGPT对数据的回复部分进行改写，主要是增强回复的有用性、相关性、丰富深度、创造力和提供额外的细节描述。</p>
-<h3><span id="多样性筛选">多样性筛选</span><a href="#多样性筛选" class="header-anchor">#</a></h3><p>多样性筛选方法，首先将数据池中的数据按照复杂性和质量的综合得分（复杂性分数*质量分数）进行降序<strong>排序</strong>；<br>然后按顺序逐个取出样本数据x ，<strong>计算x 与筛选池中相邻最近的样本之间距离值</strong>，其中，数据利用Llama1-13B模型进行向量表征，距离计算采用<strong>余弦相似度</strong>。<br>如果<strong>距离值小于 r时</strong>，认为该样本与筛选池中数据相似程度不高，可以<strong>纳入筛选池</strong>；否则<strong>不纳入筛选池</strong>。当筛选池中样本数达到规定样本个数，完成多样性筛选。</p>
-<h1><span id="参考">参考</span><a href="#参考" class="header-anchor">#</a></h1><ol>
-<li><p><a href="https://zhuanlan.zhihu.com/p/658128530">如何从数据集中自动识别高质量的指令数据-IFD指标的使用</a><br>《From Quantity to Quality: Boosting LLM Performance with Self-Guided Data Selection for Instruction Tuning》<br>ChatLaw就这么训的</p>
-</li>
-<li><p><a href="https://zhuanlan.zhihu.com/p/671183709">大模型微调技巧 | 高质量指令数据筛选方法-MoDS</a><br>《MoDS: Model-oriented Data Selection for Instruction Tuning》<br> 质量筛选， 多样性筛选，必要性筛选   </p>
-</li>
-<li><p><a href="https://zhuanlan.zhihu.com/p/675928711">DEITA-大模型指令微调的数据高效筛选方法</a></p>
-</li>
-</ol>
-<p>1xx. <a href="https://zhuanlan.zhihu.com/p/687339776">DEITA：融合复杂度、质量、多样性的高效数据筛选</a><br>   复杂度、质量、多样性</p>
-<p>1xx. <a href="https://mp.weixin.qq.com/s?__biz=MzAxMjc3MjkyMg==&mid=2648409027&idx=1&sn=4083853fd0bfb1790d8df6b4414b6583">值得一看的大模型预训练数据选择策略总结：兼读20240229大模型进展早报 </a><br>《A Survey on Data Selection for Language Models》</p>
-]]></content>
-      <categories>
-        <category>AIGC</category>
-        <category>Data Selection</category>
-      </categories>
-      <tags>
-        <tag>Data Selection</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>(list)数据集</title>
     <url>/www6vHomeAIGC/2023/01/08/gptDataSet/</url>
     <content><![CDATA[<p></p>
@@ -1280,22 +1072,6 @@
       </tags>
   </entry>
   <entry>
-    <title>(原理|实战)Self-QA</title>
-    <url>/www6vHomeAIGC/2023/09/27/gptDataSelfQA/</url>
-    <content><![CDATA[<p></p>
-<span id="more"></span>
-
-<h1><span id="self-qa">Self-QA</span><a href="#self-qa" class="header-anchor">#</a></h1><p><a href="https://candied-skunk-1ca.notion.site/Self-QA-10ebfe21108480999eadec23ffadb6fe?pvs=4">(原理|实战)Self-QA</a></p>
-]]></content>
-      <categories>
-        <category>AIGC</category>
-        <category>Data</category>
-      </categories>
-      <tags>
-        <tag>Data</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>(List) Pretrain 数据集</title>
     <url>/www6vHomeAIGC/2023/04/24/gptDataSetPretrainList/</url>
     <content><![CDATA[<p></p>
@@ -1318,56 +1094,6 @@
       </categories>
       <tags>
         <tag>dataset</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>(原理)Wizard</title>
-    <url>/www6vHomeAIGC/2023/03/18/gptDataWizard/</url>
-    <content><![CDATA[<p></p>
-<span id="more"></span>
-
-<h2><span id="目录">目录</span><a href="#目录" class="header-anchor">#</a></h2><div class="toc">
-
-<!-- toc -->
-
-<ul>
-<li><a href="#wizard-%E6%96%B9%E6%B3%95">Wizard 方法</a><ul>
-<li><a href="#%E8%87%AA%E5%8A%A8%E6%8C%87%E4%BB%A4%E6%95%B0%E6%8D%AE%E8%BF%9B%E5%8C%96-1">自动指令数据进化 [1]</a></li>
-</ul>
-</li>
-<li><a href="#%E5%8F%82%E8%80%83">参考</a><ul>
-<li><a href="#%E8%B4%A8%E9%87%8F-%E5%A4%9A%E6%A0%B7%E6%80%A7-%E5%A4%8D%E6%9D%82%E5%BA%A6">质量-&gt; 多样性, 复杂度</a></li>
-</ul>
-</li>
-</ul>
-<!-- tocstop -->
-
-</div>
-
-<h1><span id="wizard-方法">Wizard 方法</span><a href="#wizard-方法" class="header-anchor">#</a></h1><h3><span id="自动指令数据进化-1">自动指令数据进化 [1]</span><a href="#自动指令数据进化-1" class="header-anchor">#</a></h3><p>1）指令进化</p>
-<ul>
-<li>In-Depth Evolving 提示 [深度]<ul>
-<li>五种类型的提示来增强指令<br>增加约束 + 深化 + 具体化 + 增加推理步骤 + 复杂化输入</li>
-<li>核心部分<br><strong>In-Depth Evolving的提示的核心部分是 “你的目标是将一个给定的提示改写成更复杂的版本，使那些著名的人工智能系统（如ChatGPT和GPT4）更难处理。但改写后的提示必须是合理的，能被人理解，并能被人回应”</strong></li>
-</ul>
-</li>
-<li>In-Breadth Evolving提示 [广度]<ul>
-<li>目的<br>旨在提高<strong>主题覆盖率</strong>、<strong>技能覆盖率</strong>和整体数据集的<strong>多样性</strong></li>
-</ul>
-</li>
-</ul>
-<p>2）响应生成</p>
-<p>3）消除进化<br>   即过滤未能进化的指令</p>
-<h1><span id="参考">参考</span><a href="#参考" class="header-anchor">#</a></h1><h3><span id="质量-gt-多样性-复杂度">质量-&gt; 多样性, 复杂度</span><a href="#质量-gt-多样性-复杂度" class="header-anchor">#</a></h3><ol>
-<li><a href="https://mp.weixin.qq.com/s?__biz=MzAxMjc3MjkyMg==&mid=2648401462&idx=1&sn=764f0302918174cea29ae22ac5760033">如何构造复杂多样的微调指令数据：WizardLM复杂指令构造思想与实验分析工作总结 </a><br> <a href="https://github.com/nlpxucan/WizardLM">WizardLM</a> git</li>
-</ol>
-]]></content>
-      <categories>
-        <category>AIGC</category>
-        <category>dataProcess</category>
-      </categories>
-      <tags>
-        <tag>dataProcess</tag>
       </tags>
   </entry>
   <entry>
@@ -1440,22 +1166,6 @@
       </tags>
   </entry>
   <entry>
-    <title>(原理)SFT 数据组合</title>
-    <url>/www6vHomeAIGC/2023/02/06/gptDatasetSFT/</url>
-    <content><![CDATA[<p></p>
-<span id="more"></span>
-
-<h1><span id="sft-数据组合">SFT 数据组合</span><a href="#sft-数据组合" class="header-anchor">#</a></h1><p><a href="https://candied-skunk-1ca.notion.site/SFT-0f98cbb2b48d46a182a19ed0ee9fc719?pvs=4">(原理)SFT 数据组合</a></p>
-]]></content>
-      <categories>
-        <category>AIGC</category>
-        <category>SFT</category>
-      </categories>
-      <tags>
-        <tag>SFT</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>(List)SFT数据集</title>
     <url>/www6vHomeAIGC/2023/04/24/gptDatasetSFTList/</url>
     <content><![CDATA[<p></p>
@@ -1513,6 +1223,22 @@
       </categories>
       <tags>
         <tag>dataset</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>(原理)Batchsize</title>
+    <url>/www6vHomeAIGC/2024/01/17/gptDeeplearningBatchsize/</url>
+    <content><![CDATA[<p></p>
+<span id="more"></span>
+
+<h1><span id="batch-size">Batch Size</span><a href="#batch-size" class="header-anchor">#</a></h1><p><a href="https://candied-skunk-1ca.notion.site/Batch-Size-174bfe21108480348407d110811efb3b?pvs=4">(原理)Batch Size</a></p>
+]]></content>
+      <categories>
+        <category>AIGC</category>
+        <category>deepLearning</category>
+      </categories>
+      <tags>
+        <tag>deepLearning</tag>
       </tags>
   </entry>
   <entry>
@@ -1583,6 +1309,24 @@
       </tags>
   </entry>
   <entry>
+    <title>规范化 Norm</title>
+    <url>/www6vHomeAIGC/2024/01/08/gptDeeplearningNorm/</url>
+    <content><![CDATA[<p></p>
+<span id="more"></span>
+
+
+
+<h1><span id="规范化-norm">规范化 Norm</span><a href="#规范化-norm" class="header-anchor">#</a></h1><p><a href="https://candied-skunk-1ca.notion.site/Norm-172bfe21108480b2991cc365d3086945?pvs=4">规范化 Norm</a></p>
+]]></content>
+      <categories>
+        <category>AIGC</category>
+        <category>deepLearning</category>
+      </categories>
+      <tags>
+        <tag>deepLearning</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>(原理&amp;实战)权重衰减</title>
     <url>/www6vHomeAIGC/2024/01/08/gptDeeplearningWeightDecay/</url>
     <content><![CDATA[<p></p>
@@ -1600,21 +1344,42 @@
       </tags>
   </entry>
   <entry>
-    <title>规范化 Norm</title>
-    <url>/www6vHomeAIGC/2024/01/08/gptDeeplearningNorm/</url>
+    <title>(原理|实战)ControlNet</title>
+    <url>/www6vHomeAIGC/2023/08/22/gptDiffusionControlNet/</url>
     <content><![CDATA[<p></p>
 <span id="more"></span>
 
 
 
-<h1><span id="规范化-norm">规范化 Norm</span><a href="#规范化-norm" class="header-anchor">#</a></h1><p><a href="https://candied-skunk-1ca.notion.site/Norm-172bfe21108480b2991cc365d3086945?pvs=4">规范化 Norm</a></p>
+<h1><span id="controlnet">ControlNet</span><a href="#controlnet" class="header-anchor">#</a></h1><p>  <a href="https://candied-skunk-1ca.notion.site/ControlNet-76c3d54a18424e20a25a3e4a8a71b8e3?pvs=4">(原理|实战)ControlNet</a></p>
 ]]></content>
       <categories>
         <category>AIGC</category>
-        <category>deepLearning</category>
+        <category>Diffusion</category>
       </categories>
       <tags>
-        <tag>deepLearning</tag>
+        <tag>Diffusion</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>(综述)Controllable</title>
+    <url>/www6vHomeAIGC/2023/07/29/gptDiffusionControllable/</url>
+    <content><![CDATA[<p></p>
+<span id="more"></span>
+
+
+
+<h1><span id="论文">论文</span><a href="#论文" class="header-anchor">#</a></h1><ul>
+<li>论文地址<br> <a href="http://doi.org/10.1007/s11390-024-3814-0">A Survey of Multimodal Controllable Diffusion Models</a></li>
+</ul>
+<h1><span id="论文解析">论文解析</span><a href="#论文解析" class="header-anchor">#</a></h1><p><a href="https://candied-skunk-1ca.notion.site/A-Survey-of-Multimodal-Controllable-Diffusion-Models-b736974658bd4ad79f4128690b0cfb3a?pvs=4">论文解析</a></p>
+]]></content>
+      <categories>
+        <category>AIGC</category>
+        <category>Diffusion</category>
+      </categories>
+      <tags>
+        <tag>Diffusion</tag>
       </tags>
   </entry>
   <entry>
@@ -1708,45 +1473,6 @@
       </tags>
   </entry>
   <entry>
-    <title>(综述)Controllable</title>
-    <url>/www6vHomeAIGC/2023/07/29/gptDiffusionControllable/</url>
-    <content><![CDATA[<p></p>
-<span id="more"></span>
-
-
-
-<h1><span id="论文">论文</span><a href="#论文" class="header-anchor">#</a></h1><ul>
-<li>论文地址<br> <a href="http://doi.org/10.1007/s11390-024-3814-0">A Survey of Multimodal Controllable Diffusion Models</a></li>
-</ul>
-<h1><span id="论文解析">论文解析</span><a href="#论文解析" class="header-anchor">#</a></h1><p><a href="https://candied-skunk-1ca.notion.site/A-Survey-of-Multimodal-Controllable-Diffusion-Models-b736974658bd4ad79f4128690b0cfb3a?pvs=4">论文解析</a></p>
-]]></content>
-      <categories>
-        <category>AIGC</category>
-        <category>Diffusion</category>
-      </categories>
-      <tags>
-        <tag>Diffusion</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>(原理|实战)ControlNet</title>
-    <url>/www6vHomeAIGC/2023/08/22/gptDiffusionControlNet/</url>
-    <content><![CDATA[<p></p>
-<span id="more"></span>
-
-
-
-<h1><span id="controlnet">ControlNet</span><a href="#controlnet" class="header-anchor">#</a></h1><p>  <a href="https://candied-skunk-1ca.notion.site/ControlNet-76c3d54a18424e20a25a3e4a8a71b8e3?pvs=4">(原理|实战)ControlNet</a></p>
-]]></content>
-      <categories>
-        <category>AIGC</category>
-        <category>Diffusion</category>
-      </categories>
-      <tags>
-        <tag>Diffusion</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>(Work|实战)Controllable</title>
     <url>/www6vHomeAIGC/2023/07/17/gptDiffusionControllableWork/</url>
     <content><![CDATA[<p></p>
@@ -1832,13 +1558,13 @@
       </tags>
   </entry>
   <entry>
-    <title>(work|实战) fine-tuning</title>
-    <url>/www6vHomeAIGC/2023/07/06/gptDiffusionFineTuning/</url>
+    <title>(原理|实战)DreamBooth</title>
+    <url>/www6vHomeAIGC/2024/07/17/gptDiffusionDreamBooth/</url>
     <content><![CDATA[<p></p>
 <span id="more"></span>
 
 
-<h1><span id="fine-tuning">Fine-tuning</span><a href="#fine-tuning" class="header-anchor">#</a></h1><p><a href="https://candied-skunk-1ca.notion.site/work-fine-tuning-71037b41f5c04bd8adf2cfc1c5881bfe?pvs=4">Fine-tuning</a></p>
+<h1><span id="dreambooth">DreamBooth</span><a href="#dreambooth" class="header-anchor">#</a></h1><p><a href="https://candied-skunk-1ca.notion.site/DreamBooth-d591acda472a49c7a189009a53addd24?pvs=4">(原理|实战)DreamBooth</a></p>
 ]]></content>
       <categories>
         <category>AIGC</category>
@@ -1849,13 +1575,13 @@
       </tags>
   </entry>
   <entry>
-    <title>(原理|实战)DreamBooth</title>
-    <url>/www6vHomeAIGC/2024/07/17/gptDiffusionDreamBooth/</url>
+    <title>(work|实战) fine-tuning</title>
+    <url>/www6vHomeAIGC/2023/07/06/gptDiffusionFineTuning/</url>
     <content><![CDATA[<p></p>
 <span id="more"></span>
 
 
-<h1><span id="dreambooth">DreamBooth</span><a href="#dreambooth" class="header-anchor">#</a></h1><p><a href="https://candied-skunk-1ca.notion.site/DreamBooth-d591acda472a49c7a189009a53addd24?pvs=4">(原理|实战)DreamBooth</a></p>
+<h1><span id="fine-tuning">Fine-tuning</span><a href="#fine-tuning" class="header-anchor">#</a></h1><p><a href="https://candied-skunk-1ca.notion.site/work-fine-tuning-71037b41f5c04bd8adf2cfc1c5881bfe?pvs=4">Fine-tuning</a></p>
 ]]></content>
       <categories>
         <category>AIGC</category>
@@ -2252,6 +1978,36 @@
       </tags>
   </entry>
   <entry>
+    <title>医疗大模型</title>
+    <url>/www6vHomeAIGC/2023/02/07/gptDomainMed/</url>
+    <content><![CDATA[<p></p>
+<span id="more"></span>
+
+<h3><span id="医疗大模型">医疗大模型</span><a href="#医疗大模型" class="header-anchor">#</a></h3><ul>
+<li>LLaMA<ul>
+<li>ChatDoctor  </li>
+<li>华驼&#x2F;本草  哈工大</li>
+<li>PMC-LLaMA 上海交大</li>
+</ul>
+</li>
+<li>ChatGLM-6B<ul>
+<li>ChatGLM-Med  哈工大</li>
+<li>DoctorGLM</li>
+<li>明医 (MING)  MedicalGPT-zh  上海交通大学</li>
+</ul>
+</li>
+</ul>
+<h1><span id="参考">参考</span><a href="#参考" class="header-anchor">#</a></h1><p>1xx. <a href="https://mp.weixin.qq.com/s?__biz=MzAxMjc3MjkyMg==&mid=2648402886&idx=1&sn=0552d60744645a84d13bb0cef57f321c">再看23个医疗领域微调大模型集合：兼看CareLlama医疗模型的一些实践经验与开放医疗数据 </a><br>1xx. <a href="https://mp.weixin.qq.com/s?__biz=MzAxMjc3MjkyMg==&mid=2648402589&idx=1&sn=3ba9d50fad433adeb8dd6c623b06c42d">大模型遇上心理健康咨询：MeChat、QiaoBan、SoulChat、MindChat四大心理健康领域微调模型总结 </a><br>1xx. <a href="https://mp.weixin.qq.com/s?__biz=MzAxMjc3MjkyMg==&mid=2648402638&idx=1&sn=b9329498806e2b93b2d6817a17941bff">大模型常见错误、反馈的来源及自我修正方法：兼论两个有趣的同名中医微调垂域模型 </a></p>
+]]></content>
+      <categories>
+        <category>AIGC</category>
+        <category>垂类大模型</category>
+      </categories>
+      <tags>
+        <tag>垂类大模型</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>(原理)Embedding</title>
     <url>/www6vHomeAIGC/2023/04/18/gptEmbedding/</url>
     <content><![CDATA[<p></p>
@@ -2317,36 +2073,6 @@
       </categories>
       <tags>
         <tag>Embedding</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>医疗大模型</title>
-    <url>/www6vHomeAIGC/2023/02/07/gptDomainMed/</url>
-    <content><![CDATA[<p></p>
-<span id="more"></span>
-
-<h3><span id="医疗大模型">医疗大模型</span><a href="#医疗大模型" class="header-anchor">#</a></h3><ul>
-<li>LLaMA<ul>
-<li>ChatDoctor  </li>
-<li>华驼&#x2F;本草  哈工大</li>
-<li>PMC-LLaMA 上海交大</li>
-</ul>
-</li>
-<li>ChatGLM-6B<ul>
-<li>ChatGLM-Med  哈工大</li>
-<li>DoctorGLM</li>
-<li>明医 (MING)  MedicalGPT-zh  上海交通大学</li>
-</ul>
-</li>
-</ul>
-<h1><span id="参考">参考</span><a href="#参考" class="header-anchor">#</a></h1><p>1xx. <a href="https://mp.weixin.qq.com/s?__biz=MzAxMjc3MjkyMg==&mid=2648402886&idx=1&sn=0552d60744645a84d13bb0cef57f321c">再看23个医疗领域微调大模型集合：兼看CareLlama医疗模型的一些实践经验与开放医疗数据 </a><br>1xx. <a href="https://mp.weixin.qq.com/s?__biz=MzAxMjc3MjkyMg==&mid=2648402589&idx=1&sn=3ba9d50fad433adeb8dd6c623b06c42d">大模型遇上心理健康咨询：MeChat、QiaoBan、SoulChat、MindChat四大心理健康领域微调模型总结 </a><br>1xx. <a href="https://mp.weixin.qq.com/s?__biz=MzAxMjc3MjkyMg==&mid=2648402638&idx=1&sn=b9329498806e2b93b2d6817a17941bff">大模型常见错误、反馈的来源及自我修正方法：兼论两个有趣的同名中医微调垂域模型 </a></p>
-]]></content>
-      <categories>
-        <category>AIGC</category>
-        <category>垂类大模型</category>
-      </categories>
-      <tags>
-        <tag>垂类大模型</tag>
       </tags>
   </entry>
   <entry>
@@ -2479,6 +2205,41 @@
       </tags>
   </entry>
   <entry>
+    <title>测评</title>
+    <url>/www6vHomeAIGC/2023/02/07/gptEval/</url>
+    <content><![CDATA[<p></p>
+<span id="more"></span>
+
+
+<p>1xx. <a href="https://mp.weixin.qq.com/s?__biz=MzAxMjc3MjkyMg==&mid=2648402223&idx=1&sn=f2ec30cd04600129bb90bc9c81413d95">一些讨论：三张关于大模型微调方案的脑图及几点llama2等行业落地的问题思考 </a><br>1xx. <a href="https://github.com/CLUEbenchmark/SuperCLUE-Llama2-Chinese">https://github.com/CLUEbenchmark/SuperCLUE-Llama2-Chinese</a><br>1xx. <a href="https://mp.weixin.qq.com/s?__biz=MzAxMjc3MjkyMg==&mid=2648402549&idx=1&sn=07a8af1db44df6125939c5c9e90f6267">如何让自己的大模型榜单评分更高：也谈榜单评测评分的一些常见方案和典型案例 </a></p>
+<p>1xx. <a href="https://mp.weixin.qq.com/s?__biz=MzAxMjc3MjkyMg==&mid=2648403046&idx=1&sn=0a9b612e9790c0bf49d5cede8fda365c">大模型落地的一些前沿观点：兼看知识图谱增强大模型问答的几个方案及CEVAL榜单评测启发 </a> 二、CEVAL榜单评测中能够得到一些启示<br><a href="https://github.com/hkust-nlp/ceval/blob/main/resources/tutorial.md">1. C-Eval 数据集评测简明教程</a></p>
+<p>1xx. <a href="https://mp.weixin.qq.com/s?__biz=MzAxMjc3MjkyMg==&mid=2648403295&idx=1&sn=126c949d0a00eb85b4a3a6b0106f55a6&poc_token=HApExGWjou7N5NVcTKmJpWt9LZ8ul6wynjV5VHnQ">大模型B端落地“牛刀杀鸡”的奇怪感觉：兼看CEVAl通用评测到金融、医疗两大垂域评测的转变 </a>   CEVAl</p>
+]]></content>
+      <categories>
+        <category>AIGC</category>
+        <category>eval</category>
+      </categories>
+      <tags>
+        <tag>eval</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>(原理)Flash Attention</title>
+    <url>/www6vHomeAIGC/2023/06/13/gptFlashAttention/</url>
+    <content><![CDATA[<p></p>
+<span id="more"></span>
+
+<h1><span id="flash-attention">Flash Attention</span><a href="#flash-attention" class="header-anchor">#</a></h1><p><a href="https://candied-skunk-1ca.notion.site/Flash-Attention-2e424082ae3a46b8b1ddd24ead847dd9?pvs=4">(原理)Flash Attention</a></p>
+]]></content>
+      <categories>
+        <category>AIGC</category>
+        <category>FlashAttention</category>
+      </categories>
+      <tags>
+        <tag>FlashAttention</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>GPT 系列</title>
     <url>/www6vHomeAIGC/2022/12/11/gptFamily/</url>
     <content><![CDATA[<p></p>
@@ -2599,25 +2360,6 @@
       </tags>
   </entry>
   <entry>
-    <title>测评</title>
-    <url>/www6vHomeAIGC/2023/02/07/gptEval/</url>
-    <content><![CDATA[<p></p>
-<span id="more"></span>
-
-
-<p>1xx. <a href="https://mp.weixin.qq.com/s?__biz=MzAxMjc3MjkyMg==&mid=2648402223&idx=1&sn=f2ec30cd04600129bb90bc9c81413d95">一些讨论：三张关于大模型微调方案的脑图及几点llama2等行业落地的问题思考 </a><br>1xx. <a href="https://github.com/CLUEbenchmark/SuperCLUE-Llama2-Chinese">https://github.com/CLUEbenchmark/SuperCLUE-Llama2-Chinese</a><br>1xx. <a href="https://mp.weixin.qq.com/s?__biz=MzAxMjc3MjkyMg==&mid=2648402549&idx=1&sn=07a8af1db44df6125939c5c9e90f6267">如何让自己的大模型榜单评分更高：也谈榜单评测评分的一些常见方案和典型案例 </a></p>
-<p>1xx. <a href="https://mp.weixin.qq.com/s?__biz=MzAxMjc3MjkyMg==&mid=2648403046&idx=1&sn=0a9b612e9790c0bf49d5cede8fda365c">大模型落地的一些前沿观点：兼看知识图谱增强大模型问答的几个方案及CEVAL榜单评测启发 </a> 二、CEVAL榜单评测中能够得到一些启示<br><a href="https://github.com/hkust-nlp/ceval/blob/main/resources/tutorial.md">1. C-Eval 数据集评测简明教程</a></p>
-<p>1xx. <a href="https://mp.weixin.qq.com/s?__biz=MzAxMjc3MjkyMg==&mid=2648403295&idx=1&sn=126c949d0a00eb85b4a3a6b0106f55a6&poc_token=HApExGWjou7N5NVcTKmJpWt9LZ8ul6wynjV5VHnQ">大模型B端落地“牛刀杀鸡”的奇怪感觉：兼看CEVAl通用评测到金融、医疗两大垂域评测的转变 </a>   CEVAl</p>
-]]></content>
-      <categories>
-        <category>AIGC</category>
-        <category>eval</category>
-      </categories>
-      <tags>
-        <tag>eval</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>GPU 算力</title>
     <url>/www6vHomeAIGC/2023/05/23/gptGPU/</url>
     <content><![CDATA[<p></p>
@@ -2643,39 +2385,6 @@
 <li><a href="https://www.bilibili.com/video/BV1fC4y1N7qV/">5种在线GPU算力资源白嫖指南</a> V</li>
 <li><a href="https://www.bilibili.com/video/BV1q5411z7HM/">5种专业在线GPU算力资源白嫖指南</a> V<br>1xx. <a href="https://www.bilibili.com/video/BV1Pv4y1f7VV/">【PyTorch深度学习】01 GPU购买与白嫖指南</a></li>
 </ol>
-]]></content>
-      <categories>
-        <category>AIGC</category>
-        <category>GPU</category>
-      </categories>
-      <tags>
-        <tag>GPU</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>(原理)Flash Attention</title>
-    <url>/www6vHomeAIGC/2023/06/13/gptFlashAttention/</url>
-    <content><![CDATA[<p></p>
-<span id="more"></span>
-
-<h1><span id="flash-attention">Flash Attention</span><a href="#flash-attention" class="header-anchor">#</a></h1><p><a href="https://candied-skunk-1ca.notion.site/Flash-Attention-2e424082ae3a46b8b1ddd24ead847dd9?pvs=4">(原理)Flash Attention</a></p>
-]]></content>
-      <categories>
-        <category>AIGC</category>
-        <category>FlashAttention</category>
-      </categories>
-      <tags>
-        <tag>FlashAttention</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>GPU 指标&amp;监控</title>
-    <url>/www6vHomeAIGC/2023/12/23/gptGPUMetrics/</url>
-    <content><![CDATA[<p></p>
-<span id="more"></span>
-
-
-<h1><span id="gpu-指标amp监控">GPU 指标&amp;监控</span><a href="#gpu-指标amp监控" class="header-anchor">#</a></h1><p><a href="https://candied-skunk-1ca.notion.site/165bfe21108480e29fa1d06e4852a6e0?pvs=4">GPU 指标&amp;监控</a></p>
 ]]></content>
       <categories>
         <category>AIGC</category>
@@ -2731,6 +2440,23 @@
       </categories>
       <tags>
         <tag>Hallucination</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>GPU 指标&amp;监控</title>
+    <url>/www6vHomeAIGC/2023/12/23/gptGPUMetrics/</url>
+    <content><![CDATA[<p></p>
+<span id="more"></span>
+
+
+<h1><span id="gpu-指标amp监控">GPU 指标&amp;监控</span><a href="#gpu-指标amp监控" class="header-anchor">#</a></h1><p><a href="https://candied-skunk-1ca.notion.site/165bfe21108480e29fa1d06e4852a6e0?pvs=4">GPU 指标&amp;监控</a></p>
+]]></content>
+      <categories>
+        <category>AIGC</category>
+        <category>GPU</category>
+      </categories>
+      <tags>
+        <tag>GPU</tag>
       </tags>
   </entry>
   <entry>
@@ -2857,22 +2583,6 @@
       </tags>
   </entry>
   <entry>
-    <title>(原理)FlashAttention2</title>
-    <url>/www6vHomeAIGC/2023/11/15/gptInferFlashAttention2/</url>
-    <content><![CDATA[<p></p>
-<span id="more"></span>
-
-<h1><span id="flash-attention2">Flash Attention2</span><a href="#flash-attention2" class="header-anchor">#</a></h1><p><a href="https://candied-skunk-1ca.notion.site/Flash-Attention2-110bfe21108480f782fcc7258d860ccc?pvs=4">(原理)Flash Attention2</a></p>
-]]></content>
-      <categories>
-        <category>AIGC</category>
-        <category>Infer</category>
-      </categories>
-      <tags>
-        <tag>Infer</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>DistServe</title>
     <url>/www6vHomeAIGC/2023/10/05/gptInferDistServe/</url>
     <content><![CDATA[<p></p>
@@ -2887,6 +2597,38 @@
       </categories>
       <tags>
         <tag>Inference</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>EAGLE</title>
+    <url>/www6vHomeAIGC/2023/11/12/gptInferEagle/</url>
+    <content><![CDATA[<p></p>
+<span id="more"></span>
+
+<h1><span id="eagle">EAGLE</span><a href="#eagle" class="header-anchor">#</a></h1><p><a href="https://candied-skunk-1ca.notion.site/EAGLE-126bfe2110848058aeb0ed8c2d06319b?pvs=4">EAGLE</a></p>
+]]></content>
+      <categories>
+        <category>AIGC</category>
+        <category>Inference</category>
+      </categories>
+      <tags>
+        <tag>Inference</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>(原理)FlashAttention2</title>
+    <url>/www6vHomeAIGC/2023/11/15/gptInferFlashAttention2/</url>
+    <content><![CDATA[<p></p>
+<span id="more"></span>
+
+<h1><span id="flash-attention2">Flash Attention2</span><a href="#flash-attention2" class="header-anchor">#</a></h1><p><a href="https://candied-skunk-1ca.notion.site/Flash-Attention2-110bfe21108480f782fcc7258d860ccc?pvs=4">(原理)Flash Attention2</a></p>
+]]></content>
+      <categories>
+        <category>AIGC</category>
+        <category>Infer</category>
+      </categories>
+      <tags>
+        <tag>Infer</tag>
       </tags>
   </entry>
   <entry>
@@ -2908,12 +2650,44 @@
       </tags>
   </entry>
   <entry>
-    <title>EAGLE</title>
-    <url>/www6vHomeAIGC/2023/11/12/gptInferEagle/</url>
+    <title>(原理)推理-框架</title>
+    <url>/www6vHomeAIGC/2023/03/21/gptInferFramework/</url>
     <content><![CDATA[<p></p>
 <span id="more"></span>
 
-<h1><span id="eagle">EAGLE</span><a href="#eagle" class="header-anchor">#</a></h1><p><a href="https://candied-skunk-1ca.notion.site/EAGLE-126bfe2110848058aeb0ed8c2d06319b?pvs=4">EAGLE</a></p>
+<h2><span id="目录">目录</span><a href="#目录" class="header-anchor">#</a></h2><div class="toc">
+
+<!-- toc -->
+
+<ul>
+<li><a href="#%E6%8E%A8%E7%90%86-%E6%A1%86%E6%9E%B61">推理 框架[1]</a></li>
+<li><a href="#%E5%8F%82%E8%80%83">参考</a></li>
+</ul>
+<!-- tocstop -->
+
+</div>
+
+<h1><span id="推理-框架1">推理 框架[1]</span><a href="#推理-框架1" class="header-anchor">#</a></h1><img src="/www6vHomeAIGC/2023/03/21/gptInferFramework/inference.jpg" class>
+
+<ul>
+<li><p>inference execute engine(server)<br>vLLM，TensorRT， deepspeed</p>
+</li>
+<li><p>inference execute engine(pc&#x2F;edge 移动端)<br> llama.cpp<br> mlc-llm<br> ollama</p>
+</li>
+<li><p>inference Server<br>Triton Server,  Ray</p>
+</li>
+<li><p>Chat Server [2]<br>FastChat, XInference,  modelscope  SWIFT</p>
+</li>
+</ul>
+<h1><span id="参考">参考</span><a href="#参考" class="header-anchor">#</a></h1><ol>
+<li><p><a href="https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&__biz=MzA5MTIxNTY4MQ==&scene=1&album_id=2959126655292211206">探秘LLM应用开发</a>   8-19</p>
+</li>
+<li><p><a href="https://cloud.tencent.com/developer/article/2422454">LLM 大模型学习必知必会系列(十二)：VLLM性能飞跃部署实践：从推理加速到高效部署的全方位优化[更多内容：XInference&#x2F;FastChat等框架]</a></p>
+</li>
+</ol>
+<p>1xx. <a href="https://mp.weixin.qq.com/s?__biz=MzA5MTIxNTY4MQ==&mid=2461142079&idx=1&sn=07d9033203c0064408fe0af33d1f9414">一文探秘LLM应用开发(18)-模型部署与推理(框架工具-Triton Server、RayLLM、OpenLLM)</a></p>
+<p>1xx. <a href="https://mp.weixin.qq.com/s?__biz=MzA5MTIxNTY4MQ==&mid=2461142012&idx=1&sn=dafb0b676cdf6d41fd9bd54f9b6a82d3">一文探秘LLM应用开发(16)-模型部署与推理(框架工具-TGI，vLLM，TensorRT-LLM，DS-MII) </a></p>
+<p>1xx. <a href="https://zhuanlan.zhihu.com/p/659792625">大模型推理框架概述</a></p>
 ]]></content>
       <categories>
         <category>AIGC</category>
@@ -2969,54 +2743,6 @@
       </tags>
   </entry>
   <entry>
-    <title>(原理)推理-框架</title>
-    <url>/www6vHomeAIGC/2023/03/21/gptInferFramework/</url>
-    <content><![CDATA[<p></p>
-<span id="more"></span>
-
-<h2><span id="目录">目录</span><a href="#目录" class="header-anchor">#</a></h2><div class="toc">
-
-<!-- toc -->
-
-<ul>
-<li><a href="#%E6%8E%A8%E7%90%86-%E6%A1%86%E6%9E%B61">推理 框架[1]</a></li>
-<li><a href="#%E5%8F%82%E8%80%83">参考</a></li>
-</ul>
-<!-- tocstop -->
-
-</div>
-
-<h1><span id="推理-框架1">推理 框架[1]</span><a href="#推理-框架1" class="header-anchor">#</a></h1><img src="/www6vHomeAIGC/2023/03/21/gptInferFramework/inference.jpg" class>
-
-<ul>
-<li><p>inference execute engine(server)<br>vLLM，TensorRT， deepspeed</p>
-</li>
-<li><p>inference execute engine(pc&#x2F;edge 移动端)<br> llama.cpp<br> mlc-llm<br> ollama</p>
-</li>
-<li><p>inference Server<br>Triton Server,  Ray</p>
-</li>
-<li><p>Chat Server [2]<br>FastChat, XInference,  modelscope  SWIFT</p>
-</li>
-</ul>
-<h1><span id="参考">参考</span><a href="#参考" class="header-anchor">#</a></h1><ol>
-<li><p><a href="https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&__biz=MzA5MTIxNTY4MQ==&scene=1&album_id=2959126655292211206">探秘LLM应用开发</a>   8-19</p>
-</li>
-<li><p><a href="https://cloud.tencent.com/developer/article/2422454">LLM 大模型学习必知必会系列(十二)：VLLM性能飞跃部署实践：从推理加速到高效部署的全方位优化[更多内容：XInference&#x2F;FastChat等框架]</a></p>
-</li>
-</ol>
-<p>1xx. <a href="https://mp.weixin.qq.com/s?__biz=MzA5MTIxNTY4MQ==&mid=2461142079&idx=1&sn=07d9033203c0064408fe0af33d1f9414">一文探秘LLM应用开发(18)-模型部署与推理(框架工具-Triton Server、RayLLM、OpenLLM)</a></p>
-<p>1xx. <a href="https://mp.weixin.qq.com/s?__biz=MzA5MTIxNTY4MQ==&mid=2461142012&idx=1&sn=dafb0b676cdf6d41fd9bd54f9b6a82d3">一文探秘LLM应用开发(16)-模型部署与推理(框架工具-TGI，vLLM，TensorRT-LLM，DS-MII) </a></p>
-<p>1xx. <a href="https://zhuanlan.zhihu.com/p/659792625">大模型推理框架概述</a></p>
-]]></content>
-      <categories>
-        <category>AIGC</category>
-        <category>Inference</category>
-      </categories>
-      <tags>
-        <tag>Inference</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>(原理) KV Cache</title>
     <url>/www6vHomeAIGC/2023/06/01/gptInferKVCache/</url>
     <content><![CDATA[<p></p>
@@ -3049,6 +2775,22 @@
       </tags>
   </entry>
   <entry>
+    <title>(原理)KV Cache 量化</title>
+    <url>/www6vHomeAIGC/2023/09/02/gptInferKVCacheQuantization/</url>
+    <content><![CDATA[<p></p>
+<span id="more"></span>
+
+<h1><span id="kv-cache-量化">KV Cache 量化</span><a href="#kv-cache-量化" class="header-anchor">#</a></h1><p><a href="https://candied-skunk-1ca.notion.site/Quantization-c6fa20cf425a4211af150b4987711f47?pvs=4">KV Cache 量化</a></p>
+]]></content>
+      <categories>
+        <category>AIGC</category>
+        <category>Inference</category>
+      </categories>
+      <tags>
+        <tag>Inference</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>(原理|实战)RadixAttention</title>
     <url>/www6vHomeAIGC/2024/11/15/gptInferKVCacheRadixAttention/</url>
     <content><![CDATA[<p></p>
@@ -3065,12 +2807,12 @@
       </tags>
   </entry>
   <entry>
-    <title>(原理)KV Cache 量化</title>
-    <url>/www6vHomeAIGC/2023/09/02/gptInferKVCacheQuantization/</url>
+    <title>(原理)Streaming LLM</title>
+    <url>/www6vHomeAIGC/2023/09/02/gptInferKVCacheStreamingLLM/</url>
     <content><![CDATA[<p></p>
 <span id="more"></span>
 
-<h1><span id="kv-cache-量化">KV Cache 量化</span><a href="#kv-cache-量化" class="header-anchor">#</a></h1><p><a href="https://candied-skunk-1ca.notion.site/Quantization-c6fa20cf425a4211af150b4987711f47?pvs=4">KV Cache 量化</a></p>
+<h1><span id="streaming-llm">Streaming LLM</span><a href="#streaming-llm" class="header-anchor">#</a></h1><p><a href="https://candied-skunk-1ca.notion.site/StreamingLLM-5141d463ddf84b4783c369459c71eec8?pvs=4">Streaming LLM</a></p>
 ]]></content>
       <categories>
         <category>AIGC</category>
@@ -3099,44 +2841,28 @@
       </tags>
   </entry>
   <entry>
-    <title>(原理)Mooncake</title>
-    <url>/www6vHomeAIGC/2023/10/19/gptInferMooncake/</url>
-    <content><![CDATA[<p></p>
-<span id="more"></span>
-
-<h1><span id="mooncake">Mooncake</span><a href="#mooncake" class="header-anchor">#</a></h1><p><a href="https://candied-skunk-1ca.notion.site/Mooncake-d7d1506860df44bca7a2f880a1352285?pvs=4">Mooncake</a></p>
-]]></content>
-      <categories>
-        <category>AIGC</category>
-        <category>Inference</category>
-      </categories>
-      <tags>
-        <tag>Inference</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>(原理)Streaming LLM</title>
-    <url>/www6vHomeAIGC/2023/09/02/gptInferKVCacheStreamingLLM/</url>
-    <content><![CDATA[<p></p>
-<span id="more"></span>
-
-<h1><span id="streaming-llm">Streaming LLM</span><a href="#streaming-llm" class="header-anchor">#</a></h1><p><a href="https://candied-skunk-1ca.notion.site/StreamingLLM-5141d463ddf84b4783c369459c71eec8?pvs=4">Streaming LLM</a></p>
-]]></content>
-      <categories>
-        <category>AIGC</category>
-        <category>Inference</category>
-      </categories>
-      <tags>
-        <tag>Inference</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>(原理)Medusa</title>
     <url>/www6vHomeAIGC/2023/11/12/gptInferMedusa/</url>
     <content><![CDATA[<p></p>
 <span id="more"></span>
 
 <h1><span id="medusa">Medusa</span><a href="#medusa" class="header-anchor">#</a></h1><p><a href="https://candied-skunk-1ca.notion.site/Medusa-31e27ea0a51d4c818c804a654a3c839a?pvs=4">Medusa</a></p>
+]]></content>
+      <categories>
+        <category>AIGC</category>
+        <category>Inference</category>
+      </categories>
+      <tags>
+        <tag>Inference</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>(原理)Mooncake</title>
+    <url>/www6vHomeAIGC/2023/10/19/gptInferMooncake/</url>
+    <content><![CDATA[<p></p>
+<span id="more"></span>
+
+<h1><span id="mooncake">Mooncake</span><a href="#mooncake" class="header-anchor">#</a></h1><p><a href="https://candied-skunk-1ca.notion.site/Mooncake-d7d1506860df44bca7a2f880a1352285?pvs=4">Mooncake</a></p>
 ]]></content>
       <categories>
         <category>AIGC</category>
@@ -3321,6 +3047,22 @@
       </tags>
   </entry>
   <entry>
+    <title>Speculative Decoding</title>
+    <url>/www6vHomeAIGC/2023/10/06/gptInferSpeculativeDecoding/</url>
+    <content><![CDATA[<p></p>
+<span id="more"></span>
+
+<h1><span id="speculative-decoding">Speculative Decoding</span><a href="#speculative-decoding" class="header-anchor">#</a></h1><p><a href="https://candied-skunk-1ca.notion.site/Speculative-Decoding-117bfe2110848060a00efd475a0abbac?pvs=4">Speculative Decoding</a></p>
+]]></content>
+      <categories>
+        <category>AIGC</category>
+        <category>infer</category>
+      </categories>
+      <tags>
+        <tag>infer</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>(Survey)Speculative Decoding</title>
     <url>/www6vHomeAIGC/2023/10/21/gptInferSpeculativeDecodingSurvey/</url>
     <content><![CDATA[<p></p>
@@ -3344,22 +3086,6 @@
 
 
 <h1><span id="vllm-speculative-decoding">(vLLM) Speculative Decoding</span><a href="#vllm-speculative-decoding" class="header-anchor">#</a></h1><p><a href="https://candied-skunk-1ca.notion.site/vLLM-Speculative-Decoding-81c9a87ab53947c19c7ba22bcaee5125?pvs=4">(vLLM) Speculative Decoding</a></p>
-]]></content>
-      <categories>
-        <category>AIGC</category>
-        <category>infer</category>
-      </categories>
-      <tags>
-        <tag>infer</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Speculative Decoding</title>
-    <url>/www6vHomeAIGC/2023/10/06/gptInferSpeculativeDecoding/</url>
-    <content><![CDATA[<p></p>
-<span id="more"></span>
-
-<h1><span id="speculative-decoding">Speculative Decoding</span><a href="#speculative-decoding" class="header-anchor">#</a></h1><p><a href="https://candied-skunk-1ca.notion.site/Speculative-Decoding-117bfe2110848060a00efd475a0abbac?pvs=4">Speculative Decoding</a></p>
 ]]></content>
       <categories>
         <category>AIGC</category>
@@ -3556,26 +3282,6 @@
       </tags>
   </entry>
   <entry>
-    <title>(综述)推理优化</title>
-    <url>/www6vHomeAIGC/2023/08/14/gptInferenceSurvey/</url>
-    <content><![CDATA[<p></p>
-<span id="more"></span>
-
-
-
-<h1><span id="论文">论文</span><a href="#论文" class="header-anchor">#</a></h1><p><a href="https://candied-skunk-1ca.notion.site/A-Survey-on-Efficient-Inference-for-Large-Language-Models-22145473188e437881bf566241492bea?pvs=4">A Survey on Efficient Inference for Large Language Models</a> 翻译</p>
-<p><a href="https://candied-skunk-1ca.notion.site/A-Survey-on-Efficient-Inference-for-Large-Language-Models-135bfe2110848034bf45ea8e5d1d2fdb?pvs=4">A Survey on Efficient Inference for Large Language Models</a> 总结</p>
-<h1><span id="inference-papers">Inference Papers</span><a href="#inference-papers" class="header-anchor">#</a></h1><p><a href="https://candied-skunk-1ca.notion.site/Inference-Papers-bd22ef1d8c274d6f9951c394a95ff427?pvs=4">Inference Papers</a></p>
-]]></content>
-      <categories>
-        <category>AIGC</category>
-        <category>Inference</category>
-      </categories>
-      <tags>
-        <tag>Inference</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>(总结)推理优化</title>
     <url>/www6vHomeAIGC/2023/01/01/gptInference/</url>
     <content><![CDATA[<p></p>
@@ -3622,6 +3328,26 @@
 <li><a href="https://lilianweng.github.io/posts/2023-01-10-inference-optimization/">Large Transformer Model Inference Optimization </a>  lilianweng</li>
 </ol>
 <p>1xx. <a href="https://zhuanlan.zhihu.com/p/642412124">NLP（十八）：LLM 的推理优化技术纵览</a> ***<br>1xx. <a href="https://zhuanlan.zhihu.com/p/656485997">大语言模型推理性能优化综述</a></p>
+]]></content>
+      <categories>
+        <category>AIGC</category>
+        <category>Inference</category>
+      </categories>
+      <tags>
+        <tag>Inference</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>(综述)推理优化</title>
+    <url>/www6vHomeAIGC/2023/08/14/gptInferenceSurvey/</url>
+    <content><![CDATA[<p></p>
+<span id="more"></span>
+
+
+
+<h1><span id="论文">论文</span><a href="#论文" class="header-anchor">#</a></h1><p><a href="https://candied-skunk-1ca.notion.site/A-Survey-on-Efficient-Inference-for-Large-Language-Models-22145473188e437881bf566241492bea?pvs=4">A Survey on Efficient Inference for Large Language Models</a> 翻译</p>
+<p><a href="https://candied-skunk-1ca.notion.site/A-Survey-on-Efficient-Inference-for-Large-Language-Models-135bfe2110848034bf45ea8e5d1d2fdb?pvs=4">A Survey on Efficient Inference for Large Language Models</a> 总结</p>
+<h1><span id="inference-papers">Inference Papers</span><a href="#inference-papers" class="header-anchor">#</a></h1><p><a href="https://candied-skunk-1ca.notion.site/Inference-Papers-bd22ef1d8c274d6f9951c394a95ff427?pvs=4">Inference Papers</a></p>
 ]]></content>
       <categories>
         <category>AIGC</category>
@@ -3885,22 +3611,6 @@
       </tags>
   </entry>
   <entry>
-    <title>(实战)Pre-Training</title>
-    <url>/www6vHomeAIGC/2023/01/15/gptLargeModelTrainingPractice/</url>
-    <content><![CDATA[<p></p>
-<span id="more"></span>
-
-<h1><span id="pre-training-实战">Pre-Training 实战</span><a href="#pre-training-实战" class="header-anchor">#</a></h1><p><a href="https://candied-skunk-1ca.notion.site/Pre-Training-4284cd3148a0430185a9ef14041afc56?pvs=4">(实战)Pre-Training</a></p>
-]]></content>
-      <categories>
-        <category>AIGC</category>
-        <category>Pre-Training</category>
-      </categories>
-      <tags>
-        <tag>Pre-Training</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>(原理)Training</title>
     <url>/www6vHomeAIGC/2022/11/19/gptLargeModelTraining/</url>
     <content><![CDATA[<p></p>
@@ -3984,6 +3694,22 @@
       </tags>
   </entry>
   <entry>
+    <title>(实战)Pre-Training</title>
+    <url>/www6vHomeAIGC/2023/01/15/gptLargeModelTrainingPractice/</url>
+    <content><![CDATA[<p></p>
+<span id="more"></span>
+
+<h1><span id="pre-training-实战">Pre-Training 实战</span><a href="#pre-training-实战" class="header-anchor">#</a></h1><p><a href="https://candied-skunk-1ca.notion.site/Pre-Training-4284cd3148a0430185a9ef14041afc56?pvs=4">(实战)Pre-Training</a></p>
+]]></content>
+      <categories>
+        <category>AIGC</category>
+        <category>Pre-Training</category>
+      </categories>
+      <tags>
+        <tag>Pre-Training</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>大模型 排行榜</title>
     <url>/www6vHomeAIGC/2023/01/04/gptLeaderBoard/</url>
     <content><![CDATA[<p></p>
@@ -4038,6 +3764,22 @@
 
 
 <h1><span id="llama">LLaMA</span><a href="#llama" class="header-anchor">#</a></h1><p><a href="https://candied-skunk-1ca.notion.site/LLaMA-2b55a2a573b549df9f6fc4cc26c2292f?pvs=4">LLaMA</a></p>
+]]></content>
+      <categories>
+        <category>AIGC</category>
+        <category>model</category>
+      </categories>
+      <tags>
+        <tag>model</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Llama3.1</title>
+    <url>/www6vHomeAIGC/2024/09/04/gptLlama3-1/</url>
+    <content><![CDATA[<p></p>
+<span id="more"></span>
+
+<h1><span id="llama31">Llama3.1</span><a href="#llama31" class="header-anchor">#</a></h1><p><a href="https://candied-skunk-1ca.notion.site/LLaMA3-1-c2124d23077241afa9d92eb9a54a043a?pvs=4">Llama3.1</a></p>
 ]]></content>
       <categories>
         <category>AIGC</category>
@@ -4139,22 +3881,6 @@
       </categories>
       <tags>
         <tag>低精度</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Llama3.1</title>
-    <url>/www6vHomeAIGC/2024/09/04/gptLlama3-1/</url>
-    <content><![CDATA[<p></p>
-<span id="more"></span>
-
-<h1><span id="llama31">Llama3.1</span><a href="#llama31" class="header-anchor">#</a></h1><p><a href="https://candied-skunk-1ca.notion.site/LLaMA3-1-c2124d23077241afa9d92eb9a54a043a?pvs=4">Llama3.1</a></p>
-]]></content>
-      <categories>
-        <category>AIGC</category>
-        <category>model</category>
-      </categories>
-      <tags>
-        <tag>model</tag>
       </tags>
   </entry>
   <entry>
@@ -4362,6 +4088,64 @@
       </tags>
   </entry>
   <entry>
+    <title>(原理)CLIP</title>
+    <url>/www6vHomeAIGC/2023/03/01/gptMultimodalCLIP/</url>
+    <content><![CDATA[<p></p>
+<span id="more"></span>
+
+<h2><span id="目录">目录</span><a href="#目录" class="header-anchor">#</a></h2><div class="toc">
+
+<!-- toc -->
+
+<ul>
+<li><a href="#clip-%E5%9C%A8%E8%AE%AD%E7%BB%83%E8%BF%87%E7%A8%8B%E4%B8%AD%E5%81%9A%E4%BA%86%E5%93%AA%E4%BA%9B%E4%BA%8B%E6%83%85elmo1">CLIP 在训练过程中做了哪些事情？[Elmo][1]</a></li>
+<li><a href="#clip-zero-shot%E6%8E%A8%E7%90%861">CLIP Zero-shot推理[1]</a><ul>
+<li><a href="#%E6%AD%A5%E9%AA%A4">步骤</a></li>
+<li><a href="#%E5%B1%80%E9%99%90">局限</a></li>
+</ul>
+</li>
+<li><a href="#%E5%8F%82%E8%80%83">参考</a></li>
+</ul>
+<!-- tocstop -->
+
+</div>
+
+<h1><span id="clip-在训练过程中做了哪些事情elmo1">CLIP 在训练过程中做了哪些事情？[Elmo][1]</span><a href="#clip-在训练过程中做了哪些事情elmo1" class="header-anchor">#</a></h1><p>在训练过程中，CLIP（Contrastive Language-Image Pre-training）模型主要进行了以下几个步骤：</p>
+<ol>
+<li><strong>数据预处理</strong> : CLIP 使用了一个大规模的数据集，包含 4 亿个 “图像 - 文本” 对，这些数据需要进行清洗和预处理，以便于模型学习。</li>
+<li><strong>特征提取</strong> : 通过 Text Encoder 和 Image Encoder 分别对文本和图像进行特征提取。Text Encoder 通常是基于 Transformer 的模型，而 Image Encoder 可以是基于 CNN（卷积神经网络）或者 VIT（Vision Transformer）的模型。</li>
+<li><strong>对比学习</strong> : CLIP 采用对比学习的策略，通过对比正确的图像 - 文本对与错误的图像 - 文本对，使得模型能够学习到正确对的特征表示与其他对的区分。具体来说，CLIP 通过 InfoNCE 损失函数来最大化正确对的相似度，同时最小化错误对的相似度。</li>
+<li><strong>特征空间对齐</strong> : 通过对比学习，CLIP 将图像和文本的特征映射到一个共享的多模态特征空间中，使得图像特征和文本特征可以直接进行相似度比较。</li>
+<li><strong>参数优化</strong> : 通过反向传播和梯度下降等方法，不断调整模型参数，以最小化损失函数，从而优化模型性能。</li>
+<li><strong>Zero-shot 推理能力的培养</strong> : 在训练过程中，CLIP 学习了如何通过文本提示（prompts）来进行 zero-shot 的图像分类，即在没有直接观测到的类别标签下，通过文本描述来识别图像内容。</li>
+<li><strong>模型评估与调整</strong> : 通过在验证集上的评估，调整模型结构和超参数，以提高模型的泛化能力和性能。</li>
+</ol>
+<p>通过这些训练步骤，CLIP 能够学习到一个强大的多模态特征表示，使其能够在多种视觉任务上进行 zero-shot 或 few-shot 的推理。</p>
+<h1><span id="clip-zero-shot推理1">CLIP Zero-shot推理[1]</span><a href="#clip-zero-shot推理1" class="header-anchor">#</a></h1><h3><span id="步骤">步骤</span><a href="#步骤" class="header-anchor">#</a></h3><ul>
+<li>首先，我们创建一个<strong>标签全集</strong>，如图中（2）所示，并得到每一个<strong>标签的特征向量</strong></li>
+<li>然后，我们取一张图片，如图中（3）所示，过Image Encoder后得到该<strong>图片的特征向量</strong></li>
+<li>最后，计算图片向量和文字向量间的<strong>相似度</strong>，取相似度最高的那条label即可。</li>
+</ul>
+<h3><span id="局限">局限</span><a href="#局限" class="header-anchor">#</a></h3><p>  当你喂给CLIP一张图时，不管这张图片它是否有见过，CLIP都不会生成一个全新的标签，而是去全集标签中找一个最相似的给你。</p>
+<h1><span id="参考">参考</span><a href="#参考" class="header-anchor">#</a></h1><ol>
+<li><a href="https://zhuanlan.zhihu.com/p/660476765">关于多模态经典之作CLIP，还有哪些细节是你不知道的</a> 代码</li>
+</ol>
+<p>1xx. <a href="https://zhuanlan.zhihu.com/p/493489688">神器CLIP：连接文本和图像，打造可迁移的视觉模型</a> ***</p>
+<p>1xx. <a href="https://zhuanlan.zhihu.com/p/486857682">【CLIP系列Paper解读】CLIP: Learning Transferable Visual Models From Natural Language Supervision</a> ***</p>
+<p>1xx. <a href="https://zhuanlan.zhihu.com/p/646790176">CLIP 模型解读</a></p>
+<p>1xx. <a href="https://zhuanlan.zhihu.com/p/521151393">详解CLIP (一) | 打通文本-图像预训练实现ImageNet的zero-shot分类，比肩全监督训练的ResNet50&#x2F;101</a></p>
+<p>1xx. <a href="https://blog.csdn.net/lsb2002/article/details/132275132">openai多模态大模型：clip详解及实战</a></p>
+<p>1xx. <a href="https://zhuanlan.zhihu.com/p/555314976">CLIP：多模态领域革命者</a></p>
+]]></content>
+      <categories>
+        <category>AIGC</category>
+        <category>multimodal</category>
+      </categories>
+      <tags>
+        <tag>multimodal</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>(实战)CLIP</title>
     <url>/www6vHomeAIGC/2023/06/25/gptMultimodalCLIPPractice/</url>
     <content><![CDATA[<p></p>
@@ -4432,64 +4216,6 @@
 <p>1xx. <a href="https://modelscope.cn/studios/iic/chinese_clip_applications/summary">中文CLIP文到图搜索应用</a> demo</p>
 <h3><span id="xxx">xxx</span><a href="#xxx" class="header-anchor">#</a></h3><p>1xx. langchain 中有CLIP的实现</p>
 <p>1xx. <a href="https://github.com/jina-ai/clip-as-service">GitHub - jina-ai&#x2F;clip-as-service: Scalable embedding, reasoning, ranking for images and sentences with CLIP</a> git</p>
-]]></content>
-      <categories>
-        <category>AIGC</category>
-        <category>multimodal</category>
-      </categories>
-      <tags>
-        <tag>multimodal</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>(原理)CLIP</title>
-    <url>/www6vHomeAIGC/2023/03/01/gptMultimodalCLIP/</url>
-    <content><![CDATA[<p></p>
-<span id="more"></span>
-
-<h2><span id="目录">目录</span><a href="#目录" class="header-anchor">#</a></h2><div class="toc">
-
-<!-- toc -->
-
-<ul>
-<li><a href="#clip-%E5%9C%A8%E8%AE%AD%E7%BB%83%E8%BF%87%E7%A8%8B%E4%B8%AD%E5%81%9A%E4%BA%86%E5%93%AA%E4%BA%9B%E4%BA%8B%E6%83%85elmo1">CLIP 在训练过程中做了哪些事情？[Elmo][1]</a></li>
-<li><a href="#clip-zero-shot%E6%8E%A8%E7%90%861">CLIP Zero-shot推理[1]</a><ul>
-<li><a href="#%E6%AD%A5%E9%AA%A4">步骤</a></li>
-<li><a href="#%E5%B1%80%E9%99%90">局限</a></li>
-</ul>
-</li>
-<li><a href="#%E5%8F%82%E8%80%83">参考</a></li>
-</ul>
-<!-- tocstop -->
-
-</div>
-
-<h1><span id="clip-在训练过程中做了哪些事情elmo1">CLIP 在训练过程中做了哪些事情？[Elmo][1]</span><a href="#clip-在训练过程中做了哪些事情elmo1" class="header-anchor">#</a></h1><p>在训练过程中，CLIP（Contrastive Language-Image Pre-training）模型主要进行了以下几个步骤：</p>
-<ol>
-<li><strong>数据预处理</strong> : CLIP 使用了一个大规模的数据集，包含 4 亿个 “图像 - 文本” 对，这些数据需要进行清洗和预处理，以便于模型学习。</li>
-<li><strong>特征提取</strong> : 通过 Text Encoder 和 Image Encoder 分别对文本和图像进行特征提取。Text Encoder 通常是基于 Transformer 的模型，而 Image Encoder 可以是基于 CNN（卷积神经网络）或者 VIT（Vision Transformer）的模型。</li>
-<li><strong>对比学习</strong> : CLIP 采用对比学习的策略，通过对比正确的图像 - 文本对与错误的图像 - 文本对，使得模型能够学习到正确对的特征表示与其他对的区分。具体来说，CLIP 通过 InfoNCE 损失函数来最大化正确对的相似度，同时最小化错误对的相似度。</li>
-<li><strong>特征空间对齐</strong> : 通过对比学习，CLIP 将图像和文本的特征映射到一个共享的多模态特征空间中，使得图像特征和文本特征可以直接进行相似度比较。</li>
-<li><strong>参数优化</strong> : 通过反向传播和梯度下降等方法，不断调整模型参数，以最小化损失函数，从而优化模型性能。</li>
-<li><strong>Zero-shot 推理能力的培养</strong> : 在训练过程中，CLIP 学习了如何通过文本提示（prompts）来进行 zero-shot 的图像分类，即在没有直接观测到的类别标签下，通过文本描述来识别图像内容。</li>
-<li><strong>模型评估与调整</strong> : 通过在验证集上的评估，调整模型结构和超参数，以提高模型的泛化能力和性能。</li>
-</ol>
-<p>通过这些训练步骤，CLIP 能够学习到一个强大的多模态特征表示，使其能够在多种视觉任务上进行 zero-shot 或 few-shot 的推理。</p>
-<h1><span id="clip-zero-shot推理1">CLIP Zero-shot推理[1]</span><a href="#clip-zero-shot推理1" class="header-anchor">#</a></h1><h3><span id="步骤">步骤</span><a href="#步骤" class="header-anchor">#</a></h3><ul>
-<li>首先，我们创建一个<strong>标签全集</strong>，如图中（2）所示，并得到每一个<strong>标签的特征向量</strong></li>
-<li>然后，我们取一张图片，如图中（3）所示，过Image Encoder后得到该<strong>图片的特征向量</strong></li>
-<li>最后，计算图片向量和文字向量间的<strong>相似度</strong>，取相似度最高的那条label即可。</li>
-</ul>
-<h3><span id="局限">局限</span><a href="#局限" class="header-anchor">#</a></h3><p>  当你喂给CLIP一张图时，不管这张图片它是否有见过，CLIP都不会生成一个全新的标签，而是去全集标签中找一个最相似的给你。</p>
-<h1><span id="参考">参考</span><a href="#参考" class="header-anchor">#</a></h1><ol>
-<li><a href="https://zhuanlan.zhihu.com/p/660476765">关于多模态经典之作CLIP，还有哪些细节是你不知道的</a> 代码</li>
-</ol>
-<p>1xx. <a href="https://zhuanlan.zhihu.com/p/493489688">神器CLIP：连接文本和图像，打造可迁移的视觉模型</a> ***</p>
-<p>1xx. <a href="https://zhuanlan.zhihu.com/p/486857682">【CLIP系列Paper解读】CLIP: Learning Transferable Visual Models From Natural Language Supervision</a> ***</p>
-<p>1xx. <a href="https://zhuanlan.zhihu.com/p/646790176">CLIP 模型解读</a></p>
-<p>1xx. <a href="https://zhuanlan.zhihu.com/p/521151393">详解CLIP (一) | 打通文本-图像预训练实现ImageNet的zero-shot分类，比肩全监督训练的ResNet50&#x2F;101</a></p>
-<p>1xx. <a href="https://blog.csdn.net/lsb2002/article/details/132275132">openai多模态大模型：clip详解及实战</a></p>
-<p>1xx. <a href="https://zhuanlan.zhihu.com/p/555314976">CLIP：多模态领域革命者</a></p>
 ]]></content>
       <categories>
         <category>AIGC</category>
@@ -5074,165 +4800,6 @@
       </tags>
   </entry>
   <entry>
-    <title>(Survey)多模态</title>
-    <url>/www6vHomeAIGC/2023/03/16/gptMultimodalSurvey/</url>
-    <content><![CDATA[<p></p>
-<span id="more"></span>
-
-<h2><span id="目录">目录</span><a href="#目录" class="header-anchor">#</a></h2><div class="toc">
-
-<!-- toc -->
-
-<ul>
-<li><a href="#%E8%AE%BA%E6%96%87">论文</a></li>
-<li><a href="#overview-0">overview [0]</a></li>
-<li><a href="#%E8%A7%86%E8%A7%89%E7%90%86%E8%A7%A3-1">视觉理解 [1]</a></li>
-<li><a href="#%E8%A7%86%E8%A7%89%E7%94%9F%E6%88%90-1">视觉生成 [1]</a><ul>
-<li><a href="#human-alignments-in-visual-generation-10">Human Alignments in Visual Generation  [10]</a><ul>
-<li><a href="#spatial-controllable-t2i-generation">spatial controllable T2I generation</a></li>
-<li><a href="#text-based-editing">text-based editing</a></li>
-<li><a href="#text-promots-following">text promots following</a></li>
-<li><a href="#concept-customization">concept customization</a></li>
-</ul>
-</li>
-<li><a href="#text-to-image-generation-%E6%8A%80%E6%9C%AF%E6%B5%81%E6%B4%BE4%E7%B1%BB">Text-to-Image Generation  技术流派（4类）</a></li>
-</ul>
-</li>
-<li><a href="#%E7%BB%9F%E4%B8%80%E7%9A%84%E8%A7%86%E8%A7%89%E6%A8%A1%E5%9E%8B2">统一的视觉模型[2]</a></li>
-<li><a href="#%E7%AB%AF%E5%88%B0%E7%AB%AF%E7%9A%84%E6%96%B9%E5%BC%8F%E8%AE%AD%E7%BB%83llm2">端到端的方式训练LLM[2]</a></li>
-<li><a href="#%E5%A4%9A%E6%A8%A1%E6%80%81-agent3">多模态 Agent[3]</a></li>
-<li><a href="#%E5%8F%82%E8%80%83">参考</a><ul>
-<li><a href="#%E7%BF%BB%E8%AF%91">翻译</a></li>
-<li><a href="#%E8%A7%A3%E8%AF%BB">解读</a></li>
-</ul>
-</li>
-</ul>
-<!-- tocstop -->
-
-</div>
-
-<h1><span id="论文">论文</span><a href="#论文" class="header-anchor">#</a></h1><ul>
-<li><p>论文地址<br> 《Multimodal Foundation Models:From Specialists to General-Purpose Assistants》 .Sep 2023   - microsoft</p>
-</li>
-<li><p>开源地址<br><a href="https://github.com/Computer-Vision-in-the-Wild/CVinW_Readings">Computer Vision in the Wild (CVinW)</a></p>
-</li>
-</ul>
-<h1><span id="overview-0">overview [0]</span><a href="#overview-0" class="header-anchor">#</a></h1><img src="/www6vHomeAIGC/2023/03/16/gptMultimodalSurvey/overview.jpeg" class>
-
-<h1><span id="视觉理解-1">视觉理解 [1]</span><a href="#视觉理解-1" class="header-anchor">#</a></h1><img src="/www6vHomeAIGC/2023/03/16/gptMultimodalSurvey/understanding.png" class>
-
-<img src="/www6vHomeAIGC/2023/03/16/gptMultimodalSurvey/understanding-method.png" class>
-
-
-<h1><span id="视觉生成-1">视觉生成 [1]</span><a href="#视觉生成-1" class="header-anchor">#</a></h1><h2><span id="human-alignments-in-visual-generation-10">Human Alignments in Visual Generation  [10]</span><a href="#human-alignments-in-visual-generation-10" class="header-anchor">#</a></h2><p>四种alignment的方式</p>
-<h3><span id="spatial-controllable-t2i-generation">spatial controllable T2I generation</span><a href="#spatial-controllable-t2i-generation" class="header-anchor">#</a></h3><ul>
-<li><p><strong>结合位置分布的文字描述</strong>（比较麻烦的用户交互，不仅需要文字，而且需要位置），常用于<strong>对位置要求比较高的创意设计（海报等）</strong></p>
-<ul>
-<li><p>直接讲原来clip那种image-level的text description升级为基于区域的text description</p>
-<ul>
-<li><strong>reco</strong></li>
-<li>gligen</li>
-</ul>
-</li>
-<li><p>将box描述变为spatial condition</p>
-<ul>
-<li><strong>controlnet</strong></li>
-</ul>
-</li>
-<li><p>无需fintinue，直接变为inference-guide</p>
-<ul>
-<li>universal guidance for diffusion model</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h3><span id="text-based-editing">text-based editing</span><a href="#text-based-editing" class="header-anchor">#</a></h3><ul>
-<li><p><strong>给一张图和对应的修改文字，输出要求的图</strong>，常用于ps等产品</p>
-<ul>
-<li><p>diffusion process manipulations</p>
-<ul>
-<li><strong>promot2promot</strong></li>
-</ul>
-</li>
-<li><p>text instruction editing</p>
-<ul>
-<li><strong>InstructPix2Pix</strong></li>
-</ul>
-</li>
-<li><p>Editing with external pre-trained models</p>
-</li>
-</ul>
-</li>
-</ul>
-<h3><span id="text-promots-following">text promots following</span><a href="#text-promots-following" class="header-anchor">#</a></h3><ul>
-<li><strong>直接给文字描述，生成对应的图</strong>，这个是<strong>目前常见文生图产品的交互方式</strong>，常用于c端或者b端用户图像内容生成。但其对<strong>更细节的控制存在一定的难度</strong><ul>
-<li>Inference-time manipulation</li>
-<li>StructureDiffusion</li>
-<li><strong>Attend-and-Excite</strong></li>
-<li>Model tuning to follow text prompt</li>
-<li>ddpo</li>
-</ul>
-</li>
-</ul>
-<h3><span id="concept-customization">concept customization</span><a href="#concept-customization" class="header-anchor">#</a></h3><ul>
-<li><p>给一张图，提取图片中的关键内容，做<strong>各种风格（背景&#x2F;动作）变换</strong>，更用于<strong>不那么精细的广义产品</strong>，比2的运用范围更加广义</p>
-<ul>
-<li><p>Concept Customization</p>
-<ul>
-<li><strong>Textual Inversion</strong></li>
-<li><strong>[DreamBooth]</strong></li>
-</ul>
-</li>
-<li><p>Multi-concept customization</p>
-<ul>
-<li>Custom Diffusion</li>
-</ul>
-</li>
-<li><p>Customization without test-time finetuning</p>
-<ul>
-<li>SuTI</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<img src="/www6vHomeAIGC/2023/03/16/gptMultimodalSurvey/align.jpg" class>
-<img src="/www6vHomeAIGC/2023/03/16/gptMultimodalSurvey/generation.png" class>
-
-<h2><span id="text-to-image-generation-技术流派4类">Text-to-Image Generation  技术流派（4类）</span><a href="#text-to-image-generation-技术流派4类" class="header-anchor">#</a></h2><ul>
-<li>Generative adversarial networks (GAN)</li>
-<li>Variational autoencoder (VAE)</li>
-<li>Discrete image token prediction</li>
-<li><strong>Diffusion model</strong></li>
-</ul>
-<h1><span id="统一的视觉模型2">统一的视觉模型[2]</span><a href="#统一的视觉模型2" class="header-anchor">#</a></h1><h1><span id="端到端的方式训练llm2">端到端的方式训练LLM[2]</span><a href="#端到端的方式训练llm2" class="header-anchor">#</a></h1><h1><span id="多模态-agent3">多模态 Agent[3]</span><a href="#多模态-agent3" class="header-anchor">#</a></h1><h1><span id="参考">参考</span><a href="#参考" class="header-anchor">#</a></h1><h3><span id="翻译">翻译</span><a href="#翻译" class="header-anchor">#</a></h3><p>《Multimodal Foundation Models:From Specialists to General-Purpose Assistants》  </p>
-<ol start="0">
-<li><p><a href="https://blog.csdn.net/qq_41185868/article/details/133594461">AGI之MFM：《Multimodal Foundation Models: From Specialists to General-Purpose Assistants多模态基础模型：从专家到通用助</a> 翻译</p>
-</li>
-<li><p><a href="https://yunyaniu.blog.csdn.net/article/details/133594554">AGI之MFM：《多模态基础模型：从专家到通用助手》翻译与解读之视觉理解、视觉生成</a></p>
-</li>
-<li><p><a href="https://yunyaniu.blog.csdn.net/article/details/133594624">AGI之MFM：《多模态基础模型：从专家到通用助手》翻译与解读之统一的视觉模型、加持LLMs的大型多模态模型</a></p>
-</li>
-<li><p><a href="https://yunyaniu.blog.csdn.net/article/details/133606408">AGI之MFM：《多模态基础模型：从专家到通用助手》翻译与解读之与LLM协同工作的多模态智能体、结论和研究趋势</a></p>
-</li>
-</ol>
-<h3><span id="解读">解读</span><a href="#解读" class="header-anchor">#</a></h3><ol start="10">
-<li><a href="https://zhuanlan.zhihu.com/p/669757416">大模型系列04 -文本图像生成</a></li>
-</ol>
-<p>1xx.   <a href="https://blog.csdn.net/qq_41200212/article/details/134663233">Multimodal Foundation Models: From Specialists to General-Purpose Assistants</a>  </p>
-<p>1xx.  对应第二章节<br>  <a href="https://datarelease.blob.core.windows.net/tutorial/vision_foundation_models_2023/slides/Zhengyuan_Tutorial_T2I2023.pdf">《Alignments in Text-to-Image Generation》</a><br>   <a href="https://www.bilibili.com/video/BV14P411v7Un/">[CVPR2023 Tutorial Talk] Alignments in Text-to-Image Generation</a> V</p>
-<p>1xx. 对应第三章节<br><a href="https://datarelease.blob.core.windows.net/tutorial/vision_foundation_models_2023/slides/Jianwei_CVPR2023_Tutorial.pdf">《From Specialist to Generalist:<br>Towards General Vision Understanding Interface》</a><br>  <a href="https://www.bilibili.com/video/BV1ds4y1k7pj/?vd_source=f6e8c1128f9f264c5ab8d9411a644036">[CVPR Tutorial Talk] Towards General Vision Understanding Interface</a></p>
-]]></content>
-      <categories>
-        <category>AIGC</category>
-        <category>multimodal</category>
-      </categories>
-      <tags>
-        <tag>multimodal</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>多模态 系列</title>
     <url>/www6vHomeAIGC/2024/04/04/gptMultimodalSeries/</url>
     <content><![CDATA[<p></p>
@@ -5419,14 +4986,14 @@
       </tags>
   </entry>
   <entry>
-    <title>(原理|实战)AWQ</title>
-    <url>/www6vHomeAIGC/2023/10/12/gptQuantizationAWQ/</url>
+    <title>(原理)量化</title>
+    <url>/www6vHomeAIGC/2023/02/19/gptQuantization/</url>
     <content><![CDATA[<p></p>
 <span id="more"></span>
 
 
 
-<h1><span id="awq">AWQ</span><a href="#awq" class="header-anchor">#</a></h1><p><a href="https://candied-skunk-1ca.notion.site/AWQ-11dbfe211084806396a0fc0f87983446?pvs=4">(原理|实战)AWQ</a></p>
+<h1><span id="量化">量化</span><a href="#量化" class="header-anchor">#</a></h1><p><a href="https://candied-skunk-1ca.notion.site/9e2982aada064c5895ae2f862f1d33c3?pvs=4">量化</a></p>
 ]]></content>
       <categories>
         <category>AIGC</category>
@@ -5437,14 +5004,173 @@
       </tags>
   </entry>
   <entry>
-    <title>(原理)量化</title>
-    <url>/www6vHomeAIGC/2023/02/19/gptQuantization/</url>
+    <title>(Survey)多模态</title>
+    <url>/www6vHomeAIGC/2023/03/16/gptMultimodalSurvey/</url>
+    <content><![CDATA[<p></p>
+<span id="more"></span>
+
+<h2><span id="目录">目录</span><a href="#目录" class="header-anchor">#</a></h2><div class="toc">
+
+<!-- toc -->
+
+<ul>
+<li><a href="#%E8%AE%BA%E6%96%87">论文</a></li>
+<li><a href="#overview-0">overview [0]</a></li>
+<li><a href="#%E8%A7%86%E8%A7%89%E7%90%86%E8%A7%A3-1">视觉理解 [1]</a></li>
+<li><a href="#%E8%A7%86%E8%A7%89%E7%94%9F%E6%88%90-1">视觉生成 [1]</a><ul>
+<li><a href="#human-alignments-in-visual-generation-10">Human Alignments in Visual Generation  [10]</a><ul>
+<li><a href="#spatial-controllable-t2i-generation">spatial controllable T2I generation</a></li>
+<li><a href="#text-based-editing">text-based editing</a></li>
+<li><a href="#text-promots-following">text promots following</a></li>
+<li><a href="#concept-customization">concept customization</a></li>
+</ul>
+</li>
+<li><a href="#text-to-image-generation-%E6%8A%80%E6%9C%AF%E6%B5%81%E6%B4%BE4%E7%B1%BB">Text-to-Image Generation  技术流派（4类）</a></li>
+</ul>
+</li>
+<li><a href="#%E7%BB%9F%E4%B8%80%E7%9A%84%E8%A7%86%E8%A7%89%E6%A8%A1%E5%9E%8B2">统一的视觉模型[2]</a></li>
+<li><a href="#%E7%AB%AF%E5%88%B0%E7%AB%AF%E7%9A%84%E6%96%B9%E5%BC%8F%E8%AE%AD%E7%BB%83llm2">端到端的方式训练LLM[2]</a></li>
+<li><a href="#%E5%A4%9A%E6%A8%A1%E6%80%81-agent3">多模态 Agent[3]</a></li>
+<li><a href="#%E5%8F%82%E8%80%83">参考</a><ul>
+<li><a href="#%E7%BF%BB%E8%AF%91">翻译</a></li>
+<li><a href="#%E8%A7%A3%E8%AF%BB">解读</a></li>
+</ul>
+</li>
+</ul>
+<!-- tocstop -->
+
+</div>
+
+<h1><span id="论文">论文</span><a href="#论文" class="header-anchor">#</a></h1><ul>
+<li><p>论文地址<br> 《Multimodal Foundation Models:From Specialists to General-Purpose Assistants》 .Sep 2023   - microsoft</p>
+</li>
+<li><p>开源地址<br><a href="https://github.com/Computer-Vision-in-the-Wild/CVinW_Readings">Computer Vision in the Wild (CVinW)</a></p>
+</li>
+</ul>
+<h1><span id="overview-0">overview [0]</span><a href="#overview-0" class="header-anchor">#</a></h1><img src="/www6vHomeAIGC/2023/03/16/gptMultimodalSurvey/overview.jpeg" class>
+
+<h1><span id="视觉理解-1">视觉理解 [1]</span><a href="#视觉理解-1" class="header-anchor">#</a></h1><img src="/www6vHomeAIGC/2023/03/16/gptMultimodalSurvey/understanding.png" class>
+
+<img src="/www6vHomeAIGC/2023/03/16/gptMultimodalSurvey/understanding-method.png" class>
+
+
+<h1><span id="视觉生成-1">视觉生成 [1]</span><a href="#视觉生成-1" class="header-anchor">#</a></h1><h2><span id="human-alignments-in-visual-generation-10">Human Alignments in Visual Generation  [10]</span><a href="#human-alignments-in-visual-generation-10" class="header-anchor">#</a></h2><p>四种alignment的方式</p>
+<h3><span id="spatial-controllable-t2i-generation">spatial controllable T2I generation</span><a href="#spatial-controllable-t2i-generation" class="header-anchor">#</a></h3><ul>
+<li><p><strong>结合位置分布的文字描述</strong>（比较麻烦的用户交互，不仅需要文字，而且需要位置），常用于<strong>对位置要求比较高的创意设计（海报等）</strong></p>
+<ul>
+<li><p>直接讲原来clip那种image-level的text description升级为基于区域的text description</p>
+<ul>
+<li><strong>reco</strong></li>
+<li>gligen</li>
+</ul>
+</li>
+<li><p>将box描述变为spatial condition</p>
+<ul>
+<li><strong>controlnet</strong></li>
+</ul>
+</li>
+<li><p>无需fintinue，直接变为inference-guide</p>
+<ul>
+<li>universal guidance for diffusion model</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3><span id="text-based-editing">text-based editing</span><a href="#text-based-editing" class="header-anchor">#</a></h3><ul>
+<li><p><strong>给一张图和对应的修改文字，输出要求的图</strong>，常用于ps等产品</p>
+<ul>
+<li><p>diffusion process manipulations</p>
+<ul>
+<li><strong>promot2promot</strong></li>
+</ul>
+</li>
+<li><p>text instruction editing</p>
+<ul>
+<li><strong>InstructPix2Pix</strong></li>
+</ul>
+</li>
+<li><p>Editing with external pre-trained models</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3><span id="text-promots-following">text promots following</span><a href="#text-promots-following" class="header-anchor">#</a></h3><ul>
+<li><strong>直接给文字描述，生成对应的图</strong>，这个是<strong>目前常见文生图产品的交互方式</strong>，常用于c端或者b端用户图像内容生成。但其对<strong>更细节的控制存在一定的难度</strong><ul>
+<li>Inference-time manipulation</li>
+<li>StructureDiffusion</li>
+<li><strong>Attend-and-Excite</strong></li>
+<li>Model tuning to follow text prompt</li>
+<li>ddpo</li>
+</ul>
+</li>
+</ul>
+<h3><span id="concept-customization">concept customization</span><a href="#concept-customization" class="header-anchor">#</a></h3><ul>
+<li><p>给一张图，提取图片中的关键内容，做<strong>各种风格（背景&#x2F;动作）变换</strong>，更用于<strong>不那么精细的广义产品</strong>，比2的运用范围更加广义</p>
+<ul>
+<li><p>Concept Customization</p>
+<ul>
+<li><strong>Textual Inversion</strong></li>
+<li><strong>[DreamBooth]</strong></li>
+</ul>
+</li>
+<li><p>Multi-concept customization</p>
+<ul>
+<li>Custom Diffusion</li>
+</ul>
+</li>
+<li><p>Customization without test-time finetuning</p>
+<ul>
+<li>SuTI</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<img src="/www6vHomeAIGC/2023/03/16/gptMultimodalSurvey/align.jpg" class>
+<img src="/www6vHomeAIGC/2023/03/16/gptMultimodalSurvey/generation.png" class>
+
+<h2><span id="text-to-image-generation-技术流派4类">Text-to-Image Generation  技术流派（4类）</span><a href="#text-to-image-generation-技术流派4类" class="header-anchor">#</a></h2><ul>
+<li>Generative adversarial networks (GAN)</li>
+<li>Variational autoencoder (VAE)</li>
+<li>Discrete image token prediction</li>
+<li><strong>Diffusion model</strong></li>
+</ul>
+<h1><span id="统一的视觉模型2">统一的视觉模型[2]</span><a href="#统一的视觉模型2" class="header-anchor">#</a></h1><h1><span id="端到端的方式训练llm2">端到端的方式训练LLM[2]</span><a href="#端到端的方式训练llm2" class="header-anchor">#</a></h1><h1><span id="多模态-agent3">多模态 Agent[3]</span><a href="#多模态-agent3" class="header-anchor">#</a></h1><h1><span id="参考">参考</span><a href="#参考" class="header-anchor">#</a></h1><h3><span id="翻译">翻译</span><a href="#翻译" class="header-anchor">#</a></h3><p>《Multimodal Foundation Models:From Specialists to General-Purpose Assistants》  </p>
+<ol start="0">
+<li><p><a href="https://blog.csdn.net/qq_41185868/article/details/133594461">AGI之MFM：《Multimodal Foundation Models: From Specialists to General-Purpose Assistants多模态基础模型：从专家到通用助</a> 翻译</p>
+</li>
+<li><p><a href="https://yunyaniu.blog.csdn.net/article/details/133594554">AGI之MFM：《多模态基础模型：从专家到通用助手》翻译与解读之视觉理解、视觉生成</a></p>
+</li>
+<li><p><a href="https://yunyaniu.blog.csdn.net/article/details/133594624">AGI之MFM：《多模态基础模型：从专家到通用助手》翻译与解读之统一的视觉模型、加持LLMs的大型多模态模型</a></p>
+</li>
+<li><p><a href="https://yunyaniu.blog.csdn.net/article/details/133606408">AGI之MFM：《多模态基础模型：从专家到通用助手》翻译与解读之与LLM协同工作的多模态智能体、结论和研究趋势</a></p>
+</li>
+</ol>
+<h3><span id="解读">解读</span><a href="#解读" class="header-anchor">#</a></h3><ol start="10">
+<li><a href="https://zhuanlan.zhihu.com/p/669757416">大模型系列04 -文本图像生成</a></li>
+</ol>
+<p>1xx.   <a href="https://blog.csdn.net/qq_41200212/article/details/134663233">Multimodal Foundation Models: From Specialists to General-Purpose Assistants</a>  </p>
+<p>1xx.  对应第二章节<br>  <a href="https://datarelease.blob.core.windows.net/tutorial/vision_foundation_models_2023/slides/Zhengyuan_Tutorial_T2I2023.pdf">《Alignments in Text-to-Image Generation》</a><br>   <a href="https://www.bilibili.com/video/BV14P411v7Un/">[CVPR2023 Tutorial Talk] Alignments in Text-to-Image Generation</a> V</p>
+<p>1xx. 对应第三章节<br><a href="https://datarelease.blob.core.windows.net/tutorial/vision_foundation_models_2023/slides/Jianwei_CVPR2023_Tutorial.pdf">《From Specialist to Generalist:<br>Towards General Vision Understanding Interface》</a><br>  <a href="https://www.bilibili.com/video/BV1ds4y1k7pj/?vd_source=f6e8c1128f9f264c5ab8d9411a644036">[CVPR Tutorial Talk] Towards General Vision Understanding Interface</a></p>
+]]></content>
+      <categories>
+        <category>AIGC</category>
+        <category>multimodal</category>
+      </categories>
+      <tags>
+        <tag>multimodal</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>(原理|实战)AWQ</title>
+    <url>/www6vHomeAIGC/2023/10/12/gptQuantizationAWQ/</url>
     <content><![CDATA[<p></p>
 <span id="more"></span>
 
 
 
-<h1><span id="量化">量化</span><a href="#量化" class="header-anchor">#</a></h1><p><a href="https://candied-skunk-1ca.notion.site/9e2982aada064c5895ae2f862f1d33c3?pvs=4">量化</a></p>
+<h1><span id="awq">AWQ</span><a href="#awq" class="header-anchor">#</a></h1><p><a href="https://candied-skunk-1ca.notion.site/AWQ-11dbfe211084806396a0fc0f87983446?pvs=4">(原理|实战)AWQ</a></p>
 ]]></content>
       <categories>
         <category>AIGC</category>
@@ -5487,12 +5213,12 @@
       </tags>
   </entry>
   <entry>
-    <title>(实战)量化</title>
-    <url>/www6vHomeAIGC/2024/03/22/gptQuantizationPractice/</url>
+    <title>(原理|实战)LLM.int8()</title>
+    <url>/www6vHomeAIGC/2023/10/12/gptQuantizationInt8/</url>
     <content><![CDATA[<p></p>
 <span id="more"></span>
 
-<h1><span id="量化实战">量化实战</span><a href="#量化实战" class="header-anchor">#</a></h1><p><a href="https://candied-skunk-1ca.notion.site/1213172a99a949ceba7e8e2164710a77?pvs=4">(实战)量化-推理</a></p>
+<h1><span id="llmint8">LLM.int8()</span><a href="#llmint8" class="header-anchor">#</a></h1><p><a href="https://candied-skunk-1ca.notion.site/LLM-int8-11dbfe21108480d0b6adc341aed9ec3d?pvs=4">(原理|实战)LLM.int8()</a></p>
 ]]></content>
       <categories>
         <category>AIGC</category>
@@ -5503,12 +5229,12 @@
       </tags>
   </entry>
   <entry>
-    <title>(原理|实战)LLM.int8()</title>
-    <url>/www6vHomeAIGC/2023/10/12/gptQuantizationInt8/</url>
+    <title>(实战)量化</title>
+    <url>/www6vHomeAIGC/2024/03/22/gptQuantizationPractice/</url>
     <content><![CDATA[<p></p>
 <span id="more"></span>
 
-<h1><span id="llmint8">LLM.int8()</span><a href="#llmint8" class="header-anchor">#</a></h1><p><a href="https://candied-skunk-1ca.notion.site/LLM-int8-11dbfe21108480d0b6adc341aed9ec3d?pvs=4">(原理|实战)LLM.int8()</a></p>
+<h1><span id="量化实战">量化实战</span><a href="#量化实战" class="header-anchor">#</a></h1><p><a href="https://candied-skunk-1ca.notion.site/1213172a99a949ceba7e8e2164710a77?pvs=4">(实战)量化-推理</a></p>
 ]]></content>
       <categories>
         <category>AIGC</category>
@@ -5666,20 +5392,68 @@
       </tags>
   </entry>
   <entry>
-    <title>(原理)SELF-INSTRUCT</title>
-    <url>/www6vHomeAIGC/2023/02/21/gptSelfInstruct/</url>
+    <title>GPT 论文</title>
+    <url>/www6vHomeAIGC/2023/01/20/gptStudyPaper/</url>
     <content><![CDATA[<p></p>
 <span id="more"></span>
 
+<h2><span id="目录">目录</span><a href="#目录" class="header-anchor">#</a></h2><div class="toc">
 
-<h1><span id="self-instruct">SELF-INSTRUCT</span><a href="#self-instruct" class="header-anchor">#</a></h1><p><a href="https://candied-skunk-1ca.notion.site/SELF-INSTRUCT-10dbfe21108480adb3c9c6b4d13b57d0?pvs=4">(原理)SELF-INSTRUCT</a></p>
+<!-- toc -->
+
+<ul>
+<li><a href="#paper">Paper</a></li>
+<li><a href="#gpt%E7%A0%94%E7%A9%B6%E6%96%B9%E5%90%911">GPT研究方向[1]</a></li>
+<li><a href="#%E5%8F%82%E8%80%83">参考</a></li>
+</ul>
+<!-- tocstop -->
+
+</div>
+
+<h1><span id="paper">Paper</span><a href="#paper" class="header-anchor">#</a></h1><ul>
+<li><p><a href="https://github.com/www6v/paper-reading">paper-reading</a> 李牧大神</p>
+<ul>
+<li>Transformer  *** <ul>
+<li>GPT-4</li>
+<li>Instruct GPT *** </li>
+<li>GPT, GPT-2, GPT-3 精读  ***</li>
+</ul>
+</li>
+<li>多模态<ul>
+<li>CLIP</li>
+<li>ViLT</li>
+</ul>
+</li>
+<li>Chain of Thought  ***</li>
+</ul>
+</li>
+<li><p><a href="https://shimo.im/docs/XKq42v7061SxZ2AN/read">AI 大模型应用开发实战营1期大纲</a><br>基础篇 - 论文 *** </p>
+</li>
+<li><p><a href="https://blog.csdn.net/v_JULY_v/article/details/129508065">LLM&#x2F;ChatGPT与多模态必读论文150篇(已更至第101篇)</a> </p>
+</li>
+<li><p><a href="https://github.com/zjunlp/LLMAgentPapers">LLMAgentPapers</a> 浙江大学</p>
+</li>
+<li><p><a href="https://github.com/zjunlp/Prompt4ReasoningPapers">Prompt4ReasoningPapers</a> 浙江大学</p>
+</li>
+</ul>
+<h1><span id="gpt研究方向1">GPT研究方向[1]</span><a href="#gpt研究方向1" class="header-anchor">#</a></h1><ul>
+<li>Efficient (PEFT)</li>
+<li>Existing stuff(pretrained model)  -应用<br>New directions</li>
+<li>Plug-and-play<br> 通用模块组件，能用在各个领域， baseline</li>
+<li>Dataset,  evaluation and survey</li>
+</ul>
+<h1><span id="参考">参考</span><a href="#参考" class="header-anchor">#</a></h1><ol>
+<li><a href="https://www.bilibili.com/video/BV1oX4y1d7X6">大模型时代下做科研的四个思路【论文精读·52】</a></li>
+</ol>
+<p>1xx. <a href="https://zhuanlan.zhihu.com/p/673788545">AI Agent &amp; 大模型经典论文推荐</a></p>
 ]]></content>
       <categories>
         <category>AIGC</category>
-        <category>STF</category>
+        <category>gpt</category>
+        <category>study</category>
       </categories>
       <tags>
-        <tag>STF</tag>
+        <tag>gpt</tag>
       </tags>
   </entry>
   <entry>
@@ -5722,7 +5496,8 @@
 </ul>
 </li>
 <li>网络优化<ul>
-<li><strong><a href="/www6vHomeAIGC/2024/01/08/gptDeeplearningLearningRate/" title="(原理)学习率">(原理)学习率</a></strong>  </li>
+<li><strong><a href="/www6vHomeAIGC/2024/01/08/gptDeeplearningLearningRate/" title="(原理)学习率">(原理)学习率</a></strong>   </li>
+<li><strong><a href="/www6vHomeAIGC/2024/01/17/gptDeeplearningBatchsize/" title="(原理)Batchsize">(原理)Batchsize</a></strong></li>
 <li><strong><a href="/www6vHomeAIGC/2024/01/08/gptDeeplearningNorm/" title="规范化 Norm">规范化 Norm</a></strong></li>
 </ul>
 </li>
@@ -5802,34 +5577,7 @@
 </ul>
 </li>
 <li>Data Management<ul>
-<li><a href="/www6vHomeAIGC/2023/04/27/gptDataManagement/" title="(Survey)Data Management">(Survey)Data Management</a>  </li>
-<li>SFT <ul>
-<li>Data Quality<ul>
-<li>Instruction Quality<ul>
-<li><a href="/www6vHomeAIGC/2023/04/27/gptDataSFTQuality/" title="(原理)LIMA, LESS">(原理)LIMA, LESS</a></li>
-</ul>
-</li>
-<li>Instruction Diversity<ul>
-<li><strong><a href="/www6vHomeAIGC/2023/02/21/gptSelfInstruct/" title="(原理)SELF-INSTRUCT">(原理)SELF-INSTRUCT</a></strong> </li>
-<li><strong><a href="/www6vHomeAIGC/2023/09/27/gptDataSelfQA/" title="(原理|实战)Self-QA">(原理|实战)Self-QA</a></strong></li>
-</ul>
-</li>
-<li>Instruction Complexity  <ul>
-<li><a href="/www6vHomeAIGC/2023/03/18/gptDataWizard/" title="(原理)Wizard">(原理)Wizard</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li>Task composition<ul>
-<li><strong><a href="/www6vHomeAIGC/2023/02/06/gptDatasetSFT/" title="(原理)SFT 数据组合">(原理)SFT 数据组合</a></strong></li>
-</ul>
-</li>
-</ul>
-<ul>
-<li><strong><a href="/www6vHomeAIGC/2023/04/26/gptDataSFTScaling/" title="(原理)SFT Scaling">(原理)SFT Scaling</a></strong>  </li>
-<li><a href="/www6vHomeAIGC/2023/05/05/gptDataSelection/" title="(原理)Data Selection">(原理)Data Selection</a></li>
-</ul>
-</li>
+<li><a href="/www6vHomeAIGC/2023/04/27/gptDataManagement/" title="(Survey)Data Management">(Survey)Data Management</a></li>
 </ul>
 </li>
 </ul>
@@ -5856,71 +5604,6 @@
       </categories>
       <tags>
         <tag>AIGC</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>GPT 论文</title>
-    <url>/www6vHomeAIGC/2023/01/20/gptStudyPaper/</url>
-    <content><![CDATA[<p></p>
-<span id="more"></span>
-
-<h2><span id="目录">目录</span><a href="#目录" class="header-anchor">#</a></h2><div class="toc">
-
-<!-- toc -->
-
-<ul>
-<li><a href="#paper">Paper</a></li>
-<li><a href="#gpt%E7%A0%94%E7%A9%B6%E6%96%B9%E5%90%911">GPT研究方向[1]</a></li>
-<li><a href="#%E5%8F%82%E8%80%83">参考</a></li>
-</ul>
-<!-- tocstop -->
-
-</div>
-
-<h1><span id="paper">Paper</span><a href="#paper" class="header-anchor">#</a></h1><ul>
-<li><p><a href="https://github.com/www6v/paper-reading">paper-reading</a> 李牧大神</p>
-<ul>
-<li>Transformer  *** <ul>
-<li>GPT-4</li>
-<li>Instruct GPT *** </li>
-<li>GPT, GPT-2, GPT-3 精读  ***</li>
-</ul>
-</li>
-<li>多模态<ul>
-<li>CLIP</li>
-<li>ViLT</li>
-</ul>
-</li>
-<li>Chain of Thought  ***</li>
-</ul>
-</li>
-<li><p><a href="https://shimo.im/docs/XKq42v7061SxZ2AN/read">AI 大模型应用开发实战营1期大纲</a><br>基础篇 - 论文 *** </p>
-</li>
-<li><p><a href="https://blog.csdn.net/v_JULY_v/article/details/129508065">LLM&#x2F;ChatGPT与多模态必读论文150篇(已更至第101篇)</a> </p>
-</li>
-<li><p><a href="https://github.com/zjunlp/LLMAgentPapers">LLMAgentPapers</a> 浙江大学</p>
-</li>
-<li><p><a href="https://github.com/zjunlp/Prompt4ReasoningPapers">Prompt4ReasoningPapers</a> 浙江大学</p>
-</li>
-</ul>
-<h1><span id="gpt研究方向1">GPT研究方向[1]</span><a href="#gpt研究方向1" class="header-anchor">#</a></h1><ul>
-<li>Efficient (PEFT)</li>
-<li>Existing stuff(pretrained model)  -应用<br>New directions</li>
-<li>Plug-and-play<br> 通用模块组件，能用在各个领域， baseline</li>
-<li>Dataset,  evaluation and survey</li>
-</ul>
-<h1><span id="参考">参考</span><a href="#参考" class="header-anchor">#</a></h1><ol>
-<li><a href="https://www.bilibili.com/video/BV1oX4y1d7X6">大模型时代下做科研的四个思路【论文精读·52】</a></li>
-</ol>
-<p>1xx. <a href="https://zhuanlan.zhihu.com/p/673788545">AI Agent &amp; 大模型经典论文推荐</a></p>
-]]></content>
-      <categories>
-        <category>AIGC</category>
-        <category>gpt</category>
-        <category>study</category>
-      </categories>
-      <tags>
-        <tag>gpt</tag>
       </tags>
   </entry>
   <entry>
@@ -6311,22 +5994,6 @@
       </tags>
   </entry>
   <entry>
-    <title>(实战)DeepSpeed Training</title>
-    <url>/www6vHomeAIGC/2023/03/25/gptTrainDistributedPractice/</url>
-    <content><![CDATA[<p></p>
-<span id="more"></span>
-
-<h1><span id="deepspeed-training">DeepSpeed Training</span><a href="#deepspeed-training" class="header-anchor">#</a></h1><p><a href="https://candied-skunk-1ca.notion.site/98541b7f8be2493eb1deda3629677d26?pvs=4">DeepSpeed Training</a></p>
-]]></content>
-      <categories>
-        <category>AIGC</category>
-        <category>Deepspeed</category>
-      </categories>
-      <tags>
-        <tag>Deepspeed</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>(原理|实战)DDP</title>
     <url>/www6vHomeAIGC/2023/09/19/gptTrainDDP/</url>
     <content><![CDATA[<p></p>
@@ -6341,6 +6008,22 @@
       </categories>
       <tags>
         <tag>train</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>(实战)DeepSpeed Training</title>
+    <url>/www6vHomeAIGC/2023/03/25/gptTrainDistributedPractice/</url>
+    <content><![CDATA[<p></p>
+<span id="more"></span>
+
+<h1><span id="deepspeed-training">DeepSpeed Training</span><a href="#deepspeed-training" class="header-anchor">#</a></h1><p><a href="https://candied-skunk-1ca.notion.site/98541b7f8be2493eb1deda3629677d26?pvs=4">DeepSpeed Training</a></p>
+]]></content>
+      <categories>
+        <category>AIGC</category>
+        <category>Deepspeed</category>
+      </categories>
+      <tags>
+        <tag>Deepspeed</tag>
       </tags>
   </entry>
   <entry>
@@ -6410,23 +6093,6 @@
       </tags>
   </entry>
   <entry>
-    <title>(原理)张量并行(TP)</title>
-    <url>/www6vHomeAIGC/2023/09/08/gptTrainTensorParallelism/</url>
-    <content><![CDATA[<p></p>
-<span id="more"></span>
-
-
-<h1><span id="张量并行tp">张量并行(TP)</span><a href="#张量并行tp" class="header-anchor">#</a></h1><p><a href="https://candied-skunk-1ca.notion.site/TP-35acabf325004c16b9ce93f82cb175c2?pvs=4">(原理)张量并行(TP)</a></p>
-]]></content>
-      <categories>
-        <category>AIGC</category>
-        <category>train</category>
-      </categories>
-      <tags>
-        <tag>train</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>(原理|实战)流水线并行(PP)</title>
     <url>/www6vHomeAIGC/2023/09/08/gptTrainPipelineParallelism/</url>
     <content><![CDATA[<p></p>
@@ -6444,19 +6110,20 @@
       </tags>
   </entry>
   <entry>
-    <title>(原理) Deepspeed Zero</title>
-    <url>/www6vHomeAIGC/2023/03/23/gptTrainZeroDeepspeed/</url>
+    <title>(原理)张量并行(TP)</title>
+    <url>/www6vHomeAIGC/2023/09/08/gptTrainTensorParallelism/</url>
     <content><![CDATA[<p></p>
 <span id="more"></span>
 
-<h1><span id="deepspeed-zero">Deepspeed Zero</span><a href="#deepspeed-zero" class="header-anchor">#</a></h1><p><a href="https://candied-skunk-1ca.notion.site/Zero-Deepspeed-85c9344a27624649a36b66f3e2e4c4d1?pvs=74">(原理) Deepspeed Zero</a></p>
+
+<h1><span id="张量并行tp">张量并行(TP)</span><a href="#张量并行tp" class="header-anchor">#</a></h1><p><a href="https://candied-skunk-1ca.notion.site/TP-35acabf325004c16b9ce93f82cb175c2?pvs=4">(原理)张量并行(TP)</a></p>
 ]]></content>
       <categories>
         <category>AIGC</category>
-        <category>Zero</category>
+        <category>train</category>
       </categories>
       <tags>
-        <tag>Zero</tag>
+        <tag>train</tag>
       </tags>
   </entry>
   <entry>
@@ -6483,6 +6150,39 @@
       </tags>
   </entry>
   <entry>
+    <title>(原理) Deepspeed Zero</title>
+    <url>/www6vHomeAIGC/2023/03/23/gptTrainZeroDeepspeed/</url>
+    <content><![CDATA[<p></p>
+<span id="more"></span>
+
+<h1><span id="deepspeed-zero">Deepspeed Zero</span><a href="#deepspeed-zero" class="header-anchor">#</a></h1><p><a href="https://candied-skunk-1ca.notion.site/Zero-Deepspeed-85c9344a27624649a36b66f3e2e4c4d1?pvs=74">(原理) Deepspeed Zero</a></p>
+]]></content>
+      <categories>
+        <category>AIGC</category>
+        <category>Zero</category>
+      </categories>
+      <tags>
+        <tag>Zero</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>(原理)Transformer</title>
+    <url>/www6vHomeAIGC/2022/11/30/gptTransformer/</url>
+    <content><![CDATA[<p></p>
+<span id="more"></span>
+
+
+<h1><span id="原理transformer">(原理)Transformer</span><a href="#原理transformer" class="header-anchor">#</a></h1><p><a href="https://candied-skunk-1ca.notion.site/Transformer-b1b9836f9c244db3acda7869f64ff860?pvs=4">(原理)Transformer</a></p>
+]]></content>
+      <categories>
+        <category>AIGC</category>
+        <category>Transformer</category>
+      </categories>
+      <tags>
+        <tag>Transformer</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>(实战)Transformer</title>
     <url>/www6vHomeAIGC/2023/02/16/gptTransformerCode/</url>
     <content><![CDATA[<p></p>
@@ -6495,23 +6195,6 @@
 <p>1xx. <a href="http://arthurchiao.art/blog/transformers-from-scratch-zh/">[译] Transformer 是如何工作的：600 行 Python 代码实现 self-attention 和两类 Transformer（2019）</a> V, github<br>    Transformers from scratch</p>
 <p>1xx. <a href="https://blog.csdn.net/v_JULY_v/article/details/130090649">从零实现Transformer的简易版与强大版：从300多行到3000多行</a></p>
 <p>1xx. <a href="https://zhuanlan.zhihu.com/p/398039366">Transformer源码详解（Pytorch版本）</a></p>
-]]></content>
-      <categories>
-        <category>AIGC</category>
-        <category>Transformer</category>
-      </categories>
-      <tags>
-        <tag>Transformer</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>(原理)Transformer</title>
-    <url>/www6vHomeAIGC/2022/11/30/gptTransformer/</url>
-    <content><![CDATA[<p></p>
-<span id="more"></span>
-
-
-<h1><span id="原理transformer">(原理)Transformer</span><a href="#原理transformer" class="header-anchor">#</a></h1><p><a href="https://candied-skunk-1ca.notion.site/Transformer-b1b9836f9c244db3acda7869f64ff860?pvs=4">(原理)Transformer</a></p>
 ]]></content>
       <categories>
         <category>AIGC</category>
