@@ -278,8 +278,7 @@
 </ul>
 <h2><span id="data">Data</span><a href="#data" class="header-anchor">#</a></h2><ul>
 <li>List<ul>
-<li><a href="/www6vHomeAIGC/2023/01/08/gptDataSet/" title="(list)数据集">(list)数据集</a> </li>
-<li><a href="/www6vHomeAIGC/2023/04/24/gptDatasetSFTList/" title="(List)SFT数据集">(List)SFT数据集</a></li>
+<li><a href="/www6vHomeAIGC/2023/01/08/gptDataSet/" title="(list)数据集">(list)数据集</a></li>
 </ul>
 </li>
 <li>DataProcess<ul>
@@ -2717,28 +2716,6 @@
       </categories>
       <tags>
         <tag>dataset</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>(List)SFT数据集</title>
-    <url>/www6vHomeAIGC/2023/04/24/gptDatasetSFTList/</url>
-    <content><![CDATA[<p></p>
-<span id="more"></span>
-
-
-<h1><span id="sft数据集12">SFT数据集[1][2]</span><a href="#sft数据集12" class="header-anchor">#</a></h1><h1><span id="参考">参考</span><a href="#参考" class="header-anchor">#</a></h1><ol>
-<li><p><a href="https://mp.weixin.qq.com/s?__biz=MzAxMjc3MjkyMg==&mid=2648402424&idx=1&sn=e2d26821b6e9a5a2871e0ddbca565c30">大模型再总结及ChatSQL实践案例分享：大模型训练数据及工具的5张脑图总结及ChatSQL开源项目实现解析</a><br>1、通用指令微调数据</p>
-</li>
-<li><p><a href="https://github.com/chaoswork/sft_datasets">开源SFT数据集整理</a></p>
-</li>
-</ol>
-]]></content>
-      <categories>
-        <category>AIGC</category>
-        <category>SFT</category>
-      </categories>
-      <tags>
-        <tag>SFT</tag>
       </tags>
   </entry>
   <entry>
