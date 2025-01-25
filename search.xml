@@ -350,17 +350,47 @@
 <li><a href="/www6vHomeAIGC/2024/04/04/gptMultimodalSeries/" title="多模态 系列">多模态 系列</a></li>
 </ul>
 <h3><span id="视觉理解">视觉理解</span><a href="#视觉理解" class="header-anchor">#</a></h3><ul>
-<li><strong><a href="/www6vHomeAIGC/2023/08/02/gptMultimodalEncoder/" title="Vision Encoder">Vision Encoder</a></strong> </li>
-<li><strong><a href="/www6vHomeAIGC/2023/08/05/gptMultimodalConnector/" title="(原理)Connector">(原理)Connector</a></strong>  	</li>
-<li>Segmentation<br>+ <a href="/www6vHomeAIGC/2023/03/01/gptMultimodalSAM/" title="(原理|实战) SAM">(原理|实战) SAM</a></li>
+<li><p>Vision Encoder</p>
+<ul>
+<li>multimodal learning<ul>
+<li><a href="/www6vHomeAIGC/2023/03/01/gptMultimodalCLIP/" title="(原理)CLIP">(原理)CLIP</a>  </li>
+<li><a href="/www6vHomeAIGC/2023/06/25/gptMultimodalCLIPPractice/" title="(实战)CLIP">(实战)CLIP</a></li>
+</ul>
+</li>
+<li>Supervised Learning<ul>
+<li><a href="/www6vHomeAIGC/2023/03/01/gptMultimodalVit/" title="(原理|实战)ViT, ViLT">(原理|实战)ViT, ViLT</a></li>
+</ul>
+</li>
+<li>self-distillation<ul>
+<li><strong><a href="https://candied-skunk-1ca.notion.site/DINO-ac5b90014a01494ea1311f4d24af38dd?pvs=4">DINO</a></strong> </li>
+<li><strong><a href="https://candied-skunk-1ca.notion.site/DINOv2-b3d258bbb20f42bbac0ef6ca6f093f9d?pvs=4">DINOv2</a></strong></li>
+</ul>
+</li>
+<li>Auto-encoding<ul>
+<li><strong><a href="https://candied-skunk-1ca.notion.site/VQ-VAE-e56af23289844662b653be10667bf239?pvs=4">VQVAE</a></strong></li>
+</ul>
+</li>
+<li>Masked Modeling<ul>
+<li>MAE</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong><a href="/www6vHomeAIGC/2023/08/05/gptMultimodalConnector/" title="(原理)Connector">(原理)Connector</a></strong>  	</p>
+</li>
+<li><p>Segmentation<br>+ <a href="/www6vHomeAIGC/2023/03/01/gptMultimodalSAM/" title="(原理|实战) SAM">(原理|实战) SAM</a></p>
+</li>
 </ul>
 <h3><span id="生成">生成</span><a href="#生成" class="header-anchor">#</a></h3><ul>
 <li>Diffusion<ul>
-<li><strong><a href="/www6vHomeAIGC/2023/06/29/gptMultimodalDiffusion/" title="(原理)Diffusion">(原理)Diffusion</a></strong>   </li>
-<li><a href="/www6vHomeAIGC/2023/07/09/gptMultimodalDiffusionPractice/" title="(实战)Diffusion">(实战)Diffusion</a>  </li>
-<li><strong><a href="/www6vHomeAIGC/2023/08/01/gptDiffusionXL/" title="(原理)SD XL">(原理)SD XL</a></strong>   </li>
 <li><strong><a href="/www6vHomeAIGC/2023/08/27/gptDiffusionunCLIP/" title="(原理)unCLIP">(原理)unCLIP</a></strong> </li>
-<li><strong><a href="/www6vHomeAIGC/2023/08/01/gptDiffusionGuidance/" title="(原理)Guidance">(原理)Guidance</a></strong></li>
+<li><strong><a href="/www6vHomeAIGC/2023/08/01/gptDiffusionGuidance/" title="(原理)Guidance">(原理)Guidance</a></strong>   </li>
+<li>Stable Diffusion<ul>
+<li><strong><a href="/www6vHomeAIGC/2023/06/29/gptMultimodalDiffusion/" title="(原理)Stable Diffusion">(原理)Stable Diffusion</a></strong>   </li>
+<li><strong><a href="/www6vHomeAIGC/2023/07/09/gptMultimodalDiffusionPractice/" title="(实战)Stable Diffusion">(实战)Stable Diffusion</a></strong>  </li>
+<li><strong><a href="/www6vHomeAIGC/2023/08/01/gptDiffusionXL/" title="(原理)SD XL">(原理)SD XL</a></strong></li>
+</ul>
+</li>
 </ul>
 </li>
 <li>Controllable  <ul>
@@ -503,28 +533,8 @@
     <content><![CDATA[<p></p>
 <span id="more"></span>
 
-<h1><span id="instantid">InstantID</span><a href="#instantid" class="header-anchor">#</a></h1><ul>
-<li><p>论文地址<br><strong>InstantID</strong> 小红书</p>
-</li>
-<li><p>开源地址<br><a href="https://github.com/InstantID/InstantID">InstantID</a></p>
-</li>
-<li><p>Project page<br><a href="https://instantid.github.io/">Project page</a></p>
-</li>
-<li><p>解析<br><a href="https://candied-skunk-1ca.notion.site/InstantID-0b96b4a8d12340a1900995ca7f33ef05?pvs=4">InstantID</a></p>
-</li>
-</ul>
-<hr>
-<h1><span id="photomaker">PhotoMaker</span><a href="#photomaker" class="header-anchor">#</a></h1><ul>
-<li><p>论文地址<br>PhotoMaker  腾讯</p>
-</li>
-<li><p>开源地址<br><a href="https://github.com/TencentARC/PhotoMaker">Repo git</a> git</p>
-</li>
-<li><p>Project page<br><a href="https://photo-maker.github.io/">Project page</a>   </p>
-</li>
-<li><p>解析<br><a href="https://candied-skunk-1ca.notion.site/PhotoMaker-f4b3e96a9ed046838b7255e026bd1abf?pvs=4">解析</a></p>
-</li>
-</ul>
-<hr>
+<h1><span id="instantid">InstantID</span><a href="#instantid" class="header-anchor">#</a></h1><p><a href="https://candied-skunk-1ca.notion.site/InstantID-0b96b4a8d12340a1900995ca7f33ef05?pvs=4">InstantID</a></p>
+<h1><span id="photomaker">PhotoMaker</span><a href="#photomaker" class="header-anchor">#</a></h1><p><a href="https://candied-skunk-1ca.notion.site/PhotoMaker-f4b3e96a9ed046838b7255e026bd1abf?pvs=4">PhotoMaker</a></p>
 <h1><span id="总结">总结</span><a href="#总结" class="header-anchor">#</a></h1><p>【InstantID : ipAdaptor +controlnet,  image Contoll的思路】<br>【photomaker: image  Edit 的思路】</p>
 ]]></content>
       <categories>
@@ -1625,39 +1635,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Vision Encoder</title>
-    <url>/www6vHomeAIGC/2023/08/02/gptMultimodalEncoder/</url>
-    <content><![CDATA[<p></p>
-<span id="more"></span>
-
-
-<h1><span id="vision-encoder">Vision Encoder</span><a href="#vision-encoder" class="header-anchor">#</a></h1><h3><span id="multimodal-learning"><strong>multimodal learning</strong></span><a href="#multimodal-learning" class="header-anchor">#</a></h3><ul>
-<li><a href="/www6vHomeAIGC/2023/03/01/gptMultimodalCLIP/" title="(原理)CLIP">(原理)CLIP</a>  </li>
-<li><a href="/www6vHomeAIGC/2023/06/25/gptMultimodalCLIPPractice/" title="(实战)CLIP">(实战)CLIP</a></li>
-</ul>
-<h3><span id="supervised-learning"><strong>Supervised Learning</strong></span><a href="#supervised-learning" class="header-anchor">#</a></h3><ul>
-<li><a href="/www6vHomeAIGC/2023/03/01/gptMultimodalVit/" title="(原理|实战)ViT, ViLT">(原理|实战)ViT, ViLT</a></li>
-</ul>
-<h3><span id="self-distillation"><strong>self-distillation</strong></span><a href="#self-distillation" class="header-anchor">#</a></h3><ul>
-<li><a href="https://candied-skunk-1ca.notion.site/DINO-ac5b90014a01494ea1311f4d24af38dd?pvs=4">DINO</a> </li>
-<li><a href="https://candied-skunk-1ca.notion.site/DINOv2-b3d258bbb20f42bbac0ef6ca6f093f9d?pvs=4">DINOv2</a></li>
-</ul>
-<h3><span id="auto-encoding"><strong>Auto-encoding</strong></span><a href="#auto-encoding" class="header-anchor">#</a></h3><ul>
-<li><a href="https://candied-skunk-1ca.notion.site/VQ-VAE-e56af23289844662b653be10667bf239?pvs=4">VQVAE</a></li>
-</ul>
-<h3><span id="masked-modeling">Masked Modeling</span><a href="#masked-modeling" class="header-anchor">#</a></h3><ul>
-<li>MAE</li>
-</ul>
-]]></content>
-      <categories>
-        <category>AIGC</category>
-        <category>multimodal</category>
-      </categories>
-      <tags>
-        <tag>multimodal</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>(原理)Guidance</title>
     <url>/www6vHomeAIGC/2023/08/01/gptDiffusionGuidance/</url>
     <content><![CDATA[<p></p>
@@ -1697,12 +1674,7 @@
     <content><![CDATA[<p></p>
 <span id="more"></span>
 
-
-
-<h1><span id="论文">论文</span><a href="#论文" class="header-anchor">#</a></h1><ul>
-<li>论文地址<br> <a href="http://doi.org/10.1007/s11390-024-3814-0">A Survey of Multimodal Controllable Diffusion Models</a></li>
-</ul>
-<h1><span id="论文解析">论文解析</span><a href="#论文解析" class="header-anchor">#</a></h1><p><a href="https://candied-skunk-1ca.notion.site/A-Survey-of-Multimodal-Controllable-Diffusion-Models-b736974658bd4ad79f4128690b0cfb3a?pvs=4">论文解析</a></p>
+<h1><span id="controllable-综述">Controllable 综述</span><a href="#controllable-综述" class="header-anchor">#</a></h1><p><a href="https://candied-skunk-1ca.notion.site/A-Survey-of-Multimodal-Controllable-Diffusion-Models-b736974658bd4ad79f4128690b0cfb3a?pvs=4">(综述)Controllable</a></p>
 ]]></content>
       <categories>
         <category>AIGC</category>
@@ -1867,10 +1839,9 @@
 <span id="more"></span>
 
 
-
-
 <h1><span id="实战">实战</span><a href="#实战" class="header-anchor">#</a></h1><ul>
-<li><a href="https://candied-skunk-1ca.notion.site/controllable-763edf3a43b94e03a1ff0faee9ac41c2?pvs=4">ControlNet + t2i_adapter + Custom Diffusion </a>  diffusers</li>
+<li><a href="https://candied-skunk-1ca.notion.site/controllable-763edf3a43b94e03a1ff0faee9ac41c2?pvs=4">ControlNet + t2i_adapter </a>  diffusers</li>
+<li><a href="https://candied-skunk-1ca.notion.site/concept-customization-067033e842b044729d81aed1d96608fd?pvs=4">Custom Diffusion</a>  diffusers</li>
 </ul>
 <h1><span id="总结metaso">总结[metaso]</span><a href="#总结metaso" class="header-anchor">#</a></h1><table>
 <thead>
@@ -1914,7 +1885,7 @@
       </tags>
   </entry>
   <entry>
-    <title>(实战)Diffusion</title>
+    <title>(实战)Stable Diffusion</title>
     <url>/www6vHomeAIGC/2023/07/09/gptMultimodalDiffusionPractice/</url>
     <content><![CDATA[<p></p>
 <span id="more"></span>
@@ -2117,14 +2088,14 @@
       </tags>
   </entry>
   <entry>
-    <title>(原理)Diffusion</title>
+    <title>(原理)Stable Diffusion</title>
     <url>/www6vHomeAIGC/2023/06/29/gptMultimodalDiffusion/</url>
     <content><![CDATA[<p></p>
 <span id="more"></span>
 
 
 
-<h1><span id="diffusion-原理">Diffusion 原理</span><a href="#diffusion-原理" class="header-anchor">#</a></h1><p><a href="https://candied-skunk-1ca.notion.site/Diffusion-8cdcc8079d7d42c2a193ae6baf06246e?pvs=4">(原理)Diffusion</a></p>
+<h1><span id="stable-diffusion-原理">Stable Diffusion 原理</span><a href="#stable-diffusion-原理" class="header-anchor">#</a></h1><p><a href="https://candied-skunk-1ca.notion.site/Diffusion-8cdcc8079d7d42c2a193ae6baf06246e?pvs=4">(原理)Stable Diffusion</a></p>
 ]]></content>
       <categories>
         <category>AIGC</category>
