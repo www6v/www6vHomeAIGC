@@ -248,7 +248,12 @@
 <li><strong><a href="/www6vHomeAIGC/2024/01/12/gptBERT/" title="(原理)BERT">(原理)BERT</a></strong></li>
 </ul>
 </li>
-<li><a href="/www6vHomeAIGC/2023/01/04/gptLeaderBoard/" title="大模型 排行榜">大模型 排行榜</a></li>
+<li><a href="/www6vHomeAIGC/2023/01/04/gptLeaderBoard/" title="大模型 排行榜">大模型 排行榜</a>  </li>
+<li>MOE<ul>
+<li><strong><a href="/www6vHomeAIGC/2024/02/06/gptDeepSeek/" title="DeepSeek V3">DeepSeek V3</a></strong> </li>
+<li><strong><a href="/www6vHomeAIGC/2024/02/06/gptDeepSeekR1/" title="(原理) DeepSeek R1">(原理) DeepSeek R1</a></strong></li>
+</ul>
+</li>
 </ul>
 </li>
 <li><a href="/www6vHomeAIGC/2023/12/03/gptScalingLaw/" title="Scaling Law">Scaling Law</a> * </li>
@@ -722,6 +727,39 @@
       </categories>
       <tags>
         <tag>垂类大模型</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>(原理) DeepSeek R1</title>
+    <url>/www6vHomeAIGC/2024/02/06/gptDeepSeekR1/</url>
+    <content><![CDATA[<p></p>
+<span id="more"></span>
+
+<h1><span id="原理-deepseek-r1">(原理) DeepSeek R1</span><a href="#原理-deepseek-r1" class="header-anchor">#</a></h1><p><a href="https://candied-skunk-1ca.notion.site/DeepSeek-R1-188bfe21108480778260cd48a6a2417b?pvs=4">(原理)DeepSeek R1</a></p>
+]]></content>
+      <categories>
+        <category>AIGC</category>
+        <category>DeepSeek</category>
+      </categories>
+      <tags>
+        <tag>DeepSeek</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>DeepSeek V3</title>
+    <url>/www6vHomeAIGC/2024/02/06/gptDeepSeek/</url>
+    <content><![CDATA[<p></p>
+<span id="more"></span>
+
+
+<h1><span id="deepseek-v3">DeepSeek V3</span><a href="#deepseek-v3" class="header-anchor">#</a></h1><p><a href="https://candied-skunk-1ca.notion.site/DeepSeek-V3-170bfe211084809490cef0c42147d6d5?pvs=4">DeepSeek V3</a></p>
+]]></content>
+      <categories>
+        <category>AIGC</category>
+        <category>DeepSeek</category>
+      </categories>
+      <tags>
+        <tag>DeepSeek</tag>
       </tags>
   </entry>
   <entry>
