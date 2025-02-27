@@ -255,7 +255,9 @@
 <li><strong><a href="/www6vHomeAIGC/2024/02/18/gptReasoningLLM/" title="(原理)Reasoning LLM">(原理)Reasoning LLM</a></strong> </li>
 <li><strong><a href="/www6vHomeAIGC/2024/02/18/gptDeepSeekExplain1/" title="解读 DeepSeek[刘知远]">解读 DeepSeek[刘知远]</a></strong>   </li>
 <li><strong><a href="/www6vHomeAIGC/2024/02/18/gptDeepSeekExplain2/" title="解读 DeepSeek[邱锡鹏]">解读 DeepSeek[邱锡鹏]</a></strong> </li>
-<li><strong><a href="/www6vHomeAIGC/2024/02/23/gptDeepseekSFT/" title="(实战)Deepseek R1 SFT">(实战)Deepseek R1 SFT</a></strong></li>
+<li><strong><a href="/www6vHomeAIGC/2024/02/23/gptDeepseekSFT/" title="(实战)Deepseek R1 SFT">(实战)Deepseek R1 SFT</a></strong>   </li>
+<li><strong><a href="/www6vHomeAIGC/2024/02/25/gptDeepseekDistill/" title="(实战)Deepseek 蒸馏">(实战)Deepseek 蒸馏</a></strong> </li>
+<li><strong><a href="/www6vHomeAIGC/2024/02/28/gptDeepseekGRPO/" title="(实战)GRPO">(实战)GRPO</a></strong></li>
 </ul>
 </li>
 </ul>
@@ -661,6 +663,23 @@
       </tags>
   </entry>
   <entry>
+    <title>(实战)GRPO</title>
+    <url>/www6vHomeAIGC/2024/02/28/gptDeepseekGRPO/</url>
+    <content><![CDATA[<p></p>
+<span id="more"></span>
+
+
+<h1><span id="grpo">GRPO</span><a href="#grpo" class="header-anchor">#</a></h1><p><a href="https://candied-skunk-1ca.notion.site/GRPO-1a7bfe211084808086d9df62f186af6d?pvs=4">(实战)GRPO</a></p>
+]]></content>
+      <categories>
+        <category>AIGC</category>
+        <category>DeepSeek</category>
+      </categories>
+      <tags>
+        <tag>DeepSeek</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>(质量过滤)RefinedWeb, Textbooks</title>
     <url>/www6vHomeAIGC/2024/02/27/gptDataRefinedWeb/</url>
     <content><![CDATA[<p></p>
@@ -693,6 +712,23 @@
       </categories>
       <tags>
         <tag>dataProcess</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>(实战)Deepseek 蒸馏</title>
+    <url>/www6vHomeAIGC/2024/02/25/gptDeepseekDistill/</url>
+    <content><![CDATA[<p></p>
+<span id="more"></span>
+
+
+<p><a href="https://candied-skunk-1ca.notion.site/R1-1a5bfe211084809eb615f84dc74f4bb6?pvs=4">(实战)Deepseek 蒸馏</a></p>
+]]></content>
+      <categories>
+        <category>AIGC</category>
+        <category>DeepSeek</category>
+      </categories>
+      <tags>
+        <tag>DeepSeek</tag>
       </tags>
   </entry>
   <entry>
