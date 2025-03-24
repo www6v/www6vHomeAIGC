@@ -376,12 +376,11 @@
 </ul>
 </li>
 <li>self-distillation<ul>
-<li><strong><a href="https://candied-skunk-1ca.notion.site/DINO-ac5b90014a01494ea1311f4d24af38dd?pvs=4">DINO</a></strong> </li>
-<li><strong><a href="https://candied-skunk-1ca.notion.site/DINOv2-b3d258bbb20f42bbac0ef6ca6f093f9d?pvs=4">DINOv2</a></strong></li>
+<li><a href="/www6vHomeAIGC/2024/03/24/gptMultimodalDINO/" title="DINO">DINO</a></li>
 </ul>
 </li>
 <li>Auto-encoding<ul>
-<li><strong><a href="https://candied-skunk-1ca.notion.site/VQ-VAE-e56af23289844662b653be10667bf239?pvs=4">VQVAE</a></strong></li>
+<li><a href="/www6vHomeAIGC/2024/03/24/gptMultimodalVQVAE/" title="VQ-VAE">VQ-VAE</a></li>
 </ul>
 </li>
 <li>Masked Modeling<ul>
@@ -699,6 +698,63 @@
 <p>1xx. <a href="https://zhuanlan.zhihu.com/p/662889725">图文多模态大模型综述</a></p>
 <p>1xx. <a href="https://huyenchip.com/2023/10/10/multimodal.html">Multimodality and Large Multimodal Models (LMMs)</a><br>   <a href="https://baoyu.io/translations/lmm/multimodality-and-large-multimodal-models">多模态和多模态大模型 (LMM)[译]</a>  CLIP Flamingo</p>
 <p>1xx. <a href="https://zhuanlan.zhihu.com/p/667942680">写在多模态征服一切之前（未来数据和模型应该是什么样的？）</a></p>
+]]></content>
+      <categories>
+        <category>AIGC</category>
+        <category>multimodal</category>
+      </categories>
+      <tags>
+        <tag>multimodal</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>VQ-VAE</title>
+    <url>/www6vHomeAIGC/2024/03/24/gptMultimodalVQVAE/</url>
+    <content><![CDATA[<p></p>
+<span id="more"></span>
+
+
+<h1><span id="参考">参考</span><a href="#参考" class="header-anchor">#</a></h1><ul>
+<li><p><a href="https://zhuanlan.zhihu.com/p/647399156">关于 VQ-VAE 直观理解</a></p>
+</li>
+<li><p><a href="https://www.bilibili.com/video/BV1bb4y1i7j6/?vd_source=f6e8c1128f9f264c5ab8d9411a644036">[论文简析]VQ-VAE:Neural discrete representation learning[1711.00937]</a> v<br>看评论中的置顶 有代码</p>
+</li>
+<li><p><a href="https://www.bilibili.com/video/BV1yN4y1k794/">如何搭建VQ-VAE模型（Pytorch代码）</a> v<br>看视频介绍 <a href="https://github.com/KevinOfCathay/DDPM-demo">https://github.com/KevinOfCathay/DDPM-demo</a></p>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>AIGC</category>
+        <category>ViT</category>
+      </categories>
+      <tags>
+        <tag>ViT</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>DINO</title>
+    <url>/www6vHomeAIGC/2024/03/24/gptMultimodalDINO/</url>
+    <content><![CDATA[<p></p>
+<span id="more"></span>
+
+
+<h1><span id="dino">DINO</span><a href="#dino" class="header-anchor">#</a></h1><p><a href="https://github.com/facebookresearch/dino">https://github.com/facebookresearch/dino</a></p>
+<h1><span id="参考">参考</span><a href="#参考" class="header-anchor">#</a></h1><p><a href="https://mp.weixin.qq.com/s/EGCAX51FTyZrO7-e4y9Egg">重塑自监督学习: DINO 网络如何颠覆视觉特征表示的常规方法</a>   有动图</p>
+<hr>
+<h1><span id="dinov2"><strong>DINOv2</strong></span><a href="#dinov2" class="header-anchor">#</a></h1><h3><span id="论文">论文</span><a href="#论文" class="header-anchor">#</a></h3><ul>
+<li><p>论文地址<br><a href="https://arxiv.org/pdf/2304.07193">DINOv2: Learning Robust Visual Features without Supervision</a></p>
+</li>
+<li><p>开源地址<br><a href="https://github.com/facebookresearch/dinov2">https://github.com/facebookresearch/dinov2</a></p>
+</li>
+<li><p>Project page<br><a href="https://dinov2.metademolab.com/">Project page</a><br><a href="https://pierrefdz.github.io/publications/dinov2/">Project page</a></p>
+</li>
+</ul>
+<h1><span id="参考">参考</span><a href="#参考" class="header-anchor">#</a></h1><p><a href="https://cloud.tencent.com/developer/article/2314807">DINOv2：无需微调，填补 SAM 的空白，支持多个下游任务</a></p>
+<p><a href="https://blog.csdn.net/CVHub/article/details/130304078">全网最详细的 DINOv2 论文解读来啦！</a></p>
+<p><a href="https://blog.csdn.net/weixin_43694096/article/details/135761460">深度学习算法应用实战 | DINOv2 图像相似度实战</a></p>
+<p><a href="https://zhuanlan.zhihu.com/p/629042197">视觉大模型DINOv2:自我监督学习的新领域</a></p>
+<p><a href="https://zhuanlan.zhihu.com/p/650234933">DINOv2：无需微调，填补SAM空白</a></p>
+<h3><span id="实战">实战</span><a href="#实战" class="header-anchor">#</a></h3><p><a href="https://mmpretrain.readthedocs.io/zh-cn/dev/papers/dinov2.html">DINOv2 on mmpretrain</a></p>
 ]]></content>
       <categories>
         <category>AIGC</category>
