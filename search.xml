@@ -139,6 +139,33 @@
     
     
     <entry>
+      <title>(原理)梯度优化</title>
+      <link href="/www6vHomeAIGC/2024/04/04/gptDeeplearningGradOpt/"/>
+      <url>/www6vHomeAIGC/2024/04/04/gptDeeplearningGradOpt/</url>
+      
+        <content type="html"><![CDATA[<p></p><span id="more"></span><h1><span id="梯度优化">梯度优化</span><a href="#梯度优化" class="header-anchor">#</a></h1><iframe src="https://candied-skunk-1ca.notion.site/ebd/180bfe21108480a2ab52cf656b86d2a4" width="100%" height="1000" frameborder="0" allowfullscreen></iframe>]]></content>
+      
+      
+      <categories>
+          
+          <category> AIGC </category>
+          
+          <category> deepLearning </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> deepLearning </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>多模态 系列</title>
       <link href="/www6vHomeAIGC/2024/04/04/gptMultimodalSeries/"/>
       <url>/www6vHomeAIGC/2024/04/04/gptMultimodalSeries/</url>
@@ -4465,7 +4492,7 @@
       <link href="/www6vHomeAIGC/2022/03/23/gptDeeplearningSummary/"/>
       <url>/www6vHomeAIGC/2022/03/23/gptDeeplearningSummary/</url>
       
-        <content type="html"><![CDATA[<p></p><span id="more"></span><h2><span id="目录">目录</span><a href="#目录" class="header-anchor">#</a></h2><div class="toc"><!-- toc --><ul><li><a href="#basic">Basic</a></li><li><a href="#deeplearning">DeepLearning</a></li></ul><!-- tocstop --></div><h2><span id="basic">Basic</span><a href="#basic" class="header-anchor">#</a></h2><ul><li><a href="/www6vHomeAIGC/2021/08/11/ai/" title="AI 应用场景">AI 应用场景</a> </li><li><a href="/www6vHomeAIGC/2022/01/22/aiOverview/" title="人工智能 知识点">人工智能 知识点</a></li><li><a href="/www6vHomeAIGC/2022/06/07/aiMachineLearning/" title="Machine Learning">Machine Learning</a></li></ul><h2><span id="deeplearning">DeepLearning</span><a href="#deeplearning" class="header-anchor">#</a></h2><ul><li><strong><a href="/www6vHomeAIGC/2022/06/11/aiDeepLearning/" title="Deep Learning">Deep Learning</a></strong></li><li><strong><a href="/www6vHomeAIGC/2024/01/09/gptDeeplearningForwardBackward/" title="(原理&amp;实战)前向&#x2F;反向传播">(原理&amp;实战)前向&#x2F;反向传播</a></strong></li><li><strong><a href="/www6vHomeAIGC/2024/01/12/gptDeeplearningLoss/" title="(原理&amp;实战)交叉熵损失">(原理&amp;实战)交叉熵损失</a></strong></li><li>正则化<ul><li><strong><a href="/www6vHomeAIGC/2024/01/08/gptDeeplearningWeightDecay/" title="(原理&amp;实战)权重衰减">(原理&amp;实战)权重衰减</a></strong> </li><li><strong><a href="/www6vHomeAIGC/2024/01/08/gptDeeplearningDropout/" title="(原理&amp;实战)Dropout">(原理&amp;实战)Dropout</a></strong></li></ul></li><li>网络优化<ul><li><strong><a href="/www6vHomeAIGC/2024/01/08/gptDeeplearningLearningRate/" title="(原理)学习率">(原理)学习率</a></strong>   </li><li><strong><a href="/www6vHomeAIGC/2024/01/17/gptDeeplearningBatchsize/" title="(原理)Batchsize">(原理)Batchsize</a></strong></li><li><strong><a href="/www6vHomeAIGC/2024/01/08/gptDeeplearningNorm/" title="规范化 Norm">规范化 Norm</a></strong></li></ul></li><li>Transformer<ul><li><strong><a href="/www6vHomeAIGC/2022/11/30/gptTransformer/" title="(原理)Transformer">(原理)Transformer</a></strong> </li><li><strong><a href="/www6vHomeAIGC/2023/11/19/gptSelfAttention/" title="(原理)Self-Attention">(原理)Self-Attention</a></strong> </li><li><strong><a href="/www6vHomeAIGC/2023/11/19/gptModelGQA/" title="(原理)GQA">(原理)GQA</a></strong>   </li><li><a href="/www6vHomeAIGC/2023/02/16/gptTransformerCode/" title="(实战)Transformer">(实战)Transformer</a>  </li><li><a href="/www6vHomeAIGC/2023/04/18/gptEmbedding/" title="(原理)Embedding">(原理)Embedding</a>   </li><li><a href="/www6vHomeAIGC/2023/02/26/gptTrainTokenizer/" title="Tokenizer">Tokenizer</a></li></ul></li><li><strong><a href="/www6vHomeAIGC/2023/03/28/gptPytorch/" title="(实战)PyTorch">(实战)PyTorch</a></strong></li></ul>]]></content>
+        <content type="html"><![CDATA[<p></p><span id="more"></span><h2><span id="目录">目录</span><a href="#目录" class="header-anchor">#</a></h2><div class="toc"><!-- toc --><ul><li><a href="#basic">Basic</a></li><li><a href="#deeplearning">DeepLearning</a></li></ul><!-- tocstop --></div><h2><span id="basic">Basic</span><a href="#basic" class="header-anchor">#</a></h2><ul><li><a href="/www6vHomeAIGC/2021/08/11/ai/" title="AI 应用场景">AI 应用场景</a> </li><li><a href="/www6vHomeAIGC/2022/01/22/aiOverview/" title="人工智能 知识点">人工智能 知识点</a></li><li><a href="/www6vHomeAIGC/2022/06/07/aiMachineLearning/" title="Machine Learning">Machine Learning</a></li></ul><h2><span id="deeplearning">DeepLearning</span><a href="#deeplearning" class="header-anchor">#</a></h2><ul><li><strong><a href="/www6vHomeAIGC/2022/06/11/aiDeepLearning/" title="Deep Learning">Deep Learning</a></strong></li><li><strong><a href="/www6vHomeAIGC/2024/01/09/gptDeeplearningForwardBackward/" title="(原理&amp;实战)前向&#x2F;反向传播">(原理&amp;实战)前向&#x2F;反向传播</a></strong></li><li><strong><a href="/www6vHomeAIGC/2024/01/12/gptDeeplearningLoss/" title="(原理&amp;实战)交叉熵损失">(原理&amp;实战)交叉熵损失</a></strong></li><li>正则化<ul><li><strong><a href="/www6vHomeAIGC/2024/01/08/gptDeeplearningWeightDecay/" title="(原理&amp;实战)权重衰减">(原理&amp;实战)权重衰减</a></strong> </li><li><strong><a href="/www6vHomeAIGC/2024/01/08/gptDeeplearningDropout/" title="(原理&amp;实战)Dropout">(原理&amp;实战)Dropout</a></strong></li></ul></li><li>网络优化<ul><li><strong><a href="/www6vHomeAIGC/2024/01/08/gptDeeplearningLearningRate/" title="(原理)学习率">(原理)学习率</a></strong>   </li><li><strong><a href="/www6vHomeAIGC/2024/01/17/gptDeeplearningBatchsize/" title="(原理)Batchsize">(原理)Batchsize</a></strong></li><li><strong><a href="/www6vHomeAIGC/2024/01/08/gptDeeplearningNorm/" title="规范化 Norm">规范化 Norm</a></strong> </li><li><strong><a href="/www6vHomeAIGC/2024/04/04/gptDeeplearningGradOpt/" title="(原理)梯度优化">(原理)梯度优化</a></strong></li></ul></li><li>Transformer<ul><li><strong><a href="/www6vHomeAIGC/2022/11/30/gptTransformer/" title="(原理)Transformer">(原理)Transformer</a></strong> </li><li><strong><a href="/www6vHomeAIGC/2023/11/19/gptSelfAttention/" title="(原理)Self-Attention">(原理)Self-Attention</a></strong> </li><li><strong><a href="/www6vHomeAIGC/2023/11/19/gptModelGQA/" title="(原理)GQA">(原理)GQA</a></strong>   </li><li><a href="/www6vHomeAIGC/2023/02/16/gptTransformerCode/" title="(实战)Transformer">(实战)Transformer</a>  </li><li><a href="/www6vHomeAIGC/2023/04/18/gptEmbedding/" title="(原理)Embedding">(原理)Embedding</a>   </li><li><a href="/www6vHomeAIGC/2023/02/26/gptTrainTokenizer/" title="Tokenizer">Tokenizer</a></li></ul></li><li><strong><a href="/www6vHomeAIGC/2023/03/28/gptPytorch/" title="(实战)PyTorch">(实战)PyTorch</a></strong></li></ul>]]></content>
       
       
       <categories>
