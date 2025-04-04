@@ -25,11 +25,13 @@
 <meta property="og:url" content="https://www6v.github.io/2023/08/22/gptDiffusionIPAdapter/index.html">
 <meta property="og:site_name" content="www6v的博客">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://www6v.github.io/www6vHomeAIGC/2023/08/22/gptDiffusionIPAdapter/1723388369532.png">
 <meta property="article:published_time" content="2023-08-22T10:26:51.000Z">
-<meta property="article:modified_time" content="2024-08-22T10:49:59.398Z">
+<meta property="article:modified_time" content="2025-04-04T11:38:05.768Z">
 <meta property="article:author" content="Wang Wei">
 <meta property="article:tag" content="Diffusion">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://www6v.github.io/www6vHomeAIGC/2023/08/22/gptDiffusionIPAdapter/1723388369532.png">
 
 <link rel="canonical" href="https://www6v.github.io/2023/08/22/gptDiffusionIPAdapter/">
 
@@ -224,7 +226,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2024-08-22 18:49:59" itemprop="dateModified" datetime="2024-08-22T18:49:59+08:00">2024-08-22</time>
+                <time title="修改时间：2025-04-04 19:38:05" itemprop="dateModified" datetime="2025-04-04T19:38:05+08:00">2025-04-04</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -254,8 +256,26 @@
         <p></p>
 <span id="more"></span>
 
+<h1><span id="论文ip-adapter">论文[IP-Adapter]</span><a href="#论文ip-adapter" class="header-anchor">#</a></h1><ul>
+<li>论文地址<br><a target="_blank" rel="noopener" href="https://arxiv.org/pdf/2308.06721">IP-Adapter: Text Compatible Image Prompt Adapter for Text-to-Image Diffusion Models</a></li>
+<li>开源地址<br><a target="_blank" rel="noopener" href="https://github.com/tencent-ailab/IP-Adapter">IP-Adapter</a> git<br>enable a pretrained text-to-image diffusion model to generate images <strong>with image prompt</strong><br>有很多notebook的demo</li>
+<li>Project page<br><a target="_blank" rel="noopener" href="https://ip-adapter.github.io/">Project page</a></li>
+</ul>
+<h1><span id="ip-adapter10">IP-Adapter[10]</span><a href="#ip-adapter10" class="header-anchor">#</a></h1><p><a target="_blank" rel="noopener" href="https://hf.co/papers/2308.06721">IP-Adapter</a> is an image prompt adapter that can be plugged into diffusion models to<br> enable image prompting without any changes to the underlying model.<br>Furthermore, this adapter can be reused with other models finetuned from<br> the same base model and it can be combined with other adapters like <a target="_blank" rel="noopener" href="https://huggingface.co/docs/diffusers/main/en/using-diffusers/controlnet">ControlNet</a>. The key idea behind IP-Adapter is the <em>decoupled cross-attention</em><br> mechanism which adds a separate cross-attention layer just for image<br>features instead of using the same cross-attention layer for both text<br>and image features. This allows the model to learn more image-specific<br>features.</p>
+<p><a target="_blank" rel="noopener" href="https://hf.co/papers/2308.06721">IP-Adapter</a> 是一种图像提示适配器，可以插入扩散模型以启用图像提示，而无需对底层模型进行任何更改。此外，该适配器<strong>可以与从同一基本模型微调的其他模型重复使用</strong>，并且<strong>可以与其他适配器（如 <a target="_blank" rel="noopener" href="https://huggingface.co/docs/diffusers/main/en/using-diffusers/controlnet">ControlNet</a>）结合使用</strong>。IP-Adapter背后的关键思想是<strong><em>解耦的交叉注意力</em>机制</strong>，该机制仅为图像特征添加了一个单独的交叉注意力层，而不是对文本和图像特征使用相同的交叉注意力层。这使模型能够学习<strong>更多特定于图像的特征</strong>。</p>
+<h1><span id="method2">Method[2]</span><a href="#method2" class="header-anchor">#</a></h1><img src="/www6vHomeAIGC/2023/08/22/gptDiffusionIPAdapter/1723388369532.png" class>
 
-<h1><span id="ip-adapter">IP-Adapter</span><a href="#ip-adapter" class="header-anchor">#</a></h1><p>  <a target="_blank" rel="noopener" href="https://candied-skunk-1ca.notion.site/IP-Adapter-40dfd1f30d38456b8776a90871716c73?pvs=4">(原理|实战)IP-Adapter</a></p>
+<p><strong>解耦注意力机制[1]</strong></p>
+<p>IPAdapter提出的<strong>解耦注意力机制decoupled cross attention</strong>是指将<strong>图像提示（image prompt）也看作是text</strong>，按照上面的公式原理计算image prompt和查询特征  的cross attention，最后将text prompt计算的cross attention和image prompt计算的cross attention相加。</p>
+<h1><span id="参考">参考</span><a href="#参考" class="header-anchor">#</a></h1><ol>
+<li><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/693224841">IPAdapter原理和代码解析</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Zz421Q7wx/">【腾讯】IP-Adapter论文解读，拿捏图生图，人脸更不在话下。</a>   v</li>
+</ol>
+<h3><span id="实战">实战</span><a href="#实战" class="header-anchor">#</a></h3><ol start="10">
+<li><a target="_blank" rel="noopener" href="https://huggingface.co/docs/diffusers/main/en/using-diffusers/ip_adapter">IP-Adapter</a>  diffusers</li>
+</ol>
+<p>1xx. <a target="_blank" rel="noopener" href="https://colab.research.google.com/drive/1srusRhcCYMasZ5pdO5nWHFhfLqB1sRhM">ip-adaptor on colab with diffusers</a> 运行过没异常</p>
+<p>1xx. <a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1tz421S7gs/">IPAdapter 多个图像风格混合到一张图像上 comfyUI工作流</a>  v 有代码</p>
 
     </div>
 
