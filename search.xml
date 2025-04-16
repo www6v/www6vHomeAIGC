@@ -37,7 +37,7 @@
 </ul>
 </li>
 </ul>
-<h1><span id="deepresearch">DeepResearch</span><a href="#deepresearch" class="header-anchor">#</a></h1><p><strong><a href="/www6vHomeAIGC/2024/03/26/gptReasonDeepResearch/" title="(原理&amp;实战)Deep Research">(原理&amp;实战)Deep Research</a></strong> </p>
+<h1><span id="deepresearch">DeepResearch</span><a href="#deepresearch" class="header-anchor">#</a></h1><p><strong><a href="/www6vHomeAIGC/2024/03/26/gptReasonDeepResearch/" title="(原理&amp;实战)Deep Research">(原理&amp;实战)Deep Research</a></strong><br><strong><a href="/www6vHomeAIGC/2024/04/16/gptReasonDeepResearchJina/" title="(原理)Deep Research(Jina)">(原理)Deep Research(Jina)</a></strong> </p>
 <h1><span id="moe">MOE</span><a href="#moe" class="header-anchor">#</a></h1><ul>
 <li><strong><a href="/www6vHomeAIGC/2024/03/08/gptModelMOE/" title="(原理)Visual  MOE">(原理)Visual  MOE</a></strong></li>
 </ul>
@@ -458,7 +458,13 @@
 </li>
 <li>editing<ul>
 <li><a href="/www6vHomeAIGC/2023/07/06/gptDiffusionImageEdit/" title="(综述)Image Editing">(综述)Image Editing</a>   </li>
-<li><strong><a href="/www6vHomeAIGC/2023/07/27/gptDiffusionImageEditWork/" title="(Work|实战)Image Editing">(Work|实战)Image Editing</a></strong></li>
+<li><strong><a href="/www6vHomeAIGC/2023/07/27/gptDiffusionImageEditWork/" title="(Work|实战)Image Editing">(Work|实战)Image Editing</a></strong> <ul>
+<li><a href="/www6vHomeAIGC/2024/04/16/gptDiffusionEditPrompt/" title="Prompt-to-Prompt">Prompt-to-Prompt</a>  </li>
+<li><a href="/www6vHomeAIGC/2024/04/16/gptDiffusionEditInstruct/" title="InstructPix2Pix">InstructPix2Pix</a> </li>
+<li><a href="/www6vHomeAIGC/2024/04/16/gptDiffusionEditMGIE/" title="MGIE">MGIE</a> </li>
+<li><a href="/www6vHomeAIGC/2024/04/16/gptDiffusionEditPix2pix/" title="pix2pix-zero">pix2pix-zero</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li>人像生图<ul>
@@ -663,6 +669,149 @@
       </tags>
   </entry>
   <entry>
+    <title>(原理)Deep Research(Jina)</title>
+    <url>/www6vHomeAIGC/2024/04/16/gptReasonDeepResearchJina/</url>
+    <content><![CDATA[<p></p>
+<span id="more"></span>
+
+
+<h1><span id="deep-researchjina">Deep Research(Jina)</span><a href="#deep-researchjina" class="header-anchor">#</a></h1><p><a href="https://candied-skunk-1ca.notion.site/Deep-Research-Jina-1d7bfe211084803d8405c0e74cdf395d?pvs=4">(原理)Deep Research(Jina)</a></p>
+]]></content>
+      <categories>
+        <category>AIGC</category>
+        <category>reason</category>
+      </categories>
+      <tags>
+        <tag>reason</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>pix2pix-zero</title>
+    <url>/www6vHomeAIGC/2024/04/16/gptDiffusionEditPix2pix/</url>
+    <content><![CDATA[<p></p>
+<span id="more"></span>
+
+
+<h1><span id="论文">论文</span><a href="#论文" class="header-anchor">#</a></h1><ul>
+<li><p>论文地址<br><a href="https://arxiv.org/pdf/2302.03027">Zero-shot Image-to-Image Translation</a></p>
+</li>
+<li><p>开源地址<br><a href="https://github.com/pix2pixzero/pix2pix-zero">pix2pix-zero</a> git</p>
+</li>
+<li><p>Project page<br><a href="https://pix2pixzero.github.io/">Project page</a></p>
+<p>  官网有个介绍视频 看过不错</p>
+</li>
+</ul>
+<h1><span id="method1">Method[1]</span><a href="#method1" class="header-anchor">#</a></h1><img src="/www6vHomeAIGC/2024/04/16/gptDiffusionEditPix2pix/e9wsarfq.bmp" class>
+
+<p>上图展示了pix2pix-zero方法的概述，这是一个将图片从猫变成狗的图像到图像的翻译例子。首先，使用规范化的DDIM反转来得到一个反转的噪声映射，这是由BLIP图像字幕（caption）网络和CLIP文本嵌入模型自动生成的文本嵌入引导的。然后，使用原始文本嵌入去噪以获得交叉注意力图，作为输入图像结构的参考（顶部行）。接下来，使用编辑后的文本嵌入去噪，通过损失函数确保这些交叉注意力图与参考交叉注意力图相匹配（第二行）。这确保了编辑图像的结构与原始图像相比不会发生剧烈变化。没有交叉注意力引导的去噪示例显示在第三行，导致结构上的大偏差。此可视化强调了在编辑过程中保持图像原始结构的交叉注意力的重要性。</p>
+<h1><span id="discovering-edit-directions-2">Discovering edit directions [2]</span><a href="#discovering-edit-directions-2" class="header-anchor">#</a></h1><img src="/www6vHomeAIGC/2024/04/16/gptDiffusionEditPix2pix/hwe1rl5e.bmp" class>
+
+<h1><span id="参考">参考</span><a href="#参考" class="header-anchor">#</a></h1><ol>
+<li><a href="https://zhuanlan.zhihu.com/p/684673737">pix2pix-zero：零样本图像到图像转换</a></li>
+<li><a href="https://blog.csdn.net/x1131230123/article/details/132169755">【深度学习】【风格迁移】Zero-shot Image-to-Image Translation</a></li>
+</ol>
+<p>实战</p>
+<p> <a href="https://huggingface.co/docs/diffusers/v0.13.0/en/api/pipelines/stable_diffusion/pix2pix_zero">Zero-shot Image-to-Image Translation</a></p>
+]]></content>
+      <categories>
+        <category>AIGC</category>
+        <category>Diffusion</category>
+      </categories>
+      <tags>
+        <tag>Diffusion</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>MGIE</title>
+    <url>/www6vHomeAIGC/2024/04/16/gptDiffusionEditMGIE/</url>
+    <content><![CDATA[<p></p>
+<span id="more"></span>
+
+
+
+
+<h1><span id="论文">论文</span><a href="#论文" class="header-anchor">#</a></h1><ul>
+<li>论文地址<br><a href="https://openreview.net/pdf?id=S1RKWSyZ2Y">MGIE</a> 2024 Apple</li>
+<li>开源地址<br><a href="https://github.com/apple/ml-mgie">Repo</a> git<br><a href="https://github.com/tsujuifu/pytorch_mgie">Repo</a> git</li>
+<li>Project page<br><a href="https://mllm-ie.github.io/">Project page</a></li>
+</ul>
+<h1><span id="method1">Method[1]</span><a href="#method1" class="header-anchor">#</a></h1><img src="/www6vHomeAIGC/2024/04/16/gptDiffusionEditMGIE/9m4yymsa.bmp" class>
+
+<h1><span id="参考">参考</span><a href="#参考" class="header-anchor">#</a></h1><ol>
+<li><a href="https://blog.csdn.net/imwaters/article/details/136045973">【多模态MLLMs+图像编辑】MGIE：苹果开源基于指令和大语言模型的图片编辑神器（24.02.03开源）</a></li>
+</ol>
+<p>1xx. <a href="https://mp.weixin.qq.com/s/c87cUuyz4bUgfW2_ma5xpA">罕见！苹果开源图片编辑神器MGIE，要上iPhone?</a></p>
+]]></content>
+      <categories>
+        <category>AIGC</category>
+        <category>Diffusion</category>
+      </categories>
+      <tags>
+        <tag>Diffusion</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>InstructPix2Pix</title>
+    <url>/www6vHomeAIGC/2024/04/16/gptDiffusionEditInstruct/</url>
+    <content><![CDATA[<p></p>
+<span id="more"></span>
+
+
+<h1><span id="论文">论文</span><a href="#论文" class="header-anchor">#</a></h1><ul>
+<li>论文地址<br><a href="https://arxiv.org/pdf/2211.09800">InstructPix2Pix: Learning to Follow Image Editing Instructions</a></li>
+<li>开源地址<br><a href="https://github.com/timothybrooks/instruct-pix2pix">Repo</a> git</li>
+<li>Project page<br><a href="https://www.timothybrooks.com/instruct-pix2pix">Project page</a></li>
+</ul>
+<h1><span id="method"><strong>Method</strong></span><a href="#method" class="header-anchor">#</a></h1><p>这章就讲两件事：1）如何<strong>生成数据集</strong>（章节3.1）；2）如何<strong>基于上一步生成的训练数据，训练一个图像编辑扩散模型</strong>（章节3.2）；</p>
+<img src="/www6vHomeAIGC/2024/04/16/gptDiffusionEditInstruct/94xbrqlt.bmp" class>
+
+<img src="/www6vHomeAIGC/2024/04/16/gptDiffusionEditInstruct/72gzhwfl.bmp" class>
+
+<h1><span id="参考">参考</span><a href="#参考" class="header-anchor">#</a></h1><p><a href="https://zhuanlan.zhihu.com/p/655135961">InstructPix2Pix：用指令给图像做修改</a></p>
+<h1><span id="实战">实战</span><a href="#实战" class="header-anchor">#</a></h1><p>1xx. <a href="https://www.notion.so/5d04c1bbd0d34be4b3fb0087cb670efd?pvs=21">InstructPix2Pix</a>  diffusers<br>1xx. <a href="https://www.bilibili.com/video/BV1Go4y1M7cK?p=3">InstructPix2Pix</a> V<br><a href="https://github.com/www6v/Diffusion_Training_Examples">Code Repo</a> git</p>
+]]></content>
+      <categories>
+        <category>AIGC</category>
+        <category>Diffusion</category>
+      </categories>
+      <tags>
+        <tag>Diffusion</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Prompt-to-Prompt</title>
+    <url>/www6vHomeAIGC/2024/04/16/gptDiffusionEditPrompt/</url>
+    <content><![CDATA[<p></p>
+<span id="more"></span>
+
+
+<h1><span id="论文">论文</span><a href="#论文" class="header-anchor">#</a></h1><ul>
+<li>论文地址<br><a href="https://prompt-to-prompt.github.io/ptp_files/Prompt-to-Prompt_preprint.pdf">PROMPT-TO-PROMPT IMAGE EDITING<br>WITH CROSS-ATTENTION CONTROL</a></li>
+<li>开源地址<br><a href="https://github.com/google/prompt-to-prompt/">Prompt-to-Prompt</a> git</li>
+<li>Project page<br><a href="https://prompt-to-prompt.github.io/">Project page</a></li>
+</ul>
+<h1><span id="示意1">示意[1]</span><a href="#示意1" class="header-anchor">#</a></h1><img src="/www6vHomeAIGC/2024/04/16/gptDiffusionEditPrompt/gvn5hr6b.bmp" class>
+
+<h1><span id="应用1">应用[1]</span><a href="#应用1" class="header-anchor">#</a></h1><p><strong>应用方面：</strong>Prompt-to-Prompt 这个方法是原理上的创新，应用方面只适用于“已经生成了一张大致满意的图，我们想对它进行部分修改”。<strong>但是对于“手头有一张来历不明的图，我们想对它进行修改”这个任务就很麻烦了</strong>，因为很难去倒推这张图对应的prompt是啥。</p>
+<p>所以后续有一项工作叫 <a href="https://zhuanlan.zhihu.com/p/655135961">InstructPix2Pix</a>，作用是“<strong>一张来历不明的图，只要说‘把猫改成狗’，模型就能把画面里的猫改成狗，其他不变</strong>。”非常好用，听说已经集成在 Stable Diffusion WebUI 里可以直接用了。</p>
+<h1><span id="method1">Method[1]</span><a href="#method1" class="header-anchor">#</a></h1><img src="/www6vHomeAIGC/2024/04/16/gptDiffusionEditPrompt/vfk2k2bg.bmp" class>
+<p>上半部分，原版cross-attention，下半部分，本文的cross-attention</p>
+<img src="/www6vHomeAIGC/2024/04/16/gptDiffusionEditPrompt/ck0g81ot.bmp" class>
+
+<h1><span id="参考">参考</span><a href="#参考" class="header-anchor">#</a></h1><ol>
+<li><a href="https://zhuanlan.zhihu.com/p/655372592">Prompt-to-prompt：让生成的图像保持一致</a></li>
+</ol>
+<p><a href="https://blog.csdn.net/weixin_40779727/article/details/136854062">diffusion model(十四)： prompt-to-prompt 深度剖析</a></p>
+]]></content>
+      <categories>
+        <category>AIGC</category>
+        <category>Diffusion</category>
+      </categories>
+      <tags>
+        <tag>Diffusion</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>(Survey)Reasoning LLM Post-Training</title>
     <url>/www6vHomeAIGC/2024/04/04/gptReasoningPostTraining/</url>
     <content><![CDATA[<p></p>
@@ -793,7 +942,8 @@
 <span id="more"></span>
 
 
-<h1><span id="原理amp实战deep-research">(原理&amp;实战)Deep Research</span><a href="#原理amp实战deep-research" class="header-anchor">#</a></h1><iframe src="https://candied-skunk-1ca.notion.site/ebd/1c2bfe21108480ab8b80f0638d4ec2af" width="100%" height="1000" frameborder="0" allowfullscreen></iframe>]]></content>
+<h1><span id="deep-research">Deep Research</span><a href="#deep-research" class="header-anchor">#</a></h1><p><a href="https://candied-skunk-1ca.notion.site/ebd/1c2bfe21108480ab8b80f0638d4ec2af">(原理&amp;实战)Deep Research</a></p>
+]]></content>
       <categories>
         <category>AIGC</category>
         <category>reason</category>
