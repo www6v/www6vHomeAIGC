@@ -26,8 +26,8 @@
 <li><strong><a href="/www6vHomeAIGC/2024/02/06/gptDeepSeek/" title="DeepSeek V3">DeepSeek V3</a></strong> </li>
 <li><strong><a href="/www6vHomeAIGC/2024/02/06/gptDeepSeekR1/" title="(原理) DeepSeek R1">(原理) DeepSeek R1</a></strong> </li>
 <li><strong><a href="/www6vHomeAIGC/2024/02/18/gptReasoningLLM/" title="(原理)Reasoning LLM">(原理)Reasoning LLM</a></strong> </li>
-<li><strong><a href="/www6vHomeAIGC/2024/02/18/gptDeepSeekExplain1/" title="解读 DeepSeek[刘知远]">解读 DeepSeek[刘知远]</a></strong>   </li>
-<li><strong><a href="/www6vHomeAIGC/2024/02/18/gptDeepSeekExplain2/" title="解读 DeepSeek[邱锡鹏]">解读 DeepSeek[邱锡鹏]</a></strong> </li>
+<li><a href="/www6vHomeAIGC/2024/02/18/gptDeepSeekExplain1/" title="解读 DeepSeek[刘知远]">解读 DeepSeek[刘知远]</a>   </li>
+<li><a href="/www6vHomeAIGC/2024/02/18/gptDeepSeekExplain2/" title="解读 DeepSeek[邱锡鹏]">解读 DeepSeek[邱锡鹏]</a> </li>
 <li><strong><a href="/www6vHomeAIGC/2024/04/04/gptReasoningGRPO/" title="(原理)GRPO">(原理)GRPO</a></strong>  </li>
 <li><strong><a href="/www6vHomeAIGC/2024/04/04/gptReasoningPostTraining/" title="(Survey)Reasoning LLM Post-Training">(Survey)Reasoning LLM Post-Training</a></strong> </li>
 <li>实战<ul>
@@ -198,9 +198,13 @@
 </li>
 </ul>
 <h2><span id="llops">LLOps</span><a href="#llops" class="header-anchor">#</a></h2><ul>
+<li>MaaS<ul>
+<li><strong><a href="/www6vHomeAIGC/2024/04/23/gptMaaSMonitor/" title="MaaS 监控">MaaS 监控</a></strong></li>
+<li><strong><a href="/www6vHomeAIGC/2023/09/26/gptLLMOpsPaaS/" title="LLM PaaS">LLM PaaS</a></strong></li>
+</ul>
+</li>
 <li><strong><a href="/www6vHomeAIGC/2023/05/24/gptLLamaFactory/" title="LLama-Factory">LLama-Factory</a></strong></li>
 <li><strong><a href="/www6vHomeAIGC/2023/07/01/gptGPUComputing/" title="显存估算">显存估算</a></strong> </li>
-<li><strong><a href="/www6vHomeAIGC/2023/09/26/gptLLMOpsPaaS/" title="LLM PaaS">LLM PaaS</a></strong>  </li>
 <li><a href="/www6vHomeAIGC/2022/12/28/gptLLMOps/" title="LLMOps">LLMOps</a> </li>
 <li>GPU<ul>
 <li><strong><a href="/www6vHomeAIGC/2024/03/23/gptGPUk8s/" title="(实战)K8s部署GPU">(实战)K8s部署GPU</a></strong> </li>
@@ -666,6 +670,22 @@
       </categories>
       <tags>
         <tag>Diffusion</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>MaaS 监控</title>
+    <url>/www6vHomeAIGC/2024/04/23/gptMaaSMonitor/</url>
+    <content><![CDATA[<p></p>
+<span id="more"></span>
+
+<h1><span id="maas-监控">MaaS 监控</span><a href="#maas-监控" class="header-anchor">#</a></h1><p><a href="https://candied-skunk-1ca.notion.site/MaaS-1d2bfe2110848079b06afffaea367fe9?pvs=4">MaaS 监控</a></p>
+]]></content>
+      <categories>
+        <category>AIGC</category>
+        <category>MaaS</category>
+      </categories>
+      <tags>
+        <tag>MaaS</tag>
       </tags>
   </entry>
   <entry>
@@ -1149,7 +1169,59 @@
     <content><![CDATA[<p></p>
 <span id="more"></span>
 
-<h1><span id="解读-deepseek">解读 DeepSeek</span><a href="#解读-deepseek" class="header-anchor">#</a></h1><p><a href="https://candied-skunk-1ca.notion.site/DeepSeek-196bfe2110848045adbffd9f8c695a5a?pvs=4">解读 DeepSeek[邱锡鹏]</a></p>
+
+
+<img src="/www6vHomeAIGC/2024/02/18/gptDeepSeekExplain2/ubqella3.bmp" class>
+
+<img src="/www6vHomeAIGC/2024/02/18/gptDeepSeekExplain2/gelov7re.bmp" class>
+
+<img src="/www6vHomeAIGC/2024/02/18/gptDeepSeekExplain2/Deepseek-R1%E5%AE%9E%E7%8E%B0%E8%BF%87%E7%A8%8B.png" class>
+
+
+<p>这基本上就是R1的技术路线。我简单列一些<strong>关于DeepSeek R1的思考和启发</strong>：</p>
+<p><strong>1、R1&#x2F;R1-zero的技术路线和社区对o1复现的差异</strong></p>
+<ul>
+<li>此前社区对o1的复现基本都会涉及到蒸馏和搜索。</li>
+<li>R1-Zero没有SFT，没有过程监督，没有搜索，也能训练出类似o1的效果。学术界之前也有很多实验，但在较小的模型上都没有成功。说明只有基模型足够强，Scaling RL才能取得比较好的效果。</li>
+<li>虽然R1强调MCTS没有效果，但是简单的majority vote能大幅提升R1的效果，说明搜索仍然是重要的Scale的范式。</li>
+<li>R1的成功还依赖DeepSeek强大的系统效率和RL调教能力。</li>
+</ul>
+<p><strong>2、策略初始化</strong></p>
+<ul>
+<li>R1-zero是一个比较好的尝试，但是R1还是经过了先SFT（大概几干条）后再进行RL。</li>
+<li>未来后训练的重心会逐步倾向于RL，但是少量训练用于SFT可能还是必须的。</li>
+</ul>
+<p><strong>3、奖励模型</strong></p>
+<ul>
+<li>R1的奖励设计跟普通的后训练没特别大的区别（Qwen2，Tulu3），有ground truth用ground truth做EM，否则用RM。</li>
+<li>RM的（训练数据量，模型大小，OOD问题，选代周期）的相关问题在整个训练的流程中还是比较关键。可能使用当前开源的比较强大的RM可以达到比较好的效果，也有可能基于内部的数据重新进行了偏好标注。</li>
+<li>奖励设计（例如RPM的技巧）可能会在基于少量样本的强化学习微调上仍然起到显著作用。</li>
+</ul>
+<p><strong>4、PRM和MCIS</strong></p>
+<ul>
+<li>DS给了两个PRM和MCTS的“不成功尝试”。但PRM部分说的比较笼统，并且DS的PRM只评估Correctness（与OAI的Lets verify step by step一致）。</li>
+<li>R1给的是一个简单而且可规模化的可行解，这样做不一定是最优的。基于R1的Test-time search也继续优化它的效果。</li>
+<li>PRM总归是一种比较稠密的监督信号，按照传统R1的理论，对OR进行shaping可以使训练更稳定或收敛得更快。</li>
+<li>PRM不应该是一个被完全放弃的东西，可以让模型收敛得更快速或更稳定（Scaling曲线的斜率更大）。</li>
+</ul>
+<p><strong>5、写作能力提升</strong></p>
+<ul>
+<li>o1相比4o在写作等任务上的提升非常小，但R1的创作经常会令人眼前一亮，可能主要是强基模型在Scale RL后涌现的能力，也有人猜测是因为R1的安全对齐做的比较少，没有太约束模型的创作能力。</li>
+</ul>
+<p><strong>6、过度优化问题</strong></p>
+<ul>
+<li>R1经常会使用一些高端词汇，典型的如量子纠缠和熵增熵减（会用在各个领域）。猜测是某种形式的reward hacking导致的。</li>
+<li>R1在一些通用领域没有ground truth的任务上的推理效果还并不理想，强化学习的训练并不能保证泛化。</li>
+</ul>
+<p><strong>7、Test-Time Scaling</strong></p>
+<ul>
+<li>o1出来后大家讨论比较多的是Test-Time Scaling，但重要的还是Training-Time Scaling，包括数据和Training<br>Step。蒸馏见效快，但上限不高，重要的还是高质量致据的缺失，蒸馏数据无法提供训练Scaling。RL是其中的关键，因为它可以保障有足够的数据和足够的训练步骤。</li>
+</ul>
+<p><strong>8、Agentic展望</strong></p>
+<ul>
+<li>R1是目前<strong>唯一同时具有强推理能力和联网搜索的产品</strong>，效果很好，可以调研一些复杂的信息并进行回答。<strong>强推理模型最终的落脚点大概率是Agent</strong>，怎么用强推理模型帮助Agent更好更鲁棒是一个比较重要的问题。</li>
+</ul>
+<h1><span id="参考">参考</span><a href="#参考" class="header-anchor">#</a></h1><p><a href="https://mp.weixin.qq.com/s/LsMOIgQinPZBnsga0imcvA">DeepSeek最强专业拆解来了，清交复教授超硬核解读</a></p>
 ]]></content>
       <categories>
         <category>AIGC</category>
@@ -1165,7 +1237,11 @@
     <content><![CDATA[<p></p>
 <span id="more"></span>
 
-<h1><span id="解读-deepseek">解读 DeepSeek</span><a href="#解读-deepseek" class="header-anchor">#</a></h1><p><a href="https://candied-skunk-1ca.notion.site/DeepSeek-196bfe211084803394aac487c52ad5d3?pvs=4">解读 DeepSeek[刘知远]</a></p>
+
+<img src="/www6vHomeAIGC/2024/02/18/gptDeepSeekExplain1/1ffwdizy.bmp" class>
+
+
+<p><a href="https://mp.weixin.qq.com/s/AdTUawqCe3vQhwJM50lvfQ?poc_token=HNe_qmejZWeCnYf7RHdgbu8e8ckbXP2i1uyxxI4O">硬核解读 DeepSeek：大模型强化学习技术原理与大模型技术发展研判</a></p>
 ]]></content>
       <categories>
         <category>AIGC</category>
