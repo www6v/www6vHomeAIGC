@@ -12,6 +12,7 @@
 
 <ul>
 <li><a href="#deepseek">DeepSeek</a></li>
+<li><a href="#post-training">Post-training</a></li>
 <li><a href="#deepresearch">DeepResearch</a></li>
 <li><a href="#moe">MOE</a></li>
 </ul>
@@ -23,21 +24,28 @@
 
 
 <h1><span id="deepseek">DeepSeek</span><a href="#deepseek" class="header-anchor">#</a></h1><ul>
-<li><strong><a href="/www6vHomeAIGC/2024/02/06/gptDeepSeek/" title="DeepSeek V3">DeepSeek V3</a></strong> </li>
-<li><strong><a href="/www6vHomeAIGC/2024/02/06/gptDeepSeekR1/" title="(原理) DeepSeek R1">(原理) DeepSeek R1</a></strong> </li>
-<li><strong><a href="/www6vHomeAIGC/2024/02/18/gptReasoningLLM/" title="(原理)Reasoning LLM">(原理)Reasoning LLM</a></strong> </li>
+<li><p><strong><a href="/www6vHomeAIGC/2024/02/06/gptDeepSeek/" title="DeepSeek V3">DeepSeek V3</a></strong> </p>
+</li>
+<li><p><strong><a href="/www6vHomeAIGC/2024/02/06/gptDeepSeekR1/" title="(原理) DeepSeek R1">(原理) DeepSeek R1</a></strong> </p>
+</li>
+<li><p><strong><a href="/www6vHomeAIGC/2024/02/18/gptReasoningLLM/" title="(原理)Reasoning LLM">(原理)Reasoning LLM</a></strong> </p>
+</li>
 <li><a href="/www6vHomeAIGC/2024/02/18/gptDeepSeekExplain1/" title="解读 DeepSeek[刘知远]">解读 DeepSeek[刘知远]</a>   </li>
 <li><a href="/www6vHomeAIGC/2024/02/18/gptDeepSeekExplain2/" title="解读 DeepSeek[邱锡鹏]">解读 DeepSeek[邱锡鹏]</a> </li>
-<li><strong><a href="/www6vHomeAIGC/2024/04/04/gptReasoningGRPO/" title="(原理)GRPO">(原理)GRPO</a></strong>  </li>
-<li><strong><a href="/www6vHomeAIGC/2024/04/04/gptReasoningPostTraining/" title="(Survey)Reasoning LLM Post-Training">(Survey)Reasoning LLM Post-Training</a></strong> </li>
-<li>实战<ul>
+<li><p><strong><a href="/www6vHomeAIGC/2024/04/04/gptReasoningGRPO/" title="(原理)GRPO">(原理)GRPO</a></strong>  </p>
+</li>
+<li><p>实战</p>
+<ul>
 <li><strong><a href="/www6vHomeAIGC/2024/02/23/gptDeepseekSFT/" title="(实战)Deepseek R1 SFT">(实战)Deepseek R1 SFT</a></strong>   </li>
 <li><strong><a href="/www6vHomeAIGC/2024/02/25/gptDeepseekDistill/" title="(实战)Deepseek 蒸馏">(实战)Deepseek 蒸馏</a></strong> </li>
 <li><strong><a href="/www6vHomeAIGC/2024/02/28/gptDeepseekGRPO/" title="(实战)GRPO">(实战)GRPO</a></strong></li>
 </ul>
 </li>
 </ul>
-<h1><span id="deepresearch">DeepResearch</span><a href="#deepresearch" class="header-anchor">#</a></h1><p><strong><a href="/www6vHomeAIGC/2024/03/26/gptReasonDeepResearch/" title="(原理&amp;实战)Deep Research">(原理&amp;实战)Deep Research</a></strong><br><strong><a href="/www6vHomeAIGC/2024/04/16/gptReasonDeepResearchJina/" title="(原理)Deep Research(Jina)">(原理)Deep Research(Jina)</a></strong> </p>
+<h1><span id="post-training">Post-training</span><a href="#post-training" class="header-anchor">#</a></h1><ul>
+<li><strong><a href="/www6vHomeAIGC/2024/04/04/gptReasoningPostTraining/" title="(Survey)Reasoning LLM Post-Training">(Survey)Reasoning LLM Post-Training</a></strong></li>
+</ul>
+<h1><span id="deepresearch">DeepResearch</span><a href="#deepresearch" class="header-anchor">#</a></h1><p><strong><a href="/www6vHomeAIGC/2024/03/26/gptReasonDeepResearch/" title="(原理&amp;实战)Deep Research">(原理&amp;实战)Deep Research</a></strong><br><strong><a href="/www6vHomeAIGC/2024/04/16/gptReasonDeepResearchJina/" title="(原理|实现)Deep Research(Jina)">(原理|实现)Deep Research(Jina)</a></strong> </p>
 <h1><span id="moe">MOE</span><a href="#moe" class="header-anchor">#</a></h1><ul>
 <li><strong><a href="/www6vHomeAIGC/2024/03/08/gptModelMOE/" title="(原理)Visual  MOE">(原理)Visual  MOE</a></strong> </li>
 <li><a href="/www6vHomeAIGC/2025/05/03/gptModelMOECode/" title="(代码)MOE">(代码)MOE</a></li>
@@ -710,13 +718,13 @@
       </tags>
   </entry>
   <entry>
-    <title>(原理)Deep Research(Jina)</title>
+    <title>(原理|实现)Deep Research(Jina)</title>
     <url>/www6vHomeAIGC/2024/04/16/gptReasonDeepResearchJina/</url>
     <content><![CDATA[<p></p>
 <span id="more"></span>
 
 
-<h1><span id="deep-researchjina">Deep Research(Jina)</span><a href="#deep-researchjina" class="header-anchor">#</a></h1><p><a href="https://candied-skunk-1ca.notion.site/Deep-Research-Jina-1d7bfe211084803d8405c0e74cdf395d?pvs=4">(原理)Deep Research(Jina)</a></p>
+<h1><span id="deep-researchjina">Deep Research(Jina)</span><a href="#deep-researchjina" class="header-anchor">#</a></h1><p><a href="https://candied-skunk-1ca.notion.site/Deep-Research-Jina-1d7bfe211084803d8405c0e74cdf395d?pvs=4">(原理|实现)Deep Research(Jina)</a></p>
 ]]></content>
       <categories>
         <category>AIGC</category>
@@ -1737,12 +1745,12 @@
       </tags>
   </entry>
   <entry>
-    <title>(原理)Medusa</title>
+    <title>(原理|实现)Medusa</title>
     <url>/www6vHomeAIGC/2023/11/12/gptInferMedusa/</url>
     <content><![CDATA[<p></p>
 <span id="more"></span>
 
-<h1><span id="medusa">Medusa</span><a href="#medusa" class="header-anchor">#</a></h1><p><a href="https://candied-skunk-1ca.notion.site/Medusa-31e27ea0a51d4c818c804a654a3c839a?pvs=4">Medusa</a></p>
+<h1><span id="medusa">Medusa</span><a href="#medusa" class="header-anchor">#</a></h1><p><a href="https://candied-skunk-1ca.notion.site/Medusa-31e27ea0a51d4c818c804a654a3c839a?pvs=4">(原理|实现)Medusa</a></p>
 ]]></content>
       <categories>
         <category>AIGC</category>
@@ -1785,7 +1793,7 @@
       </tags>
   </entry>
   <entry>
-    <title>(原理)Mooncake</title>
+    <title>(原理|实现)Mooncake</title>
     <url>/www6vHomeAIGC/2023/10/19/gptInferMooncake/</url>
     <content><![CDATA[<p></p>
 <span id="more"></span>
@@ -1851,12 +1859,12 @@
       </tags>
   </entry>
   <entry>
-    <title>(原理|实战)GPTQ</title>
+    <title>(原理|实战|实现)GPTQ</title>
     <url>/www6vHomeAIGC/2023/10/12/gptQuantizationGPTQ/</url>
     <content><![CDATA[<p></p>
 <span id="more"></span>
 
-<h1><span id="gptq">GPTQ</span><a href="#gptq" class="header-anchor">#</a></h1><p><a href="https://candied-skunk-1ca.notion.site/GPTQ-11dbfe21108480cb8510ed7d85a64371?pvs=4">(原理|实战)GPTQ</a></p>
+<h1><span id="gptq">GPTQ</span><a href="#gptq" class="header-anchor">#</a></h1><p><a href="https://candied-skunk-1ca.notion.site/GPTQ-11dbfe21108480cb8510ed7d85a64371?pvs=4">(原理|实战|实现)GPTQ</a></p>
 ]]></content>
       <categories>
         <category>AIGC</category>
