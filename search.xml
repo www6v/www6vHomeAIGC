@@ -102,7 +102,7 @@
 <li>SpeculativeDecoding<ul>
 <li><strong><a href="/www6vHomeAIGC/2023/10/06/gptInferSpeculativeDecoding/" title="Speculative Decoding">Speculative Decoding</a></strong> </li>
 <li><strong><a href="/www6vHomeAIGC/2023/10/21/gptInferSpeculativeDecodingSurvey/" title="(Survey)Speculative Decoding">(Survey)Speculative Decoding</a></strong> </li>
-<li><strong><a href="/www6vHomeAIGC/2023/11/12/gptInferMedusa/" title="(原理)Medusa">(原理)Medusa</a></strong>   </li>
+<li><strong><a href="/www6vHomeAIGC/2023/11/12/gptInferMedusa/" title="(原理|实现)Medusa">(原理|实现)Medusa</a></strong>   </li>
 <li><strong><a href="/www6vHomeAIGC/2023/11/12/gptInferEagle/" title="EAGLE">EAGLE</a></strong> </li>
 <li><strong><a href="/www6vHomeAIGC/2023/11/12/gptInferSpecInfer/" title="SpecInfer">SpecInfer</a></strong>   </li>
 <li><strong><a href="/www6vHomeAIGC/2023/11/18/gptInferSpeculativeDecodingvLLM/" title="(vLLM)Speculative Decoding">(vLLM)Speculative Decoding</a></strong></li>
@@ -131,7 +131,7 @@
 </li>
 <li>PD 分离<ul>
 <li><strong><a href="/www6vHomeAIGC/2023/10/05/gptInferDistServe/" title="DistServe">DistServe</a></strong> </li>
-<li><strong><a href="/www6vHomeAIGC/2023/10/19/gptInferMooncake/" title="(原理)Mooncake">(原理)Mooncake</a></strong>  </li>
+<li><strong><a href="/www6vHomeAIGC/2023/10/19/gptInferMooncake/" title="(原理|实现)Mooncake">(原理|实现)Mooncake</a></strong>  </li>
 <li><strong><a href="/www6vHomeAIGC/2023/11/30/gptInferLlumnix/" title="(原理)Llumnix">(原理)Llumnix</a></strong></li>
 </ul>
 </li>
@@ -145,7 +145,7 @@
 <li>PTQ<ul>
 <li><strong><a href="/www6vHomeAIGC/2023/03/26/gptQuantizationWeight/" title="(原理)PTQ-Weight Only">(原理)PTQ-Weight Only</a></strong> </li>
 <li>Weight Only <ul>
-<li><strong><a href="/www6vHomeAIGC/2023/10/12/gptQuantizationGPTQ/" title="(原理|实战)GPTQ">(原理|实战)GPTQ</a></strong></li>
+<li><strong><a href="/www6vHomeAIGC/2023/10/12/gptQuantizationGPTQ/" title="(原理|实战|实现)GPTQ">(原理|实战|实现)GPTQ</a></strong></li>
 <li><strong><a href="/www6vHomeAIGC/2023/10/12/gptQuantizationAWQ/" title="(原理|实战)AWQ">(原理|实战)AWQ</a></strong></li>
 </ul>
 </li>
