@@ -80,15 +80,15 @@
 </li>
 <li><p><strong><a href="/www6vHomeAIGC/2023/06/12/gptInfervLLMPractice/" title="(实战) vLLM">(实战) vLLM</a></strong> </p>
 </li>
-<li><p><strong><a href="/www6vHomeAIGC/2023/12/02/gptInfervLLMCode/" title="(源码)vLLM">(源码)vLLM</a></strong>  </p>
+<li><p><strong><a href="/www6vHomeAIGC/2023/12/02/gptInfervLLMCode/" title="(实现)vLLM">(实现)vLLM</a></strong>  </p>
 </li>
-<li><p><strong><a href="/www6vHomeAIGC/2024/05/14/gptInfervLLMDist/" title="vLLM 分布式">vLLM 分布式</a></strong> </p>
+<li><p><strong><a href="/www6vHomeAIGC/2024/05/14/gptInfervLLMDist/" title="(实现)vLLM 分布式">(实现)vLLM 分布式</a></strong> </p>
 </li>
-<li><p><strong><a href="/www6vHomeAIGC/2024/05/14/gptInfervLLMPD/" title="vLLM  PD分离">vLLM  PD分离</a></strong> </p>
+<li><p><strong><a href="/www6vHomeAIGC/2024/05/14/gptInfervLLMPD/" title="(实现)vLLM  PD分离">(实现)vLLM  PD分离</a></strong> </p>
 </li>
-<li><p><strong><a href="/www6vHomeAIGC/2024/05/14/gptInfervLLMSpeculativeDecode/" title="vLLM  投机解码">vLLM  投机解码</a></strong> </p>
+<li><p><strong><a href="/www6vHomeAIGC/2024/05/14/gptInfervLLMSpeculativeDecode/" title="(实现)vLLM  投机解码">(实现)vLLM  投机解码</a></strong> </p>
 </li>
-<li><p><strong><a href="/www6vHomeAIGC/2025/05/14/gptInfervLLMPrefixCaching/" title="vLLM  Prefix Caching">vLLM  Prefix Caching</a></strong></p>
+<li><p><strong><a href="/www6vHomeAIGC/2025/05/14/gptInfervLLMPrefixCaching/" title="(实现)vLLM  Prefix Caching">(实现)vLLM  Prefix Caching</a></strong></p>
 </li>
 </ul>
 </li>
@@ -343,7 +343,7 @@
 </li>
 </ul>
 <h2><span id="垂类模型">垂类模型</span><a href="#垂类模型" class="header-anchor">#</a></h2><ul>
-<li><strong><a href="/www6vHomeAIGC/2023/01/04/gptDomain/" title="垂类大模型">垂类大模型</a></strong> </li>
+<li><a href="/www6vHomeAIGC/2023/01/04/gptDomain/" title="垂类大模型">垂类大模型</a> </li>
 <li><a href="/www6vHomeAIGC/2022/11/24/gptDomainFinance/" title="金融大模型">金融大模型</a>   </li>
 <li><a href="/www6vHomeAIGC/2023/02/07/gptDomainMed/" title="医疗大模型">医疗大模型</a>   </li>
 <li><a href="/www6vHomeAIGC/2024/02/07/gptDomainLaw/" title="法律大模型">法律大模型</a></li>
@@ -402,12 +402,12 @@
 <li><p>Vision Encoder</p>
 <ul>
 <li>multimodal learning<ul>
-<li><a href="/www6vHomeAIGC/2023/03/01/gptMultimodalCLIP/" title="(原理)CLIP">(原理)CLIP</a>  </li>
-<li><a href="/www6vHomeAIGC/2023/06/25/gptMultimodalCLIPPractice/" title="(实战)CLIP">(实战)CLIP</a></li>
+<li><a href="/www6vHomeAIGC/2023/03/01/gptMultimodalCLIP/" title="(原理)CLIP">(原理)CLIP</a> * </li>
+<li><a href="/www6vHomeAIGC/2023/06/25/gptMultimodalCLIPPractice/" title="(实战)CLIP">(实战)CLIP</a> *</li>
 </ul>
 </li>
 <li>Supervised Learning<ul>
-<li><a href="/www6vHomeAIGC/2023/03/01/gptMultimodalVit/" title="(原理|实战)ViT, ViLT">(原理|实战)ViT, ViLT</a></li>
+<li><a href="/www6vHomeAIGC/2023/03/01/gptMultimodalVit/" title="(原理|实战)ViT, ViLT">(原理|实战)ViT, ViLT</a> *</li>
 </ul>
 </li>
 <li>self-distillation<ul>
@@ -446,7 +446,7 @@
 <li>Spatial Control<ul>
 <li>Dense control<ul>
 <li>single<ul>
-<li><strong><a href="/www6vHomeAIGC/2023/08/22/gptDiffusionControlNet/" title="(原理|实战)ControlNet">(原理|实战)ControlNet</a></strong></li>
+<li><a href="/www6vHomeAIGC/2023/08/22/gptDiffusionControlNet/" title="(原理|实战)ControlNet">(原理|实战)ControlNet</a> *</li>
 </ul>
 </li>
 <li>multi <ul>
@@ -465,7 +465,7 @@
 <li>Style control<ul>
 <li>subject-driven<ul>
 <li>concept customization [fine-tuning]<ul>
-<li><a href="/www6vHomeAIGC/2023/07/06/gptDiffusionFineTuning/" title="(work|实战) fine-tuning">(work|实战) fine-tuning</a>   </li>
+<li><a href="/www6vHomeAIGC/2023/07/06/gptDiffusionFineTuning/" title="(work|实战) fine-tuning">(work|实战) fine-tuning</a>  * </li>
 <li><a href="/www6vHomeAIGC/2024/07/17/gptDiffusionDreamBooth/" title="(原理|实战)DreamBooth">(原理|实战)DreamBooth</a></li>
 </ul>
 </li>
@@ -2325,8 +2325,38 @@
 <span id="more"></span>
 
 
+<h1><span id="论文controlnet">论文[ControlNet]</span><a href="#论文controlnet" class="header-anchor">#</a></h1><ul>
+<li>论文地址<br><a href="https://arxiv.org/abs/2302.05543">Adding Conditional Control to Text-to-Image Diffusion Models</a></li>
+<li>开源地址<br><a href="https://github.com/lllyasviel/ControlNet">ControlNet</a> git</li>
+</ul>
+<h1><span id="controlnet10">ControlNet[10]</span><a href="#controlnet10" class="header-anchor">#</a></h1><p>ControlNet is a type of model for controlling image diffusion models by<br>conditioning the model with an additional input image. There are many<br>types of conditioning inputs (canny edge, user sketching, human pose,<br>depth, and more) you can use to control a diffusion model. This is<br>hugely useful because it affords you greater control over image<br>generation, making it easier to generate specific images without<br>experimenting with different text prompts or denoising values as much.</p>
+<p>ControlNet是一种模型，用于通过使用额外的输入图像调节模型来控制图像扩散模型。您可以使用<strong>多种类型的调节输入（精巧的边缘、用户草图、人体姿势、深度等）</strong>来控制扩散模型。这非常有用，因为它为您提供了对图像生成的更大控制，从而可以更轻松地生成特定图像，而无需尝试使用不同的文本提示或对值进行过多的去噪。</p>
+<h1><span id="method-23">Method [2][3]</span><a href="#method-23" class="header-anchor">#</a></h1><p>ControlNet 采用了一种类似微调的方法，如下图，在原模型的基础上，增加一个<strong>可训练副本</strong>，可训练副本的输入是原输入x加上条件c，然后把两个模型的输出相加，可训练副本的<strong>输入输出都经过零卷积(zero convolution)处理</strong>，用于在刚开始训练时<strong>保持模型的稳定性</strong>。</p>
+<img src="/www6vHomeAIGC/2023/08/22/gptDiffusionControlNet/1.png" class>
 
-<h1><span id="controlnet">ControlNet</span><a href="#controlnet" class="header-anchor">#</a></h1><p>  <a href="https://candied-skunk-1ca.notion.site/ControlNet-76c3d54a18424e20a25a3e4a8a71b8e3?pvs=4">(原理|实战)ControlNet</a></p>
+<p>具体的针对 Stable Diffusion 的 ControlNet 结构如下图，只复制了 UNet 的 <strong>Encoder blocks 和 Middle block (结构+权重)<strong>，控制条件图c先经过几层卷积，再</strong>与原UNet的输入zt相加作为输入</strong>，<strong>ControlNet 每个 block 的输出再 Add 到原 UNet 的 Decoder block 输入</strong>，实际实现中，ControlNet 的输出还可以乘上一个scale，用于控制影响程度。注意这里 ControlNet 同样输入了和原 UNet 一样的 Prompt&amp;Time</p>
+<img src="/www6vHomeAIGC/2023/08/22/gptDiffusionControlNet/2.png" class>
+
+<p>完整的 Diffusion + ControlNet 流程如下：</p>
+<img src="/www6vHomeAIGC/2023/08/22/gptDiffusionControlNet/3.bmp" class>
+
+<h1><span id="conditional-inputs2">Conditional Inputs[2]</span><a href="#conditional-inputs2" class="header-anchor">#</a></h1><img src="/www6vHomeAIGC/2023/08/22/gptDiffusionControlNet/4.png" class>
+
+<h1><span id="comparison-with-t2i-adapter2">Comparison with T2I-Adapter[2]</span><a href="#comparison-with-t2i-adapter2" class="header-anchor">#</a></h1><img src="/www6vHomeAIGC/2023/08/22/gptDiffusionControlNet/5.png" class>
+
+<h3><span id="t2i-adapter-vs-controlnet">T2I-Adapter  vs. Controlnet</span><a href="#t2i-adapter-vs-controlnet" class="header-anchor">#</a></h3><p>Complexity 更高【Conditional Input可以叠加到一起】</p>
+<p>Flexibility 更高 【每种输入有一种Adaptor，多种Adaptor可以配合使用】</p>
+<h1><span id="参考">参考</span><a href="#参考" class="header-anchor">#</a></h1><ol>
+<li><a href="https://www.bilibili.com/video/BV1fs4y177nu/">【AI论文精读】【图像生成】全网最详细controlnet论文逐段精读</a> V</li>
+<li><a href="https://www.bilibili.com/video/BV13x4y1w7k1/">【2023 ControlNet】斯坦福最新的可控文本生成图像扩散模型</a> V</li>
+<li><a href="https://robot9.me/controlnet-diffusers/">ControlNet 算法原理与代码解释</a> ***  优化，代码</li>
+</ol>
+<p>1xx. <a href="https://zhuanlan.zhihu.com/p/660924126">深入浅出完整解析ControlNet核心基础知识</a> ***</p>
+<p><a href="https://zhuanlan.zhihu.com/p/617017935">不得不读 | 深入浅出ControlNet，一种基于生成扩散模型Stable Diffusion、可控生成的AIGC绘画生成算法！</a></p>
+<h3><span id="实践">实践</span><a href="#实践" class="header-anchor">#</a></h3><ol start="10">
+<li><a href="https://huggingface.co/docs/diffusers/main/en/using-diffusers/controlnet">ControlNet</a>  Hugggingface</li>
+<li><a href="https://www.bilibili.com/video/BV1Go4y1M7cK?p=2">control net</a> V</li>
+</ol>
 ]]></content>
       <categories>
         <category>AIGC</category>
@@ -6253,7 +6283,113 @@
     <content><![CDATA[<p></p>
 <span id="more"></span>
 
-<h1><span id="垂类大模型">垂类大模型</span><a href="#垂类大模型" class="header-anchor">#</a></h1><p><a href="https://candied-skunk-1ca.notion.site/05ad83c78a264b4f90310923580070a6?pvs=4">垂类大模型</a></p>
+
+<h1><span id="domain-specialization-0">Domain Specialization [0]</span><a href="#domain-specialization-0" class="header-anchor">#</a></h1><img src="/www6vHomeAIGC/2023/01/04/gptDomain/domain.jpg" class>
+
+<p>LLM（Large Language Models）的领域专业化可以理解为将广泛训练的通用LLM调整到特定领域内以实现最佳操作。为了应对第1节中提到的领域专业化的三个挑战，LLM领域专业化的方法可以分为三类：外部增强、提示设计和模型微调。这些类别对应了对LLM的不同访问级别的假设，即无访问（黑盒）、部分访问（灰盒）和完全访问（白盒）。黑盒假设通常表示我们只能访问模型API（例如ChatGPT），除了生成的输出之外不知道任何信息；灰盒假设表示我们有限的信息（例如GPT-3 API中生成的标记的概率），这些信息可以指导我们设计和微调一个合适的提示，以更好地引出领域知识；白盒假设表示我们完全可以访问LLM（例如LLaMA及其变体），包括参数设置、训练数据和模型架构。</p>
+<p>除了基于LLM可访问性的分类法之外，根据使用的训练策略，可以将LLM领域专业化方法分类为以下几种：使用领域特定数据对现有模型进行微调，从头开始为特定领域训练模型，或者使用混合训练策略。另一个分类法可以基于干预级别：预训练干预涉及修改预训练过程以鼓励领域特定知识，微调干预涉及在微调阶段进行调整，推理时干预涉及修改模型在实际应用中的行为以生成更多领域特定的输出。此外，也可以基于评估和反馈机制来建立分类法：固定评估设置了一个恒定的基准，动态评估涉及使用不断变化的基准进行持续性能评估，基于用户反馈的评估使用直接用户输入作为调整模型响应的信号。</p>
+<p>在这份调查中，我们根据LLM的可访问性对现有方法进行分类，并在图2中概述了每种方法。具体来说，1）外部增强（黑盒）不一定需要访问LLM的内部参数空间，使得对资源有限的用户（如计算资源、领域特定数据）最易于访问。如图2（b）所示，通过使用外部资源或工具，将领域特定知识合并到输入提示、生成的输出或两者中，有效地调整LLM的性能而不修改其内部结构。2）提示设计（灰盒）通过访问LLM的梯度或损失值设计各种类型的提示，从而对模型的行为进行更精细的控制。3）模型微调（白盒）需要最多的访问和资源，因为它涉及更新LLM的参数，直接将领域特定知识纳入模型中（图2（d））。</p>
+<p>不同类别方法之间的关系：<br>• 不同的专业化水平：每种方法在不同的专业化水平上操作（即黑盒、灰盒和白盒）。使用外部知识进行增强提供了领域特定信息的集中注入，而提示工程则在输入层面上塑造模型的推理过程。模型微调修改了LLM的内部参数，导致模型行为发生更深刻的变化。</p>
+<ul>
+<li>权衡：这些方法在计算成本、实施便利性和泛化能力方面存在不同的权衡。使用外部信息进行增强和设计特定任务的指令通常比LLM的知识更新计算成本低，但可能无法达到相同水平的性能改进。模型微调和神经适配器可以提供更实质性的性能提升，但在实施上可能更具挑战性，并且如果出现过拟合，可能会导致泛化能力降低。</li>
+<li>互补性：这三种方法可以独立使用或组合使用，以在领域特定任务上实现更好的性能。例如，可以将外部知识与经过微调的LLM结合起来，充分利用专业化知识和优化的参数。同样，精心设计的提示可以与神经适配器一起使用，引导模型的输出同时利用新学习的领域特定知识。</li>
+</ul>
+<h3><span id="总结-chatmind">总结 [chatmind]</span><a href="#总结-chatmind" class="header-anchor">#</a></h3><ul>
+<li>LLM（Large Language Models）领域专业化<ul>
+<li>领域专业化的定义<ul>
+<li>将广泛训练的通用LLM调整到特定领域内以实现最佳操作</li>
+</ul>
+</li>
+<li>领域专业化的挑战<ul>
+<li>挑战一：领域专业化的需求</li>
+<li>挑战二：领域专业化的数据稀缺性</li>
+<li>挑战三：领域专业化的知识缺乏</li>
+</ul>
+</li>
+<li>LLM领域专业化的方法<ul>
+<li>方法一：<strong>外部增强</strong> 黑盒<ul>
+<li>利用外部资源来增强LLM的领域专业化</li>
+<li>例如，使用特定领域的数据集进行预训练</li>
+</ul>
+</li>
+<li>方法二：<strong>提示设计</strong> 灰盒<ul>
+<li>设计适当的提示来引导LLM生成符合特定领域需求的内容</li>
+<li>根据领域知识和需求，精心设计提示</li>
+</ul>
+</li>
+<li>方法三：<strong>模型微调</strong> 白盒<ul>
+<li>对预训练的LLM进行微调，使其更适应特定领域的任务和数据</li>
+<li>通过在特定领域的数据集上进行迭代训练，优化模型性能</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>LLM访问级别的假设<ul>
+<li><strong>无访问（黑盒）</strong>假设<ul>
+<li>只能访问模型API，无法获取其他信息</li>
+<li>仅通过生成的输出来进行操作</li>
+</ul>
+</li>
+<li><strong>部分访问（灰盒）</strong>假设<ul>
+<li>拥有有限的信息，如生成的标记概率</li>
+<li>可根据这些信息设计提示来引导LLM生成符合领域知识的内容</li>
+</ul>
+</li>
+<li><strong>完全访问（白盒）</strong>假设<ul>
+<li>可以完全访问LLM，获取其所有信息</li>
+<li>可以根据需要进行修改和优化</li>
+</ul>
+</li>
+<li>不同访问级别的假设对应不同的方法和操作方式</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h1><span id="领域微调模型-1">领域微调模型 [1]</span><a href="#领域微调模型-1" class="header-anchor">#</a></h1><ul>
+<li>注入领域知识，分成三种：<ul>
+<li>继续预训练注入</li>
+<li>微调注入</li>
+<li>外挂注入</li>
+</ul>
+</li>
+</ul>
+<aside>
+💡
+
+<ul>
+<li>继续预训练注入</li>
+<li>微调注入</li>
+<li>外挂注入 → RAG</li></ul></aside>
+
+<h1><span id="关注点-2">关注点 [2]</span><a href="#关注点-2" class="header-anchor">#</a></h1><ul>
+<li><strong>领域相关数据</strong> 是Continue PreTrain的关键</li>
+<li><strong>混合通用数据</strong>以<strong>缓解模型遗忘通用能力</strong></li>
+<li><strong>领域模型Continue PreTrain</strong>时可以同步加入<strong>SFT数据</strong>，即MIP，Multi-Task Instruction PreTraining</li>
+<li>仅用SFT做领域模型时，<strong>资源有限</strong>就用在<strong>Chat模型基础上训练</strong>，<strong>资源充足</strong>就在<strong>Base模型上训练</strong>。（<strong>资源&#x3D;数据+显卡</strong>）<br>+在Chat模型上进行SFT时，请一定<strong>遵循Chat模型原有的系统指令&amp;数据输入格式</strong>。</li>
+<li>领域评测集 时 必要内容，建议有两份，一份<strong>选择题形式自动评测</strong>、一份<strong>开放形式人工评测</strong>。</li>
+</ul>
+<aside>
+💡
+
+<ul>
+<li><strong>领域相关数据</strong> 是Continue PreTrain的关键</li>
+<li><strong>混合通用数据</strong>以<strong>缓解模型遗忘通用能力</strong></li>
+<li>仅用SFT做领域模型时，<strong>资源有限</strong>就用在<strong>Chat模型基础上训练</strong>，<strong>资源充足</strong>就在<strong>Base模型上训练</strong>。（<strong>资源&#x3D;数据+显卡</strong>）</li></ul></aside>
+
+<h1><span id="参考">参考</span><a href="#参考" class="header-anchor">#</a></h1><ol start="0">
+<li>《Domain Specialization as the Key to Make Large Language Models Disruptive: A Comprehensive Survey》<br><a href="https://zhuanlan.zhihu.com/p/635480023">目前有哪些方式训练一个领域的大语言模型？ Beyond One-Model-Fits-All A Survey of Domain Specialization LLM</a></li>
+<li><a href="https://mp.weixin.qq.com/s?__biz=MzAxMjc3MjkyMg==&mid=2648401405&idx=1&sn=59baf4a22d9a9abeb42599ac91e11a79">领域微调大模型入局的自我和解：领域微调大模型若一定要做，则务必想的若干个前提条件</a></li>
+<li><a href="https://zhuanlan.zhihu.com/p/648798461">领域大模型-训练Trick&amp;落地思考</a></li>
+</ol>
+<p>1xx. <a href="https://zhuanlan.zhihu.com/p/642611747">垂直领域大模型的一些思考及开源模型汇总</a><br>1xx. <a href="https://blog.csdn.net/v_JULY_v/article/details/131550529?spm=1001.2014.3001.5502">医疗金融法律大模型：从ChatDoctor到BloombergGPT&#x2F;FinGPT&#x2F;FinBERT、ChatLaw&#x2F;LawGPT_zh</a></p>
+<p>1xx. <a href="/www6vHomeAIGC/2023/01/04/gptLeaderBoard/" title="大模型 排行榜">大模型 排行榜</a> self<br>1xx. <a href="https://github.com/www6v/Awesome-Domain-LLM">Awesome-Domain-LLM</a>  git 全</p>
+<p>1xx. <a href="https://mp.weixin.qq.com/s?__biz=MzAxMjc3MjkyMg==&mid=2648400666&idx=1&sn=bc47e8c4eca6fc4baaded42fa3c6bd77">再谈垂直领域大模型及今日前沿速递：金融领域FinBERT、BloombergGPT以及法律领域微调模型LawGPT_zh</a></p>
+<p>1xx. <a href="https://mp.weixin.qq.com/s?__biz=MzAxMjc3MjkyMg==&mid=2648403459&idx=2&sn=0219fc098c208e36cd32940e71089fd2">层出不穷的垂域微调大模型非最全汇总：12大领域、57个领域微调模型概述及对垂直行业问答的一些讨论</a>  领域模型集合   <a href="https://github.com/www6v/Awesome-Domain-LLM">Awesome-Domain-LLM</a></p>
+<p>1xx. <a href="https://mp.weixin.qq.com/s/jgyIOOzRWAgilcW4HfufNQ">行业大模型落地的一些有趣调研总结：兼看大模型RAG问答四大技术综述</a>   腾讯 行业大模型调研报告 ***</p>
+<p><a href="https://mp.weixin.qq.com/s?__biz=Mzg5MTU1NTE1OQ==&mid=2247486493&idx=1&sn=d58830d103a21e141a20d308f2ad3a83&scene=21&poc_token=HN4g_majiAOf9CdUYddoSQOTqK57WTL_28FBSVIE">大模型时代-行业落地的再思考</a> </p>
+<p><a href="https://mp.weixin.qq.com/s?__biz=Mzg5MTU1NTE1OQ==&mid=2247486425&idx=1&sn=3838157c39962946702c85faea61ccc0&scene=21#wechat_redirect">垂直领域大模型的一些思考及开源模型汇总</a> </p>
+<p><a href="https://zhuanlan.zhihu.com/p/652645925">垂直领域大模型的思考</a></p>
 ]]></content>
       <categories>
         <category>AIGC</category>
