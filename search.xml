@@ -12,7 +12,6 @@
 
 <ul>
 <li><a href="#deepseek">DeepSeek</a></li>
-<li><a href="#post-training">Post-training</a></li>
 <li><a href="#deepresearch">DeepResearch</a></li>
 <li><a href="#moe">MOE</a></li>
 </ul>
@@ -24,26 +23,31 @@
 
 
 <h1><span id="deepseek">DeepSeek</span><a href="#deepseek" class="header-anchor">#</a></h1><ul>
-<li><p><strong><a href="/www6vHomeAIGC/2024/02/06/gptDeepSeek/" title="DeepSeek V3">DeepSeek V3</a></strong> </p>
-</li>
-<li><p><strong><a href="/www6vHomeAIGC/2024/02/06/gptDeepSeekR1/" title="(原理) DeepSeek R1">(原理) DeepSeek R1</a></strong> </p>
-</li>
-<li><p><strong><a href="/www6vHomeAIGC/2024/02/18/gptReasoningLLM/" title="(原理)Reasoning LLM">(原理)Reasoning LLM</a></strong> </p>
-</li>
-<li><a href="/www6vHomeAIGC/2024/02/18/gptDeepSeekExplain1/" title="解读 DeepSeek[刘知远]">解读 DeepSeek[刘知远]</a>   </li>
-<li><a href="/www6vHomeAIGC/2024/02/18/gptDeepSeekExplain2/" title="解读 DeepSeek[邱锡鹏]">解读 DeepSeek[邱锡鹏]</a> </li>
-<li><p><strong><a href="/www6vHomeAIGC/2024/04/04/gptReasoningGRPO/" title="(原理)GRPO">(原理)GRPO</a></strong>  </p>
-</li>
-<li><p>实战</p>
+<li><p>V3</p>
 <ul>
-<li><strong><a href="/www6vHomeAIGC/2024/02/23/gptDeepseekSFT/" title="(实战)Deepseek R1 SFT">(实战)Deepseek R1 SFT</a></strong>   </li>
-<li><strong><a href="/www6vHomeAIGC/2024/02/25/gptDeepseekDistill/" title="(实战)Deepseek 蒸馏">(实战)Deepseek 蒸馏</a></strong> </li>
+<li><strong><a href="/www6vHomeAIGC/2024/02/06/gptDeepSeek/" title="DeepSeek V3">DeepSeek V3</a></strong></li>
+</ul>
+</li>
+<li><p>R1-zero</p>
+<ul>
+<li><strong><a href="/www6vHomeAIGC/2024/04/04/gptReasoningGRPO/" title="(原理)GRPO">(原理)GRPO</a></strong>  </li>
 <li><strong><a href="/www6vHomeAIGC/2024/02/28/gptDeepseekGRPO/" title="(实战)GRPO">(实战)GRPO</a></strong></li>
 </ul>
 </li>
+<li><p>R1</p>
+<ul>
+<li><strong><a href="/www6vHomeAIGC/2024/02/06/gptDeepSeekR1/" title="(原理) DeepSeek R1">(原理) DeepSeek R1</a></strong> </li>
+<li><strong><a href="/www6vHomeAIGC/2024/02/18/gptReasoningLLM/" title="(原理)Reasoning LLM">(原理)Reasoning LLM</a></strong> </li>
+<li><a href="/www6vHomeAIGC/2024/02/18/gptDeepSeekExplain1/" title="解读 DeepSeek[刘知远]">解读 DeepSeek[刘知远]</a>   </li>
+<li><a href="/www6vHomeAIGC/2024/02/18/gptDeepSeekExplain2/" title="解读 DeepSeek[邱锡鹏]">解读 DeepSeek[邱锡鹏]</a> </li>
+<li>Post-training<ul>
+<li><strong><a href="/www6vHomeAIGC/2024/04/04/gptReasoningPostTraining/" title="(Survey)Reasoning LLM Post-Training">(Survey)Reasoning LLM Post-Training</a></strong> </li>
+<li><strong><a href="/www6vHomeAIGC/2024/02/23/gptDeepseekSFT/" title="(实战)Deepseek R1 SFT">(实战)Deepseek R1 SFT</a></strong>   </li>
+<li><strong><a href="/www6vHomeAIGC/2024/02/25/gptDeepseekDistill/" title="(实战)Deepseek 蒸馏">(实战)Deepseek 蒸馏</a></strong></li>
 </ul>
-<h1><span id="post-training">Post-training</span><a href="#post-training" class="header-anchor">#</a></h1><ul>
-<li><strong><a href="/www6vHomeAIGC/2024/04/04/gptReasoningPostTraining/" title="(Survey)Reasoning LLM Post-Training">(Survey)Reasoning LLM Post-Training</a></strong></li>
+</li>
+</ul>
+</li>
 </ul>
 <h1><span id="deepresearch">DeepResearch</span><a href="#deepresearch" class="header-anchor">#</a></h1><p><strong><a href="/www6vHomeAIGC/2024/03/26/gptReasonDeepResearch/" title="(原理&amp;实战)Deep Research">(原理&amp;实战)Deep Research</a></strong><br><strong><a href="/www6vHomeAIGC/2024/04/16/gptReasonDeepResearchJina/" title="(原理|实现)Deep Research(Jina)">(原理|实现)Deep Research(Jina)</a></strong> </p>
 <h1><span id="moe">MOE</span><a href="#moe" class="header-anchor">#</a></h1><ul>
@@ -72,9 +76,20 @@
 <li><a href="/www6vHomeAIGC/2023/03/21/gptInferFramework/" title="(原理)推理-框架">(原理)推理-框架</a> </li>
 <li><a href="/www6vHomeAIGC/2023/02/02/gptInferFrameworkPractice/" title="(实战)推理-lmdeploy">(实战)推理-lmdeploy</a> </li>
 <li>vLLM<ul>
-<li><strong><a href="/www6vHomeAIGC/2023/05/31/gptInfervLLM/" title="(原理) vLLM">(原理) vLLM</a></strong> </li>
-<li><strong><a href="/www6vHomeAIGC/2023/06/12/gptInfervLLMPractice/" title="(实战) vLLM">(实战) vLLM</a></strong> </li>
-<li><strong><a href="/www6vHomeAIGC/2023/12/02/gptInfervLLMCode/" title="(源码)vLLM">(源码)vLLM</a></strong></li>
+<li><p><strong><a href="/www6vHomeAIGC/2023/05/31/gptInfervLLM/" title="(原理) vLLM">(原理) vLLM</a></strong> </p>
+</li>
+<li><p><strong><a href="/www6vHomeAIGC/2023/06/12/gptInfervLLMPractice/" title="(实战) vLLM">(实战) vLLM</a></strong> </p>
+</li>
+<li><p><strong><a href="/www6vHomeAIGC/2023/12/02/gptInfervLLMCode/" title="(源码)vLLM">(源码)vLLM</a></strong>  </p>
+</li>
+<li><p><strong><a href="/www6vHomeAIGC/2024/05/14/gptInfervLLMDist/" title="vLLM 分布式">vLLM 分布式</a></strong> </p>
+</li>
+<li><p><strong><a href="/www6vHomeAIGC/2024/05/14/gptInfervLLMPD/" title="vLLM  PD分离">vLLM  PD分离</a></strong> </p>
+</li>
+<li><p><strong><a href="/www6vHomeAIGC/2024/05/14/gptInfervLLMSpeculativeDecode/" title="vLLM  投机解码">vLLM  投机解码</a></strong> </p>
+</li>
+<li><p><strong><a href="/www6vHomeAIGC/2025/05/14/gptInfervLLMPrefixCaching/" title="vLLM  Prefix Caching">vLLM  Prefix Caching</a></strong></p>
+</li>
 </ul>
 </li>
 <li><strong><a href="/www6vHomeAIGC/2023/06/02/gptInferTensorRT/" title="(原理|实战) TensorRT-LLM">(原理|实战) TensorRT-LLM</a></strong> </li>
@@ -578,6 +593,21 @@
       </tags>
   </entry>
   <entry>
+    <title>(实现)vLLM  Prefix Caching</title>
+    <url>/www6vHomeAIGC/2025/05/14/gptInfervLLMPrefixCaching/</url>
+    <content><![CDATA[<p></p>
+<span id="more"></span>
+
+<h1><span id="prefix-caching">Prefix Caching</span><a href="#prefix-caching" class="header-anchor">#</a></h1>]]></content>
+      <categories>
+        <category>AIGC</category>
+        <category>infer</category>
+      </categories>
+      <tags>
+        <tag>infer</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>(代码)MOE</title>
     <url>/www6vHomeAIGC/2025/05/03/gptModelMOECode/</url>
     <content><![CDATA[<p></p>
@@ -699,6 +729,53 @@
       </categories>
       <tags>
         <tag>Diffusion</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>(实现)vLLM  投机解码</title>
+    <url>/www6vHomeAIGC/2024/05/14/gptInfervLLMSpeculativeDecode/</url>
+    <content><![CDATA[<p></p>
+<span id="more"></span>
+
+<h1><span id="投机解码">投机解码</span><a href="#投机解码" class="header-anchor">#</a></h1>]]></content>
+      <categories>
+        <category>AIGC</category>
+        <category>infer</category>
+      </categories>
+      <tags>
+        <tag>infer</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>(实现)vLLM  PD分离</title>
+    <url>/www6vHomeAIGC/2024/05/14/gptInfervLLMPD/</url>
+    <content><![CDATA[<p></p>
+<span id="more"></span>
+
+<h1><span id="pd分离">PD分离</span><a href="#pd分离" class="header-anchor">#</a></h1>]]></content>
+      <categories>
+        <category>AIGC</category>
+        <category>infer</category>
+      </categories>
+      <tags>
+        <tag>infer</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>(实现)vLLM 分布式</title>
+    <url>/www6vHomeAIGC/2024/05/14/gptInfervLLMDist/</url>
+    <content><![CDATA[<p></p>
+<span id="more"></span>
+
+
+<h1><span id="分布式">分布式</span><a href="#分布式" class="header-anchor">#</a></h1><p>DP, TP, PP</p>
+]]></content>
+      <categories>
+        <category>AIGC</category>
+        <category>infer</category>
+      </categories>
+      <tags>
+        <tag>infer</tag>
       </tags>
   </entry>
   <entry>
@@ -1563,7 +1640,7 @@
       </tags>
   </entry>
   <entry>
-    <title>(源码)vLLM</title>
+    <title>(实现)vLLM</title>
     <url>/www6vHomeAIGC/2023/12/02/gptInfervLLMCode/</url>
     <content><![CDATA[<p></p>
 <span id="more"></span>
