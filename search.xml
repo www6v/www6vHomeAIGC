@@ -77,28 +77,13 @@
 <li>vLLM<br>【9】</li>
 </ul>
 </li>
-<li>优化<ul>
-<li><a href="/www6vHomeAIGC/2023/01/01/gptInference/" title="(总结)推理优化">(总结)推理优化</a></li>
-<li><strong><a href="/www6vHomeAIGC/2023/08/14/gptInferenceSurvey/" title="(综述)推理优化">(综述)推理优化</a></strong></li>
-<li><strong><a href="/www6vHomeAIGC/2024/09/11/gptInferenceSurvey1/" title="(综述)推理优化">(综述)推理优化</a></strong> </li>
+<li>优化<br>【3】<ul>
 <li>系统层优化<ul>
 <li>Attention Opt.<ul>
-<li>FlashAttention    <ul>
-<li><strong><a href="/www6vHomeAIGC/2023/06/13/gptFlashAttention/" title="(原理)Flash Attention">(原理)Flash Attention</a></strong> </li>
-<li><strong><a href="/www6vHomeAIGC/2023/11/15/gptInferFlashAttention2/" title="(原理)FlashAttention2">(原理)FlashAttention2</a></strong>  </li>
-<li><strong><a href="/www6vHomeAIGC/2023/10/06/gptInferFlashDecoding/" title="(原理)Flash Decoding">(原理)Flash Decoding</a></strong></li>
+<li>FlashAttention<br>  【3】</li>
 </ul>
 </li>
-</ul>
-</li>
-<li>SpeculativeDecoding<ul>
-<li><strong><a href="/www6vHomeAIGC/2023/10/06/gptInferSpeculativeDecoding/" title="Speculative Decoding">Speculative Decoding</a></strong> </li>
-<li><strong><a href="/www6vHomeAIGC/2023/10/21/gptInferSpeculativeDecodingSurvey/" title="(Survey)Speculative Decoding">(Survey)Speculative Decoding</a></strong> </li>
-<li><strong><a href="/www6vHomeAIGC/2023/11/12/gptInferMedusa/" title="(原理|实现)Medusa">(原理|实现)Medusa</a></strong>   </li>
-<li><strong><a href="/www6vHomeAIGC/2023/11/12/gptInferEagle/" title="EAGLE">EAGLE</a></strong> </li>
-<li><strong><a href="/www6vHomeAIGC/2023/11/12/gptInferSpecInfer/" title="SpecInfer">SpecInfer</a></strong></li>
-</ul>
-</li>
+<li>SpeculativeDecoding<br>【5】   </li>
 <li>Memory Management<ul>
 <li>KVCache<ul>
 <li><strong><a href="/www6vHomeAIGC/2023/06/01/gptInferKVCache/" title="(原理|实现) KV Cache">(原理|实现) KV Cache</a></strong>  </li>
@@ -584,23 +569,6 @@
       </categories>
       <tags>
         <tag>MOE</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>(综述)推理优化</title>
-    <url>/www6vHomeAIGC/2024/09/11/gptInferenceSurvey1/</url>
-    <content><![CDATA[<p></p>
-<span id="more"></span>
-
-
-<h1><span id="论文">论文</span><a href="#论文" class="header-anchor">#</a></h1><p><a href="https://candied-skunk-1ca.notion.site/Towards-Efficient-Generative-Large-Language-Model-Serving-A-Survey-from-Algorithms-to-Systems-c1914500c33f4446ac7fbe8848354d91?pvs=4">Towards Efficient Generative Large Language Model Serving: A Survey from Algorithms to Systems</a></p>
-]]></content>
-      <categories>
-        <category>AIGC</category>
-        <category>Inference</category>
-      </categories>
-      <tags>
-        <tag>Inference</tag>
       </tags>
   </entry>
   <entry>
@@ -1638,70 +1606,6 @@
       </tags>
   </entry>
   <entry>
-    <title>(原理)FlashAttention2</title>
-    <url>/www6vHomeAIGC/2023/11/15/gptInferFlashAttention2/</url>
-    <content><![CDATA[<p></p>
-<span id="more"></span>
-
-<h1><span id="flash-attention2">Flash Attention2</span><a href="#flash-attention2" class="header-anchor">#</a></h1><p><a href="https://candied-skunk-1ca.notion.site/Flash-Attention2-110bfe21108480f782fcc7258d860ccc?pvs=4">(原理)Flash Attention2</a></p>
-]]></content>
-      <categories>
-        <category>AIGC</category>
-        <category>Infer</category>
-      </categories>
-      <tags>
-        <tag>Infer</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>SpecInfer</title>
-    <url>/www6vHomeAIGC/2023/11/12/gptInferSpecInfer/</url>
-    <content><![CDATA[<p></p>
-<span id="more"></span>
-
-<h1><span id="specinfer">SpecInfer</span><a href="#specinfer" class="header-anchor">#</a></h1><p><a href="https://candied-skunk-1ca.notion.site/SpecInfer-8b75821e44384cecba4541f7aa758adb?pvs=4">SpecInfer</a></p>
-]]></content>
-      <categories>
-        <category>AIGC</category>
-        <category>infer</category>
-      </categories>
-      <tags>
-        <tag>infer</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>EAGLE</title>
-    <url>/www6vHomeAIGC/2023/11/12/gptInferEagle/</url>
-    <content><![CDATA[<p></p>
-<span id="more"></span>
-
-<h1><span id="eagle">EAGLE</span><a href="#eagle" class="header-anchor">#</a></h1><p><a href="https://candied-skunk-1ca.notion.site/EAGLE-126bfe2110848058aeb0ed8c2d06319b?pvs=4">EAGLE</a></p>
-]]></content>
-      <categories>
-        <category>AIGC</category>
-        <category>Inference</category>
-      </categories>
-      <tags>
-        <tag>Inference</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>(原理|实现)Medusa</title>
-    <url>/www6vHomeAIGC/2023/11/12/gptInferMedusa/</url>
-    <content><![CDATA[<p></p>
-<span id="more"></span>
-
-<h1><span id="medusa">Medusa</span><a href="#medusa" class="header-anchor">#</a></h1><p><a href="https://candied-skunk-1ca.notion.site/Medusa-31e27ea0a51d4c818c804a654a3c839a?pvs=4">(原理|实现)Medusa</a></p>
-]]></content>
-      <categories>
-        <category>AIGC</category>
-        <category>Inference</category>
-      </categories>
-      <tags>
-        <tag>Inference</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>(Survey)Quantization</title>
     <url>/www6vHomeAIGC/2023/10/21/gptQuantizationSurvey/</url>
     <content><![CDATA[<p></p>
@@ -1715,22 +1619,6 @@
       </categories>
       <tags>
         <tag>量化</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>(Survey)Speculative Decoding</title>
-    <url>/www6vHomeAIGC/2023/10/21/gptInferSpeculativeDecodingSurvey/</url>
-    <content><![CDATA[<p></p>
-<span id="more"></span>
-
-<h1><span id="speculative-decoding">Speculative Decoding</span><a href="#speculative-decoding" class="header-anchor">#</a></h1><p><a href="https://candied-skunk-1ca.notion.site/Unlocking-Efficiency-in-Large-Language-Model-Inference-A-Comprehensive-Survey-of-Speculative-Decodi-117bfe2110848059977ece3df3f9791d?pvs=4">(Survey)Speculative Decoding </a></p>
-]]></content>
-      <categories>
-        <category>AIGC</category>
-        <category>infer</category>
-      </categories>
-      <tags>
-        <tag>infer</tag>
       </tags>
   </entry>
   <entry>
@@ -1829,40 +1717,6 @@
       </categories>
       <tags>
         <tag>量化</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>(原理)Flash Decoding</title>
-    <url>/www6vHomeAIGC/2023/10/06/gptInferFlashDecoding/</url>
-    <content><![CDATA[<p></p>
-<span id="more"></span>
-
-
-
-<h1><span id="flash-decoding">Flash Decoding</span><a href="#flash-decoding" class="header-anchor">#</a></h1><p><a href="https://candied-skunk-1ca.notion.site/Flash-Decoding-110bfe2110848085aa6dde60217c486a?pvs=4">(原理)Flash Decoding</a></p>
-]]></content>
-      <categories>
-        <category>AIGC</category>
-        <category>Infer</category>
-      </categories>
-      <tags>
-        <tag>Infer</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Speculative Decoding</title>
-    <url>/www6vHomeAIGC/2023/10/06/gptInferSpeculativeDecoding/</url>
-    <content><![CDATA[<p></p>
-<span id="more"></span>
-
-<h1><span id="speculative-decoding">Speculative Decoding</span><a href="#speculative-decoding" class="header-anchor">#</a></h1><p><a href="https://candied-skunk-1ca.notion.site/Speculative-Decoding-117bfe2110848060a00efd475a0abbac?pvs=4">Speculative Decoding</a></p>
-]]></content>
-      <categories>
-        <category>AIGC</category>
-        <category>infer</category>
-      </categories>
-      <tags>
-        <tag>infer</tag>
       </tags>
   </entry>
   <entry>
@@ -2244,26 +2098,6 @@
       </categories>
       <tags>
         <tag>低精度</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>(综述)推理优化</title>
-    <url>/www6vHomeAIGC/2023/08/14/gptInferenceSurvey/</url>
-    <content><![CDATA[<p></p>
-<span id="more"></span>
-
-
-
-<h1><span id="论文">论文</span><a href="#论文" class="header-anchor">#</a></h1><p><a href="https://candied-skunk-1ca.notion.site/A-Survey-on-Efficient-Inference-for-Large-Language-Models-22145473188e437881bf566241492bea?pvs=4">A Survey on Efficient Inference for Large Language Models</a> 翻译</p>
-<p><a href="https://candied-skunk-1ca.notion.site/A-Survey-on-Efficient-Inference-for-Large-Language-Models-135bfe2110848034bf45ea8e5d1d2fdb?pvs=4">A Survey on Efficient Inference for Large Language Models</a> 总结</p>
-<h1><span id="inference-papers">Inference Papers</span><a href="#inference-papers" class="header-anchor">#</a></h1><p><a href="https://candied-skunk-1ca.notion.site/Inference-Papers-bd22ef1d8c274d6f9951c394a95ff427?pvs=4">Inference Papers</a></p>
-]]></content>
-      <categories>
-        <category>AIGC</category>
-        <category>Inference</category>
-      </categories>
-      <tags>
-        <tag>Inference</tag>
       </tags>
   </entry>
   <entry>
@@ -2925,22 +2759,6 @@
       </categories>
       <tags>
         <tag>multimodal</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>(原理)Flash Attention</title>
-    <url>/www6vHomeAIGC/2023/06/13/gptFlashAttention/</url>
-    <content><![CDATA[<p></p>
-<span id="more"></span>
-
-<h1><span id="flash-attention">Flash Attention</span><a href="#flash-attention" class="header-anchor">#</a></h1><p><a href="https://candied-skunk-1ca.notion.site/Flash-Attention-2e424082ae3a46b8b1ddd24ead847dd9?pvs=4">(原理)Flash Attention</a></p>
-]]></content>
-      <categories>
-        <category>AIGC</category>
-        <category>FlashAttention</category>
-      </categories>
-      <tags>
-        <tag>FlashAttention</tag>
       </tags>
   </entry>
   <entry>
@@ -5997,62 +5815,6 @@
       </categories>
       <tags>
         <tag>大模型</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>(总结)推理优化</title>
-    <url>/www6vHomeAIGC/2023/01/01/gptInference/</url>
-    <content><![CDATA[<p></p>
-<span id="more"></span>
-
-<h2><span id="目录">目录</span><a href="#目录" class="header-anchor">#</a></h2><div class="toc">
-
-<!-- toc -->
-
-<ul>
-<li><a href="#%E6%8E%A8%E7%90%86-%E4%BC%98%E5%8C%96">推理 优化</a><ul>
-<li><a href="#overview2">overview[2]</a></li>
-<li><a href="#%E6%A8%A1%E5%9E%8B%E5%8E%8B%E7%BC%A9-1">模型压缩 [1]</a></li>
-<li><a href="#kv-cache">KV Cache</a></li>
-</ul>
-</li>
-<li><a href="#%E5%8F%82%E8%80%83">参考</a><ul>
-<li><a href="#%E7%BB%BC%E8%BF%B0">综述</a></li>
-</ul>
-</li>
-</ul>
-<!-- tocstop -->
-
-</div>
-
-<h1><span id="推理-优化">推理 优化</span><a href="#推理-优化" class="header-anchor">#</a></h1><h3><span id="overview2">overview[2]</span><a href="#overview2" class="header-anchor">#</a></h3><p>有几种方法可以在内存中<strong>降低推理成本</strong>或&#x2F;和<strong>加快推理速度</strong>。</p>
-<ul>
-<li>应用各种<strong>并行处理方式</strong>，以在大量GPU上扩展模型。智能并行处理模型组件和数据使得运行拥有数万亿参数的模型成为可能。</li>
-<li><strong>内存卸载</strong>，将临时未使用的数据卸载到CPU，并在以后需要时再读回。这有助于减少内存使用，但会导致更高的延迟。</li>
-<li><strong>智能批处理策略</strong>；例如，EffectiveTransformer将连续的序列打包在一起，以消除批处理内的填充。</li>
-<li><strong>网络压缩技术</strong>，如<strong>修剪、量化、蒸馏</strong>。较小的模型，无论是参数数量还是位宽，应该需要更少的内存并且运行更快。</li>
-<li>针对目标模型架构的特定改进。许多<strong>架构变化</strong>，特别是针对注意力层的变化，有助于提高Transformer解码速度。</li>
-</ul>
-<h3><span id="模型压缩-1">模型压缩 [1]</span><a href="#模型压缩-1" class="header-anchor">#</a></h3><img src="/www6vHomeAIGC/2023/01/01/gptInference/compress.png" class>
-
-<ul>
-<li>剪枝（Pruning）</li>
-<li>知识蒸馏（Knowledge Distillation，KD）</li>
-<li>量化（Quantization）</li>
-<li>低秩分解（Low-Rank Factorization）</li>
-</ul>
-<h3><span id="kv-cache">KV Cache</span><a href="#kv-cache" class="header-anchor">#</a></h3><h1><span id="参考">参考</span><a href="#参考" class="header-anchor">#</a></h1><h3><span id="综述">综述</span><a href="#综述" class="header-anchor">#</a></h3><ol>
-<li><a href="https://mp.weixin.qq.com/s/glPPSqHjsnDjC0DZSuuPzA">一文探秘LLM应用开发(13)-模型部署与推理(优化理论) </a> </li>
-<li><a href="https://lilianweng.github.io/posts/2023-01-10-inference-optimization/">Large Transformer Model Inference Optimization </a>  lilianweng</li>
-</ol>
-<p>1xx. <a href="https://zhuanlan.zhihu.com/p/642412124">NLP（十八）：LLM 的推理优化技术纵览</a> ***<br>1xx. <a href="https://zhuanlan.zhihu.com/p/656485997">大语言模型推理性能优化综述</a></p>
-]]></content>
-      <categories>
-        <category>AIGC</category>
-        <category>Inference</category>
-      </categories>
-      <tags>
-        <tag>Inference</tag>
       </tags>
   </entry>
   <entry>
