@@ -85,70 +85,34 @@
 </li>
 <li>SpeculativeDecoding<br>【5】   </li>
 <li>Memory Management<ul>
-<li>KVCache<ul>
-<li><strong><a href="/www6vHomeAIGC/2023/06/01/gptInferKVCache/" title="(原理|实现) KV Cache">(原理|实现) KV Cache</a></strong>  </li>
-<li><strong><a href="/www6vHomeAIGC/2023/09/02/gptInferKVCacheOptimize/" title="(原理)KV Cache 优化">(原理)KV Cache 优化</a></strong></li>
-<li>Compress  <ul>
-<li><strong><a href="/www6vHomeAIGC/2023/09/02/gptInferKVCacheQuantization/" title="(原理)KV Cache 量化">(原理)KV Cache 量化</a></strong> Quantization</li>
-</ul>
-</li>
-</ul>
-</li>
+<li>KVCache<br>【3】</li>
 </ul>
 </li>
 </ul>
 </li>
 <li>系统层优化<ul>
-<li>Batch<ul>
-<li><strong><a href="/www6vHomeAIGC/2023/09/18/gptInferContinuousBatching/" title="Continuous Batching">Continuous Batching</a></strong> </li>
-<li><strong><a href="/www6vHomeAIGC/2023/09/18/gptInferChunkedPrefill/" title="Chunked Prefill">Chunked Prefill</a></strong></li>
-</ul>
-</li>
-<li>PD 分离<ul>
-<li><strong><a href="/www6vHomeAIGC/2023/10/05/gptInferDistServe/" title="DistServe">DistServe</a></strong> </li>
-<li><strong><a href="/www6vHomeAIGC/2023/10/19/gptInferMooncake/" title="(原理|实现)Mooncake">(原理|实现)Mooncake</a></strong>  </li>
-<li><strong><a href="/www6vHomeAIGC/2023/11/30/gptInferLlumnix/" title="(原理)Llumnix">(原理)Llumnix</a></strong></li>
-</ul>
-</li>
+<li>Batch<br>【2】</li>
+<li>PD 分离<br>【3】</li>
 </ul>
 </li>
 <li>模型层优化 <ul>
 <li>模型压缩<ul>
-<li>量化<ul>
-<li><strong><a href="/www6vHomeAIGC/2023/10/21/gptQuantizationSurvey/" title="(Survey)Quantization">(Survey)Quantization</a></strong>   </li>
-<li><strong><a href="/www6vHomeAIGC/2023/02/19/gptQuantization/" title="(原理)量化">(原理)量化</a></strong> </li>
-<li>PTQ<ul>
-<li><strong><a href="/www6vHomeAIGC/2023/03/26/gptQuantizationWeight/" title="(原理)PTQ-Weight Only">(原理)PTQ-Weight Only</a></strong> </li>
-<li>Weight Only <ul>
-<li><strong><a href="/www6vHomeAIGC/2023/10/12/gptQuantizationGPTQ/" title="(原理|实战|实现)GPTQ">(原理|实战|实现)GPTQ</a></strong></li>
-<li><strong><a href="/www6vHomeAIGC/2023/10/12/gptQuantizationAWQ/" title="(原理|实战)AWQ">(原理|实战)AWQ</a></strong></li>
-</ul>
-</li>
-<li>Weight&amp;Activation<ul>
-<li><strong><a href="/www6vHomeAIGC/2023/10/12/gptQuantizationInt8/" title="(原理|实战)LLM.int8()">(原理|实战)LLM.int8()</a></strong>              </li>
-<li><strong><a href="/www6vHomeAIGC/2023/10/14/gptQuantizationSmoothQuant/" title="(原理)SmoothQuant">(原理)SmoothQuant</a></strong> </li>
-<li><strong><a href="/www6vHomeAIGC/2023/10/14/gptQuantizationFP8/" title="(原理)FP8">(原理)FP8</a></strong></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><strong><a href="/www6vHomeAIGC/2024/03/22/gptQuantizationPractice/" title="(实战)量化">(实战)量化</a></strong></li>
-</ul>
-</li>
-</ul>
-</li>
-<li>Sparse Attention<ul>
-<li><strong><a href="/www6vHomeAIGC/2023/09/02/gptInferKVCacheStreamingLLM/" title="(原理)Streaming LLM">(原理)Streaming LLM</a></strong></li>
+<li>量化<br>  【2】<ul>
+<li>PTQ<br>  【1】 <ul>
+<li>Weight Only<br>【2】</li>
+<li>Weight&amp;Activation<br>【3】<br>【1】</li>
 </ul>
 </li>
 </ul>
 </li>
 </ul>
 </li>
-<li>其他<ul>
-<li><strong><a href="/www6vHomeAIGC/2023/03/30/gptTemperature/" title="推理常见参数">推理常见参数</a></strong></li>
+<li>Sparse Attention<br>【1】</li>
 </ul>
 </li>
+</ul>
+</li>
+<li>其他<br>【1】</li>
 </ul>
 <h2><span id="training">Training  *</span><a href="#training" class="header-anchor">#</a></h2><ul>
 <li>分布式 <ul>
@@ -1017,22 +981,6 @@
       </tags>
   </entry>
   <entry>
-    <title>(实战)量化</title>
-    <url>/www6vHomeAIGC/2024/03/22/gptQuantizationPractice/</url>
-    <content><![CDATA[<p></p>
-<span id="more"></span>
-
-<h1><span id="量化实战">量化实战</span><a href="#量化实战" class="header-anchor">#</a></h1><p><a href="https://candied-skunk-1ca.notion.site/1213172a99a949ceba7e8e2164710a77?pvs=4">(实战)量化-推理</a></p>
-]]></content>
-      <categories>
-        <category>AIGC</category>
-        <category>量化</category>
-      </categories>
-      <tags>
-        <tag>量化</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>(原理)Visual  MOE</title>
     <url>/www6vHomeAIGC/2024/03/08/gptModelMOE/</url>
     <content><![CDATA[<p></p>
@@ -1505,24 +1453,6 @@
       </tags>
   </entry>
   <entry>
-    <title>(原理)Llumnix</title>
-    <url>/www6vHomeAIGC/2023/11/30/gptInferLlumnix/</url>
-    <content><![CDATA[<p></p>
-<span id="more"></span>
-
-
-
-<h1><span id="llumnix">Llumnix</span><a href="#llumnix" class="header-anchor">#</a></h1><p><a href="https://candied-skunk-1ca.notion.site/Llumnix-14407e4f4d2f4a908edcf73b6990b4f0?pvs=4">(原理)Llumnix</a></p>
-]]></content>
-      <categories>
-        <category>AIGC</category>
-        <category>Inference</category>
-      </categories>
-      <tags>
-        <tag>Inference</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>(原理)混合并行</title>
     <url>/www6vHomeAIGC/2023/11/26/gptTrainHybridParallel/</url>
     <content><![CDATA[<p></p>
@@ -1606,137 +1536,6 @@
       </tags>
   </entry>
   <entry>
-    <title>(Survey)Quantization</title>
-    <url>/www6vHomeAIGC/2023/10/21/gptQuantizationSurvey/</url>
-    <content><![CDATA[<p></p>
-<span id="more"></span>
-
-<h1><span id="quantization">Quantization</span><a href="#quantization" class="header-anchor">#</a></h1><p><a href="https://candied-skunk-1ca.notion.site/A-Survey-of-Low-bit-Large-Language-Models-Basics-Systems-and-Algorithms-116bfe2110848045b3e0c165318ec16b?pvs=4">A Survey of Low-bit Large Language Models: Basics, Systems, and Algorithms</a></p>
-]]></content>
-      <categories>
-        <category>AIGC</category>
-        <category>量化</category>
-      </categories>
-      <tags>
-        <tag>量化</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>(原理|实现)Mooncake</title>
-    <url>/www6vHomeAIGC/2023/10/19/gptInferMooncake/</url>
-    <content><![CDATA[<p></p>
-<span id="more"></span>
-
-<h1><span id="mooncake">Mooncake</span><a href="#mooncake" class="header-anchor">#</a></h1><p><a href="https://candied-skunk-1ca.notion.site/Mooncake-d7d1506860df44bca7a2f880a1352285?pvs=4">Mooncake</a></p>
-]]></content>
-      <categories>
-        <category>AIGC</category>
-        <category>Inference</category>
-      </categories>
-      <tags>
-        <tag>Inference</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>(原理)FP8</title>
-    <url>/www6vHomeAIGC/2023/10/14/gptQuantizationFP8/</url>
-    <content><![CDATA[<p></p>
-<span id="more"></span>
-
-<h1><span id="fp8">FP8</span><a href="#fp8" class="header-anchor">#</a></h1><p><a href="https://candied-skunk-1ca.notion.site/FP8-12c3b58d744e43299dad0badc397f592?pvs=4">(原理)FP8</a></p>
-]]></content>
-      <categories>
-        <category>AIGC</category>
-        <category>量化</category>
-      </categories>
-      <tags>
-        <tag>量化</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>(原理)SmoothQuant</title>
-    <url>/www6vHomeAIGC/2023/10/14/gptQuantizationSmoothQuant/</url>
-    <content><![CDATA[<p></p>
-<span id="more"></span>
-
-<h1><span id="smoothquant">SmoothQuant</span><a href="#smoothquant" class="header-anchor">#</a></h1><p><a href="https://candied-skunk-1ca.notion.site/SmoothQuant-11dbfe21108480fc83f8ea2a495092b7?pvs=4">(原理)SmoothQuant</a></p>
-]]></content>
-      <categories>
-        <category>AIGC</category>
-        <category>量化</category>
-      </categories>
-      <tags>
-        <tag>量化</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>(原理|实战)AWQ</title>
-    <url>/www6vHomeAIGC/2023/10/12/gptQuantizationAWQ/</url>
-    <content><![CDATA[<p></p>
-<span id="more"></span>
-
-
-
-<h1><span id="awq">AWQ</span><a href="#awq" class="header-anchor">#</a></h1><p><a href="https://candied-skunk-1ca.notion.site/AWQ-11dbfe211084806396a0fc0f87983446?pvs=4">(原理|实战)AWQ</a></p>
-]]></content>
-      <categories>
-        <category>AIGC</category>
-        <category>量化</category>
-      </categories>
-      <tags>
-        <tag>量化</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>(原理|实战|实现)GPTQ</title>
-    <url>/www6vHomeAIGC/2023/10/12/gptQuantizationGPTQ/</url>
-    <content><![CDATA[<p></p>
-<span id="more"></span>
-
-<h1><span id="gptq">GPTQ</span><a href="#gptq" class="header-anchor">#</a></h1><p><a href="https://candied-skunk-1ca.notion.site/GPTQ-11dbfe21108480cb8510ed7d85a64371?pvs=4">(原理|实战|实现)GPTQ</a></p>
-]]></content>
-      <categories>
-        <category>AIGC</category>
-        <category>量化</category>
-      </categories>
-      <tags>
-        <tag>量化</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>(原理|实战)LLM.int8()</title>
-    <url>/www6vHomeAIGC/2023/10/12/gptQuantizationInt8/</url>
-    <content><![CDATA[<p></p>
-<span id="more"></span>
-
-<h1><span id="llmint8">LLM.int8()</span><a href="#llmint8" class="header-anchor">#</a></h1><p><a href="https://candied-skunk-1ca.notion.site/LLM-int8-11dbfe21108480d0b6adc341aed9ec3d?pvs=4">(原理|实战)LLM.int8()</a></p>
-]]></content>
-      <categories>
-        <category>AIGC</category>
-        <category>量化</category>
-      </categories>
-      <tags>
-        <tag>量化</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>DistServe</title>
-    <url>/www6vHomeAIGC/2023/10/05/gptInferDistServe/</url>
-    <content><![CDATA[<p></p>
-<span id="more"></span>
-
-
-<h1><span id="distserve">DistServe</span><a href="#distserve" class="header-anchor">#</a></h1><p><a href="https://candied-skunk-1ca.notion.site/DistServe-dd4ae7040b78496f9a60c0291941922b?pvs=4">DistServe</a></p>
-]]></content>
-      <categories>
-        <category>AIGC</category>
-        <category>Inference</category>
-      </categories>
-      <tags>
-        <tag>Inference</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>(原理|实战)Parameter Server</title>
     <url>/www6vHomeAIGC/2023/10/01/gptParameterServer/</url>
     <content><![CDATA[<p></p>
@@ -1805,38 +1604,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Chunked Prefill</title>
-    <url>/www6vHomeAIGC/2023/09/18/gptInferChunkedPrefill/</url>
-    <content><![CDATA[<p></p>
-<span id="more"></span>
-
-<h1><span id="chunked-prefill">Chunked Prefill</span><a href="#chunked-prefill" class="header-anchor">#</a></h1><p><a href="https://candied-skunk-1ca.notion.site/chunked-prefill-102bfe21108480a7af99fee1f56fd5af?pvs=4">Chunked Prefill</a></p>
-]]></content>
-      <categories>
-        <category>AIGC</category>
-        <category>Inference</category>
-      </categories>
-      <tags>
-        <tag>Inference</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Continuous Batching</title>
-    <url>/www6vHomeAIGC/2023/09/18/gptInferContinuousBatching/</url>
-    <content><![CDATA[<p></p>
-<span id="more"></span>
-
-<h1><span id="continuous-batching">Continuous Batching</span><a href="#continuous-batching" class="header-anchor">#</a></h1><p><a href="https://candied-skunk-1ca.notion.site/Continuous-batching-3ce74a6d992944fba6314e21b3c3ec22">Continuous Batching</a></p>
-]]></content>
-      <categories>
-        <category>AIGC</category>
-        <category>Inference</category>
-      </categories>
-      <tags>
-        <tag>Inference</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>(原理)通信原语</title>
     <url>/www6vHomeAIGC/2023/09/08/gptTrainCommunication/</url>
     <content><![CDATA[<p></p>
@@ -1885,54 +1652,6 @@
       </categories>
       <tags>
         <tag>train</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>(原理)KV Cache 量化</title>
-    <url>/www6vHomeAIGC/2023/09/02/gptInferKVCacheQuantization/</url>
-    <content><![CDATA[<p></p>
-<span id="more"></span>
-
-<h1><span id="kv-cache-量化">KV Cache 量化</span><a href="#kv-cache-量化" class="header-anchor">#</a></h1><p><a href="https://candied-skunk-1ca.notion.site/Quantization-c6fa20cf425a4211af150b4987711f47?pvs=4">KV Cache 量化</a></p>
-]]></content>
-      <categories>
-        <category>AIGC</category>
-        <category>Inference</category>
-      </categories>
-      <tags>
-        <tag>Inference</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>(原理)Streaming LLM</title>
-    <url>/www6vHomeAIGC/2023/09/02/gptInferKVCacheStreamingLLM/</url>
-    <content><![CDATA[<p></p>
-<span id="more"></span>
-
-<h1><span id="streaming-llm">Streaming LLM</span><a href="#streaming-llm" class="header-anchor">#</a></h1><p><a href="https://candied-skunk-1ca.notion.site/StreamingLLM-5141d463ddf84b4783c369459c71eec8?pvs=4">Streaming LLM</a></p>
-]]></content>
-      <categories>
-        <category>AIGC</category>
-        <category>Inference</category>
-      </categories>
-      <tags>
-        <tag>Inference</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>(原理)KV Cache 优化</title>
-    <url>/www6vHomeAIGC/2023/09/02/gptInferKVCacheOptimize/</url>
-    <content><![CDATA[<p></p>
-<span id="more"></span>
-
-<h1><span id="kv-cache-优化">KV Cache 优化</span><a href="#kv-cache-优化" class="header-anchor">#</a></h1><p><a href="https://candied-skunk-1ca.notion.site/KV-cache-bd0a35015c9845bd8e17d5c902dba152?pvs=4">(原理)KV cache优化</a></p>
-]]></content>
-      <categories>
-        <category>AIGC</category>
-        <category>Inference</category>
-      </categories>
-      <tags>
-        <tag>Inference</tag>
       </tags>
   </entry>
   <entry>
@@ -2762,22 +2481,6 @@
       </tags>
   </entry>
   <entry>
-    <title>(原理|实现) KV Cache</title>
-    <url>/www6vHomeAIGC/2023/06/01/gptInferKVCache/</url>
-    <content><![CDATA[<p></p>
-<span id="more"></span>
-
-<h1><span id="kv-cache">KV Cache</span><a href="#kv-cache" class="header-anchor">#</a></h1><p><a href="https://candied-skunk-1ca.notion.site/KV-Cache-52168038d1874bce9d5cf68c5930f5c1?pvs=4">(原理|实现) KV Cache</a></p>
-]]></content>
-      <categories>
-        <category>AIGC</category>
-        <category>Inference</category>
-      </categories>
-      <tags>
-        <tag>Inference</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>多轮对话</title>
     <url>/www6vHomeAIGC/2023/05/28/gptDialogue/</url>
     <content><![CDATA[<p></p>
@@ -3217,22 +2920,6 @@
       </tags>
   </entry>
   <entry>
-    <title>推理常见参数</title>
-    <url>/www6vHomeAIGC/2023/03/30/gptTemperature/</url>
-    <content><![CDATA[<p></p>
-<span id="more"></span>
-
-<h1><span id="推理常见参数">推理常见参数</span><a href="#推理常见参数" class="header-anchor">#</a></h1><p><a href="https://candied-skunk-1ca.notion.site/4200b90adfd246ab93bfb1b330aa1bb2?pvs=4">推理常见参数</a></p>
-]]></content>
-      <categories>
-        <category>AIGC</category>
-        <category>Temperature</category>
-      </categories>
-      <tags>
-        <tag>Temperature</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>(实战)PyTorch</title>
     <url>/www6vHomeAIGC/2023/03/28/gptPytorch/</url>
     <content><![CDATA[<p></p>
@@ -3246,22 +2933,6 @@
       </categories>
       <tags>
         <tag>Pytorch</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>(原理)PTQ-Weight Only</title>
-    <url>/www6vHomeAIGC/2023/03/26/gptQuantizationWeight/</url>
-    <content><![CDATA[<p></p>
-<span id="more"></span>
-
-<h1><span id="weight-only">Weight Only</span><a href="#weight-only" class="header-anchor">#</a></h1><p><a href="https://candied-skunk-1ca.notion.site/Weight-Only-ab8e3953cef144a3aef44716d4068216?pvs=4">Weight Only</a></p>
-]]></content>
-      <categories>
-        <category>AIGC</category>
-        <category>量化</category>
-      </categories>
-      <tags>
-        <tag>量化</tag>
       </tags>
   </entry>
   <entry>
@@ -4833,24 +4504,6 @@
       </categories>
       <tags>
         <tag>AIGC</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>(原理)量化</title>
-    <url>/www6vHomeAIGC/2023/02/19/gptQuantization/</url>
-    <content><![CDATA[<p></p>
-<span id="more"></span>
-
-
-
-<h1><span id="量化">量化</span><a href="#量化" class="header-anchor">#</a></h1><p><a href="https://candied-skunk-1ca.notion.site/9e2982aada064c5895ae2f862f1d33c3?pvs=4">量化</a></p>
-]]></content>
-      <categories>
-        <category>AIGC</category>
-        <category>量化</category>
-      </categories>
-      <tags>
-        <tag>量化</tag>
       </tags>
   </entry>
   <entry>
