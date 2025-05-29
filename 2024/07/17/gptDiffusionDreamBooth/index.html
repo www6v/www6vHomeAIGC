@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 6.3.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/www6vHomeAIGC/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/www6vHomeAIGC/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/www6vHomeAIGC/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/www6vHomeAIGC/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/www6vHomeAIGC/css/main.css">
+
+
+<link rel="stylesheet" href="/www6vHomeAIGC/lib/font-awesome/css/font-awesome.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"www6v.github.io","root":"/www6vHomeAIGC/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"always","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta property="og:type" content="article">
+<meta property="og:title" content="(原理|实战)DreamBooth">
+<meta property="og:url" content="https://www6v.github.io/2024/07/17/gptDiffusionDreamBooth/index.html">
+<meta property="og:site_name" content="AIGC blog">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://dreambooth.github.io/DreamBooth_files/system.png">
+<meta property="article:published_time" content="2024-07-17T02:51:11.000Z">
+<meta property="article:modified_time" content="2025-05-27T09:42:57.971Z">
+<meta property="article:author" content="Wang Wei">
+<meta property="article:tag" content="Diffusion">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://dreambooth.github.io/DreamBooth_files/system.png">
+
+<link rel="canonical" href="https://www6v.github.io/2024/07/17/gptDiffusionDreamBooth/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>(原理|实战)DreamBooth | AIGC blog</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/www6vHomeAIGC/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">AIGC blog</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">记录技术点滴</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/www6vHomeAIGC/" rel="section"><i class="fa fa-fw fa-home"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/www6vHomeAIGC/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/www6vHomeAIGC/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/www6vHomeAIGC/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://www6v.github.io/2024/07/17/gptDiffusionDreamBooth/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/www6vHomeAIGC/images/avatar.gif">
+      <meta itemprop="name" content="Wang Wei">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="AIGC blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          (原理|实战)DreamBooth
+        </h1>
+
+        <div class="post-meta">
+
+
+
+
+
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2024-07-17 10:51:11" itemprop="dateCreated datePublished" datetime="2024-07-17T10:51:11+08:00">2024-07-17</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2025-05-27 17:42:57" itemprop="dateModified" datetime="2025-05-27T17:42:57+08:00">2025-05-27</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/www6vHomeAIGC/categories/AIGC/" itemprop="url" rel="index"><span itemprop="name">AIGC</span></a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/www6vHomeAIGC/categories/AIGC/Diffusion/" itemprop="url" rel="index"><span itemprop="name">Diffusion</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p></p>
+<span id="more"></span>
+
+
+<h1><span id="approach1">Approach[1]</span><a href="#approach1" class="header-anchor">#</a></h1><p>Our method takes as input a few images (typically 3-5 images suffice, based on our experiments) of a subject (e.g., a specific dog) and the corresponding class name (e.g. “dog”), and returns a fine-tuned&#x2F;“personalized’’ text-to-image model that encodes a <strong>unique identifier that refers to the subject</strong>. Then, at inference, we can implant the unique identifier in different sentences to synthesize the subjects in difference contexts.<br>我们的方法将主题（例如，特定的狗）和相应的类名称（例如“狗”）的一些图像（根据我们的实验，通常 3-5 个图像就足够了）作为输入，并返回一个微调&#x2F; “个性化”文本到图像模型，编码<strong>指向主题的唯一标识符</strong>。然后，在推理时，我们可以将唯一标识符植入不同的句子中，以合成不同上下文中的主题。</p>
+<p><img src="https://dreambooth.github.io/DreamBooth_files/system.png"></p>
+<p>Given ~3-5 images of a subject we fine tune a text-to-image diffusion in** two steps**:<strong>(a)</strong> fine tuning the low-resolution text-to-image model with the input images paired with a <strong>text prompt containing a unique identifier and the name of the class the subject belongs to (e.g., “A photo of a [T] dog”)</strong>, in parallel, we apply a <strong>class-specific prior preservation loss</strong>, which leverages the semantic prior that the model has on the class and encourages it to generate diverse instances belong to the subject’s class by injecting the class name in the text prompt (e.g., “A photo of a dog”). (b) fine-tuning the super resolution components with pairs of low-resolution and high-resolution images taken from our input images set, which enables us to maintain high-fidelity to small details of the subject.<br>给定约 3-5 个主题的图像，我们<strong>分两步</strong>微调文本到图像的扩散：(a) 使用与包含唯一的文本提示配对的输入图像微调低分辨率文本到图像模型标识符和主题所属类的名称（例如，“[T]狗的照片”），同时，我们应用特定于类的<strong>先验保存损失</strong>，<strong>它利用模型在类并鼓励它通过在文本提示中注入类名（例如“狗的照片”）来生成属于主题类的不同实例</strong>。 (b) 使用从输入图像集中获取的低分辨率和高分辨率图像对来微调超分辨率组件，这使我们能够保持对象小细节的高保真度。</p>
+<h1><span id="dreambooth实战">Dreambooth实战</span><a href="#dreambooth实战" class="header-anchor">#</a></h1><h3><span id="dreambooth-in-diffusers-10">Dreambooth in Diffusers [10]</span><a href="#dreambooth-in-diffusers-10" class="header-anchor">#</a></h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">### download pic</span></span><br><span class="line"><span class="keyword">from</span> huggingface_hub <span class="keyword">import</span> snapshot_download</span><br><span class="line"></span><br><span class="line">local_dir = <span class="string">&quot;./dog&quot;</span></span><br><span class="line">snapshot_download(</span><br><span class="line">    <span class="string">&quot;diffusers/dog-example&quot;</span>,</span><br><span class="line">    local_dir=local_dir, repo_type=<span class="string">&quot;dataset&quot;</span>,</span><br><span class="line">    ignore_patterns=<span class="string">&quot;.gitattributes&quot;</span>,</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="comment">### training</span></span><br><span class="line"><span class="comment">###  在modelscope上运行有问题，连不上huggingface</span></span><br><span class="line">export MODEL_NAME=<span class="string">&quot;CompVis/stable-diffusion-v1-4&quot;</span></span><br><span class="line">export INSTANCE_DIR=<span class="string">&quot;dog&quot;</span></span><br><span class="line">export OUTPUT_DIR=<span class="string">&quot;path-to-save-model&quot;</span></span><br><span class="line"></span><br><span class="line">accelerate launch train_dreambooth.py \\</span><br><span class="line">  --pretrained_model_name_or_path=$MODEL_NAME  \\</span><br><span class="line">  --instance_data_dir=$INSTANCE_DIR \\</span><br><span class="line">  --output_dir=$OUTPUT_DIR \\</span><br><span class="line">  --instance_prompt=<span class="string">&quot;a photo of sks dog&quot;</span> \\</span><br><span class="line">  --resolution=<span class="number">512</span> \\</span><br><span class="line">  --train_batch_size=<span class="number">1</span> \\</span><br><span class="line">  --gradient_accumulation_steps=<span class="number">1</span> \\</span><br><span class="line">  --learning_rate=<span class="number">5e-6</span> \\</span><br><span class="line">  --lr_scheduler=<span class="string">&quot;constant&quot;</span> \\</span><br><span class="line">  --lr_warmup_steps=<span class="number">0</span> \\</span><br><span class="line">  --max_train_steps=<span class="number">400</span> \\</span><br><span class="line">  --push_to_hub</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># examples/dreambooth/train_dreambooth.py</span></span><br><span class="line"><span class="comment">### 把prior loss加到instance loss上</span></span><br><span class="line"></span><br><span class="line">                <span class="keyword">if</span> args.with_prior_preservation:</span><br><span class="line">                    <span class="comment"># Add the prior loss to the instance loss.</span></span><br><span class="line">                    loss = loss + args.prior_loss_weight * prior_loss</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3><span id="dreambooth-in-diffusers-examples11">dreambooth in Diffusers examples[11]</span><a href="#dreambooth-in-diffusers-examples11" class="header-anchor">#</a></h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">if</span> args.with_prior_preservation:</span><br><span class="line">    <span class="comment"># Chunk the noise and noise_pred into two parts and compute the loss on each part separately.</span></span><br><span class="line">    noise_pred, noise_pred_prior = torch.chunk(noise_pred, <span class="number">2</span>, dim=<span class="number">0</span>)</span><br><span class="line">    target, target_prior = torch.chunk(target, <span class="number">2</span>, dim=<span class="number">0</span>)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># Compute instance loss</span></span><br><span class="line">    loss = F.mse_loss(noise_pred.<span class="built_in">float</span>(), target.<span class="built_in">float</span>(), reduction=<span class="string">&quot;none&quot;</span>).mean([<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]).mean()</span><br><span class="line"></span><br><span class="line">    <span class="comment"># Compute prior loss</span></span><br><span class="line">    prior_loss = F.mse_loss(noise_pred_prior.<span class="built_in">float</span>(), target_prior.<span class="built_in">float</span>(), reduction=<span class="string">&quot;mean&quot;</span>)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># Add the prior loss to the instance loss.</span></span><br><span class="line">    loss = loss + args.prior_loss_weight * prior_loss</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    loss = F.mse_loss(noise_pred.<span class="built_in">float</span>(), target.<span class="built_in">float</span>(), reduction=<span class="string">&quot;mean&quot;</span>)</span><br><span class="line"></span><br><span class="line">accelerator.backward(loss)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h1><span id="参考">参考</span><a href="#参考" class="header-anchor">#</a></h1><h3><span id="dreambooth-原理">Dreambooth 原理</span><a href="#dreambooth-原理" class="header-anchor">#</a></h3><ol>
+<li><a target="_blank" rel="noopener" href="https://dreambooth.github.io/">DreamBooth Repo</a></li>
+</ol>
+<p>1xx. <a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_45670134/article/details/133498728">DreamBooth 论文精读+通俗理解</a><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1kN411w7bx/">【论文精读】Dreambooth：diffusion生成模型微调方法</a> V</p>
+<h3><span id="dreambooth-实战">Dreambooth 实战</span><a href="#dreambooth-实战" class="header-anchor">#</a></h3><ol>
+<li><p><a target="_blank" rel="noopener" href="https://huggingface.co/blog/zh/dreambooth">使用 Diffusers 通过 Dreambooth 技术来训练 Stable Diffusion</a> </p>
+<p>   <a target="_blank" rel="noopener" href="https://github.com/huggingface/diffusers/tree/main/examples/dreambooth">Dreambooth Repo</a></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://colab.research.google.com/drive/1SJB5hGwmFyiYswT8VVPCfSkL-M1TY3t1">dreambooth Diffusers examples on Colab</a> 运行过<br>Initial setup<br>Settings for teaching your new concept<br>Teach the model the new concept (fine-tuning with Dreambooth)<br>Run the code with your newly trained model</p>
+</li>
+</ol>
+<p>1xx. <a target="_blank" rel="noopener" href="https://www.notion.so/Unit-3-Stable-Diffusion-a8770ac5b0214c2f9cfce878812b5bf8?pvs=21"><strong>+ Unit 3: Stable Diffusion</strong></a> </p>
+<p>1xx. <a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1184y1g7pG?p=5">Dreambooth</a> V<br>     【只训练unet】</p>
+
+    </div>
+
+    
+    
+    
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>Wang Wei
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://www6v.github.io/2024/07/17/gptDiffusionDreamBooth/" title="(原理|实战)DreamBooth">https://www6v.github.io/2024/07/17/gptDiffusionDreamBooth/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/www6vHomeAIGC/tags/Diffusion/" rel="tag"># Diffusion</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/www6vHomeAIGC/2024/04/23/gptMaaSMonitor/" rel="prev" title="MaaS 监控">
+      <i class="fa fa-chevron-left"></i> MaaS 监控
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/www6vHomeAIGC/2024/08/03/gptMultimodalIDCreate/" rel="next" title="人像生图">
+      人像生图 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Wang Wei</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/www6vHomeAIGC/archives/">
+        
+          <span class="site-state-item-count">128</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/www6vHomeAIGC/categories/">
+          
+        <span class="site-state-item-count">56</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/www6vHomeAIGC/tags/">
+          
+        <span class="site-state-item-count">49</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/www6v" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;www6v" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:www6v@126.com" title="E-Mail → mailto:www6v@126.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+      </span>
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2025</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Wang Wei</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/www6vHomeAIGC/lib/anime.min.js"></script>
+  <script src="/www6vHomeAIGC/lib/velocity/velocity.min.js"></script>
+  <script src="/www6vHomeAIGC/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/www6vHomeAIGC/js/utils.js"></script>
+
+<script src="/www6vHomeAIGC/js/motion.js"></script>
+
+
+<script src="/www6vHomeAIGC/js/schemes/muse.js"></script>
+
+
+<script src="/www6vHomeAIGC/js/next-boot.js"></script>
+
+
+
+
+  
+  <script>
+    (function(){
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      bp.src = (curProtocol === 'https') ? 'https://zz.bdstatic.com/linksubmit/push.js' : 'http://push.zhanzhang.baidu.com/push.js';
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+    })();
+  </script>
+
+
+
+
+  
+<script src="/www6vHomeAIGC/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>
