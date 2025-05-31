@@ -467,19 +467,9 @@
 <li>低精度<br>【2】</li>
 </ul>
 <h2><span id="llops">LLOps</span><a href="#llops" class="header-anchor">#</a></h2><ul>
-<li>MaaS<ul>
-<li><strong><a href="/www6vHomeAIGC/2024/04/23/gptMaaSMonitor/" title="MaaS 监控">MaaS 监控</a></strong></li>
-<li><strong><a href="/www6vHomeAIGC/2023/09/26/gptLLMOpsPaaS/" title="LLM PaaS">LLM PaaS</a></strong></li>
-</ul>
+<li><p>MaaS<br>[2]<br><br>[3]</p>
 </li>
-<li><strong><a href="/www6vHomeAIGC/2023/05/24/gptLLamaFactory/" title="LLama-Factory">LLama-Factory</a></strong></li>
-<li><strong><a href="/www6vHomeAIGC/2023/07/01/gptGPUComputing/" title="显存估算">显存估算</a></strong> </li>
-<li><a href="/www6vHomeAIGC/2022/12/28/gptLLMOps/" title="LLMOps">LLMOps</a> </li>
-<li>GPU<ul>
-<li><strong><a href="/www6vHomeAIGC/2024/03/23/gptGPUk8s/" title="(实战)K8s部署GPU">(实战)K8s部署GPU</a></strong> </li>
-<li><strong><a href="/www6vHomeAIGC/2023/12/23/gptGPUMetrics/" title="GPU 指标&amp;监控">GPU 指标&amp;监控</a></strong> </li>
-<li><a href="/www6vHomeAIGC/2023/05/23/gptGPU/" title="GPU 算力平台">GPU 算力平台</a></li>
-</ul>
+<li><p>GPU<br> [3]</p>
 </li>
 </ul>
 <h2><span id="mlsys">MLSys</span><a href="#mlsys" class="header-anchor">#</a></h2><ul>
@@ -585,22 +575,6 @@
       </categories>
       <tags>
         <tag>Diffusion</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>MaaS 监控</title>
-    <url>/www6vHomeAIGC/2024/04/23/gptMaaSMonitor/</url>
-    <content><![CDATA[<p></p>
-<span id="more"></span>
-
-<h1><span id="maas-监控">MaaS 监控</span><a href="#maas-监控" class="header-anchor">#</a></h1><p><a href="https://candied-skunk-1ca.notion.site/MaaS-1d2bfe2110848079b06afffaea367fe9?pvs=4">MaaS 监控</a></p>
-]]></content>
-      <categories>
-        <category>AIGC</category>
-        <category>MaaS</category>
-      </categories>
-      <tags>
-        <tag>MaaS</tag>
       </tags>
   </entry>
   <entry>
@@ -942,22 +916,6 @@
       </categories>
       <tags>
         <tag>multimodal</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>(实战)K8s部署GPU</title>
-    <url>/www6vHomeAIGC/2024/03/23/gptGPUk8s/</url>
-    <content><![CDATA[<p></p>
-<span id="more"></span>
-
-<h1><span id="k8s部署gpu">K8s部署GPU</span><a href="#k8s部署gpu" class="header-anchor">#</a></h1><p><a href="https://candied-skunk-1ca.notion.site/K8s-GPU-1bfbfe211084802c8b27ee5d8168665b?pvs=4">(实战)K8s部署GPU</a></p>
-]]></content>
-      <categories>
-        <category>AIGC</category>
-        <category>GPU</category>
-      </categories>
-      <tags>
-        <tag>GPU</tag>
       </tags>
   </entry>
   <entry>
@@ -1373,23 +1331,6 @@
       </tags>
   </entry>
   <entry>
-    <title>GPU 指标&amp;监控</title>
-    <url>/www6vHomeAIGC/2023/12/23/gptGPUMetrics/</url>
-    <content><![CDATA[<p></p>
-<span id="more"></span>
-
-
-<h1><span id="gpu-指标amp监控">GPU 指标&amp;监控</span><a href="#gpu-指标amp监控" class="header-anchor">#</a></h1><p><a href="https://candied-skunk-1ca.notion.site/165bfe21108480e29fa1d06e4852a6e0?pvs=4">GPU 指标&amp;监控</a></p>
-]]></content>
-      <categories>
-        <category>AIGC</category>
-        <category>GPU</category>
-      </categories>
-      <tags>
-        <tag>GPU</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Scaling Law</title>
     <url>/www6vHomeAIGC/2023/12/03/gptScalingLaw/</url>
     <content><![CDATA[<p></p>
@@ -1481,23 +1422,6 @@
       </categories>
       <tags>
         <tag>MLSys</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>LLM PaaS</title>
-    <url>/www6vHomeAIGC/2023/09/26/gptLLMOpsPaaS/</url>
-    <content><![CDATA[<p></p>
-<span id="more"></span>
-
-
-<h1><span id="llm-paas">LLM PaaS</span><a href="#llm-paas" class="header-anchor">#</a></h1><p><a href="https://candied-skunk-1ca.notion.site/9ddf2032d70b4722ad34a48cb305d80b?pvs=4">LLM PaaS</a></p>
-]]></content>
-      <categories>
-        <category>AIGC</category>
-        <category>LLMOps</category>
-      </categories>
-      <tags>
-        <tag>LLMOps</tag>
       </tags>
   </entry>
   <entry>
@@ -2194,23 +2118,6 @@
       </tags>
   </entry>
   <entry>
-    <title>显存估算</title>
-    <url>/www6vHomeAIGC/2023/07/01/gptGPUComputing/</url>
-    <content><![CDATA[<p></p>
-<span id="more"></span>
-
-
-<h1><span id="显存估算">显存估算</span><a href="#显存估算" class="header-anchor">#</a></h1><p><a href="https://candied-skunk-1ca.notion.site/e4e6bd5f7c43430fa2e805c5a2777308?pvs=4">显存估算</a></p>
-]]></content>
-      <categories>
-        <category>AIGC</category>
-        <category>GPU</category>
-      </categories>
-      <tags>
-        <tag>GPU</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Agent - UI-assistants</title>
     <url>/www6vHomeAIGC/2023/06/30/gptAgentMultimodalApp/</url>
     <content><![CDATA[<p></p>
@@ -2415,58 +2322,6 @@
       </categories>
       <tags>
         <tag>对话</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>LLama-Factory</title>
-    <url>/www6vHomeAIGC/2023/05/24/gptLLamaFactory/</url>
-    <content><![CDATA[<p></p>
-<span id="more"></span>
-
-
-<h1><span id="llama-factory">LLama-Factory</span><a href="#llama-factory" class="header-anchor">#</a></h1><p><a href="https://candied-skunk-1ca.notion.site/LLama-Factory-b6e286a1e9054c5399eebc5ffaeac82e?pvs=4">LLama-Factory</a></p>
-]]></content>
-      <categories>
-        <category>AIGC</category>
-        <category>LLamaFactory</category>
-      </categories>
-      <tags>
-        <tag>LLamaFactory</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>GPU 算力平台</title>
-    <url>/www6vHomeAIGC/2023/05/23/gptGPU/</url>
-    <content><![CDATA[<p></p>
-<span id="more"></span>
-
-
-
-<h1><span id="gpu算力">GPU算力</span><a href="#gpu算力" class="header-anchor">#</a></h1><h3><span id="免费1">免费[1]</span><a href="#免费1" class="header-anchor">#</a></h3><img src="/www6vHomeAIGC/2023/05/23/gptGPU/free.JPG" class>
-
-<ul>
-<li>modelscope 100小时 GPU</li>
-</ul>
-<h3><span id="专业收费2">专业收费[2]</span><a href="#专业收费2" class="header-anchor">#</a></h3><img src="/www6vHomeAIGC/2023/05/23/gptGPU/cost.JPG" class>
-
-
-<h1><span id="显卡">显卡</span><a href="#显卡" class="header-anchor">#</a></h1><ul>
-<li><p>显卡天梯榜<br> <a href="https://topic.expreview.com/GPU">显卡天梯榜</a></p>
-</li>
-<li><p>显卡<br>显卡 &#x3D; GPU +  显存</p>
-</li>
-</ul>
-<h1><span id="参考">参考</span><a href="#参考" class="header-anchor">#</a></h1><ol>
-<li><a href="https://www.bilibili.com/video/BV1fC4y1N7qV/">5种在线GPU算力资源白嫖指南</a> V</li>
-<li><a href="https://www.bilibili.com/video/BV1q5411z7HM/">5种专业在线GPU算力资源白嫖指南</a> V<br>1xx. <a href="https://www.bilibili.com/video/BV1Pv4y1f7VV/">【PyTorch深度学习】01 GPU购买与白嫖指南</a></li>
-</ol>
-]]></content>
-      <categories>
-        <category>AIGC</category>
-        <category>GPU</category>
-      </categories>
-      <tags>
-        <tag>GPU</tag>
       </tags>
   </entry>
   <entry>
@@ -5284,26 +5139,6 @@
       </categories>
       <tags>
         <tag>model</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>LLMOps</title>
-    <url>/www6vHomeAIGC/2022/12/28/gptLLMOps/</url>
-    <content><![CDATA[<p></p>
-<span id="more"></span>
-
-
-<ol>
-<li><a href="https://drive.google.com/file/d/1LZXTrRdrloIqAJT6xaNTl4WQd6y95o7K/view">LLMOps: Deployment and Learning in Production</a><br><a href="https://fullstackdeeplearning.com/llm-bootcamp/spring-2023/llmops/">LLMOps: Deployment and Learning in Production</a><br><a href="https://zhuanlan.zhihu.com/p/629589593">[必读] LLM 应用开发全栈指南</a> LLMOps</li>
-<li><a href="https://zhuanlan.zhihu.com/p/632026876">了解一下新领域 LLMOps: 大模型运维</a><br><a href="https://wandb.ai/site/articles/understanding-llmops-large-language-model-operations">Understanding LLMOps: Large Language Model Operations</a></li>
-</ol>
-]]></content>
-      <categories>
-        <category>AIGC</category>
-        <category>LLMOps</category>
-      </categories>
-      <tags>
-        <tag>LLMOps</tag>
       </tags>
   </entry>
   <entry>
