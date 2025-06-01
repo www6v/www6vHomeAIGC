@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Reasoning &amp; MOE</title>
+    <title>Reasoning &amp; RL</title>
     <url>/www6vHomeAIGC/2024/03/08/gptReasoningMOESummary/</url>
     <content><![CDATA[<p></p>
 <span id="more"></span>
@@ -13,7 +13,7 @@
 <ul>
 <li><a href="#deepseek">DeepSeek</a></li>
 <li><a href="#deepresearch">DeepResearch</a></li>
-<li><a href="#moe">MOE</a></li>
+<li><a href="#rl">RL</a></li>
 </ul>
 <!-- tocstop -->
 
@@ -23,19 +23,15 @@
 
 
 <h1><span id="deepseek">DeepSeek</span><a href="#deepseek" class="header-anchor">#</a></h1><ul>
-<li><p>V3</p>
-<ul>
+<li>V3<ul>
 <li><strong><a href="/www6vHomeAIGC/2024/02/06/gptDeepSeek/" title="DeepSeek V3">DeepSeek V3</a></strong></li>
 </ul>
 </li>
-<li><p>R1-zero</p>
-<ul>
-<li><strong><a href="/www6vHomeAIGC/2024/04/04/gptReasoningGRPO/" title="(原理)GRPO">(原理)GRPO</a></strong>  </li>
-<li><strong><a href="/www6vHomeAIGC/2024/02/28/gptDeepseekGRPO/" title="(实战)GRPO">(实战)GRPO</a></strong></li>
+<li>R1-zero<ul>
+<li><strong><a href="/www6vHomeAIGC/2024/04/04/gptReasoningGRPO/" title="(原理)GRPO">(原理)GRPO</a></strong></li>
 </ul>
 </li>
-<li><p>R1</p>
-<ul>
+<li>R1<ul>
 <li><strong><a href="/www6vHomeAIGC/2024/02/06/gptDeepSeekR1/" title="(原理) DeepSeek R1">(原理) DeepSeek R1</a></strong> </li>
 <li><strong><a href="/www6vHomeAIGC/2024/02/18/gptReasoningLLM/" title="(原理)Reasoning LLM">(原理)Reasoning LLM</a></strong> </li>
 <li><a href="/www6vHomeAIGC/2024/02/18/gptDeepSeekExplain1/" title="解读 DeepSeek[刘知远]">解读 DeepSeek[刘知远]</a>   </li>
@@ -50,9 +46,10 @@
 </li>
 </ul>
 <h1><span id="deepresearch">DeepResearch</span><a href="#deepresearch" class="header-anchor">#</a></h1><p><strong><a href="/www6vHomeAIGC/2024/03/26/gptReasonDeepResearch/" title="(原理&amp;实战)Deep Research">(原理&amp;实战)Deep Research</a></strong><br><strong><a href="/www6vHomeAIGC/2024/04/16/gptReasonDeepResearchJina/" title="(原理|实现)Deep Research(Jina)">(原理|实现)Deep Research(Jina)</a></strong> </p>
-<h1><span id="moe">MOE</span><a href="#moe" class="header-anchor">#</a></h1><ul>
-<li><strong><a href="/www6vHomeAIGC/2024/03/08/gptModelMOE/" title="(原理)Visual  MOE">(原理)Visual  MOE</a></strong> </li>
-<li><a href="/www6vHomeAIGC/2025/05/03/gptModelMOECode/" title="(代码)MOE">(代码)MOE</a></li>
+<h1><span id="rl">RL</span><a href="#rl" class="header-anchor">#</a></h1><ul>
+<li><strong><a href="/www6vHomeAIGC/2024/02/28/gptDeepseekGRPO/" title="(实战)GRPO">(实战)GRPO</a></strong></li>
+<li><strong><a href="/www6vHomeAIGC/2025/06/01/gptRLPPO/" title="gptRLPPO">gptRLPPO</a></strong> </li>
+<li><strong><a href="/www6vHomeAIGC/2025/06/01/gptRLRewardModel/" title="gptRLRewardModel">gptRLRewardModel</a></strong></li>
 </ul>
 ]]></content>
       <categories>
@@ -76,11 +73,16 @@
 <ul>
 <li><a href="#nlp">NLP</a></li>
 <li><a href="#model">Model *</a></li>
+</ul>
+<ul>
+<li><a href="#core">Core</a><ul>
 <li><a href="#training">Training *</a></li>
 <li><a href="#data">Data</a></li>
 <li><a href="#%E5%9E%82%E7%B1%BB%E6%A8%A1%E5%9E%8B">垂类模型</a></li>
 <li><a href="#study">Study</a></li>
 <li><a href="#research">Research</a></li>
+</ul>
+</li>
 </ul>
 <!-- tocstop -->
 
@@ -92,7 +94,8 @@
 <li><a href="/www6vHomeAIGC/2023/05/28/gptDialogue/" title="多轮对话">多轮对话</a></li>
 </ul>
 <h2><span id="model">Model *</span><a href="#model" class="header-anchor">#</a></h2><ul>
-<li>Foundation Models<ul>
+<li><p>Foundation Models</p>
+<ul>
 <li><a href="/www6vHomeAIGC/2022/10/30/gptLargeModelSurvey/" title="(综述)大模型">(综述)大模型</a></li>
 <li><a href="/www6vHomeAIGC/2023/02/17/gptLargeModel/" title="大模型">大模型</a> </li>
 <li>decode-only<ul>
@@ -112,6 +115,15 @@
 <li><a href="/www6vHomeAIGC/2023/01/04/gptLeaderBoard/" title="大模型 排行榜">大模型 排行榜</a></li>
 </ul>
 </li>
+<li><p>MOE</p>
+<ul>
+<li><p><strong><a href="/www6vHomeAIGC/2024/03/08/gptModelMOE/" title="(原理)Visual  MOE">(原理)Visual  MOE</a></strong> </p>
+</li>
+<li><a href="/www6vHomeAIGC/2025/05/03/gptModelMOECode/" title="(代码)MOE">(代码)MOE</a></li>
+</ul>
+</li>
+</ul>
+<h1><span id="core">Core</span><a href="#core" class="header-anchor">#</a></h1><ul>
 <li><a href="/www6vHomeAIGC/2023/12/03/gptScalingLaw/" title="Scaling Law">Scaling Law</a> * </li>
 <li><a href="/www6vHomeAIGC/2023/02/03/gptEmergent/" title="(原理)涌现现象">(原理)涌现现象</a>   </li>
 <li><a href="/www6vHomeAIGC/2023/02/06/gptHallucination/" title="(原理)幻觉问题">(原理)幻觉问题</a> * </li>
@@ -576,6 +588,18 @@
       <tags>
         <tag>Diffusion</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>(原理|实现)PPO-RewardModel</title>
+    <url>/www6vHomeAIGC/2024/06/01/gptRLRewardModel/</url>
+    <content><![CDATA[<h1><span id="ppo-rewardmodel">PPO-RewardModel</span><a href="#ppo-rewardmodel" class="header-anchor">#</a></h1><p><a href="https://candied-skunk-1ca.notion.site/PPO-RM-205bfe21108480a39b78d82696d1ede4?pvs=4">(原理|实现)PPO-RewardModel</a></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>(原理)PPO</title>
+    <url>/www6vHomeAIGC/2024/06/01/gptRLPPO/</url>
+    <content><![CDATA[<h1><span id="ppo">PPO</span><a href="#ppo" class="header-anchor">#</a></h1><p><a href="https://candied-skunk-1ca.notion.site/PPO-204bfe21108480b2aba0ce27d7d5e761?pvs=4">(原理)PPO</a></p>
+]]></content>
   </entry>
   <entry>
     <title>(原理|实现)Deep Research(Jina)</title>
