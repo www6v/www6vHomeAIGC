@@ -26,7 +26,7 @@
 <meta property="og:site_name" content="AIGC blog">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-01-08T11:40:39.000Z">
-<meta property="article:modified_time" content="2025-06-20T02:07:25.575Z">
+<meta property="article:modified_time" content="2025-06-29T05:13:14.858Z">
 <meta property="article:author" content="Wang Wei">
 <meta property="article:tag" content="deepLearning">
 <meta name="twitter:card" content="summary">
@@ -224,7 +224,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2025-06-20 10:07:25" itemprop="dateModified" datetime="2025-06-20T10:07:25+08:00">2025-06-20</time>
+                <time title="修改时间：2025-06-29 13:13:14" itemprop="dateModified" datetime="2025-06-29T13:13:14+08:00">2025-06-29</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -256,7 +256,44 @@
 
 
 
-<h1><span id="规范化-norm">规范化 Norm</span><a href="#规范化-norm" class="header-anchor">#</a></h1><p><a target="_blank" rel="noopener" href="https://candied-skunk-1ca.notion.site/Norm-172bfe21108480b2991cc365d3086945?pvs=4">规范化 Norm</a></p>
+<h1><span id="norm-作用1">Norm 作用[1]</span><a href="#norm-作用1" class="header-anchor">#</a></h1><p>dnn 的标准组件，稳定和加速训练过程</p>
+<h1><span id="batch-norm1">Batch Norm[1]</span><a href="#batch-norm1" class="header-anchor">#</a></h1><ul>
+<li>reduce cross <strong>batch size</strong></li>
+<li><strong>mini-batch dimension</strong></li>
+</ul>
+<p>一般用于图像，不涉及到padding的问题；</p>
+<h1><span id="layer-norm1">Layer Norm[1]</span><a href="#layer-norm1" class="header-anchor">#</a></h1><ul>
+<li>reduce cross <strong>hidden dim</strong></li>
+<li>reduce across the <strong>feature dimension</strong>.</li>
+</ul>
+<p>一般用于序列，一个 batch size 内存在 padding；</p>
+<ul>
+<li>RMSNorm: 对 LN 的一种变体，llama</li>
+</ul>
+<hr>
+<aside> 💡
+
+<ul>
+<li><a target="_blank" rel="noopener" href="https://spaces.ac.cn/archives/9009">https://spaces.ac.cn/archives/9009</a></li>
+<li>Pre LN: <code>llama</code></li>
+<li>Post LN: <code>attention is all you need</code></li>
+</ul>
+<p>llama在工程上使用Pre LN</p>
+</aside>
+
+<hr>
+<ol>
+<li>[<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV13q49eaERj/">pytorch] BN、LN、RMSNorm 及 pre LN vs. post LN 对比，标准化</a>  v ***</li>
+</ol>
+<p>​	<a target="_blank" rel="noopener" href="https://github.com/chunhuizhang/llm_aigc/blob/main/tutorials/nn_basics/tricks_norms/normalization.ipynb">normalization.ipynb</a></p>
+<p>​	[<a target="_blank" rel="noopener" href="https://www.notion.so/pytorch-BN-LN-RMSNorm-pre-LN-vs-post-LN-177bfe2110848088830cfea3d5a33d3e?pvs=21">pytorch] BN、LN、RMSNorm 及 pre LN vs. post LN 对比，标准化 </a></p>
+<p>1xx. <a target="_blank" rel="noopener" href="https://afterhoursresearch.hashnode.dev/batch-normalization-layer-normalization-and-root-mean-square-layer-normalization-a-comprehensive-guide-with-python-implementations">Batch Normalization, Layer Normalization and Root Mean Square Layer Normalization: A Comprehensive Guide with Python Implementations</a></p>
+<p>todo</p>
+<ul>
+<li><p><a target="_blank" rel="noopener" href="https://www.notion.so/7-5-174bfe2110848045bc6cff467363d471?pvs=21">7.5 逐层规范化</a> 百度邱  有代码</p>
+<p><a target="_blank" rel="noopener" href="https://aistudio.baidu.com/education/lessonvideo/3048901">https://aistudio.baidu.com/education/lessonvideo/3048901</a></p>
+</li>
+</ul>
 
     </div>
 
@@ -292,12 +329,12 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/www6vHomeAIGC/2024/01/08/gptDeeplearningLearningRate/" rel="prev" title="(原理)学习率">
-      <i class="fa fa-chevron-left"></i> (原理)学习率
+    <a href="/www6vHomeAIGC/2024/01/08/gptDeeplearningOverfitting/" rel="prev" title="(原理)过拟合">
+      <i class="fa fa-chevron-left"></i> (原理)过拟合
     </a></div>
       <div class="post-nav-item">
-    <a href="/www6vHomeAIGC/2024/01/08/gptDeeplearningOverfitting/" rel="next" title="(原理)过拟合">
-      (原理)过拟合 <i class="fa fa-chevron-right"></i>
+    <a href="/www6vHomeAIGC/2024/01/09/gptDeeplearningForwardBackward/" rel="next" title="(原理&实战)前向/反向传播">
+      (原理&实战)前向/反向传播 <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
       </footer>
