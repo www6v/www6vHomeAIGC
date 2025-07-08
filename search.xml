@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Reasoning &amp; MOE</title>
+    <title>Reasoning &amp; RL</title>
     <url>/www6vHomeAIGC/2024/03/08/gptReasoningMOESummary/</url>
     <content><![CDATA[<p></p>
 <span id="more"></span>
@@ -13,7 +13,7 @@
 <ul>
 <li><a href="#deepseek">DeepSeek</a></li>
 <li><a href="#deepresearch">DeepResearch</a></li>
-<li><a href="#moe">MOE</a></li>
+<li><a href="#rl">RL</a></li>
 </ul>
 <!-- tocstop -->
 
@@ -23,19 +23,15 @@
 
 
 <h1><span id="deepseek">DeepSeek</span><a href="#deepseek" class="header-anchor">#</a></h1><ul>
-<li><p>V3</p>
-<ul>
+<li>V3<ul>
 <li><strong><a href="/www6vHomeAIGC/2024/02/06/gptDeepSeek/" title="DeepSeek V3">DeepSeek V3</a></strong></li>
 </ul>
 </li>
-<li><p>R1-zero</p>
-<ul>
-<li><strong><a href="/www6vHomeAIGC/2024/04/04/gptReasoningGRPO/" title="(原理)GRPO">(原理)GRPO</a></strong>  </li>
-<li><strong><a href="/www6vHomeAIGC/2024/02/28/gptDeepseekGRPO/" title="(实战)GRPO">(实战)GRPO</a></strong></li>
+<li>R1-zero<ul>
+<li><strong><a href="/www6vHomeAIGC/2024/04/04/gptReasoningGRPO/" title="(原理)GRPO">(原理)GRPO</a></strong></li>
 </ul>
 </li>
-<li><p>R1</p>
-<ul>
+<li>R1<ul>
 <li><strong><a href="/www6vHomeAIGC/2024/02/06/gptDeepSeekR1/" title="(原理) DeepSeek R1">(原理) DeepSeek R1</a></strong> </li>
 <li><strong><a href="/www6vHomeAIGC/2024/02/18/gptReasoningLLM/" title="(原理)Reasoning LLM">(原理)Reasoning LLM</a></strong> </li>
 <li><a href="/www6vHomeAIGC/2024/02/18/gptDeepSeekExplain1/" title="解读 DeepSeek[刘知远]">解读 DeepSeek[刘知远]</a>   </li>
@@ -49,10 +45,14 @@
 </ul>
 </li>
 </ul>
-<h1><span id="deepresearch">DeepResearch</span><a href="#deepresearch" class="header-anchor">#</a></h1><p><strong><a href="/www6vHomeAIGC/2024/03/26/gptReasonDeepResearch/" title="(原理&amp;实战)Deep Research">(原理&amp;实战)Deep Research</a></strong><br><strong><a href="/www6vHomeAIGC/2024/04/16/gptReasonDeepResearchJina/" title="(原理|实现)Deep Research(Jina)">(原理|实现)Deep Research(Jina)</a></strong> </p>
-<h1><span id="moe">MOE</span><a href="#moe" class="header-anchor">#</a></h1><ul>
-<li><strong><a href="/www6vHomeAIGC/2024/03/08/gptModelMOE/" title="(原理)Visual  MOE">(原理)Visual  MOE</a></strong> </li>
-<li><a href="/www6vHomeAIGC/2025/05/03/gptModelMOECode/" title="(代码)MOE">(代码)MOE</a></li>
+<h1><span id="deepresearch">DeepResearch</span><a href="#deepresearch" class="header-anchor">#</a></h1><p><strong><a href="/www6vHomeAIGC/2024/03/26/gptDeepResearch/" title="(原理&amp;实战)Deep Research">(原理&amp;实战)Deep Research</a></strong><br><strong><a href="/www6vHomeAIGC/2024/04/16/gptDeepResearchJina/" title="(原理|实现){Jina}Deep Research">(原理|实现){Jina}Deep Research</a></strong> </p>
+<p><strong><a href="/www6vHomeAIGC/2024/03/26/gptDeepresearchGoogle/" title="(Google)Deep Research">(Google)Deep Research</a></strong> </p>
+<p><strong><a href="/www6vHomeAIGC/2024/03/26/gptDeepresearchLanggraph/" title="(Langgraph)Deep Research">(Langgraph)Deep Research</a></strong> </p>
+<h1><span id="rl">RL</span><a href="#rl" class="header-anchor">#</a></h1><ul>
+<li><strong><a href="/www6vHomeAIGC/2024/02/28/gptDeepseekGRPO/" title="(实战)GRPO">(实战)GRPO</a></strong></li>
+<li><strong><a href="/www6vHomeAIGC/2024/06/01/gptRLPPO/" title="(原理)PPO">(原理)PPO</a></strong> </li>
+<li><strong><a href="/www6vHomeAIGC/2024/06/01/gptRLRewardModel/" title="(原理|实现)PPO-RewardModel">(原理|实现)PPO-RewardModel</a></strong> </li>
+<li><strong><a href="/www6vHomeAIGC/2024/07/08/gptRLdpo/" title="(原理|实现)DPO">(原理|实现)DPO</a></strong></li>
 </ul>
 ]]></content>
       <categories>
@@ -61,98 +61,6 @@
       </categories>
       <tags>
         <tag>Reasoning</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>MLSys  汇总</title>
-    <url>/www6vHomeAIGC/2023/12/11/gptInferSummary/</url>
-    <content><![CDATA[<p></p>
-<span id="more"></span>
-
-
-
-<h2><span id="inference">Inference *</span><a href="#inference" class="header-anchor">#</a></h2><ul>
-<li>框架<br>【5】</li>
-<li>框架vLLM<ul>
-<li>vLLM<br>【9】</li>
-</ul>
-</li>
-<li>优化<br>【3】<ul>
-<li>系统层优化<ul>
-<li>Attention Opt.<ul>
-<li>FlashAttention<br>  【3】</li>
-</ul>
-</li>
-<li>SpeculativeDecoding<br>【5】   </li>
-<li>Memory Management<ul>
-<li>KVCache<br>【3】</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>系统层优化<ul>
-<li>Batch<br>【2】</li>
-<li>PD 分离<br>【3】</li>
-</ul>
-</li>
-<li>模型层优化 <ul>
-<li>模型压缩<ul>
-<li>量化<br>  【2】<ul>
-<li>PTQ<br>  【1】 <ul>
-<li>Weight Only<br>【2】</li>
-<li>Weight&amp;Activation<br>【3】<br>【1】</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>Sparse Attention<br>【1】</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>其他<br>【1】</li>
-</ul>
-<h2><span id="training">Training  *</span><a href="#training" class="header-anchor">#</a></h2><ul>
-<li>分布式 <ul>
-<li>【1】</li>
-<li>DP<br>【4】</li>
-<li>TP<br>  【1】    </li>
-<li>PP<br>  【1】</li>
-<li>混合并行<br> 【2】</li>
-</ul>
-</li>
-<li>低精度<br>【2】</li>
-</ul>
-<h2><span id="llops">LLOps</span><a href="#llops" class="header-anchor">#</a></h2><ul>
-<li>MaaS<ul>
-<li><strong><a href="/www6vHomeAIGC/2024/04/23/gptMaaSMonitor/" title="MaaS 监控">MaaS 监控</a></strong></li>
-<li><strong><a href="/www6vHomeAIGC/2023/09/26/gptLLMOpsPaaS/" title="LLM PaaS">LLM PaaS</a></strong></li>
-</ul>
-</li>
-<li><strong><a href="/www6vHomeAIGC/2023/05/24/gptLLamaFactory/" title="LLama-Factory">LLama-Factory</a></strong></li>
-<li><strong><a href="/www6vHomeAIGC/2023/07/01/gptGPUComputing/" title="显存估算">显存估算</a></strong> </li>
-<li><a href="/www6vHomeAIGC/2022/12/28/gptLLMOps/" title="LLMOps">LLMOps</a> </li>
-<li>GPU<ul>
-<li><strong><a href="/www6vHomeAIGC/2024/03/23/gptGPUk8s/" title="(实战)K8s部署GPU">(实战)K8s部署GPU</a></strong> </li>
-<li><strong><a href="/www6vHomeAIGC/2023/12/23/gptGPUMetrics/" title="GPU 指标&amp;监控">GPU 指标&amp;监控</a></strong> </li>
-<li><a href="/www6vHomeAIGC/2023/05/23/gptGPU/" title="GPU 算力平台">GPU 算力平台</a></li>
-</ul>
-</li>
-</ul>
-<h2><span id="mlsys">MLSys</span><a href="#mlsys" class="header-anchor">#</a></h2><ul>
-<li><strong><a href="/www6vHomeAIGC/2023/11/21/gptMLSysCUDA/" title="CUDA 编程">CUDA 编程</a></strong> </li>
-<li><strong><a href="/www6vHomeAIGC/2023/09/08/gptTrainCommunication/" title="(原理)通信原语">(原理)通信原语</a></strong> </li>
-<li><strong><a href="/www6vHomeAIGC/2023/10/01/gptParameterServer/" title="(原理|实战)Parameter Server">(原理|实战)Parameter Server</a></strong></li>
-</ul>
-]]></content>
-      <categories>
-        <category>AIGC</category>
-        <category>汇总</category>
-      </categories>
-      <tags>
-        <tag>AIGC</tag>
       </tags>
   </entry>
   <entry>
@@ -168,11 +76,17 @@
 <ul>
 <li><a href="#nlp">NLP</a></li>
 <li><a href="#model">Model *</a></li>
+</ul>
+<ul>
+<li><a href="#core">Core</a></li>
 <li><a href="#training">Training *</a></li>
 <li><a href="#data">Data</a></li>
 <li><a href="#%E5%9E%82%E7%B1%BB%E6%A8%A1%E5%9E%8B">垂类模型</a></li>
+<li><a href="#%E5%85%B6%E4%BB%96">其他</a><ul>
 <li><a href="#study">Study</a></li>
 <li><a href="#research">Research</a></li>
+</ul>
+</li>
 </ul>
 <!-- tocstop -->
 
@@ -184,7 +98,8 @@
 <li><a href="/www6vHomeAIGC/2023/05/28/gptDialogue/" title="多轮对话">多轮对话</a></li>
 </ul>
 <h2><span id="model">Model *</span><a href="#model" class="header-anchor">#</a></h2><ul>
-<li>Foundation Models<ul>
+<li><p>Foundation Models</p>
+<ul>
 <li><a href="/www6vHomeAIGC/2022/10/30/gptLargeModelSurvey/" title="(综述)大模型">(综述)大模型</a></li>
 <li><a href="/www6vHomeAIGC/2023/02/17/gptLargeModel/" title="大模型">大模型</a> </li>
 <li>decode-only<ul>
@@ -204,13 +119,22 @@
 <li><a href="/www6vHomeAIGC/2023/01/04/gptLeaderBoard/" title="大模型 排行榜">大模型 排行榜</a></li>
 </ul>
 </li>
+<li><p>MOE</p>
+<ul>
+<li><p><strong><a href="/www6vHomeAIGC/2024/03/08/gptModelMOE/" title="(原理)Visual  MOE">(原理)Visual  MOE</a></strong> </p>
+</li>
+<li><a href="/www6vHomeAIGC/2025/05/03/gptModelMOECode/" title="(代码)MOE">(代码)MOE</a></li>
+</ul>
+</li>
+</ul>
+<h1><span id="core">Core</span><a href="#core" class="header-anchor">#</a></h1><ul>
 <li><a href="/www6vHomeAIGC/2023/12/03/gptScalingLaw/" title="Scaling Law">Scaling Law</a> * </li>
 <li><a href="/www6vHomeAIGC/2023/02/03/gptEmergent/" title="(原理)涌现现象">(原理)涌现现象</a>   </li>
 <li><a href="/www6vHomeAIGC/2023/02/06/gptHallucination/" title="(原理)幻觉问题">(原理)幻觉问题</a> * </li>
 <li><a href="/www6vHomeAIGC/2023/01/25/gptImpossibleTriangle/" title="(原理)不可能三角">(原理)不可能三角</a>    </li>
-<li><a href="/www6vHomeAIGC/2023/02/07/gptEval/" title="测评">测评</a></li>
+<li><a href="/www6vHomeAIGC/2023/02/07/gptEval/" title="测评">测评</a> *</li>
 </ul>
-<h2><span id="training">Training  *</span><a href="#training" class="header-anchor">#</a></h2><ul>
+<h1><span id="training">Training  *</span><a href="#training" class="header-anchor">#</a></h1><ul>
 <li><p>训练</p>
 <ul>
 <li><a href="/www6vHomeAIGC/2022/11/19/gptLargeModelTraining/" title="(原理)Training">(原理)Training</a></li>
@@ -229,7 +153,7 @@
 </ul>
 </li>
 </ul>
-<h2><span id="data">Data</span><a href="#data" class="header-anchor">#</a></h2><ul>
+<h1><span id="data">Data</span><a href="#data" class="header-anchor">#</a></h1><ul>
 <li>List<ul>
 <li><a href="/www6vHomeAIGC/2023/01/08/gptDataSet/" title="(list)数据集">(list)数据集</a></li>
 </ul>
@@ -246,13 +170,13 @@
 </ul>
 </li>
 </ul>
-<h2><span id="垂类模型">垂类模型</span><a href="#垂类模型" class="header-anchor">#</a></h2><ul>
+<h1><span id="垂类模型">垂类模型</span><a href="#垂类模型" class="header-anchor">#</a></h1><ul>
 <li><a href="/www6vHomeAIGC/2023/01/04/gptDomain/" title="垂类大模型">垂类大模型</a> </li>
 <li><a href="/www6vHomeAIGC/2022/11/24/gptDomainFinance/" title="金融大模型">金融大模型</a>   </li>
 <li><a href="/www6vHomeAIGC/2023/02/07/gptDomainMed/" title="医疗大模型">医疗大模型</a>   </li>
 <li><a href="/www6vHomeAIGC/2024/02/07/gptDomainLaw/" title="法律大模型">法律大模型</a></li>
 </ul>
-<h2><span id="study">Study</span><a href="#study" class="header-anchor">#</a></h2><ul>
+<h1><span id="其他">其他</span><a href="#其他" class="header-anchor">#</a></h1><h2><span id="study">Study</span><a href="#study" class="header-anchor">#</a></h2><ul>
 <li><a href="/www6vHomeAIGC/2022/08/01/gptStudy/" title="GPT  学习资源">GPT  学习资源</a></li>
 <li><a href="/www6vHomeAIGC/2022/01/22/aiStudyResouce/" title="人工智能-学习资源">人工智能-学习资源</a></li>
 </ul>
@@ -437,7 +361,7 @@
       </tags>
   </entry>
   <entry>
-    <title>深度学习 汇总</title>
+    <title>深度学习|机器学习 汇总</title>
     <url>/www6vHomeAIGC/2022/03/23/gptDeeplearningSummary/</url>
     <content><![CDATA[<p></p>
 <span id="more"></span>
@@ -450,6 +374,9 @@
 <li><a href="#basic">Basic</a></li>
 <li><a href="#deeplearning">DeepLearning</a></li>
 </ul>
+<ul>
+<li><a href="#%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0">机器学习</a></li>
+</ul>
 <!-- tocstop -->
 
 </div>
@@ -461,22 +388,30 @@
 <li><a href="/www6vHomeAIGC/2022/06/07/aiMachineLearning/" title="Machine Learning">Machine Learning</a></li>
 </ul>
 <h2><span id="deeplearning">DeepLearning</span><a href="#deeplearning" class="header-anchor">#</a></h2><ul>
-<li><strong><a href="/www6vHomeAIGC/2022/06/11/aiDeepLearning/" title="Deep Learning">Deep Learning</a></strong></li>
-<li><strong><a href="/www6vHomeAIGC/2024/01/09/gptDeeplearningForwardBackward/" title="(原理&amp;实战)前向&#x2F;反向传播">(原理&amp;实战)前向&#x2F;反向传播</a></strong></li>
-<li><strong><a href="/www6vHomeAIGC/2024/01/12/gptDeeplearningLoss/" title="(原理&amp;实战)交叉熵损失">(原理&amp;实战)交叉熵损失</a></strong></li>
-<li>正则化<ul>
+<li><p><strong><a href="/www6vHomeAIGC/2022/06/11/aiDeepLearning/" title="Deep Learning">Deep Learning</a></strong></p>
+</li>
+<li><p><strong><a href="/www6vHomeAIGC/2024/01/09/gptDeeplearningForwardBackward/" title="(原理&amp;实战)前向&#x2F;反向传播">(原理&amp;实战)前向&#x2F;反向传播</a></strong></p>
+</li>
+<li><p><strong><a href="/www6vHomeAIGC/2024/01/12/gptDeeplearningLoss/" title="(原理&amp;实战)交叉熵损失">(原理&amp;实战)交叉熵损失</a></strong></p>
+</li>
+<li><p><strong><a href="/www6vHomeAIGC/2024/01/08/gptDeeplearningOverfitting/" title="(原理)过拟合">(原理)过拟合</a></strong>   </p>
+</li>
+<li><p>正则化</p>
+<ul>
 <li><strong><a href="/www6vHomeAIGC/2024/01/08/gptDeeplearningWeightDecay/" title="(原理&amp;实战)权重衰减">(原理&amp;实战)权重衰减</a></strong> </li>
 <li><strong><a href="/www6vHomeAIGC/2024/01/08/gptDeeplearningDropout/" title="(原理&amp;实战)Dropout">(原理&amp;实战)Dropout</a></strong></li>
 </ul>
 </li>
-<li>网络优化<ul>
+<li><p>网络优化</p>
+<ul>
 <li><strong><a href="/www6vHomeAIGC/2024/01/08/gptDeeplearningLearningRate/" title="(原理)学习率">(原理)学习率</a></strong>   </li>
-<li><strong><a href="/www6vHomeAIGC/2024/01/17/gptDeeplearningBatchsize/" title="(原理)Batchsize">(原理)Batchsize</a></strong></li>
-<li><strong><a href="/www6vHomeAIGC/2024/01/08/gptDeeplearningNorm/" title="规范化 Norm">规范化 Norm</a></strong> </li>
-<li><strong><a href="/www6vHomeAIGC/2024/04/04/gptDeeplearningGradOpt/" title="(原理)梯度优化">(原理)梯度优化</a></strong></li>
+<li><a href="/www6vHomeAIGC/2024/01/17/gptDeeplearningBatchsize/" title="(原理)Batchsize">(原理)Batchsize</a></li>
+<li><a href="/www6vHomeAIGC/2024/01/08/gptDeeplearningNorm/" title="规范化 Norm">规范化 Norm</a> </li>
+<li><a href="/www6vHomeAIGC/2024/04/04/gptDeeplearningGradOpt/" title="(原理)梯度优化">(原理)梯度优化</a></li>
 </ul>
 </li>
-<li>Transformer<ul>
+<li><p>Transformer</p>
+<ul>
 <li><strong><a href="/www6vHomeAIGC/2022/11/30/gptTransformer/" title="(原理)Transformer">(原理)Transformer</a></strong> </li>
 <li><strong><a href="/www6vHomeAIGC/2023/11/19/gptSelfAttention/" title="(原理)Self-Attention">(原理)Self-Attention</a></strong> </li>
 <li><strong><a href="/www6vHomeAIGC/2023/11/19/gptModelGQA/" title="(原理)GQA">(原理)GQA</a></strong>   </li>
@@ -485,7 +420,14 @@
 <li><a href="/www6vHomeAIGC/2023/02/26/gptTrainTokenizer/" title="Tokenizer">Tokenizer</a></li>
 </ul>
 </li>
-<li><strong><a href="/www6vHomeAIGC/2023/03/28/gptPytorch/" title="(实战)PyTorch">(实战)PyTorch</a></strong></li>
+<li><p><strong><a href="/www6vHomeAIGC/2023/03/28/gptPytorch/" title="(实战)PyTorch">(实战)PyTorch</a></strong></p>
+</li>
+</ul>
+<h1><span id="机器学习">机器学习</span><a href="#机器学习" class="header-anchor">#</a></h1><ul>
+<li><p><strong><a href="/www6vHomeAIGC/2023/11/21/gptMLData/" title="机器学习-数据">机器学习-数据</a></strong> </p>
+</li>
+<li><p><strong><a href="/www6vHomeAIGC/2023/11/21/gptMLModel/" title="机器学习-模型">机器学习-模型</a></strong></p>
+</li>
 </ul>
 ]]></content>
       <categories>
@@ -494,6 +436,88 @@
       </categories>
       <tags>
         <tag>Deeplearning</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>MLSys  汇总(archived)</title>
+    <url>/www6vHomeAIGC/2000/12/11/gptInferSummary/</url>
+    <content><![CDATA[<p></p>
+<span id="more"></span>
+
+
+
+<h2><span id="inference">Inference *</span><a href="#inference" class="header-anchor">#</a></h2><ul>
+<li>框架<br>【5】</li>
+<li>框架vLLM<ul>
+<li>vLLM<br>【9】</li>
+</ul>
+</li>
+<li>优化<br>【3】<ul>
+<li>系统层优化<ul>
+<li>Attention Opt.<ul>
+<li>FlashAttention<br>  【3】</li>
+</ul>
+</li>
+<li>SpeculativeDecoding<br>【5】   </li>
+<li>Memory Management<ul>
+<li>KVCache<br>【3】</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>系统层优化<ul>
+<li>Batch<br>【2】</li>
+<li>PD 分离<br>【3】</li>
+</ul>
+</li>
+<li>模型层优化 <ul>
+<li>模型压缩<ul>
+<li>量化<br>  【2】<ul>
+<li>PTQ<br>  【1】 <ul>
+<li>Weight Only<br>【2】</li>
+<li>Weight&amp;Activation<br>【3】<br>【1】</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Sparse Attention<br>【1】</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>其他<br>【1】</li>
+</ul>
+<h2><span id="training">Training  *</span><a href="#training" class="header-anchor">#</a></h2><ul>
+<li>分布式 <ul>
+<li>【1】</li>
+<li>DP<br>【4】</li>
+<li>TP<br>  【1】    </li>
+<li>PP<br>  【1】</li>
+<li>混合并行<br> 【2】</li>
+</ul>
+</li>
+<li>低精度<br>【2】</li>
+</ul>
+<h2><span id="llops">LLOps</span><a href="#llops" class="header-anchor">#</a></h2><ul>
+<li><p>MaaS<br>[2]<br><br>[3]</p>
+</li>
+<li><p>GPU<br> [3]</p>
+</li>
+</ul>
+<h2><span id="mlsys">MLSys</span><a href="#mlsys" class="header-anchor">#</a></h2><ul>
+<li><strong><a href="/www6vHomeAIGC/2023/11/21/gptMLSysCUDA/" title="CUDA 编程">CUDA 编程</a></strong> </li>
+<li><strong><a href="/www6vHomeAIGC/2023/09/08/gptTrainCommunication/" title="(原理)通信原语">(原理)通信原语</a></strong> </li>
+<li><strong><a href="/www6vHomeAIGC/2023/10/01/gptParameterServer/" title="(原理|实战)Parameter Server">(原理|实战)Parameter Server</a></strong></li>
+</ul>
+]]></content>
+      <categories>
+        <category>AIGC</category>
+        <category>汇总</category>
+      </categories>
+      <tags>
+        <tag>AIGC</tag>
       </tags>
   </entry>
   <entry>
@@ -588,24 +612,60 @@
       </tags>
   </entry>
   <entry>
-    <title>MaaS 监控</title>
-    <url>/www6vHomeAIGC/2024/04/23/gptMaaSMonitor/</url>
+    <title>(原理|实现)DPO</title>
+    <url>/www6vHomeAIGC/2024/07/08/gptRLdpo/</url>
     <content><![CDATA[<p></p>
 <span id="more"></span>
 
-<h1><span id="maas-监控">MaaS 监控</span><a href="#maas-监控" class="header-anchor">#</a></h1><p><a href="https://candied-skunk-1ca.notion.site/MaaS-1d2bfe2110848079b06afffaea367fe9?pvs=4">MaaS 监控</a></p>
+<h1><span id="dpo">DPO</span><a href="#dpo" class="header-anchor">#</a></h1><p><a href="https://candied-skunk-1ca.notion.site/DPO-105bfe211084803abb9cdbdfff092bce?source=copy_link">(原理|实现)DPO</a></p>
 ]]></content>
       <categories>
         <category>AIGC</category>
-        <category>MaaS</category>
+        <category>RL</category>
       </categories>
       <tags>
-        <tag>MaaS</tag>
+        <tag>RL</tag>
       </tags>
   </entry>
   <entry>
-    <title>(原理|实现)Deep Research(Jina)</title>
-    <url>/www6vHomeAIGC/2024/04/16/gptReasonDeepResearchJina/</url>
+    <title>(原理|实现)PPO-RewardModel</title>
+    <url>/www6vHomeAIGC/2024/06/01/gptRLRewardModel/</url>
+    <content><![CDATA[<p></p>
+<span id="more"></span>
+
+
+
+<h1><span id="ppo-rewardmodel">PPO-RewardModel</span><a href="#ppo-rewardmodel" class="header-anchor">#</a></h1><p><a href="https://candied-skunk-1ca.notion.site/PPO-RM-205bfe21108480a39b78d82696d1ede4?pvs=4">(原理|实现)PPO-RewardModel</a></p>
+]]></content>
+      <categories>
+        <category>AIGC</category>
+        <category>RL</category>
+      </categories>
+      <tags>
+        <tag>RL</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>(原理)PPO</title>
+    <url>/www6vHomeAIGC/2024/06/01/gptRLPPO/</url>
+    <content><![CDATA[<p></p>
+<span id="more"></span>
+
+
+
+<h1><span id="ppo">PPO</span><a href="#ppo" class="header-anchor">#</a></h1><p><a href="https://candied-skunk-1ca.notion.site/PPO-204bfe21108480b2aba0ce27d7d5e761?pvs=4">(原理)PPO</a></p>
+]]></content>
+      <categories>
+        <category>AIGC</category>
+        <category>RL</category>
+      </categories>
+      <tags>
+        <tag>RL</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>(原理|实现){Jina}Deep Research</title>
+    <url>/www6vHomeAIGC/2024/04/16/gptDeepResearchJina/</url>
     <content><![CDATA[<p></p>
 <span id="more"></span>
 
@@ -614,10 +674,10 @@
 ]]></content>
       <categories>
         <category>AIGC</category>
-        <category>reason</category>
+        <category>Deepresearch</category>
       </categories>
       <tags>
-        <tag>reason</tag>
+        <tag>Deepresearch</tag>
       </tags>
   </entry>
   <entry>
@@ -785,10 +845,58 @@
     <content><![CDATA[<p></p>
 <span id="more"></span>
 
+<h1><span id="梯度优化">梯度优化</span><a href="#梯度优化" class="header-anchor">#</a></h1><h1><span id="gradient-accumulation"><strong>Gradient accumulation</strong></span><a href="#gradient-accumulation" class="header-anchor">#</a></h1><img src="/www6vHomeAIGC/2024/04/04/gptDeeplearningGradOpt/maonmv7e.bmp" class>
 
-<h1><span id="梯度优化">梯度优化</span><a href="#梯度优化" class="header-anchor">#</a></h1><iframe src="https://candied-skunk-1ca.notion.site/ebd/180bfe21108480a2ab52cf656b86d2a4" width="100%" height="1000" frameborder="0" allowfullscreen>
-
-</iframe>]]></content>
+<h1><span id="gradient-checkpointing-10"><strong>G</strong>radient checkpointing [10]</span><a href="#gradient-checkpointing-10" class="header-anchor">#</a></h1><ul>
+<li><p>显存占用优化算法</p>
+<ul>
+<li>memory usage 与 computation time 之间的 tradeoff ；</li>
+</ul>
+</li>
+<li><p>gradient checkpointing</p>
+<ul>
+<li><p>In deep neural networks, backpropagation requires storing <strong>intermediate activations</strong> for computing gradients during the backward pass.</p>
+</li>
+<li><p>但是当层数变多时，存储所有的中间层的激活值（intermediate activations）非常地占用显存；</p>
+</li>
+<li><p>gradient checkpointing</p>
+<p><strong>选择性地重新计算（recompute）一部分的 intermediate activations 在反向传播过程中</strong>来缓解显存的压力；</p>
+</li>
+</ul>
+</li>
+</ul>
+<h1><span id="gradient-clipping-梯度裁剪"><strong>Gradient Clipping  (梯度裁剪)</strong></span><a href="#gradient-clipping-梯度裁剪" class="header-anchor">#</a></h1><h3><span id="目的21">目的[21]</span><a href="#目的21" class="header-anchor">#</a></h3><p><strong>梯度爆炸问题的常见应对方式为“梯度裁剪”</strong>，也就是通过“clip”方式来防止迭代中梯度值过大。</p>
+<h3><span id="两种常见形式20">两种常见形式[20]</span><a href="#两种常见形式20" class="header-anchor">#</a></h3><ul>
+<li>梯度范数裁剪（Gradient Norm Clipping）: 这种方法涉及计算所有参数梯度的范数（例如L2范数），如果这个范数超过了设定的阈值，就将梯度缩放到这个阈值以内。在PyTorch中，这可以通过 <strong>torch.nn.utils.clip_grad_norm_</strong> 函数实现。</li>
+<li>梯度值裁剪（Gradient Value Clipping）: 这种方法对每个参数的梯度值进行独立裁剪，确保它们不会超过一个设定的最大值或最小值。在PyTorch中，这可以通过 <strong>torch.nn.utils.clip_grad_value_</strong> 函数实现。</li>
+</ul>
+<h1><span id="参考">参考</span><a href="#参考" class="header-anchor">#</a></h1><h3><span id="overview">overview</span><a href="#overview" class="header-anchor">#</a></h3><p><a href="https://huggingface.co/docs/transformers/v4.18.0/en/performance">Performance and Scalability: How To Fit a Bigger Model and Train It Faster</a>  ***</p>
+<h3><span id="gradient-accumulation"><strong>gradient accumulation</strong></span><a href="#gradient-accumulation" class="header-anchor">#</a></h3><p>1xx. [<a href="https://www.bilibili.com/video/BV1tz4y1773d/">LLMs 实践] 11 gradient accumulation 显存优化 trick</a>  v</p>
+<p>​	<a href="https://github.com/chunhuizhang/personal_chatgpt/blob/main/tutorials/gradient_accumulation.ipynb">gradient_accumulation.ipynb</a></p>
+<p>​	[ <a href="https://www.notion.so/LLMs-11-gradient-accumulation-trick-180bfe21108480639536fa51f7de92a8?pvs=21">LLMs 实践] 11 gradient accumulation 显存优化 trick  </a></p>
+<p>1xx.  <a href="https://blog.csdn.net/wxc971231/article/details/139177793">Pytorch入门（7）—— 梯度累加（Gradient Accumulation）</a></p>
+<p>1xx. <a href="https://zhuanlan.zhihu.com/p/595716023">聊聊梯度累加(Gradient Accumulation)</a></p>
+<p>1xx. <a href="https://towardsdatascience.com/what-is-gradient-accumulation-in-deep-learning-ec034122cfa">What is Gradient Accumulation in Deep Learning?</a></p>
+<p>1xx. <a href="https://huggingface.co/docs/accelerate/usage_guides/gradient_accumulation">Performing gradient accumulation with Accelerate</a></p>
+<p>​	<a href="https://hugging-face.cn/docs/accelerate/usage_guides/gradient_accumulation">使用Accelerate进行梯度累积</a></p>
+<h3><span id="gradient-checkpointing">gradient checkpointing</span><a href="#gradient-checkpointing" class="header-anchor">#</a></h3><ol start="10">
+<li>[<a href="https://www.bilibili.com/video/BV1QM4y1H7nH/">LLMs 实践] 13 gradient checkpointing 显存优化 trick</a> v</li>
+</ol>
+<p>​	<a href="https://github.com/chunhuizhang/personal_chatgpt/blob/main/tutorials/gradient_checkpointing.ipynb">gradient_checkpointing.ipynb</a></p>
+<p>​	[<a href="https://www.notion.so/LLMs-13-gradient-checkpointing-trick-180bfe211084806db50fe0b130061a13?pvs=21">LLMs 实践] 13 gradient checkpointing 显存优化 trick </a></p>
+<p>​	<a href="https://medium.com/tensorflow/fitting-larger-networks-into-memory-583e3c758ff9">Fitting larger networks into memory.</a> *** 看动图</p>
+<p>​	<a href="https://yaroslavvb.medium.com/backprop-and-systolic-arrays-24e925d2050">Backprop and systolic arrays.</a></p>
+<h3><span id="gradient-clipping"><strong>Gradient Clipping</strong></span><a href="#gradient-clipping" class="header-anchor">#</a></h3><ol start="20">
+<li><a href="https://blog.csdn.net/ZacharyGz/article/details/135410610">梯度裁剪（Gradient Clipping）</a></li>
+</ol>
+<p>​	<a href="https://github.com/pytorch/pytorch/blob/main/torch/nn/utils/clip_grad.py">https://github.com/pytorch/pytorch/blob/main/torch/nn/utils/clip_grad.py</a></p>
+<ol start="21">
+<li><a href="https://zhuanlan.zhihu.com/p/99953668">深度炼丹之梯度裁剪</a></li>
+</ol>
+<p>1xx. <a href="https://zhuanlan.zhihu.com/p/659767690">【深度学习】第6.2节 梯度裁剪</a></p>
+<p>1xx. <a href="https://blog.csdn.net/m0_46412065/article/details/131396098">【Pytorch】梯度裁剪——torch.nn.utils.clip_grad_norm_的原理及计算过程</a></p>
+<p>1xx.  <a href="https://blog.csdn.net/leonardotu/article/details/136145043">PyTorch使用Tricks：梯度裁剪-防止梯度爆炸或梯度消失 ！！</a></p>
+]]></content>
       <categories>
         <category>AIGC</category>
         <category>deepLearning</category>
@@ -872,7 +980,7 @@
   </entry>
   <entry>
     <title>(原理&amp;实战)Deep Research</title>
-    <url>/www6vHomeAIGC/2024/03/26/gptReasonDeepResearch/</url>
+    <url>/www6vHomeAIGC/2024/03/26/gptDeepResearch/</url>
     <content><![CDATA[<p></p>
 <span id="more"></span>
 
@@ -881,10 +989,48 @@
 ]]></content>
       <categories>
         <category>AIGC</category>
-        <category>reason</category>
+        <category>Deepresearch</category>
       </categories>
       <tags>
-        <tag>reason</tag>
+        <tag>Deepresearch</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>(Langgraph)Deep Research</title>
+    <url>/www6vHomeAIGC/2024/03/26/gptDeepresearchLanggraph/</url>
+    <content><![CDATA[<p></p>
+
+<span id="more"></span>
+
+
+
+<h1><span id="langgraphdeep-research">(Langgraph)Deep Research</span><a href="#langgraphdeep-research" class="header-anchor">#</a></h1><p><a href="https://candied-skunk-1ca.notion.site/Langgraph-Deep-Research-1c2bfe211084803ab640f7304172834a?source=copy_link">(Langgraph)Deep Research</a></p>
+]]></content>
+      <categories>
+        <category>AIGC</category>
+        <category>Deepresearch</category>
+      </categories>
+      <tags>
+        <tag>Deepresearch</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>(Google)Deep Research</title>
+    <url>/www6vHomeAIGC/2024/03/26/gptDeepresearchGoogle/</url>
+    <content><![CDATA[<p></p>
+
+<span id="more"></span>
+
+
+
+<h1><span id="googledeep-research">(Google)Deep Research</span><a href="#googledeep-research" class="header-anchor">#</a></h1><p><a href="https://candied-skunk-1ca.notion.site/Google-Deep-Research-220bfe21108480ce9348f628408a85e9?source=copy_link">(Google)Deep Research</a></p>
+]]></content>
+      <categories>
+        <category>AIGC</category>
+        <category>Deepresearch</category>
+      </categories>
+      <tags>
+        <tag>Deepresearch</tag>
       </tags>
   </entry>
   <entry>
@@ -942,22 +1088,6 @@
       </categories>
       <tags>
         <tag>multimodal</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>(实战)K8s部署GPU</title>
-    <url>/www6vHomeAIGC/2024/03/23/gptGPUk8s/</url>
-    <content><![CDATA[<p></p>
-<span id="more"></span>
-
-<h1><span id="k8s部署gpu">K8s部署GPU</span><a href="#k8s部署gpu" class="header-anchor">#</a></h1><p><a href="https://candied-skunk-1ca.notion.site/K8s-GPU-1bfbfe211084802c8b27ee5d8168665b?pvs=4">(实战)K8s部署GPU</a></p>
-]]></content>
-      <categories>
-        <category>AIGC</category>
-        <category>GPU</category>
-      </categories>
-      <tags>
-        <tag>GPU</tag>
       </tags>
   </entry>
   <entry>
@@ -1244,7 +1374,32 @@
     <content><![CDATA[<p></p>
 <span id="more"></span>
 
-<h1><span id="batch-size">Batch Size</span><a href="#batch-size" class="header-anchor">#</a></h1><p><a href="https://candied-skunk-1ca.notion.site/Batch-Size-174bfe21108480348407d110811efb3b?pvs=4">(原理)Batch Size</a></p>
+<h1><span id="最佳实践">最佳实践</span><a href="#最佳实践" class="header-anchor">#</a></h1><h3><span id="batchsize">batchsize</span><a href="#batchsize" class="header-anchor">#</a></h3><ul>
+<li>batchsize  下限 [1]</li>
+</ul>
+<p>别太小的限制在于，<strong>batch size太小，会来不及收敛。</strong></p>
+<p>所以在常见的setting（～100 epochs），batch size一般不会低于16。</p>
+<ul>
+<li>batchsize 上限   [1]</li>
+</ul>
+<p>batch size别太大的限制在于两个点，</p>
+<p>1）batch size太大，memory容易不够用。这个很显然，就不多说了。</p>
+<p>2）<strong>batch size太大，深度学习的优化（training loss降不下去）和泛化（generalization gap很大）都会出问题。</strong></p>
+<h3><span id="learning-rate-amp-batch-size"><strong>learning rate &amp; batch size</strong></span><a href="#learning-rate-amp-batch-size" class="header-anchor">#</a></h3><p>总之，可以证明，<strong>learning rate&#x2F;batch size的比值对深度学习是有指数级的影响</strong>[3]，所以非常重要，没事别瞎调。[1]</p>
+<p><strong>这也是为什么大的batch_size往往建议可以相应取大点<a href="https://zhida.zhihu.com/search?content_id=462989051&content_type=Answer&match_order=1&q=learning_rate&zhida_source=entity">learning_rate</a>, 因为梯度震荡小，大</strong>learning_rate<strong>可以加速收敛过程，也可以防止陷入到局部最小值，而小batch_size用小learning_rate迭代，防止错过最优点，一直上下震荡没法收敛（这也是一个小trick）</strong>。[2]</p>
+<h1><span id="参考">参考</span><a href="#参考" class="header-anchor">#</a></h1><ol>
+<li><a href="https://www.zhihu.com/question/61607442/answer/1875700191">怎么选取训练神经网络时的Batch size?</a>  Summer Clover</li>
+<li><a href="https://www.zhihu.com/question/456600260/answer/2380983385">训练神经网络时batchsize扩大一倍的同时需要增加epoch数量吗?</a> 新一</li>
+</ol>
+<ul>
+<li><p><a href="https://www.notion.so/7-1-174bfe21108480a7a702e4ebed99f68f?pvs=21">7.1 批大小调整实验</a> 百度邱</p>
+<p><a href="https://aistudio.baidu.com/education/lessonvideo/3048883">7.1 批大小调整实验</a></p>
+</li>
+<li><p><a href="https://zhuanlan.zhihu.com/p/148267858">设置BatchSize</a></p>
+</li>
+<li><p><a href="https://www.zhihu.com/question/32673260/answer/3356342576">深度学习中的batch的大小对学习效果有何影响？</a></p>
+</li>
+</ul>
 ]]></content>
       <categories>
         <category>AIGC</category>
@@ -1303,6 +1458,25 @@
       </tags>
   </entry>
   <entry>
+    <title>(原理)过拟合</title>
+    <url>/www6vHomeAIGC/2024/01/08/gptDeeplearningOverfitting/</url>
+    <content><![CDATA[<p></p>
+
+<span id="more"></span>
+
+
+
+<h1><span id="原理过拟合">(原理)过拟合</span><a href="#原理过拟合" class="header-anchor">#</a></h1><p><a href="https://candied-skunk-1ca.notion.site/1e1bfe2110848025a7b2ffba454daa86?source=copy_link">(原理)过拟合</a></p>
+]]></content>
+      <categories>
+        <category>AIGC</category>
+        <category>deepLearning</category>
+      </categories>
+      <tags>
+        <tag>deepLearning</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>规范化 Norm</title>
     <url>/www6vHomeAIGC/2024/01/08/gptDeeplearningNorm/</url>
     <content><![CDATA[<p></p>
@@ -1310,7 +1484,44 @@
 
 
 
-<h1><span id="规范化-norm">规范化 Norm</span><a href="#规范化-norm" class="header-anchor">#</a></h1><p><a href="https://candied-skunk-1ca.notion.site/Norm-172bfe21108480b2991cc365d3086945?pvs=4">规范化 Norm</a></p>
+<h1><span id="norm-作用1">Norm 作用[1]</span><a href="#norm-作用1" class="header-anchor">#</a></h1><p>dnn 的标准组件，稳定和加速训练过程</p>
+<h1><span id="batch-norm1">Batch Norm[1]</span><a href="#batch-norm1" class="header-anchor">#</a></h1><ul>
+<li>reduce cross <strong>batch size</strong></li>
+<li><strong>mini-batch dimension</strong></li>
+</ul>
+<p>一般用于图像，不涉及到padding的问题；</p>
+<h1><span id="layer-norm1">Layer Norm[1]</span><a href="#layer-norm1" class="header-anchor">#</a></h1><ul>
+<li>reduce cross <strong>hidden dim</strong></li>
+<li>reduce across the <strong>feature dimension</strong>.</li>
+</ul>
+<p>一般用于序列，一个 batch size 内存在 padding；</p>
+<ul>
+<li>RMSNorm: 对 LN 的一种变体，llama</li>
+</ul>
+<hr>
+<aside> 💡
+
+<ul>
+<li><a href="https://spaces.ac.cn/archives/9009">https://spaces.ac.cn/archives/9009</a></li>
+<li>Pre LN: <code>llama</code></li>
+<li>Post LN: <code>attention is all you need</code></li>
+</ul>
+<p>llama在工程上使用Pre LN</p>
+</aside>
+
+<hr>
+<ol>
+<li>[<a href="https://www.bilibili.com/video/BV13q49eaERj/">pytorch] BN、LN、RMSNorm 及 pre LN vs. post LN 对比，标准化</a>  v ***</li>
+</ol>
+<p>​	<a href="https://github.com/chunhuizhang/llm_aigc/blob/main/tutorials/nn_basics/tricks_norms/normalization.ipynb">normalization.ipynb</a></p>
+<p>​	[<a href="https://www.notion.so/pytorch-BN-LN-RMSNorm-pre-LN-vs-post-LN-177bfe2110848088830cfea3d5a33d3e?pvs=21">pytorch] BN、LN、RMSNorm 及 pre LN vs. post LN 对比，标准化 </a></p>
+<p>1xx. <a href="https://afterhoursresearch.hashnode.dev/batch-normalization-layer-normalization-and-root-mean-square-layer-normalization-a-comprehensive-guide-with-python-implementations">Batch Normalization, Layer Normalization and Root Mean Square Layer Normalization: A Comprehensive Guide with Python Implementations</a></p>
+<p>todo</p>
+<ul>
+<li><p><a href="https://www.notion.so/7-5-174bfe2110848045bc6cff467363d471?pvs=21">7.5 逐层规范化</a> 百度邱  有代码</p>
+<p><a href="https://aistudio.baidu.com/education/lessonvideo/3048901">https://aistudio.baidu.com/education/lessonvideo/3048901</a></p>
+</li>
+</ul>
 ]]></content>
       <categories>
         <category>AIGC</category>
@@ -1373,23 +1584,6 @@
       </tags>
   </entry>
   <entry>
-    <title>GPU 指标&amp;监控</title>
-    <url>/www6vHomeAIGC/2023/12/23/gptGPUMetrics/</url>
-    <content><![CDATA[<p></p>
-<span id="more"></span>
-
-
-<h1><span id="gpu-指标amp监控">GPU 指标&amp;监控</span><a href="#gpu-指标amp监控" class="header-anchor">#</a></h1><p><a href="https://candied-skunk-1ca.notion.site/165bfe21108480e29fa1d06e4852a6e0?pvs=4">GPU 指标&amp;监控</a></p>
-]]></content>
-      <categories>
-        <category>AIGC</category>
-        <category>GPU</category>
-      </categories>
-      <tags>
-        <tag>GPU</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Scaling Law</title>
     <url>/www6vHomeAIGC/2023/12/03/gptScalingLaw/</url>
     <content><![CDATA[<p></p>
@@ -1413,6 +1607,44 @@
       </categories>
       <tags>
         <tag>model</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>机器学习-模型</title>
+    <url>/www6vHomeAIGC/2023/11/21/gptMLModel/</url>
+    <content><![CDATA[<p></p>
+
+<span id="more"></span>
+
+
+
+<h1><span id="机器学习-模型">机器学习-模型</span><a href="#机器学习-模型" class="header-anchor">#</a></h1><p><a href="https://candied-skunk-1ca.notion.site/216bfe21108480868a4cf3a485dd48e6?source=copy_link">机器学习-模型</a></p>
+]]></content>
+      <categories>
+        <category>AIGC</category>
+        <category>ML</category>
+      </categories>
+      <tags>
+        <tag>ML</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>机器学习-数据</title>
+    <url>/www6vHomeAIGC/2023/11/21/gptMLData/</url>
+    <content><![CDATA[<p></p>
+
+<span id="more"></span>
+
+
+
+<h1><span id="机器学习-数据">机器学习-数据</span><a href="#机器学习-数据" class="header-anchor">#</a></h1><p><a href="https://candied-skunk-1ca.notion.site/ML-216bfe2110848076a892e11e7144828c?source=copy_link">机器学习-数据</a></p>
+]]></content>
+      <categories>
+        <category>AIGC</category>
+        <category>ML</category>
+      </categories>
+      <tags>
+        <tag>ML</tag>
       </tags>
   </entry>
   <entry>
@@ -1481,23 +1713,6 @@
       </categories>
       <tags>
         <tag>MLSys</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>LLM PaaS</title>
-    <url>/www6vHomeAIGC/2023/09/26/gptLLMOpsPaaS/</url>
-    <content><![CDATA[<p></p>
-<span id="more"></span>
-
-
-<h1><span id="llm-paas">LLM PaaS</span><a href="#llm-paas" class="header-anchor">#</a></h1><p><a href="https://candied-skunk-1ca.notion.site/9ddf2032d70b4722ad34a48cb305d80b?pvs=4">LLM PaaS</a></p>
-]]></content>
-      <categories>
-        <category>AIGC</category>
-        <category>LLMOps</category>
-      </categories>
-      <tags>
-        <tag>LLMOps</tag>
       </tags>
   </entry>
   <entry>
@@ -2194,23 +2409,6 @@
       </tags>
   </entry>
   <entry>
-    <title>显存估算</title>
-    <url>/www6vHomeAIGC/2023/07/01/gptGPUComputing/</url>
-    <content><![CDATA[<p></p>
-<span id="more"></span>
-
-
-<h1><span id="显存估算">显存估算</span><a href="#显存估算" class="header-anchor">#</a></h1><p><a href="https://candied-skunk-1ca.notion.site/e4e6bd5f7c43430fa2e805c5a2777308?pvs=4">显存估算</a></p>
-]]></content>
-      <categories>
-        <category>AIGC</category>
-        <category>GPU</category>
-      </categories>
-      <tags>
-        <tag>GPU</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Agent - UI-assistants</title>
     <url>/www6vHomeAIGC/2023/06/30/gptAgentMultimodalApp/</url>
     <content><![CDATA[<p></p>
@@ -2415,58 +2613,6 @@
       </categories>
       <tags>
         <tag>对话</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>LLama-Factory</title>
-    <url>/www6vHomeAIGC/2023/05/24/gptLLamaFactory/</url>
-    <content><![CDATA[<p></p>
-<span id="more"></span>
-
-
-<h1><span id="llama-factory">LLama-Factory</span><a href="#llama-factory" class="header-anchor">#</a></h1><p><a href="https://candied-skunk-1ca.notion.site/LLama-Factory-b6e286a1e9054c5399eebc5ffaeac82e?pvs=4">LLama-Factory</a></p>
-]]></content>
-      <categories>
-        <category>AIGC</category>
-        <category>LLamaFactory</category>
-      </categories>
-      <tags>
-        <tag>LLamaFactory</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>GPU 算力平台</title>
-    <url>/www6vHomeAIGC/2023/05/23/gptGPU/</url>
-    <content><![CDATA[<p></p>
-<span id="more"></span>
-
-
-
-<h1><span id="gpu算力">GPU算力</span><a href="#gpu算力" class="header-anchor">#</a></h1><h3><span id="免费1">免费[1]</span><a href="#免费1" class="header-anchor">#</a></h3><img src="/www6vHomeAIGC/2023/05/23/gptGPU/free.JPG" class>
-
-<ul>
-<li>modelscope 100小时 GPU</li>
-</ul>
-<h3><span id="专业收费2">专业收费[2]</span><a href="#专业收费2" class="header-anchor">#</a></h3><img src="/www6vHomeAIGC/2023/05/23/gptGPU/cost.JPG" class>
-
-
-<h1><span id="显卡">显卡</span><a href="#显卡" class="header-anchor">#</a></h1><ul>
-<li><p>显卡天梯榜<br> <a href="https://topic.expreview.com/GPU">显卡天梯榜</a></p>
-</li>
-<li><p>显卡<br>显卡 &#x3D; GPU +  显存</p>
-</li>
-</ul>
-<h1><span id="参考">参考</span><a href="#参考" class="header-anchor">#</a></h1><ol>
-<li><a href="https://www.bilibili.com/video/BV1fC4y1N7qV/">5种在线GPU算力资源白嫖指南</a> V</li>
-<li><a href="https://www.bilibili.com/video/BV1q5411z7HM/">5种专业在线GPU算力资源白嫖指南</a> V<br>1xx. <a href="https://www.bilibili.com/video/BV1Pv4y1f7VV/">【PyTorch深度学习】01 GPU购买与白嫖指南</a></li>
-</ol>
-]]></content>
-      <categories>
-        <category>AIGC</category>
-        <category>GPU</category>
-      </categories>
-      <tags>
-        <tag>GPU</tag>
       </tags>
   </entry>
   <entry>
@@ -4447,9 +4593,43 @@
     <content><![CDATA[<p></p>
 <span id="more"></span>
 
-
+<h1><span id="基础指标1">基础指标[1]</span><a href="#基础指标1" class="header-anchor">#</a></h1><ul>
+<li><p>分类任务</p>
+<ul>
+<li>Accuracy </li>
+<li>Precision</li>
+<li>Recall</li>
+<li>F1-score</li>
+<li>AUC-ROC 曲线</li>
+</ul>
+</li>
+<li><p>生成任务</p>
+<ul>
+<li>BLEU</li>
+<li>ROUGE</li>
+<li>METEOR</li>
+<li>人工评估</li>
+</ul>
+</li>
+<li><p>回归任务</p>
+<ul>
+<li>MSE</li>
+<li>MAE</li>
+<li>R2</li>
+</ul>
+</li>
+<li><p>PPL<br>困惑度</p>
+</li>
+</ul>
+<h1><span id="测评集">测评集</span><a href="#测评集" class="header-anchor">#</a></h1><ul>
+<li>MMLU</li>
+<li>C-EVAL</li>
+</ul>
+<h1><span id="参考">参考</span><a href="#参考" class="header-anchor">#</a></h1><ol>
+<li><a href="https://www.bilibili.com/video/BV1M3QNYaEfi/">AI大模型面试题：5.模型微调怎么评估效果</a></li>
+</ol>
 <p>1xx. <a href="https://mp.weixin.qq.com/s?__biz=MzAxMjc3MjkyMg==&mid=2648402223&idx=1&sn=f2ec30cd04600129bb90bc9c81413d95">一些讨论：三张关于大模型微调方案的脑图及几点llama2等行业落地的问题思考 </a><br>1xx. <a href="https://github.com/CLUEbenchmark/SuperCLUE-Llama2-Chinese">https://github.com/CLUEbenchmark/SuperCLUE-Llama2-Chinese</a><br>1xx. <a href="https://mp.weixin.qq.com/s?__biz=MzAxMjc3MjkyMg==&mid=2648402549&idx=1&sn=07a8af1db44df6125939c5c9e90f6267">如何让自己的大模型榜单评分更高：也谈榜单评测评分的一些常见方案和典型案例 </a></p>
-<p>1xx. <a href="https://mp.weixin.qq.com/s?__biz=MzAxMjc3MjkyMg==&mid=2648403046&idx=1&sn=0a9b612e9790c0bf49d5cede8fda365c">大模型落地的一些前沿观点：兼看知识图谱增强大模型问答的几个方案及CEVAL榜单评测启发 </a> 二、CEVAL榜单评测中能够得到一些启示<br><a href="https://github.com/hkust-nlp/ceval/blob/main/resources/tutorial.md">1. C-Eval 数据集评测简明教程</a></p>
+<h3><span id="ceval">CEval</span><a href="#ceval" class="header-anchor">#</a></h3><p>1xx. <a href="https://mp.weixin.qq.com/s?__biz=MzAxMjc3MjkyMg==&mid=2648403046&idx=1&sn=0a9b612e9790c0bf49d5cede8fda365c">大模型落地的一些前沿观点：兼看知识图谱增强大模型问答的几个方案及CEVAL榜单评测启发 </a> 二、CEVAL榜单评测中能够得到一些启示<br><a href="https://github.com/hkust-nlp/ceval/blob/main/resources/tutorial.md">1. C-Eval 数据集评测简明教程</a></p>
 <p>1xx. <a href="https://mp.weixin.qq.com/s?__biz=MzAxMjc3MjkyMg==&mid=2648403295&idx=1&sn=126c949d0a00eb85b4a3a6b0106f55a6&poc_token=HApExGWjou7N5NVcTKmJpWt9LZ8ul6wynjV5VHnQ">大模型B端落地“牛刀杀鸡”的奇怪感觉：兼看CEVAl通用评测到金融、医疗两大垂域评测的转变 </a>   CEVAl</p>
 ]]></content>
       <categories>
@@ -4466,6 +4646,19 @@
     <content><![CDATA[<p></p>
 <span id="more"></span>
 
+
+
+<h1><span id="幻觉3">幻觉[3]</span><a href="#幻觉3" class="header-anchor">#</a></h1><p>Hallucination in large language models usually refers to the model generating unfaithful, fabricated, inconsistent, or nonsensical content. As a term, hallucination has been somewhat generalized to cases when the model makes mistakes. Here, I would like to narrow down the problem of hallucination to cases where the model output is fabricated and <strong>not grounded</strong> by either the provided context or world knowledge.<br>大型语言模型中的幻觉通常是指模型生成不忠实、捏造、不一致或无意义的内容。作为一个术语，幻觉在某种程度上被推广到模型犯错的情况。在这里，我想将幻觉问题缩小到模型输出是捏造的， <strong>而不是</strong>基于所提供的上下文或世界知识的情况。</p>
+<p>There are two types of hallucination:<br>幻觉有两种类型：</p>
+<ol>
+<li><strong>In-context hallucination</strong>: The model output should be consistent with the source content in context.<br>上下文幻觉：模型输出应与上下文中的源内容一致。</li>
+<li><strong>Extrinsic hallucination</strong>: The model output should be grounded by the pre-training dataset. However, given the size of the pre-training dataset, it is too expensive to retrieve and identify conflicts per generation. If we consider the pre-training data corpus as a proxy for world knowledge, we essentially try to ensure the model output is factual and verifiable by external world knowledge. Equally importantly, when the model does not know about a fact, it should say so.<br>外在幻觉：模型输出应以训练前数据集为基础。但是，考虑到预训练数据集的大小，检索和识别每代冲突的成本太高。如果我们将预训练数据语料库视为世界知识的代理，我们基本上会尝试确保模型输出是真实的，并且可以通过外部世界知识进行验证。同样重要的是，当模型不知道某个事实时，它应该这么说。</li>
+</ol>
+<h1><span id="anti-hallucination-methods3">Anti-Hallucination Methods[3]</span><a href="#anti-hallucination-methods3" class="header-anchor">#</a></h1><h3><span id="rag-edits-and-attribution">RAG → Edits and Attribution</span><a href="#rag-edits-and-attribution" class="header-anchor">#</a></h3><p><strong>Self-RAG</strong> (“Self-reflective retrieval-augmented generation”; <a href="https://arxiv.org/abs/2310.11511">Asai et al. 2024</a>) trains a LM end-to-end to learn to reflect on its own generation by outputting both task output and intermittent special <em>reflection tokens</em>. They created a supervision dataset for a critic model and a generator model by prompting GPT-4 and then distilled that into an in-house model to reduce inference cost.<br><strong>Self-RAG</strong>（“自反射检索增强一代”;<a href="https://arxiv.org/abs/2310.11511">Asai 等人，2024</a> 年）通过输出任务输出和间歇性特殊<em>反射令牌</em> ，端到端训练 LM 以学习反射自己的生成。他们通过提示 GPT-4 为 critic 模型和生成器模型创建了一个监督数据集，然后将其提炼成内部模型以降低推理成本。</p>
+<h3><span id="chain-of-actions">Chain of Actions</span><a href="#chain-of-actions" class="header-anchor">#</a></h3><p>Without grounding by external retrieved knowledge, we can design a process for using the model itself to do verification and revision to reduce hallucination.<br>在没有外部检索知识的基础的情况下，我们可以设计一个流程，使用模型本身进行验证和修改，以减少幻觉。</p>
+<p><a href="https://arxiv.org/abs/2309.11495">Dhuliawala et al. (2023)</a> proposed a method named <strong>Chain-of-Verification</strong> (<strong>CoVe</strong>) based on a chain of actions to plan and execute verification. [10]<br><a href="https://arxiv.org/abs/2309.11495">Dhuliawala 等人（2023 年）</a> 提出了一种名为<strong>验证链</strong> （<strong>CoVe</strong>） 的方法，该方法基于一系列行动来计划和执行验证。</p>
+<p><strong>RECITE</strong> (“Recitation-augmented generation”; <a href="https://arxiv.org/abs/2210.01296">Sun et al. 2023</a>) relies on recitation as an intermediate step to improve factual correctness of model generation and reduce hallucination. The motivation is to utilize Transformer memory as an information retrieval mechanism. Within RECITE’s recite-and-answer scheme, the LLM is asked to first recite relevant information and then generate the output. Precisely, we can use few-shot in-context prompting to teach the model to generate recitation and then generate answers conditioned on recitation. Further it can be combined with self-consistency ensemble consuming multiple samples and extended to support multi-hop QA.<br><strong>RECITE</strong> （“朗诵增强生成”;<a href="https://arxiv.org/abs/2210.01296">Sun 等人，2023</a> 年）依靠背诵作为中间步骤来提高模型生成的事实正确性并减少幻觉。动机是利用 Transformer 内存作为信息检索机制。在 RECITE 的背诵和回答方案中，要求 LLM 首先背诵相关信息，然后生成输出。准确地说，我们可以使用小镜头上下文提示来教模型生成背诵，然后生成以背诵为条件的答案。此外，它可以与使用多个样本的自一致性集成相结合，并扩展以支持多跳 QA。</p>
+<p>todo</p>
 <h1><span id="survey">Survey</span><a href="#survey" class="header-anchor">#</a></h1><h3><span id="论文">论文</span><a href="#论文" class="header-anchor">#</a></h3><ul>
 <li>论文地址<br><a href="https://arxiv.org/abs/2309.05922">A Survey of Hallucination in Large Foundation Models</a> Paper</li>
 </ul>
@@ -4511,10 +4704,15 @@
 <h1><span id="参考">参考</span><a href="#参考" class="header-anchor">#</a></h1><ol>
 <li><p><a href="https://mp.weixin.qq.com/s?__biz=MzAxMjc3MjkyMg==&mid=2648404394&idx=1&sn=d7cfcf2cd9aa6756d3cbff938f5f4cf2">再看大模型事实性的界定、错误的起因、评估及前沿缓解方案：Survey on Factuality in LLMS</a></p>
 </li>
-<li><p><a href="https://www.bilibili.com/video/BV1VXYxegErf/">降低大模型幻觉的5种方案</a> v<br><a href="https://www.bilibili.com/video/BV1QUx9eFENq/">减少大模型幻觉，你必须要掌握的 6 个方法！</a> v</p>
+<li><p><a href="https://www.bilibili.com/video/BV1VXYxegErf/">降低大模型幻觉的5种方案</a> v<br><a href="https://www.bilibili.com/video/BV1QUx9eFENq/">减少大模型幻觉，你必须要掌握的 6 个方法！</a> v  </p>
+</li>
+<li><p><a href="https://lilianweng.github.io/posts/2024-07-07-hallucination/">Extrinsic Hallucinations in LLMs</a> *** </p>
+<p><a href="https://minddev.io/blog/2024-07-07-hallucination">【译】LLM中的外部幻觉</a></p>
 </li>
 </ol>
-<p>1xx. <a href="https://mp.weixin.qq.com/s?__biz=MzAxMjc3MjkyMg==&mid=2648403998&idx=1&sn=400cc902434bc04df508a55e192d2455">再看大模型幻觉问题如何缓解 ：Chain-of-Verification-一种基于链式验证思想的自我修正工作解读 </a></p>
+<h3><span id="work">Work</span><a href="#work" class="header-anchor">#</a></h3><ol start="10">
+<li><a href="https://mp.weixin.qq.com/s?__biz=MzAxMjc3MjkyMg==&mid=2648403998&idx=1&sn=400cc902434bc04df508a55e192d2455">再看大模型幻觉问题如何缓解 ：Chain-of-Verification-一种基于链式验证思想的自我修正工作解读 </a></li>
+</ol>
 <p>1xx. <a href="https://mp.weixin.qq.com/s?__biz=MzAxMjc3MjkyMg==&mid=2648405983&idx=2&sn=95dc9c7a12bed99b63c775d4b90519d8">也看缓解大模型幻觉的多阶段RAG框架：加入混合检索、过程理由生成与验证的方案 </a></p>
 <h3><span id="survey">survey</span><a href="#survey" class="header-anchor">#</a></h3><p>1xx. <a href="https://zhuanlan.zhihu.com/p/642648601">大模型的幻觉问题调研: LLM Hallucination Survey</a></p>
 <p>1xx. <a href="https://mp.weixin.qq.com/s?__biz=MzAxMjc3MjkyMg==&mid=2648405791&idx=2&sn=d7dada69e6d5ab5fba1333d234b947ef">网络安全领域微调模型SecGPT：兼看大模型幻觉的度量方式、评估benchmark及RAG增强不同方式 </a> 大模型幻觉综述</p>
@@ -5287,26 +5485,6 @@
       </tags>
   </entry>
   <entry>
-    <title>LLMOps</title>
-    <url>/www6vHomeAIGC/2022/12/28/gptLLMOps/</url>
-    <content><![CDATA[<p></p>
-<span id="more"></span>
-
-
-<ol>
-<li><a href="https://drive.google.com/file/d/1LZXTrRdrloIqAJT6xaNTl4WQd6y95o7K/view">LLMOps: Deployment and Learning in Production</a><br><a href="https://fullstackdeeplearning.com/llm-bootcamp/spring-2023/llmops/">LLMOps: Deployment and Learning in Production</a><br><a href="https://zhuanlan.zhihu.com/p/629589593">[必读] LLM 应用开发全栈指南</a> LLMOps</li>
-<li><a href="https://zhuanlan.zhihu.com/p/632026876">了解一下新领域 LLMOps: 大模型运维</a><br><a href="https://wandb.ai/site/articles/understanding-llmops-large-language-model-operations">Understanding LLMOps: Large Language Model Operations</a></li>
-</ol>
-]]></content>
-      <categories>
-        <category>AIGC</category>
-        <category>LLMOps</category>
-      </categories>
-      <tags>
-        <tag>LLMOps</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>GPT 系列</title>
     <url>/www6vHomeAIGC/2022/12/11/gptFamily/</url>
     <content><![CDATA[<p></p>
@@ -5727,7 +5905,6 @@
 <li><a href="#%E4%B9%9D%E5%A4%A9">九天</a></li>
 </ul>
 </li>
-<li><a href="#%E5%B7%A5%E4%B8%9A%E7%95%8C">工业界</a></li>
 </ul>
 <!-- tocstop -->
 
@@ -5753,7 +5930,6 @@
 </ul>
 <h3><span id="百度">百度</span><a href="#百度" class="header-anchor">#</a></h3><p><a href="https://cloud.baidu.com/qianfandev/topic/267956">《大模型应用实践》实训营</a></p>
 <h3><span id="九天">九天</span><a href="#九天" class="header-anchor">#</a></h3><p><a href="https://appze9inzwc2314.pc.xiaoe-tech.com/p/t_pc/goods_pc_detail/goods_detail/p_64467371e4b0cf39e6c0c026?fromH5=true&entry_type=2002&share_type=5&type=3&entry=2">大模型技术实战课 </a></p>
-<h1><span id="工业界">工业界</span><a href="#工业界" class="header-anchor">#</a></h1><p><a href="https://rocketmq-learning.com/">rocketmq-learning 社区</a></p>
 ]]></content>
       <categories>
         <category>AIGC</category>
