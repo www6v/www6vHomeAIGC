@@ -2,7 +2,7 @@
 <search>
   <entry>
     <title>Reasoning &amp; RL</title>
-    <url>/www6vHomeAIGC/2024/03/08/gptReasoningMOESummary/</url>
+    <url>/www6vHomeAIGC/2024/03/08/gptReasoningSummary/</url>
     <content><![CDATA[<p></p>
 <span id="more"></span>
 
@@ -11,8 +11,8 @@
 <!-- toc -->
 
 <ul>
+<li><a href="#reasoning">Reasoning</a></li>
 <li><a href="#deepseek">DeepSeek</a></li>
-<li><a href="#deepresearch">DeepResearch</a></li>
 <li><a href="#rl">RL</a></li>
 </ul>
 <!-- tocstop -->
@@ -20,8 +20,9 @@
 </div>
 
 
-
-
+<h1><span id="reasoning">Reasoning</span><a href="#reasoning" class="header-anchor">#</a></h1><ul>
+<li><strong><a href="/www6vHomeAIGC/2024/04/04/gptReasoningPostTraining/" title="(Survey)Reasoning LLM Post-Training">(Survey)Reasoning LLM Post-Training</a></strong></li>
+</ul>
 <h1><span id="deepseek">DeepSeek</span><a href="#deepseek" class="header-anchor">#</a></h1><ul>
 <li>V3<ul>
 <li><strong><a href="/www6vHomeAIGC/2024/02/06/gptDeepSeek/" title="DeepSeek V3">DeepSeek V3</a></strong></li>
@@ -37,7 +38,6 @@
 <li><a href="/www6vHomeAIGC/2024/02/18/gptDeepSeekExplain1/" title="解读 DeepSeek[刘知远]">解读 DeepSeek[刘知远]</a>   </li>
 <li><a href="/www6vHomeAIGC/2024/02/18/gptDeepSeekExplain2/" title="解读 DeepSeek[邱锡鹏]">解读 DeepSeek[邱锡鹏]</a> </li>
 <li>Post-training<ul>
-<li><strong><a href="/www6vHomeAIGC/2024/04/04/gptReasoningPostTraining/" title="(Survey)Reasoning LLM Post-Training">(Survey)Reasoning LLM Post-Training</a></strong> </li>
 <li><strong><a href="/www6vHomeAIGC/2024/02/23/gptDeepseekSFT/" title="(实战)Deepseek R1 SFT">(实战)Deepseek R1 SFT</a></strong>   </li>
 <li><strong><a href="/www6vHomeAIGC/2024/02/25/gptDeepseekDistill/" title="(实战)Deepseek 蒸馏">(实战)Deepseek 蒸馏</a></strong></li>
 </ul>
@@ -45,9 +45,6 @@
 </ul>
 </li>
 </ul>
-<h1><span id="deepresearch">DeepResearch</span><a href="#deepresearch" class="header-anchor">#</a></h1><p><strong><a href="/www6vHomeAIGC/2024/03/26/gptDeepResearch/" title="(原理&amp;实战)Deep Research">(原理&amp;实战)Deep Research</a></strong><br><strong><a href="/www6vHomeAIGC/2024/04/16/gptDeepResearchJina/" title="(原理|实现){Jina}Deep Research">(原理|实现){Jina}Deep Research</a></strong> </p>
-<p><strong><a href="/www6vHomeAIGC/2024/03/26/gptDeepresearchGoogle/" title="(Google)Deep Research">(Google)Deep Research</a></strong> </p>
-<p><strong><a href="/www6vHomeAIGC/2024/03/26/gptDeepresearchLanggraph/" title="(Langgraph)Deep Research">(Langgraph)Deep Research</a></strong> </p>
 <h1><span id="rl">RL</span><a href="#rl" class="header-anchor">#</a></h1><ul>
 <li><strong><a href="/www6vHomeAIGC/2024/02/28/gptDeepseekGRPO/" title="(实战)GRPO">(实战)GRPO</a></strong></li>
 <li><strong><a href="/www6vHomeAIGC/2024/06/01/gptRLPPO/" title="(原理)PPO">(原理)PPO</a></strong> </li>
@@ -664,23 +661,6 @@
       </tags>
   </entry>
   <entry>
-    <title>(原理|实现){Jina}Deep Research</title>
-    <url>/www6vHomeAIGC/2024/04/16/gptDeepResearchJina/</url>
-    <content><![CDATA[<p></p>
-<span id="more"></span>
-
-
-<h1><span id="deep-researchjina">Deep Research(Jina)</span><a href="#deep-researchjina" class="header-anchor">#</a></h1><p><a href="https://candied-skunk-1ca.notion.site/Deep-Research-Jina-1d7bfe211084803d8405c0e74cdf395d?pvs=4">(原理|实现)Deep Research(Jina)</a></p>
-]]></content>
-      <categories>
-        <category>AIGC</category>
-        <category>Deepresearch</category>
-      </categories>
-      <tags>
-        <tag>Deepresearch</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>pix2pix-zero</title>
     <url>/www6vHomeAIGC/2024/04/16/gptDiffusionEditPix2pix/</url>
     <content><![CDATA[<p></p>
@@ -976,61 +956,6 @@
       </categories>
       <tags>
         <tag>multimodal</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>(原理&amp;实战)Deep Research</title>
-    <url>/www6vHomeAIGC/2024/03/26/gptDeepResearch/</url>
-    <content><![CDATA[<p></p>
-<span id="more"></span>
-
-
-<h1><span id="deep-research">Deep Research</span><a href="#deep-research" class="header-anchor">#</a></h1><p><a href="https://candied-skunk-1ca.notion.site/ebd/1c2bfe21108480ab8b80f0638d4ec2af">(原理&amp;实战)Deep Research</a></p>
-]]></content>
-      <categories>
-        <category>AIGC</category>
-        <category>Deepresearch</category>
-      </categories>
-      <tags>
-        <tag>Deepresearch</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>(Langgraph)Deep Research</title>
-    <url>/www6vHomeAIGC/2024/03/26/gptDeepresearchLanggraph/</url>
-    <content><![CDATA[<p></p>
-
-<span id="more"></span>
-
-
-
-<h1><span id="langgraphdeep-research">(Langgraph)Deep Research</span><a href="#langgraphdeep-research" class="header-anchor">#</a></h1><p><a href="https://candied-skunk-1ca.notion.site/Langgraph-Deep-Research-1c2bfe211084803ab640f7304172834a?source=copy_link">(Langgraph)Deep Research</a></p>
-]]></content>
-      <categories>
-        <category>AIGC</category>
-        <category>Deepresearch</category>
-      </categories>
-      <tags>
-        <tag>Deepresearch</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>(Google)Deep Research</title>
-    <url>/www6vHomeAIGC/2024/03/26/gptDeepresearchGoogle/</url>
-    <content><![CDATA[<p></p>
-
-<span id="more"></span>
-
-
-
-<h1><span id="googledeep-research">(Google)Deep Research</span><a href="#googledeep-research" class="header-anchor">#</a></h1><p><a href="https://candied-skunk-1ca.notion.site/Google-Deep-Research-220bfe21108480ce9348f628408a85e9?source=copy_link">(Google)Deep Research</a></p>
-]]></content>
-      <categories>
-        <category>AIGC</category>
-        <category>Deepresearch</category>
-      </categories>
-      <tags>
-        <tag>Deepresearch</tag>
       </tags>
   </entry>
   <entry>
@@ -1458,25 +1383,6 @@
       </tags>
   </entry>
   <entry>
-    <title>(原理)过拟合</title>
-    <url>/www6vHomeAIGC/2024/01/08/gptDeeplearningOverfitting/</url>
-    <content><![CDATA[<p></p>
-
-<span id="more"></span>
-
-
-
-<h1><span id="原理过拟合">(原理)过拟合</span><a href="#原理过拟合" class="header-anchor">#</a></h1><p><a href="https://candied-skunk-1ca.notion.site/1e1bfe2110848025a7b2ffba454daa86?source=copy_link">(原理)过拟合</a></p>
-]]></content>
-      <categories>
-        <category>AIGC</category>
-        <category>deepLearning</category>
-      </categories>
-      <tags>
-        <tag>deepLearning</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>规范化 Norm</title>
     <url>/www6vHomeAIGC/2024/01/08/gptDeeplearningNorm/</url>
     <content><![CDATA[<p></p>
@@ -1522,6 +1428,25 @@
 <p><a href="https://aistudio.baidu.com/education/lessonvideo/3048901">https://aistudio.baidu.com/education/lessonvideo/3048901</a></p>
 </li>
 </ul>
+]]></content>
+      <categories>
+        <category>AIGC</category>
+        <category>deepLearning</category>
+      </categories>
+      <tags>
+        <tag>deepLearning</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>(原理)过拟合</title>
+    <url>/www6vHomeAIGC/2024/01/08/gptDeeplearningOverfitting/</url>
+    <content><![CDATA[<p></p>
+
+<span id="more"></span>
+
+
+
+<h1><span id="原理过拟合">(原理)过拟合</span><a href="#原理过拟合" class="header-anchor">#</a></h1><p><a href="https://candied-skunk-1ca.notion.site/1e1bfe2110848025a7b2ffba454daa86?source=copy_link">(原理)过拟合</a></p>
 ]]></content>
       <categories>
         <category>AIGC</category>
@@ -1610,15 +1535,15 @@
       </tags>
   </entry>
   <entry>
-    <title>机器学习-模型</title>
-    <url>/www6vHomeAIGC/2023/11/21/gptMLModel/</url>
+    <title>机器学习-数据</title>
+    <url>/www6vHomeAIGC/2023/11/21/gptMLData/</url>
     <content><![CDATA[<p></p>
 
 <span id="more"></span>
 
 
 
-<h1><span id="机器学习-模型">机器学习-模型</span><a href="#机器学习-模型" class="header-anchor">#</a></h1><p><a href="https://candied-skunk-1ca.notion.site/216bfe21108480868a4cf3a485dd48e6?source=copy_link">机器学习-模型</a></p>
+<h1><span id="机器学习-数据">机器学习-数据</span><a href="#机器学习-数据" class="header-anchor">#</a></h1><p><a href="https://candied-skunk-1ca.notion.site/ML-216bfe2110848076a892e11e7144828c?source=copy_link">机器学习-数据</a></p>
 ]]></content>
       <categories>
         <category>AIGC</category>
@@ -1629,15 +1554,15 @@
       </tags>
   </entry>
   <entry>
-    <title>机器学习-数据</title>
-    <url>/www6vHomeAIGC/2023/11/21/gptMLData/</url>
+    <title>机器学习-模型</title>
+    <url>/www6vHomeAIGC/2023/11/21/gptMLModel/</url>
     <content><![CDATA[<p></p>
 
 <span id="more"></span>
 
 
 
-<h1><span id="机器学习-数据">机器学习-数据</span><a href="#机器学习-数据" class="header-anchor">#</a></h1><p><a href="https://candied-skunk-1ca.notion.site/ML-216bfe2110848076a892e11e7144828c?source=copy_link">机器学习-数据</a></p>
+<h1><span id="机器学习-模型">机器学习-模型</span><a href="#机器学习-模型" class="header-anchor">#</a></h1><p><a href="https://candied-skunk-1ca.notion.site/216bfe21108480868a4cf3a485dd48e6?source=copy_link">机器学习-模型</a></p>
 ]]></content>
       <categories>
         <category>AIGC</category>
