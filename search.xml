@@ -21,7 +21,8 @@
 
 
 <h1><span id="reasoning">Reasoning</span><a href="#reasoning" class="header-anchor">#</a></h1><ul>
-<li><strong><a href="/www6vHomeAIGC/2024/04/04/gptReasoningPostTraining/" title="(Survey)Reasoning LLM Post-Training">(Survey)Reasoning LLM Post-Training</a></strong></li>
+<li><strong><a href="/www6vHomeAIGC/2024/04/04/gptReasoningPostTraining/" title="(Survey)Reasoning LLM Post-Training">(Survey)Reasoning LLM Post-Training</a></strong> </li>
+<li><strong><a href="/www6vHomeAIGC/2024/07/21/gptReasoningTTS/" title="(Survey) Test-Time Scaling">(Survey) Test-Time Scaling</a></strong></li>
 </ul>
 <h1><span id="deepseek">DeepSeek</span><a href="#deepseek" class="header-anchor">#</a></h1><ul>
 <li>V3<ul>
@@ -568,6 +569,23 @@
       </categories>
       <tags>
         <tag>multimodal</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>(Survey) Test-Time Scaling</title>
+    <url>/www6vHomeAIGC/2024/07/21/gptReasoningTTS/</url>
+    <content><![CDATA[<p></p>
+<span id="more"></span>
+
+
+<h1><span id="test-time-scaling">Test-Time Scaling</span><a href="#test-time-scaling" class="header-anchor">#</a></h1><p><a href="https://candied-skunk-1ca.notion.site/A-Survey-on-Test-Time-Scaling-in-Large-Language-Models-What-How-Where-and-How-Well-227bfe21108480ff95e4c0c105c3c74b?source=copy_link">(Survey) Test-Time Scaling</a></p>
+]]></content>
+      <categories>
+        <category>AIGC</category>
+        <category>TTS</category>
+      </categories>
+      <tags>
+        <tag>TTS</tag>
       </tags>
   </entry>
   <entry>
