@@ -50,7 +50,8 @@
 <li><strong><a href="/www6vHomeAIGC/2024/02/28/gptDeepseekGRPO/" title="(实战)GRPO">(实战)GRPO</a></strong></li>
 <li><strong><a href="/www6vHomeAIGC/2024/06/01/gptRLPPO/" title="(原理)PPO">(原理)PPO</a></strong> </li>
 <li><strong><a href="/www6vHomeAIGC/2024/06/01/gptRLRewardModel/" title="(原理|实现)PPO-RewardModel">(原理|实现)PPO-RewardModel</a></strong> </li>
-<li><strong><a href="/www6vHomeAIGC/2024/07/08/gptRLdpo/" title="(原理|实现)DPO">(原理|实现)DPO</a></strong></li>
+<li><strong><a href="/www6vHomeAIGC/2024/07/08/gptRLdpo/" title="(原理|实现)DPO">(原理|实现)DPO</a></strong>  </li>
+<li><strong><a href="/www6vHomeAIGC/2024/07/22/gptRLverlConfig/" title="verl Config">verl Config</a></strong></li>
 </ul>
 ]]></content>
       <categories>
@@ -412,7 +413,7 @@
 <ul>
 <li><strong><a href="/www6vHomeAIGC/2022/11/30/gptTransformer/" title="(原理)Transformer">(原理)Transformer</a></strong> </li>
 <li><strong><a href="/www6vHomeAIGC/2023/11/19/gptSelfAttention/" title="(原理)Self-Attention">(原理)Self-Attention</a></strong> </li>
-<li><strong><a href="/www6vHomeAIGC/2023/11/19/gptModelGQA/" title="(原理)GQA">(原理)GQA</a></strong>   </li>
+<li><a href="/www6vHomeAIGC/2023/11/19/gptModelGQA/" title="(原理)GQA">(原理)GQA</a>   </li>
 <li><a href="/www6vHomeAIGC/2023/02/16/gptTransformerCode/" title="(实战)Transformer">(实战)Transformer</a>  </li>
 <li><a href="/www6vHomeAIGC/2023/04/18/gptEmbedding/" title="(原理)Embedding">(原理)Embedding</a>   </li>
 <li><a href="/www6vHomeAIGC/2023/02/26/gptTrainTokenizer/" title="Tokenizer">Tokenizer</a></li>
@@ -569,6 +570,21 @@
       </categories>
       <tags>
         <tag>multimodal</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>verl Config</title>
+    <url>/www6vHomeAIGC/2024/07/22/gptRLverlConfig/</url>
+    <content><![CDATA[<p></p>
+<span id="more"></span>
+
+]]></content>
+      <categories>
+        <category>AIGC</category>
+        <category>RL</category>
+      </categories>
+      <tags>
+        <tag>RL</tag>
       </tags>
   </entry>
   <entry>
@@ -1613,9 +1629,31 @@
     <content><![CDATA[<p></p>
 <span id="more"></span>
 
+<h1><span id="论文">论文</span><a href="#论文" class="header-anchor">#</a></h1><p><a href="https://arxiv.org/pdf/2305.13245">GQA: Training Generalized Multi-Query Transformer Models from Multi-Head Checkpoints</a></p>
+<h1><span id="mha-vs-mqa-vs-gqa-1"><strong>MHA vs. MQA vs.</strong> GQA [1]</span><a href="#mha-vs-mqa-vs-gqa-1" class="header-anchor">#</a></h1><h3><span id="mha"><strong>MHA</strong></span><a href="#mha" class="header-anchor">#</a></h3><p>首先是原始的 **MHA(Multi-Head Attention)**，QKV 三部分有相同数量的头，且一一对应。每次做 Attention，head1 的 QKV 就做好自己运算就可以，输出时各个头加起来就行。</p>
+<h3><span id="mqa"><strong>MQA</strong></span><a href="#mqa" class="header-anchor">#</a></h3><p>而 <strong>MQA</strong> 则是，让 <strong>Q 仍然保持原来的头数</strong>，但 <strong>K 和 V 只有一个头</strong>，相当于所有的 Q 头共享一组 K 和 V 头，所以叫做 Multi-Query 了。实现改变了会不会影响效果呢？确实会影响但相对它能带来的收益，性能的些微降低是可以接受的。</p>
+<p>能带来多大的收益呢，实验发现一般能提高 30%-40% 的吞吐。</p>
+<p>收益主要就是由降低了 KV cache 带来的。实际上 MQA 运算量和 MHA 是差不多的，可理解为<strong>读取一组 KV 头</strong>之后，<strong>给所有 Q 头用</strong>，但因为之前提到的内存和计算的不对称，所以是有利的。</p>
+<h3><span id="gqa">GQA</span><a href="#gqa" class="header-anchor">#</a></h3><p>而 <strong>GQA</strong> 呢，是 MHA 和 MQA 的折衷方案，既不想损失性能太多，又想获得 MQA 带来的推理加速好处。具体思想是，不是所有 Q 头共享一组 KV，而是<strong>分组一定头数 Q 共享一组 KV</strong>，比如上面图片就是两组 Q 共享一组 KV。</p>
+<p>MQA 和 GQA 形式在推理加速方面，主要是通过两方面来完成：</p>
+<ol>
+<li><strong>降低了从内存中读取的数据量</strong>，所以也就减少了计算单元等待时间，提高了计算利用率；</li>
+<li>KV cache 变小了 head_num 倍，也就是显存中需要保存的 tensor 变小了，<strong>空出来空间就可以加大 batch size</strong>，从而又能提高利用率。</li>
+</ol>
+<p>如果要用 MQA 和 GQA，可以是从头训练的时候就加上，也可以像 GQA 论文里面一样，用已有的开源模型，挑一些头取个 mean 用来初始化 MQA 或 GQA 继续训练一段时间。</p>
+<h1><span id="gqa-amp-mqa-2">GQA &amp; MQA  [2]</span><a href="#gqa-amp-mqa-2" class="header-anchor">#</a></h1><img src="/www6vHomeAIGC/2023/11/19/gptModelGQA/attentions.jpg" class>
 
-
-<p><a href="https://candied-skunk-1ca.notion.site/GQA-984685a6ee2441a0879cc0e18066a641?pvs=4">(原理)GQA</a></p>
+<p>图 4.1 Multi-head attention 拥有 H 个查询、键和值头。Multi-query attention 在所有 查询头之间共享单个键和值头。Grouped-query attention 则在每个查询头组之间共享单 个键和值头，从而在多头和多查询注意力之间进行插值。</p>
+<p>Fig. 4.1 Multi-head attention has H query, key, and value heads. Multi-query attention shares single key and value heads across all query heads. Grouped-query attention instead shares single key and value heads  for each group of query heads, interpolating between multi-head and multi-query attention.</p>
+<h1><span id="参考">参考</span><a href="#参考" class="header-anchor">#</a></h1><ol>
+<li><p><a href="https://zhuanlan.zhihu.com/p/647130255">为什么现在大家都在用 MQA 和 GQA？</a>  ***</p>
+</li>
+<li><p><a href="https://zhuanlan.zhihu.com/p/648050614">LLM学习系列1：大模型架构要点总结</a><br><a href="https://cloud.tencent.com/developer/article/2328541">主流大语言模型的技术原理细节</a> *** 腾讯 [架构] + 训练 + 微调</p>
+</li>
+</ol>
+<p>1xx. <a href="https://zhuanlan.zhihu.com/p/686149289">理解Attention:从起源到MHA,MQA和GQA</a> ***<br>1xx. <a href="https://zhuanlan.zhihu.com/p/667259791">深度解析Group Query Attention(GQA)为什么能给LLM decoder带来极大推理加速</a><br>1xx. <a href="https://zhuanlan.zhihu.com/p/683422108">深度学习中的注意力机制：MHA、MQA和GQA</a></p>
+<p>1xx. <a href="https://www.bilibili.com/video/BV15f421Q7Hg/">【研1基本功 （真的很简单）Group Query-Attention】大模型训练必备方法——bonus(位置编码讲解)</a>    v   *** Nomolization[post, pre, <em>sandwich</em>] + Position Encoding[RoPE] + <strong>GQA代码</strong><br> 1xx. <a href="https://blog.csdn.net/v_JULY_v/article/details/134228287">一文通透各种注意力：从多头注意力MHA到分组查询注意力GQA、多查询注意力MQA</a> 删除</p>
+<p><a href="https://yuanchaofa.com/hands-on-code/hands-on-group-query-attention-and-multi-query-attention.html">手写大模型组件之Group Query Attention，从 MHA，MQA 到 GQA</a></p>
 ]]></content>
       <categories>
         <category>AIGC</category>
