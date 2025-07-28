@@ -13,7 +13,6 @@
 <ul>
 <li><a href="#reasoning">Reasoning</a></li>
 <li><a href="#deepseek">DeepSeek</a></li>
-<li><a href="#rl">RL</a></li>
 </ul>
 <!-- tocstop -->
 
@@ -45,13 +44,6 @@
 </li>
 </ul>
 </li>
-</ul>
-<h1><span id="rl">RL</span><a href="#rl" class="header-anchor">#</a></h1><ul>
-<li><strong><a href="/www6vHomeAIGC/2024/02/28/gptDeepseekGRPO/" title="(实战)GRPO">(实战)GRPO</a></strong></li>
-<li><strong><a href="/www6vHomeAIGC/2024/06/01/gptRLPPO/" title="(原理)PPO">(原理)PPO</a></strong> </li>
-<li><strong><a href="/www6vHomeAIGC/2024/06/01/gptRLRewardModel/" title="(原理|实现)PPO-RewardModel">(原理|实现)PPO-RewardModel</a></strong> </li>
-<li><strong><a href="/www6vHomeAIGC/2024/07/08/gptRLdpo/" title="(原理|实现)DPO">(原理|实现)DPO</a></strong>  </li>
-<li><strong><a href="/www6vHomeAIGC/2024/07/22/gptRLverlConfig/" title="(原理&amp;实战)veRL Config">(原理&amp;实战)veRL Config</a></strong></li>
 </ul>
 ]]></content>
       <categories>
@@ -527,23 +519,6 @@
       </tags>
   </entry>
   <entry>
-    <title>(原理&amp;实战)veRL Config</title>
-    <url>/www6vHomeAIGC/2024/07/22/gptRLverlConfig/</url>
-    <content><![CDATA[<p></p>
-<span id="more"></span>
-
-
-<h1><span id="verl-config">veRL Config</span><a href="#verl-config" class="header-anchor">#</a></h1><p><a href="https://candied-skunk-1ca.notion.site/veRL-Config-238bfe21108480b48225d75aec0990b2?source=copy_link">(原理&amp;实战)veRL Config</a></p>
-]]></content>
-      <categories>
-        <category>AIGC</category>
-        <category>RL</category>
-      </categories>
-      <tags>
-        <tag>RL</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>(Survey) Test-Time Scaling</title>
     <url>/www6vHomeAIGC/2024/07/21/gptReasoningTTS/</url>
     <content><![CDATA[<p></p>
@@ -596,58 +571,6 @@
       </categories>
       <tags>
         <tag>Diffusion</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>(原理|实现)DPO</title>
-    <url>/www6vHomeAIGC/2024/07/08/gptRLdpo/</url>
-    <content><![CDATA[<p></p>
-<span id="more"></span>
-
-<h1><span id="dpo">DPO</span><a href="#dpo" class="header-anchor">#</a></h1><p><a href="https://candied-skunk-1ca.notion.site/DPO-105bfe211084803abb9cdbdfff092bce?source=copy_link">(原理|实现)DPO</a></p>
-]]></content>
-      <categories>
-        <category>AIGC</category>
-        <category>RL</category>
-      </categories>
-      <tags>
-        <tag>RL</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>(原理|实现)PPO-RewardModel</title>
-    <url>/www6vHomeAIGC/2024/06/01/gptRLRewardModel/</url>
-    <content><![CDATA[<p></p>
-<span id="more"></span>
-
-
-
-<h1><span id="ppo-rewardmodel">PPO-RewardModel</span><a href="#ppo-rewardmodel" class="header-anchor">#</a></h1><p><a href="https://candied-skunk-1ca.notion.site/PPO-RM-205bfe21108480a39b78d82696d1ede4?pvs=4">(原理|实现)PPO-RewardModel</a></p>
-]]></content>
-      <categories>
-        <category>AIGC</category>
-        <category>RL</category>
-      </categories>
-      <tags>
-        <tag>RL</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>(原理)PPO</title>
-    <url>/www6vHomeAIGC/2024/06/01/gptRLPPO/</url>
-    <content><![CDATA[<p></p>
-<span id="more"></span>
-
-
-
-<h1><span id="ppo">PPO</span><a href="#ppo" class="header-anchor">#</a></h1><p><a href="https://candied-skunk-1ca.notion.site/PPO-204bfe21108480b2aba0ce27d7d5e761?pvs=4">(原理)PPO</a></p>
-]]></content>
-      <categories>
-        <category>AIGC</category>
-        <category>RL</category>
-      </categories>
-      <tags>
-        <tag>RL</tag>
       </tags>
   </entry>
   <entry>
@@ -954,23 +877,6 @@
       </categories>
       <tags>
         <tag>MOE</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>(实战)GRPO</title>
-    <url>/www6vHomeAIGC/2024/02/28/gptDeepseekGRPO/</url>
-    <content><![CDATA[<p></p>
-<span id="more"></span>
-
-
-<h1><span id="grpo">GRPO</span><a href="#grpo" class="header-anchor">#</a></h1><p><a href="https://candied-skunk-1ca.notion.site/GRPO-1a7bfe211084808086d9df62f186af6d?pvs=4">(实战)GRPO</a></p>
-]]></content>
-      <categories>
-        <category>AIGC</category>
-        <category>DeepSeek</category>
-      </categories>
-      <tags>
-        <tag>DeepSeek</tag>
       </tags>
   </entry>
   <entry>
