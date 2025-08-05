@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Reasoning &amp; RL</title>
+    <title>Reasoning</title>
     <url>/www6vHomeAIGC/2024/03/08/gptReasoningSummary/</url>
     <content><![CDATA[<p></p>
 <span id="more"></span>
@@ -90,32 +90,8 @@
 </ul>
 <h2><span id="model">Model *</span><a href="#model" class="header-anchor">#</a></h2><ul>
 <li><p>Foundation Models</p>
-<ul>
-<li><a href="/www6vHomeAIGC/2022/10/30/gptLargeModelSurvey/" title="(综述)大模型">(综述)大模型</a></li>
-<li><a href="/www6vHomeAIGC/2023/02/17/gptLargeModel/" title="大模型">大模型</a> </li>
-<li>decode-only<ul>
-<li><a href="/www6vHomeAIGC/2022/12/11/gptFamily/" title="GPT 系列">GPT 系列</a>    </li>
-<li>LLaMA<ul>
-<li><strong><a href="/www6vHomeAIGC/2023/01/01/gptLlama/" title="LLaMA">LLaMA</a></strong>   </li>
-<li><a href="/www6vHomeAIGC/2023/02/24/gptLlamaFamily/" title="LLaMA 家族">LLaMA 家族</a>   </li>
-<li><strong><a href="/www6vHomeAIGC/2024/09/04/gptLlama3-1/" title="Llama3.1">Llama3.1</a></strong></li>
-</ul>
-</li>
-</ul>
-</li>
-<li>encode-only<ul>
-<li><strong><a href="/www6vHomeAIGC/2024/01/12/gptBERT/" title="(原理)BERT">(原理)BERT</a></strong></li>
-</ul>
-</li>
-<li><a href="/www6vHomeAIGC/2023/01/04/gptLeaderBoard/" title="大模型 排行榜">大模型 排行榜</a></li>
-</ul>
 </li>
 <li><p>MOE</p>
-<ul>
-<li><p><strong><a href="/www6vHomeAIGC/2024/03/08/gptModelMOE/" title="(原理)Visual  MOE">(原理)Visual  MOE</a></strong> </p>
-</li>
-<li><a href="/www6vHomeAIGC/2025/05/03/gptModelMOECode/" title="(代码)MOE">(代码)MOE</a></li>
-</ul>
 </li>
 </ul>
 <h1><span id="core">Core</span><a href="#core" class="header-anchor">#</a></h1><ul>
@@ -463,41 +439,6 @@
       </categories>
       <tags>
         <tag>Deeplearning</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>(代码)MOE</title>
-    <url>/www6vHomeAIGC/2025/05/03/gptModelMOECode/</url>
-    <content><![CDATA[<p></p>
-<span id="more"></span>
-
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">import</span> torch</span><br><span class="line"><span class="keyword">import</span> torch.nn <span class="keyword">as</span> nn</span><br><span class="line"><span class="keyword">import</span> torch.nn.functional <span class="keyword">as</span> F</span><br><span class="line"><span class="keyword">import</span> torch_npu</span><br><span class="line"><span class="keyword">from</span> torch_npu.contrib <span class="keyword">import</span> transfer_to_npu</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Expert</span>(nn.Module):</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self, input_dim, hidden_dim, output_dim</span>):</span><br><span class="line">        <span class="built_in">super</span>().__init__()</span><br><span class="line">        self.net = nn.Sequential(</span><br><span class="line">            nn.Linear(input_dim, hidden_dim),</span><br><span class="line">            nn.GELU(),</span><br><span class="line">            nn.Linear(hidden_dim, output_dim))</span><br><span class="line">        </span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">forward</span>(<span class="params">self, x</span>):</span><br><span class="line">        <span class="keyword">return</span> self.net(x)</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">MoE</span>(nn.Module):</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self, input_dim, num_experts, top_k, expert_capacity, hidden_dim, output_dim</span>):</span><br><span class="line">        <span class="built_in">super</span>().__init__()</span><br><span class="line">        self.num_experts = num_experts</span><br><span class="line">        self.top_k = top_k</span><br><span class="line">        self.expert_capacity = expert_capacity</span><br><span class="line">        </span><br><span class="line">        <span class="comment"># 路由网络</span></span><br><span class="line">        self.gate = nn.Linear(input_dim, num_experts)</span><br><span class="line">        </span><br><span class="line">        <span class="comment"># 专家集合</span></span><br><span class="line">        self.experts = nn.ModuleList(</span><br><span class="line">            [Expert(input_dim, hidden_dim, output_dim) <span class="keyword">for</span> _ <span class="keyword">in</span> <span class="built_in">range</span>(num_experts)])</span><br><span class="line">        </span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">forward</span>(<span class="params">self, x</span>):</span><br><span class="line">        batch_size, input_dim = x.shape</span><br><span class="line">        device = x.device</span><br><span class="line">        </span><br><span class="line">        <span class="comment"># 路由计算</span></span><br><span class="line">        logits = self.gate(x)</span><br><span class="line">        probs = torch.softmax(logits, dim=-<span class="number">1</span>)</span><br><span class="line">        topk_probs, topk_indices = torch.topk(probs, self.top_k, dim=-<span class="number">1</span>)</span><br><span class="line">        </span><br><span class="line">        <span class="comment"># 辅助损失计算</span></span><br><span class="line">        <span class="keyword">if</span> self.training:</span><br><span class="line">            <span class="comment"># 重要性损失（专家利用率均衡）</span></span><br><span class="line">            importance = probs.<span class="built_in">sum</span>(<span class="number">0</span>)</span><br><span class="line">            importance_loss = torch.var(importance) / (self.num_experts ** <span class="number">2</span>)</span><br><span class="line">            </span><br><span class="line">            <span class="comment"># 负载均衡损失（样本分配均衡）</span></span><br><span class="line">            mask = torch.zeros_like(probs, dtype=torch.<span class="built_in">bool</span>)</span><br><span class="line">            mask.scatter_(<span class="number">1</span>, topk_indices, <span class="literal">True</span>)</span><br><span class="line">            routing_probs = probs * mask</span><br><span class="line">            expert_usage = mask.<span class="built_in">float</span>().mean(<span class="number">0</span>)</span><br><span class="line">            routing_weights = routing_probs.mean(<span class="number">0</span>)</span><br><span class="line">            load_balance_loss = self.num_experts * (expert_usage * routing_weights).<span class="built_in">sum</span>()</span><br><span class="line">            </span><br><span class="line">            aux_loss = importance_loss + load_balance_loss</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            aux_loss = <span class="number">0.0</span></span><br><span class="line"></span><br><span class="line">        <span class="comment"># 专家分配逻辑</span></span><br><span class="line">        flat_indices = topk_indices.view(-<span class="number">1</span>)</span><br><span class="line">        flat_probs = topk_probs.view(-<span class="number">1</span>)</span><br><span class="line">        sample_indices = torch.arange(batch_size, device=device)[:, <span class="literal">None</span>]\</span><br><span class="line">                            .expand(-<span class="number">1</span>, self.top_k).flatten()</span><br><span class="line"></span><br><span class="line">        <span class="comment"># 初始化输出</span></span><br><span class="line">        outputs = torch.zeros(batch_size, self.experts[<span class="number">0</span>].net[-<span class="number">1</span>].out_features, </span><br><span class="line">                            device=device)</span><br><span class="line"></span><br><span class="line">        <span class="comment"># 处理每个专家</span></span><br><span class="line">        <span class="keyword">for</span> expert_idx <span class="keyword">in</span> <span class="built_in">range</span>(self.num_experts):</span><br><span class="line">            <span class="comment"># 获取分配给当前专家的样本</span></span><br><span class="line">            expert_mask = flat_indices == expert_idx</span><br><span class="line">            expert_samples = sample_indices[expert_mask]</span><br><span class="line">            expert_weights = flat_probs[expert_mask]</span><br><span class="line"></span><br><span class="line">            <span class="comment"># 容量控制</span></span><br><span class="line">            <span class="keyword">if</span> <span class="built_in">len</span>(expert_samples) &gt; self.expert_capacity:</span><br><span class="line">                expert_samples = expert_samples[:self.expert_capacity]</span><br><span class="line">                expert_weights = expert_weights[:self.expert_capacity]</span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span> <span class="built_in">len</span>(expert_samples) == <span class="number">0</span>:</span><br><span class="line">                <span class="keyword">continue</span></span><br><span class="line"></span><br><span class="line">            <span class="comment"># 处理专家计算</span></span><br><span class="line">            expert_input = x[expert_samples]</span><br><span class="line">            expert_output = self.experts[expert_idx](expert_input)</span><br><span class="line">            weighted_output = expert_output * expert_weights.unsqueeze(-<span class="number">1</span>)</span><br><span class="line">            </span><br><span class="line">            <span class="comment"># 累加输出</span></span><br><span class="line">            outputs.index_add_(<span class="number">0</span>, expert_samples, weighted_output)</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> outputs, aux_loss</span><br><span class="line"></span><br><span class="line"><span class="comment"># 测试示例</span></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&quot;__main__&quot;</span>:</span><br><span class="line">    input_dim = <span class="number">128</span></span><br><span class="line">    output_dim = <span class="number">256</span></span><br><span class="line">    num_experts = <span class="number">8</span></span><br><span class="line">    top_k = <span class="number">2</span></span><br><span class="line">    expert_capacity = <span class="number">32</span></span><br><span class="line">    hidden_dim = <span class="number">512</span></span><br><span class="line">    batch_size = <span class="number">64</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># add</span></span><br><span class="line">    device = torch.device(<span class="string">&quot;npu:4&quot;</span> <span class="keyword">if</span> torch.npu.is_available() <span class="keyword">else</span> <span class="string">&quot;cpu&quot;</span>)</span><br><span class="line">    moe = MoE(input_dim, num_experts, top_k, expert_capacity, hidden_dim, output_dim).to(device)</span><br><span class="line">    x = torch.randn(batch_size, input_dim).to(device)</span><br><span class="line"></span><br><span class="line">    experimental_config = torch_npu.profiler._ExperimentalConfig(</span><br><span class="line">        export_type=torch_npu.profiler.ExportType.Text,</span><br><span class="line">        profiler_level=torch_npu.profiler.ProfilerLevel.Level0,</span><br><span class="line">        msprof_tx=<span class="literal">False</span>,</span><br><span class="line">        aic_metrics=torch_npu.profiler.AiCMetrics.AiCoreNone,</span><br><span class="line">        l2_cache=<span class="literal">False</span>,</span><br><span class="line">        op_attr=<span class="literal">False</span>,</span><br><span class="line">        data_simplification=<span class="literal">False</span>,</span><br><span class="line">        record_op_args=<span class="literal">False</span>,</span><br><span class="line">        gc_detect_threshold=<span class="literal">None</span></span><br><span class="line">    )</span><br><span class="line"></span><br><span class="line">    <span class="keyword">with</span> torch_npu.profiler.profile(</span><br><span class="line">            activities=[</span><br><span class="line">                torch_npu.profiler.ProfilerActivity.CPU,</span><br><span class="line">                torch_npu.profiler.ProfilerActivity.NPU</span><br><span class="line">            ],</span><br><span class="line">            schedule=torch_npu.profiler.schedule(wait=<span class="number">0</span>, warmup=<span class="number">0</span>, active=<span class="number">1</span>, repeat=<span class="number">1</span>, skip_first=<span class="number">1</span>),</span><br><span class="line">            on_trace_ready=torch_npu.profiler.tensorboard_trace_handler(<span class="string">&quot;./moe_stand_npu_result&quot;</span>),</span><br><span class="line">            record_shapes=<span class="literal">False</span>,</span><br><span class="line">            profile_memory=<span class="literal">False</span>,</span><br><span class="line">            with_stack=<span class="literal">False</span>,</span><br><span class="line">            with_modules=<span class="literal">False</span>,</span><br><span class="line">            with_flops=<span class="literal">False</span>,</span><br><span class="line">            experimental_config=experimental_config) <span class="keyword">as</span> prof:</span><br><span class="line">        <span class="comment"># 训练模式</span></span><br><span class="line">        <span class="keyword">for</span> _ <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">10</span>):</span><br><span class="line">            moe.train()</span><br><span class="line">            output, loss = moe(x)</span><br><span class="line">            <span class="built_in">print</span>(<span class="string">f&quot;Using device: <span class="subst">&#123;x.device&#125;</span>&quot;</span>)</span><br><span class="line">            <span class="built_in">print</span>(<span class="string">f&quot;Training output shape: <span class="subst">&#123;output.shape&#125;</span>&quot;</span>)      <span class="comment"># torch.Size([64, 256])</span></span><br><span class="line">            <span class="built_in">print</span>(<span class="string">f&quot;Training auxiliary loss: <span class="subst">&#123;loss.item():<span class="number">.4</span>f&#125;</span>&quot;</span>)     <span class="comment"># 示例值，如0.1234</span></span><br><span class="line">            prof.step()</span><br><span class="line"></span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;=&quot;</span> * <span class="number">80</span>)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 推理模式</span></span><br><span class="line">    moe.<span class="built_in">eval</span>()</span><br><span class="line">    output, _ = moe(x)</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">f&quot;Eval output shape: <span class="subst">&#123;output.shape&#125;</span>&quot;</span>)     <span class="comment"># torch.Size([64, 256])</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-
-<h1><span id="参考">参考</span><a href="#参考" class="header-anchor">#</a></h1><p><a href="https://github.com/www6v/LLM-building/tree/master/transformer/moe">MoE</a> git</p>
-]]></content>
-      <categories>
-        <category>AIGC</category>
-        <category>MOE</category>
-      </categories>
-      <tags>
-        <tag>MOE</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Llama3.1</title>
-    <url>/www6vHomeAIGC/2024/09/04/gptLlama3-1/</url>
-    <content><![CDATA[<p></p>
-<span id="more"></span>
-
-<h1><span id="llama31">Llama3.1</span><a href="#llama31" class="header-anchor">#</a></h1><p><a href="https://candied-skunk-1ca.notion.site/LLaMA3-1-c2124d23077241afa9d92eb9a54a043a?pvs=4">Llama3.1</a></p>
-]]></content>
-      <categories>
-        <category>AIGC</category>
-        <category>model</category>
-      </categories>
-      <tags>
-        <tag>model</tag>
       </tags>
   </entry>
   <entry>
@@ -863,23 +804,6 @@
       </tags>
   </entry>
   <entry>
-    <title>(原理)Visual  MOE</title>
-    <url>/www6vHomeAIGC/2024/03/08/gptModelMOE/</url>
-    <content><![CDATA[<p></p>
-<span id="more"></span>
-
-
-<h1><span id="visual-moe">Visual  MOE</span><a href="#visual-moe" class="header-anchor">#</a></h1><p><a href="https://candied-skunk-1ca.notion.site/A-Visual-Guide-to-Mixture-of-Experts-MoE-199bfe21108480c9875ed36fc9ffed60?pvs=4">(原理)Visual  MOE</a></p>
-]]></content>
-      <categories>
-        <category>AIGC</category>
-        <category>MOE</category>
-      </categories>
-      <tags>
-        <tag>MOE</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>(质量过滤)RefinedWeb, Textbooks</title>
     <url>/www6vHomeAIGC/2024/02/27/gptDataRefinedWeb/</url>
     <content><![CDATA[<p></p>
@@ -1121,22 +1045,6 @@
       </categories>
       <tags>
         <tag>DeepSeek</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>(原理)BERT</title>
-    <url>/www6vHomeAIGC/2024/01/12/gptBERT/</url>
-    <content><![CDATA[<p></p>
-<span id="more"></span>
-
-<h1><span id="bert">BERT</span><a href="#bert" class="header-anchor">#</a></h1><p><a href="https://candied-skunk-1ca.notion.site/BERT-16abfe211084808fb8a3d0769c37c3db?pvs=4">(原理)BERT</a></p>
-]]></content>
-      <categories>
-        <category>AIGC</category>
-        <category>model</category>
-      </categories>
-      <tags>
-        <tag>model</tag>
       </tags>
   </entry>
   <entry>
@@ -3549,84 +3457,6 @@
       </tags>
   </entry>
   <entry>
-    <title>LLaMA 家族</title>
-    <url>/www6vHomeAIGC/2023/02/24/gptLlamaFamily/</url>
-    <content><![CDATA[<p></p>
-<span id="more"></span>
-
-
-<h1><span id="llama-家族1">LLaMA 家族[1]</span><a href="#llama-家族1" class="header-anchor">#</a></h1><table>
-<thead>
-<tr>
-<th>项目</th>
-<th>描述</th>
-<th>数据集</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>LLaMa</td>
-<td>基座模型</td>
-<td>公开可用的数据集(1T token)</td>
-</tr>
-<tr>
-<td>Stanford Alpaca</td>
-<td>结合英文语料通过Self Instruct方式微调LLaMA 7B</td>
-<td>Self Instruct from davinci-003 API(52K)</td>
-</tr>
-<tr>
-<td>Vicuna-13B</td>
-<td>通过ShareGPT.com的7万条对话数据微调LLaMA(Alpaca基础之上, 多轮对话和长序列, full fine-tune)</td>
-<td>用户共享对话(70K sample)</td>
-</tr>
-<tr>
-<td>BELLE</td>
-<td>结合中文语料通过Self Instruct方式微调BLOOMZ-7B或LLaMA</td>
-<td></td>
-</tr>
-<tr>
-<td>Chinese-LLaMA&#x2F;Chinese-Alpaca</td>
-<td>通过中文数据预训练&#x2F;指令微调LLaMA</td>
-<td></td>
-</tr>
-<tr>
-<td>姜子牙系列模型Ziya-LLaMA-13B-v1</td>
-<td>基于LLaMA-13B的中英文模型</td>
-<td></td>
-</tr>
-<tr>
-<td>ChatLLaMA(英文版)</td>
-<td>LLaMA的RLHF版</td>
-<td></td>
-</tr>
-<tr>
-<td>ColossalChat</td>
-<td>通过self-instruct技术指令微调LLaMA且加上RLHF</td>
-<td></td>
-</tr>
-</tbody></table>
-<img src="/www6vHomeAIGC/2023/02/24/gptLlamaFamily/llama2-famaly.jpg" class>
-
-
-
-<h1><span id="参考">参考</span><a href="#参考" class="header-anchor">#</a></h1><h3><span id="家族">家族</span><a href="#家族" class="header-anchor">#</a></h3><ol>
-<li><a href="https://blog.csdn.net/v_JULY_v/article/details/129709105">LLaMA的解读与其微调：Alpaca-LoRA&#x2F;Vicuna&#x2F;BELLE&#x2F;中文LLaMA&#x2F;姜子牙&#x2F;LLaMA 2</a> ***</li>
-</ol>
-<p>1xx. <a href="https://mp.weixin.qq.com/s?__biz=MzUyOTA5OTcwMg==&mid=2247485019&idx=1&sn=e3417472c0c1f98aede498fbe905e1a0&">我想学大模型，应该从哪个模型开始？LLaMA生态家谱整理和分析 </a></p>
-<p>1xx. <a href="https://zhuanlan.zhihu.com/p/618695885">NLP（九）：LLaMA, Alpaca, ColossalChat 系列模型研究</a></p>
-<p>1xx. &lt;&lt;千帆增强版 Llama 2-提升大模型对话指令遵循能力&gt;&gt;  v</p>
-<p>1xx. <a href="https://mp.weixin.qq.com/s?__biz=MzAxMjc3MjkyMg==&mid=2648402185&idx=2&sn=55901b89381e27aedee56c69041f6af8">近期大模型动态：LLaMA-2-7B-32K的训练数据组织情况及面向儿童心理健康领域的微调模型推介 </a>    llama-2-7b-32k -  LLaMA-2的上下文长度为4Ktoken。要将其扩展到32K上下文，该工作分成了三个部分：建模、数据和系统优化。</p>
-<h3><span id="实战">实战</span><a href="#实战" class="header-anchor">#</a></h3><p>1xx.  <a href="https://zhuanlan.zhihu.com/p/618321077">从0到1复现斯坦福羊驼（Stanford Alpaca 7B）</a><br>    GPUs: 8 卡 A800 80GB GPUs</p>
-<h3><span id="汉化">汉化</span><a href="#汉化" class="header-anchor">#</a></h3><p>1xx.  <a href="https://www.bilibili.com/video/BV1Np4y1j783/">掘力计划 23 期-Linly-Chinese-LLaMA2 中文开源大模型方案分享</a> v</p>
-]]></content>
-      <categories>
-        <category>AIGC</category>
-        <category>model</category>
-      </categories>
-      <tags>
-        <tag>model</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>(实战)Chinese-LLaMA PT+SFT</title>
     <url>/www6vHomeAIGC/2023/02/21/gptChineseLlama/</url>
     <content><![CDATA[<p></p>
@@ -3892,24 +3722,6 @@
       </categories>
       <tags>
         <tag>短文本相似度</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>大模型</title>
-    <url>/www6vHomeAIGC/2023/02/17/gptLargeModel/</url>
-    <content><![CDATA[<p></p>
-<span id="more"></span>
-
-
-<h1><span id="参考">参考</span><a href="#参考" class="header-anchor">#</a></h1><p>1xx. <a href="http://arthurchiao.art/blog/llm-practical-guide-zh/">[译][论文] 大语言模型（LLM）综述与实用指南（Amazon，2023）</a>   实战<br>1xx. <a href="https://zhuanlan.zhihu.com/p/597586623">通向AGI之路：大型语言模型（LLM）技术精要</a> *** </p>
-<p>1xx. <a href="https://mp.weixin.qq.com/s?__biz=MzAxMjc3MjkyMg==&mid=2648403847&idx=1&sn=9af731e9f8418a2d869f5464530c8bd6">必看的十二个大模型前沿综述：兼论HALO大模型幻觉检测与缓解方案及Google小模型预测大模型训练不稳定的探索 </a> 12个综述</p>
-]]></content>
-      <categories>
-        <category>AIGC</category>
-        <category>大模型</category>
-      </categories>
-      <tags>
-        <tag>大模型</tag>
       </tags>
   </entry>
   <entry>
@@ -4654,52 +4466,6 @@
       </tags>
   </entry>
   <entry>
-    <title>大模型 排行榜</title>
-    <url>/www6vHomeAIGC/2023/01/04/gptLeaderBoard/</url>
-    <content><![CDATA[<p></p>
-<span id="more"></span>
-
-<h2><span id="目录">目录</span><a href="#目录" class="header-anchor">#</a></h2><div class="toc">
-
-<!-- toc -->
-
-<ul>
-<li><a href="#%E5%A4%A7%E6%A8%A1%E5%9E%8B">大模型</a><ul>
-<li><a href="#%E6%8E%92%E8%A1%8C%E6%A6%9C">排行榜</a></li>
-<li><a href="#%E4%B8%AD%E5%9B%BD%E6%8E%92%E8%A1%8C%E6%A6%9C">中国排行榜</a></li>
-</ul>
-</li>
-</ul>
-<!-- tocstop -->
-
-</div>
-
-<h1><span id="大模型">大模型</span><a href="#大模型" class="header-anchor">#</a></h1><h3><span id="排行榜">排行榜</span><a href="#排行榜" class="header-anchor">#</a></h3><p><a href="https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard">HuggingFaceH 大模型排行榜</a></p>
-<p><a href="https://www.promptingguide.ai/models/collection">LLM Collection</a></p>
-<h3><span id="中国排行榜">中国排行榜</span><a href="#中国排行榜" class="header-anchor">#</a></h3><p><a href="https://github.com/www6v/awesome-LLMs-In-China">中国大模型 </a></p>
-<ul>
-<li>通用 39</li>
-<li>金融 25</li>
-<li>司法 8</li>
-<li>法律 6</li>
-<li>医学 13</li>
-<li>医疗 24</li>
-<li>教育 13</li>
-<li>科研 17</li>
-<li>工业 23</li>
-<li>政务 12</li>
-<li>运维 7</li>
-</ul>
-]]></content>
-      <categories>
-        <category>AIGC</category>
-        <category>leaderBoard</category>
-      </categories>
-      <tags>
-        <tag>leaderBoard</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>垂类大模型</title>
     <url>/www6vHomeAIGC/2023/01/04/gptDomain/</url>
     <content><![CDATA[<p></p>
@@ -4805,7 +4571,7 @@
 <li><a href="https://zhuanlan.zhihu.com/p/648798461">领域大模型-训练Trick&amp;落地思考</a></li>
 </ol>
 <p>1xx. <a href="https://zhuanlan.zhihu.com/p/642611747">垂直领域大模型的一些思考及开源模型汇总</a><br>1xx. <a href="https://blog.csdn.net/v_JULY_v/article/details/131550529?spm=1001.2014.3001.5502">医疗金融法律大模型：从ChatDoctor到BloombergGPT&#x2F;FinGPT&#x2F;FinBERT、ChatLaw&#x2F;LawGPT_zh</a></p>
-<p>1xx. <a href="/www6vHomeAIGC/2023/01/04/gptLeaderBoard/" title="大模型 排行榜">大模型 排行榜</a> self<br>1xx. <a href="https://github.com/www6v/Awesome-Domain-LLM">Awesome-Domain-LLM</a>  git 全</p>
+<p>1xx. <a href="gptLeaderBoard.md">Go to Page</a>  self<br>1xx. <a href="https://github.com/www6v/Awesome-Domain-LLM">Awesome-Domain-LLM</a>  git 全</p>
 <p>1xx. <a href="https://mp.weixin.qq.com/s?__biz=MzAxMjc3MjkyMg==&mid=2648400666&idx=1&sn=bc47e8c4eca6fc4baaded42fa3c6bd77">再谈垂直领域大模型及今日前沿速递：金融领域FinBERT、BloombergGPT以及法律领域微调模型LawGPT_zh</a></p>
 <p>1xx. <a href="https://mp.weixin.qq.com/s?__biz=MzAxMjc3MjkyMg==&mid=2648403459&idx=2&sn=0219fc098c208e36cd32940e71089fd2">层出不穷的垂域微调大模型非最全汇总：12大领域、57个领域微调模型概述及对垂直行业问答的一些讨论</a>  领域模型集合   <a href="https://github.com/www6v/Awesome-Domain-LLM">Awesome-Domain-LLM</a></p>
 <p>1xx. <a href="https://mp.weixin.qq.com/s/jgyIOOzRWAgilcW4HfufNQ">行业大模型落地的一些有趣调研总结：兼看大模型RAG问答四大技术综述</a>   腾讯 行业大模型调研报告 ***</p>
@@ -4819,144 +4585,6 @@
       </categories>
       <tags>
         <tag>大模型</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>LLaMA</title>
-    <url>/www6vHomeAIGC/2023/01/01/gptLlama/</url>
-    <content><![CDATA[<p></p>
-<span id="more"></span>
-
-
-
-<h1><span id="llama">LLaMA</span><a href="#llama" class="header-anchor">#</a></h1><p><a href="https://candied-skunk-1ca.notion.site/LLaMA-2b55a2a573b549df9f6fc4cc26c2292f?pvs=4">LLaMA</a></p>
-]]></content>
-      <categories>
-        <category>AIGC</category>
-        <category>model</category>
-      </categories>
-      <tags>
-        <tag>model</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>GPT 系列</title>
-    <url>/www6vHomeAIGC/2022/12/11/gptFamily/</url>
-    <content><![CDATA[<p></p>
-<span id="more"></span>
-
-<h2><span id="目录">目录</span><a href="#目录" class="header-anchor">#</a></h2><div class="toc">
-
-<!-- toc -->
-
-<ul>
-<li><a href="#%E8%BF%9B%E5%8C%96%E6%97%B6%E9%97%B4%E7%BA%BF">进化时间线</a></li>
-<li><a href="#gpt1-1">GPT1 [1]</a></li>
-<li><a href="#gpt2-1">GPT2 [1]</a><ul>
-<li><a href="#%E6%A0%B8%E5%BF%83%E6%80%9D%E6%83%B3">核心思想</a></li>
-<li><a href="#gpt-2-vs-gpt-1">GPT-2 vs. GPT-1</a></li>
-</ul>
-</li>
-<li><a href="#gpt3-1">GPT3 [1]</a><ul>
-<li><a href="#%E4%B8%8B%E6%B8%B8%E4%BB%BB%E5%8A%A1%E8%AF%84%E4%BC%B0%E6%96%B9%E6%B3%95">下游任务评估方法</a></li>
-<li><a href="#few-shot-vs-fine-tuning">Few-shot vs fine-tuning</a></li>
-<li><a href="#gpt-3-vs-gpt-2">GPT-3 vs. GPT-2</a></li>
-</ul>
-</li>
-<li><a href="#instructgpt-1">InstructGPT [1]</a><ul>
-<li><a href="#%E6%AD%A5%E9%AA%A4">步骤</a></li>
-<li><a href="#%E6%8A%80%E6%9C%AF%E6%96%B9%E6%A1%88">技术方案</a></li>
-<li><a href="#%E6%80%BB%E7%BB%93">总结</a></li>
-</ul>
-</li>
-<li><a href="#chatgpt-%E8%AE%AD%E7%BB%83-3">ChatGPT 训练  [3]</a></li>
-<li><a href="#%E5%8F%82%E8%80%83">参考</a></li>
-</ul>
-<!-- tocstop -->
-
-</div>
-
-<h1><span id="进化时间线">进化时间线</span><a href="#进化时间线" class="header-anchor">#</a></h1><img src="/www6vHomeAIGC/2022/12/11/gptFamily/family.jpg" class>
-
-<h1><span id="gpt1-1">GPT1 [1]</span><a href="#gpt1-1" class="header-anchor">#</a></h1><ol>
-<li>它是最早一批提出在 NLP 任务上使用 <strong>pre-train + fine-tuning 范式</strong>的工作。</li>
-<li>GPT 的实验证明了模型的精度和泛化能力会随着解码器层数增加而不断提升，而且目前还有提升空间</li>
-<li><strong>预训练模型具有 zero-shot 的能力</strong>，并且能随着预训练的进行不断增强</li>
-</ol>
-<h1><span id="gpt2-1">GPT2 [1]</span><a href="#gpt2-1" class="header-anchor">#</a></h1><h3><span id="核心思想">核心思想</span><a href="#核心思想" class="header-anchor">#</a></h3><p>当模型的容量非常大且数据量足够丰富时，仅仅靠语言模型的学习便可以完成其他有监督学习的任务，<strong>不需要在下游任务微调</strong>。</p>
-<h3><span id="gpt-2-vs-gpt-1">GPT-2 vs. GPT-1</span><a href="#gpt-2-vs-gpt-1" class="header-anchor">#</a></h3><ol>
-<li><strong>主推 zero-shot</strong>，而 GPT-1 为 pre-train + fine-tuning；</li>
-<li>训练数据规模更大，GPT-2 为 800w 文档 40G，GPT-1 为 5GB；</li>
-<li>模型大小，GPT-2 最大 15 亿参数，GPT-1为 1 亿参数；</li>
-<li>模型结构调整，层归一化和参数初始化方式；</li>
-<li>训练参数，batch_size 从 64 增加到 512，上文窗口大小从 512 增加到 1024，等等；</li>
-</ol>
-<h1><span id="gpt3-1">GPT3 [1]</span><a href="#gpt3-1" class="header-anchor">#</a></h1><h3><span id="下游任务评估方法">下游任务评估方法</span><a href="#下游任务评估方法" class="header-anchor">#</a></h3><p>GPT-3 在下游任务的评估与预测时，提供了三种不同的方法：<br><strong>Zero-shot</strong>：仅使用当前任务的自然语言描述，不进行任何梯度更新；<br><strong>One-shot</strong>：当前任务的自然语言描述，加上一个简单的输入输出样例，不进行任何梯度更新；<br><strong>Few-shot</strong>：当前任务的自然语言描述，加上几个简单的输入输出样例，不进行任何梯度更新；</p>
-<ul>
-<li>Shot[2]<ul>
-<li>One-shot</li>
-<li>Few-Shot</li>
-<li>Zero-Shot</li>
-</ul>
-</li>
-</ul>
-<h3><span id="few-shot-vs-fine-tuning">Few-shot vs fine-tuning</span><a href="#few-shot-vs-fine-tuning" class="header-anchor">#</a></h3><p>其中 <strong>Few-shot</strong> 也被称为 <strong>in-context learning</strong>，虽然它与 fine-tuning 一样都需要一些<strong>有监督标注数据</strong>，但是两者的区别是：<br>【本质区别】<br><strong>fine-tuning</strong> 基于标注数据<strong>对模型参数进行更新</strong><br>而<strong>in-context learning</strong>使用标注数据时不做任何的梯度回传, <strong>模型参数不更新</strong></p>
-<h3><span id="gpt-3-vs-gpt-2">GPT-3 vs. GPT-2</span><a href="#gpt-3-vs-gpt-2" class="header-anchor">#</a></h3><ol>
-<li>效果上，超出 GPT-2 非常多，能生成人类难以区分的新闻文章；</li>
-<li><strong>主推 few-shot</strong>，相比于 GPT-2 的 zero-shot，具有很强的创新性；</li>
-<li>模型结构略微变化，采用 <strong>sparse attention</strong> 模块；</li>
-<li>海量训练语料 <strong>45TB</strong>（清洗后 570GB），相比于 GPT-2 的 40GB；</li>
-<li>海量模型参数，最大模型为 <strong>1750 亿</strong>，GPT-2 最大为 15 亿参数；</li>
-</ol>
-<h1><span id="instructgpt-1">InstructGPT [1]</span><a href="#instructgpt-1" class="header-anchor">#</a></h1><h3><span id="步骤">步骤</span><a href="#步骤" class="header-anchor">#</a></h3><ul>
-<li>有监督微调，</li>
-<li>奖励模型训练，</li>
-<li>强化学习训练</li>
-</ul>
-<h3><span id="技术方案">技术方案</span><a href="#技术方案" class="header-anchor">#</a></h3><ul>
-<li><p>有监督微调（SFT）<br>本质上来说，<strong>SFT 可以理解为人工标注了一批数据，然后去微调 GPT-3</strong>。但是值得一提的是，这里<strong>标注的数据与 GPT-3 之前用来做下游任务使用的 few-shot 格式，有非常本质的区别</strong>。<br>InstructGPT 在 SFT 中标注的数据，正是为了<strong>消除这种模型预测与用户表达习惯之间的 gap</strong>。在标注过程中，他们<strong>从 GPT-3 的用户真实请求中采样</strong>大量下游任务的描述，然后让<strong>标注人员对任务描述进行续写</strong>，从而得到该问题的高质量回答。</p>
-</li>
-<li><p>基于人类反馈的强化学习（RLHF）</p>
-<img src="/www6vHomeAIGC/2022/12/11/gptFamily/instructGPT.jpg" class></li>
-</ul>
-<h3><span id="总结">总结</span><a href="#总结" class="header-anchor">#</a></h3><ol>
-<li>解决 GPT-3 的<strong>输出与人类意图</strong>之间的<strong>Align问题</strong>；</li>
-<li>让具备丰富世界知识的大模型，<strong>学习“人类偏好”</strong>；</li>
-<li>标注人员明显感觉 InstructGPT 的输出比 GPT-3 的输出更好，更可靠；</li>
-<li>InstructGPT 在<strong>真实性</strong>，<strong>丰富度</strong>上表现更好；</li>
-<li>InstructGPT 对有害结果的生成控制的更好，但是对于<strong>“偏见”没有明显改善</strong>；</li>
-</ol>
-<h1><span id="chatgpt-训练-3">ChatGPT 训练  [3]</span><a href="#chatgpt-训练-3" class="header-anchor">#</a></h1><ul>
-<li>基于人类反馈的强化学习微调技术 RLHF<ul>
-<li>使用有监督微调 Supervised Fine-tuning（SFT）预训练语言模型<ul>
-<li>Supervised fine-tuning (SFT)<br>&#x3D; Instruction Tuning</li>
-</ul>
-</li>
-<li>训练奖励模型 Reward Model（RM）</li>
-<li>使用强化学习算法微调语言模型<ul>
-<li>RLHF<br>[本质  基于强化学习, 强化学习算法]</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h1><span id="参考">参考</span><a href="#参考" class="header-anchor">#</a></h1><ol>
-<li><p><a href="https://zhuanlan.zhihu.com/p/609716668">GPT &#x2F; GPT-2 &#x2F; GPT-3 &#x2F; InstructGPT 进化之路</a> ***</p>
-</li>
-<li><p><a href="https://zhuanlan.zhihu.com/p/624793654">Few-Shot, Zero-Shot &amp; One-shot 的通俗理解</a></p>
-</li>
-<li><p><a href="https://shimo.im/docs/KlkKv4XQDouwWRqd/read">AI 大模型微调训练营大纲</a></p>
-</li>
-</ol>
-<p>1xx. <a href="https://mp.weixin.qq.com/s/VYv8BRgGnp9ZTuXxaSuFwg">万字拆解！追溯ChatGPT各项能力的起源 </a> 符尧</p>
-<p>1xx. <a href="https://zhuanlan.zhihu.com/p/642282717">[Transformer 101系列] ChatGPT是怎么炼成的?</a> 未</p>
-]]></content>
-      <categories>
-        <category>AIGC</category>
-        <category>GPT</category>
-      </categories>
-      <tags>
-        <tag>GPT</tag>
       </tags>
   </entry>
   <entry>
@@ -5106,121 +4734,6 @@
       </categories>
       <tags>
         <tag>train</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>(综述)大模型</title>
-    <url>/www6vHomeAIGC/2022/10/30/gptLargeModelSurvey/</url>
-    <content><![CDATA[<p></p>
-<span id="more"></span>
-
-<h2><span id="目录">目录</span><a href="#目录" class="header-anchor">#</a></h2><div class="toc">
-
-<!-- toc -->
-
-<ul>
-<li><a href="#llms%E7%9A%84%E8%83%8C%E6%99%AF1">LLMs的背景[1]</a><ul>
-<li><a href="#scaling-law-of-llms">Scaling law of LLMs</a></li>
-<li><a href="#llms%E7%9A%84%E6%B6%8C%E7%8E%B0%E8%83%BD%E5%8A%9B">LLMs的涌现能力</a></li>
-<li><a href="#%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%85%B3%E9%94%AE%E6%8A%80%E6%9C%AF">大语言模型的关键技术 ***</a></li>
-</ul>
-</li>
-<li><a href="#pre-training1">Pre-training[1]</a><ul>
-<li><a href="#%E6%95%B0%E6%8D%AE%E6%94%B6%E9%9B%86">数据收集</a></li>
-<li><a href="#%E6%9E%B6%E6%9E%84">架构</a></li>
-<li><a href="#%E6%A8%A1%E5%9E%8B%E8%AE%AD%E7%BB%83">模型训练 ***</a></li>
-</ul>
-</li>
-<li><a href="#adaptation-tuning-of-llms1">Adaptation Tuning of LLMs[1]</a><ul>
-<li><a href="#%E6%8C%87%E4%BB%A4%E8%B0%83%E4%BC%98">指令调优 ***</a><ul>
-<li><a href="#%E6%A0%BC%E5%BC%8F%E5%8C%96%E5%AE%9E%E4%BE%8B%E7%9A%84%E6%9E%84%E5%BB%BA">格式化实例的构建</a></li>
-<li><a href="#%E6%8C%87%E4%BB%A4%E5%BE%AE%E8%B0%83%E7%AD%96%E7%95%A5">指令微调策略</a></li>
-<li><a href="#%E6%8C%87%E4%BB%A4%E5%BE%AE%E8%B0%83%E7%9A%84%E6%95%88%E6%9E%9C">指令微调的效果</a></li>
-</ul>
-</li>
-<li><a href="#%E5%AF%B9%E9%BD%90%E8%B0%83%E4%BC%98">对齐调优</a></li>
-<li><a href="#%E9%AB%98%E6%95%88%E8%B0%83%E4%BC%98">高效调优</a></li>
-</ul>
-</li>
-<li><a href="#%E5%8F%82%E8%80%83">参考</a></li>
-</ul>
-<!-- tocstop -->
-
-</div>
-
-
-<h1><span id="llms的背景1">LLMs的背景[1]</span><a href="#llms的背景1" class="header-anchor">#</a></h1><h3><span id="scaling-law-of-llms">Scaling law of LLMs</span><a href="#scaling-law-of-llms" class="header-anchor">#</a></h3><ul>
-<li>KM scaling law</li>
-<li>Chinchilla Scaling law</li>
-</ul>
-<h3><span id="llms的涌现能力">LLMs的涌现能力</span><a href="#llms的涌现能力" class="header-anchor">#</a></h3><ul>
-<li>in-context learning</li>
-<li>instruction following</li>
-<li>step-by-step reasoning</li>
-</ul>
-<h3><span id="大语言模型的关键技术">大语言模型的关键技术 ***</span><a href="#大语言模型的关键技术" class="header-anchor">#</a></h3><ul>
-<li>Scaling</li>
-<li>Training</li>
-<li>Ability Eliciting</li>
-<li>Alignment Tuning</li>
-<li>Tool Manipulation</li>
-</ul>
-<h1><span id="pre-training1">Pre-training[1]</span><a href="#pre-training1" class="header-anchor">#</a></h1><h3><span id="数据收集">数据收集</span><a href="#数据收集" class="header-anchor">#</a></h3><h3><span id="架构">架构</span><a href="#架构" class="header-anchor">#</a></h3><h3><span id="模型训练">模型训练 ***</span><a href="#模型训练" class="header-anchor">#</a></h3><ul>
-<li><p>优化设置</p>
-<ul>
-<li>Batch Training</li>
-<li>Learning Rate</li>
-<li>Optimizer</li>
-<li>Stabilizing the Training</li>
-</ul>
-</li>
-<li><p>可扩展的训练技巧</p>
-<ul>
-<li>3D并行<br>数据并行 +  流水线并行 + 张量并行</li>
-<li>ZeRO</li>
-<li>混合精度训练</li>
-<li>总体训练建议</li>
-</ul>
-</li>
-</ul>
-<h1><span id="adaptation-tuning-of-llms1">Adaptation Tuning of LLMs[1]</span><a href="#adaptation-tuning-of-llms1" class="header-anchor">#</a></h1><h3><span id="指令调优">指令调优 ***</span><a href="#指令调优" class="header-anchor">#</a></h3><p>本质上，指令微调是在<strong>自然语言格式的实例（instance）集合上</strong>微调预训练后的 LLM 的方法 [62]。</p>
-<p>指令微调后，LLM 可以展现出<strong>泛化到未见过任务</strong>的卓越能力 [28, 62, 64]，即使在多语言场景下也能有不错表现 [98]。</p>
-<h5><span id="格式化实例的构建">格式化实例的构建</span><a href="#格式化实例的构建" class="header-anchor">#</a></h5><ul>
-<li>格式化已有数据集</li>
-<li>格式化人类需求</li>
-<li>构建实例的关键因素<ul>
-<li><strong>增加指令</strong></li>
-<li><strong>设计格式</strong></li>
-</ul>
-</li>
-</ul>
-<p>总的来说，指令<strong>多样性似乎比实例数量更重要</strong></p>
-<h5><span id="指令微调策略">指令微调策略</span><a href="#指令微调策略" class="header-anchor">#</a></h5><ul>
-<li><p><strong>平衡数据分布</strong><br>一种广泛使用的方法是实例比例混合策略 [87]，即将所有数据集合并，然后从混合数据集中按比例采样每种实例。<br>此外，根据最近的研究发现 [64, 99]，<strong>提高高质量数据集（例如 FLAN [62] 和 P3 [209]）的采样比例</strong>通常可以带来<strong>性能提升</strong>。</p>
-</li>
-<li><p>结合指令微调和预训练<br>为了使微调过程更加有效和稳定，OPT-IML [99] 在<strong>指令微调期间加入了预训练数据</strong>，这可以看作是对模型的正则化（regularization）。</p>
-</li>
-</ul>
-<p>具体而言，GLM-130B [97] 和 Galactica [34] 将<strong>指令格式数据集作为预训练语料库的一小部分来预训练 LLM</strong>，这有可能同时获得预训练和指令微调的优势。</p>
-<h5><span id="指令微调的效果">指令微调的效果</span><a href="#指令微调的效果" class="header-anchor">#</a></h5><ul>
-<li>性能改进<br>最近的研究在多个规模上（从 7700 百万到 5400 亿不等）对 LM 进行了实验，**表明不同规模的模型都可以从指令微调中受益 [64, 216]，随着参数规模的增加，性能也得到了提升 [98]**。 【普适性】</li>
-</ul>
-<p>此外，**经过指令微调的较小模型甚至可以比未经微调的较大模型表现更好 [28, 64]**。</p>
-<ul>
-<li>任务泛化性<br>todo</li>
-</ul>
-<h3><span id="对齐调优">对齐调优</span><a href="#对齐调优" class="header-anchor">#</a></h3><h3><span id="高效调优">高效调优</span><a href="#高效调优" class="header-anchor">#</a></h3><h1><span id="参考">参考</span><a href="#参考" class="header-anchor">#</a></h1><ol>
-<li><a href="http://aibox.ruc.edu.cn/docs/2023-08/cb9badcb213f4c8b89d00d579eed4a4c.pdf">大语言模型综述</a> 中文  v10<br>  <a href="https://github.com/RUCAIBox/LLMSurvey/blob/main/assets/LLM_Survey_Chinese.pdf">大语言模型综述</a> 中文<br>  <a href="https://github.com/www6v/LLMSurvey">LLMSurvey Repo</a>  git<br>  <a href="https://zhuanlan.zhihu.com/p/630203554">[论文]大语言模型综述</a><br>  <a href="https://mp.weixin.qq.com/s?__biz=MzAxMjc3MjkyMg==&mid=2648400817&idx=1&sn=c1ed1c9c87bf2526e02d21d84429c5cf">详谈大模型训练中的数据收集、处理与模型影响：A Survey of Large Language Models工作中的数据总结</a><br>  <a href="https://zhuanlan.zhihu.com/p/662673023">大模型综述-A Survey of Large Language Models</a></li>
-</ol>
-<p>1xx. <a href="https://mp.weixin.qq.com/s?__biz=MzAxMjc3MjkyMg==&mid=2648408221&idx=1&sn=2874583ed668ae0b89889c81a4ab8d79">值得一看的大模型最新综述：兼看多语种大模型微调数据集Aya </a></p>
-<p>1xx. <a href="https://zhuanlan.zhihu.com/p/381282229">43页预训练模型综述（清华、复旦、人大）</a></p>
-]]></content>
-      <categories>
-        <category>AIGC</category>
-        <category>大模型</category>
-      </categories>
-      <tags>
-        <tag>大模型</tag>
       </tags>
   </entry>
   <entry>
